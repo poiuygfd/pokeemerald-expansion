@@ -8,7 +8,7 @@
     F(CALM_MIND) \
     F(ROAR) \
     F(TOXIC) \
-    F(HAIL) \
+    F(SNOWSCAPE) \
     F(BULK_UP) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \
@@ -51,7 +51,28 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(COACHING) \
+    F(DAZZLING_GLEAM) \
+    F(FOCUS_BLAST) \
+    F(GIGA_IMPACT) \
+    F(U_TURN) \
+    F(SHADOW_CLAW) \
+    F(TAILWIND) \
+    F(BODY_PRESS) \
+    F(TRICK_ROOM) \
+    F(ALLURING_VOICE) \
+    F(STONE_EDGE) \
+    F(CONFIDE) \
+    F(SCALE_SHOT) \
+    F(WEATHER_BALL) \
+    F(FLAME_CHARGE) \
+    F(SUBSTITUTE) \
+    F(ENERGY_BALL) \
+    F(DUAL_WINGBEAT) \
+    F(WORK_UP) \
+    F(TERRAIN_PULSE)
+
 
 #define FOREACH_HM(F) \
     F(CUT) \

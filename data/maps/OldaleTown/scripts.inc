@@ -1,6 +1,7 @@
 .set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3
 .set LOCALID_RIVAL, 4
+.set LOCALID_MARIN_GIFT, 5
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
@@ -219,6 +220,135 @@ OldaleTown_EventScript_NotBlockingPath::
 	release
 	end
 
+OldaleTown_EventScript_MarinGiftTrigger1::
+	lockall
+	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftApproachPlayer1
+	waitmovement 0
+	goto OldaleTown_EventScript_ShowMarinGiftMessage
+	end
+
+OldaleTown_EventScript_MarinGiftTrigger2::
+	lockall
+	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftApproachPlayer2
+	waitmovement 0
+	goto OldaleTown_EventScript_ShowMarinGiftMessage
+	end
+
+OldaleTown_EventScript_MarinGiftTrigger3::
+	lockall
+	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftApproachPlayer3
+	waitmovement 0
+	goto OldaleTown_EventScript_ShowMarinGiftMessage
+	end
+
+OldaleTown_EventScript_MarinGiftTrigger4::
+	lockall
+	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftApproachPlayer4
+	waitmovement 0
+	goto OldaleTown_EventScript_ShowMarinGiftMessage
+	end
+
+OldaleTown_EventScript_ShowMarinGiftMessage::
+	msgbox OldaleTown_Text_MarinGiftMessage, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MARIN
+	givemon SPECIES_MARIN, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, OldaleTown_EventScript_SendMarinParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, OldaleTown_EventScript_SendMarinPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+OldaleTown_EventScript_SendMarinParty::
+	call OldaleTown_EventScript_ReceivedMarinFanfare
+	call Common_EventScript_GetGiftMonPartySlot
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_EventScript_MarinGiftLeave
+	call Common_EventScript_NameReceivedPartyMon
+	goto OldaleTown_EventScript_MarinGiftLeave
+	end
+
+OldaleTown_EventScript_SendMarinPC::
+	call OldaleTown_EventScript_ReceivedMarinFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_EventScript_MarinTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto OldaleTown_EventScript_MarinTransferredToPC
+	end
+
+OldaleTown_EventScript_MarinTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto OldaleTown_EventScript_MarinGiftLeave
+	end
+
+OldaleTown_EventScript_ReceivedMarinFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_MARIN
+	playfanfare MUS_OBTAIN_ITEM
+	message OldaleTown_Text_ObtainedMarin
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MARIN
+	return
+
+OldaleTown_EventScript_MarinGiftLeave::
+	msgbox OldaleTown_Text_MarinThankYou, MSGBOX_DEFAULT
+	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftExit
+	waitmovement 0
+	removeobject LOCALID_MARIN_GIFT
+	setvar VAR_OLDALE_MARIN_STATE, 1
+	setflag FLAG_HIDE_OLDALE_TOWN_MARIN_GIFT
+	releaseall
+	end
+
+OldaleTown_Movement_MarinGiftApproachPlayer1:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	face_down
+	step_end
+
+OldaleTown_Movement_MarinGiftApproachPlayer2:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+OldaleTown_Movement_MarinGiftApproachPlayer3:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	face_down
+	step_end
+
+OldaleTown_Movement_MarinGiftApproachPlayer4:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+OldaleTown_Movement_MarinGiftExit:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 OldaleTown_EventScript_Rival::
 	lockall
 	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
@@ -342,6 +472,26 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 	walk_down
 	walk_left
 	step_end
+
+OldaleTown_Text_MarinGiftMessage:
+	.string "Oho, you look like a spry young\n"
+	.string "trainer, dearie.\p"
+	.string "Hmm… I feel there's something special\n"
+	.string "about you…\p"
+	.string "I think you could help me out here.\p"
+	.string "See, back in my day, I was quite the\n"
+	.string "trainer, but now I've grown old.\p"
+	.string "This young POKéMON deserves to see\n"
+	.string "the world, and I think you're just\l"
+	.string "the trainer to realise that dream.$"
+
+OldaleTown_Text_MarinThankYou:
+	.string "Please take care of that one, young\n"
+	.string "one. I wish the both of you a fun and\l"
+	.string "exciting journey. Farewell!$"
+
+OldaleTown_Text_ObtainedMarin:
+	.string "{PLAYER} obtained a Marin.$"
 
 OldaleTown_Text_SavingMyProgress:
 	.string "I want to take a rest, so I'm saving my\n"

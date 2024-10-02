@@ -652,7 +652,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
+#define FLAG_EXP_SHARE_TOGGLE  0x264 // Exp Share Flag
 #define FLAG_UNUSED_0x265  0x265 // Unused Flag
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
@@ -739,9 +739,9 @@
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
+#define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
@@ -772,7 +772,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
+#define FLAG_HIDE_OLDALE_TOWN_MARIN_GIFT                            0x2D9 // Hide Marin Gift Giver
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
@@ -1218,18 +1218,18 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_ITEM_ROUTE_110_MANECTITE                               0x493 // Manectric Mega Stone
+#define FLAG_ITEM_ROUTE_111_GALLADITE                               0x494 // Gallade Mega Stone
+#define FLAG_ITEM_SHOAL_CAVE_GLALITITE                              0x495 // Glalie Mega Stone
+#define FLAG_ITEM_MT_PYRE_BANETTITE                                 0x496 // Banette Mega Stone
+#define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
+#define FLAG_ITEM_ROUTE_114_ALTARIANITE                             0x498 // Altaria Mega Stone
+#define FLAG_ITEM_METEOR_FALLS_AERODACTYLITE                        0x499 // Aerodactyl Mega Stone
+#define FLAG_ITEM_SAFARI_ZONE_KANGASKHANITE                         0x49A // Kangaskhan Mega Stone
+#define FLAG_ITEM_MIRAGE_TOWER_AUSPICIOUS_ARMOR                     0x49B // Armarouge Evo Item
+#define FLAG_ITEM_MIRAGE_TOWER_MALICIOUS_ARMOR                      0x49C // Ceruledge Evo Item
+#define FLAG_RECEIVED_ROTOM_CATALOGUE                               0x49D // Rotom Form Change Item
+#define FLAG_RECEIVED_ABILITY_CAPSULE                               0x49E // Devon Corp Scientist Ability Capsule
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag

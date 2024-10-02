@@ -1074,6 +1074,36 @@ BattleScript_CoachingBoostDef:
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectMagicalCheer::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifnoally BS_ATTACKER, BattleScript_ButItFailed
+	copybyte gBattlerTarget, gBattlerAttacker
+	setallytonexttarget EffectMagicalCheer_CheckAllyStats
+	goto BattleScript_ButItFailed
+EffectMagicalCheer_CheckAllyStats:
+	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPATK, MAX_STAT_STAGE, BattleScript_MagicalCheerWorks
+	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_MagicalCheerWorks
+	goto BattleScript_ButItFailed   @ ally at max spatk, spdef
+BattleScript_MagicalCheerWorks:
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_SPATK | BIT_SPDEF, 0x0
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_MagicalCheerBoostSpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_MagicalCheerBoostSpDef
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MagicalCheerBoostSpDef:
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectJungleHealing::
 	attackcanceler
 	attackstring

@@ -32,6 +32,20 @@ SouthernIsland_Exterior_EventScript_AsYouLike::
 	release
 	end
 
+SouthernIsland_Exterior_EventScript_Latios::
+	lock
+	msgbox SouthernIsland_Exterior_Text_FlyToRoute118, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, SouthernIsland_Exterior_EventScript_FlyToRoute
+	closemessage
+	release
+	end
+
+SouthernIsland_Exterior_EventScript_FlyToRoute::
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	warp MAP_ROUTE118, 52, 10
+	release
+	end
+
 Ferry_EventScript_DepartIslandSouth::
 	applymovement OBJ_EVENT_ID_PLAYER, Ferry_Movement_DepartIslandBoardSouth
 	waitmovement 0
@@ -55,3 +69,6 @@ SouthernIsland_Exterior_EventScript_Sign::
 	msgbox SouthernIsland_Exterior_Text_Sign, MSGBOX_SIGN
 	end
 
+SouthernIsland_Exterior_Text_FlyToRoute118:
+	.string "Would you like LATIOS to fly you back\n"
+	.string "to ROUTE 118?$"

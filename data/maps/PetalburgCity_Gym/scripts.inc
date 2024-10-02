@@ -409,6 +409,8 @@ PetalburgCity_Gym_EventScript_GiveFacade::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	setflag FLAG_RECEIVED_TM_FACADE
 	msgbox PetalburgCity_Gym_Text_ExplainFacade, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING
+	msgbox PetalburgCity_Gym_Text_ExplainMegaRing, MSGBOX_DEFAULT
 	return
 
 PetalburgCity_Gym_EventScript_WallysDadArrivesNorth::
@@ -1261,6 +1263,8 @@ PetalburgCity_Gym_Text_NormanIntro:
 	.string "So, you did get four GYM BADGES.\p"
 	.string "Fine, as I promised, we will have\n"
 	.string "a POKéMON battle.\p"
+	.string "If you can beat me, I'll give you\n"
+	.string "something special as a reward.\p"
 	.string "{PLAYER}…\p"
 	.string "I'm so happy that I can have\n"
 	.string "a real battle with my own child.\p"
@@ -1287,7 +1291,7 @@ PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "of all your POKéMON will increase.\p"
 	.string "POKéMON that know the HM move SURF\n"
 	.string "will be able to travel over water.\p"
-	.string "This is my gift to you. {PLAYER}, I'm\n"
+	.string "This TM is for you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"
 
 PetalburgCity_Gym_Text_ExplainFacade:
@@ -1297,6 +1301,17 @@ PetalburgCity_Gym_Text_ExplainFacade:
 	.string "or burned.\p"
 	.string "It might be able to turn a bad\n"
 	.string "situation into an advantage.$"
+
+PetalburgCity_Gym_Text_ExplainMegaRing:
+	.string "DAD: And here is your present.\p"
+	.string "This is a MEGA RING. You saw what\n"
+	.string "I did with my KANGASKHAN?\p"
+	.string "Now you will be able to do that\n"
+	.string "with some of your POKéMON.\p"
+	.string "It doesn't work with every kind\n"
+	.string "of POKéMON though, and you will\p"
+	.string "need to find special stones and\n"
+	.string "give them to your POKéMON.$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "DAD: As the GYM LEADER, I can't\n"

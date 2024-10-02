@@ -56,6 +56,22 @@ RustboroCity_DevonCorp_2F_EventScript_PokemonDreamsScientist::
 	release
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_AbilityScientist::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ABILITY_CAPSULE, RustboroCity_DevonCorp_2F_EventScript_ReceivedAbilityCapsule
+	msgbox RustboroCity_DevonCorp_2F_Text_GiveAbilityCapsule, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_ABILITY_CAPSULE
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceivedAbilityCapsule::
+	msgbox RustboroCity_DevonCorp_2F_Text_RecievedCapsule, MSGBOX_DEFAULT
+	release
+	end
+
 RustboroCity_DevonCorp_2F_EventScript_FossilScientist::
 	lock
 	faceplayer
@@ -312,6 +328,16 @@ RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams:
 	.string "visually reproduces the dreams of\l"
 	.string "POKéMON…\p"
 	.string "But it's not going well.$"
+
+RustboroCity_DevonCorp_2F_Text_GiveAbilityCapsule:
+	.string "I've been working on a device that\n"
+	.string "can swap the abilities of POKéMON…\p"
+	.string "And it's working!\p"
+	.string "Here, give it a try!$"
+
+RustboroCity_DevonCorp_2F_Text_RecievedCapsule:
+	.string "I've heard that we've sent a batch\n"
+	.string "to the DEPARTMENT STORE in LILYCOVE.$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "I've been trying to develop a device\n"

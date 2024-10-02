@@ -5,6 +5,43 @@ Pic: Brendan
 Gender: Male
 Music: Male
 
+=== PARTNER_STEVEN_2 ===
+Name: STEVEN
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+
+Metang
+Brave Nature
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 150 Atk / 150 Def
+- Confusion
+- Metal Claw
+- Iron Defense
+- Agility
+
+Skarmory
+Impish Nature
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 150 HP / 150 SpD
+- Aerial Ace
+- Steel Wing
+- Roost
+- Sand-Attack
+
+Lairon
+Adamant Nature
+Level: 31
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 150 HP / 150 Atk
+- Metal Claw
+- Rock Tomb
+- Roar
+- Protect
+
 === PARTNER_STEVEN ===
 Name: STEVEN
 Class: Rival

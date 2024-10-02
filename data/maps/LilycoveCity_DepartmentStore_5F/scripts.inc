@@ -152,6 +152,22 @@ LilycoveCity_DepartmentStore_5F_EventScript_LittleGirl::
 	msgbox LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon, MSGBOX_NPC
 	end
 
+LilycoveCity_DepartmentStore_5F_EventScript_RotomCataloguePerson::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ROTOM_CATALOGUE, LilycoveCity_DepartmentStore_5F_EventScript_ReceivedCatalogue
+	msgbox LilycoveCity_DepartmentStore_5F_Text_GiveRotomCatalogue, MSGBOX_DEFAULT
+	giveitem ITEM_ROTOM_CATALOG
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_ROTOM_CATALOGUE
+	release
+	end
+
+LilycoveCity_DepartmentStore_5F_EventScript_ReceivedCatalogue::
+	msgbox LilycoveCity_DepartmentStore_5F_Text_TakenCatalogue, MSGBOX_DEFAULT
+	release
+	end
+
 LilycoveCity_DepartmentStore_5F_Text_PlaceFullOfCuteDolls:
 	.string "This place is full of cute DOLLS.\p"
 	.string "I should buy some for me, instead of\n"
@@ -169,3 +185,13 @@ LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere:
 LilycoveCity_DepartmentStore_5F_Text_ClosedRooftopForWeather:
 	.string "I think they closed the rooftop\n"
 	.string "because the weather is wild today.$"
+
+LilycoveCity_DepartmentStore_5F_Text_GiveRotomCatalogue:
+	.string "I'm giving out free catalogs to\n"
+	.string "showcase our upcoming appliances.\p"
+	.string "Here, have a copy.$"
+
+LilycoveCity_DepartmentStore_5F_Text_TakenCatalogue:
+	.string "Sorry, only one copy per customer.$"
+
+

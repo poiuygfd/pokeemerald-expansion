@@ -6301,3 +6301,15 @@ static const u16 sFrigibaxEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FRIGIBAX
+
+static const u16 sMarinEggMoveLearnset[] = {
+    MOVE_HEAL_PULSE,
+    MOVE_MUDDY_WATER,
+    MOVE_FAKE_OUT,
+    MOVE_SCALD,
+    MOVE_CAPTIVATE,
+    MOVE_AQUA_JET,
+    MOVE_ALLY_SWITCH,
+    MOVE_WHIRLPOOL,
+    MOVE_UNAVAILABLE,
+};

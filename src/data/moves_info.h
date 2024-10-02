@@ -20674,6 +20674,30 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = Move_MALIGNANT_CHAIN,
     },
 
+    [MOVE_MAGICAL_CHEER] =
+    {
+        .name = COMPOUND_STRING("Magical Cheer"),
+        .description = COMPOUND_STRING(
+            "A magic infused cheer that\n"
+            "ups ally Sp. Att and Sp. Def."),
+        .effect = EFFECT_MAGICAL_CHEER,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresProtect = TRUE,
+        .ignoresSubstitute = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_COSMIC_POWER//Move_MAGICAL_CHEER,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

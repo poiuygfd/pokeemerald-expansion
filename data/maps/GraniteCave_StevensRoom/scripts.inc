@@ -11,8 +11,16 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	call Common_EventScript_PlayerHandedOverTheItem
 	setflag FLAG_DELIVERED_STEVEN_LETTER
 	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_STEEL_WING
-	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	compare VAR_STARTER_MON, 0
+	goto_if_eq GraniteCave_StevensRoom_EventScript_GetSceptileStone
+	compare VAR_STARTER_MON, 1
+	goto_if_eq GraniteCave_StevensRoom_EventScript_GetBlazikenStone
+	compare VAR_STARTER_MON, 2
+	goto_if_eq GraniteCave_StevensRoom_EventScript_GetSwampertStone
+	release
+	return
+
+GraniteCave_StevensRoom_EventScript_MatchCallSteven::
 	msgbox GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -54,6 +62,21 @@ GraniteCave_StevensRoom_EventScript_BagFull::
 	msgbox GraniteCave_StevensRoom_Text_OhBagIsFull, MSGBOX_DEFAULT
 	return
 
+GraniteCave_StevensRoom_EventScript_GetSceptileStone:
+	giveitem ITEM_SCEPTILITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetBlazikenStone:
+	giveitem ITEM_BLAZIKENITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetSwampertStone:
+	giveitem ITEM_SWAMPERTITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
 GraniteCave_StevensRoom_Movement_StevenExit:
 	walk_up
 	walk_up
@@ -93,9 +116,9 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "You went through all this trouble to\n"
 	.string "deliver that. I need to thank you.\p"
 	.string "Let me see…\n"
-	.string "I'll give you this TM.\p"
-	.string "It contains my favorite move,\n"
-	.string "STEEL WING.$"
+	.string "Hmm… So that's the starter you chose…\p"
+	.string "In that case, I believe you may be\n"
+	.string "able to make use of this.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "STEVEN: Your POKéMON appear quite\n"

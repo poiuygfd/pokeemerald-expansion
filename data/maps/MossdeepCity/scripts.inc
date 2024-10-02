@@ -235,7 +235,7 @@ MossdeepCity_EventScript_KingsRockBoy::
 	msgbox MossdeepCity_Text_WantKingsRockStevenGaveMe, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MossdeepCity_EventScript_DeclineKingsRock
 	msgbox MossdeepCity_Text_YouCanKeepIt, MSGBOX_DEFAULT
-	giveitem ITEM_KINGS_ROCK
+	giveitem ITEM_SLOWBRONITE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_KINGS_ROCK
 	release
@@ -311,9 +311,8 @@ MossdeepCity_Movement_ScottExitEast:
 	step_end
 
 MossdeepCity_Text_WantKingsRockStevenGaveMe:
-	.string "I got this from STEVEN, but I don't\n"
-	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
+	.string "I got this weird rock from STEVEN, but\n"
+	.string "I don't know what it's good for.\p"
 	.string "Do you want it?$"
 
 MossdeepCity_Text_YouCanKeepIt:

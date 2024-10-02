@@ -1,4 +1,5 @@
 .set LOCALID_STEVEN, 19
+.set LOCALID_LATIOS, 22
 
 Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
@@ -74,7 +75,6 @@ Route118_EventScript_StevenTrigger0::
 
 Route118_EventScript_StevenTrigger1::
 	lockall
-	setvar VAR_0x8008, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
@@ -82,7 +82,6 @@ Route118_EventScript_StevenTrigger1::
 
 Route118_EventScript_StevenTrigger2::
 	lockall
-	setvar VAR_0x8008, 2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_STEVEN, Route118_Movement_StevenApproachLedge2
@@ -97,36 +96,33 @@ Route118_EventScript_StevenTrigger::
 	delay 30
 	msgbox Route118_Text_StevenQuestions, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8008, 0, Route118_EventScript_StevenExit0
-	call_if_eq VAR_0x8008, 1, Route118_EventScript_StevenExit1
-	call_if_eq VAR_0x8008, 2, Route118_EventScript_StevenExit2
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	applymovement LOCALID_LATIOS, Route118_Movement_LatiosEnter
+	waitmovement 0
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchLatios
+	applymovement LOCALID_STEVEN, Route118_Movement_StevenWatchLatios
+	waitmovement 0
+	msgbox Route118_Text_LatiosAppear, MSGBOX_DEFAULT
+	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 17, 16
 	setvar VAR_ROUTE118_STATE, 1
-	removeobject LOCALID_STEVEN
+	setflag FLAG_HIDE_ROUTE_118_STEVEN
 	releaseall
 	end
 
-Route118_EventScript_StevenExit0::
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit0
-	waitmovement 0
-	return
+Route118_EventScript_Latios::
+	lock
+	msgbox Route118_Text_FlyToSouthernIsland, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route118_EventScript_FlyToIsland
+	closemessage
+	release
+	end
 
-Route118_EventScript_StevenExit1::
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit1
-	waitmovement 0
-	return
-
-Route118_EventScript_StevenExit2::
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit2
-	waitmovement 0
-	return
-
-Route118_Movement_PlayerWatchStevenExit:
-	delay_16
-	walk_in_place_faster_right
-	step_end
+Route118_EventScript_FlyToIsland::
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 17, 16
+	release
+	end
 
 Route118_Movement_StevenApproachLedge0:
 	walk_left
@@ -142,40 +138,22 @@ Route118_Movement_StevenJumpLedge:
 	walk_down
 	step_end
 
-Route118_Movement_StevenExit0:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+Route118_Movement_LatiosEnter:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
-Route118_Movement_StevenExit1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+Route118_Movement_PlayerWatchLatios:
+	walk_in_place_faster_right
 	step_end
 
-Route118_Movement_StevenExit2:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+Route118_Movement_StevenWatchLatios:
+	walk_in_place_faster_right
 	step_end
 
 Route118_EventScript_Rose::
@@ -261,7 +239,23 @@ Route118_Text_StevenQuestions:
 	.string "what do you think?\p"
 	.string "Of course, it's not any of my business.\p"
 	.string "It would be nice if we were to meet\n"
-	.string "again somewhere.$"
+	.string "again somewhere…$"
+
+Route118_Text_LatiosAppear:
+	.string "STEVEN: Latios!\p"
+	.string "What is the legendary POKéMON LATIOS\n"
+	.string "doing here…?\p"
+	.string "Do you, perhaps, want us to come with\n"
+	.string "you…?\p"
+	.string "{PLAYER}{KUN}, come with me!\p"
+	.string "LATIOS… I believe that it came to us\n"
+	.string "looking for help.\p"
+	.string "If that is the case, then we best be on\n"
+	.string "our way!$"
+
+Route118_Text_FlyToSouthernIsland:
+	.string "Would you like LATIOS to fly you to\n"
+	.string "SOUTHERN ISLAND?$"
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"

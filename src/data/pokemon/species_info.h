@@ -168,6 +168,68 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     /* You may add any custom species below this point based on the following structure: */
 
+    [SPECIES_MARIN] =
+    { 
+        .baseHP        = 70,
+        .baseAttack    = 60,
+        .baseDefense   = 55,
+        .baseSpeed     = 85,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 65,
+        .types = { TYPE_WATER, TYPE_FAIRY },
+        .catchRate = 75,
+        .expYield = 162,
+        .evYield_Speed  = 1,
+        .itemRare = ITEM_MYSTIC_WATER,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 120,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_FRIEND_GUARD, ABILITY_WATER_BUBBLE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Marin"),
+        .cryId = CRY_MARIN,
+        .natDexNum = NATIONAL_DEX_MARIN,
+        .categoryName = _("Magical"),
+        .height = 4,
+        .weight = 50,
+        .description = COMPOUND_STRING(
+            "Marin are known for their kind, friendly\n"
+            "demeanour. They aren't very good battlers,\n"
+            "but they can grant their allies enhanced\n"
+            "strength by cheering them on."),
+        .pokemonScale = 457,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Marin,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 11,
+        .frontAnimFrames = sAnims_Marin,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Marin,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 6,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Marin,
+        .shinyPalette = gMonShinyPalette_Marin,
+        .iconSprite = gMonIcon_Marin,
+        .iconPalIndex = 0,
+        FOOTPRINT(Marin)
+        OVERWORLD(
+            sPicTable_Marin,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Marin,
+            gShinyOverworldPalette_Marin
+        )
+        .levelUpLearnset = sMarinLevelUpLearnset,
+        .teachableLearnset = sMarinTeachableLearnset,
+        .eggMoveLearnset = sMarinEggMoveLearnset,
+    },
+
     /*
     [SPECIES_NONE] =
     {
