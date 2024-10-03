@@ -90,6 +90,10 @@ bool32 CanDynamax(u32 battler)
             return FALSE;
     }
 
+    // please just stop dynamaxing in my southern island steven multi battle
+    if ((gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT)
+        return FALSE;
+
     // Check if species isn't allowed to Dynamax.
     if (GET_BASE_SPECIES_ID(species) == SPECIES_ZACIAN
         || GET_BASE_SPECIES_ID(species) == SPECIES_ZAMAZENTA
