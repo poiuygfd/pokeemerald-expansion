@@ -738,9 +738,9 @@
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
 
 // Event Flags
+#define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
@@ -1230,8 +1230,8 @@
 #define FLAG_ITEM_MIRAGE_TOWER_MALICIOUS_ARMOR                      0x49C // Ceruledge Evo Item
 #define FLAG_RECEIVED_ROTOM_CATALOGUE                               0x49D // Rotom Form Change Item
 #define FLAG_RECEIVED_ABILITY_CAPSULE                               0x49E // Devon Corp Scientist Ability Capsule
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
+#define FLAG_ITEM_SEAFLOOR_CAVERN_TM64                              0x49F // Seafloor Cavern TM Weather Ball
+#define FLAG_ITEM_JAGGED_PASS_TM65                                  0x4A0 // Jagged Pass TM Flame Charge
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag

@@ -5,6 +5,7 @@
 .set LOCALID_GRUNT_3, 6
 .set LOCALID_GRUNT_4, 7
 .set LOCALID_MAXIE, 8
+.set LOCALID_MATT, 10
 
 MtPyre_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtPyre_Summit_OnTransition
@@ -60,6 +61,19 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	delay 20
+	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_MattWalkPlayer0
+	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_MattWalkPlayer1
+	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_MattWalkPlayer2
+	msgbox MtPyre_Summit_Text_MattLetsFight, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_MATT_MT_PYRE, MtPyre_Summit_Text_MattDefeat
+	msgbox MtPyre_Summit_Text_MattGoodbye, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_MATT
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT
+	fadedefaultbgm
+	fadescreen FADE_FROM_BLACK
+	delay 20
 	setvar VAR_MT_PYRE_STATE, 1
 	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_OldLadyApproachPlayer0
 	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_OldLadyApproachPlayer1
@@ -82,6 +96,26 @@ MtPyre_Summit_EventScript_ArchieFacePlayer1::
 
 MtPyre_Summit_EventScript_ArchieFacePlayer2::
 	applymovement LOCALID_ARCHIE, MtPyre_Summit_Movement_ArchieFacePlayer2
+	waitmovement 0
+	return
+
+MtPyre_Summit_EventScript_MattWalkPlayer0::
+	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalkPlayer0
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	return
+
+MtPyre_Summit_EventScript_MattWalkPlayer1::
+	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalkPlayer1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	return
+
+@ Matt is already next to player
+MtPyre_Summit_EventScript_MattWalkPlayer2::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	return
 
@@ -128,6 +162,15 @@ MtPyre_Summit_Movement_ArchieFacePlayer0:
 MtPyre_Summit_Movement_ArchieFacePlayer2:
 	walk_right
 	walk_in_place_faster_down
+	step_end
+
+MtPyre_Summit_Movement_MattWalkPlayer0::
+	walk_left
+	walk_left
+	step_end
+
+MtPyre_Summit_Movement_MattWalkPlayer1::
+	walk_left
 	step_end
 
 MtPyre_Summit_EventScript_OldMan::
@@ -496,8 +539,29 @@ MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "I, ARCHIE, now have it in my possession!\p"
 	.string "Fufufu… Now we can bring our ultimate\n"
 	.string "objective to fruition!\p"
+	.string "MATT! Why don't you show our guest here\n"
+	.string "some hospitality? Fufufu…\p"
 	.string "Okay, TEAM!\n"
 	.string "We're pulling out!$"
+
+MtPyre_Summit_Text_MattLetsFight:
+	.string "MATT: Sorry, brozo, but you've crossed\n"
+	.string "TEAM AQUA one too many times now!\p"
+	.string "I heard you gave SHELLY a thrashing at\n"
+	.string "the WEATHER INSTITUTE!\p"
+	.string "I think it's about due time that you be\n"
+	.string "the one on the recieving end!$"
+
+MtPyre_Summit_Text_MattDefeat:
+	.string "Looks like I'm the one who got thrashed…\n"
+	.string "Gnarly… … …$"
+
+MtPyre_Summit_Text_MattGoodbye:
+	.string "Oh ho! You aren't half bad!\n"
+	.string "That battle was fun, even if I lost!\p"
+	.string "Well, it's been fun playing with you, but\n"
+	.string "I think it's about time I took my leave.\p"
+	.string "Later, brozo!$"
 
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Oh, no…\n"

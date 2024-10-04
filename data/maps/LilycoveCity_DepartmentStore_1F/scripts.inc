@@ -164,8 +164,10 @@ LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
 	.string "    LOTTERY CORNER\p"
 	.string "2F: TRAINER'S ZONE\p"
 	.string "3F: BATTLE COLLECTION\p"
-	.string "4F: TM CORNER\p"
-	.string "5F: POKé DOLL FLOOR\p"
+	.string "4F: TM CORNER\n"
+	.string "    STONE EMPORIUM\p"
+	.string "5F: POKé DOLL SHOP\n"
+	.string "    DECOR FLOOR\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
 
 @ Unused

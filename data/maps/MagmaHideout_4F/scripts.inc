@@ -133,6 +133,11 @@ MagmaHideout_4F_EventScript_Tabitha::
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MagmaHideout_4F_EventScript_Courtney::
+	trainerbattle_single TRAINER_COURTNEY_HIDEOUT, MagmaHideout_4F_Text_CourtneyIntro, MagmaHideout_4F_Text_CourtneyDefeat
+	msgbox MagmaHideout_4F_Text_CourtheyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 MagmaHideout_4F_Text_Grunt11Intro:
 	.string "I want to see GROUDON, too, but they\n"
 	.string "won't let me see even its tail…\p"
@@ -187,6 +192,19 @@ MagmaHideout_4F_Text_TabithaDefeat:
 MagmaHideout_4F_Text_TabithaPostBattle:
 	.string "…And while you wasted time with me,\n"
 	.string "MAXIE should have awakened GROUDON…$"
+
+MagmaHideout_4F_Text_CourtneyIntro:
+	.string "… … …I knew you would come.\p"
+	.string "…Too bad though… LEADER MAXIE has\n"
+	.string "already started to awaken GROUDON…\p"
+	.string "You… I must stop you…\n"
+	.string "…So that MAXIE can finish first.$"
+
+MagmaHideout_4F_Text_CourtneyDefeat:
+	.string "Hah hah… Uhn… hah hah…$"
+
+MagmaHideout_4F_Text_CourtheyPostBattle:
+	.string "… …Change… the world… LEADER…$"
 
 MagmaHideout_4F_Text_MaxieAwakenGroudon:
 	.string "MAXIE: GROUDON…\p"

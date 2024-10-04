@@ -107,6 +107,10 @@ Poochyena
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Grimer
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
 Name: GRUNT
 Class: Team Aqua
@@ -137,6 +141,10 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Panpour
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
 Name: GRUNT
 Class: Team Aqua
@@ -145,6 +153,10 @@ Gender: Male
 Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move
+
+Scraggy
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
 Level: 32
@@ -163,6 +175,10 @@ Poochyena
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Grimer
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
 Name: GRUNT
 Class: Team Aqua
@@ -171,6 +187,10 @@ Gender: Male
 Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move
+
+Scraggy
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
 Level: 36
@@ -186,6 +206,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corphish
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -300,6 +324,10 @@ Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move
 
+Panpour
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 Carvanha
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
@@ -314,6 +342,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Gyarados
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staryu
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -436,6 +468,10 @@ Numel
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Scraggy
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MT_PYRE_1 ===
 Name: GRUNT
 Class: Team Aqua
@@ -517,6 +553,10 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Dewpider
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_AQUA_HIDEOUT_6 ===
 Name: GRUNT
 Class: Team Aqua
@@ -527,6 +567,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corphish
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -555,20 +599,20 @@ Gender: Male
 Music: Aqua
 Items: Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Mightyena
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk / 50 Spe
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Golbat
-Level: 34
+Level: 33
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
 Sharpedo
-Level: 34
+Level: 33
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Barbaracle
+Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
@@ -596,7 +640,12 @@ Pic: Aqua Admin F
 Gender: Female
 Music: Aqua
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Mightyena
+Level: 28
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
 
 Carvanha
 Level: 28
@@ -604,12 +653,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
 Arrokuda
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk / 50 Spe
-
-Mightyena
-Level: 28
+Level: 30
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
@@ -620,20 +664,20 @@ Pic: Aqua Admin F
 Gender: Female
 Music: Aqua
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Sharpedo
-Level: 37
+Mightyena
+Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
-Mightyena
-Level: 37
+Sharpedo
+Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
 Barraskewda
-Level: 37
+Level: 38
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
@@ -645,7 +689,7 @@ Gender: Male
 Music: Aqua
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Wishiwashi
 Level: 41
@@ -1642,7 +1686,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Pidgeot
 Level: 44
@@ -1815,7 +1859,7 @@ Items: Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Graveler
+Golem
 Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -2373,18 +2417,10 @@ AI: Check Bad Move
 Luvdisc @ Nugget
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Attract
-- Sweet Kiss
-- Flail
-- Water Pulse
 
-Luvdisc @ Nugget
+Gorebyss @ Nugget
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Attract
-- Safeguard
-- Take Down
-- Water Pulse
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
 Name: GRUNT
@@ -2399,7 +2435,7 @@ Mightyena
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Mightyena
+Trubbish
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2437,7 +2473,11 @@ Items: Full Restore
 Double Battle: Yes
 AI: Check Bad Move
 
-Seaking @ Nugget
+Corsola @ Nugget
+Level: 40
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Golduck @ Nugget
 Level: 40
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -2608,7 +2648,11 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Goldeen
+Seaking
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Palafin
 Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -2621,7 +2665,11 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Azumarill
+Whiscash
+Level: 40
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Tatsugiri-Stretchy
 Level: 40
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -2634,28 +2682,13 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Clamperl
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Iron Defense
-- Whirlpool
-- Rain Dance
-- Water Pulse
-
-Corphish
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Taunt
-- Crabhammer
-- Water Pulse
-
-Lombre
+Ludicolo
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Uproar
-- Fury Swipes
-- Fake Out
-- Water Pulse
+
+Toxapex
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TIFFANY ===
 Name: TIFFANY
@@ -2666,7 +2699,7 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Carvanha
+Barraskewda
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -2775,7 +2808,7 @@ Whiscash
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Meditite
+Cryogonal
 Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -3181,7 +3214,7 @@ Tentacool
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wingull
+Finizen
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3193,6 +3226,10 @@ Gender: Male
 Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
+
+Binacle
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
 Level: 34
@@ -3211,6 +3248,10 @@ Tentacruel
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Palafin
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_STAN ===
 Name: STAN
 Class: Swimmer M
@@ -3221,6 +3262,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Horsea
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corsola
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3237,6 +3282,10 @@ Gyarados
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Drednaw
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_DEAN ===
 Name: DEAN
 Class: Swimmer M
@@ -3250,11 +3299,11 @@ Carvanha
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wingull
+Kilowattrel
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Pyukumuku
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3271,6 +3320,10 @@ Gyarados
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Relicanth
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_RICHARD ===
 Name: RICHARD
 Class: Swimmer M
@@ -3280,7 +3333,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
+Barraskewda
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Palafin
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3293,7 +3350,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
+Drednaw
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3314,7 +3371,7 @@ Tentacruel
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Toxapex
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3331,6 +3388,10 @@ Sharpedo
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Barraskewda
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_FRANKLIN ===
 Name: FRANKLIN
 Class: Swimmer M
@@ -3339,6 +3400,10 @@ Gender: Male
 Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
+
+Huntail
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sealeo
 Level: 34
@@ -3353,7 +3418,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Spheal
+Toxapex
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corsola
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3367,6 +3436,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Gyarados
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Drednaw
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3400,11 +3473,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Tentacool
+Milotic
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Marin
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3510,11 +3583,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Machop
+Toxicroak
 Level: 32
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Machoke
+Mienfoo
 Level: 32
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -3527,7 +3600,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Hariyama
+Crabominable
+Level: 34
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Pangoro
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -3755,6 +3832,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Carvanha
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Grimer
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4519,6 +4600,10 @@ Kirlia
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
+Meowstic-Male
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 === TRAINER_VIRGIL ===
 Name: VIRGIL
 Class: Psychic
@@ -4528,7 +4613,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Ralts
+Hattrem
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Medicham
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -4541,7 +4630,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Girafarig
+Farigiraf
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Indeedee-Female
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -4704,7 +4797,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Kirlia
+Grumpig
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Claydol
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -4721,6 +4818,10 @@ Xatu
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
+Grumpig
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 === TRAINER_MAURA ===
 Name: MAURA
 Class: Psychic
@@ -4731,6 +4832,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Kadabra
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Oricorio-Pa'u
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -4984,7 +5089,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Purple
 
 Mightyena
@@ -5035,7 +5140,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Green
 
 Dusclops
@@ -5086,7 +5191,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Pink
 
 Sealeo
@@ -5137,7 +5242,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Blue
 
 Shelgon
@@ -5188,7 +5293,7 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Lileep
 Level: 12
@@ -5234,7 +5339,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Riolu
 Level: 15
@@ -5285,7 +5390,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle
 Level: 20
@@ -5333,7 +5438,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Vulpix @ Heat Rock
 Level: 24
@@ -5358,7 +5463,7 @@ Nature: Serious
 - Sunny Day
 
 Combusken @ Focus Sash
-Level: 23
+Level: 25
 Ability: Speed Boost
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Atk
@@ -5396,7 +5501,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking
 Level: 28
@@ -5461,7 +5566,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
 Level: 29
@@ -5522,41 +5627,75 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
-Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
+Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Claydol
+Lunatone @ Power Herb
 Level: 41
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Earthquake
-- Ancient Power
+Ability: Levitate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
+EVs: 250 HP / 250 SpA
+Nature: Quiet
 - Psychic
-- Light Screen
-
-Xatu
-Level: 41
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Psychic
-- Sunny Day
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Sitrus Berry
-Level: 42
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Psychic
+- Meteor Beam
 - Hypnosis
-- Calm Mind
+- Trick Room
 
 Solrock @ Sitrus Berry
-Level: 42
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Level: 41
+Ability: Levitate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
+EVs: 250 HP / 250 Atk
+Nature: Brave
+- Rock Slide
+- Zen Headbutt
+- Flare Blitz
 - Sunny Day
-- Solar Beam
+
+Bronzong @ Light Clay
+Level: 40
+Ability: Levitate
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
+EVs: 250 HP / 250 SpD
+Nature: Brave
+- Gyro Ball
+- Body Press
+- Reflect
+- Light Screen
+
+Claydol @ Wise Glasses
+Level: 39
+Ability: Levitate
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
+EVs: 250 HP / 250 Def
+Nature: Quiet
+- Earth Power
 - Psychic
-- Flamethrower
+- Calm Mind
+- Trick Room
+
+Rabsca @ Focus Sash
+Level: 40
+Ability: Synchronize
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
+EVs: 250 HP / 250 SpA
+Nature: Relaxed
+- Bug Buzz
+- Extrasensory
+- Revival Blessing
+- Trick Room
+
+Slowbro @ Slowbronite
+Level: 42
+Ability: Own Tempo
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
+EVs: 250 HP / 250 SpA
+Nature: Sassy
+- Psychic
+- Scald
+- Slack Off
+- Calm Mind
 
 === TRAINER_JUAN_1 ===
 Name: JUAN
@@ -5566,47 +5705,71 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Luvdisc
-Level: 41
+Dondozo @ Lum Berry
+Level: 43
+Ability: Unaware
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 SpD
+Nature: Jolly
+- Order Up
+- Liquidation
+- Rest
+- Sleep Talk
+
+Tatsugiri-Curly @ Toxic Orb
+Level: 43
+Ability: Commander
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 SpA / 250 Spe
+Nature: Modest
+- Hydro Pump
+- Dragon Pulse
+
+Marin @ Focus Sash
+Level: 42
+Ability: Friend Guard
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 Spe
+Nature: Timid
+- Dazzling Gleam
+- Magical Cheer
+- Helping Hand
+- Follow Me
+
+Milotic @ Flame Orb
+Level: 42
+Ability: Marvel Scale
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 SpD
+Nature: Modest
 - Water Pulse
-- Attract
-- Sweet Kiss
-- Flail
-
-Whiscash
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Ice Beam
+- Recover
 - Rain Dance
-- Water Pulse
-- Amnesia
-- Earthquake
-
-Sealeo
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Encore
-- Body Slam
-- Aurora Beam
-- Water Pulse
-
-Crawdaunt
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Crabhammer
-- Taunt
-- Leer
 
 Kingdra @ Chesto Berry
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Level: 44
+Ability: Swift Swim
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 SpA
+Nature: Modest
 - Water Pulse
+- Dragon Pulse
 - Double Team
-- Ice Beam
 - Rest
+
+Gyarados @ Gyaradosite
+Level: 46
+Ability: Intimidate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 Atk / 250 Spe
+Nature: Adamant
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
@@ -6173,15 +6336,11 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Azurill @ Oran Berry
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Marill @ Oran Berry
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
 Azumarill @ Oran Berry
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Tatsugiri-Droopy @ Oran Berry
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -6829,7 +6988,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Yellow
 
 Wailord
@@ -7188,12 +7347,8 @@ Magikarp
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gyarados
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Gyarados
-Level: 23
+Magikarp
+Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Gyarados
@@ -7201,11 +7356,15 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Gyarados
-Level: 30
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Gyarados
-Level: 35
+Level: 31
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gyarados
+Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACOB ===
@@ -7616,11 +7775,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Staryu
+Horsea
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Staryu
+Drednaw
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7654,6 +7813,10 @@ Staryu
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Finizen
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_PABLO_1 ===
 Name: PABLO
 Class: Triathlete
@@ -7663,7 +7826,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Staryu
+Sharpedo
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7680,8 +7843,8 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
-Level: 26
+Pelipper
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Staryu
@@ -7701,6 +7864,10 @@ Staryu
 Level: 39
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
+Finizen
+Level: 39
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
 === TRAINER_ISAIAH_3 ===
 Name: ISAIAH
 Class: Triathlete
@@ -7711,6 +7878,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Staryu
+Level: 42
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Finizen
+Level: 42
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Luvdisc
 Level: 42
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -7727,6 +7902,14 @@ Starmie
 Level: 45
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
+Palafin
+Level: 45
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Luvdisc
+Level: 45
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
 === TRAINER_ISAIAH_5 ===
 Name: ISAIAH
 Class: Triathlete
@@ -7740,6 +7923,14 @@ Starmie
 Level: 48
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
+Palafin
+Level: 48
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Luvdisc
+Level: 48
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
 === TRAINER_ISOBEL ===
 Name: ISOBEL
 Class: Triathlete
@@ -7750,6 +7941,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Staryu
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tatsugiri-Droopy
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7779,7 +7974,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Staryu
+Lanturn
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Azumarill
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7796,6 +7995,10 @@ Staryu
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Wailmer
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_ALLISON ===
 Name: ALLISON
 Class: Triathlete
@@ -7805,8 +8008,8 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
-Level: 27
+Kilowattrel
+Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Staryu
@@ -7826,6 +8029,10 @@ Staryu
 Level: 39
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
+Wailmer
+Level: 39
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
 === TRAINER_KATELYN_3 ===
 Name: KATELYN
 Class: Triathlete
@@ -7836,6 +8043,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Staryu
+Level: 42
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Wailmer
+Level: 42
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Tatsugiri-Stretchy
 Level: 42
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -7852,6 +8067,14 @@ Starmie
 Level: 45
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
+Wailord
+Level: 45
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Tatsugiri-Stretchy
+Level: 45
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
 === TRAINER_KATELYN_5 ===
 Name: KATELYN
 Class: Triathlete
@@ -7862,6 +8085,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Starmie
+Level: 48
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Wailord
+Level: 48
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Tatsugiri-Stretchy
 Level: 48
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -7967,13 +8198,13 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Bagon
+Shelgon
 Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Breath
-- Headbutt
-- Focus Energy
-- Ember
+
+Drampa
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_PERRY ===
 Name: PERRY
@@ -8077,7 +8308,7 @@ Tropius
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Xatu
+Excadrill
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8263,7 +8494,7 @@ Music: Cool
 Double Battle: Yes
 AI: Check Bad Move
 
-Natu
+Cramorant
 Level: 33
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -8281,6 +8512,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Tropius
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sigilyph
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8959,6 +9194,10 @@ Wailmer
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Slowpoke
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRACE ===
 Name: GRACE
 Class: Swimmer F
@@ -8967,6 +9206,10 @@ Gender: Female
 Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
+
+Wishiwashi
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Marill
 Level: 34
@@ -8985,6 +9228,10 @@ Luvdisc
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Gastrodon-East
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_SHARON ===
 Name: SHARON
 Class: Swimmer F
@@ -8995,6 +9242,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Seaking
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tatsugiri
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9024,7 +9275,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Goldeen
+Seaking
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Clamperl
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9037,11 +9292,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Goldeen
+Seaking
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Spheal
+Sealeo
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9058,6 +9313,10 @@ Luvdisc
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Simipour
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_KARA ===
 Name: KARA
 Class: Swimmer F
@@ -9068,6 +9327,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Seaking
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Palafin
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9084,6 +9347,10 @@ Azumarill
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Palafin
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_SIENNA ===
 Name: SIENNA
 Class: Swimmer F
@@ -9097,7 +9364,7 @@ Luvdisc
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Luvdisc
+Vaporeon
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9110,7 +9377,15 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Seaking
+Tatsugiri-Curly
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tatsugiri-Droopy
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tatsugiri-Stretchy
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9123,7 +9398,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Horsea
+Simipour
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9157,7 +9432,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Luvdisc
+Tatsugiri-Curly
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9178,6 +9453,10 @@ Seaking
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Seadra
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_JENNY_2 ===
 Name: JENNY
 Class: Swimmer F
@@ -9188,6 +9467,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wailmer
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Slowpoke
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9204,6 +9487,10 @@ Wailmer
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Slowpoke
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_JENNY_4 ===
 Name: JENNY
 Class: Swimmer F
@@ -9213,11 +9500,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Staryu
+Wailord
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Slowbro
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9230,15 +9517,15 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Luvdisc
+Wailord
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
+Slowpoke
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Seaking
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9694,7 +9981,7 @@ Music: Male
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
+Wattrel
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9787,7 +10074,7 @@ Music: Male
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
+Wattrel
 Level: 36
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -9808,7 +10095,7 @@ Music: Male
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
+Kilowattrel
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -9829,11 +10116,11 @@ Music: Male
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
+Kilowattrel
 Level: 42
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Tentacool
+Tentacruel
 Level: 42
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
@@ -9850,15 +10137,15 @@ Music: Male
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
-Level: 45
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Machoke
+Kilowattrel
 Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Tentacruel
+Level: 45
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Machamp
 Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -9888,21 +10175,13 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Feebas @ Oran Berry
+Pyukumuku @ Oran Berry
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Flail
-- Water Pulse
-- Return
-- Attract
 
-Feebas @ Oran Berry
+Cramorant @ Oran Berry
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Flail
-- Water Pulse
-- Return
-- Attract
 
 === TRAINER_JAZMYN ===
 Name: JAZMYN
@@ -10003,7 +10282,7 @@ Machoke
 Level: 33
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Spheal
+Sealeo
 Level: 33
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -10020,10 +10299,10 @@ AI: Check Bad Move / Try To Faint / Check Viability
 Manectric
 Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
-- Roar
-- Thunder Wave
-- Thunderbolt
+
+Lycanroc-Dusk
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_REYNA ===
 Name: REYNA
@@ -10034,11 +10313,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Meditite
+Lucario
 Level: 33
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Hariyama
+Falinks
 Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -10052,6 +10331,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wailmer
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Toxapex
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10113,17 +10396,17 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: Yes
-AI: Check Bad Move
-
-Camerupt
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 HP / 50 Atk / 50 SpA
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Mightyena
 Level: 38
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
+
+Camerupt
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Ceruledge
 Level: 40
@@ -10218,7 +10501,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Altaria
 Level: 44
@@ -10306,7 +10589,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Sizzlipede
 Level: 18
@@ -10335,7 +10618,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Centiskorch
 Level: 29
@@ -10395,7 +10678,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shellos
 Level: 18
@@ -10424,7 +10707,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Gastrodon
 Level: 29
@@ -10484,7 +10767,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shroomish
 Level: 18
@@ -10513,7 +10796,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Breloom
 Level: 29
@@ -10573,7 +10856,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shellos
 Level: 18
@@ -10602,7 +10885,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Centiskorch
 Level: 29
@@ -10662,7 +10945,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shellos
 Level: 18
@@ -10691,7 +10974,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Gastrodon
 Level: 29
@@ -10751,7 +11034,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shroomish
 Level: 18
@@ -10780,7 +11063,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Breloom
 Level: 29
@@ -11552,12 +11835,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Mightyena
-Level: 35
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 Atk / 50 Spe
 
-Golbat
-Level: 35
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Mightyena
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 Atk / 50 Spe
 
 === TRAINER_GRUNT_UNUSED ===
 Name: GRUNT
@@ -11687,7 +11972,11 @@ Music: Suspicious
 Double Battle: Yes
 AI: Check Bad Move
 
-Meditite
+Gardevoir
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Rabsca
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -11699,6 +11988,10 @@ Gender: Male
 Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
+
+Pelipper
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
 Level: 34
@@ -11714,18 +12007,13 @@ Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Manectric
+Krokorok
 Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Thunder
-- Thunder Wave
-- Quick Attack
 
-Linoone
+Froslass
 Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Surf
-- Thief
 
 === TRAINER_HARRISON ===
 Name: HARRISON
@@ -11737,6 +12025,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Tentacruel
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Crawdaunt
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11766,7 +12058,11 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Sharpedo
+Huntail
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gorebyss
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11792,7 +12088,11 @@ Music: Rich
 Double Battle: Yes
 AI: Check Bad Move
 
-Spoink
+Starmie
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Indeedee-Male
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -11805,7 +12105,11 @@ Music: Suspicious
 Double Battle: Yes
 AI: Check Bad Move
 
-Kadabra
+Alakazam
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Chimecho
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -11818,7 +12122,11 @@ Music: Rich
 Double Battle: Yes
 AI: Check Bad Move
 
-Girafarig
+Espeon
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sigilyph
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11832,6 +12140,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wobbuffet
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Slowking
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11865,6 +12177,10 @@ Baltoy
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Pansear
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_SPACE_CENTER_5 ===
 Name: GRUNT
 Class: Team Magma
@@ -11878,6 +12194,10 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Silicobra
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_SPACE_CENTER_6 ===
 Name: GRUNT
 Class: Team Magma
@@ -11886,6 +12206,10 @@ Gender: Male
 Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
+
+Capsakid
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Mightyena
 Level: 32
@@ -11904,6 +12228,10 @@ Baltoy
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Koffing
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_MACEY ===
 Name: MACEY
 Class: Psychic
@@ -11913,7 +12241,11 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Natu
+Bronzong
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rabsca
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11924,7 +12256,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Ace Pokemon
 
 Shroomish
 Level: 13
@@ -11953,7 +12285,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Ace Pokemon
 
 Shellos
 Level: 13
@@ -11984,7 +12316,7 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Swellow
+Oricorio-Sensu
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12002,6 +12334,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Staryu
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Finizen
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12029,23 +12365,22 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Zubat
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Poochyena
 Level: 20
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 25 Atk / 25 Spe
 
 Numel
-Level: 22
+Level: 20
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 25 HP / 25 Atk / 25 SpA
 
 Charcadet
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 25 Atk / 25 SpA / 25 Spe
 
 === TRAINER_JONATHAN ===
 Name: JONATHAN
@@ -12061,7 +12396,7 @@ Kecleon
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Loudred
+Lycanroc-Midnight
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12072,7 +12407,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Ace Pokemon
 
 Sizzlipede
 Level: 13
@@ -12101,7 +12436,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Setup First Turn
+AI: Check Bad Move / Ace Pokemon
 
 Shellos
 Level: 13
@@ -12131,17 +12466,17 @@ Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Talonflame
 Level: 37
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 
-Crobat
+Weezing
 Level: 38
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 Atk / 200 Spe
+EVs: 200 HP / 100 Atk
 
 Scovillain
 Level: 36
@@ -12168,14 +12503,14 @@ Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Fletchinder
 Level: 24
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
 
-Golbat
+Koffing
 Level: 24
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
@@ -12389,6 +12724,10 @@ Luvdisc
 Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
+Lanturn
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 === TRAINER_CRISSY ===
 Name: CRISSY
 Class: Lass
@@ -12398,11 +12737,11 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Goldeen
+Tatsugiri-Stretchy
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wailmer
+Wailord
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -13249,7 +13588,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Altaria
 Level: 47
@@ -13319,7 +13658,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Altaria
 Level: 50
@@ -13389,7 +13728,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Altaria
 Level: 53
@@ -13459,7 +13798,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Altaria
 Level: 56
@@ -13528,7 +13867,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13577,7 +13916,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13626,7 +13965,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13675,7 +14014,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13724,7 +14063,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13773,7 +14112,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swellow
 Level: 31
@@ -13824,7 +14163,7 @@ Music: Hiker
 Double Battle: Yes
 AI: Check Bad Move
 
-Wailmer
+Pyukumuku
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13845,11 +14184,11 @@ Music: Hiker
 Double Battle: Yes
 AI: Check Bad Move
 
-Carvanha
+Corsola
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacruel
+Dondozo
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13884,11 +14223,11 @@ Items: Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Gloom
+Accelgor
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Azumarill
+Ferrothorn
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -13906,7 +14245,7 @@ Shiftry
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Nosepass
+Probopass
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -13918,6 +14257,10 @@ Gender: Male
 Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
+
+Crabrawler
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Machoke
 Level: 34
@@ -13932,7 +14275,7 @@ Music: Hiker
 Double Battle: Yes
 AI: Check Bad Move
 
-Tentacool
+Luvdisc
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13953,7 +14296,7 @@ Music: Cool
 Double Battle: Yes
 AI: Check Bad Move
 
-Swellow
+Honchkrow
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13970,7 +14313,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Spheal
+Sealeo
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13988,6 +14331,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Chinchou
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mareanie
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14017,7 +14364,7 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Swablu
+Altaria
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Sing
@@ -14025,7 +14372,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Safeguard
 - Aerial Ace
 
-Numel
+Camerupt
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Flamethrower
@@ -14221,7 +14568,7 @@ Azumarill
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wingull
+Pelipper
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14756,6 +15103,10 @@ Zubat
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Slugma
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_2 ===
 Name: GRUNT
 Class: Team Magma
@@ -14766,7 +15117,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 29
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Numel
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_3 ===
@@ -14777,6 +15132,10 @@ Gender: Male
 Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
+
+Koffing
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
 Level: 29
@@ -14795,7 +15154,7 @@ Baltoy
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Scraggy
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14812,7 +15171,7 @@ Baltoy
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Numel
+Salandit
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14829,6 +15188,10 @@ Mightyena
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Numel
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_7 ===
 Name: GRUNT
 Class: Team Magma
@@ -14839,6 +15202,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Scrafty
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14855,6 +15222,10 @@ Poochyena
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Slugma
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_9 ===
 Name: GRUNT
 Class: Team Magma
@@ -14868,6 +15239,10 @@ Zubat
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Pansear
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_10 ===
 Name: GRUNT
 Class: Team Magma
@@ -14876,6 +15251,10 @@ Gender: Male
 Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
+
+Koffing
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Mightyena
 Level: 29
@@ -14894,6 +15273,10 @@ Baltoy
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Pansear
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_12 ===
 Name: GRUNT
 Class: Team Magma
@@ -14907,6 +15290,10 @@ Numel
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Trubbish
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_13 ===
 Name: GRUNT
 Class: Team Magma
@@ -14916,7 +15303,11 @@ Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
-Zubat
+Koffing
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Trubbish
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14933,6 +15324,10 @@ Mightyena
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Baltoy
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GRUNT_MAGMA_HIDEOUT_15 ===
 Name: GRUNT
 Class: Team Magma
@@ -14943,6 +15338,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Drilbur
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -14959,6 +15358,10 @@ Baltoy
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Capsakid
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
 Name: TABITHA
 Class: Magma Admin
@@ -14966,23 +15369,22 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: Yes
-AI: Check Bad Move
-
-Golbat
-Level: 26
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Mightyena
-Level: 28
+Level: 31
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
-
-Ceruledge
-Level: 32
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+EVs: 50 Atk / 50 Spe
 
 Camerupt
-Level: 32
+Level: 31
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
+Ceruledge
+Level: 33
+IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+EVs: 50 Atk / 50 Spe
 
 === TRAINER_DARCY ===
 Name: DARCY
@@ -14994,11 +15396,11 @@ Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pelipper
+Pinsir
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Camerupt
+Centiskorch
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -15009,17 +15411,17 @@ Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Talonflame
 Level: 42
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 
-Crobat
+Weezing
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 Atk / 200 Spe
+EVs: 200 HP / 100 Atk
 
 Camerupt @ Cameruptite
 Level: 44
@@ -15438,7 +15840,7 @@ Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Roselia
+Excadrill
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -15640,7 +16042,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Ace Pokemon
 
 Shroomish
 Level: 13
@@ -15669,7 +16071,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Ace Pokemon
 
 Sizzlipede
 Level: 13
@@ -15699,7 +16101,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Cradily @ Leftovers
 Level: 52
@@ -15775,7 +16177,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Cradily @ Leftovers
 Level: 57
@@ -15851,7 +16253,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Cradily @ Leftovers
 Level: 62
@@ -15927,7 +16329,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Cradily @ Leftovers
 Level: 67
@@ -16003,7 +16405,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Bewear @ Shell Bell
 Level: 52
@@ -16079,7 +16481,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Bewear @ Shell Bell
 Level: 57
@@ -16155,7 +16557,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Bewear @ Shell Bell
 Level: 62
@@ -16231,7 +16633,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Bewear @ Shell Bell
 Level: 67
@@ -16307,7 +16709,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle @ Wise Glasses
 Level: 52
@@ -16383,7 +16785,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle @ Wise Glasses
 Level: 57
@@ -16459,7 +16861,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle @ Wise Glasses
 Level: 62
@@ -16535,7 +16937,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle @ Wise Glasses
 Level: 67
@@ -16611,7 +17013,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Ninetales @ Heat Rock
 Level: 52
@@ -16687,7 +17089,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Ninetales @ Heat Rock
 Level: 57
@@ -16763,7 +17165,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Ninetales @ Heat Rock
 Level: 62
@@ -16839,7 +17241,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Ninetales @ Heat Rock
 Level: 67
@@ -16915,7 +17317,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking @ Muscle Band
 Level: 52
@@ -16991,7 +17393,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking @ Muscle Band
 Level: 57
@@ -17067,7 +17469,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking @ Muscle Band
 Level: 62
@@ -17143,7 +17545,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking @ Muscle Band
 Level: 67
@@ -17219,7 +17621,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
 Level: 52
@@ -17295,7 +17697,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
 Level: 57
@@ -17371,7 +17773,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
 Level: 62
@@ -17447,7 +17849,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
 Level: 67
@@ -17523,47 +17925,73 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Slowpoke
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
+Lunatone @ Power Herb
+Level: 52
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Quiet
 - Psychic
-- Calm Mind
-- Protect
-
-Claydol
-Level: 49
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Ancient Power
-- Psychic
-- Light Screen
-
-Xatu @ Chesto Berry
-Level: 49
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Meteor Beam
+- Hypnosis
+- Trick Room
 
 Solrock @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 52
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk
+Nature: Brave
+- Rock Slide
+- Zen Headbutt
+- Flare Blitz
 - Sunny Day
-- Solar Beam
+
+Bronzong @ Light Clay
+Level: 51
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpD
+Nature: Brave
+- Gyro Ball
+- Body Press
+- Reflect
+- Light Screen
+
+Claydol @ Wise Glasses
+Level: 50
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Def
+Nature: Quiet
+- Earth Power
 - Psychic
-- Flamethrower
+- Calm Mind
+- Trick Room
+
+Rabsca @ Focus Sash
+Level: 54
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Relaxed
+- Bug Buzz
+- Extrasensory
+- Revival Blessing
+- Trick Room
+
+Slowbro @ Slowbronite
+Level: 55
+Ability: Own Tempo
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Sassy
+- Psychic
+- Scald
+- Slack Off
+- Calm Mind
 
 === TRAINER_TATE_AND_LIZA_3 ===
 Name: TATE&LIZA
@@ -17573,55 +18001,73 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Drowzee
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Lunatone @ Power Herb
+Level: 57
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Quiet
+- Psychic
+- Meteor Beam
 - Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Slowpoke
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Claydol
-Level: 54
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
-- Light Screen
-
-Xatu @ Chesto Berry
-Level: 54
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Trick Room
 
 Solrock @ Sitrus Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 57
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk
+Nature: Brave
+- Rock Slide
+- Zen Headbutt
+- Flare Blitz
 - Sunny Day
-- Solar Beam
+
+Bronzong @ Light Clay
+Level: 56
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpD
+Nature: Brave
+- Gyro Ball
+- Body Press
+- Reflect
+- Light Screen
+
+Claydol @ Wise Glasses
+Level: 55
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Def
+Nature: Quiet
+- Earth Power
 - Psychic
-- Flamethrower
+- Calm Mind
+- Trick Room
+
+Rabsca @ Focus Sash
+Level: 59
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Relaxed
+- Bug Buzz
+- Extrasensory
+- Revival Blessing
+- Trick Room
+
+Slowbro @ Slowbronite
+Level: 60
+Ability: Own Tempo
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Sassy
+- Psychic
+- Scald
+- Slack Off
+- Calm Mind
 
 === TRAINER_TATE_AND_LIZA_4 ===
 Name: TATE&LIZA
@@ -17631,55 +18077,73 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Hypno
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Lunatone @ Power Herb
+Level: 62
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Quiet
+- Psychic
+- Meteor Beam
 - Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Claydol
-Level: 59
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
-- Light Screen
-
-Slowpoke
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Xatu @ Chesto Berry
-Level: 59
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Trick Room
 
 Solrock @ Sitrus Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 62
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk
+Nature: Brave
+- Rock Slide
+- Zen Headbutt
+- Flare Blitz
 - Sunny Day
-- Solar Beam
+
+Bronzong @ Light Clay
+Level: 61
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpD
+Nature: Brave
+- Gyro Ball
+- Body Press
+- Reflect
+- Light Screen
+
+Claydol @ Wise Glasses
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Def
+Nature: Quiet
+- Earth Power
 - Psychic
-- Flamethrower
+- Calm Mind
+- Trick Room
+
+Rabsca @ Focus Sash
+Level: 64
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Relaxed
+- Bug Buzz
+- Extrasensory
+- Revival Blessing
+- Trick Room
+
+Slowbro @ Slowbronite
+Level: 65
+Ability: Own Tempo
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Sassy
+- Psychic
+- Scald
+- Slack Off
+- Calm Mind
 
 === TRAINER_TATE_AND_LIZA_5 ===
 Name: TATE&LIZA
@@ -17689,55 +18153,73 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Hypno
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Lunatone @ Power Herb
+Level: 67
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Quiet
+- Psychic
+- Meteor Beam
 - Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
-
-Claydol
-Level: 64
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
-- Psychic
-- Light Screen
-
-Slowking
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Xatu @ Chesto Berry
-Level: 64
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Chesto Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
-- Calm Mind
+- Trick Room
 
 Solrock @ Sitrus Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 67
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk
+Nature: Brave
+- Rock Slide
+- Zen Headbutt
+- Flare Blitz
 - Sunny Day
-- Solar Beam
+
+Bronzong @ Light Clay
+Level: 66
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpD
+Nature: Brave
+- Gyro Ball
+- Body Press
+- Reflect
+- Light Screen
+
+Claydol @ Wise Glasses
+Level: 65
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Def
+Nature: Quiet
+- Earth Power
 - Psychic
-- Flamethrower
+- Calm Mind
+- Trick Room
+
+Rabsca @ Focus Sash
+Level: 69
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Relaxed
+- Bug Buzz
+- Extrasensory
+- Revival Blessing
+- Trick Room
+
+Slowbro @ Slowbronite
+Level: 70
+Ability: Own Tempo
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA
+Nature: Sassy
+- Psychic
+- Scald
+- Slack Off
+- Calm Mind
 
 === TRAINER_JUAN_2 ===
 Name: JUAN
@@ -17747,47 +18229,71 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Poliwag
-Level: 46
+Dondozo @ Lum Berry
+Level: 52
+Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Jolly
+- Order Up
+- Liquidation
 - Rest
-- Crabhammer
-- Taunt
-- Double Team
+- Sleep Talk
+
+Tatsugiri-Curly @ Toxic Orb
+Level: 52
+Ability: Commander
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Hydro Pump
+- Dragon Pulse
+
+Marin @ Focus Sash
+Level: 51
+Ability: Friend Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Spe
+Nature: Timid
+- Dazzling Gleam
+- Magical Cheer
+- Helping Hand
+- Follow Me
+
+Milotic @ Flame Orb
+Level: 50
+Ability: Marvel Scale
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Modest
+- Water Pulse
+- Ice Beam
+- Recover
+- Rain Dance
 
 Kingdra @ Chesto Berry
-Level: 51
+Level: 54
+Ability: Swift Swim
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
 - Water Pulse
+- Dragon Pulse
 - Double Team
-- Ice Beam
 - Rest
+
+Gyarados @ Gyaradosite
+Level: 55
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
 
 === TRAINER_JUAN_3 ===
 Name: JUAN
@@ -17797,47 +18303,71 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Poliwhirl
-Level: 50
+Dondozo @ Lum Berry
+Level: 57
+Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Jolly
+- Order Up
+- Liquidation
 - Rest
-- Guillotine
-- Taunt
-- Double Team
+- Sleep Talk
+
+Tatsugiri-Curly @ Toxic Orb
+Level: 57
+Ability: Commander
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Hydro Pump
+- Dragon Pulse
+
+Marin @ Focus Sash
+Level: 56
+Ability: Friend Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Spe
+Nature: Timid
+- Dazzling Gleam
+- Magical Cheer
+- Helping Hand
+- Follow Me
+
+Milotic @ Flame Orb
+Level: 55
+Ability: Marvel Scale
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Modest
+- Water Pulse
+- Ice Beam
+- Recover
+- Rain Dance
 
 Kingdra @ Chesto Berry
-Level: 56
+Level: 59
+Ability: Swift Swim
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
 - Water Pulse
+- Dragon Pulse
 - Double Team
-- Ice Beam
 - Rest
+
+Gyarados @ Gyaradosite
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
 
 === TRAINER_JUAN_4 ===
 Name: JUAN
@@ -17847,55 +18377,71 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Lapras
-Level: 56
+Dondozo @ Lum Berry
+Level: 62
+Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Poliwhirl
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Walrein
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Jolly
+- Order Up
+- Liquidation
 - Rest
-- Guillotine
-- Taunt
-- Double Team
+- Sleep Talk
+
+Tatsugiri-Curly @ Toxic Orb
+Level: 62
+Ability: Commander
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Hydro Pump
+- Dragon Pulse
+
+Marin @ Focus Sash
+Level: 61
+Ability: Friend Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Spe
+Nature: Timid
+- Dazzling Gleam
+- Magical Cheer
+- Helping Hand
+- Follow Me
+
+Milotic @ Flame Orb
+Level: 60
+Ability: Marvel Scale
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Modest
+- Water Pulse
+- Ice Beam
+- Recover
+- Rain Dance
 
 Kingdra @ Chesto Berry
-Level: 61
+Level: 64
+Ability: Swift Swim
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
 - Water Pulse
+- Dragon Pulse
 - Double Team
-- Ice Beam
 - Rest
+
+Gyarados @ Gyaradosite
+Level: 65
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
 
 === TRAINER_JUAN_5 ===
 Name: JUAN
@@ -17905,55 +18451,71 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Lapras
-Level: 61
+Dondozo @ Lum Berry
+Level: 67
+Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Politoed
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Hydro Pump
-- Perish Song
-
-Walrein
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Sheer Cold
-
-Crawdaunt @ Chesto Berry
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Jolly
+- Order Up
+- Liquidation
 - Rest
-- Guillotine
-- Taunt
-- Double Team
+- Sleep Talk
+
+Tatsugiri-Curly @ Toxic Orb
+Level: 67
+Ability: Commander
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Hydro Pump
+- Dragon Pulse
+
+Marin @ Focus Sash
+Level: 66
+Ability: Friend Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Spe
+Nature: Timid
+- Dazzling Gleam
+- Magical Cheer
+- Helping Hand
+- Follow Me
+
+Milotic @ Flame Orb
+Level: 65
+Ability: Marvel Scale
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Modest
+- Water Pulse
+- Ice Beam
+- Recover
+- Rain Dance
 
 Kingdra @ Chesto Berry
-Level: 66
+Level: 69
+Ability: Swift Swim
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
 - Water Pulse
+- Dragon Pulse
 - Double Team
-- Ice Beam
 - Rest
+
+Gyarados @ Gyaradosite
+Level: 70
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
 
 === TRAINER_ANGELO ===
 Name: ANGELO
@@ -18000,7 +18562,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Skarmory
 Level: 77
@@ -18314,7 +18876,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Staryu
+Sharpedo
 Level: 37
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -18331,7 +18893,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Wingull
+Sharpedo
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -18339,7 +18901,7 @@ Staryu
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Staryu
+Kilowattrel
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -18352,15 +18914,15 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
+Sharpedo
 Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Staryu
+Starmie
 Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Staryu
+Kilowattrel
 Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
@@ -18373,7 +18935,7 @@ Music: Swimmer
 Double Battle: Yes
 AI: Check Bad Move
 
-Pelipper
+Sharpedo
 Level: 43
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -18381,7 +18943,7 @@ Starmie
 Level: 43
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Starmie
+Kilowattrel
 Level: 43
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -18394,7 +18956,7 @@ Music: Intense
 Double Battle: Yes
 AI: Check Bad Move
 
-Machoke
+Crabrawler
 Level: 37
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -18415,7 +18977,7 @@ Makuhita
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Machoke
+Crabrawler
 Level: 39
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -18436,7 +18998,7 @@ Hariyama
 Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Machoke
+Crabominable
 Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
@@ -18457,7 +19019,7 @@ Hariyama
 Level: 43
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Machamp
+Crabominable
 Level: 43
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -18983,11 +19545,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Koffing
-Level: 27
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Mightyena
-Level: 28
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COURTNEY_SOUTHERN_ISLAND ===
@@ -18997,20 +19559,69 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: Yes
-AI: Check Bad Move
-
-Camerupt
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 HP / 50 Atk / 50 SpA
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Golbat
 Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
+Camerupt
+Level: 28
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
 Ninetales
 Level: 30
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+
+=== TRAINER_MATT_MT_PYRE ===
+Name: MATT
+Class: Aqua Admin
+Pic: Aqua Admin M
+Gender: Male
+Music: Aqua
+Items: Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Golbat
+Level: 32
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Sharpedo
+Level: 32
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Barbaracle
+Level: 34
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+=== TRAINER_COURTNEY_HIDEOUT ===
+Name: COURTNEY
+Class: Magma Admin
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Camerupt
+Level: 31
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
+Golbat
+Level: 31
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 Atk / 50 Spe
+
+Ninetales
+Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
 

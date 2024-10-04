@@ -33,6 +33,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_FORTREE_GYM
 	setflag FLAG_BADGE06_GET
+	setvar VAR_LEVEL_CAP, 39
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
@@ -50,7 +51,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	end
 
 FortreeCity_Gym_EventScript_GiveAerialAce2::
-	giveitem ITEM_TM_AERIAL_ACE
+	giveitem ITEM_TM57
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_AERIAL_ACE
@@ -263,9 +264,9 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "This is a gift from me.$"
 
 FortreeCity_Gym_Text_ExplainAerialAce:
-	.string "TM40 contains AERIAL ACE.\p"
-	.string "Its speed…\n"
-	.string "No POKéMON should be able to avoid it.\p"
+	.string "TM57 contains TAILWIND.\p"
+	.string "With the wind beneath your wings…\n"
+	.string "Your POKéMON can move incredibly fast.\p"
 	.string "… … … … … …$"
 
 FortreeCity_Gym_Text_RegisteredWinona:

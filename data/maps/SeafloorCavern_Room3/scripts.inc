@@ -37,22 +37,26 @@ SeafloorCavern_Room3_Text_ShellyPostBattle:
 	.string "one of us…$"
 
 SeafloorCavern_Room3_Text_Grunt5Intro:
-	.string "For our dream to become real, we need\n"
-	.string "the power of POKéMON.\p"
-	.string "But meddlers like you use the power of\n"
-	.string "POKéMON to mess with us even at\l"
-	.string "a place like this!\p"
-	.string "Life just doesn't work the way we\n"
-	.string "need it to!$"
+	.string "Who on earth- Bwuh?!\p"
+	.string "Of all the people to run into under the\n"
+	.string "literal ocean, of course it's you!\p"
+	.string "After you thwarted me in the PETALBURG\n"
+	.string "WOODS, and then stole the parts from me\l"
+	.string "in RUSTURF TUNNEL, I thought it was over!\p"
+	.string "But no, after finally being trusted with\n"
+	.string "an important mission after my previous\l"
+	.string "failures, of course you would show up!\p"
+	.string "Well things are going to be different\n"
+	.string "this time! Just you see!$"
 
 SeafloorCavern_Room3_Text_Grunt5Defeat:
-	.string "Gwah!$"
+	.string "Gwah! Not again!$"
 
 SeafloorCavern_Room3_Text_Grunt5PostBattle:
-	.string "You know, we don't dare question\n"
-	.string "the motives of our leader.\p"
-	.string "But here you are, just some punk,\n"
-	.string "going up against our BOSS.\p"
-	.string "Maybe…\n"
-	.string "You must be something…$"
+	.string "Darn it! What is it that makes you\n"
+	.string "insist on getting in our way?\p"
+	.string "Maybe I'm just not cut out for this\n"
+	.string "job…\p"
+	.string "When this mission is over, I'm going\n"
+	.string "to just get a job at the POKé MART…$"
 

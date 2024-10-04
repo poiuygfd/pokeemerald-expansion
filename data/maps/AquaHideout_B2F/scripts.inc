@@ -90,33 +90,37 @@ AquaHideout_B2F_EventScript_Grunt8::
 	end
 
 AquaHideout_B2F_Text_MattIntro:
-	.string "Hehehe…\p"
+	.string "Oh ho! If it isn't the brozo!\p"
 	.string "Got here already, did you?\n"
-	.string "We underestimated you!\p"
+	.string "I sure underestimated you!\p"
 	.string "But this is it!\p"
-	.string "I'm a cut above the GRUNTS you've seen\n"
-	.string "so far.\p"
-	.string "I'm not stalling for time.\n"
-	.string "I'm going to pulverize you!$"
+	.string "While my bro ARCHIE finishes up his\n"
+	.string "preparations, how about we truly settle\l"
+	.string "who's stronger, once and for all!\p"
+	.string "Me! You! POKéMON! Mixing it up! Dueling!\n"
+	.string "Full on! I'm burning up!\p"
+	.string "Let's battle it out till there's nothing\n"
+	.string "left!$"
 
 AquaHideout_B2F_Text_MattDefeat:
-	.string "Hehehe…\n"
-	.string "So, I lost, too…$"
+	.string "Oho!\n"
+	.string "That hurt about as much as I figured!$"
 
 AquaHideout_B2F_Text_OurBossGotThroughHisPreparations:
-	.string "Hehehe!\p"
-	.string "While I was toying with you, our BOSS\n"
-	.string "got through his preparations!$"
+	.string "Hah… hah… Bro! It's all… on you… now…\p"
+	.string "While I was toying with you… our BOSS…\n"
+	.string "got through… his preparations!$"
 
 AquaHideout_B2F_Text_MattPostBattle:
-	.string "Hehehe!\p"
-	.string "Our BOSS has already gone on his way to\n"
-	.string "some cave under the sea!\p"
+	.string "…All right. You took me out, so I'll\n"
+	.string "let you know what our BOSS is up to.\p"
+	.string "My bro has already gone on his way to\n"
+	.string "a cavern deep below the sea's surface!\p"
 	.string "If you're going to give chase, you'd\n"
 	.string "better search the big, wide sea beyond\l"
 	.string "LILYCOVE.\p"
-	.string "But will you find it then?\n"
-	.string "Hehehe!$"
+	.string "You can use your own thick head to\n"
+	.string "figure out the rest!$"
 
 AquaHideout_B2F_Text_Grunt4Intro:
 	.string "Wahahah, I grew weary of waiting!\n"
