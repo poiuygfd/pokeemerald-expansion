@@ -1407,7 +1407,7 @@ SootopolisCity_Movement_DestroyTask::
 
 SootopolisCity_Text_GymSign:
 	.string "SOOTOPOLIS CITY POKéMON GYM\n"
-	.string "LEADER: JUAN\p"
+	.string "LEADER: WALLACE\p"
 	.string "“The GYM LEADER with the beauty\n"
 	.string "of pure water!”$"
 
@@ -1718,8 +1718,18 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
 	.string "the SOOTOPOLIS GYM LEADER.\p"
+	.string "Truthfully, the GYM LEADER of SOOTOPOLIS\n"
+	.string "is none other than myself…\p"
+	.string "However, after the events of today, I've\n"
+	.string "decided to retrain myself from scratch.\p"
+	.string "Next time SOOTOPOLIS is in danger, I'll\n"
+	.string "make sure I'm strong enough to save it!\p"
+	.string "In my stead, I have had my mentor, JUAN,\n"
+	.string "take over my duties as GYM LEADER.\p"
 	.string "When you're all set to go, step through\n"
-	.string "that door.$"
+	.string "that door.\p"
+	.string "Next time we meet, however…\n"
+	.string "I would like to battle with you myself!$"
 
 SootopolisCity_Text_DazzledByMentor:
 	.string "WALLACE: I'm sure that you will be\n"

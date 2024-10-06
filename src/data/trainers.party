@@ -5089,48 +5089,74 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Purple
 
-Mightyena
-Level: 46
+Scrafty @ Leftovers
+Level: 47
+Ability: Intimidate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Roar
-- Double Edge
-- Sand Attack
+EVs: 250 HP / 250 Atk
+Nature: Careful
 - Crunch
+- Brick Break
+- Fake Out
+- Bulk Up
 
-Shiftry
-Level: 48
+Shiftry @ Normal Gem
+Level: 47
+Ability: Wind Rider
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Torment
-- Double Team
+EVs: 250 Atk / 250 Spe
+Nature: Adamant
+- Knock Off
+- Leaf Blade
+- Explosion
+- Tailwind
+
+Drapion @ Scope Lens
+Level: 48
+Ability: Sniper
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 Atk
+Nature: Jolly
+- Night Slash
+- Cross Poison
+- Leech Life
+- Swords Dance
+
+Krookodile @ Focus Sash
+Level: 48
+Ability: Intimidate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Earthquake
+- Stomping Tantrum
+- Crunch
 - Swagger
-- Extrasensory
 
-Cacturne
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Leech Seed
-- Feint Attack
-- Needle Arm
-- Cotton Spore
-
-Crawdaunt
+Obstagoon @ Flame Orb
 Level: 48
+Ability: Guts
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Surf
-- Swords Dance
-- Strength
+EVs: 250 HP / 250 Atk
+Nature: Adamant
 - Facade
+- Throat Chop
+- Cross Chop
+- Obstruct
 
-Absol @ Sitrus Berry
+Absol @ Absolite
 Level: 49
+Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rock Slide
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Night Slash
+- Play Rough
 - Swords Dance
-- Slash
+- Sucker Punch
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE
@@ -5143,45 +5169,71 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Green
 
-Dusclops
-Level: 48
+Zoroark-Hisui @ Life Orb
+Level: 49
+Ability: Illusion
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Punch
-- Confuse Ray
-- Curse
+EVs: 250 SpA / 250 Spe
+Nature: Modest
+- Hyper Voice
+- Bitter Malice
+- Flamethrower
+- Nasty Plot
+
+Cofagrigus @ Leftovers
+Level: 49
+Ability: Mummy
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 SpD
+Nature: Bold
+- Shadow Ball
+- Body Press
+- Will O Wisp
 - Protect
 
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Grudge
-- Will O Wisp
-- Feint Attack
-
-Sableye
+Mimikyu @ Focus Sash
 Level: 50
+Ability: Disguise
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Double Team
-- Night Shade
-- Feint Attack
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Shadow Claw
+- Play Rough
+- Shadow Sneak
+- Swords Dance
 
-Banette
-Level: 49
+Houndstone @ Chesto Berry
+Level: 50
+Ability: Fluffy
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Psychic
-- Thunderbolt
-- Facade
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Last Respects
+- Dig
+- Charm
+- Rest
 
-Dusclops @ Sitrus Berry
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Ice Beam
+Dusknoir @ Assault Vest
+Level: 50
+Ability: Pressure
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 Atk
+Nature: Impish
+- Poltergeist
+- Ice Punch
 - Rock Slide
-- Earthquake
+- Shadow Sneak
+
+Sableye @ Sablenite
+Level: 51
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Atk
+Nature: Careful
+- Knock Off
+- Will-O-Wisp
+- Recover
+- Foul Play
 
 === TRAINER_GLACIA ===
 Name: GLACIA
@@ -5194,45 +5246,71 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Pink
 
-Sealeo
-Level: 50
+Ninetales-Alola @ Light Clay
+Level: 51
+Ability: Snow Warning
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
-- Hail
-- Ice Ball
-
-Glalie
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Crunch
-- Icy Wind
-- Ice Beam
-
-Sealeo
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
+EVs: 250 SpA / 250 Spe
+Nature: Timid
 - Blizzard
+- Dazzling Gleam
+- Hypnosis
+- Aurora Veil
 
-Glalie
-Level: 52
+Avalugg @ Assault Vest
+Level: 51
+Ability: Ice Body
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Explosion
-- Hail
-- Ice Beam
+EVs: 250 Atk / 250 Def
+Nature: Careful
+- Icicle Crash
+- Crunch
+- Body Press
+- Stone Edge
 
-Walrein @ Sitrus Berry
+Delibird @ Choice Band
+Level: 52
+Ability: Hustle
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Aerial Ace
+- Ice Spinner
+- Seed Bomb
+- Ice Shard
+
+Mamoswine @ Rocky Helmet
+Level: 52
+Ability: Thick Fat
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Ice Spinner
+- Headlong Rush
+- Earthquake
+- Ice Shard
+
+Walrein @ Leftovers
+Level: 52
+Ability: Ice Body
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 Atk / 250 SpA
+Nature: Modest
+- Hydro Pump
+- Blizzard
+- Protect
+- Snowscape
+
+Glalie @ Glalitite
 Level: 53
+Ability: Moody
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Body Slam
-- Ice Beam
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Double-Edge
+- Crunch
 - Sheer Cold
+- Explosion
 
 === TRAINER_DRAKE ===
 Name: DRAKE
@@ -5245,45 +5323,71 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Blue
 
-Shelgon
-Level: 52
+Cyclizar @ Sitrus Berry
+Level: 53
+Ability: Regenerator
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Rock Tomb
-- Dragon Claw
-- Protect
-- Double Edge
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Breaking Swipe
+- Knock Off
+- Rapid Spin
+- Shed Tail
 
-Altaria
+Flygon @ Choice Specs
+Level: 53
+Ability: Levitate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 SpA / 250 Spe
+Nature: Modest
+- Dragon Pulse
+- Earth Power
+- Boomburst
+- Fire Blast
+
+Haxorus @ Life Orb
 Level: 54
+Ability: Mold Breaker
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Double Edge
-- Dragon Breath
-- Dragon Dance
-- Aerial Ace
-
-Kingdra
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Smokescreen
-- Dragon Dance
-- Surf
-- Body Slam
-
-Flygon
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Flamethrower
-- Crunch
-- Dragon Breath
+EVs: 250 Atk / 250 Spe
+Nature: Adamant
+- Outrage
+- Dragon Claw
 - Earthquake
+- Dragon Dance
 
-Salamence @ Sitrus Berry
+Kingdra @ Scope Lens
+Level: 54
+Ability: Sniper
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 SpA / 250 Spe
+Nature: Timid
+- Surf
+- Draco Meteor
+- Ice Beam
+- Hydro Pump
+
+Hydrapple @ Wise Glasses
+Level: 54
+Ability: Supersweet Syrup
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 SpA
+Nature: Calm
+- Giga Drain
+- Fickle Beam
+- Hydro Pump
+- Recover
+
+Salamence @ Salamencite
 Level: 55
+Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Double-Edge
 - Dragon Claw
 - Rock Slide
-- Crunch
+- Dragon Dance
 
 === TRAINER_ROXANNE_1 ===
 Name: ROXANNE
@@ -6982,7 +7086,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
 Name: WALLACE
-Class: Champion
+Class: Rival
 Pic: Champion Wallace
 Gender: Male
 Music: Male
@@ -6991,53 +7095,71 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Yellow
 
-Wailord
-Level: 57
+Wailord @ Damp Rock
+Level: 75
+Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Bold
 - Rain Dance
 - Water Spout
-- Double Edge
+- Surf
 - Blizzard
 
-Tentacruel
-Level: 55
+Finizen @ Eject Button
+Level: 75
+Ability: Zero to Hero
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Wave Crash
+- Close Combat
+- Jet Punch
+- Flip Turn
+
+Starmie @ Life Orb
+Level: 76
+Ability: Natural Cure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Timid
 - Hydro Pump
-- Sludge Bomb
+- Psychic
+- Thunderbolt
 - Ice Beam
 
-Ludicolo
-Level: 56
+Whiscash @ Rocky Helmet
+Level: 76
+Ability: Oblivious
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Surf
-- Leech Seed
-- Double Team
-
-Whiscash
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
 - Earthquake
-- Surf
-- Amnesia
-- Hyper Beam
-
-Gyarados
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Liquidation
+- Rock Slide
 - Dragon Dance
-- Earthquake
-- Hyper Beam
-- Surf
 
-Milotic @ Sitrus Berry
-Level: 58
+Milotic @ Lum Berry
+Level: 76
+Ability: Competitive
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Recover
-- Surf
+EVs: 252 HP / 252 SpA
+Nature: Bold
+- Scald
 - Ice Beam
-- Toxic
+- Recover
+- Rain Dance
+
+Blastoise @ Blastoisinite
+Level: 78
+Ability: Rain Dish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Water Pulse
+- Aura Sphere
+- Ice Beam
+- Shell Smash
 
 === TRAINER_ANDREW ===
 Name: ANDREW
@@ -18556,61 +18678,80 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_STEVEN ===
 Name: STEVEN
-Class: Rival
+Class: Champion
 Pic: Steven
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Yellow
 
-Skarmory
-Level: 77
+Skarmory @ Leftovers
+Level: 56
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
-- Aerial Ace
+EVs: 250 HP / 250 Def
+Nature: Impish
+- Brave Bird
+- Stealth Rock
 - Spikes
-- Steel Wing
+- Roost
 
-Claydol
-Level: 75
+Aegislash @ Muscle Band
+Level: 56
+Ability: Stance Change
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Reflect
-- Light Screen
-- Ancient Power
-- Earthquake
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Iron Head
+- Sacred Sword
+- Shadow Sneak
+- Kings Shield
 
-Aggron
-Level: 76
+Aggron @ Assault Vest
+Level: 58
+Ability: Rock Head
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Earthquake
-- Solar Beam
-- Dragon Claw
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Head Smash
+- Heavy Slam
+- Body Press
+- Thunder Punch
 
-Cradily
-Level: 76
+Gholdengo @ Air Balloon
+Level: 58
+Ability: Good as Gold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Ancient Power
-- Ingrain
-- Confuse Ray
-
-Armaldo
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Ancient Power
-- Aerial Ace
-- Slash
-
-Metagross @ Sitrus Berry
-Level: 78
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Meteor Mash
+EVs: 250 SpA / 250 Spe
+Nature: Timid
+- Make It Rain
 - Shadow Ball
+- Recover
+- Nasty Plot
+
+Kingambit @ Black Glasses
+Level: 59
+Ability: Supreme Overlord
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
+
+Metagross @ Metagrossite
+Level: 60
+Ability: Clear Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Meteor Mash
+- Zen Headbutt
+- Hammer Arm
+- Bullet Punch
 
 === TRAINER_ANABEL ===
 Name: ANABEL
@@ -19624,6 +19765,545 @@ Ninetales
 Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
+
+=== TRAINER_RED_METEOR_FALLS ===
+Name: RED
+Class: Rival
+Pic: Red
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Blue
+
+Pikachu-Partner @ Light Ball
+Level: 82
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Rash
+- Thunderbolt
+- Volt Tackle
+- Iron Tail
+- Zippy Zap
+
+Snorlax @ Iapapa Berry
+Level: 78
+Ability: Gluttony
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Impish
+- Body Slam
+- High Horsepower
+- Recycle
+- Belly Drum
+
+Heracross @ Flame Orb
+Level: 77
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Megahorn
+- Close Combat
+- Rock Blast
+- Protect
+
+Excadrill @ Wide Lens
+Level: 76
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Drill Run
+- Iron Head
+- Stone Edge
+- Swords Dance
+
+Tyranitar @ Weakness Policy
+Level: 79
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Stone Edge
+- Crunch
+- Ice Punch
+- Dragon Dance
+
+Charizard @ Charizardite X
+Level: 80
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Flare Blitz
+- Dragon Claw
+- Fire Punch
+- Dragon Dance
+
+=== TRAINER_LEAF_ARTISAN_CAVE ===
+Name: LEAF
+Class: Rival
+Pic: Leaf
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Pink
+
+Eevee-Partner @ Assault Vest
+Level: 82
+Ability: Run Away
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
+Nature: Careful
+- Sizzly Slide
+- Sappy Seed
+- Glitzy Glow
+- Baddy Bad
+
+Wigglytuff @ Choice Specs
+Level: 78
+Ability: Competitive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Bold
+- Hyper Voice
+- Moonblast
+- Flamethrower
+- Ice Beam
+
+Lanturn @ Leftovers
+Level: 77
+Ability: Volt Absorb
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Bold
+- Thunderbolt
+- Scald
+- Volt Switch
+- Thunder Wave
+
+Tinkaton @ Steel Gem
+Level: 76
+Ability: Mold Breaker
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Gigaton Hammer
+- Play Rough
+- Encore
+- Protect
+
+Goodra @ Expert Belt
+Level: 79
+Ability: Gooey
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Timid
+- Draco Meteor
+- Flamethrower
+- Hydro Pump
+- Sludge Bomb
+
+Venusaur @ Venusaurite
+Level: 80
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Leaf Storm
+
+=== TRAINER_SIDNEY_REMATCH ===
+Name: SIDNEY
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Elite Four
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Purple
+
+Scrafty @ Leftovers
+Level: 67
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Careful
+- Crunch
+- Brick Break
+- Fake Out
+- Bulk Up
+
+Shiftry @ Normal Gem
+Level: 67
+Ability: Wind Rider
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Knock Off
+- Leaf Blade
+- Explosion
+- Tailwind
+
+Drapion @ Scope Lens
+Level: 68
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Jolly
+- Night Slash
+- Cross Poison
+- Leech Life
+- Swords Dance
+
+Krookodile @ Focus Sash
+Level: 68
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Earthquake
+- Stomping Tantrum
+- Crunch
+- Swagger
+
+Obstagoon @ Flame Orb
+Level: 68
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Facade
+- Throat Chop
+- Cross Chop
+- Obstruct
+
+Absol @ Absolite
+Level: 69
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Night Slash
+- Play Rough
+- Swords Dance
+- Sucker Punch
+
+=== TRAINER_PHOEBE_REMATCH ===
+Name: PHOEBE
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Female
+Music: Elite Four
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Green
+
+Zoroark-Hisui @ Life Orb
+Level: 69
+Ability: Illusion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Hyper Voice
+- Bitter Malice
+- Flamethrower
+- Nasty Plot
+
+Cofagrigus @ Leftovers
+Level: 69
+Ability: Mummy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Bold
+- Shadow Ball
+- Body Press
+- Will O Wisp
+- Protect
+
+Mimikyu @ Focus Sash
+Level: 70
+Ability: Disguise
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Shadow Claw
+- Play Rough
+- Shadow Sneak
+- Swords Dance
+
+Houndstone @ Chesto Berry
+Level: 70
+Ability: Fluffy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Last Respects
+- Dig
+- Charm
+- Rest
+
+Dusknoir @ Assault Vest
+Level: 70
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Impish
+- Poltergeist
+- Ice Punch
+- Rock Slide
+- Shadow Sneak
+
+Sableye @ Sablenite
+Level: 71
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Careful
+- Knock Off
+- Will-O-Wisp
+- Recover
+- Foul Play
+
+=== TRAINER_GLACIA_REMATCH ===
+Name: GLACIA
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female
+Music: Elite Four
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Pink
+
+Ninetales-Alola @ Light Clay
+Level: 71
+Ability: Snow Warning
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Blizzard
+- Dazzling Gleam
+- Hypnosis
+- Aurora Veil
+
+Avalugg @ Assault Vest
+Level: 71
+Ability: Ice Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Def
+Nature: Careful
+- Icicle Crash
+- Crunch
+- Body Press
+- Stone Edge
+
+Delibird @ Choice Band
+Level: 72
+Ability: Hustle
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Aerial Ace
+- Ice Spinner
+- Seed Bomb
+- Ice Shard
+
+Mamoswine @ Rocky Helmet
+Level: 72
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Ice Spinner
+- Headlong Rush
+- Earthquake
+- Ice Shard
+
+Walrein @ Leftovers
+Level: 72
+Ability: Ice Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA
+Nature: Modest
+- Hydro Pump
+- Blizzard
+- Protect
+- Snowscape
+
+Glalie @ Glalitite
+Level: 73
+Ability: Moody
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Double-Edge
+- Crunch
+- Sheer Cold
+- Explosion
+
+=== TRAINER_DRAKE_REMATCH ===
+Name: DRAKE
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Elite Four
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Blue
+
+Cyclizar @ Sitrus Berry
+Level: 73
+Ability: Regenerator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Breaking Swipe
+- Knock Off
+- Rapid Spin
+- Shed Tail
+
+Flygon @ Choice Specs
+Level: 73
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Modest
+- Dragon Pulse
+- Earth Power
+- Boomburst
+- Fire Blast
+
+Haxorus @ Life Orb
+Level: 74
+Ability: Mold Breaker
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Outrage
+- Dragon Claw
+- Earthquake
+- Dragon Dance
+
+Kingdra @ Scope Lens
+Level: 74
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Surf
+- Draco Meteor
+- Ice Beam
+- Hydro Pump
+
+Hydrapple @ Wise Glasses
+Level: 74
+Ability: Supersweet Syrup
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Calm
+- Giga Drain
+- Fickle Beam
+- Hydro Pump
+- Recover
+
+Salamence @ Salamencite
+Level: 75
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Double-Edge
+- Dragon Claw
+- Rock Slide
+- Dragon Dance
+
+=== TRAINER_STEVEN_REMATCH ===
+Name: STEVEN
+Class: Champion
+Pic: Steven
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Yellow
+
+Skarmory @ Leftovers
+Level: 76
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Def
+Nature: Impish
+- Brave Bird
+- Stealth Rock
+- Spikes
+- Roost
+
+Aegislash @ Muscle Band
+Level: 76
+Ability: Stance Change
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Iron Head
+- Sacred Sword
+- Shadow Sneak
+- Kings Shield
+
+Aggron @ Assault Vest
+Level: 78
+Ability: Rock Head
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Head Smash
+- Heavy Slam
+- Body Press
+- Thunder Punch
+
+Gholdengo @ Air Balloon
+Level: 78
+Ability: Good as Gold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 SpA / 250 Spe
+Nature: Timid
+- Make It Rain
+- Shadow Ball
+- Recover
+- Nasty Plot
+
+Kingambit @ Black Glasses
+Level: 79
+Ability: Supreme Overlord
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
+
+Metagross @ Metagrossite
+Level: 80
+Ability: Clear Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 250 Atk / 250 Spe
+Nature: Jolly
+- Meteor Mash
+- Zen Headbutt
+- Hammer Arm
+- Bullet Punch
 
 === TRAINER_RED ===
 Name: RED

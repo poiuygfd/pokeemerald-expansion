@@ -1232,14 +1232,14 @@
 #define FLAG_RECEIVED_ABILITY_CAPSULE                               0x49E // Devon Corp Scientist Ability Capsule
 #define FLAG_ITEM_SEAFLOOR_CAVERN_TM64                              0x49F // Seafloor Cavern TM Weather Ball
 #define FLAG_ITEM_JAGGED_PASS_TM65                                  0x4A0 // Jagged Pass TM Flame Charge
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
+#define FLAG_ITEM_ROUTE_121_TM55                                    0x4A1 // Route 121 TM U-Turn
+#define FLAG_ITEM_ROUTE_112_TM08                                    0x4A2 // Route 112 TM Bulk Up
+#define FLAG_ITEM_GRANITE_CAVE_TM56                                 0x4A3 // Granite Cave TM Shadow Claw
+#define FLAG_ITEM_SKY_PILLAR_TM63                                   0x4A4 // Sky Pillar TM Scale Shot
+#define FLAG_ITEM_ROUTE_128_TM70                                    0x4A5 // Route 128 TM Terrain Pulse
+#define FLAG_RECEIVED_BODY_PRESS                                    0x4A6 // Body Press TM Gift
+#define FLAG_RECEIVED_CONFIDE                                       0x4A7 // Confide TM Gift
+#define FLAG_RECEIVED_ESCAPE_ROPE                                   0x4A8 // Escape Rope Gift
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag

@@ -858,17 +858,24 @@
 #define TRAINER_COURTNEY_SOUTHERN_ISLAND    852
 #define TRAINER_MATT_MT_PYRE                853
 #define TRAINER_COURTNEY_HIDEOUT            854
-#define TRAINER_RED                         855
-#define TRAINER_LEAF                        856
-#define TRAINER_BRENDAN_PLACEHOLDER         857
-#define TRAINER_MAY_PLACEHOLDER             858
+#define TRAINER_RED_METEOR_FALLS            855
+#define TRAINER_LEAF_ARTISAN_CAVE           856
+#define TRAINER_SIDNEY_REMATCH              857
+#define TRAINER_PHOEBE_REMATCH              858
+#define TRAINER_GLACIA_REMATCH              859
+#define TRAINER_DRAKE_REMATCH               860
+#define TRAINER_STEVEN_REMATCH              861
+#define TRAINER_RED                         862
+#define TRAINER_LEAF                        863
+#define TRAINER_BRENDAN_PLACEHOLDER         864
+#define TRAINER_MAY_PLACEHOLDER             865
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      859
-#define MAX_TRAINERS_COUNT                  868
+#define TRAINERS_COUNT                      866
+#define MAX_TRAINERS_COUNT                  875
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

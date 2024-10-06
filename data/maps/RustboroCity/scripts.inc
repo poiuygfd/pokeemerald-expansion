@@ -173,16 +173,20 @@ RustboroCity_EventScript_Man1HaveBadge::
 	release
 	end
 
-RustboroCity_EventScript_Boy2::
+RustboroCity_EventScript_ConfideBoy::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_POKENAV, RustboroCity_EventScript_Boy2BrineyLeftTunnel
-	msgbox RustboroCity_Text_MrBrineyWalksInTheTunnel, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_CONFIDE , RustboroCity_EventScript_ReceivedConfide
+	msgbox RustboroCity_Text_TellingSecrets, MSGBOX_DEFAULT
+	giveitem ITEM_TM62
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CONFIDE
+	msgbox RustboroCity_Text_GivenConfide, MSGBOX_DEFAULT
 	release
 	end
 
-RustboroCity_EventScript_Boy2BrineyLeftTunnel::
-	msgbox RustboroCity_Text_MrBrineyLovesPeeko, MSGBOX_DEFAULT
+RustboroCity_EventScript_ReceivedConfide::
+	msgbox RustboroCity_Text_GivenConfide, MSGBOX_DEFAULT
 	release
 	end
 
@@ -1057,19 +1061,21 @@ RustboroCity_Text_GymLeaderIsntEasyWithFire:
 	.string "FIRE-type POKéMON don't match up\n"
 	.string "well against ROCK-type POKéMON…$"
 
-RustboroCity_Text_MrBrineyWalksInTheTunnel:
+RustboroCity_Text_TellingSecrets:
+	.string "I love telling secrets and gossip\n"
+	.string "to people. Did you know?\p"
 	.string "The old sailor MR. BRINEY lives in\n"
 	.string "a cottage by the sea.\p"
 	.string "He goes for walks in the tunnel every\n"
-	.string "so often.$"
+	.string "so often with his pet, PEEKO.\p"
+	.string "Thanks for listening to me. Here, if\n"
+	.string "you ever feel like telling secrets\l"
+	.string "you can use this.$"
 
-RustboroCity_Text_MrBrineyLovesPeeko:
-	.string "The old sailor MR. BRINEY lives in\n"
-	.string "a cottage by the sea.\p"
-	.string "He said he was going shopping in\n"
-	.string "SLATEPORT for his pet, PEEKO.\p"
-	.string "That old sea dog, he must really love\n"
-	.string "that PEEKO.$"
+RustboroCity_Text_GivenConfide:
+	.string "CONFIDE lets youe POKéMON tell secrets\n"
+	.string "of their own to catch their opponent\l"
+	.string "off guard. Its a truly devious move!$"
 
 RustboroCity_Text_WowYouHavePokemon:
 	.string "Wow, you have POKéMON with you, too.\p"
