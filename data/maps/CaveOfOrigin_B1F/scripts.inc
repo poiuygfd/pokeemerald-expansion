@@ -1,4 +1,5 @@
 .set LOCALID_WALLACE, 1
+.set LOCALID_WALLACEBOSS, 2
 
 CaveOfOrigin_B1F_MapScripts::
 	.byte 0
@@ -61,14 +62,32 @@ CaveOfOrigin_B1F_EventScript_AtSkyPillar::
 	release
 	end
 
+CaveOfOrigin_B1F_EventScript_WallaceSuperboss::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS, CaveOfOrigin_B1F_EventScript_Defeated
+	msgbox CaveOfOrigin_B1F_Text_IveBeenTraining, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLACE, CaveOfOrigin_B1F_Text_WallaceDefeat
+	msgbox CaveOfOrigin_B1F_Text_StillNotStrongEnough, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS
+	delay 10
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_Defeated::
+	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox CaveOfOrigin_B1F_Text_StillNotStrongEnough, MSGBOX_DEFAULT
+	release
+	end
+
 CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "Ah, so you are {PLAYER}{KUN}?\n"
 	.string "I've heard tales of your exploits.\p"
 	.string "My name is WALLACE.\p"
-	.string "I was once the GYM LEADER of\n"
-	.string "SOOTOPOLIS, but something came up.\p"
-	.string "So now, I've entrusted my mentor JUAN\n"
-	.string "with the GYM's operation.\p"
+	.string "I am known as the GYM LEADER of\n"
+	.string "SOOTOPOLIS CITY.\p"
+	.string "It's truly a pleasure to meet you.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "GROUDON and KYOGRE, the two POKéMON\n"
@@ -117,4 +136,30 @@ CaveOfOrigin_B1F_Text_WellHeadToSkyPillar:
 	.string "It must be the SKY PILLAR!\p"
 	.string "{PLAYER}{KUN}, there's not a moment to lose!\n"
 	.string "We'll head to the SKY PILLAR right away!$"
+
+CaveOfOrigin_B1F_Text_IveBeenTraining:
+	.string "WALLACE: Ah, {PLAYER}{KUN}!\n"
+	.string "It's been a while, hasn't it?\p"
+	.string "Ever since the events that unfolded\n"
+	.string "regarding KYOGRE and GROUDON, I've been\l"
+	.string "training to ensure I'd be strong enough\l"
+	.string "to act should a similar event arise.\p"
+	.string "I believe my team has become notably\n"
+	.string "more elegant and powerful than before!\p"
+	.string "I believe last time we met, I requested\n"
+	.string "a match, should we ever meet again.\p"
+	.string "I think you know what that means.\p"
+	.string "Let us create a masterful work of art\n"
+	.string "with my WATER POKéMON!$"
+
+CaveOfOrigin_B1F_Text_WallaceDefeat:
+	.string "Simply breathtaking!\n"
+	.string "You and your POKéMON are magnificent!$"
+
+CaveOfOrigin_B1F_Text_StillNotStrongEnough:
+	.string "WALLACE: Perhaps I am still not strong\n"
+	.string "enough…\p"
+	.string "Or perhaps you are simply too strong…\p"
+	.string "Either way, it appears that I must\n"
+	.string "continue my training a bit longer!$"
 

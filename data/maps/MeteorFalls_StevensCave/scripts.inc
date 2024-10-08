@@ -18,6 +18,11 @@ MeteorFalls_StevensCave_EventScript_Steven::
 	trainerbattle_no_intro TRAINER_RED_METEOR_FALLS, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
+	clearflag FLAG_HIDE_RED
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_STEVEN
+	fadescreen FADE_FROM_BLACK
+	delay 10
 	release
 	end
 

@@ -986,7 +986,7 @@ static const struct InGameTrade sIngameTrades[] =
 {
     [INGAME_TRADE_SEEDOT] =
     {
-        .nickname = _("DOTS"),
+        .nickname = _("Deez Nuts"),
         .species = SPECIES_SEEDOT,
         .ivs = {5, 4, 5, 4, 4, 4},
         .abilityNum = 1,
@@ -1002,7 +1002,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_PLUSLE] =
     {
-        .nickname = _("PLUSES"),
+        .nickname = _("Plulu"),
         .species = SPECIES_PLUSLE,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
@@ -1018,7 +1018,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_HORSEA] =
     {
-        .nickname = _("SEASOR"),
+        .nickname = _("Seasor"),
         .species = SPECIES_HORSEA,
         .ivs = {5, 4, 4, 4, 5, 4},
         .abilityNum = 0,
@@ -1032,21 +1032,37 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_BAGON
     },
-    [INGAME_TRADE_MEOWTH] =
+    [INGAME_TRADE_EEVEE] =
     {
-        .nickname = _("MEOWOW"),
-        .species = SPECIES_MEOWTH,
-        .ivs = {4, 5, 4, 5, 4, 4},
-        .abilityNum = 0,
-        .otId = 91481,
-        .conditions = {5, 5, 5, 30, 5},
+        .nickname = _("Eevee"),
+        .species = SPECIES_EEVEE_PARTNER,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 1,
+        .otId = 02004,
+        .conditions = {30, 30, 30, 30, 30},
         .personality = 0x8B,
-        .heldItem = ITEM_RETRO_MAIL,
-        .mailNum = 2,
-        .otName = _("ISIS"),
+        .heldItem = ITEM_STARF_BERRY,
+        .mailNum = -1,
+        .otName = _("LEAF"),
         .otGender = FEMALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_SKITTY
+        .requestedSpecies = SPECIES_EEVEE
+    },
+    [INGAME_TRADE_PIKACHU] =
+    {
+        .nickname = _("Pikachu"),
+        .species = SPECIES_PIKACHU_PARTNER,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 0,
+        .otId = 02003,
+        .conditions = {30, 30, 30, 30, 30},
+        .personality = 0x8A,
+        .heldItem = ITEM_ENIGMA_BERRY,
+        .mailNum = -1,
+        .otName = _("RED"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_PIKACHU
     }
 };
 
@@ -1072,16 +1088,6 @@ static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =
         EC_WORD_TRAIN,
         EC_POKEMON(HORSEA),
         EC_WORD_WELL
-    }, {
-        EC_WORD_THANK_YOU,
-        EC_WORD_FOR,
-        EC_POKEMON(SKITTY),
-        EC_POKEMON_NATIONAL(MEOWTH),
-        EC_WORD_CRIES,
-        EC_WORD_IN,
-        EC_WORD_A,
-        EC_WORD_CUTE,
-        EC_WORD_WAY
     }
 };
 
