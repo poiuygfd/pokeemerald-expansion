@@ -24,6 +24,7 @@ AncientTomb_EventScript_ShowRegisteel::
 	return
 
 AncientTomb_OnLoad:
+	setflag FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED
 	call_if_unset FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_HideRegiEntrance
 	end
 

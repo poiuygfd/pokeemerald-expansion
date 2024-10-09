@@ -27,8 +27,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 31,
-      "y": 43,
+      "x": 25,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 31,
-      "y": 44,
+      "x": 26,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -79,7 +79,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 22,
+      "x": 23,
       "y": 50,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -118,8 +118,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 31,
-      "y": 45,
+      "x": 27,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -197,7 +197,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 27,
-      "y": 42,
+      "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -300,8 +300,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 24,
-      "y": 44,
+      "x": 19,
+      "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -313,8 +313,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 23,
-      "y": 44,
+      "x": 18,
+      "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -425,6 +425,13 @@
       "elevation": 0,
       "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_NEGLECTED_SHRINE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -456,8 +463,8 @@
     },
     {
       "type": "secret_base",
-      "x": 30,
-      "y": 51,
+      "x": 19,
+      "y": 48,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_BROWN_CAVE2_1"
     },
@@ -499,8 +506,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 20,
-      "y": 57,
+      "x": 2,
+      "y": 41,
       "elevation": 3,
       "item": "ITEM_CARBOS",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS"

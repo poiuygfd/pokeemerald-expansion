@@ -4,10 +4,20 @@
 .set LOCALID_BIRCH, 36
 
 Route110_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route110_OnLoad
 	map_script MAP_SCRIPT_ON_RESUME, Route110_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, Route110_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route110_OnFrame
 	.byte 0
+
+Route110_OnLoad:
+	call_if_unset FLAG_REGI_DOORS_OPENED, Route110_CloseRegiEntrance
+	end
+
+Route110_CloseRegiEntrance::
+	setmetatile 16, 25, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 16, 26, METATILE_General_RockWall_SandBase, TRUE
+	return
 
 Route110_OnResume:
 	special UpdateCyclingRoadState

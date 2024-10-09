@@ -512,12 +512,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_DEFEATED_REGIELEKI                    0x1DE // Defeated Regieleki
+#define FLAG_DEFEATED_REGIDRAGO                    0x1DF // Defeated Regidrago
+#define FLAG_DEFEATED_REGIGIGAS                    0x1E0 // Defeated Regigigas
+#define FLAG_DEFEATED_JIRACHI                    0x1E1 // Defeated Jirachi
+#define FLAG_DEFEATED_MEWTWO                    0x1E2 // Defeated Mewtwo
+#define FLAG_DEFEATED_DIANCIE                    0x1E3 // Defeated Diancie
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -732,14 +732,14 @@
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 
 // Event Flags
+#define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
+#define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
+#define FLAG_HIDE_REGIGIGAS                                         0x2B6 // Hide Regigigas
+#define FLAG_HIDE_JIRACHI                                           0x2B7 // Hide Jirachi
+#define FLAG_HIDE_MEWTWO                                            0x2B8 // Hide Mewtwo
+#define FLAG_HIDE_DIANCIE                                           0x2B9 // Hide Diancie
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1502,10 +1502,12 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
+#define FLAG_SYS_BRAILLE_REGIELEKI_COMPLETED        (SYSTEM_FLAGS + 0x85) // Regieleki Puzzle
+#define FLAG_SYS_REGIDRAGO_PUZZLE_COMPLETED         (SYSTEM_FLAGS + 0x86) // Regidrago Puzzle
+
+#define FLAG_LANDMARK_SECLUDED_COVE                 (SYSTEM_FLAGS + 0x87) // Secluded Cove Landmark Flag
+#define FLAG_LANDMARK_NEGLECTED_SHRINE              (SYSTEM_FLAGS + 0x88) // Neglected Shrine Landmark Flag
+
 #define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
 #define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag

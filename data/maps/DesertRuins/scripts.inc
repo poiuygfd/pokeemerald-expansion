@@ -15,6 +15,7 @@ DesertRuins_EventScript_TryRemoveRegirock::
 	return
 
 DesertRuins_OnLoad:
+	setflag FLAG_SYS_REGIROCK_PUZZLE_COMPLETED
 	call_if_unset FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_HideRegiEntrance
 	end
 
