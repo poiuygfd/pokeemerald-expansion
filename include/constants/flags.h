@@ -1240,10 +1240,10 @@
 #define FLAG_RECEIVED_BODY_PRESS                                    0x4A6 // Body Press TM Gift
 #define FLAG_RECEIVED_CONFIDE                                       0x4A7 // Confide TM Gift
 #define FLAG_RECEIVED_ESCAPE_ROPE                                   0x4A8 // Escape Rope Gift
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
+#define FLAG_ITEM_SKY_PILLAR_DRAGON_SCALE                           0x4A9 // Sky Pillar Dragon Scale
+#define FLAG_RECEIVED_GALARICA                                      0x4AA // Galarica Cuff/Wreath Gift
+#define FLAG_ITEM_SEAFLOOR_CAVERN_PROTECTOR                         0x4AB // Seafloor Cavern Protector
+#define FLAG_ITEM_ROUTE_115_WHIPPED_DREAM                           0x4AC // Route 115 Whipped Dream
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag

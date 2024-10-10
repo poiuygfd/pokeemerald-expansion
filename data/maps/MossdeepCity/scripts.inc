@@ -251,6 +251,53 @@ MossdeepCity_EventScript_DeclineKingsRock::
 	release
 	end
 
+MossdeepCity_EventScript_GalaricaGirl::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_GALARICA, MossdeepCity_EventScript_ReceivedGalarica
+	msgbox MossdeepCity_Text_TouristFromGalar, MSGBOX_DEFAULT
+	waitmessage
+	goto MossdeepCity_EventScript_ChooseGalaricaItem
+	release
+	end
+
+MossdeepCity_EventScript_ChooseGalaricaItem::
+	multichoice 0, 0, MULTI_GALARICA_ITEM, FALSE
+	switch VAR_RESULT
+	case 0, MossdeepCity_EventScript_GalaricaCuff
+	case 1, MossdeepCity_EventScript_GalaricaWreath
+	case 2, MossdeepCity_EventScript_Decline
+	case MULTI_B_PRESSED, MossdeepCity_EventScript_Decline
+	end
+
+MossdeepCity_EventScript_GalaricaCuff::
+	msgbox MossdeepCity_Text_GetGalaricaCuff, MSGBOX_DEFAULT
+	giveitem ITEM_GALARICA_CUFF
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_GALARICA
+	goto MossdeepCity_EventScript_ReceivedGalarica
+	end
+
+MossdeepCity_EventScript_GalaricaWreath::
+	msgbox MossdeepCity_Text_GetGalaricaWreath, MSGBOX_DEFAULT
+	giveitem ITEM_GALARICA_WREATH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_GALARICA
+	goto MossdeepCity_EventScript_ReceivedGalarica
+	end
+
+MossdeepCity_EventScript_Decline::
+	msgbox MossdeepCity_Text_LetMeKnowWhenYouDecide, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_EventScript_ReceivedGalarica::
+	lock
+	faceplayer
+	msgbox MossdeepCity_Text_EnjoyYourSouvenier, MSGBOX_DEFAULT
+	release
+	end
+
 MossdeepCity_EventScript_BlackBelt::
 	msgbox MossdeepCity_Text_SootopolisNewGymLeader, MSGBOX_NPC
 	end
@@ -327,6 +374,40 @@ MossdeepCity_Text_StevensHouseOverThere:
 MossdeepCity_Text_WhatToDoWithWeirdRock:
 	.string "Yeah, you think so, too! What are you\n"
 	.string "supposed to do with some weird rock?$"
+
+MossdeepCity_Text_TouristFromGalar:
+	.string "Hi there!\n"
+	.string "I'm a tourist from the GALAR region!\p"
+	.string "I came to HOENN to enjoy the tropical\n"
+	.string "climate and see the sights.\p"
+	.string "Say, would you like a souvenier from\n"
+	.string "the GALAR region?\p"
+	.string "You can have either this here GALARICA\n"
+	.string "CUFF or GALARICA WREATH.$"
+
+MossdeepCity_Text_GetGalaricaCuff:
+	.string "So, you chose the GALARICA CUFF…\n"
+	.string "Good choice!\p"
+	.string "Not that either of them were wrong\n"
+	.string "choices…\p"
+	.string "Anyway, here you go!$"
+
+MossdeepCity_Text_GetGalaricaWreath:
+	.string "So, you chose the GALARICA WREATH…\n"
+	.string "Good choice!\p"
+	.string "Not that either of them were wrong\n"
+	.string "choices…\p"
+	.string "Anyway, here you go!$"
+
+MossdeepCity_Text_LetMeKnowWhenYouDecide:
+	.string "Need some time to make a desicion?\n"
+	.string "That's fine, you know where to find\l"
+	.string "me when you've made up your mind.$"
+
+MossdeepCity_Text_EnjoyYourSouvenier:
+	.string "Enjoy your souvenier!\n"
+	.string "You should visit the GALAR region\l"
+	.string "sometime, if you don't mind the cold.$"
 
 MossdeepCity_Text_WailmerWatching:
 	.string "Around MOSSDEEP, you can see wild\n"

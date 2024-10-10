@@ -778,6 +778,21 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_GalaricaItem[] =
+{
+    {gText_GalaricaCuff},
+    {gText_GalaricaWreath},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GameCornerGimmighoul[] =
+{
+    {gText_1GimmighoulCoin},
+    {gText_9GimmighoulCoins},
+    {gText_99GimmighoulCoins},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -906,6 +921,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_GALARICA_ITEM]              = MULTICHOICE(MultichoiceList_GalaricaItem),
+    [MULTI_GAME_CORNER_GIMMIGHOUL]     = MULTICHOICE(MultichoiceList_GameCornerGimmighoul),
 };
 
 const u8 *const gStdStrings[] =

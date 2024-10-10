@@ -12,6 +12,10 @@ MauvilleCity_GameCorner_MapScripts::
 	.set COINS_PRICE_50,  1000
 	.set COINS_PRICE_500, 10000
 
+	.set GIMMIGHOUL_COIN_1, 5
+	.set GIMMIGHOUL_COIN_9, 45
+	.set GIMMIGHOUL_COIN_99, 495
+
 MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	lock
 	faceplayer
@@ -434,6 +438,97 @@ MauvilleCity_GameCorner_EventScript_ReceivedStarterDoll::
 	release
 	end
 
+MauvilleCity_GameCorner_EventScript_GimmighoulCoinGuy::
+	lock
+	faceplayer
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_TradeForGimmighoulCoins
+	msgbox MauvilleCity_GameCorner_Text_YouGotNoCoinCase, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_TradeForGimmighoulCoins::
+	showcoinsbox 1, 1
+	msgbox MauvilleCity_GameCorner_Text_DifferentKindOfCoin, MSGBOX_DEFAULT
+	waitmessage
+	multichoice 12, 0, MULTI_GAME_CORNER_GIMMIGHOUL, FALSE
+	switch VAR_RESULT
+	case 0, MauvilleCity_GameCorner_EventScript_1GimmighoulCoin
+	case 1, MauvilleCity_GameCorner_EventScript_9GimmighoulCoins
+	case 2, MauvilleCity_GameCorner_EventScript_99GimmighoulCoins
+	case 3, MauvilleCity_GameCorner_EventScript_CancelCoinSelect
+	goto MauvilleCity_GameCorner_EventScript_CancelCoinSelect
+	end
+
+MauvilleCity_GameCorner_EventScript_1GimmighoulCoin::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, GIMMIGHOUL_COIN_1, MauvilleCity_GameCorner_EventScript_AintEnoughCoins
+	checkitemspace ITEM_GIMMIGHOUL_COIN
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_GotNoRoom
+	msgbox MauvilleCity_GameCorner_Text_YouKnowAGoodDeal, MSGBOX_DEFAULT
+	waitmessage
+	removecoins GIMMIGHOUL_COIN_1
+	additem ITEM_GIMMIGHOUL_COIN
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
+	waitmessage
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_9GimmighoulCoins::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, GIMMIGHOUL_COIN_9, MauvilleCity_GameCorner_EventScript_AintEnoughCoins
+	checkitemspace ITEM_GIMMIGHOUL_COIN, 9
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_GotNoRoom
+	msgbox MauvilleCity_GameCorner_Text_YouKnowAGoodDeal, MSGBOX_DEFAULT
+	waitmessage
+	removecoins GIMMIGHOUL_COIN_9
+	additem ITEM_GIMMIGHOUL_COIN, 9
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
+	waitmessage
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_99GimmighoulCoins::
+	checkcoins VAR_TEMP_1
+	goto_if_lt VAR_TEMP_1, GIMMIGHOUL_COIN_99, MauvilleCity_GameCorner_EventScript_AintEnoughCoins
+	checkitemspace ITEM_GIMMIGHOUL_COIN, 99
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_GotNoRoom
+	msgbox MauvilleCity_GameCorner_Text_YouKnowAGoodDeal, MSGBOX_DEFAULT
+	waitmessage
+	removecoins GIMMIGHOUL_COIN_99
+	additem ITEM_GIMMIGHOUL_COIN, 99
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
+	waitmessage
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_AintEnoughCoins::
+	msgbox MauvilleCity_GameCorner_Text_AintEnoughCoins, MSGBOX_DEFAULT
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_CancelCoinSelect::
+	msgbox MauvilleCity_GameCorner_Text_TheseAreRareCoins, MSGBOX_DEFAULT
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_GotNoRoom::
+	msgbox MauvilleCity_GameCorner_Text_AintEnoughRoom, MSGBOX_DEFAULT
+	hidecoinsbox 0, 0
+	release
+	end
+
 MauvilleCity_GameCorner_EventScript_PokefanM::
 	lock
 	faceplayer
@@ -706,6 +801,52 @@ MauvilleCity_GameCorner_Text_HereYouGo2:
 MauvilleCity_GameCorner_Text_YouWantItButNotNow:
 	.string "Huh?\n"
 	.string "You want it, but not right now?$"
+
+MauvilleCity_GameCorner_Text_DifferentKindOfCoin:
+	.string "Psst… Hey, kid, have you been busy\n"
+	.string "collecting COINS?\p"
+	.string "I've got a different kind of COIN\n"
+	.string "that I like to collect.\p"
+	.string "I'll trade you one of my COINS for\n"
+	.string "five of your COINS, if you'd like.$"
+
+MauvilleCity_GameCorner_Text_TheseAreRareCoins:
+	.string "Not interested?\n"
+	.string "Listen kid, I know 5 for 1 sounds\l"
+	.string "fishy, but I can tell you now that\l"
+	.string "these are some rare COINS!\p"
+	.string "If you come to your senses, then\n"
+	.string "I'll be right here.$"
+
+MauvilleCity_GameCorner_Text_YouGotNoCoinCase:
+	.string "Psst… Hey, kid, have you been busy\n"
+	.string "collecting COINS?\p"
+	.string "I've got a different kind of COIN\n"
+	.string "that I like to collect.\p"
+	.string "I'll trade you one of my COINS for\n"
+	.string "five of your COINS, if you'd like.\p"
+	.string "Oh, you don't got no COIN CASE?\n"
+	.string "Sorry to bother ya then kid.$"
+
+MauvilleCity_GameCorner_Text_YouKnowAGoodDeal:
+	.string "You know a good deal when you see\n"
+	.string "one, kid.\p"
+	.string "Here you go!$"
+
+MauvilleCity_GameCorner_Text_AintEnoughCoins:
+	.string "You pulling my leg, kid?\p"
+	.string "How're we supposed to trade COINS if\n"
+	.string "you ain't got any COINS to trade?$"
+
+MauvilleCity_GameCorner_Text_AintEnoughRoom:
+	.string "Woah, hold on now, kid.\n"
+	.string "There ain't enough room in your BAG\p"
+	.string "for this!$"
+
+MauvilleCity_GameCorner_Text_LetsTradeAgainSometime:
+	.string "Pleasure doin business with ya!\p"
+	.string "If you ever wanna trade COINS again\n"
+	.string "then you know where to find me!$"
 
 MauvilleCity_GameCorner_Text_DontBeNegative:
 	.string "Oh, don't be so negative!\n"

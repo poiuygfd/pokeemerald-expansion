@@ -3042,6 +3042,13 @@ extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+extern const u8 gText_GalaricaCuff[];
+extern const u8 gText_GalaricaWreath[];
+
+extern const u8 gText_1GimmighoulCoin[];
+extern const u8 gText_9GimmighoulCoins[];
+extern const u8 gText_99GimmighoulCoins[];
+
 // Map name pop-up
 extern const u8 gText_AM[];
 extern const u8 gText_PM[];
