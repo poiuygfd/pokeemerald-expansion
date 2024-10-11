@@ -6,12 +6,22 @@ FortreeCity_House3_EventScript_Maniac::
 	end
 
 FortreeCity_House3_EventScript_SchoolKidM::
-	msgbox FortreeCity_House3_Text_OhYouHavePokedex, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_RAZOR_CLAW, FortreeCity_House3_EventScript_ReceivedRazorClaw
+	msgbox FortreeCity_House3_Text_OhYouHavePokedex, MSGBOX_DEFAULT
+	giveitem ITEM_RAZOR_CLAW
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_RAZOR_CLAW
+	release
+	end
+
+FortreeCity_House3_EventScript_ReceivedRazorClaw::
+	msgbox FortreeCity_House3_Text_IWantAPokeDexToo, MSGBOX_DEFAULT
+	release
 	end
 
 FortreeCity_House3_Text_MetStevenHadAmazingPokemon:
-	.string "While speaking about POKéDEXES,\n"
-	.string "I remembered something.\p"
 	.string "I met this TRAINER, STEVEN, when\n"
 	.string "I was searching for rare stones.\p"
 	.string "Hoo, boy, he had some amazing POKéMON\n"
@@ -26,4 +36,12 @@ FortreeCity_House3_Text_OhYouHavePokedex:
 	.string "… … … … … …\p"
 	.string "Oh, it's called a POKéDEX?\n"
 	.string "It's really awesome!$"
+	.string "Thanks for showing me something so\n"
+	.string "cool!\p"
+	.string "Here, you can have this thing I\n"
+	.string "found earlier!$"
+
+FortreeCity_House3_Text_IWantAPokeDexToo:
+	.string "One day, I'd like to be a TRAINER\n"
+	.string "with my own POKéDEX too!$"
 

@@ -1244,13 +1244,13 @@
 #define FLAG_RECEIVED_GALARICA                                      0x4AA // Galarica Cuff/Wreath Gift
 #define FLAG_ITEM_SEAFLOOR_CAVERN_PROTECTOR                         0x4AB // Seafloor Cavern Protector
 #define FLAG_ITEM_ROUTE_115_WHIPPED_DREAM                           0x4AC // Route 115 Whipped Dream
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
+#define FLAG_ITEM_CAVE_OF_ORIGIN_REAPER_CLOTH                       0x4AD // Cave of Origin Reaper Cloth
+#define FLAG_RECEIVED_RAZOR_CLAW                                    0x4AE // Razor Claw Gift
+#define FLAG_ITEM_METEOR_FALLS_METAL_ALLOY                          0x4AF // Meteor Falls Metal Alloy
+#define FLAG_ITEM_DESERT_UNDERPASS_METAL_COAT                       0x4B0 // Desert Underpass Metal Coat
+#define FLAG_ITEM_DESERT_UNDERPASS_BLACK_AUGURITE                   0x4B1 // Desert Underpass Black Augurite
+#define FLAG_ITEM_ALTERING_CAVE_PEAT_BLOCK                          0x4B2 // Altering Cave Peat Block
+#define FLAG_RECEIVED_LINKING_CORD                                  0x4B3 // Linking Cord Gift
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
 #define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
 #define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag

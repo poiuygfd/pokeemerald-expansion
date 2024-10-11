@@ -145,7 +145,7 @@
       "x": 28,
       "y": 5,
       "elevation": 3,
-      "item": "ITEM_ELIXIR",
+      "item": "ITEM_DUSK_STONE",
       "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_ELIXIR"
     },
     {
@@ -153,7 +153,7 @@
       "x": 37,
       "y": 1,
       "elevation": 3,
-      "item": "ITEM_MAX_REPEL",
+      "item": "ITEM_ELIXIR",
       "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_MAX_REPEL"
     }
   ]
