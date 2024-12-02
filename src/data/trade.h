@@ -1035,7 +1035,7 @@ static const struct InGameTrade sIngameTrades[] =
     [INGAME_TRADE_EEVEE] =
     {
         .nickname = _("Eevee"),
-        .species = SPECIES_EEVEE_PARTNER,
+        .species = SPECIES_EEVEE_STARTER,
         .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 1,
         .otId = 02004,
@@ -1051,7 +1051,7 @@ static const struct InGameTrade sIngameTrades[] =
     [INGAME_TRADE_PIKACHU] =
     {
         .nickname = _("Pikachu"),
-        .species = SPECIES_PIKACHU_PARTNER,
+        .species = SPECIES_PIKACHU_STARTER,
         .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 0,
         .otId = 02003,

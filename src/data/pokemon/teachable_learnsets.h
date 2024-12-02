@@ -1156,6 +1156,7 @@ static const u16 sRaichuTeachableLearnset[] = {
 
 #if P_ALOLAN_FORMS
 static const u16 sRaichuAlolaTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
     MOVE_BRICK_BREAK,
     MOVE_CALM_MIND,
@@ -7855,6 +7856,7 @@ static const u16 sTaurosTeachableLearnset[] = {
 
 #if P_PALDEAN_FORMS
 static const u16 sTaurosPaldeaCombatTeachableLearnset[] = {
+    MOVE_BODY_PRESS,
     MOVE_BULK_UP,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -7881,6 +7883,7 @@ static const u16 sTaurosPaldeaCombatTeachableLearnset[] = {
 };
 
 static const u16 sTaurosPaldeaBlazeTeachableLearnset[] = {
+    MOVE_BODY_PRESS,
     MOVE_BULK_UP,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -7910,6 +7913,7 @@ static const u16 sTaurosPaldeaBlazeTeachableLearnset[] = {
 };
 
 static const u16 sTaurosPaldeaAquaTeachableLearnset[] = {
+    MOVE_BODY_PRESS,
     MOVE_BULK_UP,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
@@ -11115,6 +11119,7 @@ static const u16 sQuagsireTeachableLearnset[] = {
 
 #if P_PALDEAN_FORMS
 static const u16 sWooperPaldeaTeachableLearnset[] = {
+    MOVE_BODY_PRESS,
     MOVE_DIG,
     MOVE_EARTHQUAKE,
     MOVE_FACADE,
@@ -30143,6 +30148,7 @@ static const u16 sEspurrTeachableLearnset[] = {
 };
 
 static const u16 sMeowsticMTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
     MOVE_CALM_MIND,
     MOVE_CONFIDE,
@@ -30184,6 +30190,7 @@ static const u16 sMeowsticMTeachableLearnset[] = {
 };
 
 static const u16 sMeowsticFTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
     MOVE_CALM_MIND,
     MOVE_CONFIDE,
@@ -36467,6 +36474,7 @@ static const u16 sIndeedeeMTeachableLearnset[] = {
 };
 
 static const u16 sIndeedeeFTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
     MOVE_ATTRACT,
     MOVE_CALM_MIND,
     MOVE_DAZZLING_GLEAM,

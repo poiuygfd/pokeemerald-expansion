@@ -20701,7 +20701,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = Move_COSMIC_POWER//Move_MAGICAL_CHEER,
+        .battleAnimScript = gBattleAnimMove_CosmicPower,
     },
 
     // Z-Moves
