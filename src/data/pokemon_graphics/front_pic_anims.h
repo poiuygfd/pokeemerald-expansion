@@ -10140,6 +10140,14 @@ PLACEHOLDER_ANIM_SINGLE_FRAME(TerapagosStellar);
 PLACEHOLDER_ANIM_SINGLE_FRAME(Pecharunt);
 #endif //P_FAMILY_PECHARUNT
 
+static const union AnimCmd sAnim_MissingNo_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 25),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Marin_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -12821,5 +12829,6 @@ SINGLE_ANIMATION(TerapagosStellar);
 #if P_FAMILY_PECHARUNT
 SINGLE_ANIMATION(Pecharunt);
 #endif //P_FAMILY_PECHARUNT
+SINGLE_ANIMATION(MissingNo);
 SINGLE_ANIMATION(Marin);
 SINGLE_ANIMATION(Egg);

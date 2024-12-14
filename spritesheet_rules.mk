@@ -4698,6 +4698,9 @@ $(POKEMONGFXDIR)/terapagos/terastal/overworld.4bpp: %.4bpp: %.png
 $(POKEMONGFXDIR)/pecharunt/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(POKEMONGFXDIR)/missingno/overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(POKEMONGFXDIR)/marin/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 

@@ -6156,6 +6156,10 @@ Cry_Pecharunt::
 .endif @ P_FAMILY_PECHARUNT
 
 	.align 2
+Cry_MissingNo::
+	.incbin "sound/direct_sound_samples/cries/missingno.bin"
+
+	.align 2
 Cry_Marin::
 	.incbin "sound/direct_sound_samples/cries/marin.bin"
 

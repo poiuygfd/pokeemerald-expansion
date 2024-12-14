@@ -6629,6 +6629,10 @@ static const struct SpriteFrameImage sPicTable_Pecharunt[] = {
 };
 #endif //P_FAMILY_PECHARUNT
 
+static const struct SpriteFrameImage sPicTable_MissingNo[] = {
+    overworld_ascending_frames(gObjectEventPic_MissingNo, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Marin[] = {
     overworld_ascending_frames(gObjectEventPic_Marin, 4, 4),
 };

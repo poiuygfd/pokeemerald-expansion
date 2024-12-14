@@ -22316,6 +22316,13 @@ static const struct LevelUpMove sPecharuntLevelUpLearnset[] = {
 };
 #endif //P_FAMILY_PECHARUNT
 
+static const struct LevelUpMove sMissingNoLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
+    LEVEL_UP_MOVE( 1, MOVE_SKY_ATTACK),
+    LEVEL_UP_MOVE( 50, MOVE_SKY_ATTACK),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sMarinLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
