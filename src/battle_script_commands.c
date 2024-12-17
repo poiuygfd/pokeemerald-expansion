@@ -2119,6 +2119,15 @@ static void Cmd_adjustdamage(void)
         // Form change will be done after attack animation in Cmd_resultmessage.
         goto END;
     }
+    if (GetBattlerAbility(gBattlerTarget) == ABILITY_ANTIVIRUS
+    && (gStatuses4[gBattlerTarget] & STATUS4_ANTIVIRUS)
+    && gBattleMoveDamage >= gBattleMons[gBattlerTarget].hp)
+    {
+        gBattleMoveDamage = gBattleMons[gBattlerTarget].hp - 1;
+        gMoveResultFlags |= MOVE_RESULT_ANTIVIRUS_BLOCKED;
+        gLastUsedAbility = ABILITY_ANTIVIRUS;
+        goto END;
+    }
     if (gBattleMons[gBattlerTarget].hp > gBattleMoveDamage)
         goto END;
 
@@ -2240,17 +2249,24 @@ static void Cmd_multihitresultmessage(void)
     {
         if (gMoveResultFlags & MOVE_RESULT_STURDIED)
         {
-            gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_HUNG_ON);
+            gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_ANTIVIRUS_BLOCKED);
             gSpecialStatuses[gBattlerTarget].sturdied = FALSE; // Delete this line to make Sturdy last for the duration of the whole move turn.
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_SturdiedMsg;
+            return;
+        }
+        else if (gMoveResultFlags & MOVE_RESULT_ANTIVIRUS_BLOCKED)
+        {
+            gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_ANTIVIRUS_BLOCKED);
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_AntivirusProtects;
             return;
         }
         else if (gMoveResultFlags & MOVE_RESULT_FOE_HUNG_ON)
         {
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
             gPotentialItemEffectBattler = gBattlerTarget;
-            gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_HUNG_ON);
+            gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_ANTIVIRUS_BLOCKED);
             gSpecialStatuses[gBattlerTarget].focusBanded = FALSE; // Delete this line to make Focus Band last for the duration of the whole move turn.
             gSpecialStatuses[gBattlerTarget].focusSashed = FALSE; // Delete this line to make Focus Sash last for the duration of the whole move turn.
             BattleScriptPushCursor();
@@ -2571,6 +2587,7 @@ static void Cmd_effectivenesssound(void)
         case MOVE_RESULT_ONE_HIT_KO:
         case MOVE_RESULT_FOE_HUNG_ON:
         case MOVE_RESULT_STURDIED:
+        case MOVE_RESULT_ANTIVIRUS_BLOCKED:
         default:
             if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
             {
@@ -2691,10 +2708,17 @@ static void Cmd_resultmessage(void)
             }
             else if (gMoveResultFlags & MOVE_RESULT_STURDIED)
             {
-                gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON);
+                gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_ANTIVIRUS_BLOCKED);
                 gSpecialStatuses[gBattlerTarget].sturdied = FALSE;
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_SturdiedMsg;
+                return;
+            }
+            else if (gMoveResultFlags & MOVE_RESULT_ANTIVIRUS_BLOCKED)
+            {
+                gMoveResultFlags &= ~(MOVE_RESULT_STURDIED | MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_ANTIVIRUS_BLOCKED);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_AntivirusProtects;
                 return;
             }
             else if (gMoveResultFlags & MOVE_RESULT_FOE_ENDURED)
@@ -12357,6 +12381,14 @@ static void Cmd_tryKO(void)
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gLastUsedAbility = ABILITY_STURDY;
         gBattlescriptCurrInstr = BattleScript_SturdyPreventsOHKO;
+        gBattlerAbility = gBattlerTarget;
+    }
+    else if (targetAbility == ABILITY_ANTIVIRUS
+    && (gStatuses4[gBattlerTarget] & STATUS4_ANTIVIRUS))
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gLastUsedAbility = ABILITY_ANTIVIRUS;
+        gBattlescriptCurrInstr = BattleScript_AntivirusPreventsOHKO;
         gBattlerAbility = gBattlerTarget;
     }
     else

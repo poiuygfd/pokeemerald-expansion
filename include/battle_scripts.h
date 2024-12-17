@@ -520,6 +520,11 @@ extern const u8 BattleScript_Terastallization[];
 extern const u8 BattleScript_BoosterEnergyEnd2[];
 extern const u8 BattleScript_TeraShellDistortingTypeMatchups[];
 extern const u8 BattleScript_TeraFormChange[];
+extern const u8 BattleScript_AntivirusActivates[];
+extern const u8 BattleScript_AntivirusDeactivates[];
+extern const u8 BattleScript_AntivirusReactivates[];
+extern const u8 BattleScript_AntivirusProtects[];
+extern const u8 BattleScript_AntivirusPreventsOHKO[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];

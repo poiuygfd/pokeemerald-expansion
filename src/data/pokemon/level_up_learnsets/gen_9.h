@@ -22319,7 +22319,6 @@ static const struct LevelUpMove sPecharuntLevelUpLearnset[] = {
 static const struct LevelUpMove sMissingNoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 1, MOVE_SKY_ATTACK),
-    LEVEL_UP_MOVE( 50, MOVE_SKY_ATTACK),
     LEVEL_UP_END
 };
 

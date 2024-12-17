@@ -2408,4 +2408,15 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_ANTIVIRUS] =
+    {
+        .name = _("Antivirus"),
+        .description = COMPOUND_STRING("Provides cover at full HP."),
+        .aiRating = 6,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .breakable = TRUE,
+    }
 };

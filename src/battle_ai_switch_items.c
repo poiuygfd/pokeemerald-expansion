@@ -1566,7 +1566,10 @@ static u32 GetSwitchinHitsToKO(s32 damageTaken, u32 battler)
         currentHP = currentHP - damageTaken;
 
         // One shot prevention effects
-        if (damageTaken >= maxHP && currentHP == maxHP && (heldItemEffect == HOLD_EFFECT_FOCUS_SASH || (!opponentCanBreakMold && B_STURDY >= GEN_5 && ability == ABILITY_STURDY)))
+        if (damageTaken >= maxHP && currentHP == maxHP
+        && (heldItemEffect == HOLD_EFFECT_FOCUS_SASH
+        || (!opponentCanBreakMold && B_STURDY >= GEN_5 && ability == ABILITY_STURDY)
+        || (!opponentCanBreakMold && ability == ABILITY_ANTIVIRUS)))
             currentHP = 1;
 
         // If mon is still alive, apply weather impact first, as it might KO the mon before it can heal with its item (order is weather -> item -> status)

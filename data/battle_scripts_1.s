@@ -6969,6 +6969,41 @@ BattleScript_OneHitKOMsg::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_AntivirusActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ANTIVIRUSSTART
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_AntivirusDeactivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ANTIVIRUSSTOP
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_AntivirusReactivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ANTIVIRUSSTART
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AntivirusProtects::
+	pause B_WAIT_TIME_SHORTEST
+	call BattleScript_AbilityPopUpTarget
+	printstring STRINGID_ANTIVIRUSPROTECT
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AntivirusPreventsOHKO::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ANTIVIRUSPROTECT
+	pause B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_MoveEffectClearSmog::
 	printstring STRINGID_RESETSTARGETSSTATLEVELS
 	waitmessage B_WAIT_TIME_LONG

@@ -1134,7 +1134,7 @@ s32 AI_WhoStrikesFirst(u32 battlerAI, u32 battler, u32 moveConsidered)
 
 static bool32 CanEndureHit(u32 battler, u32 battlerTarget, u32 move)
 {
-    if (!BATTLER_MAX_HP(battlerTarget) || gMovesInfo[move].effect == EFFECT_MULTI_HIT)
+    if (!BATTLER_MAX_HP(battlerTarget) || (gMovesInfo[move].effect == EFFECT_MULTI_HIT && AI_DATA->abilities[battlerTarget] != ABILITY_ANTIVIRUS))
         return FALSE;
     if (gMovesInfo[move].strikeCount > 1 && !(gMovesInfo[move].effect == EFFECT_DRAGON_DARTS && IsValidDoubleBattle(battlerTarget)))
         return FALSE;
@@ -1144,6 +1144,8 @@ static bool32 CanEndureHit(u32 battler, u32 battlerTarget, u32 move)
     if (!DoesBattlerIgnoreAbilityChecks(AI_DATA->abilities[battler], move))
     {
         if (B_STURDY >= GEN_5 && AI_DATA->abilities[battlerTarget] == ABILITY_STURDY)
+            return TRUE;
+        if (AI_DATA->abilities[battlerTarget] == ABILITY_ANTIVIRUS)
             return TRUE;
         if (gBattleMons[battlerTarget].species == SPECIES_MIMIKYU_DISGUISED)
             return TRUE;
@@ -1551,6 +1553,8 @@ bool32 ShouldTryOHKO(u32 battlerAtk, u32 battlerDef, u32 atkAbility, u32 defAbil
         return FALSE;
 
     if (!DoesBattlerIgnoreAbilityChecks(atkAbility, move) && defAbility == ABILITY_STURDY)
+        return FALSE;
+    else if (!DoesBattlerIgnoreAbilityChecks(atkAbility, move) && defAbility == ABILITY_ANTIVIRUS && AtMaxHp(battlerDef))
         return FALSE;
 
     if ((((gStatuses3[battlerDef] & STATUS3_ALWAYS_HITS)
@@ -2724,6 +2728,7 @@ enum AIPivot ShouldPivot(u32 battlerAtk, u32 battlerDef, u32 defAbility, u32 mov
                     if (!IS_MOVE_STATUS(move) && ((AI_DATA->shouldSwitch & (1u << battlerAtk))
                         || (AtMaxHp(battlerDef) && (AI_DATA->holdEffects[battlerDef] == HOLD_EFFECT_FOCUS_SASH
                         || (B_STURDY >= GEN_5 && defAbility == ABILITY_STURDY)
+                        || defAbility == ABILITY_ANTIVIRUS
                         || defAbility == ABILITY_MULTISCALE
                         || defAbility == ABILITY_SHADOW_SHIELD))))
                         return SHOULD_PIVOT;   // pivot to break sash/sturdy/multiscale
@@ -2732,6 +2737,7 @@ enum AIPivot ShouldPivot(u32 battlerAtk, u32 battlerDef, u32 defAbility, u32 mov
                 {
                     if (!IS_MOVE_STATUS(move) && (AtMaxHp(battlerDef) && (AI_DATA->holdEffects[battlerDef] == HOLD_EFFECT_FOCUS_SASH
                         || (B_STURDY >= GEN_5 && defAbility == ABILITY_STURDY)
+                        || defAbility == ABILITY_ANTIVIRUS
                         || defAbility == ABILITY_MULTISCALE
                         || defAbility == ABILITY_SHADOW_SHIELD)))
                         return SHOULD_PIVOT;   // pivot to break sash/sturdy/multiscale

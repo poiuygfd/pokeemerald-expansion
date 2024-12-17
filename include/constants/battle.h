@@ -195,6 +195,7 @@
 #define STATUS4_SALT_CURE               (1 << 4)
 #define STATUS4_SYRUP_BOMB              (1 << 5)
 #define STATUS4_GLAIVE_RUSH             (1 << 6)
+#define STATUS4_ANTIVIRUS               (1 << 7)
 
 #define HITMARKER_WAKE_UP_CLEAR         (1 << 4) // Cleared when waking up. Never set or checked.
 #define HITMARKER_IGNORE_BIDE           (1 << 5)
@@ -281,6 +282,7 @@
 #define MOVE_RESULT_FOE_HUNG_ON           (1 << 7)
 #define MOVE_RESULT_STURDIED              (1 << 8)
 #define MOVE_RESULT_FOE_ENDURED_AFFECTION (1 << 9)
+#define MOVE_RESULT_ANTIVIRUS_BLOCKED     (1 << 10)
 #define MOVE_RESULT_NO_EFFECT             (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE | MOVE_RESULT_FAILED)
 
 // Battle Weather flags

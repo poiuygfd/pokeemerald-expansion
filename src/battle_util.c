@@ -5150,6 +5150,20 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_ANTIVIRUS:
+            if (!gSpecialStatuses[battler].switchInAbilityDone
+            && BATTLER_MAX_HP(gBattlerAttacker) == TRUE)
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                gStatuses4[battler] |= STATUS4_ANTIVIRUS;
+                BattleScriptPushCursorAndCallback(BattleScript_AntivirusActivates);
+                effect++;
+            }
+            // todo current issues: it seems like in a double battle, the ability always uses the first attacker's hp to determine antivirus' state
+            // this leads to weird situations like tsareena not being at full health but missingno being at full health not triggering antivirus, or
+            // antivirus' deactivation text using tsareena's name.
+            // try to find a way to implement the code in a way that specifically checks the pokemon with antivirus only.
+            break;
         }
         break;
     case ABILITYEFFECT_ENDTURN:
@@ -5349,6 +5363,15 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     gLastUsedItem = gBattleStruct->usedHeldItems[gBattlerPartyIndexes[battler]][GetBattlerSide(battler)];
                     gBattleStruct->usedHeldItems[gBattlerPartyIndexes[battler]][GetBattlerSide(battler)] = ITEM_NONE;
                     BattleScriptPushCursorAndCallback(BattleScript_CudChewActivates);
+                    effect++;
+                }
+                break;
+            case ABILITY_ANTIVIRUS:
+                if (BATTLER_MAX_HP(battler) == FALSE
+                && (gStatuses4[battler] & STATUS4_ANTIVIRUS))
+                {
+                    gStatuses4[battler] &= ~(STATUS4_ANTIVIRUS);
+                    BattleScriptPushCursorAndCallback(BattleScript_AntivirusDeactivates);
                     effect++;
                 }
                 break;
