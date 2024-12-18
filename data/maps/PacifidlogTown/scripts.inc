@@ -23,6 +23,10 @@ PacifidlogTown_EventScript_Fisherman::
 	msgbox PacifidlogTown_Text_SkyPillarTooScary, MSGBOX_NPC
 	end
 
+PacifidlogTown_EventScript_Man::
+	msgbox PacifidlogTown_Text_SomethingStrange, MSGBOX_NPC
+	end
+
 PacifidlogTown_EventScript_TownSign::
 	msgbox PacifidlogTown_Text_TownSign, MSGBOX_SIGN
 	end
@@ -46,6 +50,17 @@ PacifidlogTown_Text_SkyPillarTooScary:
 	.string "It's too scary to get up that high.\p"
 	.string "Life at sea level in PACIFIDLOG,\n"
 	.string "that suits me fine.$"
+
+PacifidlogTown_Text_SomethingStrange:
+	.string "The other day, I saw something strange\n"
+	.string "floating around near the water here...\p"
+	.string "I've seen something like it once before\n"
+	.string "around the shores of CINNABAR ISLAND in\l"
+	.string "the KANTO region...\p"
+	.string "I think it's a POKéMON?\n"
+	.string "I'm honestly not too sure though,\l"
+	.string "it doesn't seem to move or behave\l"
+	.string "like any normal POKéMON...$"
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"
