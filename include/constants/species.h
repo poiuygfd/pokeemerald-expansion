@@ -1637,10 +1637,10 @@
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GMAX         SPECIES_URSHIFU_RAPID_STRIKE_GMAX
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
-#define SPECIES_MISSINGNO                               1524
-#define SPECIES_MARIN                                   1525
+#define SPECIES_MARIN                                   1524
+#define SPECIES_MISSINGNO                               1525
 
-#define SPECIES_EGG                                     (SPECIES_MARIN + 1)
+#define SPECIES_EGG                                     (SPECIES_MISSINGNO + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

@@ -6313,3 +6313,12 @@ static const u16 sMarinEggMoveLearnset[] = {
     MOVE_WHIRLPOOL,
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sMissingNoEggMoveLearnset[] = {
+    MOVE_EXTREME_SPEED,
+    MOVE_FAKE_OUT,
+    MOVE_ENDEAVOR,
+    MOVE_SHARPEN,
+    MOVE_RECOVER,
+    MOVE_UNAVAILABLE,
+};

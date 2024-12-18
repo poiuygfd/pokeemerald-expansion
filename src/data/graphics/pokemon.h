@@ -26732,16 +26732,6 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
-    const u32 gMonFrontPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/anim_front.4bpp.lz");
-    const u32 gMonBackPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/back.4bpp.lz");
-    const u32 gMonPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/normal.gbapal.lz");
-    const u32 gMonShinyPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/shiny.gbapal.lz");
-    const u8 gMonIcon_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/icon.4bpp");
-    const u8 gMonFootprint_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/footprint.1bpp");
-    const u32 gObjectEventPic_MissingNo[] = INCBIN_COMP("graphics/pokemon/missingno/overworld.4bpp");
-    const u32 gOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_normal.gbapal.lz");
-    const u32 gShinyOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_shiny.gbapal.lz");
-
     const u32 gMonFrontPic_Marin[] = INCBIN_U32("graphics/pokemon/marin/anim_front.4bpp.lz");
     const u32 gMonBackPic_Marin[] = INCBIN_U32("graphics/pokemon/marin/back.4bpp.lz");
     const u32 gMonPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/normal.gbapal.lz");
@@ -26751,6 +26741,16 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gObjectEventPic_Marin[] = INCBIN_COMP("graphics/pokemon/marin/overworld.4bpp");
     const u32 gOverworldPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/overworld_normal.gbapal.lz");
     const u32 gShinyOverworldPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/overworld_shiny.gbapal.lz");
+
+    const u32 gMonFrontPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/anim_front.4bpp.lz");
+    const u32 gMonBackPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/back.4bpp.lz");
+    const u32 gMonPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/normal.gbapal.lz");
+    const u32 gMonShinyPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/shiny.gbapal.lz");
+    const u8 gMonIcon_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/icon.4bpp");
+    const u8 gMonFootprint_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/footprint.1bpp");
+    const u32 gObjectEventPic_MissingNo[] = INCBIN_COMP("graphics/pokemon/missingno/overworld.4bpp");
+    const u32 gOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_normal.gbapal.lz");
+    const u32 gShinyOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_shiny.gbapal.lz");
 
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
