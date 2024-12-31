@@ -1163,6 +1163,14 @@ extern const u8 gText_Exit[];
 extern const u8 gText_ChangeForm[];
 extern const u8 gText_ChangeAbility[];
 
+// Costume Case text
+extern const u8 gText_NoCostume[];
+extern const u8 gText_RockstarCostume[];
+extern const u8 gText_PopstarCostume[];
+extern const u8 gText_BelleCostume[];
+extern const u8 gText_PhDCostume[];
+extern const u8 gText_LibreCostume[];
+
 // Frontier records.
 extern const u8 gText_WinStreak[];
 extern const u8 gText_Record[];
@@ -1874,6 +1882,7 @@ extern const u8 gText_DoWhatWithItem[];
 extern const u8 gText_DoWhatWithMail[];
 extern const u8 gText_AlreadyHoldingOne[];
 extern const u8 gText_WhichAppliance[];
+extern const u8 gText_WhichCostume[];
 extern const u8 gText_NoUse[];
 extern const u8 gText_Able[];
 extern const u8 gText_First_PM[];

@@ -1594,6 +1594,52 @@ const struct Berry gBerries[] =
         .pestsBonus = 2,
     },
 
+    [ITEM_STRAWB_BERRY - FIRST_BERRY_INDEX] =
+    {
+        .name = _("Strawb"),
+        .firmness = BERRY_FIRMNESS_VERY_SOFT,
+        .color = BERRY_COLOR_RED,
+        .size = 84,
+        .maxYield = YIELD_RATE(2, 5, 5, 13),
+        .minYield = YIELD_RATE(1, 1, 1, 2),
+        .description1 = COMPOUND_STRING("A highly sweet, juicy berry that"),
+        .description2 = COMPOUND_STRING("has a lot of seeds."),
+        .growthDuration = GROWTH_DURATION(96, 96, 144, 96, 48, 72),
+        .spicy = 0,
+        .dry = 0,
+        .sweet = 40,
+        .bitter = 0,
+        .sour = 10,
+        .smoothness = 60,
+        .drainRate = 6,
+        .waterBonus = 2,
+        .weedsBonus = 0,
+        .pestsBonus = 1,
+    },
+
+    [ITEM_PEAPEE_BERRY - FIRST_BERRY_INDEX] =
+    {
+        .name = _("Peapee"),
+        .firmness = BERRY_FIRMNESS_SUPER_HARD,
+        .color = BERRY_COLOR_GREEN,
+        .size = 31,
+        .maxYield = YIELD_RATE(2, 5, 5, 13),
+        .minYield = YIELD_RATE(1, 1, 1, 2),
+        .description1 = COMPOUND_STRING("A small, round, very tough berry"),
+        .description2 = COMPOUND_STRING("that is slightly bitter."),
+        .growthDuration = GROWTH_DURATION(96, 96, 144, 96, 48, 72),
+        .spicy = 0,
+        .dry = 40,
+        .sweet = 0,
+        .bitter = 10,
+        .sour = 0,
+        .smoothness = 60,
+        .drainRate = 6,
+        .waterBonus = 1,
+        .weedsBonus = 0,
+        .pestsBonus = 2,
+    },
+
     [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] =
     {
         .name = _("Enigma"),

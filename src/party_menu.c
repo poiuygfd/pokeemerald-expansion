@@ -104,6 +104,12 @@ enum {
     MENU_CATALOG_MOWER,
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
+    MENU_COSTUME_NONE,
+    MENU_COSTUME_ROCK,
+    MENU_COSTUME_POP,
+    MENU_COSTUME_BELLE,
+    MENU_COSTUME_PHD,
+    MENU_COSTUME_LIBRE,
     MENU_FIELD_MOVES
 };
 
@@ -125,6 +131,7 @@ enum {
     ACTIONS_TAKEITEM_TOSS,
     ACTIONS_ROTOM_CATALOG,
     ACTIONS_ZYGARDE_CUBE,
+    ACTIONS_COSTUME_CASE,
 };
 
 // In CursorCb_FieldMove, field moves <= FIELD_MOVE_WATERFALL are assumed to line up with the badge flags.
@@ -499,6 +506,12 @@ static void CursorCb_CatalogFan(u8);
 static void CursorCb_CatalogMower(u8);
 static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
+static void CursorCb_CostumeNone(u8);
+static void CursorCb_CostumeRock(u8);
+static void CursorCb_CostumePop(u8);
+static void CursorCb_CostumeBelle(u8);
+static void CursorCb_CostumePhd(u8);
+static void CursorCb_CostumeLibre(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
@@ -2656,6 +2669,9 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         case PARTY_MSG_WHICH_APPLIANCE:
             *windowPtr = AddWindow(&sOrderWhichApplianceMsgWindowTemplate);
             break;
+        case PARTY_MSG_WHICH_COSTUME:
+            *windowPtr = AddWindow(&sChooseWhichCostumeMsgWindowTemplate);
+            break;
         default:
             *windowPtr = AddWindow(&sDefaultPartyMsgWindowTemplate);
             break;
@@ -2717,6 +2733,9 @@ static u8 DisplaySelectionWindow(u8 windowType)
         break;
     case SELECTWINDOW_ZYGARDECUBE:
         window = sZygardeCubeSelectWindowTemplate;
+        break;
+    case SELECTWINDOW_COSTUMECASE:
+        window = sCostumeCaseSelectWindowTemplate;
         break;
     default: // SELECTWINDOW_MOVES
         window = sMoveSelectWindowTemplate;
@@ -5544,9 +5563,16 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     if (!(B_RARE_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
     {
-        BufferMonStatsToTaskData(mon, arrayPtr);
-        cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
-        BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
+        if (gSpecialVar_ItemId == ITEM_CANDY_BAG && sInitialLevel >= VAR_LEVEL_CAP)
+        {
+            cannotUseEffect = TRUE;
+        }
+        else
+        {
+            BufferMonStatsToTaskData(mon, arrayPtr);
+            cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
+            BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
+        }
     }
     else
     {
@@ -5593,7 +5619,10 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
         gPartyMenuUseExitCallback = TRUE;
         UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-        RemoveBagItem(gSpecialVar_ItemId, 1);
+        if (gSpecialVar_ItemId != ITEM_CANDY_BAG)
+        {
+            RemoveBagItem(gSpecialVar_ItemId, 1);
+        }
         GetMonNickname(mon, gStringVar1);
         if (sFinalLevel > sInitialLevel)
         {
@@ -6427,7 +6456,13 @@ static void Task_TryItemUseFormChange(u8 taskId)
                 else
                     FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
             }
-
+            else if (gSpecialVar_ItemId == ITEM_COSTUME_CASE)
+            {
+                u32 i;
+                for (i = 0; i < ARRAY_COUNT(sPikachuCosplayFormChangeMoves); i++)
+                    DeleteMove(mon, sPikachuCosplayFormChangeMoves[i]);
+                FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
+            }
             gTasks[taskId].tState++;
         }
         break;
@@ -6553,6 +6588,59 @@ static void CursorCb_CatalogMower(u8 taskId)
 {
     gSpecialVar_Result = 5;
     gSpecialVar_0x8000 = ROTOM_MOW_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+void ItemUseCB_CostumeCase(u8 taskId, TaskFunc task)
+{
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_COSTUME_CASE);
+    DisplaySelectionWindow(SELECTWINDOW_COSTUMECASE);
+    DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_COSTUME);
+    gTasks[taskId].data[0] = 0xFF;
+    gTasks[taskId].func = Task_HandleSelectionMenuInput;
+}
+
+static void CursorCb_CostumeNone(u8 taskId)
+{
+    gSpecialVar_Result = 0;
+    gSpecialVar_0x8000 = PIKACHU_COSPLAY_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeRock(u8 taskId)
+{
+    gSpecialVar_Result = 1;
+    gSpecialVar_0x8000 = PIKACHU_ROCKSTAR_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumePop(u8 taskId)
+{
+    gSpecialVar_Result = 2;
+    gSpecialVar_0x8000 = PIKACHU_POPSTAR_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeBelle(u8 taskId)
+{
+    gSpecialVar_Result = 3;
+    gSpecialVar_0x8000 = PIKACHU_BELLE_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumePhd(u8 taskId)
+{
+    gSpecialVar_Result = 4;
+    gSpecialVar_0x8000 = PIKACHU_PHD_MOVE;
+    TryMultichoiceFormChange(taskId);
+}
+
+static void CursorCb_CostumeLibre(u8 taskId)
+{
+    gSpecialVar_Result = 5;
+    gSpecialVar_0x8000 = PIKACHU_LIBRE_MOVE;
     TryMultichoiceFormChange(taskId);
 }
 

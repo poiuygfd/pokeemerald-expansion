@@ -577,7 +577,9 @@ Route111_Text_BattleOurFamily:
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "POKéMON battles?\p"
+	.string "If you win, we'll give you the HM\n"
+	.string "for ROCK SMASH!$"
 
 Route111_Text_IsThatSo:
 	.string "Is that so?\n"
@@ -632,7 +634,9 @@ Route111_Text_VickyDefeat:
 
 Route111_Text_VickyPostBattle:
 	.string "If you're not in any hurry,\n"
-	.string "visit with us awhile.$"
+	.string "visit with us awhile.\p"
+	.string "We have something we would like\n"
+	.string "to give you.$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks:
 	.string "If you don't raise your POKéMON some\n"

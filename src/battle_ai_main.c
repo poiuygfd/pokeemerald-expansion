@@ -3034,6 +3034,8 @@ static bool32 IsPinchBerryItemEffect(u32 holdEffect)
     case HOLD_EFFECT_RANDOM_STAT_UP:
     case HOLD_EFFECT_CUSTAP_BERRY:
     case HOLD_EFFECT_MICLE_BERRY:
+    case HOLD_EFFECT_STRAWB_BERRY:
+    case HOLD_EFFECT_PEAPEE_BERRY:
         return TRUE;
     }
 

@@ -10388,6 +10388,42 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_MarangaBerry,
     },
 
+    [ITEM_STRAWB_BERRY] =
+    {
+        .name = _("Strawb Berry"),
+        .pluralName = _("Strawb Berries"),
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_STRAWB_BERRY,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "makes user spit\n"
+            "seeds at low HP."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_RazzBerry,
+        .iconPalette = gItemIconPalette_RazzBerry,
+    },
+
+    [ITEM_PEAPEE_BERRY] =
+    {
+        .name = _("Peapee Berry"),
+        .pluralName = _("Peapee Berries"),
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_PEAPEE_BERRY,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "does something to\n"
+            "user at low HP."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_MicleBerry,
+        .iconPalette = gItemIconPalette_MicleBerry,
+    },
+
     [ITEM_ENIGMA_BERRY_E_READER] =
     {
         .name = _("Enigma Berry"),
@@ -14152,5 +14188,54 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
+    },
+
+    [ITEM_CANDY_BAG] =
+    {
+        .name = _("Candy Bag"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A bag of candies\n"
+            "that raise level\n"
+            "until the cap."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .iconPic = gItemIcon_SootSack,
+        .iconPalette = gItemIconPalette_SootSack,
+    },
+
+    [ITEM_COSTUME_CASE] =
+    {
+        .name = _("Costume Case"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A box full of\n"
+            "costumes liked by\n"
+            "a certain Pikachu."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CostumeCase,
+        .iconPic = gItemIcon_Parcel,
+        .iconPalette = gItemIconPalette_Parcel,
+    },
+
+    [ITEM_OIL_INCENSE] =
+    {
+        .name = _("Oil Incense"),
+        .price = (I_PRICE >= GEN_7) ? 11000 : 9600,
+        .description = COMPOUND_STRING(
+            "A rare incense\n"
+            "made with essential\n"
+            "oils. Effect unknown."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_LuckIncense,
+        .iconPalette = gItemIconPalette_LuckIncense,
     },
 };

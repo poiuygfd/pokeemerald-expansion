@@ -1740,6 +1740,13 @@ extern const u32 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u32 gItemIconPalette_TwiceSpicedRadish[];
 
+//extern const u32 gItemIcon_CandyBag[];
+//extern const u32 gItemIconPalette_CandyBag[];
+//extern const u32 gItemIcon_StrawbBerry[];
+//extern const u32 gItemIconPalette_StrawbBerry[];
+//extern const u32 gItemIcon_PeapeeBerry[];
+//extern const u32 gItemIconPalette_PeapeeBerry[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];
 
@@ -1874,6 +1881,8 @@ extern const u32 gBerryPic_Jaboca[];
 extern const u32 gBerryPic_Rowap[];
 extern const u32 gBerryPic_Kee[];
 extern const u32 gBerryPic_Maranga[];
+//extern const u32 gBerryPic_Strawb[];
+//extern const u32 gBerryPic_Peapee[];
 extern const u32 gBerryPalette_Cheri[];
 extern const u32 gBerryPalette_Chesto[];
 extern const u32 gBerryPalette_Pecha[];
@@ -1941,6 +1950,8 @@ extern const u32 gBerryPalette_Jaboca[];
 extern const u32 gBerryPalette_Rowap[];
 extern const u32 gBerryPalette_Kee[];
 extern const u32 gBerryPalette_Maranga[];
+//extern const u32 gBerryPalette_Strawb[];
+//extern const u32 gBerryPalette_Peapee[];
 
 //PokéNav
 extern const u16 gPokenavCondition_Pal[];

@@ -566,8 +566,16 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
-	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_PURE_INCENSE
+	.2byte ITEM_LUCK_INCENSE
+	.2byte ITEM_FULL_INCENSE
+	.2byte ITEM_LAX_INCENSE
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_ROSE_INCENSE
+	.2byte ITEM_ODD_INCENSE
+	.2byte ITEM_ROCK_INCENSE
+	.2byte ITEM_WAVE_INCENSE
+	.2byte ITEM_OIL_INCENSE
 	.2byte ITEM_NONE
 	release
 	end

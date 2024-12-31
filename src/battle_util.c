@@ -7448,6 +7448,12 @@ static u8 ItemEffectMoveEnd(u32 battler, u16 holdEffect)
     case HOLD_EFFECT_MIRROR_HERB:
         effect = TryConsumeMirrorHerb(battler, FALSE);
         break;
+    /*case HOLD_EFFECT_STRAWB_BERRY:
+        effect = ;
+        break;
+    case HOLD_EFFECT_PEAPEE_BERRY:
+        effect = ;
+        break;*/
     }
 
     return effect;
@@ -8928,6 +8934,8 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_ROWAP_BERRY)] = {TYPE_DARK, 100},
     [ITEM_TO_BERRY(ITEM_KEE_BERRY)] = {TYPE_FAIRY, 100},
     [ITEM_TO_BERRY(ITEM_MARANGA_BERRY)] = {TYPE_DARK, 100},
+    [ITEM_TO_BERRY(ITEM_STRAWB_BERRY)] = {TYPE_GRASS, 100},
+    [ITEM_TO_BERRY(ITEM_PEAPEE_BERRY)] = {TYPE_NORMAL, 100},
 };
 
 u32 CalcRolloutBasePower(u32 battlerAtk, u32 basePower, u32 rolloutTimer)

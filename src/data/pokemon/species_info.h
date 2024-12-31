@@ -289,6 +289,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_ANTIVIRUS, ABILITY_ANTIVIRUS, ABILITY_ANTIVIRUS },
         .bodyColor = BODY_COLOR_WHITE,
+        .noFlip = TRUE,
         .speciesName = _("MissingNo."),
         .cryId = CRY_MISSINGNO,
         .natDexNum = NATIONAL_DEX_MISSINGNO,

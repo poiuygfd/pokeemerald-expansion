@@ -483,8 +483,8 @@ MauvilleCity_Text_UncleYourePushingIt:
 
 MauvilleCity_Text_WallyWeCanBeatAnyone:
 	.string "WALLY: I'm not pushing it.\p"
-	.string "If I combine forces with RALTS,\n"
-	.string "we can beat anyone!$"
+	.string "If I combine forces with KIRLIA\n"
+	.string "and the others, we can beat anyone!$"
 
 MauvilleCity_Text_WallyWillYouBattleMe:
 	.string "WALLY: Oh! Hi, {PLAYER}!\p"
@@ -534,7 +534,8 @@ MauvilleCity_Text_ThankYouNotEnoughToBattle:
 MauvilleCity_Text_UncleNoNeedToBeDown:
 	.string "UNCLE: WALLY, there's no need to be so\n"
 	.string "down on yourself.\p"
-	.string "Why, what's keeping you from becoming\n"
+	.string "That was a good battle!\p"
+	.string "And what's keeping you from becoming\n"
 	.string "stronger and stronger?\p"
 	.string "Come on, let's go home.\n"
 	.string "Everyone's waiting for you.$"

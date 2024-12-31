@@ -1705,6 +1705,12 @@ const u32 gItemIconPalette_KeeBerry[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_MarangaBerry[] = INCBIN_U32("graphics/items/icons/maranga_berry.4bpp.lz");
 const u32 gItemIconPalette_MarangaBerry[] = INCBIN_U32("graphics/items/icon_palettes/maranga_berry.gbapal.lz");
 
+//const u32 gItemIcon_StrawbBerry[] = INCBIN_U32("graphics/items/icons/strawb_berry.4bpp.lz");
+//const u32 gItemIconPalette_StrawbBerry[] = INCBIN_U32("graphics/items/icon_palettes/strawb_berry.gbapal.lz");
+
+//const u32 gItemIcon_PeapeeBerry[] = INCBIN_U32("graphics/items/icons/peapee_berry.4bpp.lz");
+//const u32 gItemIconPalette_PeapeeBerry[] = INCBIN_U32("graphics/items/icon_palettes/peapee_berry.gbapal.lz");
+
 // TMs/HMs
 
 const u32 gItemIcon_TM[] = INCBIN_U32("graphics/items/icons/tm.4bpp.lz");
@@ -2099,3 +2105,6 @@ const u32 gItemIconPalette_SwapSnack[] = INCBIN_U32("graphics/items/icon_palette
 
 const u32 gItemIcon_TwiceSpicedRadish[] = INCBIN_U32("graphics/items/icons/twice_spiced_radish.4bpp.lz");
 const u32 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U32("graphics/items/icon_palettes/twice_spiced_radish.gbapal.lz");
+
+//const u32 gItemIcon_CandyBag[] = INCBIN_U32("graphics/items/icons/candy_bag.4bpp.lz");
+//const u32 gItemIconPalette_CandyBag[] = INCBIN_U32("graphics/items/icon_palettes/candy_bag.gbapal.lz");

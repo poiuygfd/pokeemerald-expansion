@@ -4,6 +4,13 @@ MauvilleCity_House1_MapScripts::
 MauvilleCity_House1_EventScript_RockSmashDude::
 	lock
 	faceplayer
+	msgbox MauvilleCity_House1_Text_WinstrateRockSmash MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_House1_EventScript_RockSmashDudeOld::
+	lock
+	faceplayer
 	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, MauvilleCity_House1_EventScript_ReceivedRockSmash
 	msgbox MauvilleCity_House1_Text_ImRockSmashDudeTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_HM_ROCK_SMASH
@@ -17,6 +24,15 @@ MauvilleCity_House1_EventScript_ReceivedRockSmash::
 	msgbox MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock, MSGBOX_DEFAULT
 	release
 	end
+
+MauvilleCity_House1_Text_WinstrateRockSmash:
+	.string "Have you seen that family to\n"
+	.string "the north of MAUVILLE?\p"
+	.string "The WINSTRATES, I believe\n"
+	.string "they're called.\p"
+	.string "I've heard they're giving out a\n"
+	.string "ROCK SMASH HIDDEN MACHINE to anybody\l"
+	.string "who can beat them!$"
 
 MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
 	.string "Woohoo!\p"
