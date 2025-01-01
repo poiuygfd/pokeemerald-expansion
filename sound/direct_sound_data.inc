@@ -6163,6 +6163,10 @@ Cry_Marin::
 Cry_MissingNo::
 	.incbin "sound/direct_sound_samples/cries/missingno.bin"
 
+	.align 2
+Cry_Avitorch::
+	.incbin "sound/direct_sound_samples/cries/avitorch.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2

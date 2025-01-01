@@ -6501,6 +6501,14 @@ BattleScript_ToxicDebrisRet:
 	copybyte gBattlerAttacker, sBATTLER
 	return
 
+BattleScript_PunisherActivates::
+	call BattleScript_AbilityPopUp
+	handleformchange BS_TARGET, 0
+	playanimation BS_TARGET, B_ANIM_FORM_CHANGE
+	printstring STRINGID_PKMNISENRAGED
+	waitanimation
+	return
+
 BattleScript_EarthEaterActivates::
 	call BattleScript_AbilityPopUp
 	pause B_WAIT_TIME_LONG

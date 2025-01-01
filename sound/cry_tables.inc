@@ -2426,6 +2426,7 @@ gCryTable::
 .endif @ P_FAMILY_PECHARUNT
 	cry Cry_Marin
 	cry Cry_MissingNo
+	cry Cry_Avitorch
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4856,4 +4857,5 @@ gCryTable_Reverse::
 .endif @ P_FAMILY_PECHARUNT
 	cry_reverse Cry_Marin
 	cry_reverse Cry_MissingNo
+	cry_reverse Cry_Avitorch
 .endif @ P_CRIES_ENABLED

@@ -525,6 +525,7 @@ extern const u8 BattleScript_AntivirusDeactivates[];
 extern const u8 BattleScript_AntivirusReactivates[];
 extern const u8 BattleScript_AntivirusProtects[];
 extern const u8 BattleScript_AntivirusPreventsOHKO[];
+extern const u8 BattleScript_PunisherActivates[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];

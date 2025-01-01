@@ -1302,5 +1302,14 @@ static const struct FormChange sTerapagosFormChangeTable[] = {
 };
 #endif //P_FAMILY_TERAPAGOS
 
+static const struct FormChange sAvitorchFormChangeTable[] =
+{
+    {FORM_CHANGE_HIT_BY_MOVE,       SPECIES_AVITORCH_ENRAGED,       ABILITY_PUNISHER},
+    {FORM_CHANGE_BATTLE_SWITCH,     SPECIES_AVITORCH},
+    {FORM_CHANGE_FAINT,             SPECIES_AVITORCH},
+    {FORM_CHANGE_END_BATTLE,        SPECIES_AVITORCH},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

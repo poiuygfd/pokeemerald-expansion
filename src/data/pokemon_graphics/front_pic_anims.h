@@ -10156,6 +10156,22 @@ static const union AnimCmd sAnim_MissingNo_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_AvitorchCalm_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 25),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_AvitorchEnraged_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 25),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Egg_1[] =
 {
     ANIMCMD_FRAME(0, 6),
@@ -12831,4 +12847,6 @@ SINGLE_ANIMATION(Pecharunt);
 #endif //P_FAMILY_PECHARUNT
 SINGLE_ANIMATION(Marin);
 SINGLE_ANIMATION(MissingNo);
+SINGLE_ANIMATION(AvitorchCalm);
+SINGLE_ANIMATION(AvitorchEnraged);
 SINGLE_ANIMATION(Egg);

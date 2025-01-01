@@ -83,6 +83,7 @@ SINGLE_BATTLE_TEST("Mummy doesn't replace abilities that can't be suppressed")
     PARAMETRIZE { species = SPECIES_CALYREX_SHADOW; ability = ABILITY_AS_ONE_SHADOW_RIDER; }
     PARAMETRIZE { species = SPECIES_PALAFIN_ZERO; ability = ABILITY_ZERO_TO_HERO; }
     PARAMETRIZE { species = SPECIES_TATSUGIRI; ability = ABILITY_COMMANDER; }
+    PARAMETRIZE { species = SPECIES_AVITORCH; ability = ABILITY_PUNISHER; }
 
     GIVEN {
         PLAYER(SPECIES_YAMASK);

@@ -26752,6 +26752,21 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_normal.gbapal.lz");
     const u32 gShinyOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_shiny.gbapal.lz");
 
+    const u32 gMonFrontPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/anim_front.4bpp.lz");
+    const u32 gMonPalette_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/normal.gbapal.lz");
+    const u32 gMonBackPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/back.4bpp.lz");
+    const u32 gMonShinyPalette_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/shiny.gbapal.lz");
+    const u8 gMonIcon_AvitorchCalm[] = INCBIN_U8("graphics/pokemon/avitorch/icon.4bpp");
+    const u8 gMonFootprint_Avitorch[] = INCBIN_U8("graphics/pokemon/avitorch/footprint.1bpp");
+    //const u32 gObjectEventPic_Avitorch[] = INCBIN_COMP("graphics/pokemon/avitorch/overworld.4bpp");
+    //const u32 gOverworldPalette_Avitorch[] = INCBIN_U32("graphics/pokemon/avitorch/overworld_normal.gbapal.lz");
+    //const u32 gShinyOverworldPalette_Avitorch[] = INCBIN_U32("graphics/pokemon/avitorch/overworld_shiny.gbapal.lz");
+    const u32 gMonFrontPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/anim_front.4bpp.lz");
+    const u32 gMonPalette_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/normal.gbapal.lz");
+    const u32 gMonBackPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/back.4bpp.lz");
+    const u32 gMonShinyPalette_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/shiny.gbapal.lz");
+    const u8 gMonIcon_AvitorchEnraged[] = INCBIN_U8("graphics/pokemon/avitorch/enraged/icon.4bpp");
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

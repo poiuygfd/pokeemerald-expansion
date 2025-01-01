@@ -727,8 +727,9 @@
 #define STRINGID_ANTIVIRUSSTART                       725
 #define STRINGID_ANTIVIRUSSTOP                        726
 #define STRINGID_ANTIVIRUSPROTECT                     727
+#define STRINGID_PKMNISENRAGED                        728
 
-#define BATTLESTRINGS_COUNT                           728
+#define BATTLESTRINGS_COUNT                           729
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

@@ -893,6 +893,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ANTIVIRUSSTART]                       = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s antivirus is providing protective coverage!"),
     [STRINGID_ANTIVIRUSSTOP]                        = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s free trial has expired!"),
     [STRINGID_ANTIVIRUSPROTECT]                     = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s antivirus provides coverage for this!"),
+    [STRINGID_PKMNISENRAGED]                        = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} has been enraged!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -2428,6 +2428,7 @@ enum {
 #endif //P_FAMILY_PECHARUNT
     CRY_MARIN,
     CRY_MISSINGNO,
+    CRY_AVITORCH,
     CRY_COUNT,
 };
 

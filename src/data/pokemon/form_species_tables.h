@@ -2181,3 +2181,9 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_TERAPAGOS
+
+static const u16 sAvitorchFormSpeciesIdTable[] = {
+    SPECIES_AVITORCH_CALM,
+    SPECIES_AVITORCH_ENRAGED,
+    FORM_SPECIES_END,
+};

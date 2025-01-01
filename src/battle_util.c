@@ -6105,6 +6105,20 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_PUNISHER:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler)
+             && gBattleMons[gBattlerTarget].species != SPECIES_AVITORCH_ENRAGED)
+            {
+                TryBattleFormChange(battler, FORM_CHANGE_HIT_BY_MOVE);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_PunisherActivates;
+                effect++;
+                break;
+            }
+            break;
         }
         break;
     case ABILITYEFFECT_MOVE_END_ATTACKER: // Same as above, but for attacker

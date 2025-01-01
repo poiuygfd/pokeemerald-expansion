@@ -6322,3 +6322,13 @@ static const u16 sMissingNoEggMoveLearnset[] = {
     MOVE_RECOVER,
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sAvitorchEggMoveLearnset[] = {
+    MOVE_HURRICANE,
+    MOVE_HEAT_WAVE,
+    MOVE_DRILL_PECK,
+    MOVE_AIR_SLASH,
+    MOVE_BOOMBURST,
+    MOVE_STOMPING_TANTRUM,
+    MOVE_UNAVAILABLE,
+};

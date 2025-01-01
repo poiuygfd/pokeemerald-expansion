@@ -2418,5 +2418,18 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
         .breakable = TRUE,
+    },
+
+    [ABILITY_PUNISHER] =
+    {
+        .name = _("Punisher"),
+        .description = COMPOUND_STRING("Enrages when hit by attack."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
     }
 };
