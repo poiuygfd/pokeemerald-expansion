@@ -2641,7 +2641,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
-        .formChangeTable = sPikachuFormChangeTable,
+        //.formChangeTable = sPikachuFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_RAICHU},
                                 {EVO_NONE, 0, SPECIES_RAICHU_ALOLA}),
     },
@@ -2696,6 +2696,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
     [SPECIES_PIKACHU_ROCK_STAR] =
@@ -2747,6 +2748,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
     [SPECIES_PIKACHU_BELLE] =
@@ -2799,6 +2801,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
     [SPECIES_PIKACHU_POP_STAR] =
@@ -2851,6 +2854,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
     [SPECIES_PIKACHU_PHD] =
@@ -2902,6 +2906,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
     [SPECIES_PIKACHU_LIBRE] =
@@ -2953,6 +2958,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable,
+        .formChangeTable = sPikachuFormChangeTable,
     },
 
 #endif //P_COSPLAY_PIKACHU_FORMS
