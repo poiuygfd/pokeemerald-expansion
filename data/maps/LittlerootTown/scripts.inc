@@ -50,12 +50,7 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, LittlerootTown_EventScript_MoveRivalFromOldale
 	call_if_eq VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_EventScript_SetRivalLeftForRoute103
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_HideMapNamePopup
-	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
-
-LittlerootTown_EventScript_LeftLabAfterDexUpgrade::
-	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
-	return
 
 LittlerootTown_EventScript_HideMapNamePopup::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
@@ -230,19 +225,19 @@ LittlerootTown_OnWarp:
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgrade::
 	addobject LOCALID_BIRCH
-	addobject LOCALID_RIVAL
+	@ addobject LOCALID_RIVAL
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale
 	goto LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale::
-	setobjectxy LOCALID_RIVAL, 6, 10
+	@ setobjectxy LOCALID_RIVAL, 6, 10
 	setobjectxy LOCALID_BIRCH, 5, 10
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
-	setobjectxy LOCALID_RIVAL, 13, 10
+	@ setobjectxy LOCALID_RIVAL, 13, 10
 	setobjectxy LOCALID_BIRCH, 14, 10
 	end
 
@@ -1014,8 +1009,6 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I knew there was something special\n"
 	.string "about you when I first saw you,\l"
 	.string "but I never expected this.\p"
-	.string "Oh, yes. Do you still have the POKéDEX\n"
-	.string "I gave you?\p"
-	.string "I have something to show you.\n"
-	.string "Let's go to my LAB.$"
+	.string "You should come with me to my LAB.\n"
+	.string "I have something to show you.$"
 

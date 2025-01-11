@@ -64,7 +64,9 @@ SootopolisCity_OnTransition:
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 3, SootopolisCity_EventScript_CheckSetEnterCaveOfOriginObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SootopolisCity_EventScript_SetExitCaveOfOriginObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_SetOutsideGymObjPos
-	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetOutsideGymObjPos2
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_SetOutsideGymObjPos3
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 8, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
 	end
 
 SootopolisCity_EventScript_HideMapNamePopup::
@@ -139,6 +141,21 @@ SootopolisCity_EventScript_SetOutsideGymObjPos::
 	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 2, SootopolisCity_EventScript_SetWallaceLeft
 	return
 
+SootopolisCity_EventScript_SetOutsideGymObjPos2::
+	setobjectxyperm LOCALID_EXPERT, 31, 18
+	setobjectxyperm LOCALID_STEVEN, 29, 33
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 0, SootopolisCity_EventScript_SetWallaceMiddle
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 1, SootopolisCity_EventScript_SetWallaceRight
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 2, SootopolisCity_EventScript_SetWallaceLeft
+	return
+
+SootopolisCity_EventScript_SetOutsideGymObjPos3::
+	setobjectxyperm LOCALID_EXPERT, 31, 18
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 0, SootopolisCity_EventScript_SetWallaceMiddle
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 1, SootopolisCity_EventScript_SetWallaceRight
+	call_if_eq VAR_SOOTOPOLIS_WALLACE_STATE, 2, SootopolisCity_EventScript_SetWallaceLeft
+	return
+
 SootopolisCity_EventScript_SetWallaceMiddle::
 	setobjectxyperm LOCALID_WALLACE, 31, 33
 	setobjectmovementtype LOCALID_WALLACE, MOVEMENT_TYPE_FACE_DOWN
@@ -183,6 +200,7 @@ SootopolisCity_OnResume:
 SootopolisCity_OnFrame:
 	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_StartLegendariesScene
 	map_script_2 VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_StartRayquazaScene
+	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_StevenLeave
 	.2byte 0
 
 @ If not at PokeCenter, assumed to have arrived via Dive
@@ -912,11 +930,6 @@ SootopolisCity_EventScript_StevenHelpWallace::
 	releaseall
 	end
 
-SootopolisCity_EventScript_StevenMaxieArchieLeft::
-	msgbox SootopolisCity_Text_MaxieArchieLeft, MSGBOX_DEFAULT
-	releaseall
-	end
-
 SootopolisCity_EventScript_StevenHelpedWallace::
 	msgbox SootopolisCity_Text_NeverBeenToSkyPillar, MSGBOX_DEFAULT
 	releaseall
@@ -1390,10 +1403,38 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setvar VAR_MT_PYRE_STATE, 2
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
 	warpsilent MAP_SOOTOPOLIS_CITY, 31, 34
 	waitstate
 	releaseall
 	end
+
+SootopolisCity_EventScript_StevenLeave::
+	lockall
+	applymovement LOCALID_STEVEN, SootopolisCity_Movement_StevenToPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox SootopolisCity_Text_MaxieArchieLeft, MSGBOX_DEFAULT
+	waitmessage
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 7
+	warpsilent MAP_SOOTOPOLIS_CITY, 31, 34
+	waitstate
+	releaseall
+	end
+
+SootopolisCity_EventScript_StevenMaxieArchieLeft::
+	msgbox SootopolisCity_Text_MaxieArchieLeft, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SootopolisCity_Movement_StevenToPlayer:
+	walk_down
+	walk_right
+	step_end
 
 @ Unused
 SootopolisCity_Movement_Levitate::
@@ -1682,7 +1723,14 @@ SootopolisCity_Text_MaxieArchieLeft:
 	.string "STEVEN: It looks like both MAXIE and\n"
 	.string "ARCHIE have gone away somewhere.\p"
 	.string "Perhaps they've gone to MT. PYRE to\n"
-	.string "return those ORBS…$"
+	.string "return those ORBS…\p"
+	.string "I should be on my way myself.\n"
+	.string "I have preparations to make.\p"
+	.string "If you have the time, you should\n"
+	.string "stop by my house in MOSSDEEP\l"
+	.string "CITY after this.\p"
+	.string "Take care, {PLAYER}{KUN}.\n"
+	.string "Our paths will cross again soon!$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
 	.string "WALLACE: Oh?\n"
@@ -1718,9 +1766,9 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
 	.string "the SOOTOPOLIS GYM LEADER.\p"
-	.string "While the GYM LEADER of SOOTOPOLIS may\n"
+	.string "While the GYM LEADER of SOOTOPOLIS\n"
 	.string "should none other than myself,\l"
-	.string "Considering the events of today, I've\n"
+	.string "Considering the events of today, I've\l"
 	.string "decided to retrain myself from scratch.\p"
 	.string "Next time SOOTOPOLIS is in danger, I'll\n"
 	.string "make sure I'm strong enough to save it!\p"

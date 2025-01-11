@@ -27,6 +27,7 @@
 #include "mystery_gift.h"
 #include "match_call.h"
 #include "menu.h"
+#include "naming_screen.h"
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokeblock.h"
@@ -4276,6 +4277,24 @@ void PreparePartyForSkyBattle(void)
     }
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
+}
+
+void EnterAvitorchCode(void)
+{
+    DoNamingScreen(NAMING_SCREEN_AVITORCH, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
+}
+
+void GetAvitorchCodeFeedback(void)
+{
+    //struct Pokemon *party = gPlayerParty;
+    //u32 i;
+
+    static const u8 sText_AvitorchCode[] = _("TorchGang");
+
+    if (!StringCompare(gStringVar2, sText_AvitorchCode))
+        gSpecialVar_Result = 1;
+    else
+        gSpecialVar_Result = 0;
 }
 
 void GetObjectPosition(u16* xPointer, u16* yPointer, u32 localId, u32 useTemplate)

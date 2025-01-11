@@ -379,7 +379,7 @@ SouthernIsland_Interior_Text_LatiasCry2:
 	.string "Hyaaaan!$"
 
 SouthernIsland_Interior_Text_ObtainedLatias:
-	.string "{PLAYER} obtained Latias!$"
+	.string "{PLAYER} obtained LATIAS!$"
 
 SouthernIsland_Interior_Text_StevenGoodbye:
 	.string "STEVEN: Well that settles that.\p"

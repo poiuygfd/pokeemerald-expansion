@@ -8,7 +8,7 @@ MossdeepCity_StevensHouse_MapScripts::
 	.byte 0
 
 MossdeepCity_StevensHouse_OnLoad:
-	call_if_unset FLAG_SYS_GAME_CLEAR, MossdeepCity_StevensHouse_EventScript_HideStevensNote
+	call_if_unset FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, MossdeepCity_StevensHouse_EventScript_HideStevensNote
 	end
 
 MossdeepCity_StevensHouse_EventScript_HideStevensNote::
@@ -86,7 +86,7 @@ MossdeepCity_StevensHouse_EventScript_LeaveBeldum::
 
 MossdeepCity_StevensHouse_EventScript_GiveBeldum::
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BELDUM
-	givemon SPECIES_BELDUM, 5
+	givemon SPECIES_BELDUM, 20
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MossdeepCity_StevensHouse_EventScript_SendBeldumParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MossdeepCity_StevensHouse_EventScript_SendBeldumPC
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -198,17 +198,15 @@ MossdeepCity_StevensHouse_Text_LetterFromSteven:
 	.string "It's a letter.\p"
 	.string "… … … … … …\p"
 	.string "To {PLAYER}{KUN}…\p"
-	.string "I've decided to do a little soul-\n"
-	.string "searching and train on the road.\p"
-	.string "I don't plan to return home for some\n"
-	.string "time.\p"
-	.string "I have a favor to ask of you.\p"
-	.string "I want you to take the POKé BALL on\n"
-	.string "the desk.\p"
+	.string "Thank you once again for your\n"
+	.string "help during the SOOTOPOLIS crisis.\p"
+	.string "To thank you for saving the HOENN\n"
+	.string "region, I would like to entrust to\l"
+	.string "you a rare POKéMON.\p"
+	.string "Please take the POKé BALL on my desk.\p"
 	.string "Inside it is a BELDUM, my favorite\n"
 	.string "POKéMON.\p"
 	.string "I'm counting on you.\p"
-	.string "May our paths cross someday.\p"
 	.string "STEVEN STONE$"
 
 MossdeepCity_StevensHouse_Text_CollectionOfRareRocks:

@@ -346,6 +346,8 @@ gSpecials::
 	def_special SetPacifidlogTMReceivedDay
 	def_special GetDaysUntilPacifidlogTMAvailable
 	def_special HasAllHoennMons
+	def_special EnterAvitorchCode
+	def_special GetAvitorchCodeFeedback
 	def_special MonOTNameNotPlayer
 	def_special BufferLottoTicketNumber
 	def_special TryHideBattleTowerReporter

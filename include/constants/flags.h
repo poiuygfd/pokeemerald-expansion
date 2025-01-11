@@ -734,10 +734,10 @@
 #define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 
 // Event Flags
+#define FLAG_AVITORCH_CODE_USED                                     0x2B2 // Avitorch Event Flag
+#define FLAG_HIDE_COSPLAY_PIKACHU                                   0x2B3 // Hide Cosplay Pikachu
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
 #define FLAG_HIDE_REGIGIGAS                                         0x2B6 // Hide Regigigas

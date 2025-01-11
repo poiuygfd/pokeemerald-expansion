@@ -491,7 +491,7 @@ OldaleTown_Text_MarinThankYou:
 	.string "exciting journey. Farewell!$"
 
 OldaleTown_Text_ObtainedMarin:
-	.string "{PLAYER} obtained a Marin.$"
+	.string "{PLAYER} received MARIN.$"
 
 OldaleTown_Text_SavingMyProgress:
 	.string "I want to take a rest, so I'm saving my\n"

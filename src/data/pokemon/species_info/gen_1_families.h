@@ -2692,6 +2692,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuCosplay,
         .iconPalIndex = 2,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
@@ -2744,6 +2758,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuRockStar,
         .iconPalIndex = 1,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
@@ -2797,6 +2825,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuBelle,
         .iconPalIndex = 0,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
@@ -2850,6 +2892,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuPopStar,
         .iconPalIndex = 0,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
@@ -2902,6 +2958,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuPhD,
         .iconPalIndex = 1,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,
@@ -2954,6 +3024,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .iconSprite = gMonIcon_PikachuLibre,
         .iconPalIndex = 0,
         SHADOW(-3, 5, SHADOW_SIZE_M)
+        OVERWORLD(
+            sPicTable_Pikachu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Pikachu,
+            gShinyOverworldPalette_Pikachu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_PikachuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT
+        )
         FOOTPRINT(Pikachu)
         .levelUpLearnset = sPikachuLevelUpLearnset,
         .teachableLearnset = sPikachuTeachableLearnset,

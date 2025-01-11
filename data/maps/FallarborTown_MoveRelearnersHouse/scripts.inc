@@ -3,6 +3,76 @@
 FallarborTown_MoveRelearnersHouse_MapScripts::
 	.byte 0
 
+FallarborTown_MoveRelearnersHouse_EventScript_AvitorchGiftGiver::
+	lockall
+	faceplayer
+	goto_if_set FLAG_AVITORCH_CODE_USED, FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed
+	msgbox FallarborTown_MoveRelearnersHouse_Text_AvitorchGift, MSGBOX_DEFAULT
+	waitmessage
+	special EnterAvitorchCode
+	waitstate
+	special GetAvitorchCodeFeedback
+	goto_if_eq VAR_RESULT, 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess
+	goto FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeIncorrect, MSGBOX_DEFAULT
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeCorrect, MSGBOX_DEFAULT
+	waitmessage
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AVITORCH
+	givemon SPECIES_AVITORCH, 25
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchParty::
+	call FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare
+	call Common_EventScript_GetGiftMonPartySlot
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	call Common_EventScript_NameReceivedPartyMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchPC::
+	call FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_AvitorchTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AvitorchTransferredToPC
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_AvitorchTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_AVITORCH
+	playfanfare MUS_OBTAIN_ITEM
+	message FallarborTown_MoveRelearnersHouse_Text_ObtainedAvitorch
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_AVITORCH
+	return
+
+FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent::
+	setflag FLAG_AVITORCH_CODE_USED
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_OnePerPerson, MSGBOX_DEFAULT
+	releaseall
+	end
+
 FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
 	lockall
 	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
@@ -57,6 +127,48 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
 	releaseall
 	end
+
+FallarborTown_MoveRelearnersHouse_Text_AvitorchGift:
+	.string "Hey there!\p"
+	.string "I'm a totally not cringey self-insert\n"
+	.string "for the creator of this hack!\p"
+	.string "Before you ask, if you're just here to\n"
+	.string "try and relearn some moves, you can do\l"
+	.string "that on the go by going to the status\l"
+	.string "screen, scrolling on over to moves,\l"
+	.string "and pressing the START button.\p"
+	.string "Now that we've got that out of the way,\n"
+	.string "let's get down to business.\p"
+	.string "I've got a rare and special POKéMON\n"
+	.string "that you won't find anywhere else,\l"
+	.string "made specially for this hack.\p"
+	.string "However, I'm not just going to\n"
+	.string "hand it out.\p"
+	.string "If you want this POKéMON you're gonna\n"
+	.string "have to give tell me the correct code!$"
+
+FallarborTown_MoveRelearnersHouse_Text_CodeIncorrect:
+	.string "Bzzzt!\n"
+	.string "Sorry, that was not the correct code!\p"
+	.string "If you don't know it, try asking\n"
+	.string "around outside the game, I'm sure that\l"
+	.string "somebody will know it!$"
+
+FallarborTown_MoveRelearnersHouse_Text_CodeCorrect:
+	.string "Ding ding ding!\n"
+	.string "And to the winner goes the spoils!\p"
+	.string "Enjoy your new POKéMON!$"
+
+FallarborTown_MoveRelearnersHouse_Text_ObtainedAvitorch:
+	.string "{PLAYER} received AVITORCH!$"
+
+FallarborTown_MoveRelearnersHouse_Text_OnePerPerson:
+	.string "Sorry, only one per person!\p"
+	.string "Or if you've just forgotten how to\n"
+	.string "relearn moves, you can do that\l"
+	.string "on the go by going to the status\l"
+	.string "screen, scrolling on over to moves,\l"
+	.string "and pressing the START button.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "I'm the MOVE TUTOR.\p"

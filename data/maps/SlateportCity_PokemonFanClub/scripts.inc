@@ -1,3 +1,5 @@
+.set LOCALID_PIKACHU, 10
+
 SlateportCity_PokemonFanClub_MapScripts::
 	.byte 0
 
@@ -214,6 +216,79 @@ SlateportCity_PokemonFanClub_EventScript_ReceivedSootheBell::
 	release
 	end
 
+SlateportCity_PokemonFanClub_EventScript_PikachuLady::
+	lock
+	faceplayer
+	goto_if_set FLAG_HIDE_COSPLAY_PIKACHU, SlateportCity_PokemonFanClub_EventScript_PikachuLadyRecieved
+	msgbox SlateportCity_PokemonFanClub_Text_DidYouKnow, MSGBOX_DEFAULT
+	waitmessage
+	playse SE_PIN
+	applymovement VAR_LAST_TALKED, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement VAR_LAST_TALKED, Common_Movement_Delay48
+	waitmovement 0
+	msgbox SlateportCity_PokemonFanClub_Text_YouSeemPromising, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_PokemonFanClub_EventScript_PikachuLadySaidNo
+	msgbox SlateportCity_PokemonFanClub_Text_OhThankYou, MSGBOX_DEFAULT
+	waitmessage
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PIKACHU_COSPLAY
+	givemon SPECIES_PIKACHU_COSPLAY, 20
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, SlateportCity_PokemonFanClub_EventScript_SendPikachuParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, SlateportCity_PokemonFanClub_EventScript_SendPikachuPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+SlateportCity_PokemonFanClub_EventScript_PikachuLadySaidNo::
+	msgbox SlateportCity_PokemonFanClub_Text_ThatsAShame, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_PokemonFanClub_EventScript_SendPikachuParty::
+	removeobject LOCALID_PIKACHU
+	call SlateportCity_PokemonFanClub_EventScript_ReceivedPikachuFanfare
+	call Common_EventScript_GetGiftMonPartySlot
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_PokemonFanClub_EventScript_PikachuLadyThankYou
+	call Common_EventScript_NameReceivedPartyMon
+	goto SlateportCity_PokemonFanClub_EventScript_PikachuLadyThankYou
+	end
+
+SlateportCity_PokemonFanClub_EventScript_SendPikachuPC::
+	removeobject LOCALID_PIKACHU
+	call SlateportCity_PokemonFanClub_EventScript_ReceivedPikachuFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_PokemonFanClub_EventScript_PikachuTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto SlateportCity_PokemonFanClub_EventScript_PikachuTransferredToPC
+	end
+
+SlateportCity_PokemonFanClub_EventScript_PikachuTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto SlateportCity_PokemonFanClub_EventScript_PikachuLadyThankYou
+	end
+
+SlateportCity_PokemonFanClub_EventScript_ReceivedPikachuFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_PIKACHU_COSPLAY
+	playfanfare MUS_OBTAIN_ITEM
+	message SlateportCity_PokemonFanClub_Text_ObtainedPikachu
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_PIKACHU_COSPLAY
+	return
+
+SlateportCity_PokemonFanClub_EventScript_PikachuLadyThankYou::
+	setflag FLAG_HIDE_COSPLAY_PIKACHU
+	msgbox SlateportCity_PokemonFanClub_Text_TakeThisToo, MSGBOX_DEFAULT
+	giveitem ITEM_COSTUME_CASE
+	release
+	end
+
+SlateportCity_PokemonFanClub_EventScript_PikachuLadyRecieved::
+	msgbox SlateportCity_PokemonFanClub_Text_HowIsPikachu, MSGBOX_DEFAULT
+	release
+	end
+
 SlateportCity_PokemonFanClub_EventScript_Man::
 	msgbox SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting, MSGBOX_NPC
 	end
@@ -248,6 +323,16 @@ SlateportCity_PokemonFanClub_EventScript_Azumarill::
 	waitse
 	playmoncry SPECIES_AZUMARILL, CRY_MODE_NORMAL
 	msgbox SlateportCity_PokemonFanClub_Text_Azumarill, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+SlateportCity_PokemonFanClub_EventScript_Pikachu::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_PIKACHU_COSPLAY, CRY_MODE_NORMAL
+	msgbox SlateportCity_PokemonFanClub_Text_Pikachu, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -383,6 +468,55 @@ SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting:
 	.string "In other words, it certainly won't\n"
 	.string "like you very much.$"
 
+SlateportCity_PokemonFanClub_Text_DidYouKnow:
+	.string "Did you know?\n"
+	.string "There used to be a CONTEST HALL\l"
+	.string "here in SLATEPORT CITY.\p"
+	.string "This PIKACHU here used to love going\n"
+	.string "to the CONTEST HALL to watch and\l"
+	.string "take part in CONTESTS.\p"
+	.string "Unfortunately, it got taken down,\n"
+	.string "in favor of the BATTLE TENT.\p"
+	.string "Since then, PIKACHU hasn't acted\n"
+	.string "quite the same…\p"
+	.string "Oh, if only I were a TRAINER, I\n"
+	.string "would take PIKACHU to LILYCOVE\l"
+	.string "CITY myself…$"
+
+SlateportCity_PokemonFanClub_Text_YouSeemPromising:
+	.string "You know, you seem like a quite\n"
+	.string "promising TRAINER yourself.\p"
+	.string "Do you think you would be willing\n"
+	.string "to take this PIKACHU to LILYCOVE on\l"
+	.string "your journey?$"
+
+SlateportCity_PokemonFanClub_Text_ThatsAShame:
+	.string "Oh… That's a shame…\p"
+	.string "I understand, it is a lot to ask\n"
+	.string "of someone I've just met…\p"
+	.string "Well, if you ever change your mind\n"
+	.string "then you know where to find us…$"
+
+SlateportCity_PokemonFanClub_Text_OhThankYou:
+	.string "Oh, thank you, kind TRAINER!\p"
+	.string "I'm sure PIKACHU will be thrilled\n"
+	.string "to see some CONTESTS in LILYCOVE!\p"
+	.string "Please take care of PIKACHU!$"
+
+SlateportCity_PokemonFanClub_Text_ObtainedPikachu:
+	.string "{PLAYER} received PIKACHU!$"
+
+SlateportCity_PokemonFanClub_Text_TakeThisToo:
+	.string "Here, take this COSTUME CASE too.\p"
+	.string "You see, this PIKACHU here likes to\n"
+	.string "cosplay and wear these COSTUMES.\p"
+	.string "Wearing one of these also lets\n"
+	.string "PIKACHU learn special moves!$"
+
+SlateportCity_PokemonFanClub_Text_HowIsPikachu:
+	.string "How is PIKACHU doing?\n"
+	.string "I hope your journey is going well!$"
+
 SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
 	.string "Do POKéMON enjoy having items used\n"
 	.string "on them?\p"
@@ -398,3 +532,5 @@ SlateportCity_PokemonFanClub_Text_Zigzagoon:
 SlateportCity_PokemonFanClub_Text_Azumarill:
 	.string "AZUMARILL: Marimari?$"
 
+SlateportCity_PokemonFanClub_Text_Pikachu:
+	.string "PIKACHU: Pika…$"
