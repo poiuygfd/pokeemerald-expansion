@@ -232,7 +232,7 @@ SlateportCity_PokemonFanClub_EventScript_PikachuLady::
 	msgbox SlateportCity_PokemonFanClub_Text_OhThankYou, MSGBOX_DEFAULT
 	waitmessage
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PIKACHU_COSPLAY
-	givemon SPECIES_PIKACHU_COSPLAY, 20
+	givemon SPECIES_PIKACHU_COSPLAY, 15
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, SlateportCity_PokemonFanClub_EventScript_SendPikachuParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, SlateportCity_PokemonFanClub_EventScript_SendPikachuPC
 	goto Common_EventScript_NoMoreRoomForPokemon

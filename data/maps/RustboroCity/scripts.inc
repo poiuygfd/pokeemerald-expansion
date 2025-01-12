@@ -1075,7 +1075,7 @@ RustboroCity_Text_TellingSecrets:
 RustboroCity_Text_GivenConfide:
 	.string "CONFIDE lets your POKéMON tell secrets\n"
 	.string "of their own to catch their opponent\l"
-	.string "off guard. Its a truly devious move!$"
+	.string "off guard. It's a truly devious move!$"
 
 RustboroCity_Text_WowYouHavePokemon:
 	.string "Wow, you have POKéMON with you, too.\p"

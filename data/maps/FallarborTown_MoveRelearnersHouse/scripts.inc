@@ -25,7 +25,7 @@ FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeCorrect, MSGBOX_DEFAULT
 	waitmessage
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AVITORCH
-	givemon SPECIES_AVITORCH, 25
+	givemon SPECIES_AVITORCH, 20
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchPC
 	goto Common_EventScript_NoMoreRoomForPokemon

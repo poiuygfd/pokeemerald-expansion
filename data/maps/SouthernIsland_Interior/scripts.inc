@@ -109,7 +109,7 @@ SouthernIsland_Interior_EventScript_DefeatedCourtney::
 	msgbox SouthernIsland_Interior_Text_LatiasCry2, MSGBOX_DEFAULT
 	removeobject LOCALID_LATIAS
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LATIAS
-	givemon SPECIES_LATIAS, 30
+	givemon SPECIES_LATIAS, 25
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, SouthernIsland_Interior_EventScript_SendLatiasParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, SouthernIsland_Interior_EventScript_SendLatiasPC
 	goto Common_EventScript_NoMoreRoomForPokemon
