@@ -8,6 +8,16 @@ MauvilleCity_House1_EventScript_RockSmashDude::
 	release
 	end
 
+MauvilleCity_House1_EventScript_Volbeat::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_VOLBEAT, CRY_MODE_NORMAL
+	msgbox MauvilleCity_House1_Text_Volbeat, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 MauvilleCity_House1_EventScript_RockSmashDudeOld::
 	lock
 	faceplayer
@@ -33,6 +43,9 @@ MauvilleCity_House1_Text_WinstrateRockSmash:
 	.string "I've heard they're giving out a\n"
 	.string "ROCK SMASH HIDDEN MACHINE to anybody\l"
 	.string "who can beat them!$"
+
+MauvilleCity_House1_Text_Volbeat:
+	.string "VOLBEAT: Bzzzzzt!$"
 
 MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
 	.string "Woohoo!\p"

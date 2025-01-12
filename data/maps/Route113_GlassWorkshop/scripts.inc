@@ -292,6 +292,16 @@ Route113_GlassWorkshop_EventScript_NinjaBoy::
 	msgbox Route113_GlassWorkshop_Text_FunToBlowGlassFlute, MSGBOX_NPC
 	end
 
+Route113_GlassWorkshop_EventScript_Charcadet::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CHARCADET, CRY_MODE_NORMAL
+	msgbox Route113_GlassWorkshop_Text_Charcadet, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 Route113_GlassWorkshop_Text_GoCollectAshWithThis:
 	.string "This area is covered in volcanic ash,\n"
 	.string "huff-puff!\p"
@@ -378,4 +388,7 @@ Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
 	.string "It's fun to blow a glass flute while\n"
 	.string "my boss is talking.\p"
 	.string "Huff-huff! Puff-puff!$"
+
+Route113_GlassWorkshop_Text_Charcadet:
+	.string "CHARCADET: Hrrrff Prrrff.$"
 

@@ -5706,7 +5706,7 @@ Nature: Jolly
 - Dizzy Punch
 - Facade
 - Sucker Punch
-- Power-Up Punch
+- Seismic Toss
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -9071,6 +9071,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Magnitude
 - Sunny Day
 
+Charcadet
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_CLARISSA ===
 Name: CLARISSA
 Class: Parasol Lady
@@ -9121,10 +9125,14 @@ AI: Check Bad Move
 Numel
 Level: 29
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Ember
-- Tackle
+- Lava Plume
+- Curse
 - Magnitude
 - Sunny Day
+
+Charcadet
+Level: 29
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_MADELINE_3 ===
 Name: MADELINE
@@ -9138,10 +9146,14 @@ AI: Check Bad Move
 Numel
 Level: 32
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Ember
-- Take Down
+- Lava Plume
+- Curse
 - Magnitude
 - Sunny Day
+
+Charcadet
+Level: 32
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_MADELINE_4 ===
 Name: MADELINE
@@ -9152,21 +9164,17 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Roselia
+Camerupt
 Level: 34
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Leech Seed
-- Mega Drain
-- Grass Whistle
+- Lava Plume
+- Amnesia
+- Earth Power
 - Sunny Day
 
-Numel
+Armarouge
 Level: 34
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Flamethrower
-- Take Down
-- Magnitude
-- Sunny Day
 
 === TRAINER_MADELINE_5 ===
 Name: MADELINE
@@ -9177,21 +9185,17 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Roselia
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Leech Seed
-- Giga Drain
-- Solar Beam
-- Sunny Day
-
 Camerupt
 Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Flamethrower
-- Take Down
-- Earthquake
+- Lava Plume
+- Amnesia
+- Earth Power
 - Sunny Day
+
+Armarouge
+Level: 37
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_BEVERLY ===
 Name: BEVERLY
@@ -17535,7 +17539,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Dizzy Punch
-- Reversal
+- Seismic Toss
 - Sucker Punch
 - Power-Up Punch
 
@@ -17611,7 +17615,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Dizzy Punch
-- Reversal
+- Seismic Toss
 - Sucker Punch
 - Power-Up Punch
 
@@ -17687,7 +17691,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Dizzy Punch
-- Reversal
+- Seismic Toss
 - Sucker Punch
 - Power-Up Punch
 
@@ -17763,7 +17767,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Dizzy Punch
-- Reversal
+- Seismic Toss
 - Sucker Punch
 - Power-Up Punch
 

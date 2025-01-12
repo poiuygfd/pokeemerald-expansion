@@ -99,3 +99,16 @@ Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end
+
+Route104_PrettyPetalFlowerShop_EventScript_Bounsweet::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_BOUNSWEET, CRY_MODE_NORMAL
+	msgbox Route104_PrettyPetalFlowerShop_Text_Bounsweet, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_Text_Bounsweet:
+	.string "BOUNSWEET: Sweeteee.$"

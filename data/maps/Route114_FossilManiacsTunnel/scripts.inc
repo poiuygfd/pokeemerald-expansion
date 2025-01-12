@@ -61,10 +61,10 @@ Route114_FossilManiacsTunnel_Text_LookInDesertForFossils:
 	.string "Do you want a FOSSIL?\p"
 	.string "But the FOSSILS around these parts all\n"
 	.string "belong to me… None for you…\p"
-	.string "If you can't bear to go without\n"
-	.string "a FOSSIL, look in a desert where there\l"
-	.string "are boulders and sand that may hide\l"
-	.string "FOSSILS…$"
+	.string "If you can't bear to go without a\n"
+	.string "FOSSIL POKéMON, I've heard rumors of\l"
+	.string "a strange tower where living FOSSILS\l"
+	.string "are said to still roam…$"
 
 Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils:
 	.string "You found a FOSSIL, didn't you?\n"

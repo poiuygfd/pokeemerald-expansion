@@ -26,6 +26,16 @@ DewfordTown_House2_EventScript_Boy::
 	msgbox DewfordTown_House2_Text_BrawlySoCool, MSGBOX_NPC
 	end
 
+DewfordTown_House2_EventScript_Stufful::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_STUFFUL, CRY_MODE_NORMAL
+	msgbox DewfordTown_House2_Text_Stufful, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 DewfordTown_House2_Text_WantYouToHaveSilkScarf:
 	.string "Gorge your eyes on this!\p"
 	.string "It's a SILK SCARF. It's right at the\n"
@@ -55,3 +65,5 @@ DewfordTown_House2_Text_BrawlySoCool:
 	.string "He's so cool…\n"
 	.string "Everyone idolizes him.$"
 
+DewfordTown_House2_Text_Stufful:
+	.string "STUFFUL: Gwaaah!$"

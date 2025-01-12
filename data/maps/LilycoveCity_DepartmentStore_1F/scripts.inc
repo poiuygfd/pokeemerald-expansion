@@ -126,12 +126,12 @@ LilycoveCity_DepartmentStore_1F_EventScript_PokefanM::
 	msgbox LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill, MSGBOX_NPC
 	end
 
-LilycoveCity_DepartmentStore_1F_EventScript_Azumarill::
+LilycoveCity_DepartmentStore_1F_EventScript_Whimsicott::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZUMARILL, CRY_MODE_NORMAL
-	msgbox LilycoveCity_DepartmentStore_1F_Text_Azumarill, MSGBOX_DEFAULT
+	playmoncry SPECIES_WHIMSICOTT, CRY_MODE_NORMAL
+	msgbox LilycoveCity_DepartmentStore_1F_Text_Whimsicott, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -153,11 +153,11 @@ LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
 	.string "nice furniture.$"
 
 LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill:
-	.string "I'm buying something for my AZUMARILL\n"
+	.string "I'm buying something for WHIMSICOTT\n"
 	.string "as a reward for winning a CONTEST.$"
 
-LilycoveCity_DepartmentStore_1F_Text_Azumarill:
-	.string "AZUMARILL: Maririroo!$"
+LilycoveCity_DepartmentStore_1F_Text_Whimsicott:
+	.string "WHIMSICOTT: Fweeee!$"
 
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
 	.string "1F: SERVICE COUNTER\n"

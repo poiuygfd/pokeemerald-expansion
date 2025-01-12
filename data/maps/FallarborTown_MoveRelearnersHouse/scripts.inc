@@ -73,6 +73,16 @@ FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed::
 	releaseall
 	end
 
+FallarborTown_MoveRelearnersHouse_EventScript_Dunsparce::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_DUNSPARCE, CRY_MODE_NORMAL
+	msgbox FallarborTown_MoveRelearnersHouse_Text_Dunsparce, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
 	lockall
 	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
@@ -209,3 +219,5 @@ FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "Hunh? There isn't a single move that\n"
 	.string "I can teach an EGG.$"
 
+FallarborTown_MoveRelearnersHouse_Text_Dunsparce:
+	.string "DUNSPARCE: Duuuun!$"

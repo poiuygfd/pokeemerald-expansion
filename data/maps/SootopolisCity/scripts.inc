@@ -1411,8 +1411,8 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 
 SootopolisCity_EventScript_StevenLeave::
 	lockall
-	applymovement LOCALID_STEVEN, SootopolisCity_Movement_StevenToPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_STEVEN, SootopolisCity_Movement_StevenToPlayer
 	waitmovement 0
 	msgbox SootopolisCity_Text_MaxieArchieLeft, MSGBOX_DEFAULT
 	waitmessage

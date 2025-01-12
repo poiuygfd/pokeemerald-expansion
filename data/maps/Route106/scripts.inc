@@ -18,7 +18,7 @@ Route106_EventScript_Hiker::
 	end
 
 Route106_EventScript_GiftedRope::
-	msgbox Route106_Text_ReceivedEscapeRope, MSGBOX_DEFAULT
+	msgbox Route106_Text_ReceivedEscapeRope, MSGBOX_NPC
 	release
 	end
 

@@ -22,7 +22,6 @@ LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:
 	.2byte ITEM_PP_UP
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_FRESH_START_MOCHI
 	.2byte ITEM_NONE
 	release

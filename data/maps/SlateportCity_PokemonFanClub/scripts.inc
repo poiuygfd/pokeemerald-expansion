@@ -297,12 +297,12 @@ SlateportCity_PokemonFanClub_EventScript_Twin::
 	msgbox SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein, MSGBOX_NPC
 	end
 
-SlateportCity_PokemonFanClub_EventScript_Skitty::
+SlateportCity_PokemonFanClub_EventScript_Eevee::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
-	msgbox SlateportCity_PokemonFanClub_Text_Skitty, MSGBOX_DEFAULT
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
+	msgbox SlateportCity_PokemonFanClub_Text_Eevee, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -523,8 +523,8 @@ SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
 	.string "Mine acted really happy when I gave\n"
 	.string "it some PROTEIN.$"
 
-SlateportCity_PokemonFanClub_Text_Skitty:
-	.string "SKITTY: Fffnyaaaah…$"
+SlateportCity_PokemonFanClub_Text_Eevee:
+	.string "EEVEE: Vueeeeei!$"
 
 SlateportCity_PokemonFanClub_Text_Zigzagoon:
 	.string "ZIGZAGOON: Kyuuu…$"
