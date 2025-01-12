@@ -37,9 +37,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart1:
 	.2byte ITEM_TIMER_BALL
 	.2byte ITEM_REPEAT_BALL
 	.2byte ITEM_LUXURY_BALL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight::
 	lock
@@ -80,9 +78,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart2:
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
 	.2byte ITEM_POKE_DOLL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 LilycoveCity_DepartmentStore_2F_Pokemart2Full:
@@ -110,9 +106,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart2Full:
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
 	.2byte ITEM_POKE_DOLL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_Text_LearnToUseItemsProperly:
 	.string "Learn to use items properly.\n"

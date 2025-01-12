@@ -64,9 +64,7 @@ MossdeepCity_Mart_Pokemart_Badge6:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_DREAM_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 MossdeepCity_Mart_Pokemart_Badge7:
@@ -105,9 +103,7 @@ MossdeepCity_Mart_Pokemart_Badge7:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_DREAM_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 MossdeepCity_Mart_Pokemart_Badge8:
@@ -148,9 +144,7 @@ MossdeepCity_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_DREAM_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 MossdeepCity_Mart_EventScript_Woman::
 	msgbox MossdeepCity_Mart_Text_ReviveIsFantastic, MSGBOX_NPC

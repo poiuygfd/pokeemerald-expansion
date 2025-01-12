@@ -78,8 +78,7 @@ FallarborTown_Mart_Pokemart_Badge3:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 FallarborTown_Mart_Pokemart_Badge4:
@@ -113,8 +112,7 @@ FallarborTown_Mart_Pokemart_Badge4:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 FallarborTown_Mart_Pokemart_Badge5:
@@ -150,8 +148,7 @@ FallarborTown_Mart_Pokemart_Badge5:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 FallarborTown_Mart_Pokemart_Badge6:
@@ -189,8 +186,7 @@ FallarborTown_Mart_Pokemart_Badge6:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 FallarborTown_Mart_Pokemart_Badge7:
@@ -230,8 +226,7 @@ FallarborTown_Mart_Pokemart_Badge7:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 FallarborTown_Mart_Pokemart_Badge8:
@@ -272,9 +267,7 @@ FallarborTown_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_GLITTER_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 FallarborTown_Mart_EventScript_Woman::
 	msgbox FallarborTown_Mart_Text_DecidingSkittyEvolve, MSGBOX_NPC

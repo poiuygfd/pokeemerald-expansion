@@ -80,9 +80,7 @@ VerdanturfTown_Mart_Pokemart_Badge2:
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge3:
@@ -111,9 +109,7 @@ VerdanturfTown_Mart_Pokemart_Badge3:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge4:
@@ -146,9 +142,7 @@ VerdanturfTown_Mart_Pokemart_Badge4:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge5:
@@ -183,9 +177,7 @@ VerdanturfTown_Mart_Pokemart_Badge5:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge6:
@@ -222,9 +214,7 @@ VerdanturfTown_Mart_Pokemart_Badge6:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge7:
@@ -263,9 +253,7 @@ VerdanturfTown_Mart_Pokemart_Badge7:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 VerdanturfTown_Mart_Pokemart_Badge8:
@@ -306,9 +294,7 @@ VerdanturfTown_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_FAB_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 VerdanturfTown_Mart_EventScript_Boy::
 	msgbox VerdanturfTown_Mart_Text_XSpecialIsCrucial, MSGBOX_NPC

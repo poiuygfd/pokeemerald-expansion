@@ -100,9 +100,7 @@ SootopolisCity_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_SHADOW_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 SootopolisCity_Mart_EventScript_FatMan::
 	lock

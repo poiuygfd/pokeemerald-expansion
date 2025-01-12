@@ -51,9 +51,7 @@ BattleFrontier_Mart_Pokemart:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_RETRO_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 BattleFrontier_Mart_EventScript_OldMan::
 	msgbox BattleFrontier_Mart_Text_ChaperonGrandson, MSGBOX_NPC

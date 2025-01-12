@@ -80,9 +80,7 @@ PetalburgCity_Mart_Pokemart_Badge0:
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_ORANGE_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 PetalburgCity_Mart_Pokemart_Badge1:
@@ -344,9 +342,7 @@ PetalburgCity_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_ORANGE_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 PetalburgCity_Mart_EventScript_Woman::
 	msgbox PetalburgCity_Mart_Text_WeakWillGrowStronger, MSGBOX_NPC

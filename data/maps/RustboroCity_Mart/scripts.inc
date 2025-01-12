@@ -80,9 +80,7 @@ RustboroCity_Mart_Pokemart_Badge0:
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge1:
@@ -98,9 +96,7 @@ RustboroCity_Mart_Pokemart_Badge1:
 	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge2:
@@ -124,9 +120,7 @@ RustboroCity_Mart_Pokemart_Badge2:
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge3:
@@ -157,9 +151,7 @@ RustboroCity_Mart_Pokemart_Badge3:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge4:
@@ -194,9 +186,7 @@ RustboroCity_Mart_Pokemart_Badge4:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge5:
@@ -233,9 +223,7 @@ RustboroCity_Mart_Pokemart_Badge5:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge6:
@@ -274,9 +262,7 @@ RustboroCity_Mart_Pokemart_Badge6:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge7:
@@ -317,9 +303,7 @@ RustboroCity_Mart_Pokemart_Badge7:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 	.align 2
 RustboroCity_Mart_Pokemart_Badge8:
@@ -362,9 +346,7 @@ RustboroCity_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_BEAD_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokefanF::
 	msgbox RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish, MSGBOX_NPC
