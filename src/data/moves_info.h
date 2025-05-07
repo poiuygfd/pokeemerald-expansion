@@ -21031,6 +21031,31 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_CosmicPower,
     },
 
+    [MOVE_BUBBLE_BLAST] =
+    {
+        .name = COMPOUND_STRING("Bubble Blast"),
+        .description = COMPOUND_STRING(
+            "A barrage of bubbles that\n"
+            "lowers the foe's Speed."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_BubbleBeam,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

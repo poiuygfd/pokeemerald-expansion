@@ -1599,7 +1599,7 @@ bool32 ShouldTryOHKO(u32 battlerAtk, u32 battlerDef, u32 atkAbility, u32 defAbil
 
     if (!DoesBattlerIgnoreAbilityChecks(battlerAtk, atkAbility, move) && defAbility == ABILITY_STURDY)
         return FALSE;
-    else if (!DoesBattlerIgnoreAbilityChecks(atkAbility, move) && defAbility == ABILITY_ANTIVIRUS && AtMaxHp(battlerDef))
+    else if (!DoesBattlerIgnoreAbilityChecks(battlerAtk, atkAbility, move) && defAbility == ABILITY_ANTIVIRUS && AI_BattlerAtMaxHp(battlerDef))
         return FALSE;
 
     if ((((gStatuses3[battlerDef] & STATUS3_ALWAYS_HITS)

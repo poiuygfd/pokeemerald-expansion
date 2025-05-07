@@ -2131,11 +2131,11 @@ static void Cmd_adjustdamage(void)
 
         if (GetBattlerAbility(battlerDef) == ABILITY_ANTIVIRUS
         && (gStatuses4[battlerDef] & STATUS4_ANTIVIRUS)
-        && gBattleMoveDamage >= gBattleMons[battlerDef].hp)
+        && gBattleStruct->moveDamage[battlerDef] >= gBattleMons[battlerDef].hp)
         {
-            gBattleMoveDamage = gBattleMons[battlerDef].hp - 1;
+            gBattleStruct->moveDamage[battlerDef] = gBattleMons[battlerDef].hp - 1;
             RecordAbilityBattle(battlerDef, ABILITY_ANTIVIRUS);
-            gMoveResultFlags |= MOVE_RESULT_ANTIVIRUS_BLOCKED;
+            gSpecialStatuses[battlerDef].antivirusBlocked = TRUE;
             continue;
         }
 
@@ -2175,7 +2175,8 @@ static void Cmd_adjustdamage(void)
             && !gSpecialStatuses[battlerDef].focusBanded
             && !gSpecialStatuses[battlerDef].focusSashed
             && (B_AFFECTION_MECHANICS == FALSE || !gSpecialStatuses[battlerDef].affectionEndured)
-            && !gSpecialStatuses[battlerDef].sturdied)
+            && !gSpecialStatuses[battlerDef].sturdied
+            && !gSpecialStatuses[battlerDef].antivirusBlocked)
             continue;
 
         // Handle reducing the dmg to 1 hp.
@@ -2197,6 +2198,11 @@ static void Cmd_adjustdamage(void)
         {
             gBattleStruct->moveResultFlags[battlerDef] |= MOVE_RESULT_STURDIED;
             gLastUsedAbility = ABILITY_STURDY;
+        }
+        else if (gSpecialStatuses[battlerDef].antivirusBlocked)
+        {
+            gBattleStruct->moveResultFlags[battlerDef] |= MOVE_RESULT_ANTIVIRUS_BLOCKED;
+            gLastUsedAbility = ABILITY_ANTIVIRUS;
         }
         else if (B_AFFECTION_MECHANICS == TRUE && gSpecialStatuses[battlerDef].affectionEndured)
         {
@@ -13144,7 +13150,7 @@ static void Cmd_tryKO(void)
     else if (targetAbility == ABILITY_ANTIVIRUS
     && (gStatuses4[gBattlerTarget] & STATUS4_ANTIVIRUS))
     {
-        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_MISSED;
         gLastUsedAbility = ABILITY_ANTIVIRUS;
         gBattlescriptCurrInstr = BattleScript_AntivirusPreventsOHKO;
         gBattlerAbility = gBattlerTarget;

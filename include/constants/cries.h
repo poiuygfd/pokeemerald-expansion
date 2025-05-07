@@ -2429,6 +2429,7 @@ enum {
     CRY_MARIN,
     CRY_MISSINGNO,
     CRY_AVITORCH,
+    CRY_REGITUBE,
     CRY_COUNT,
 };
 

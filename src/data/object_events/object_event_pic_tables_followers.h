@@ -6735,4 +6735,12 @@ static const struct SpriteFrameImage sPicTable_MissingNo[] = {
     overworld_ascending_frames(gObjectEventPic_MissingNo, 4, 4),
 };
 
+//static const struct SpriteFrameImage sPicTable_Avitorch[] = {
+//    overworld_ascending_frames(gObjectEventPic_Avitorch, 4, 4),
+//};
+
+//static const struct SpriteFrameImage sPicTable_Regitube[] = {
+//    overworld_ascending_frames(gObjectEventPic_Regitube, 4, 4),
+//};
+
 #endif //OW_POKEMON_OBJECT_EVENTS

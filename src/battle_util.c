@@ -5404,7 +5404,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             break;
         case ABILITY_ANTIVIRUS:
             if (!gSpecialStatuses[battler].switchInAbilityDone
-            && BATTLER_MAX_HP(battler) == TRUE)
+            && gBattleMons[battler].hp == gBattleMons[battler].maxHP)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 gStatuses4[battler] |= STATUS4_ANTIVIRUS;
@@ -5611,7 +5611,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 }
                 break;
             case ABILITY_ANTIVIRUS:
-                if (BATTLER_MAX_HP(battler) == FALSE
+                if (!IsBattlerAtMaxHp(battler)
                 && (gStatuses4[battler] & STATUS4_ANTIVIRUS))
                 {
                     gStatuses4[battler] &= ~(STATUS4_ANTIVIRUS);
@@ -6226,17 +6226,16 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             }
             break;
         case ABILITY_PUNISHER:
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+            if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && TARGET_TURN_DAMAGED
-             && IsBattlerAlive(battler)
+             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerAlive(gBattlerTarget)
              && gBattleMons[gBattlerTarget].species != SPECIES_AVITORCH_ENRAGED)
             {
                 TryBattleFormChange(battler, FORM_CHANGE_HIT_BY_MOVE);
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_PunisherActivates;
                 effect++;
-                break;
             }
             break;
         }
@@ -9851,6 +9850,10 @@ static inline u32 CalcAttackStat(struct DamageCalculationData *damageCalcData, u
     case ABILITY_DRAGONS_MAW:
         if (moveType == TYPE_DRAGON)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_BUOYANT_POWER:
+        if (moveType == TYPE_WATER)
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;
     case ABILITY_GORILLA_TACTICS:
         if (IsBattleMovePhysical(move))

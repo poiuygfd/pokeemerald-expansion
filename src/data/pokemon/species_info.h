@@ -212,22 +212,26 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Marin,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 11,
-        .frontAnimFrames = sAnims_Marin,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Marin,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 6,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_H_SPRING,
         .palette = gMonPalette_Marin,
         .shinyPalette = gMonShinyPalette_Marin,
         .iconSprite = gMonIcon_Marin,
         .iconPalIndex = 0,
+        SHADOW(-1, 2, SHADOW_SIZE_M)
         FOOTPRINT(Marin)
         OVERWORLD(
             sPicTable_Marin,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
+            sAnimTable_Following,
             gOverworldPalette_Marin,
             gShinyOverworldPalette_Marin
         )
@@ -271,23 +275,27 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_MissingNo,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_MissingNo,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
         .frontAnimId = ANIM_CIRCULAR_VIBRATE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_MissingNo,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         .palette = gMonPalette_MissingNo,
         .shinyPalette = gMonShinyPalette_MissingNo,
         .iconSprite = gMonIcon_MissingNo,
         .iconPalIndex = 4,
+        SHADOW(0, 18, SHADOW_SIZE_S)
         FOOTPRINT(MissingNo)
         OVERWORLD(
             sPicTable_MissingNo,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
+            sAnimTable_Following,
             gOverworldPalette_MissingNo,
             gShinyOverworldPalette_MissingNo
         )
@@ -333,17 +341,20 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_AvitorchCalm,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_AvitorchCalm,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_AvitorchCalm,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 9,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_H_SPRING,
         .palette = gMonPalette_AvitorchCalm,
         .shinyPalette = gMonShinyPalette_AvitorchCalm,
         .iconSprite = gMonIcon_AvitorchCalm,
         .iconPalIndex = 0,
+        SHADOW(0, 12, SHADOW_SIZE_S)
         FOOTPRINT(Avitorch)
         .levelUpLearnset = sAvitorchLevelUpLearnset,
         .teachableLearnset = sAvitorchTeachableLearnset,
@@ -389,23 +400,82 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_AvitorchEnraged,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_AvitorchEnraged,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_AvitorchEnraged,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 9,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         .palette = gMonPalette_AvitorchEnraged,
         .shinyPalette = gMonShinyPalette_AvitorchEnraged,
         .iconSprite = gMonIcon_AvitorchEnraged,
         .iconPalIndex = 0,
+        SHADOW(0, 12, SHADOW_SIZE_S)
         FOOTPRINT(Avitorch)
         .levelUpLearnset = sAvitorchLevelUpLearnset,
         .teachableLearnset = sAvitorchTeachableLearnset,
         .eggMoveLearnset = sAvitorchEggMoveLearnset,
         .formSpeciesIdTable = sAvitorchFormSpeciesIdTable,
         .formChangeTable = sAvitorchFormChangeTable,
+    },
+
+    [SPECIES_REGITUBE] =
+    { 
+        .baseHP        = 80,
+        .baseAttack    = 75,
+        .baseDefense   = 75,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 150,
+        .baseSpDefense = 150,
+        .types = { TYPE_WATER },
+        .catchRate = 3,
+        .expYield = 290,
+        .evYield_SpAttack  = 2,
+        .evYield_SpDefense = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 120,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_BUOYANT_POWER, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Regitube"),
+        .cryId = CRY_REGITUBE,
+        .natDexNum = NATIONAL_DEX_REGITUBE,
+        .categoryName = _("Inner Tube"),
+        .height = 20,
+        .weight = 25,
+        .description = COMPOUND_STRING(
+            "Not a single scientist can figure out why\n"
+            "Regigigas decided to create its newest\n"
+            "titan of terrifying aquatic power out of\n"
+            "a pile of average beach inflatable tubes."),
+        .pokemonScale = 256,
+        .pokemonOffset = 2,
+        .trainerScale = 493,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Regitube,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Regitube,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Regitube,
+        .shinyPalette = gMonShinyPalette_Regitube,
+        .iconSprite = gMonIcon_Regitube,
+        .iconPalIndex = 0,
+        SHADOW(2, 7, SHADOW_SIZE_L)
+        FOOTPRINT(Regitube)
+        .levelUpLearnset = sRegitubeLevelUpLearnset,
+        .teachableLearnset = sRegitubeTeachableLearnset,
     },
 
     /*

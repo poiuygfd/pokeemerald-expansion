@@ -225,6 +225,7 @@ struct SpecialStatus
     u8 criticalHit:1;
     u8 enduredDamage:1;
     // End of byte
+    u8 antivirusBlocked:1;
 };
 
 struct SideTimer

@@ -259,26 +259,34 @@ static const struct MenuAction MultichoiceList_UnusedAshVendor[] =
 
 static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 {
-    {COMPOUND_STRING("TREECKO DOLL 1,000 COINS")},
-    {COMPOUND_STRING("TORCHIC DOLL 1,000 COINS")},
-    {COMPOUND_STRING("MUDKIP DOLL   1,000 COINS")},
+    {COMPOUND_STRING("TREECKO DOLL{CLEAR_TO 0x48}1,000 COINS")},
+    {COMPOUND_STRING("TORCHIC DOLL{CLEAR_TO 0x48}1,000 COINS")},
+    {COMPOUND_STRING("MUDKIP DOLL{CLEAR_TO 0x48}1,000 COINS")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
-    {COMPOUND_STRING("TM32{CLEAR_TO 0x48}1,500 COINS")},
-    {COMPOUND_STRING("TM29{CLEAR_TO 0x48}3,500 COINS")},
-    {COMPOUND_STRING("TM35{CLEAR_TO 0x48}4,000 COINS")},
-    {COMPOUND_STRING("TM24{CLEAR_TO 0x48}4,000 COINS")},
-    {COMPOUND_STRING("TM13{CLEAR_TO 0x48}4,000 COINS")},
+    {COMPOUND_STRING("ABRA{CLEAR_TO 0x48}850 COINS")},
+    {COMPOUND_STRING("SWIRLIX{CLEAR_TO 0x48}1,500 COINS")},
+    {COMPOUND_STRING("ZORUA{CLEAR_TO 0x48}2,000 COINS")},
+    {COMPOUND_STRING("PORYGON{CLEAR_TO 0x48}4,500 COINS")},
+    {COMPOUND_STRING("?????{CLEAR_TO 0x48}9,999 COINS")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerCoins[] =
 {
-    {COMPOUND_STRING("  50 COINS    ¥1,000")},
-    {COMPOUND_STRING("500 COINS  ¥10,000")},
+    {COMPOUND_STRING("50 COINS{CLEAR_TO 0x48}¥1,000")},
+    {COMPOUND_STRING("500 COINS{CLEAR_TO 0x48}¥10,000")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_GameCornerGimmighoul[] =
+{
+    {COMPOUND_STRING("1 COIN?{CLEAR_TO 0x48}5 COINS")},
+    {COMPOUND_STRING("9 COINS?{CLEAR_TO 0x48}45 COINS")},
+    {COMPOUND_STRING("99 COINS?{CLEAR_TO 0x48}495 COINS")},
     {gText_Exit},
 };
 
@@ -780,16 +788,8 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
 
 static const struct MenuAction MultichoiceList_GalaricaItem[] =
 {
-    {gText_GalaricaCuff},
-    {gText_GalaricaWreath},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_GameCornerGimmighoul[] =
-{
-    {gText_1GimmighoulCoin},
-    {gText_9GimmighoulCoins},
-    {gText_99GimmighoulCoins},
+    {COMPOUND_STRING("CUFF")},
+    {COMPOUND_STRING("WREATH")},
     {gText_Exit},
 };
 
@@ -856,6 +856,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_UNUSED_ASH_VENDOR]          = MULTICHOICE(MultichoiceList_UnusedAshVendor),
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
+    [MULTI_GAME_CORNER_GIMMIGHOUL]     = MULTICHOICE(MultichoiceList_GameCornerGimmighoul),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
     [MULTI_UNUSED_51]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
@@ -922,7 +923,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_GALARICA_ITEM]              = MULTICHOICE(MultichoiceList_GalaricaItem),
-    [MULTI_GAME_CORNER_GIMMIGHOUL]     = MULTICHOICE(MultichoiceList_GameCornerGimmighoul),
 };
 
 const u8 *const gStdStrings[] =

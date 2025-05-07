@@ -2427,6 +2427,7 @@ gCryTable::
 	cry Cry_Marin
 	cry Cry_MissingNo
 	cry Cry_Avitorch
+	cry Cry_Regitube
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4858,4 +4859,5 @@ gCryTable_Reverse::
 	cry_reverse Cry_Marin
 	cry_reverse Cry_MissingNo
 	cry_reverse Cry_Avitorch
+	cry_reverse Cry_Regitube
 .endif @ P_CRIES_ENABLED

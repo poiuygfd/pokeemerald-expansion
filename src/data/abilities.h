@@ -2431,5 +2431,12 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
         .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_BUOYANT_POWER] =
+    {
+        .name = _("Buoyant Power"),
+        .description = COMPOUND_STRING("Ups Water-type moves."),
+        .aiRating = 6,
     }
 };

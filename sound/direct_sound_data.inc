@@ -6167,6 +6167,10 @@ Cry_MissingNo::
 Cry_Avitorch::
 	.incbin "sound/direct_sound_samples/cries/avitorch.bin"
 
+	.align 2
+Cry_Regitube::
+	.incbin "sound/direct_sound_samples/cries/regitube.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2
