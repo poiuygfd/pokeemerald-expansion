@@ -80,3 +80,163 @@ EVs: 150 HP / 150 Atk
 - Rock Tomb
 - Roar
 - Protect
+
+=== PARTNER_BRENDAN_FRONTIER_MUDKIP ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Centiskorch
+Level: 50
+
+Gastrodon
+Level: 50
+
+Sceptile
+Level: 50
+
+=== PARTNER_BRENDAN_FRONTIER_TREECKO ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Gastrodon
+Level: 50
+
+Breloom
+Level: 50
+
+Blaziken
+Level: 50
+
+=== PARTNER_BRENDAN_FRONTIER_TORCHIC ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Breloom
+Level: 50
+
+Centiskorch
+Level: 50
+
+Swampert
+Level: 50
+
+=== PARTNER_MAY_FRONTIER_MUDKIP ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Centiskorch
+Level: 50
+
+Gastrodon
+Level: 50
+
+Sceptile
+Level: 50
+
+=== PARTNER_MAY_FRONTIER_TREECKO ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Gastrodon
+Level: 50
+
+Breloom
+Level: 50
+
+Blaziken
+Level: 50
+
+=== PARTNER_MAY_FRONTIER_TORCHIC ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Breloom
+Level: 50
+
+Centiskorch
+Level: 50
+
+Swampert
+Level: 50
+
+=== PARTNER_WALLY_FRONTIER ===
+Name: WALLY
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+
+Altaria
+Level: 50
+
+Magnezone
+Level: 50
+
+Gallade
+Level: 50
+
+=== PARTNER_STEVEN_FRONTIER ===
+Name: STEVEN
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+
+Skarmory
+Level: 50
+
+Aggron
+Level: 50
+
+Metagross
+Level: 50
+
+=== PARTNER_RED_FRONTIER ===
+Name: RED
+Class: Rival
+Pic: Red
+Gender: Male
+Music: Male
+
+Snorlax
+Level: 50
+
+Pikachu-Starter
+Level: 50
+
+Charizard
+Level: 50
+
+=== PARTNER_LEAF_FRONTIER ===
+Name: LEAF
+Class: Rival
+Pic: Leaf
+Gender: Female
+Music: Female
+
+Goodra
+Level: 50
+
+Eevee-Starter
+Level: 50
+
+Venusaur
+Level: 50

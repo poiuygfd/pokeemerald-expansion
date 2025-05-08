@@ -57,6 +57,8 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	closemessage
 	applymovement LOCALID_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieApproachPlayer
 	waitmovement 0
+	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieThreat, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ARCHIE_MUSEUM, SlateportCity_OceanicMuseum_2F_Text_ArchieDefeated
 	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieWarning, MSGBOX_DEFAULT
 	closemessage
 	savebgm MUS_DUMMY
@@ -321,7 +323,7 @@ SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
 	.string "long to snatch some parts, and you\l"
 	.string "simps are held up by a mere child?$"
 
-SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
+SlateportCity_OceanicMuseum_2F_Text_ArchieThreat:
 	.string "We are TEAM AQUA,\n"
 	.string "and we love the sea!\p"
 	.string "And I am TEAM AQUA's leader,\n"
@@ -329,8 +331,22 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "What makes you interfere with us?\p"
 	.string "…No! You can't be!\n"
 	.string "You're not one of TEAM MAGMA?\p"
-	.string "Wait, that can't be right.\n"
-	.string "You're not dressed for the part.\p"
+	.string "I am surprised MAXIE is hiring kids\n"
+	.string "as young as you, but regardless, I\l"
+	.string "shall show you what happens when\l"
+	.string "you cross TEAM AQUA!$"
+
+SlateportCity_OceanicMuseum_2F_Text_ArchieDefeated:
+	.string "What?!\n"
+	.string "I was defeated by a mere child?!$"
+
+SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
+	.string "Hmm… perhaps you are not part of\n"
+	.string "TEAM MAGMA after all.\p"
+	.string "You're not dressed for the part.\n"
+	.string "For that, I apologise.\p"
+	.string "Still, to think that a mere child\n"
+	.string "could defeat me…\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "POKéMON, people… All life depends on\n"
@@ -344,8 +360,11 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "our noble objective.\p"
 	.string "But, I warn you, don't even consider\n"
 	.string "interfering with our plans again.\p"
-	.string "The consequences will cost you\n"
-	.string "dearly!\p"
+	.string "The consequences will cost you dearly!\n"
+	.string "If you thought I had my most powerful\l"
+	.string "POKéMON on me today then you are in\l"
+	.string "for a nasty surprise next time we meet!\p"
+	.string "TEAM AQUA will stop at nothing!\n"
 	.string "And don't you forget it!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:

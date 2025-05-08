@@ -696,10 +696,15 @@ Items: Super Potion / Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
+Crobat
+Level: 40
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 Atk / 200 Spe
+
 Wishiwashi
 Level: 41
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 200 HP / 100 Atk 
+EVs: 200 HP / 100 Atk
 
 Muk
 Level: 41
@@ -12615,7 +12620,16 @@ Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
+
+Mightyena
+Level: 36
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 Atk / 200 Spe
+- Crunch
+- Snarl
+- Howl
+- Leer
 
 Talonflame
 Level: 37
@@ -12650,9 +12664,18 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
-Items: Super Potion / Super Potion
+Items: Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
+
+Mightyena
+Level: 24
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP / 50 Atk
+- Bite
+- Snarl
+- Howl
+- Leer
 
 Fletchinder
 Level: 24
@@ -19802,6 +19825,39 @@ Ninetales
 Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
+
+=== TRAINER_ARCHIE_MUSEUM ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Golbat
+Level: 18
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Poison Fang
+- Bite
+- Confuse Ray
+
+Carvanha
+Level: 18
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Aqua Jet
+- Ice Fang
+- Bite
+
+Wishiwashi
+Level: 20
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Water Gun
+- Take Down
 
 === TRAINER_RED_METEOR_FALLS ===
 Name: RED
