@@ -474,6 +474,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 0,
         SHADOW(2, 7, SHADOW_SIZE_L)
         FOOTPRINT(Regitube)
+        .isLegendary = TRUE,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRegitubeLevelUpLearnset,
         .teachableLearnset = sRegitubeTeachableLearnset,
     },

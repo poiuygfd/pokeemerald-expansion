@@ -986,47 +986,79 @@ static const struct InGameTrade sIngameTrades[] =
 {
     [INGAME_TRADE_SEEDOT] =
     {
-        .nickname = _("Deez Nuts"),
+        .nickname = _("Deez"),
         .species = SPECIES_SEEDOT,
-        .ivs = {5, 4, 5, 4, 4, 4},
+        .ivs = {16, 22, 13, 18, 22, 13},
         .abilityNum = 1,
         .otId = 38726,
         .conditions = {30, 5, 5, 5, 5},
         .personality = 0x84,
-        .heldItem = ITEM_CHESTO_BERRY,
+        .heldItem = ITEM_BIG_ROOT,
         .mailNum = -1,
         .otName = _("KOBE"),
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_RALTS
     },
-    [INGAME_TRADE_PLUSLE] =
+    [INGAME_TRADE_FLETCHLING] =
     {
-        .nickname = _("Plulu"),
-        .species = SPECIES_PLUSLE,
-        .ivs = {4, 4, 4, 5, 5, 4},
+        .nickname = _("Jetstream"),
+        .species = SPECIES_FLETCHLING,
+        .ivs = {12, 16, 13, 15, 11, 17},
+        .abilityNum = 2,
+        .otId = 64372,
+        .conditions = {5, 30, 5, 5, 5},
+        .personality = 0x81,
+        .heldItem = ITEM_EJECT_BUTTON,
+        .mailNum = -1,
+        .otName = _("CORAL"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TAILLOW
+    },
+    [INGAME_TRADE_MUNCHLAX] =
+    {
+        .nickname = _("Chungus"),
+        .species = SPECIES_MUNCHLAX,
+        .ivs = {26, 19, 21, 8, 14, 16},
+        .abilityNum = 1,
+        .otId = 53318,
+        .conditions = {5, 5, 30, 5, 5},
+        .personality = 0x7A,
+        .heldItem = ITEM_LEFTOVERS,
+        .mailNum = -1,
+        .otName = _("ARIA"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_SIGILYPH
+    },
+    [INGAME_TRADE_APPLIN] =
+    {
+        .nickname = _("Newton"),
+        .species = SPECIES_APPLIN,
+        .ivs = {27, 20, 21, 15, 18, 19},
         .abilityNum = 0,
         .otId = 73996,
-        .conditions = {5, 5, 30, 5, 5},
+        .conditions = {5, 5, 5, 30, 5},
         .personality = 0x6F,
-        .heldItem = ITEM_WOOD_MAIL,
-        .mailNum = 0,
+        .heldItem = ITEM_SAFETY_GOGGLES,
+        .mailNum = -1,
         .otName = _("ROMAN"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_VOLBEAT
+        .requestedSpecies = SPECIES_KARRABLAST
     },
     [INGAME_TRADE_HORSEA] =
     {
         .nickname = _("Seasor"),
         .species = SPECIES_HORSEA,
-        .ivs = {5, 4, 4, 4, 5, 4},
+        .ivs = {17, 11, 14, 28, 31, 22},
         .abilityNum = 0,
         .otId = 46285,
         .conditions = {5, 5, 5, 5, 30},
         .personality = 0x7F,
-        .heldItem = ITEM_WAVE_MAIL,
-        .mailNum = 1,
+        .heldItem = ITEM_LIFE_ORB,
+        .mailNum = -1,
         .otName = _("SKYLAR"),
         .otGender = MALE,
         .sheen = 10,

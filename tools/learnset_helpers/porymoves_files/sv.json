@@ -58124,7 +58124,8 @@
       "MOVE_GRAVITY",
       "MOVE_PSYCH_UP",
       "MOVE_EXPANDING_FORCE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_METRONOME"
     ],
     "EggMoves": [
       "MOVE_YAWN",
@@ -58258,7 +58259,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_EXPANDING_FORCE",
       "MOVE_ALLURING_VOICE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_METRONOME"
     ],
     "EggMoves": [],
     "TutorMoves": []
@@ -96606,7 +96608,8 @@
       "MOVE_FUTURE_SIGHT",
       "MOVE_EXPANDING_FORCE",
       "MOVE_ALLURING_VOICE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_METRONOME"
     ],
     "EggMoves": [],
     "TutorMoves": []

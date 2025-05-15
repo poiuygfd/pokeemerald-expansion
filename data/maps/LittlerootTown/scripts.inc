@@ -887,7 +887,7 @@ LittlerootTown_EventScript_Mom::
 
 LittlerootTown_EventScript_SetReceivedRunningShoes::
 	removeobject LOCALID_MOM
-	setflag FLAG_SYS_B_DASH
+	setflag FLAG_DEXNAV_SHOW
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	release
 	end
@@ -927,20 +927,23 @@ LittlerootTown_Text_WearTheseRunningShoes:
 	.string "You're your father's child, all right.\n"
 	.string "You look good together with POKéMON!\p"
 	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "adventure, you should take this!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "{PLAYER} received the DEXNAV!$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "MOM: Your father told me to give that\n"
+	.string "to you the day you left for a journey.\p"
+	.string "That DEXNAV is a very useful tool for\n"
+	.string "trainers to help find rare POKéMON!\p"
+	.string "Well, that's what your father says,\n"
+	.string "anyway!\p"
+	.string "It came with an instruction booklet too.\n"
+	.string "Let's see what it says…\p"
+	.string "“Wild POKéMON are easily startled.\n"
+	.string "To get close to them, hold the A Button\l"
+	.string "down to slowly sneak up on them!”$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"

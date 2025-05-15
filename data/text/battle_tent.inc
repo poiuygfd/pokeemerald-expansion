@@ -29,8 +29,8 @@ FallarborTown_BattleTentLobby_Text_ExplainFallarborTent:
 	.string "If you don't save, you will not be able\n"
 	.string "to continue with your challenge.\p"
 	.string "If you pull off the feat of beating\n"
-	.string "three TRAINERS in succession,\l"
-	.string "we will present you with a fine prize.$"
+	.string "seven TRAINERS in succession,\l"
+	.string "we will present you with a fine prize!$"
 
 FallarborTown_BattleTentLobby_Text_SaveBeforeChallenge:
 	.string "Before showing you to the BATTLE\n"
@@ -84,13 +84,13 @@ FallarborTown_BattleTentLobby_Text_DidntSaveBeforeQuitting:
 
 FallarborTown_BattleTentLobby_Text_BeatThreeTrainers:
 	.string "How splendid! You have beaten\n"
-	.string "three TRAINERS in succession!$"
+	.string "seven TRAINERS in succession!$"
 
 FallarborTown_BattleTentLobby_Text_WaitWhileSaveGame:
 	.string "Please wait while I save the game.$"
 
 FallarborTown_BattleTentLobby_Text_PresentYouWithPrize:
-	.string "In commemoration of your 3-win streak,\n"
+	.string "In commemoration of your 7-win streak,\n"
 	.string "we present you with this prize.$"
 
 FallarborTown_BattleTentLobby_Text_ReceivedPrize:
@@ -140,7 +140,7 @@ VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent:
 	.string "You must put your trust in your\n"
 	.string "POKéMON and watch over them.\p"
 	.string "If you achieve the honor of beating\n"
-	.string "three TRAINERS in succession,\l"
+	.string "seven TRAINERS in succession,\l"
 	.string "we will present you with a prize.\p"
 	.string "If you want to interrupt your\n"
 	.string "challenge, please save the game.\p"
@@ -200,7 +200,7 @@ VerdanturfTown_BattleTentLobby_Text_ResultsWillBeRecorded:
 	.string "I must ask you to briefly wait.$"
 
 VerdanturfTown_BattleTentLobby_Text_AchievedThreeWinStreak:
-	.string "To achieve a 3-win streak…\p"
+	.string "To achieve a 7-win streak…\p"
 	.string "The bonds that bind your heart with\n"
 	.string "your POKéMON seem firm and true.$"
 
@@ -209,7 +209,7 @@ VerdanturfTown_BattleTentLobby_Text_FeatWillBeRecorded:
 	.string "I must ask you to briefly wait.$"
 
 VerdanturfTown_BattleTentLobby_Text_PresentYouWithPrize:
-	.string "For the feat of your 3-win streak,\n"
+	.string "For the feat of your 7-win streak,\n"
 	.string "we present you with this prize.$"
 
 SlateportCity_BattleTentLobby_Text_WelcomeToBattleTent:
@@ -233,7 +233,7 @@ SlateportCity_BattleTentLobby_Text_ExplainSlateportTent:
 	.string "If you win, you are permitted to trade\n"
 	.string "one of your rental POKéMON.\p"
 	.string "Repeat this cycle of battling and\n"
-	.string "trading--if you win three times in\l"
+	.string "trading--if you win seven times in\l"
 	.string "a row, you will earn a fine prize.\p"
 	.string "If you want to interrupt your\n"
 	.string "challenge, please save the game.\p"
@@ -274,14 +274,14 @@ SlateportCity_BattleTentLobby_Text_ReturnMonsExchangeRentals:
 
 SlateportCity_BattleTentLobby_Text_WonThreeMatchesReturnMons:
 	.string "Congratulations!\n"
-	.string "You've won three straight matches!\p"
+	.string "You've won seven straight matches!\p"
 	.string "I will return your POKéMON in exchange\n"
 	.string "for our rental POKéMON.\p"
 	.string "I must also save your event results.\n"
 	.string "Please wait.$"
 
 SlateportCity_BattleTentLobby_Text_AwardYouThisPrize:
-	.string "In recognition of your 3-win streak,\n"
+	.string "In recognition of your 7-win streak,\n"
 	.string "we award you this prize.$"
 
 SlateportCity_BattleTentLobby_Text_NoRoomInBagMakeRoom:

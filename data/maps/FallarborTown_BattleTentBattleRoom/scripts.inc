@@ -83,7 +83,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_IncrementBattleNum::
 	addvar VAR_RESULT, 1
 	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
 	switch VAR_RESULT
-	case 3, FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon
+	case 7, FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon
 	applymovement LOCALID_OPPONENT, FallarborTown_BattleTentBattleRoom_Movement_OpponentExit
 	waitmovement 0
 	removeobject LOCALID_OPPONENT
@@ -102,6 +102,10 @@ FallarborTown_BattleTentBattleRoom_EventScript_AskContinueChallenge::
 	frontier_get FRONTIER_DATA_BATTLE_NUM
 	call_if_eq VAR_RESULT, 1, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent
 	call_if_eq VAR_RESULT, 2, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent
+	call_if_eq VAR_RESULT, 3, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor4thOpponent
+	call_if_eq VAR_RESULT, 4, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor5thOpponent
+	call_if_eq VAR_RESULT, 5, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor6thOpponent
+	call_if_eq VAR_RESULT, 6, FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor7thOpponent
 	multichoice 20, 6, MULTI_GO_ON_REST_RETIRE, TRUE
 	switch VAR_RESULT
 	case 0, FallarborTown_BattleTentBattleRoom_EventScript_ContinueChallenge
@@ -154,6 +158,26 @@ FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
 
 FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
 	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent
+	waitmessage
+	return
+
+FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor4thOpponent::
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor4thOpponent
+	waitmessage
+	return
+
+FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor5thOpponent::
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor5thOpponent
+	waitmessage
+	return
+
+FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor6thOpponent::
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor6thOpponent
+	waitmessage
+	return
+
+FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor7thOpponent::
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor7thOpponent
 	waitmessage
 	return
 

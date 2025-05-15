@@ -64,7 +64,7 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_DefeatedOpponent::
 	addvar VAR_RESULT, 1
 	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
 	switch VAR_RESULT
-	case 3, VerdanturfTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon
+	case 7, VerdanturfTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon
 	applymovement LOCALID_OPPONENT, VerdanturfTown_BattleTentBattleRoom_Movement_OpponentExit
 	waitmovement 0
 	removeobject LOCALID_OPPONENT
@@ -83,6 +83,10 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge::
 	frontier_get FRONTIER_DATA_BATTLE_NUM
 	call_if_eq VAR_RESULT, 1, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent
 	call_if_eq VAR_RESULT, 2, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent
+	call_if_eq VAR_RESULT, 3, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor4thOpponent
+	call_if_eq VAR_RESULT, 4, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor5thOpponent
+	call_if_eq VAR_RESULT, 5, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor6thOpponent
+	call_if_eq VAR_RESULT, 6, VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor7thOpponent
 	multichoice 20, 6, MULTI_GO_ON_REST_RETIRE, TRUE
 	switch VAR_RESULT
 	case 0, VerdanturfTown_BattleTentBattleRoom_EventScript_ContinueChallenge
@@ -147,6 +151,26 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
 	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor3rdOpponent
+	waitmessage
+	return
+
+VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor4thOpponent::
+	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor4thOpponent
+	waitmessage
+	return
+
+VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor5thOpponent::
+	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor5thOpponent
+	waitmessage
+	return
+
+VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor6thOpponent::
+	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor6thOpponent
+	waitmessage
+	return
+
+VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor7thOpponent::
+	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor7thOpponent
 	waitmessage
 	return
 

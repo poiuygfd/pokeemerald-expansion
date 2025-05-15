@@ -88,9 +88,11 @@
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+
+// DexNav Flags
+#define FLAG_DEXNAV_SEARCHING               0x4D
+#define FLAG_DEXNAV_SHOW                    0x4E
+#define FLAG_DEXNAV_DETECT                  0x4F
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -663,8 +665,8 @@
 #define FLAG_HIDE_RED  0x268 // Hide Red in Lounge until defeated
 #define FLAG_HIDE_WALLACE_SUPERBOSS  0x269 // Hide Wallace Boss in Cave of Origin until post-game
 #define FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS  0x26A // Wallace Battle
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
+#define FLAG_DEWFORD_NPC_TRADE_COMPLETED  0x26B // Dewford Fletchling Trade
+#define FLAG_ROUTE_111_NPC_TRADE_COMPLETED  0x26C // Rest Stop Munchlax Trade
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag

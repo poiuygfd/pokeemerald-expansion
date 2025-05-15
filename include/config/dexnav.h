@@ -1,15 +1,15 @@
 #ifndef GUARD_CONFIG_DEXNAV_H
 #define GUARD_CONFIG_DEXNAV_H
 
-#define DEXNAV_ENABLED                FALSE  // Whether or not DexNav is enabled. If TRUE, flags/vars below must all be non-zero
+#define DEXNAV_ENABLED                TRUE  // Whether or not DexNav is enabled. If TRUE, flags/vars below must all be non-zero
 #define USE_DEXNAV_SEARCH_LEVELS      FALSE  /* WARNING: POSSIBLY EXCEEDS SAVEBLOCK SPACE! REQUIRES 1 BYTE PER SPECIES */
 
 // Flag/var defines
-#define DN_FLAG_SEARCHING             0 // Searching for mon
-#define DN_FLAG_DEXNAV_GET            0 // DexNav shows in start menu
-#define DN_FLAG_DETECTOR_MODE         0 // Allow player to find hidden mons
-#define DN_VAR_SPECIES                0 // Registered DexNav species
-#define DN_VAR_STEP_COUNTER           0 // Steps for finding hidden pokemon
+#define DN_FLAG_SEARCHING             FLAG_DEXNAV_SEARCHING // Searching for mon
+#define DN_FLAG_DEXNAV_GET            FLAG_DEXNAV_SHOW // DexNav shows in start menu
+#define DN_FLAG_DETECTOR_MODE         FLAG_DEXNAV_DETECT // Allow player to find hidden mons
+#define DN_VAR_SPECIES                VAR_DEXNAV_SPECIES // Registered DexNav species
+#define DN_VAR_STEP_COUNTER           VAR_DEXNAV_STEP_COUNT // Steps for finding hidden pokemon
 
 // Search parameters
 #define DEXNAV_TIMEOUT                  15  // 15 seconds is the time out. Max of 1092 seconds allowed
@@ -27,46 +27,46 @@
 //// SEARCH PROBABILITIES
 // See https://bulbapedia.bulbagarden.net/wiki/DexNav#Benefits
 // Chance of encountering egg move at search levels
-#define SEARCHLEVEL0_MOVECHANCE         0
-#define SEARCHLEVEL5_MOVECHANCE         21
-#define SEARCHLEVEL10_MOVECHANCE        46
-#define SEARCHLEVEL25_MOVECHANCE        58
-#define SEARCHLEVEL50_MOVECHANCE        63
-#define SEARCHLEVEL100_MOVECHANCE       83
+#define SEARCHLEVEL0_MOVECHANCE         10 // Search levels aren't enabled in this game, by default DexNav has a 10% chance to result in an Egg Move
+#define SEARCHLEVEL5_MOVECHANCE         10
+#define SEARCHLEVEL10_MOVECHANCE        10
+#define SEARCHLEVEL25_MOVECHANCE        10
+#define SEARCHLEVEL50_MOVECHANCE        10
+#define SEARCHLEVEL100_MOVECHANCE       10
 // Chance of encountering Hidden Abilities at search levels
-#define SEARCHLEVEL0_ABILITYCHANCE      0
-#define SEARCHLEVEL5_ABILITYCHANCE      0
-#define SEARCHLEVEL10_ABILITYCHANCE     5
-#define SEARCHLEVEL25_ABILITYCHANCE     15
+#define SEARCHLEVEL0_ABILITYCHANCE      20 // Search levels aren't enabled in this game, by default DexNav has a 20% chance to result in a Hidden Ability
+#define SEARCHLEVEL5_ABILITYCHANCE      20
+#define SEARCHLEVEL10_ABILITYCHANCE     20
+#define SEARCHLEVEL25_ABILITYCHANCE     20
 #define SEARCHLEVEL50_ABILITYCHANCE     20
-#define SEARCHLEVEL100_ABILITYCHANCE    23
+#define SEARCHLEVEL100_ABILITYCHANCE    20
 // Chance of encountering held item
-#define SEARCHLEVEL0_ITEM               0
-#define SEARCHLEVEL5_ITEM               0
-#define SEARCHLEVEL10_ITEM              1
-#define SEARCHLEVEL25_ITEM              7
-#define SEARCHLEVEL50_ITEM              6
-#define SEARCHLEVEL100_ITEM             12
+#define SEARCHLEVEL0_ITEM               25 // Search levels aren't enabled in this game, by default DexNav has a 25% chance to have a hold item
+#define SEARCHLEVEL5_ITEM               25
+#define SEARCHLEVEL10_ITEM              25
+#define SEARCHLEVEL25_ITEM              25
+#define SEARCHLEVEL50_ITEM              25
+#define SEARCHLEVEL100_ITEM             25
 // Chance of encountering one star potential
 #define SEARCHLEVEL0_ONESTAR            0
-#define SEARCHLEVEL5_ONESTAR            14
-#define SEARCHLEVEL10_ONESTAR           17
-#define SEARCHLEVEL25_ONESTAR           17
-#define SEARCHLEVEL50_ONESTAR           15
-#define SEARCHLEVEL100_ONESTAR          8
+#define SEARCHLEVEL5_ONESTAR            0
+#define SEARCHLEVEL10_ONESTAR           0
+#define SEARCHLEVEL25_ONESTAR           0
+#define SEARCHLEVEL50_ONESTAR           0
+#define SEARCHLEVEL100_ONESTAR          0
 // Chance of encountering two star potential
 #define SEARCHLEVEL0_TWOSTAR            0
-#define SEARCHLEVEL5_TWOSTAR            1
-#define SEARCHLEVEL10_TWOSTAR           9
-#define SEARCHLEVEL25_TWOSTAR           16
-#define SEARCHLEVEL50_TWOSTAR           17
-#define SEARCHLEVEL100_TWOSTAR          24
+#define SEARCHLEVEL5_TWOSTAR            0
+#define SEARCHLEVEL10_TWOSTAR           0
+#define SEARCHLEVEL25_TWOSTAR           0
+#define SEARCHLEVEL50_TWOSTAR           0
+#define SEARCHLEVEL100_TWOSTAR          0
 // Chance of encountering three star potential
 #define SEARCHLEVEL0_THREESTAR          0
 #define SEARCHLEVEL5_THREESTAR          0
-#define SEARCHLEVEL10_THREESTAR         1
-#define SEARCHLEVEL25_THREESTAR         7
-#define SEARCHLEVEL50_THREESTAR         6
-#define SEARCHLEVEL100_THREESTAR        12
+#define SEARCHLEVEL10_THREESTAR         0
+#define SEARCHLEVEL25_THREESTAR         0
+#define SEARCHLEVEL50_THREESTAR         0
+#define SEARCHLEVEL100_THREESTAR        0
 
 #endif // GUARD_CONFIG_DEXNAV_H

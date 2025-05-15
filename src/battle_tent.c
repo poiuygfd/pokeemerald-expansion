@@ -70,7 +70,7 @@ void static (*const sVerdanturfTentFuncs[])(void) =
     [VERDANTURF_TENT_FUNC_GIVE_PRIZE]         = GiveVerdanturfTentPrize
 };
 
-static const u16 sVerdanturfTentRewards[] = {ITEM_NEST_BALL};
+static const u16 sVerdanturfTentRewards[] = {ITEM_MUSCLE_BAND, ITEM_ABILITY_CAPSULE, ITEM_CHOICE_BAND, ITEM_BIG_NUGGET};
 
 void static (*const sFallarborTentFuncs[])(void) =
 {
@@ -83,7 +83,7 @@ void static (*const sFallarborTentFuncs[])(void) =
     [FALLARBOR_TENT_FUNC_GET_OPPONENT_NAME] = BufferFallarborTentTrainerName
 };
 
-static const u16 sFallarborTentRewards[] = {ITEM_HYPER_POTION};
+static const u16 sFallarborTentRewards[] = {ITEM_WISE_GLASSES, ITEM_ABILITY_CAPSULE, ITEM_CHOICE_SPECS, ITEM_BIG_NUGGET};
 
 void static (*const sSlateportTentFuncs[])(void) =
 {
@@ -99,7 +99,7 @@ void static (*const sSlateportTentFuncs[])(void) =
     [SLATEPORT_TENT_FUNC_GENERATE_RENTAL_MONS]   = GenerateInitialRentalMons
 };
 
-static const u16 sSlateportTentRewards[] = {ITEM_FULL_HEAL};
+static const u16 sSlateportTentRewards[] = {ITEM_QUICK_CLAW, ITEM_ABILITY_CAPSULE, ITEM_CHOICE_SCARF, ITEM_BIG_NUGGET};
 
 // code
 void CallVerdanturfTentFunction(void)
@@ -148,7 +148,27 @@ static void SaveVerdanturfTentChallenge(void)
 
 static void SetRandomVerdanturfTentPrize(void)
 {
-    gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[Random() % ARRAY_COUNT(sVerdanturfTentRewards)];
+    //gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[Random() % ARRAY_COUNT(sVerdanturfTentRewards)];
+    switch(VarGet(VAR_VERDANTURF_TENT_PRIZE)) {
+        case 0:
+            gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[0];
+            VarSet(VAR_VERDANTURF_TENT_PRIZE, 1);
+            break;
+        case 1:
+            gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[1];
+            VarSet(VAR_VERDANTURF_TENT_PRIZE, 2);
+            break;
+        case 2:
+            gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[2];
+            VarSet(VAR_VERDANTURF_TENT_PRIZE, 3);
+            break;
+        case 3:
+            gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[3];
+            break;
+        default:
+            gSaveBlock2Ptr->frontier.verdanturfTentPrize = sVerdanturfTentRewards[3];
+            break;
+    }
 }
 
 static void GiveVerdanturfTentPrize(void)
@@ -199,7 +219,27 @@ static void SaveFallarborTentChallenge(void)
 
 static void SetRandomFallarborTentPrize(void)
 {
-    gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[Random() % ARRAY_COUNT(sFallarborTentRewards)];
+    //gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[Random() % ARRAY_COUNT(sFallarborTentRewards)];
+    switch(VarGet(VAR_FALLARBOR_TENT_PRIZE)) {
+        case 0:
+            gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[0];
+            VarSet(VAR_FALLARBOR_TENT_PRIZE, 1);
+            break;
+        case 1:
+            gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[1];
+            VarSet(VAR_FALLARBOR_TENT_PRIZE, 2);
+            break;
+        case 2:
+            gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[2];
+            VarSet(VAR_FALLARBOR_TENT_PRIZE, 3);
+            break;
+        case 3:
+            gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[3];
+            break;
+        default:
+            gSaveBlock2Ptr->frontier.fallarborTentPrize = sFallarborTentRewards[3];
+            break;
+    }
 }
 
 static void GiveFallarborTentPrize(void)
@@ -255,7 +295,27 @@ static void SaveSlateportTentChallenge(void)
 
 static void SetRandomSlateportTentPrize(void)
 {
-    gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[Random() % ARRAY_COUNT(sSlateportTentRewards)];
+    //gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[Random() % ARRAY_COUNT(sSlateportTentRewards)];
+    switch(VarGet(VAR_SLATEPORT_TENT_PRIZE)) {
+        case 0:
+            gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[0];
+            VarSet(VAR_SLATEPORT_TENT_PRIZE, 1);
+            break;
+        case 1:
+            gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[1];
+            VarSet(VAR_SLATEPORT_TENT_PRIZE, 2);
+            break;
+        case 2:
+            gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[2];
+            VarSet(VAR_SLATEPORT_TENT_PRIZE, 3);
+            break;
+        case 3:
+            gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[3];
+            break;
+        default:
+            gSaveBlock2Ptr->frontier.slateportTentPrize = sSlateportTentRewards[3];
+            break;
+    }
 }
 
 static void GiveSlateportTentPrize(void)

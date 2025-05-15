@@ -75,7 +75,7 @@ SlateportCity_BattleTentBattleRoom_EventScript_DefeatedOpponent::
 	addvar VAR_RESULT, 1
 	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
 	switch VAR_RESULT
-	case 3, SlateportCity_BattleTentBattleRoom_EventScript_WarpToLobbyWon
+	case 7, SlateportCity_BattleTentBattleRoom_EventScript_WarpToLobbyWon
 	setvar VAR_0x8006, 1
 	warp MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR, 2, 3
 	waitstate

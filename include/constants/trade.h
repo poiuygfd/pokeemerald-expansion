@@ -6,10 +6,12 @@
 
 // In-game Trade IDs
 #define INGAME_TRADE_SEEDOT 0
-#define INGAME_TRADE_PLUSLE 1
-#define INGAME_TRADE_HORSEA 2
-#define INGAME_TRADE_EEVEE 3
-#define INGAME_TRADE_PIKACHU 4
+#define INGAME_TRADE_FLETCHLING 1
+#define INGAME_TRADE_MUNCHLAX 2
+#define INGAME_TRADE_APPLIN 3
+#define INGAME_TRADE_HORSEA 4
+#define INGAME_TRADE_EEVEE 5
+#define INGAME_TRADE_PIKACHU 6
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon
 #define CAN_TRADE_MON              0

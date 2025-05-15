@@ -5,7 +5,7 @@
 
 // The number of battles in each Battle Tent challenge.
 // Battle Tent equivalent of FRONTIER_STAGES_PER_CHALLENGE.
-#define TENT_STAGES_PER_CHALLENGE  3
+#define TENT_STAGES_PER_CHALLENGE  7
 
 #define VERDANTURF_TENT_FUNC_INIT                0
 #define VERDANTURF_TENT_FUNC_GET_PRIZE           1

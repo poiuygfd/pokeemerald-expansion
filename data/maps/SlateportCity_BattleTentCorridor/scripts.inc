@@ -64,6 +64,10 @@ SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent::
 	frontier_get FRONTIER_DATA_BATTLE_NUM
 	call_if_eq VAR_RESULT, 1, SlateportCity_BattleTentCorridor_EventScript_ReadyFor2ndOpponent
 	call_if_eq VAR_RESULT, 2, SlateportCity_BattleTentCorridor_EventScript_ReadyFor3rdOpponent
+	call_if_eq VAR_RESULT, 3, SlateportCity_BattleTentCorridor_EventScript_ReadyFor4thOpponent
+	call_if_eq VAR_RESULT, 4, SlateportCity_BattleTentCorridor_EventScript_ReadyFor5thOpponent
+	call_if_eq VAR_RESULT, 5, SlateportCity_BattleTentCorridor_EventScript_ReadyFor6thOpponent
+	call_if_eq VAR_RESULT, 6, SlateportCity_BattleTentCorridor_EventScript_ReadyFor7thOpponent
 	multichoice 20, 6, MULTI_GO_ON_REST_RETIRE, TRUE
 	switch VAR_RESULT
 	case 0, SlateportCity_BattleTentCorridor_EventScript_AskSwapMon
@@ -109,6 +113,26 @@ SlateportCity_BattleTentCorridor_EventScript_ReadyFor2ndOpponent::
 
 SlateportCity_BattleTentCorridor_EventScript_ReadyFor3rdOpponent::
 	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor3rdOpponent
+	waitmessage
+	return
+
+SlateportCity_BattleTentCorridor_EventScript_ReadyFor4thOpponent::
+	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor4thOpponent
+	waitmessage
+	return
+
+SlateportCity_BattleTentCorridor_EventScript_ReadyFor5thOpponent::
+	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor5thOpponent
+	waitmessage
+	return
+
+SlateportCity_BattleTentCorridor_EventScript_ReadyFor6thOpponent::
+	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor6thOpponent
+	waitmessage
+	return
+
+SlateportCity_BattleTentCorridor_EventScript_ReadyFor7thOpponent::
+	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor7thOpponent
 	waitmessage
 	return
 
