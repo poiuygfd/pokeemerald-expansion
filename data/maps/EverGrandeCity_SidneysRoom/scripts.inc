@@ -45,6 +45,7 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	lock
 	faceplayer
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
@@ -52,8 +53,21 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
+EverGrandeCity_SidneysRoom_EventScript_SidneyRematch::
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SIDNEY_REMATCH, EverGrandeCity_SidneysRoom_Text_RematchDefeat
+	goto EverGrandeCity_SidneysRoom_EventScript_RematchDefeated
+	end
+
 EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech::
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -61,6 +75,13 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -84,4 +105,19 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "You've got what it takes to go far.\n"
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech:
+	.string "Yo! If it isn't the new CHAMPION!\n"
+	.string "I've been waiting to see you again!\p"
+	.string "No matter who wins, no hard feelings!\n"
+	.string "Let's get this battle underway!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchDefeat:
+	.string "Well, well, well!\n"
+	.string "So I lose again!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech:
+	.string "Heh… I knew you were the strongest…\p"
+	.string "Well, hurry up and get out of here!\n"
+	.string "Everybody else is still waiting!$"
 

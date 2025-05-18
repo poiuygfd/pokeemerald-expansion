@@ -139,46 +139,21 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	end
 
 FallarborTown_MoveRelearnersHouse_Text_AvitorchGift:
-	.string "Hey there!\p"
-	.string "I'm a totally not cringey self-insert\n"
-	.string "for the creator of this hack!\p"
-	.string "Before you ask, if you're just here to\n"
-	.string "try and relearn some moves, you can do\l"
-	.string "that on the go by going to the status\l"
-	.string "screen, scrolling on over to moves,\l"
-	.string "and pressing the START button.\p"
-	.string "Now that we've got that out of the way,\n"
-	.string "let's get down to business.\p"
-	.string "I've got a rare and special POKéMON\n"
-	.string "that you won't find anywhere else,\l"
-	.string "made specially for this hack.\p"
-	.string "However, I'm not just going to\n"
-	.string "hand it out.\p"
-	.string "If you want this POKéMON you're gonna\n"
-	.string "have to give tell me the correct code!$"
+	.string "Oi.\p"
+	.string "Do ya got the code?$"
 
 FallarborTown_MoveRelearnersHouse_Text_CodeIncorrect:
-	.string "Bzzzt!\n"
-	.string "Sorry, that was not the correct code!\p"
-	.string "If you don't know it, try asking\n"
-	.string "around outside the game, I'm sure that\l"
-	.string "somebody will know it!$"
+	.string "Dat ain't the code.$"
 
 FallarborTown_MoveRelearnersHouse_Text_CodeCorrect:
-	.string "Ding ding ding!\n"
-	.string "And to the winner goes the spoils!\p"
-	.string "Enjoy your new POKéMON!$"
+	.string "Dat's the code, all right.\p"
+	.string "Enjoy yer bird.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ObtainedAvitorch:
 	.string "{PLAYER} received AVITORCH!$"
 
 FallarborTown_MoveRelearnersHouse_Text_OnePerPerson:
-	.string "Sorry, only one per person!\p"
-	.string "Or if you've just forgotten how to\n"
-	.string "relearn moves, you can do that\l"
-	.string "on the go by going to the status\l"
-	.string "screen, scrolling on over to moves,\l"
-	.string "and pressing the START button.$"
+	.string "One bird per person.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "I'm the MOVE TUTOR.\p"

@@ -98,6 +98,26 @@ Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
 	release
 	end
 
+Route104_PrettyPetalFlowerShop_EventScript_MulchMan::
+	lock
+	faceplayer
+	message Route104_PrettyPetalFlowerShop_Text_IAmTheMulchMan
+	waitmessage
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Mulch
+	msgbox Route104_PrettyPetalFlowerShop_Text_MulchYouLater, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Route104_PrettyPetalFlowerShop_Pokemart_Mulch:
+	.2byte ITEM_GROWTH_MULCH
+	.2byte ITEM_DAMP_MULCH
+	.2byte ITEM_STABLE_MULCH
+	.2byte ITEM_GOOEY_MULCH
+	.2byte ITEM_RICH_MULCH
+	.2byte ITEM_SURPRISE_MULCH
+	pokemartlistend
+
 Route104_PrettyPetalFlowerShop_EventScript_Bounsweet::
 	lock
 	faceplayer

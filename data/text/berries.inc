@@ -199,6 +199,15 @@ Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
 	.string "for POKéMON.\p"
 	.string "I want some candy, too.$"
 
+Route104_PrettyPetalFlowerShop_Text_IAmTheMulchMan:
+	.string "I am.\p"
+	.string "The MULCH MAN.\p"
+	.string "Berries love MULCH.\p"
+	.string "Buy some while you can.$"
+
+Route104_PrettyPetalFlowerShop_Text_MulchYouLater:
+	.string "Mulch you later.$"
+
 SootopolisCity_Text_NameIsKiriHaveOneOfThese:
 	.string "Hi, what's your name?\p"
 	.string "… … …  … … …  … … …\n"

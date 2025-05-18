@@ -85,6 +85,10 @@ Route114_EventScript_LanettesHouseSign::
 	msgbox Route114_Text_LanettesHouse, MSGBOX_SIGN
 	end
 
+Route114_EventScript_TrainerTipsRelearnMoves::
+	msgbox Route114_Text_TrainerTipsRelearnMoves, MSGBOX_SIGN
+	end
+
 Route114_EventScript_Lenny::
 	trainerbattle_single TRAINER_LENNY, Route114_Text_LennyIntro, Route114_Text_LennyDefeat
 	msgbox Route114_Text_LennyPostBattle, MSGBOX_AUTOCLOSE
@@ -205,4 +209,13 @@ Route114_Text_FossilManiacsHouseSign:
 
 Route114_Text_LanettesHouse:
 	.string "LANETTE'S HOUSE$"
+
+Route114_Text_TrainerTipsRelearnMoves:
+	.string "TRAINER TIPS\n"
+	.string "(Please read this one)\p"
+	.string "Your POKéMON can relearn any old\n"
+	.string "MOVES at any time.\p"
+	.string "Open the summary menu, scroll over\n"
+	.string "to the MOVES section and press the\l"
+	.string "START button.$"
 
