@@ -43,9 +43,9 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
+#define FLAG_DEFEATED_JIRACHI       0x20 // Jirachi Flags
+#define FLAG_CAUGHT_JIRACHI         0x21
+#define FLAG_HIDE_JIRACHI           0x22
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
@@ -521,7 +521,7 @@
 #define FLAG_DEFEATED_REGIELEKI                    0x1DE // Defeated Regieleki
 #define FLAG_DEFEATED_REGIDRAGO                    0x1DF // Defeated Regidrago
 #define FLAG_DEFEATED_REGIGIGAS                    0x1E0 // Defeated Regigigas
-#define FLAG_DEFEATED_JIRACHI                    0x1E1 // Defeated Jirachi
+#define FLAG_DEFEATED_MELOETTA                    0x1E1 // Defeated Meloetta
 #define FLAG_DEFEATED_MEWTWO                    0x1E2 // Defeated Mewtwo
 #define FLAG_DEFEATED_DIANCIE                    0x1E3 // Defeated Diancie
 
@@ -743,7 +743,7 @@
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
 #define FLAG_HIDE_REGIGIGAS                                         0x2B6 // Hide Regigigas
-#define FLAG_HIDE_JIRACHI                                           0x2B7 // Hide Jirachi
+#define FLAG_UNUSED_0x2B7                                           0x2B7
 #define FLAG_HIDE_MEWTWO                                            0x2B8 // Hide Mewtwo
 #define FLAG_HIDE_DIANCIE                                           0x2B9 // Hide Diancie
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag

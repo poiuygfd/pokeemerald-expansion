@@ -81,8 +81,8 @@ EverGrandeCity_ChampionsRoom_EventScript_RematchDefeated::
 	special DrawWholeMapView
 	msgbox EverGrandeCity_ChampionsRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
-	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
+	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_RematchWallaceExit
+	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_RematchPlayerExit
 	waitmovement 0
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	waitstate
@@ -196,6 +196,16 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerExit:
 	set_invisible
 	step_end
 
+EverGrandeCity_ChampionsRoom_Movement_RematchPlayerExit:
+	walk_up
+	walk_up
+	walk_up
+	delay_16
+	walk_up
+	delay_8
+	set_invisible
+	step_end
+
 EverGrandeCity_ChampionsRoom_Movement_RivalApproachPlayer:
 	walk_up
 	walk_up
@@ -230,6 +240,14 @@ EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Movement_WallaceExit:
+	walk_up
+	delay_8
+	set_invisible
+	step_end
+
+EverGrandeCity_ChampionsRoom_Movement_RematchWallaceExit:
+	walk_up
+	walk_up
 	walk_up
 	delay_8
 	set_invisible

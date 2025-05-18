@@ -4,9 +4,11 @@
 .set LOCALID_GRUNT_4, 13
 .set LOCALID_MAXIE, 14
 .set LOCALID_SCOTT, 16
+.set LOCALID_JIRACHI, 19
 
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MossdeepCity_OnResume
 	.byte 0
 
 MossdeepCity_OnTransition:
@@ -15,7 +17,32 @@ MossdeepCity_OnTransition:
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
+	call_if_eq VAR_WHITE_ROCK_COUNT, 14, MossdeepCity_EventScript_TryShowJirachi
 	end
+
+MossdeepCity_EventScript_HideJirachi::
+	setflag FLAG_HIDE_JIRACHI
+	return
+
+MossdeepCity_EventScript_TryShowJirachi::
+	call_if_set FLAG_CAUGHT_JIRACHI, MossdeepCity_EventScript_HideJirachi
+	call_if_unset FLAG_CAUGHT_JIRACHI, MossdeepCity_EventScript_ShowJirachi
+	return
+
+MossdeepCity_EventScript_ShowJirachi::
+	goto_if_set FLAG_DEFEATED_JIRACHI, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_JIRACHI
+	return
+
+MossdeepCity_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MossdeepCity_EventScript_TryRemoveJirachi
+	end
+
+MossdeepCity_EventScript_TryRemoveJirachi::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_JIRACHI
+	return
 
 MossdeepCity_EventScript_PokefanF::
 	lock
@@ -56,11 +83,165 @@ MossdeepCity_EventScript_Girl::
 	end
 
 MossdeepCity_EventScript_Woman::
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 14, MossdeepCity_EventScript_Woman2
 	msgbox MossdeepCity_Text_SpecialSpaceCenterRock, MSGBOX_NPC
 	end
 
+MossdeepCity_EventScript_Woman2::
+	msgbox MossdeepCity_Text_WhatTheFrick, MSGBOX_NPC
+	end
+
 MossdeepCity_EventScript_WhiteRock::
-	msgbox MossdeepCity_Text_ItsAWhiteRock, MSGBOX_SIGN
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 0, MossdeepCity_EventScript_WhiteRock1
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 1, MossdeepCity_EventScript_WhiteRock2
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 2, MossdeepCity_EventScript_WhiteRock3
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 3, MossdeepCity_EventScript_WhiteRock4
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 4, MossdeepCity_EventScript_WhiteRock5
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 5, MossdeepCity_EventScript_WhiteRock6
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 6, MossdeepCity_EventScript_WhiteRock7
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 7, MossdeepCity_EventScript_WhiteRock8
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 8, MossdeepCity_EventScript_WhiteRock9
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 9, MossdeepCity_EventScript_WhiteRock10
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 10, MossdeepCity_EventScript_WhiteRock11
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 11, MossdeepCity_EventScript_WhiteRock12
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 12, MossdeepCity_EventScript_WhiteRock13
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 13, MossdeepCity_EventScript_WhiteRock14
+	goto_if_eq VAR_WHITE_ROCK_COUNT, 14, MossdeepCity_EventScript_WhiteRock15
+	end
+
+MossdeepCity_EventScript_WhiteRock1::
+	msgbox MossdeepCity_Text_ItsAWhiteRock1, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 1
+	end
+
+MossdeepCity_EventScript_WhiteRock2::
+	msgbox MossdeepCity_Text_ItsAWhiteRock2, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 2
+	end
+
+MossdeepCity_EventScript_WhiteRock3::
+	msgbox MossdeepCity_Text_ItsAWhiteRock3, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 3
+	end
+
+MossdeepCity_EventScript_WhiteRock4::
+	msgbox MossdeepCity_Text_ItsAWhiteRock4, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 4
+	end
+
+MossdeepCity_EventScript_WhiteRock5::
+	msgbox MossdeepCity_Text_ItsAWhiteRock5, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 5
+	end
+
+MossdeepCity_EventScript_WhiteRock6::
+	msgbox MossdeepCity_Text_ItsAWhiteRock6, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 6
+	end
+
+MossdeepCity_EventScript_WhiteRock7::
+	msgbox MossdeepCity_Text_ItsAWhiteRock7, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 7
+	end
+
+MossdeepCity_EventScript_WhiteRock8::
+	msgbox MossdeepCity_Text_ItsAWhiteRock8, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 8
+	end
+
+MossdeepCity_EventScript_WhiteRock9::
+	msgbox MossdeepCity_Text_ItsAWhiteRock9, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 9
+	end
+	
+MossdeepCity_EventScript_WhiteRock10::
+	msgbox MossdeepCity_Text_ItsAWhiteRock10, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 10
+	end
+
+MossdeepCity_EventScript_WhiteRock11::
+	msgbox MossdeepCity_Text_ItsAWhiteRock11, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 11
+	end
+
+MossdeepCity_EventScript_WhiteRock12::
+	msgbox MossdeepCity_Text_ItsAWhiteRock12, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 12
+	end
+
+MossdeepCity_EventScript_WhiteRock13::
+	msgbox MossdeepCity_Text_ItsAWhiteRock13, MSGBOX_SIGN
+	setvar VAR_WHITE_ROCK_COUNT, 13
+	end
+
+MossdeepCity_EventScript_WhiteRock14::
+	lockall
+	msgbox MossdeepCity_Text_ItsAWhiteRock14, MSGBOX_DEFAULT
+	waitmessage
+	setwildbattle SPECIES_JIRACHI, 30
+	setvar VAR_WHITE_ROCK_COUNT, 14
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_EventScript_DefeatedJirachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MossdeepCity_EventScript_RanFromJirachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MossdeepCity_EventScript_RanFromJirachi
+	setflag FLAG_DEFEATED_JIRACHI
+	releaseall
+	end
+
+MossdeepCity_EventScript_Jirachi::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_JIRACHI, 30
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_EventScript_DefeatedJirachiStatic
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MossdeepCity_EventScript_RanFromJirachiStatic
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MossdeepCity_EventScript_RanFromJirachiStatic
+	setflag FLAG_CAUGHT_JIRACHI
+	release
+	end
+
+MossdeepCity_EventScript_WhiteRock15::
+	msgbox MossdeepCity_Text_ItsAWhiteRock15, MSGBOX_SIGN
+	end
+
+MossdeepCity_EventScript_DefeatedJirachiStatic::
+	setflag FLAG_DEFEATED_JIRACHI
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+MossdeepCity_EventScript_RanFromJirachiStatic::
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+MossdeepCity_EventScript_DefeatedJirachi::
+	setflag FLAG_DEFEATED_JIRACHI
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	fadescreenswapbuffers FADE_TO_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_EventScript_RanFromJirachi::
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	fadescreenswapbuffers FADE_TO_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	release
 	end
 
 MossdeepCity_EventScript_GymSign::
@@ -474,7 +655,56 @@ MossdeepCity_Text_SpecialSpaceCenterRock:
 	.string "I use a wish tag to make it happen.\n"
 	.string "That's what I do.$"
 
-MossdeepCity_Text_ItsAWhiteRock:
+MossdeepCity_Text_WhatTheFrick:
+	.string "what the frick.$"
+
+MossdeepCity_Text_ItsAWhiteRock1:
+	.string "It's a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock2:
+	.string "It's still a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock3:
+	.string "It's a rock that appears to be white.$"
+
+MossdeepCity_Text_ItsAWhiteRock4:
+	.string "Is it really just a white rock…?$"
+
+MossdeepCity_Text_ItsAWhiteRock5:
+	.string "Yeah, I'm pretty sure it's literally\n"
+	.string "just a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock6:
+	.string "But what if it's more than just a\n"
+	.string "measly white rock?$"
+
+MossdeepCity_Text_ItsAWhiteRock7:
+	.string "What if it is actually a JIRACHI?$"
+
+MossdeepCity_Text_ItsAWhiteRock8:
+	.string "Nah, that would be stupid.\n"
+	.string "It's just a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock9:
+	.string "But could you imagine if a random\n"
+	.string "mythical was just sitting here?$"
+
+MossdeepCity_Text_ItsAWhiteRock10:
+	.string "A shame it's just a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock11:
+	.string "Hold on, did something move just now?$"
+
+MossdeepCity_Text_ItsAWhiteRock12:
+	.string "Sorry, it was just my imagination.$"
+
+MossdeepCity_Text_ItsAWhiteRock13:
+	.string "After all, it's just a white rock.$"
+
+MossdeepCity_Text_ItsAWhiteRock14:
+	.string "Huh?$"
+
+MossdeepCity_Text_ItsAWhiteRock15:
 	.string "It's a white rock.$"
 
 MossdeepCity_Text_GymSign:
