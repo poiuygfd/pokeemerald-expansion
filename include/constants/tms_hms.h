@@ -71,7 +71,12 @@
     F(ENERGY_BALL) \
     F(DUAL_WINGBEAT) \
     F(WORK_UP) \
-    F(TERRAIN_PULSE)
+    F(TERRAIN_PULSE) \
+    F(TRAILBLAZE) \
+    F(POWER_UP_PUNCH) \
+    F(CHILLING_WATER) \
+    F(FLING) \
+    F(SUPERCELL_SLAM)
 
 
 #define FOREACH_HM(F) \
