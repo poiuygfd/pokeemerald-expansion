@@ -374,6 +374,10 @@ Route109_EventScript_TrainerTipsSign::
 	msgbox Route109_Text_TrainerTipsSign, MSGBOX_SIGN
 	end
 
+Route109_EventScript_InnerTubes::
+	msgbox Route109_Text_PileOfInnerTubes, MSGBOX_SIGN
+	end
+
 Route109_EventScript_David::
 	trainerbattle_single TRAINER_DAVID, Route109_Text_DavidIntro, Route109_Text_DavidDefeated
 	msgbox Route109_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
@@ -562,3 +566,6 @@ Route109_Text_TrainerTipsSign:
 	.string "always have identical stats.\p"
 	.string "POKéMON raised by TRAINERS are said\n"
 	.string "to grow stronger than wild POKéMON.$"
+
+Route109_Text_PileOfInnerTubes:
+	.string "It's a pile of inflatable inner tubes.$"

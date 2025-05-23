@@ -2389,7 +2389,17 @@ void ShowScrollableMultichoice(void)
     case SCROLL_MULTI_BF_MOVE_TUTOR_1:
     case SCROLL_MULTI_BF_MOVE_TUTOR_2:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11;
+        task->tNumItems = 19;
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_BF_MOVE_TUTOR_3:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 15;
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2532,30 +2542,64 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_1] =
     {
-        COMPOUND_STRING("SOFTBOILED{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("DEFENSE CURL{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("DREAM EATER{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("SWIFT{CLEAR_TO 0x4E}16BP"),
         COMPOUND_STRING("SEISMIC TOSS{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("DREAM EATER{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("WISH{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("COUNTER{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("STEALTH ROCK{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("GYRO BALL{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("MEGA PUNCH{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("MEGA KICK{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("BODY SLAM{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("ROCK SLIDE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("COUNTER{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("THUNDER WAVE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("SWORDS DANCE{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("MEGA KICK{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("ICE PUNCH{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("THUNDER PUNCH{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("FIRE PUNCH{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("ICY WIND{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("ROOST{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("POLLEN PUFF{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("NASTY PLOT{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("WILL-O-WISP{CLEAR_TO 0x4E}32BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_2] =
     {
-        COMPOUND_STRING("DEFENSE CURL{CLEAR_TO 0x4E}16BP"),
-        COMPOUND_STRING("SNORE{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("MUD-SLAP{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("SWIFT{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("ICY WIND{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("ENDURE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("PSYCH UP{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("ICE PUNCH{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("THUNDERPUNCH{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("FIRE PUNCH{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("SNORE{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("MUD-SLAP{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("ENDURE{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("ICE FANG{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("THUNDER FANG{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("FIRE FANG{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("SIGNAL BEAM{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("PSYCH UP{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("AURORA VEIL{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("BULLDOZE{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("SOFTBOILED{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("BODY SLAM{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("ROCK SLIDE{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("THUNDER WAVE{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("SWORDS DANCE{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("LIQUIDATION{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("METEOR BEAM{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("TRIPLE AXEL{CLEAR_TO 0x4E}32BP"),
+        gText_Exit
+    },
+    [SCROLL_MULTI_BF_MOVE_TUTOR_3] =
+    {
+        COMPOUND_STRING("SPLISHY SPLASH{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("FLOATY FALL{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("BOUNCY BUBBLE{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("BUZZY BUZZ{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("SIZZLY SLIDE{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("GLITZY GLOW{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("BADDY BAD{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("ZIPPY ZAP{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("VOLT TACKLE{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("PIKA KAPOW{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("SAPPY SEED{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("FREEZY FROST{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("SPARKLY SWIRL{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("VEEVEE VOLLEY{CLEAR_TO 0x4E}32BP"),
         gText_Exit
     },
     [SCROLL_MULTI_SS_TIDAL_DESTINATION] =
@@ -3101,39 +3145,76 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
 {
     static const u8 *const sBattleFrontier_TutorMoveDescriptions1[] =
     {
-        BattleFrontier_Lounge7_Text_SoftboiledDesc,
-        BattleFrontier_Lounge7_Text_SeismicTossDesc,
+        BattleFrontier_Lounge7_Text_DefenseCurlDesc,
         BattleFrontier_Lounge7_Text_DreamEaterDesc,
+        BattleFrontier_Lounge7_Text_SwiftDesc,
+        BattleFrontier_Lounge7_Text_SeismicTossDesc,
+        BattleFrontier_Lounge7_Text_WishDesc,
+        BattleFrontier_Lounge7_Text_CounterDesc,
+        BattleFrontier_Lounge7_Text_StealthRockDesc,
+        BattleFrontier_Lounge7_Text_GyroBallDesc,
         BattleFrontier_Lounge7_Text_MegaPunchDesc,
         BattleFrontier_Lounge7_Text_MegaKickDesc,
-        BattleFrontier_Lounge7_Text_BodySlamDesc,
-        BattleFrontier_Lounge7_Text_RockSlideDesc,
-        BattleFrontier_Lounge7_Text_CounterDesc,
-        BattleFrontier_Lounge7_Text_ThunderWaveDesc,
-        BattleFrontier_Lounge7_Text_SwordsDanceDesc,
+        BattleFrontier_Lounge7_Text_IcePunchDesc,
+        BattleFrontier_Lounge7_Text_ThunderPunchDesc,
+        BattleFrontier_Lounge7_Text_FirePunchDesc,
+        BattleFrontier_Lounge7_Text_IcyWindDesc,
+        BattleFrontier_Lounge7_Text_RoostDesc,
+        BattleFrontier_Lounge7_Text_PollenPuffDesc,
+        BattleFrontier_Lounge7_Text_NastyPlotDesc,
+        BattleFrontier_Lounge7_Text_WillOWispDesc,
         gText_Exit,
     };
 
     static const u8 *const sBattleFrontier_TutorMoveDescriptions2[] =
     {
-        BattleFrontier_Lounge7_Text_DefenseCurlDesc,
         BattleFrontier_Lounge7_Text_SnoreDesc,
         BattleFrontier_Lounge7_Text_MudSlapDesc,
-        BattleFrontier_Lounge7_Text_SwiftDesc,
-        BattleFrontier_Lounge7_Text_IcyWindDesc,
         BattleFrontier_Lounge7_Text_EndureDesc,
+        BattleFrontier_Lounge7_Text_IceFangDesc,
+        BattleFrontier_Lounge7_Text_ThunderFangDesc,
+        BattleFrontier_Lounge7_Text_FireFangDesc,
+        BattleFrontier_Lounge7_Text_SignalBeamDesc,
         BattleFrontier_Lounge7_Text_PsychUpDesc,
-        BattleFrontier_Lounge7_Text_IcePunchDesc,
-        BattleFrontier_Lounge7_Text_ThunderPunchDesc,
-        BattleFrontier_Lounge7_Text_FirePunchDesc,
+        BattleFrontier_Lounge7_Text_AuroraVeilDesc,
+        BattleFrontier_Lounge7_Text_BulldozeDesc,
+        BattleFrontier_Lounge7_Text_SoftboiledDesc,
+        BattleFrontier_Lounge7_Text_BodySlamDesc,
+        BattleFrontier_Lounge7_Text_RockSlideDesc,
+        BattleFrontier_Lounge7_Text_ThunderWaveDesc,
+        BattleFrontier_Lounge7_Text_SwordsDanceDesc,
+        BattleFrontier_Lounge7_Text_LiquidationDesc,
+        BattleFrontier_Lounge7_Text_MeteorBeamDesc,
+        BattleFrontier_Lounge7_Text_TripleAxelDesc,
         gText_Exit,
     };
 
-    if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2)
+    static const u8 *const sBattleFrontier_TutorMoveDescriptions3[] =
+    {
+        BattleFrontier_Lounge7_Text_SplishySplashDesc,
+        BattleFrontier_Lounge7_Text_FloatyFallDesc,
+        BattleFrontier_Lounge7_Text_BouncyBubbleDesc,
+        BattleFrontier_Lounge7_Text_BuzzyBuzzDesc,
+        BattleFrontier_Lounge7_Text_DescSizzlySlide,
+        BattleFrontier_Lounge7_Text_GlitzyGlowDesc,
+        BattleFrontier_Lounge7_Text_BaddyBadDesc,
+        BattleFrontier_Lounge7_Text_ZippyZapDesc,
+        BattleFrontier_Lounge7_Text_VoltTackleDesc,
+        BattleFrontier_Lounge7_Text_PikaKapowDesc,
+        BattleFrontier_Lounge7_Text_SappySeedDesc,
+        BattleFrontier_Lounge7_Text_FreezyFrostDesc,
+        BattleFrontier_Lounge7_Text_SparklySwirlDesc,
+        BattleFrontier_Lounge7_Text_VeeveeVolleyDesc,
+        gText_Exit,
+    };
+
+    if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_3)
     {
         FillWindowPixelRect(sTutorMoveAndElevatorWindowId, PIXEL_FILL(1), 0, 0, 96, 48);
         if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_2)
             AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions2[selection], 0, 1, 0, NULL);
+        else if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_3)
+            AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions3[selection], 0, 1, 0, NULL);
         else
             AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions1[selection], 0, 1, 0, NULL);
     }
