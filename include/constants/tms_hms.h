@@ -11,7 +11,7 @@
     F(SNOWSCAPE) \
     F(BULK_UP) \
     F(BULLET_SEED) \
-    F(HIDDEN_POWER) \
+    F(TRAILBLAZE) \
     F(SUNNY_DAY) \
     F(TAUNT) \
     F(ICE_BEAM) \
@@ -72,9 +72,9 @@
     F(DUAL_WINGBEAT) \
     F(WORK_UP) \
     F(TERRAIN_PULSE) \
-    F(TRAILBLAZE) \
     F(POWER_UP_PUNCH) \
     F(CHILLING_WATER) \
+    F(ACROBATICS) \
     F(FLING) \
     F(SUPERCELL_SLAM)
 

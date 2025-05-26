@@ -352,6 +352,23 @@ Route109_EventScript_Woman::
 	msgbox Route109_Text_LittleKidsDartAround, MSGBOX_NPC
 	end
 
+Route109_EventScript_ChillingWaterGiver::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_CHILLING_WATER, Route109_EventScript_ExplainChillingWater
+	msgbox Route109_Text_WaterIsWarm, MSGBOX_DEFAULT
+	giveitem ITEM_TM72
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CHILLING_WATER
+	msgbox Route109_Text_ChillingWaterExplanation, MSGBOX_DEFAULT
+	release
+	end
+
+Route109_EventScript_ExplainChillingWater::
+	msgbox Route109_Text_ChillingWaterExplanation, MSGBOX_DEFAULT
+	release
+	end
+
 Route109_EventScript_OldMan::
 	msgbox Route109_Text_ZigzagoonPicksUpLitter, MSGBOX_NPC
 	end
@@ -542,6 +559,16 @@ Route109_Text_WereGoingToMakeBigCastle:
 	.string "And then we're going to be a king and\n"
 	.string "queen.\p"
 	.string "We'll let you be a servant.$"
+
+Route109_Text_WaterIsWarm:
+	.string "The water round here is nice and warm!\n"
+	.string "Feels much better than cold water.\p"
+	.string "Here, you can have this.$"
+
+Route109_Text_ChillingWaterExplanation:
+	.string "CHILLING WATER lets you blast the\n"
+	.string "opponent in the face with cold water,\l"
+	.string "lowering their ATTACK.$"
 
 Route109_Text_ZigzagoonPicksUpLitter:
 	.string "The water around these parts is clean.\p"

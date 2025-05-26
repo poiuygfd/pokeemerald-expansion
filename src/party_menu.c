@@ -5630,7 +5630,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     if (!(B_RARE_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
     {
-        if (gSpecialVar_ItemId == ITEM_CANDY_BAG && sInitialLevel >= VAR_LEVEL_CAP)
+        if (gSpecialVar_ItemId == ITEM_CANDY_BAG && sInitialLevel >= VarGet(VAR_LEVEL_CAP))
         {
             cannotUseEffect = TRUE;
         }

@@ -899,8 +899,7 @@ BattleFrontier_BattleTowerLobby_EventScript_ReadRulesBoard::
 	case 0, BattleFrontier_BattleTowerLobby_EventScript_RulesTower
 	case 1, BattleFrontier_BattleTowerLobby_EventScript_RulesMons
 	case 2, BattleFrontier_BattleTowerLobby_EventScript_RulesSalon
-	case 3, BattleFrontier_BattleTowerLobby_EventScript_RulesMultiLink
-	case 4, BattleFrontier_BattleTowerLobby_EventScript_ExitRules
+	case 3, BattleFrontier_BattleTowerLobby_EventScript_ExitRules
 	case MULTI_B_PRESSED, BattleFrontier_BattleTowerLobby_EventScript_ExitRules
 	end
 
@@ -1365,11 +1364,8 @@ BattleFrontier_BattleTowerLobby_Text_ReadWhichHeading:
 
 BattleFrontier_BattleTowerLobby_Text_ExplainTowerRules:
 	.string "The BATTLE TOWER is a facility where\n"
-	.string "four types of battles are waged--\l"
-	.string "SINGLE BATTLE, DOUBLE BATTLE, MULTI\l"
-	.string "BATTLE, and LINK MULTI BATTLE.\p"
-	.string "For each of these types, there are\n"
-	.string "separate BATTLE ROOMS.\p"
+	.string "two types of battles are waged--\l"
+	.string "DOUBLE BATTLE and MULTI BATTLE.\p"
 	.string "Please speak with a guide offering\n"
 	.string "the type of battle you wish to enter.$"
 
@@ -1377,8 +1373,6 @@ BattleFrontier_BattleTowerLobby_Text_ExplainMonRules:
 	.string "Depending on the BATTLE ROOM you are\n"
 	.string "entering, you will be required to take\l"
 	.string "a certain number of POKéMON.\p"
-	.string "The SINGLE BATTLE mode requires\n"
-	.string "three POKéMON.\p"
 	.string "The DOUBLE BATTLE mode requires four,\n"
 	.string "and the MULTI modes both require two.$"
 

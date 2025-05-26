@@ -10579,19 +10579,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_BULLET_SEED,
     },
 
-    [ITEM_TM_HIDDEN_POWER] =
+    [ITEM_TM_TRAILBLAZE] =
     {
         .name = _("TM10"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The attack power\n"
-            "varies among\n"
-            "different Pokémon."),
+            "Grassy attack that\n"
+            "raises the Speed\n"
+            "of the user."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_HIDDEN_POWER,
+        .secondaryId = MOVE_TRAILBLAZE,
     },
 
     [ITEM_TM_SUNNY_DAY] =
@@ -11509,21 +11509,6 @@ const struct Item gItemsInfo[] =
         .name = _("TM71"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Grassy attack that\n"
-            "raises the Speed\n"
-            "of the user."),
-        .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_TRAILBLAZE,
-    },
-
-    [ITEM_TM72] =
-    {
-        .name = _("TM72"),
-        .price = 3000,
-        .description = COMPOUND_STRING(
             "Punching atttack\n"
             "that raises Attack\n"
             "of the user."),
@@ -11534,9 +11519,9 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_POWER_UP_PUNCH,
     },
 
-    [ITEM_TM73] =
+    [ITEM_TM72] =
     {
-        .name = _("TM73"),
+        .name = _("TM72"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Cold water that\n"
@@ -11547,6 +11532,21 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = MOVE_CHILLING_WATER,
+    },
+
+    [ITEM_TM73] =
+    {
+        .name = _("TM73"),
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "Nimble attack\n"
+            "that is stronger\n"
+            "with no held item."),
+        .importance = I_REUSABLE_TMS,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .secondaryId = MOVE_ACROBATICS,
     },
 
     [ITEM_TM74] =

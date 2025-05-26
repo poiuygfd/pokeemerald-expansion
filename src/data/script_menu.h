@@ -651,7 +651,6 @@ static const struct MenuAction MultichoiceList_BattleTowerRules[] =
     {COMPOUND_STRING("TOWER INFO")},
     {COMPOUND_STRING("BATTLE {PKMN}")},
     {COMPOUND_STRING("BATTLE SALON")},
-    {COMPOUND_STRING("MULTI-LINK")},
     {gText_Exit},
 };
 

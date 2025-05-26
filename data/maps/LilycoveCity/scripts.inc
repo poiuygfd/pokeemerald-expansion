@@ -412,6 +412,16 @@ LilycoveCity_EventScript_DontKnowAboutBerryBlender::
 	msgbox LilycoveCity_Text_ExplainBerryBlender, MSGBOX_DEFAULT
 	return
 
+LilycoveCity_EventScript_Lotad::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_LOTAD, CRY_MODE_NORMAL
+	msgbox LilycoveCity_Text_Lotad, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 LilycoveCity_Text_MayShoppingLetsBattle:
 	.string "MAY: Oh, hey?\n"
 	.string "{PLAYER}{KUN}, are you shopping, too?\p"
@@ -758,4 +768,7 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "So we were delighted to see a rare\n"
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
+
+LilycoveCity_Text_Lotad:
+	.string "LOTAD: Lolo!$"
 

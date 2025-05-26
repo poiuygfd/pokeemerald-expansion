@@ -78,6 +78,23 @@ Route110_EventScript_AquaGrunt4::
 	release
 	end
 
+Route110_EventScript_FlingGiver::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_FLING, Route110_EventScript_ExplainFling
+	msgbox Route110_Text_FlingingStones, MSGBOX_DEFAULT
+	giveitem ITEM_TM74
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_FLING
+	msgbox Route110_Text_FlingExplanation, MSGBOX_DEFAULT
+	release
+	end
+
+Route110_EventScript_ExplainFling::
+	msgbox Route110_Text_FlingExplanation, MSGBOX_DEFAULT
+	release
+	end
+
 Route110_EventScript_Boy1::
 	msgbox Route110_Text_RideBikeAtFullSpeed, MSGBOX_NPC
 	end
@@ -768,6 +785,17 @@ Route110_Text_MyFirstJobInAqua:
 Route110_Text_AquaActionsBringSmiles:
 	.string "TEAM AQUA's actions should bring\n"
 	.string "smiles to people's faces!$"
+
+Route110_Text_FlingingStones:
+	.string "I love flinging stones across the\n"
+	.string "water and seeing how far they go.\p"
+	.string "Here, take this, so you can try\n"
+	.string "to FLING things too!$"
+
+Route110_Text_FlingExplanation:
+	.string "FLING lets your POKéMON throw their\n"
+	.string "held item as an attack.\p"
+	.string "Use it wisely, you only get one throw!$"
 
 Route110_Text_MayLetsBattle:
 	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"

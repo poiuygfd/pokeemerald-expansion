@@ -46,38 +46,38 @@
 #define FLAG_DEFEATED_JIRACHI       0x20 // Jirachi Flags
 #define FLAG_CAUGHT_JIRACHI         0x21
 #define FLAG_HIDE_JIRACHI           0x22
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_DEFEATED_ZERAORA       0x23 // Zeraora Flags
+#define FLAG_CAUGHT_ZERAORA         0x24
+#define FLAG_HIDE_ZERAORA           0x25
+#define FLAG_DEFEATED_HEATRAN       0x26 // Heatran Flags
+#define FLAG_CAUGHT_HEATRAN         0x27
+#define FLAG_HIDE_HEATRAN           0x28
+#define FLAG_DEFEATED_OGERPON       0x29 // Ogerpon Flags
+#define FLAG_CAUGHT_OGERPON         0x2A
+#define FLAG_HIDE_OGERPON           0x2B
+#define FLAG_DEFEATED_DIANCIE       0x2C // Diancie Flags
+#define FLAG_CAUGHT_DIANCIE         0x2D
+#define FLAG_HIDE_DIANCIE           0x2E
+#define FLAG_DEFEATED_MELOETTA      0x2F // Meloetta Flags
+#define FLAG_CAUGHT_MELOETTA        0x30
+#define FLAG_HIDE_MELOETTA          0x31
+#define FLAG_DEFEATED_ROARING_MOON  0x32 // Roaring Moon Flags
+#define FLAG_CAUGHT_ROARING_MOON    0x33
+#define FLAG_HIDE_ROARING_MOON      0x34
+#define FLAG_DEFEATED_IRON_VALIANT  0x35 // Iron Valiant Flags
+#define FLAG_CAUGHT_IRON_VALIANT    0x36
+#define FLAG_HIDE_IRON_VALIANT      0x37
+#define FLAG_DEFEATED_REGIGIGAS     0x38 // Regigigas Flags
+#define FLAG_CAUGHT_REGIGIGAS       0x39
+#define FLAG_HIDE_REGIGIGAS         0x3A
+#define FLAG_DEFEATED_REGITUBE      0x3B // Regitube Flags
+#define FLAG_CAUGHT_REGITUBE        0x3C
+#define FLAG_HIDE_REGITUBE          0x3D
+#define FLAG_DEFEATED_MEWTWO        0x3E // Mewtwo Flags
+#define FLAG_CAUGHT_MEWTWO          0x3F
+#define FLAG_HIDE_MEWTWO            0x40
+#define FLAG_RECEIVED_POIPOLE       0x41 // Poipole Flag
+#define FLAG_RECEIVED_GENESECT      0x42 // Genesect Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
@@ -517,13 +517,13 @@
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
+#define FLAG_DEFEATED_REGIELEKI              0x1DE
+#define FLAG_DEFEATED_REGIDRAGO              0x1DF
 
-#define FLAG_DEFEATED_REGIELEKI                    0x1DE // Defeated Regieleki
-#define FLAG_DEFEATED_REGIDRAGO                    0x1DF // Defeated Regidrago
-#define FLAG_DEFEATED_REGIGIGAS                    0x1E0 // Defeated Regigigas
-#define FLAG_DEFEATED_MELOETTA                    0x1E1 // Defeated Meloetta
-#define FLAG_DEFEATED_MEWTWO                    0x1E2 // Defeated Mewtwo
-#define FLAG_DEFEATED_DIANCIE                    0x1E3 // Defeated Diancie
+#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
+#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
+#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
+#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -742,10 +742,12 @@
 #define FLAG_HIDE_COSPLAY_PIKACHU                                   0x2B3 // Hide Cosplay Pikachu
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
-#define FLAG_HIDE_REGIGIGAS                                         0x2B6 // Hide Regigigas
-#define FLAG_UNUSED_0x2B7                                           0x2B7
-#define FLAG_HIDE_MEWTWO                                            0x2B8 // Hide Mewtwo
-#define FLAG_HIDE_DIANCIE                                           0x2B9 // Hide Diancie
+
+#define FLAG_UNUSED_0x2B6                                           0x2B6 // Unused Flag
+#define FLAG_UNUSED_0x2B7                                           0x2B7 // Unused Flag
+#define FLAG_UNUSED_0x2B8                                           0x2B8 // Unused Flag
+#define FLAG_UNUSED_0x2B9                                           0x2B9 // Unused Flag
+
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1257,14 +1259,14 @@
 #define FLAG_ITEM_DESERT_UNDERPASS_BLACK_AUGURITE                   0x4B1 // Desert Underpass Black Augurite
 #define FLAG_ITEM_ALTERING_CAVE_PEAT_BLOCK                          0x4B2 // Altering Cave Peat Block
 #define FLAG_RECEIVED_LINKING_CORD                                  0x4B3 // Linking Cord Gift
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
+#define FLAG_RECEIVED_FLING                                         0x4B4 // Fling TM Gift
+#define FLAG_RECEIVED_CHILLING_WATER                                0x4B5 // Chilling Water TM Gift
+#define FLAG_RECEIVED_ACROBATICS                                    0x4B6 // Acrobatics TM Gift
+#define FLAG_RECEIVED_FLOAT_STONE                                   0x4B7 // Float Stone Gift Flags
+#define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B8
+#define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4B9
+#define FLAG_ITEM_TM71                                           0x4BA // Unused Flag
+#define FLAG_ITEM_TM75                                           0x4BB // Unused Flag
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
 #define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
