@@ -1705,7 +1705,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_SECLUDED_COVE",
+      "id": "MAPSEC_SECLUDED_COVE",
       "name": "SECLUDED COVE",
       "x": 8,
       "y": 8,
@@ -1713,7 +1713,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_NEGLECTED_SHRINE",
+      "id": "MAPSEC_NEGLECTED_SHRINE",
       "name": "NEGLECTED SHRINE",
       "x": 1,
       "y": 1,

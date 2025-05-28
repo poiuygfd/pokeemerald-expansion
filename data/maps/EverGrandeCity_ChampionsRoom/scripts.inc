@@ -77,7 +77,7 @@ EverGrandeCity_ChampionsRoom_EventScript_RematchDefeated::
 	special DrawWholeMapView
 	msgbox EverGrandeCity_ChampionsRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_RematchWallaceExit
+	applymovement LOCALID_CHAMPIONS_ROOM_WALLACE, EverGrandeCity_ChampionsRoom_Movement_RematchWallaceExit
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_RematchPlayerExit
 	waitmovement 0
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
