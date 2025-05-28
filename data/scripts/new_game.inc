@@ -273,6 +273,10 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_JIRACHI
+	setflag FLAG_HIDE_HEATRAN
+	setflag FLAG_HIDE_ZERAORA
+	setflag FLAG_HIDE_OGERPON
+	setflag FLAG_HIDE_OGERPON_MASKS
 	setflag FLAG_SYS_B_DASH
 	call EventScript_ResetAllBerries
 	end

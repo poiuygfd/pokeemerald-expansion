@@ -22,6 +22,7 @@ NewMauville_Inside_OnTransition:
 	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb1
 	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb2
 	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb3
+	call_if_set FLAG_IS_CHAMPION, NewMauville_Inside_EventScript_TryShowZeraora
 	end
 
 NewMauville_Inside_EventScript_ShowVoltorb1::
@@ -34,6 +35,20 @@ NewMauville_Inside_EventScript_ShowVoltorb2::
 
 NewMauville_Inside_EventScript_ShowVoltorb3::
 	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3
+	return
+
+NewMauville_Inside_EventScript_TryShowZeraora::
+	call_if_set FLAG_CAUGHT_ZERAORA, NewMauville_Inside_EventScript_HideZeraora
+	call_if_unset FLAG_CAUGHT_ZERAORA, NewMauville_Inside_EventScript_ShowZeraora
+	return
+
+NewMauville_Inside_EventScript_ShowZeraora::
+	goto_if_set FLAG_DEFEATED_ZERAORA, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_ZERAORA
+	return
+
+NewMauville_Inside_EventScript_HideZeraora::
+	setflag FLAG_HIDE_ZERAORA
 	return
 
 NewMauville_Inside_OnLoad:
@@ -243,6 +258,37 @@ NewMauville_Inside_EventScript_Voltorb3::
 NewMauville_Inside_EventScript_DefeatedVoltorb3::
 	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
 	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+NewMauville_Inside_EventScript_Zeraora::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ZERAORA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ZERAORA, 50
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedZeraora
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_RanFromZeraora
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_RanFromZeraora
+	setflag FLAG_CAUGHT_ZERAORA
+	release
+	end
+
+NewMauville_Inside_EventScript_DefeatedZeraora::
+	setflag FLAG_DEFEATED_ZERAORA
+	setvar VAR_0x8004, SPECIES_ZERAORA
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+NewMauville_Inside_EventScript_RanFromZeraora::
+	setvar VAR_0x8004, SPECIES_ZERAORA
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 NewMauville_Inside_Text_GeneratorRadiatingHeat:

@@ -742,8 +742,8 @@
 #define FLAG_HIDE_COSPLAY_PIKACHU                                   0x2B3 // Hide Cosplay Pikachu
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
+#define FLAG_HIDE_OGERPON_MASKS                                     0x2B6 // Hide Ogerpon's Masks
 
-#define FLAG_UNUSED_0x2B6                                           0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7                                           0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8                                           0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9                                           0x2B9 // Unused Flag
@@ -1267,9 +1267,9 @@
 #define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4B9
 #define FLAG_ITEM_TM71                                           0x4BA // Unused Flag
 #define FLAG_ITEM_TM75                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
+#define FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK                        0x4BC // Route 120 Hearthflame Mask
+#define FLAG_ITEM_ROUTE_120_WELLSPRING_MASK                         0x4BD // Route 120 Wellspring Mask
+#define FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK                        0x4BE // Route 120 Cornerstone Mask
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
 #define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
