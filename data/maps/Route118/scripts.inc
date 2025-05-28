@@ -1,5 +1,4 @@
-.set LOCALID_STEVEN, 19
-.set LOCALID_LATIOS, 22
+.set LOCALID_ROUTE118_LATIOS, 22
 
 Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
@@ -66,42 +65,44 @@ Route118_EventScript_RouteSign119::
 Route118_EventScript_StevenTrigger0::
 	lockall
 	setvar VAR_0x8008, 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenApproachLedge0
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge0
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
 	end
 
 Route118_EventScript_StevenTrigger1::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	setvar VAR_0x8008, 1
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
 	end
 
 Route118_EventScript_StevenTrigger2::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	setvar VAR_0x8008, 2
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenApproachLedge2
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge2
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
 	end
 
 Route118_EventScript_StevenTrigger::
 	playse SE_LEDGE
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenJumpLedge
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenJumpLedge
 	waitmovement 0
 	delay 30
 	msgbox Route118_Text_StevenQuestions, MSGBOX_DEFAULT
 	closemessage
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
-	applymovement LOCALID_LATIOS, Route118_Movement_LatiosEnter
+	applymovement LOCALID_ROUTE118_LATIOS, Route118_Movement_LatiosEnter
 	waitmovement 0
 	delay 30
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchLatios
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenWatchLatios
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchLatios
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenWatchLatios
 	waitmovement 0
 	msgbox Route118_Text_LatiosAppear, MSGBOX_DEFAULT
 	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 17, 16

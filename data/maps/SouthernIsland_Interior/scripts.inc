@@ -1,4 +1,3 @@
-.set LOCALID_LATI, 2
 .set LOCALID_COURTNEY, 4
 .set LOCALID_ISLAND_GRUNT, 3
 .set LOCALID_STEVEN, 5
@@ -16,7 +15,7 @@ SouthernIsland_Interior_OnResume:
 SouthernIsland_Interior_EventScript_TryRemoveLati::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject LOCALID_LATI
+	removeobject LOCALID_SOUTHERN_ISLAND_LATI
 	return
 
 SouthernIsland_Interior_OnTransition:
@@ -216,21 +215,21 @@ SouthernIsland_Interior_EventScript_Lati::
 	setflag FLAG_ENCOUNTERED_LATIAS_OR_LATIOS
 	setflag FLAG_TEMP_2
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, SouthernIsland_Interior_Movement_CameraPanUp
+	applymovement LOCALID_CAMERA, SouthernIsland_Interior_Movement_CameraPanUp
 	waitmovement 0
 	delay 50
 	waitse
 	playmoncry VAR_TEMP_4, CRY_MODE_NORMAL
 	delay 30
 	waitmoncry
-	addobject LOCALID_LATI
+	addobject LOCALID_SOUTHERN_ISLAND_LATI
 	delay 30
-	applymovement OBJ_EVENT_ID_CAMERA, SouthernIsland_Interior_Movement_CameraPanDown
-	applymovement LOCALID_LATI, SouthernIsland_Interior_Movement_LatiApproach
+	applymovement LOCALID_CAMERA, SouthernIsland_Interior_Movement_CameraPanDown
+	applymovement LOCALID_SOUTHERN_ISLAND_LATI, SouthernIsland_Interior_Movement_LatiApproach
 	waitmovement 0
 	delay 50
 	special RemoveCameraObject
-	setvar VAR_LAST_TALKED, LOCALID_LATI
+	setvar VAR_LAST_TALKED, LOCALID_SOUTHERN_ISLAND_LATI
 	call_if_eq VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetLatiosBattleVars
 	call_if_ne VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetLatiasBattleVars
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
