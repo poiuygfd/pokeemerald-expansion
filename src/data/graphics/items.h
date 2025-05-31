@@ -1705,12 +1705,6 @@ const u16 gItemIconPalette_KeeBerry[] = INCBIN_U16("graphics/items/icon_palettes
 const u32 gItemIcon_MarangaBerry[] = INCBIN_U32("graphics/items/icons/maranga_berry.4bpp.lz");
 const u16 gItemIconPalette_MarangaBerry[] = INCBIN_U16("graphics/items/icon_palettes/maranga_berry.gbapal");
 
-//const u32 gItemIcon_StrawbBerry[] = INCBIN_U32("graphics/items/icons/strawb_berry.4bpp.lz");
-//const u32 gItemIconPalette_StrawbBerry[] = INCBIN_U32("graphics/items/icon_palettes/strawb_berry.gbapal.lz");
-
-//const u32 gItemIcon_PeapeeBerry[] = INCBIN_U32("graphics/items/icons/peapee_berry.4bpp.lz");
-//const u32 gItemIconPalette_PeapeeBerry[] = INCBIN_U32("graphics/items/icon_palettes/peapee_berry.gbapal.lz");
-
 // TMs/HMs
 
 const u32 gItemIcon_TM[] = INCBIN_U32("graphics/items/icons/tm.4bpp.lz");

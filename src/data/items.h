@@ -10422,42 +10422,6 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_MarangaBerry,
     },
 
-    [ITEM_STRAWB_BERRY] =
-    {
-        .name = _("Strawb Berry"),
-        .pluralName = _("Strawb Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
-        .holdEffect = HOLD_EFFECT_STRAWB_BERRY,
-        .description = COMPOUND_STRING(
-            "A hold item that\n"
-            "makes user spit\n"
-            "seeds at low HP."),
-        .pocket = POCKET_BERRIES,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 10,
-        .iconPic = gItemIcon_RazzBerry,
-        .iconPalette = gItemIconPalette_RazzBerry,
-    },
-
-    [ITEM_PEAPEE_BERRY] =
-    {
-        .name = _("Peapee Berry"),
-        .pluralName = _("Peapee Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
-        .holdEffect = HOLD_EFFECT_PEAPEE_BERRY,
-        .description = COMPOUND_STRING(
-            "A hold item that\n"
-            "does something to\n"
-            "user at low HP."),
-        .pocket = POCKET_BERRIES,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 10,
-        .iconPic = gItemIcon_MicleBerry,
-        .iconPalette = gItemIconPalette_MicleBerry,
-    },
-
     [ITEM_ENIGMA_BERRY_E_READER] =
     {
         .name = _("Enigma Berry"),

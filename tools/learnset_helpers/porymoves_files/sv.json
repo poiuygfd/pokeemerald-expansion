@@ -89146,7 +89146,7 @@
     "EggMoves": [],
     "TutorMoves": []
   },
-  "MISSINGNO": {
+  "MISSING_NO": {
     "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [
@@ -89239,8 +89239,6 @@
     "TMMoves": [
       "MOVE_CALM_MIND",
       "MOVE_ROAR",
-      "MOVE_TOXIC",
-      "MOVE_HIDDEN_POWER",
       "MOVE_SUNNY_DAY",
       "MOVE_TAUNT",
       "MOVE_HYPER_BEAM",
@@ -89292,7 +89290,6 @@
     "PreEvoMoves": [],
     "TMMoves": [
       "MOVE_WATER_PULSE",
-      "MOVE_HIDDEN_POWER",
       "MOVE_ICE_BEAM",
       "MOVE_BLIZZARD",
       "MOVE_HYPER_BEAM",

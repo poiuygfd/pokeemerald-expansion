@@ -700,8 +700,6 @@ const struct SpriteFrameImage *const gBerryTreePicTablePointers[] = {
     [ITEM_ROWAP_BERRY - FIRST_BERRY_INDEX]            = sPicTable_RowapBerryTree,
     [ITEM_KEE_BERRY - FIRST_BERRY_INDEX]              = sPicTable_PechaBerryTree,
     [ITEM_MARANGA_BERRY - FIRST_BERRY_INDEX]          = sPicTable_OccaBerryTree,
-    [ITEM_STRAWB_BERRY - FIRST_BERRY_INDEX]           = sPicTable_RazzBerryTree,
-    [ITEM_PEAPEE_BERRY - FIRST_BERRY_INDEX]           = sPicTable_MicleBerryTree,
     [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX]  = sPicTable_DurinBerryTree,
 };
 
@@ -773,8 +771,6 @@ const u8 *const gBerryTreePaletteSlotTablePointers[] = {
     [ITEM_ROWAP_BERRY - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Rowap,
     [ITEM_KEE_BERRY - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Pecha,
     [ITEM_MARANGA_BERRY - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Occa,
-    [ITEM_STRAWB_BERRY - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Razz,
-    [ITEM_PEAPEE_BERRY - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Micle,
     [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = gBerryTreePaletteSlotTable_Durin,
 };
 

@@ -26733,49 +26733,49 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //P_FAMILY_PECHARUNT
 
     const u32 gMonFrontPic_Marin[] = INCBIN_U32("graphics/pokemon/marin/anim_front.4bpp.lz");
+    const u16 gMonPalette_Marin[] = INCBIN_U16("graphics/pokemon/marin/normal.gbapal");
     const u32 gMonBackPic_Marin[] = INCBIN_U32("graphics/pokemon/marin/back.4bpp.lz");
-    const u32 gMonPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/shiny.gbapal.lz");
+    const u16 gMonShinyPalette_Marin[] = INCBIN_U16("graphics/pokemon/marin/shiny.gbapal");
     const u8 gMonIcon_Marin[] = INCBIN_U8("graphics/pokemon/marin/icon.4bpp");
     const u8 gMonFootprint_Marin[] = INCBIN_U8("graphics/pokemon/marin/footprint.1bpp");
     const u32 gObjectEventPic_Marin[] = INCBIN_COMP("graphics/pokemon/marin/overworld.4bpp");
-    const u32 gOverworldPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/overworld_normal.gbapal.lz");
-    const u32 gShinyOverworldPalette_Marin[] = INCBIN_U32("graphics/pokemon/marin/overworld_shiny.gbapal.lz");
+    const u16 gOverworldPalette_Marin[] = INCBIN_U16("graphics/pokemon/marin/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Marin[] = INCBIN_U16("graphics/pokemon/marin/overworld_shiny.gbapal");
 
     const u32 gMonFrontPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/anim_front.4bpp.lz");
+    const u16 gMonPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/normal.gbapal");
     const u32 gMonBackPic_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/back.4bpp.lz");
-    const u32 gMonPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/normal.gbapal.lz");
-    const u32 gMonShinyPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/shiny.gbapal.lz");
+    const u16 gMonShinyPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/shiny.gbapal");
     const u8 gMonIcon_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/icon.4bpp");
     const u8 gMonFootprint_MissingNo[] = INCBIN_U8("graphics/pokemon/missingno/footprint.1bpp");
     const u32 gObjectEventPic_MissingNo[] = INCBIN_COMP("graphics/pokemon/missingno/overworld.4bpp");
-    const u32 gOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_normal.gbapal.lz");
-    const u32 gShinyOverworldPalette_MissingNo[] = INCBIN_U32("graphics/pokemon/missingno/overworld_shiny.gbapal.lz");
+    const u16 gOverworldPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/overworld_shiny.gbapal");
 
     const u32 gMonFrontPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/anim_front.4bpp.lz");
-    const u32 gMonPalette_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/normal.gbapal.lz");
+    const u16 gMonPalette_AvitorchCalm[] = INCBIN_U16("graphics/pokemon/avitorch/normal.gbapal");
     const u32 gMonBackPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/back.4bpp.lz");
-    const u32 gMonShinyPalette_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/shiny.gbapal.lz");
+    const u16 gMonShinyPalette_AvitorchCalm[] = INCBIN_U16("graphics/pokemon/avitorch/shiny.gbapal");
     const u8 gMonIcon_AvitorchCalm[] = INCBIN_U8("graphics/pokemon/avitorch/icon.4bpp");
     const u8 gMonFootprint_Avitorch[] = INCBIN_U8("graphics/pokemon/avitorch/footprint.1bpp");
     //const u32 gObjectEventPic_Avitorch[] = INCBIN_COMP("graphics/pokemon/avitorch/overworld.4bpp");
-    //const u32 gOverworldPalette_Avitorch[] = INCBIN_U32("graphics/pokemon/avitorch/overworld_normal.gbapal.lz");
-    //const u32 gShinyOverworldPalette_Avitorch[] = INCBIN_U32("graphics/pokemon/avitorch/overworld_shiny.gbapal.lz");
+    //const u16 gOverworldPalette_Avitorch[] = INCBIN_U16("graphics/pokemon/avitorch/overworld_normal.gbapal");
+    //const u16 gShinyOverworldPalette_Avitorch[] = INCBIN_U16("graphics/pokemon/avitorch/overworld_shiny.gbapal");
     const u32 gMonFrontPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/anim_front.4bpp.lz");
-    const u32 gMonPalette_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/normal.gbapal.lz");
+    const u16 gMonPalette_AvitorchEnraged[] = INCBIN_U16("graphics/pokemon/avitorch/enraged/normal.gbapal");
     const u32 gMonBackPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/back.4bpp.lz");
-    const u32 gMonShinyPalette_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/shiny.gbapal.lz");
+    const u16 gMonShinyPalette_AvitorchEnraged[] = INCBIN_U16("graphics/pokemon/avitorch/enraged/shiny.gbapal");
     const u8 gMonIcon_AvitorchEnraged[] = INCBIN_U8("graphics/pokemon/avitorch/enraged/icon.4bpp");
 
     const u32 gMonFrontPic_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/anim_front.4bpp.lz");
+    const u16 gMonPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/normal.gbapal");
     const u32 gMonBackPic_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/back.4bpp.lz");
-    const u32 gMonPalette_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/shiny.gbapal.lz");
+    const u16 gMonShinyPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/shiny.gbapal");
     const u8 gMonIcon_Regitube[] = INCBIN_U8("graphics/pokemon/regitube/icon.4bpp");
     const u8 gMonFootprint_Regitube[] = INCBIN_U8("graphics/pokemon/regitube/footprint.1bpp");
     //const u32 gObjectEventPic_Regitube[] = INCBIN_COMP("graphics/pokemon/regitube/overworld.4bpp");
-    //const u32 gOverworldPalette_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/overworld_normal.gbapal.lz");
-    //const u32 gShinyOverworldPalette_Regitube[] = INCBIN_U32("graphics/pokemon/regitube/overworld_shiny.gbapal.lz");
+    //const u16 gOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_normal.gbapal");
+    //const u16 gShinyOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_shiny.gbapal");
 
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
