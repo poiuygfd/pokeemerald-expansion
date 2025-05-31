@@ -84,6 +84,7 @@
 #define PARTY_MSG_WHICH_COSTUME             29
 #define PARTY_MSG_NO_POKEMON                30
 #define PARTY_MSG_CHOOSE_MON_FOR_BOX        31
+#define PARTY_MSG_MOVE_ITEM_WHERE           32
 
 #define PARTY_MSG_NONE                      127
 

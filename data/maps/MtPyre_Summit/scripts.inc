@@ -43,7 +43,7 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_ArchieFacePlayer2
 	msgbox MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
 	closemessage
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_MT_PYRE_SUMMIT_ARCHIE
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_1
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_2
@@ -52,7 +52,7 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
 	fadedefaultbgm
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 20
 	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_MattWalkPlayer0
 	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_MattWalkPlayer1
