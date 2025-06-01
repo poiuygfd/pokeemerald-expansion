@@ -1349,6 +1349,7 @@ static const u16 sLocationFlags[] =
     FLAG_VISITED_EVER_GRANDE_CITY,
     FLAG_LANDMARK_POKEMON_LEAGUE,
     FLAG_LANDMARK_BATTLE_FRONTIER,
+    FLAG_VISITED_TUFFNOOK_TOWN,
 };
 
 static u8 Debug_CheckToggleFlags(u8 id)

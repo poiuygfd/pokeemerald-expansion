@@ -4430,6 +4430,96 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NeglectedShrine/border.bin",
       "blockdata_filepath": "data/layouts/NeglectedShrine/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_EXTERIOR",
+      "name": "TuffnookTownExterior_Layout",
+      "width": 32,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTownExterior/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTownExterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_MART",
+      "name": "TuffnookTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/TuffnookTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_POKEMON_CENTER_1F",
+      "name": "TuffnookTown_PokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/TuffnookTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_POKEMON_CENTER_2F",
+      "name": "TuffnookTown_PokemonCenter_2F_Layout",
+      "width": 14,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/TuffnookTown_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_INTERIOR",
+      "name": "TuffnookTownInterior_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTownInterior/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTownInterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_HOUSE1",
+      "name": "TuffnookTown_House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_HOUSE3",
+      "name": "TuffnookTown_House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_HOUSE2",
+      "name": "TuffnookTown_House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_GAVINS_GEMS",
+      "name": "TuffnookTown_GavinsGems_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTown_GavinsGems/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_GavinsGems/map.bin"
     }
   ]
 }

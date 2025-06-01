@@ -115,6 +115,12 @@
       "y": 16
     },
     {
+      "id": "HEAL_LOCATION_TUFFNOOK_TOWN",
+      "map": "MAP_TUFFNOOK_TOWN_EXTERIOR",
+      "x": 8,
+      "y": 10
+    },
+    {
       "id": "HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE",
       "map": "MAP_EVER_GRANDE_CITY",
       "x": 18,

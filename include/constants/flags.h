@@ -666,7 +666,7 @@
 #define FLAG_HIDE_WALLACE_SUPERBOSS  0x269 // Hide Wallace Boss in Cave of Origin until post-game
 #define FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS  0x26A // Wallace Battle
 #define FLAG_DEWFORD_NPC_TRADE_COMPLETED  0x26B // Dewford Fletchling Trade
-#define FLAG_ROUTE_111_NPC_TRADE_COMPLETED  0x26C // Rest Stop Munchlax Trade
+#define FLAG_TUFFNOOK_NPC_TRADE_COMPLETED  0x26C // Tuffnook Munchlax Trade
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
@@ -1391,7 +1391,7 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
+#define FLAG_VISITED_TUFFNOOK_TOWN                  (SYSTEM_FLAGS + 0x21) // Tuffnook Town Flag
 #define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag

@@ -57,6 +57,14 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_TUFFNOOK_TOWN",
+      "name": "TUFFNOOK TOWN",
+      "x": 9,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_PETALBURG_CITY",
       "name": "PETALBURG CITY",
       "x": 1,
@@ -490,7 +498,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "ABANDONED SHIP",
+      "name": "TUFFNOOK TOWN",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -698,7 +706,6 @@
     },
     {
       "id": "MAPSEC_DYNAMIC",
-      "name": "",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1611,8 +1618,8 @@
     {
       "id": "MAPSEC_FARAWAY_ISLAND",
       "name": "FARAWAY ISLAND",
-      "x": 0,
-      "y": 0,
+      "x": 27,
+      "y": 14,
       "width": 1,
       "height": 1
     },
@@ -1691,8 +1698,8 @@
     {
       "id": "MAPSEC_NAVEL_ROCK",
       "name": "NAVEL ROCK",
-      "x": 0,
-      "y": 0,
+      "x": 9,
+      "y": 2,
       "width": 1,
       "height": 1
     },

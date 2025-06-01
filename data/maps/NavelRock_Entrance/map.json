@@ -26,7 +26,7 @@
       "x": 10,
       "y": 26,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_EXTERIOR",
+      "dest_map": "MAP_TUFFNOOK_TOWN_INTERIOR",
       "dest_warp_id": "1"
     }
   ],

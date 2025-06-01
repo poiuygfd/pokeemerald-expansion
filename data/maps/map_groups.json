@@ -33,7 +33,8 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_IndoorTuffnook"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -92,7 +93,9 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "TuffnookTownExterior",
+    "TuffnookTownInterior"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -622,5 +625,14 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_IndoorTuffnook": [
+    "TuffnookTown_Mart",
+    "TuffnookTown_PokemonCenter_1F",
+    "TuffnookTown_PokemonCenter_2F",
+    "TuffnookTown_House1",
+    "TuffnookTown_House2",
+    "TuffnookTown_House3",
+    "TuffnookTown_GavinsGems"
   ]
 }

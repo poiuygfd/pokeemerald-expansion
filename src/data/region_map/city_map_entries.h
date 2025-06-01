@@ -35,6 +35,11 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .index = 0,
         .tilemap = gPokenavCityMap_Pacifidlog_0,
     },
+    /*{
+        .mapSecId = MAPSEC_TUFFNOOK_TOWN,
+        .index = 0,
+        .tilemap = gPokenavCityMap_Tuffnook_0,
+    },*/
     {
         .mapSecId = MAPSEC_PETALBURG_CITY,
         .index = 0,
