@@ -1,5 +1,3 @@
-.set LOCALID_WALLACEBOSS, 2
-
 CaveOfOrigin_B1F_MapScripts::
 	.byte 0
 
@@ -74,7 +72,7 @@ CaveOfOrigin_B1F_EventScript_WallaceSuperboss::
 	end
 
 CaveOfOrigin_B1F_EventScript_Defeated::
-	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
+	applymovement LOCALID_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox CaveOfOrigin_B1F_Text_StillNotStrongEnough, MSGBOX_DEFAULT
 	release

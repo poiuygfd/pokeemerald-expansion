@@ -667,9 +667,9 @@
 #define FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS  0x26A // Wallace Battle
 #define FLAG_DEWFORD_NPC_TRADE_COMPLETED  0x26B // Dewford Fletchling Trade
 #define FLAG_TUFFNOOK_NPC_TRADE_COMPLETED  0x26C // Tuffnook Munchlax Trade
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
+#define FLAG_MET_GAVIN  0x26D // Met Gavin from Gavin's Gems
+#define FLAG_NAVEL_ROCK_GUARDIAN_MOVED  0x26E // Guardian has moved
+#define FLAG_BIRCH_TUFFNOOK_TALKED_TO  0x26F // Tuffnook Prof. Birch event
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
@@ -1261,18 +1261,18 @@
 #define FLAG_RECEIVED_LINKING_CORD                                  0x4B3 // Linking Cord Gift
 #define FLAG_RECEIVED_FLING                                         0x4B4 // Fling TM Gift
 #define FLAG_RECEIVED_CHILLING_WATER                                0x4B5 // Chilling Water TM Gift
-#define FLAG_RECEIVED_ACROBATICS                                    0x4B6 // Acrobatics TM Gift
-#define FLAG_RECEIVED_FLOAT_STONE                                   0x4B7 // Float Stone Gift Flags
-#define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B8
-#define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4B9
-#define FLAG_ITEM_TM71                                           0x4BA // Unused Flag
-#define FLAG_ITEM_TM75                                           0x4BB // Unused Flag
+#define FLAG_RECEIVED_POWER_UP_PUNCH                                0x4B6 // Power Up Punch TM Gift
+#define FLAG_ITEM_TM75                                              0x4B7 // Magma Hideout TM Supercell Slam
+#define FLAG_RECEIVED_FLOAT_STONE                                   0x4B8 // Float Stone Gift Flags
+#define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B9
+#define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4BA
+#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
 #define FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK                        0x4BC // Route 120 Hearthflame Mask
 #define FLAG_ITEM_ROUTE_120_WELLSPRING_MASK                         0x4BD // Route 120 Wellspring Mask
 #define FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK                        0x4BE // Route 120 Cornerstone Mask
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
+#define FLAG_HIDDEN_ITEM_TUFFNOOK_ROCKY_HELMET                      0x4BF // Hidden Rocky Helmet
+#define FLAG_ITEM_NAVEL_ROCK_FLAME_ORB                              0x4C0 // Navel Rock Flame Orb
+#define FLAG_ITEM_NAVEL_ROCK_TOXIC_ORB                              0x4C1 // Navel Rock Toxic Orb
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag

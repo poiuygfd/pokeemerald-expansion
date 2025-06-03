@@ -1,6 +1,10 @@
 TuffnookTown_House3_MapScripts::
 	.byte 0
 
+TuffnookTown_House3_EventScript_Boy::
+	msgbox TuffnookTown_House3_Text_AStrangeMan, MSGBOX_NPC
+	end
+
 TuffnookTown_House3_EventScript_Trader::
 	lock
 	faceplayer
@@ -44,6 +48,21 @@ TuffnookTown_House3_EventScript_TradeCompleted::
 	msgbox TuffnookTown_House3_Text_UnlikelyToMe, MSGBOX_DEFAULT
 	release
 	end
+
+TuffnookTown_House3_Text_AStrangeMan:
+	.string "Most of the people living here in\n"
+	.string "TUFFNOOK TOWN were born here.\p"
+	.string "I mean, it would be pretty weird for\n"
+	.string "an outsider to want to come here and\l"
+	.string "move into a cave, right?\p"
+	.string "But I met a guy the other day, who\n"
+	.string "I think was called STEVEN?\p"
+	.string "He had some terrifyingly powerful\n"
+	.string "POKéMON with him!\p"
+	.string "But anyway, he just seemed absolutely\n"
+	.string "enamored with this place, saying that\l"
+	.string "he wanted to move here!\p"
+	.string "What a strange man!$"
 
 TuffnookTown_House3_Text_CanBeFoundInTheDesert:
 	.string "Have you heard?\p"

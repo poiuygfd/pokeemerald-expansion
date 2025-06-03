@@ -217,3 +217,12 @@ TuffnookTown_Mart_Pokemart_Badge8:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	pokemartlistend
+
+TuffnookTown_Mart_EventScript_Maniac::
+	msgbox TuffnookTown_Mart_Text_StockingOnSupplies, MSGBOX_NPC
+	end
+
+TuffnookTown_Mart_Text_StockingOnSupplies:
+	.string "I'm just busy stocking up on some\n"
+	.string "supplies before heading back into\l"
+	.string "the desert.$"

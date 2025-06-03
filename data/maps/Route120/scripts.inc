@@ -1,5 +1,3 @@
-.set LOCALID_OGERPON, 45
-
 @ LOCALID_BRIDGE_KECLEON_SHADOW is a second object which is identical to LOCALID_BRIDGE_KECLEON but has a reflection palette tag for the bridge shadow
 Route120_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route120_OnResume
@@ -37,7 +35,7 @@ Route120_EventScript_RemoveKecleon::
 Route120_EventScript_TryRemoveOgerpon::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject LOCALID_OGERPON
+	removeobject LOCALID_ROUTE_120_OGERPON
 	clearflag FLAG_HIDE_OGERPON_MASKS
 	clearflag FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK
 	clearflag FLAG_ITEM_ROUTE_120_WELLSPRING_MASK

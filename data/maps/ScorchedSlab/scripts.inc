@@ -1,5 +1,3 @@
-.set LOCALID_HEATRAN, 2
-
 ScorchedSlab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ScorchedSlab_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, ScorchedSlab_OnResume
@@ -31,7 +29,7 @@ ScorchedSlab_OnResume:
 ScorchedSlab_EventScript_TryRemoveHeatran::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject LOCALID_HEATRAN
+	removeobject LOCALID_SCORCHED_SLAB_HEATRAN
 	return
 
 ScorchedSlab_EventScript_Heatran::

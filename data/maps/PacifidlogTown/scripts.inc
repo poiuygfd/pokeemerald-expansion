@@ -53,14 +53,14 @@ PacifidlogTown_Text_SkyPillarTooScary:
 
 PacifidlogTown_Text_SomethingStrange:
 	.string "The other day, I saw something strange\n"
-	.string "floating around near the water here...\p"
+	.string "floating around near the water here…\p"
 	.string "I've seen something like it once before\n"
 	.string "around the shores of CINNABAR ISLAND in\l"
-	.string "the KANTO region...\p"
+	.string "the KANTO region…\p"
 	.string "I think it's a POKéMON?\n"
 	.string "I'm honestly not too sure though,\l"
 	.string "it doesn't seem to move or behave\l"
-	.string "like any normal POKéMON...$"
+	.string "like any normal POKéMON…$"
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"

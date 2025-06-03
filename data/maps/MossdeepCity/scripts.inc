@@ -1,5 +1,3 @@
-.set LOCALID_JIRACHI, 19
-
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, MossdeepCity_OnResume
@@ -35,7 +33,7 @@ MossdeepCity_OnResume:
 MossdeepCity_EventScript_TryRemoveJirachi::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject LOCALID_JIRACHI
+	removeobject LOCALID_MOSSDEEP_JIRACHI
 	return
 
 MossdeepCity_EventScript_PokefanF::
