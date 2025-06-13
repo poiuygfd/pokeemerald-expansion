@@ -1266,7 +1266,7 @@
 #define FLAG_RECEIVED_FLOAT_STONE                                   0x4B8 // Float Stone Gift Flags
 #define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B9
 #define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4BA
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
+#define FLAG_RETURNED_FIRST_ORB                                     0x4BB // Flag for Orb Mt. Pyre Event
 #define FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK                        0x4BC // Route 120 Hearthflame Mask
 #define FLAG_ITEM_ROUTE_120_WELLSPRING_MASK                         0x4BD // Route 120 Wellspring Mask
 #define FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK                        0x4BE // Route 120 Cornerstone Mask

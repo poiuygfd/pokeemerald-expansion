@@ -199,6 +199,7 @@ MtPyre_Summit_EventScript_OldLady::
 	lock
 	faceplayer
 	goto_if_set FLAG_RETURNED_RED_OR_BLUE_ORB, MtPyre_Summit_EventScript_OldLadyAfterOrbsReturned
+	goto_if_set FLAG_RETURNED_FIRST_ORB, MtPyre_Summit_EventScript_OldLadyOrbsReturned2
 	call_if_ge VAR_MT_PYRE_STATE, 3, MtPyre_Summit_EventScript_OldLadyOrbsReturned
 	goto_if_set FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, MtPyre_Summit_EventScript_OldLadyLegendariesAwake
 	msgbox MtPyre_Summit_Text_OrbsHaveBeenTaken, MSGBOX_DEFAULT
@@ -207,6 +208,16 @@ MtPyre_Summit_EventScript_OldLady::
 
 MtPyre_Summit_EventScript_OldLadyOrbsReturned::
 	msgbox MtPyre_Summit_Text_ThoseTwoMenReturnedOrbs, MSGBOX_DEFAULT
+	giveitem ITEM_RED_ORB
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RETURNED_FIRST_ORB
+	goto MtPyre_Summit_EventScript_OldLadyOrbsReturned2
+
+MtPyre_Summit_EventScript_OldLadyOrbsReturned2::
+	msgbox MtPyre_Summit_Text_ThisOneAsWell, MSGBOX_DEFAULT
+	giveitem ITEM_BLUE_ORB
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox MtPyre_Summit_Text_TakeCareOfOrbs, MSGBOX_DEFAULT
 	setflag FLAG_RETURNED_RED_OR_BLUE_ORB
 	release
 	end
@@ -600,7 +611,25 @@ MtPyre_Summit_Text_ThoseTwoMenReturnedOrbs:
 	.string "The two men who took the ORBS came\n"
 	.string "back to return them on their own.\p"
 	.string "Those men…\n"
-	.string "Perhaps they are not so evil after all…$"
+	.string "Perhaps they are not so evil after all…\p"
+	.string "You there, child.\n"
+	.string "If I am not mistaken, you are the one\l"
+	.string "who brought this calamity to an end.\p"
+	.string "I wish to entrust you with the two\n"
+	.string "orbs those men just returned.\p"
+	.string "For a trainer as strong as you, I\n"
+	.string "believe they will be safest in your\l"
+	.string "hands, as it matters not where the\l"
+	.string "orbs are kept so long as they are\l"
+	.string "kept together.$"
+
+MtPyre_Summit_Text_ThisOneAsWell:
+	.string "And this one as well.$"
+
+MtPyre_Summit_Text_TakeCareOfOrbs:
+	.string "I hope that in your hands, these orbs\n"
+	.string "will not be misused by the hands of\l"
+	.string "those misguided by their goals.$"
 
 MtPyre_Summit_Text_SuperAncientPokemonTaughtUs:
 	.string "The embodiments of the land, sea,\n"

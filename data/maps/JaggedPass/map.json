@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
@@ -245,7 +245,7 @@
       "x": 8,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_FULL_HEAL",
+      "item": "ITEM_LURE",
       "flag": "FLAG_HIDDEN_ITEM_JAGGED_PASS_FULL_HEAL"
     },
     {

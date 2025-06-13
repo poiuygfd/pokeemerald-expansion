@@ -125,6 +125,8 @@
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_GALARICA_ITEM                115
 #define MULTI_GAME_CORNER_GIMMIGHOUL       116
+#define MULTI_PLEDGE_MOVES                 117
+#define MULTI_ULTIMATE_MOVES               118
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

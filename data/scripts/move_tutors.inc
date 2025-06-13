@@ -259,6 +259,160 @@ MoveTutor_EventScript_ExplosionTaught::
 	release
 	end
 
+MeteorFalls_1F_2R_EventScript_DracoMeteorTutor::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_DracoMeteorTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DracoMeteorDeclined
+	msgbox MoveTutor_Text_DracoMeteorWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_DRACO_METEOR
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_DracoMeteorDeclined
+	goto MoveTutor_EventScript_DracoMeteorTaught
+	end
+
+MoveTutor_EventScript_DracoMeteorDeclined::
+	msgbox MoveTutor_Text_DracoMeteorDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_DracoMeteorTaught::
+	msgbox MoveTutor_Text_DracoMeteorTaught, MSGBOX_DEFAULT
+	release
+	end
+
+AbandonedShip_HiddenFloorCorridors_EventScript_SteelBeamTutor::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_SteelBeamTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SteelBeamDeclined
+	msgbox MoveTutor_Text_SteelBeamWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_STEEL_BEAM
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_SteelBeamDeclined
+	goto MoveTutor_EventScript_SteelBeamTaught
+	end
+
+MoveTutor_EventScript_SteelBeamDeclined::
+	msgbox MoveTutor_Text_SteelBeamDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_SteelBeamTaught::
+	msgbox MoveTutor_Text_SteelBeamTaught, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_EventScript_PledgeTutor::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_PledgeTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_PledgeDeclined
+	msgbox MoveTutor_Text_PledgeSelect, MSGBOX_DEFAULT
+	waitmessage
+	goto MoveTutor_EventScript_ChoosePledgeMove
+	release
+	end
+
+MoveTutor_EventScript_ChoosePledgeMove::
+	multichoice 0, 0, MULTI_PLEDGE_MOVES, FALSE
+	switch VAR_RESULT
+	case 0, MoveTutor_EventScript_GrassPledge
+	case 1, MoveTutor_EventScript_FirePledge
+	case 2, MoveTutor_EventScript_WaterPledge
+	case 3, MoveTutor_EventScript_PledgeDeclined
+	case MULTI_B_PRESSED, MoveTutor_EventScript_PledgeDeclined
+	end
+
+MoveTutor_EventScript_GrassPledge::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_GRASS_PLEDGE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_PledgeDeclined
+	goto MoveTutor_EventScript_PledgeTaught
+	end
+
+MoveTutor_EventScript_FirePledge::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_FIRE_PLEDGE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_PledgeDeclined
+	goto MoveTutor_EventScript_PledgeTaught
+	end
+
+MoveTutor_EventScript_WaterPledge::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_WATER_PLEDGE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_PledgeDeclined
+	goto MoveTutor_EventScript_PledgeTaught
+	end
+
+MoveTutor_EventScript_PledgeDeclined::
+	msgbox MoveTutor_Text_PledgeDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_PledgeTaught::
+	msgbox MoveTutor_Text_PledgeTaught, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_EventScript_UltimateMoveTutor::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_UltimateMoveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_UltimateMoveDeclined
+	msgbox MoveTutor_Text_UltimateMoveSelect, MSGBOX_DEFAULT
+	waitmessage
+	goto MoveTutor_EventScript_ChooseUltimateMove
+	release
+	end
+
+MoveTutor_EventScript_ChooseUltimateMove::
+	multichoice 0, 0, MULTI_ULTIMATE_MOVES, FALSE
+	switch VAR_RESULT
+	case 0, MoveTutor_EventScript_FrenzyPlant
+	case 1, MoveTutor_EventScript_BlastBurn
+	case 2, MoveTutor_EventScript_HydroCannon
+	case 3, MoveTutor_EventScript_UltimateMoveDeclined
+	case MULTI_B_PRESSED, MoveTutor_EventScript_UltimateMoveDeclined
+	end
+
+MoveTutor_EventScript_FrenzyPlant::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_FRENZY_PLANT
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_UltimateMoveDeclined
+	goto MoveTutor_EventScript_UltimateMoveTaught
+	end
+
+MoveTutor_EventScript_BlastBurn::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_BLAST_BURN
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_UltimateMoveDeclined
+	goto MoveTutor_EventScript_UltimateMoveTaught
+	end
+
+MoveTutor_EventScript_HydroCannon::
+	msgbox MoveTutor_Text_PledgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_HYDRO_CANNON
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_UltimateMoveDeclined
+	goto MoveTutor_EventScript_UltimateMoveTaught
+	end
+
+MoveTutor_EventScript_UltimateMoveDeclined::
+	msgbox MoveTutor_Text_UltimateMoveDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_UltimateMoveTaught::
+	msgbox MoveTutor_Text_UltimateMoveTaught, MSGBOX_DEFAULT
+	release
+	end
+
 MoveTutor_EventScript_OpenPartyMenu::
 	special ChooseMonForMoveTutor
 	waitstate

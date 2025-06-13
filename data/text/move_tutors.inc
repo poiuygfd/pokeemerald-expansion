@@ -235,3 +235,116 @@ MoveTutor_Text_ExplosionTaught:
 	.string "to ignite my own EXPLOSION…\p"
 	.string "Maybe it's because deep down,\n"
 	.string "I would rather stay here…$"
+
+MoveTutor_Text_DracoMeteorTeach:
+	.string "Hohoho…\n"
+	.string "For you to find your way here, you\l"
+	.string "must be an accomplished trainer.\p"
+	.string "I can teach your DRAGON POKéMON the\n"
+	.string "ultimate DRAGON move.\p"
+	.string "Would you like to learn how to use\n"
+	.string "the move DRACO METEOR?$"
+
+MoveTutor_Text_DracoMeteorDeclined:
+	.string "Not interested?\n"
+	.string "Well, you know where to find me if\l"
+	.string "you change your mind.$"
+
+MoveTutor_Text_DracoMeteorWhichMon:
+	.string "Very well!\n"
+	.string "Which POKéMON shall gain this power?$"
+
+MoveTutor_Text_DracoMeteorTaught:
+	.string "Now, I wonder how far you will go\n"
+	.string "with this power…?\p"
+	.string "The best of luck to you…$"
+
+MoveTutor_Text_SteelBeamTeach:
+	.string "Huh?!\n"
+	.string "Why is there another person here?!\p"
+	.string "I went to the middle of the ocean and\n"
+	.string "even hid in this old ship, and yet\l"
+	.string "I still can't find somewhere quiet?\p"
+	.string "You! If you leave me alone, I will\n"
+	.string "teach your STEEL POKéMON the ultimate\l"
+	.string "STEEL move! Does that sound fair?$"
+
+MoveTutor_Text_SteelBeamDeclined:
+	.string "No?!\n"
+	.string "Why is it so hard to get some peace?!$"
+
+MoveTutor_Text_SteelBeamWhichMon:
+	.string "Fine! Here we go!\n"
+	.string "Which POKéMON is learning this move?$"
+
+MoveTutor_Text_SteelBeamTaught:
+	.string "There! Now scram!\n"
+	.string "My favourite anime is about to begin\l"
+	.string "and I need these chambers to myself!\p"
+	.string "For, uh, personal reasons!$"
+
+MoveTutor_Text_PledgeTeach:
+	.string "Many, many years ago, me and my wife\n"
+	.string "made a pledge to each other to stay\l"
+	.string "together, through thick and thin.\p"
+	.string "Even though she may be gone, I know\n"
+	.string "even now she is still watching me.\p"
+	.string "If you would like, I can teach your\n"
+	.string "POKéMON how to make a pledge as well.$"
+
+MoveTutor_Text_PledgeSelect:
+	.string "Which pledge are you interested in\n"
+	.string "having your POKéMON learn?$"
+
+MoveTutor_Text_PledgeDeclined:
+	.string "Ah, perhaps another time then.\n"
+	.string "Please, do make the most of the time\l"
+	.string "you spend with your loved ones.$"
+
+MoveTutor_Text_PledgeWhichMon:
+	.string "A fine choice.\n"
+	.string "Which POKéMON will be learning this?$"
+
+MoveTutor_Text_PledgeTaught:
+	.string "One day, in the not so distant future\n"
+	.string "I will see my wife once again.\p"
+	.string "I hope that even if I depart from this\n"
+	.string "world, the wishes I have bestowed upon\l"
+	.string "you will help just a small part of both\l"
+	.string "me and my wife live on within you.\p"
+	.string "Take care of yourself, young TRAINER.\n"
+	.string "And remember to treasure every moment\l"
+	.string "you spend with those you care about.$"
+
+MoveTutor_Text_UltimateMoveTeach:
+	.string "I'm just getting ready to take on\n"
+	.string "VICTORY ROAD, and soon after the\l"
+	.string "POKéMON LEAGUE.\p"
+	.string "With these ultimate techniques I have\n"
+	.string "been practicing, the ELITE FOUR surely\l"
+	.string "won't stand a chance!\p"
+	.string "Oh? That look in your eyes…\n"
+	.string "I can tell I've caught your attention.\p"
+	.string "Very well! I suppose I could maybe teach\n"
+	.string "your POKéMON these moves, as well!$"
+
+MoveTutor_Text_UltimateMoveSelect:
+	.string "A smart choice, my friend! Which of these\n"
+	.string "moves are you interested in?$"
+
+MoveTutor_Text_UltimateMoveDeclined:
+	.string "B-but these are the ultimate moves!\n"
+	.string "Please, reconsider!$"
+
+MoveTutor_Text_UltimateMoveWhichMon:
+	.string "You have great taste!\n"
+	.string "Who will be learning this ultimate move?$"
+
+MoveTutor_Text_UltimateMoveTaught:
+	.string "Excellent! With this move at your\n"
+	.string "disposal, nothing stands in your way!\p"
+	.string "Wait, should I be teaching powerful\n"
+	.string "moves like this to my opposition…?\p"
+	.string "If you beat the ELITE FOUR now, will\n"
+	.string "we have to fight?\p"
+	.string "Meh, I'm sure it'll work out!$"

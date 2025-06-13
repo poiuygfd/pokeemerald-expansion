@@ -792,6 +792,22 @@ static const struct MenuAction MultichoiceList_GalaricaItem[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_PledgeMoves[] =
+{
+    {COMPOUND_STRING("GRASS PLEDGE")},
+    {COMPOUND_STRING("FIRE PLEDGE")},
+    {COMPOUND_STRING("WATER PLEDGE")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_UltimateMoves[] =
+{
+    {COMPOUND_STRING("FRENZY PLANT")},
+    {COMPOUND_STRING("BLAST BURN")},
+    {COMPOUND_STRING("HYDRO CANNON")},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -922,6 +938,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_GALARICA_ITEM]              = MULTICHOICE(MultichoiceList_GalaricaItem),
+    [MULTI_PLEDGE_MOVES]              = MULTICHOICE(MultichoiceList_PledgeMoves),
+    [MULTI_ULTIMATE_MOVES]              = MULTICHOICE(MultichoiceList_UltimateMoves),
 };
 
 const u8 *const gStdStrings[] =
