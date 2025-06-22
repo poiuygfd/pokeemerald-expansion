@@ -42,7 +42,7 @@
 // Big groups of forms that aren't always desired when choosing families.
 #define P_PIKACHU_EXTRA_FORMS            TRUE
 #define P_COSPLAY_PIKACHU_FORMS          TRUE
-#define P_CAP_PIKACHU_FORMS              FALSE
+#define P_CAP_PIKACHU_FORMS              TRUE
 
 // Cross-generation evolutions. Includes pre-evolutions.
 #define P_CROSS_GENERATION_EVOS          TRUE

@@ -377,15 +377,171 @@ BattleFrontier_Lounge7_EventScript_TripleAxel::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
+BattleFrontier_Lounge7_EventScript_PartnerMoveTutor::
+	lock
+	faceplayer
+	setvar VAR_TEMP_C, SCROLL_MULTI_BF_MOVE_TUTOR_3
+	msgbox BattleFrontier_Lounge7_Text_PartnerTutorWelcome, MSGBOX_DEFAULT
+	goto BattleFrontier_Lounge7_EventScript_ChoosePartnerTutorMove
+	end
+
+BattleFrontier_Lounge7_EventScript_ChoosePartnerTutorMove::
+	message BattleFrontier_Lounge7_Text_TeachWhichPartnerMove
+	waitmessage
+	special ShowBattlePointsWindow
+	setvar VAR_TEMP_FRONTIER_TUTOR_ID, 2
+	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
+	setvar VAR_0x8006, 0
+	special ShowScrollableMultichoice
+	waitstate
+	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
+	switch VAR_RESULT
+	case 0, BattleFrontier_Lounge7_EventScript_SplishySplash
+	case 1, BattleFrontier_Lounge7_EventScript_FloatyFall
+	case 2, BattleFrontier_Lounge7_EventScript_BouncyBubble
+	case 3, BattleFrontier_Lounge7_EventScript_BuzzyBuzz
+	case 4, BattleFrontier_Lounge7_EventScript_SizzlySlide
+	case 5, BattleFrontier_Lounge7_EventScript_GlitzyGlow
+	case 6, BattleFrontier_Lounge7_EventScript_BaddyBad
+	case 7, BattleFrontier_Lounge7_EventScript_ZippyZap
+	case 8, BattleFrontier_Lounge7_EventScript_VoltTackle
+	case 9, BattleFrontier_Lounge7_EventScript_PikaPapow
+	case 10, BattleFrontier_Lounge7_EventScript_SappySeed
+	case 11, BattleFrontier_Lounge7_EventScript_FreezyFrost
+	case 12, BattleFrontier_Lounge7_EventScript_SparklySwirl
+	case 13, BattleFrontier_Lounge7_EventScript_VeeveeVolley
+	case 14, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
+	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
+	end
+
+BattleFrontier_Lounge7_EventScript_ChooseNewPartnerTutorMove::
+	message BattleFrontier_Lounge7_Text_TeachWhichPartnerMove
+	waitmessage
+	setvar VAR_TEMP_FRONTIER_TUTOR_ID, 2
+	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
+	setvar VAR_0x8006, 1
+	special ShowScrollableMultichoice
+	waitstate
+	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
+	switch VAR_RESULT
+	case 0, BattleFrontier_Lounge7_EventScript_SplishySplash
+	case 1, BattleFrontier_Lounge7_EventScript_FloatyFall
+	case 2, BattleFrontier_Lounge7_EventScript_BouncyBubble
+	case 3, BattleFrontier_Lounge7_EventScript_BuzzyBuzz
+	case 4, BattleFrontier_Lounge7_EventScript_SizzlySlide
+	case 5, BattleFrontier_Lounge7_EventScript_GlitzyGlow
+	case 6, BattleFrontier_Lounge7_EventScript_BaddyBad
+	case 7, BattleFrontier_Lounge7_EventScript_ZippyZap
+	case 8, BattleFrontier_Lounge7_EventScript_VoltTackle
+	case 9, BattleFrontier_Lounge7_EventScript_PikaPapow
+	case 10, BattleFrontier_Lounge7_EventScript_SappySeed
+	case 11, BattleFrontier_Lounge7_EventScript_FreezyFrost
+	case 12, BattleFrontier_Lounge7_EventScript_SparklySwirl
+	case 13, BattleFrontier_Lounge7_EventScript_VeeveeVolley
+	case 14, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
+	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
+	end
+
+BattleFrontier_Lounge7_EventScript_SplishySplash::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_SPLISHY_SPLASH
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_FloatyFall::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_FLOATY_FALL
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_BouncyBubble::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_BOUNCY_BUBBLE
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_BuzzyBuzz::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_BUZZY_BUZZ
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_SizzlySlide::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_SIZZLY_SLIDE
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_GlitzyGlow::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_GLITZY_GLOW
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_BaddyBad::
+	setvar VAR_0x8008, 24
+	setvar VAR_0x8005, MOVE_BADDY_BAD
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_ZippyZap::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_ZIPPY_ZAP
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_VoltTackle::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_VOLT_TACKLE
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_PikaPapow::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_PIKA_PAPOW
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_SappySeed::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_SAPPY_SEED
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_FreezyFrost::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_FREEZY_FROST
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_SparklySwirl::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_SPARKLY_SWIRL
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
+BattleFrontier_Lounge7_EventScript_VeeveeVolley::
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8005, MOVE_VEEVEE_VOLLEY
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
+	end
+
 BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect::
 	special CloseBattleFrontierTutorWindow
 	special CloseBattlePointsWindow
+	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_ExitPartnerMoveSelect
 	msgbox BattleFrontier_Lounge7_Text_YouDontWantTo, MSGBOX_DEFAULT
 	release
 	end
 
 BattleFrontier_Lounge7_EventScript_CancelChooseMon::
+	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_ExitPartnerMoveSelect
 	msgbox BattleFrontier_Lounge7_Text_YouDontWantTo, MSGBOX_DEFAULT
+	release
+	end
+
+BattleFrontier_Lounge7_EventScript_ExitPartnerMoveSelect::
+	msgbox BattleFrontier_Lounge7_Text_ComeBackWithPartner, MSGBOX_DEFAULT
 	release
 	end
 
@@ -400,11 +556,18 @@ BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_Lounge7_EventScript_ChooseNewMove
 	specialvar VAR_TEMP_1, GetFrontierBattlePoints
 	goto_if_ge VAR_TEMP_1, VAR_0x8008, BattleFrontier_Lounge7_EventScript_TeachTutorMove
+	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_PartnerNotEnoughPoints
 	msgbox BattleFrontier_Lounge7_Text_HaventGotEnoughPoints, MSGBOX_DEFAULT
 	goto BattleFrontier_Lounge7_EventScript_ChooseNewMove
 	end
 
+BattleFrontier_Lounge7_EventScript_PartnerNotEnoughPoints::
+	msgbox BattleFrontier_Lounge7_Text_NotEnoughPointsYoungOne, MSGBOX_DEFAULT
+	goto BattleFrontier_Lounge7_EventScript_ChooseNewMove
+	end
+
 BattleFrontier_Lounge7_EventScript_TeachTutorMove::
+	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_PartnerTeachTutorMove
 	msgbox BattleFrontier_Lounge7_Text_TeachMoveToWhichMon, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special CloseBattlePointsWindow
@@ -418,7 +581,22 @@ BattleFrontier_Lounge7_EventScript_TeachTutorMove::
 	release
 	end
 
+BattleFrontier_Lounge7_EventScript_PartnerTeachTutorMove::
+	msgbox BattleFrontier_Lounge7_Text_TeachMoveToWhichPartnerMon, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	special CloseBattlePointsWindow
+	special CloseBattleFrontierTutorWindow
+	special ChooseMonForMoveTutor
+	waitstate
+	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_Lounge7_EventScript_CancelChooseMon
+	msgbox BattleFrontier_Lounge7_Text_TakeCareOfYourPartner, MSGBOX_DEFAULT
+	copyvar VAR_0x8004, VAR_0x8008
+	special TakeFrontierBattlePoints
+	release
+	end
+
 BattleFrontier_Lounge7_EventScript_ChooseNewMove::
+	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_ChooseNewPartnerTutorMove
 	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 0, BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove
 	goto BattleFrontier_Lounge7_EventScript_ChooseNewRightTutorMove
 	end
@@ -502,6 +680,37 @@ BattleFrontier_Lounge7_Text_RightTutorWelcomeBack:
 	.string "Ihihihi!\p"
 	.string "Have you come to learn hard and\n"
 	.string "yet pretty POKéMON moves?$"
+
+BattleFrontier_Lounge7_Text_PartnerTutorWelcome:
+	.string "Hello there, young one!\n"
+	.string "Have you come seeking tutorage?\p"
+	.string "I can teach some very special kinds\n"
+	.string "of moves, but only to very specific\l"
+	.string "POKéMON. Feel free to have a look though.$"
+
+BattleFrontier_Lounge7_Text_TeachWhichPartnerMove:
+	.string "Very well, here's what I have\n"
+	.string "to teach you.$"
+
+BattleFrontier_Lounge7_Text_TeachMoveToWhichPartnerMon:
+	.string "You'd like to learn that move?\n"
+	.string "Do you have the correct POKéMON?$"
+
+BattleFrontier_Lounge7_Text_NotEnoughPointsYoungOne:
+	.string "I'm afraid you don't have enough\n"
+	.string "Battle Points there, young one…$"
+
+BattleFrontier_Lounge7_Text_TakeCareOfYourPartner:
+	.string "Yes, yes, that is a very special POKéMON.\n"
+	.string "Be sure to take care of your partner.\p"
+	.string "Let me just take those BATTLE POINTS off\n"
+	.string "your hands then…$"
+
+BattleFrontier_Lounge7_Text_ComeBackWithPartner:
+	.string "Feel free to come back if you meet\n"
+	.string "one of those special POKéMON.\p"
+	.string "I've heard those two strong TRAINERS\n"
+	.string "from KANTO might know something…$"
 
 BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong:
 	.string "Those ladies, the way they bad-mouth\n"
@@ -703,72 +912,72 @@ BattleFrontier_Lounge7_Text_TripleAxelDesc::
 	.string "raises in power.$"
 
 BattleFrontier_Lounge7_Text_SplishySplashDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Electric charged\n"
+	.string "wave that can\n"
+	.string "paralyse foes.$"
 
 BattleFrontier_Lounge7_Text_FloatyFallDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Float and dive\n"
+	.string "attack that may\n"
+	.string "flinch target.$"
 
 BattleFrontier_Lounge7_Text_BouncyBubbleDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Bubbles that can\n"
+	.string "absorb the HP\n"
+	.string "of the target.$"
 
 BattleFrontier_Lounge7_Text_BuzzyBuzzDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Electric jolt\n"
+	.string "that paralyses\n"
+	.string "the opponent.$"
 
 BattleFrontier_Lounge7_Text_DescSizzlySlide::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Fire cloaked\n"
+	.string "tackle that burns\n"
+	.string "the opponent.$"
 
 BattleFrontier_Lounge7_Text_GlitzyGlowDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Telekenetic move\n"
+	.string "that sets up a\n"
+	.string "LIGHT SCREEN.$"
 
 BattleFrontier_Lounge7_Text_BaddyBadDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "User acts bad\n"
+	.string "and raises up\n"
+	.string "a REFLECT.$"
 
 BattleFrontier_Lounge7_Text_ZippyZapDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Priority attack\n"
+	.string "that also raises\n"
+	.string "user's evasion.$"
 
 BattleFrontier_Lounge7_Text_VoltTackleDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Electric tackle\n"
+	.string "with full force\n"
+	.string "that has recoil.$"
 
-BattleFrontier_Lounge7_Text_PikaKapowDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+BattleFrontier_Lounge7_Text_PikaPapowDesc::
+	.string "Deals more\n"
+	.string "damage with high\n"
+	.string "friendship.$"
 
 BattleFrontier_Lounge7_Text_SappySeedDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Giant stalk\n"
+	.string "that seeds the\n"
+	.string "opponent.$"
 
 BattleFrontier_Lounge7_Text_FreezyFrostDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Frozen haze\n"
+	.string "that eliminates\n"
+	.string "stat changes.$"
 
 BattleFrontier_Lounge7_Text_SparklySwirlDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Sparkly whirlwind\n"
+	.string "that removes all\n"
+	.string "status from party.$"
 
 BattleFrontier_Lounge7_Text_VeeveeVolleyDesc::
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER\n"
-	.string "PLACEHOLDER.$"
+	.string "Deals more\n"
+	.string "damage with high\n"
+	.string "friendship.$"
 

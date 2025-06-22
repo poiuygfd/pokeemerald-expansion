@@ -665,7 +665,7 @@ extern const u8 BattleFrontier_Lounge7_Text_GlitzyGlowDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_BaddyBadDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_ZippyZapDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_VoltTackleDesc[];
-extern const u8 BattleFrontier_Lounge7_Text_PikaKapowDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_PikaPapowDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_SappySeedDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_FreezyFrostDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_SparklySwirlDesc[];

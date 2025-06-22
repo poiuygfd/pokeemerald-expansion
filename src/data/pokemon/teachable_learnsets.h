@@ -90,9 +90,12 @@
 // *************************************************** //
 // Tutor moves found from map scripts:                 //
 // - MOVE_AURORA_VEIL                                  //
+// - MOVE_BADDY_BAD                                    //
 // - MOVE_BLAST_BURN                                   //
 // - MOVE_BODY_SLAM                                    //
+// - MOVE_BOUNCY_BUBBLE                                //
 // - MOVE_BULLDOZE                                     //
+// - MOVE_BUZZY_BUZZ                                   //
 // - MOVE_COUNTER                                      //
 // - MOVE_DEFENSE_CURL                                 //
 // - MOVE_DOUBLE_EDGE                                  //
@@ -104,8 +107,11 @@
 // - MOVE_FIRE_FANG                                    //
 // - MOVE_FIRE_PLEDGE                                  //
 // - MOVE_FIRE_PUNCH                                   //
+// - MOVE_FLOATY_FALL                                  //
+// - MOVE_FREEZY_FROST                                 //
 // - MOVE_FRENZY_PLANT                                 //
 // - MOVE_FURY_CUTTER                                  //
+// - MOVE_GLITZY_GLOW                                  //
 // - MOVE_GRASS_PLEDGE                                 //
 // - MOVE_GYRO_BALL                                    //
 // - MOVE_HYDRO_CANNON                                 //
@@ -120,16 +126,21 @@
 // - MOVE_MIMIC                                        //
 // - MOVE_MUD_SLAP                                     //
 // - MOVE_NASTY_PLOT                                   //
+// - MOVE_PIKA_PAPOW                                   //
 // - MOVE_POLLEN_PUFF                                  //
 // - MOVE_PSYCH_UP                                     //
 // - MOVE_ROCK_SLIDE                                   //
 // - MOVE_ROLLOUT                                      //
 // - MOVE_ROOST                                        //
+// - MOVE_SAPPY_SEED                                   //
 // - MOVE_SEISMIC_TOSS                                 //
 // - MOVE_SIGNAL_BEAM                                  //
+// - MOVE_SIZZLY_SLIDE                                 //
 // - MOVE_SLEEP_TALK                                   //
 // - MOVE_SNORE                                        //
 // - MOVE_SOFT_BOILED                                  //
+// - MOVE_SPARKLY_SWIRL                                //
+// - MOVE_SPLISHY_SPLASH                               //
 // - MOVE_STEALTH_ROCK                                 //
 // - MOVE_STEEL_BEAM                                   //
 // - MOVE_SUBSTITUTE                                   //
@@ -140,9 +151,12 @@
 // - MOVE_THUNDER_PUNCH                                //
 // - MOVE_THUNDER_WAVE                                 //
 // - MOVE_TRIPLE_AXEL                                  //
+// - MOVE_VEEVEE_VOLLEY                                //
+// - MOVE_VOLT_TACKLE                                  //
 // - MOVE_WATER_PLEDGE                                 //
 // - MOVE_WILL_O_WISP                                  //
 // - MOVE_WISH                                         //
+// - MOVE_ZIPPY_ZAP                                    //
 // *************************************************** //
 // Near-universal moves found from sUniversalMoves:    //
 // - MOVE_BIDE                                         //
@@ -1158,6 +1172,7 @@ static const u16 sPichuTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_TOXIC,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE,
     MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
@@ -1209,7 +1224,42 @@ static const u16 sPikachuTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_TOXIC,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE,
     MOVE_WISH,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sPikachuStarterTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
+    MOVE_BODY_SLAM,
+    MOVE_BRICK_BREAK,
+    MOVE_DIG,
+    MOVE_DOUBLE_TEAM,
+    MOVE_ENDURE,
+    MOVE_FACADE,
+    MOVE_FLING,
+    MOVE_FLOATY_FALL,
+    MOVE_FOCUS_PUNCH,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_NASTY_PLOT,
+    MOVE_PIKA_PAPOW,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REFLECT,
+    MOVE_REST,
+    MOVE_SLEEP_TALK,
+    MOVE_SPLISHY_SPLASH,
+    MOVE_SURF,
+    MOVE_SWIFT,
+    MOVE_THIEF,
+    MOVE_THUNDER,
+    MOVE_THUNDERBOLT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_THUNDER_WAVE,
+    MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE,
+    MOVE_ZIPPY_ZAP,
     MOVE_UNAVAILABLE,
 };
 
@@ -1263,6 +1313,7 @@ static const u16 sRaichuTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_TOXIC,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE,
     MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
@@ -1312,6 +1363,7 @@ static const u16 sRaichuAlolaTeachableLearnset[] = {
     MOVE_THUNDER_WAVE,
     MOVE_TOXIC,
     MOVE_TRAILBLAZE,
+    MOVE_VOLT_TACKLE,
     MOVE_WISH,
     MOVE_UNAVAILABLE,
 };
@@ -8742,6 +8794,37 @@ static const u16 sEeveeTeachableLearnset[] = {
     MOVE_WEATHER_BALL,
     MOVE_WISH,
     MOVE_WORK_UP,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sEeveeStarterTeachableLearnset[] = {
+    MOVE_ALLURING_VOICE,
+    MOVE_BADDY_BAD,
+    MOVE_BODY_SLAM,
+    MOVE_BOUNCY_BUBBLE,
+    MOVE_BUZZY_BUZZ,
+    MOVE_CALM_MIND,
+    MOVE_DIG,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_FACADE,
+    MOVE_FREEZY_FROST,
+    MOVE_GLITZY_GLOW,
+    MOVE_MUD_SLAP,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_ROAR,
+    MOVE_SAPPY_SEED,
+    MOVE_SHADOW_BALL,
+    MOVE_SIZZLY_SLIDE,
+    MOVE_SLEEP_TALK,
+    MOVE_SPARKLY_SWIRL,
+    MOVE_SUNNY_DAY,
+    MOVE_SWIFT,
+    MOVE_TRAILBLAZE,
+    MOVE_VEEVEE_VOLLEY,
+    MOVE_WEATHER_BALL,
     MOVE_UNAVAILABLE,
 };
 

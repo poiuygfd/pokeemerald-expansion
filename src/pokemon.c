@@ -5939,12 +5939,14 @@ u8 CanLearnTeachableMove(u16 species, u16 move)
         case MOVE_FLOATY_FALL:
         case MOVE_FREEZY_FROST:
         case MOVE_GLITZY_GLOW:
+        case MOVE_PIKA_PAPOW:
         case MOVE_RELIC_SONG:
         case MOVE_SAPPY_SEED:
         case MOVE_SECRET_SWORD:
         case MOVE_SIZZLY_SLIDE:
         case MOVE_SPARKLY_SWIRL:
         case MOVE_SPLISHY_SPLASH:
+        case MOVE_VEEVEE_VOLLEY:
         case MOVE_VOLT_TACKLE:
         case MOVE_ZIPPY_ZAP:
             return FALSE;

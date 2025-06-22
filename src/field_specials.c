@@ -2588,7 +2588,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_3] =
     {
-        COMPOUND_STRING("SPLISHY SPLASH{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("SPLISH SPLASH{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("FLOATY FALL{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("BOUNCY BUBBLE{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("BUZZY BUZZ{CLEAR_TO 0x4E}24BP"),
@@ -2597,7 +2597,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("BADDY BAD{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("ZIPPY ZAP{CLEAR_TO 0x4E}32BP"),
         COMPOUND_STRING("VOLT TACKLE{CLEAR_TO 0x4E}32BP"),
-        COMPOUND_STRING("PIKA KAPOW{CLEAR_TO 0x4E}32BP"),
+        COMPOUND_STRING("PIKA PAPOW{CLEAR_TO 0x4E}32BP"),
         COMPOUND_STRING("SAPPY SEED{CLEAR_TO 0x4E}32BP"),
         COMPOUND_STRING("FREEZY FROST{CLEAR_TO 0x4E}32BP"),
         COMPOUND_STRING("SPARKLY SWIRL{CLEAR_TO 0x4E}32BP"),
@@ -3132,7 +3132,7 @@ static void ShowBattleFrontierTutorWindow(u8 menu, u16 selection)
         .baseBlock = 28,
     };
 
-    if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2)
+    if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_3)
     {
         if (gSpecialVar_0x8006 == 0)
         {
@@ -3202,7 +3202,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         BattleFrontier_Lounge7_Text_BaddyBadDesc,
         BattleFrontier_Lounge7_Text_ZippyZapDesc,
         BattleFrontier_Lounge7_Text_VoltTackleDesc,
-        BattleFrontier_Lounge7_Text_PikaKapowDesc,
+        BattleFrontier_Lounge7_Text_PikaPapowDesc,
         BattleFrontier_Lounge7_Text_SappySeedDesc,
         BattleFrontier_Lounge7_Text_FreezyFrostDesc,
         BattleFrontier_Lounge7_Text_SparklySwirlDesc,
