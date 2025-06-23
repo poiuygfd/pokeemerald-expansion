@@ -1,39 +1,3 @@
-static const u16 sFrontierExchangeCorner_Decor1[] =
-{
-    DECOR_KISS_POSTER,
-    DECOR_KISS_CUSHION,
-    DECOR_SMOOCHUM_DOLL,
-    DECOR_TOGEPI_DOLL,
-    DECOR_MEOWTH_DOLL,
-    DECOR_CLEFAIRY_DOLL,
-    DECOR_DITTO_DOLL,
-    DECOR_CYNDAQUIL_DOLL,
-    DECOR_CHIKORITA_DOLL,
-    DECOR_TOTODILE_DOLL,
-    ITEM_LIST_END
-};
-
-static const u16 sFrontierExchangeCorner_Decor2[] =
-{
-    DECOR_LAPRAS_DOLL,
-    DECOR_SNORLAX_DOLL,
-    DECOR_VENUSAUR_DOLL,
-    DECOR_CHARIZARD_DOLL,
-    DECOR_BLASTOISE_DOLL,
-    ITEM_LIST_END
-};
-
-static const u16 sFrontierExchangeCorner_Vitamins[] =
-{
-    ITEM_PROTEIN,
-    ITEM_CALCIUM,
-    ITEM_IRON,
-    ITEM_ZINC,
-    ITEM_CARBOS,
-    ITEM_HP_UP,
-    ITEM_LIST_END
-};
-
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 {
     ITEM_LEFTOVERS,
@@ -48,43 +12,85 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     ITEM_LIST_END
 };
 
-static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
+static const u16 sFrontierExchangeCorner_Decors[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KissCushionDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_SmoochumDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc,
-    gText_Exit,
+    DECOR_KISS_POSTER,
+    DECOR_KISS_CUSHION,
+    DECOR_SMOOCHUM_DOLL,
+    DECOR_TOGEPI_DOLL,
+    DECOR_MEOWTH_DOLL,
+    DECOR_CLEFAIRY_DOLL,
+    DECOR_DITTO_DOLL,
+    DECOR_LOTAD_DOLL,
+    DECOR_SEEDOT_DOLL,
+    DECOR_CYNDAQUIL_DOLL,
+    DECOR_CHIKORITA_DOLL,
+    DECOR_TOTODILE_DOLL,
+    DECOR_LAPRAS_DOLL,
+    DECOR_SNORLAX_DOLL,
+    DECOR_VENUSAUR_DOLL,
+    DECOR_CHARIZARD_DOLL,
+    DECOR_BLASTOISE_DOLL,
+    DECOR_REGIROCK_DOLL,
+    DECOR_REGICE_DOLL,
+    DECOR_REGISTEEL_DOLL,
+    ITEM_LIST_END
 };
 
-static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
+static const u16 sFrontierExchangeCorner_EvolutionItems[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    gText_Exit
+    ITEM_LINKING_CORD,
+    ITEM_UPGRADE,
+    ITEM_DUBIOUS_DISC,
+    ITEM_AUSPICIOUS_ARMOR,
+    ITEM_MALICIOUS_ARMOR,
+    ITEM_RAZOR_FANG,
+    ITEM_WHIPPED_DREAM,
+    ITEM_REAPER_CLOTH,
+    ITEM_KINGS_ROCK,
+    ITEM_GALARICA_CUFF,
+    ITEM_GALARICA_WREATH,
+    ITEM_PROTECTOR,
+    ITEM_DEEP_SEA_TOOTH,
+    ITEM_DEEP_SEA_SCALE,
+    ITEM_DRAGON_SCALE,
+    ITEM_LEADERS_CREST,
+    ITEM_METAL_COAT,
+    ITEM_BLACK_AUGURITE,
+    ITEM_PEAT_BLOCK,
+    ITEM_METAL_ALLOY,
+    ITEM_LIST_END
 };
 
-static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
+static const u16 sFrontierExchangeCorner_MegaStones[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_IronDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ZincDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc,
-    gText_Exit
+    ITEM_VENUSAURITE,
+    ITEM_CHARIZARDITE_X,
+    ITEM_CHARIZARDITE_Y,
+    ITEM_BLASTOISINITE,
+    ITEM_BEEDRILLITE,
+    ITEM_GENGARITE,
+    ITEM_MEWTWONITE_X,
+    ITEM_MEWTWONITE_Y,
+    ITEM_STEELIXITE,
+    ITEM_SCIZORITE,
+    ITEM_HOUNDOOMINITE,
+    ITEM_TYRANITARITE,
+    ITEM_SCEPTILITE,
+    ITEM_BLAZIKENITE,
+    ITEM_SWAMPERTITE,
+    ITEM_SALAMENCITE,
+    ITEM_METAGROSSITE,
+    ITEM_LATIASITE,
+    ITEM_LATIOSITE,
+    ITEM_GARCHOMPITE,
+    ITEM_ABOMASITE,
+    ITEM_AUDINITE,
+    ITEM_DIANCITE,
+    ITEM_LIST_END
 };
 
-static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
+static const u8 *const sFrontierExchangeCorner_HoldItemDescriptions[] =
 {
     BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
     BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
@@ -95,5 +101,83 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_DecorDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_KissCushionDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SmoochumDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LotadDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SeedotDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LaprasDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SnorlaxDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_VenusaurDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CharizardDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_BlastoiseDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RegirockDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RegiceDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RegisteelDollDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_EvolutionItemDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_MegaStoneDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaStoneDesc,
     gText_Exit
 };
