@@ -5495,7 +5495,7 @@ Gender: Male
 Music: Male
 Items: Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Riolu
 Level: 15
@@ -5507,15 +5507,15 @@ Nature: Jolly
 - Metal Claw
 - Coaching
 
-Machop
+Machop @ Nugget
 Level: 16
 Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
 Nature: Adamant
-- Karate Chop
-- Seismic Toss
-- Knock Off
+- Low Kick
+- Fling
+- Focus Energy
 
 Stufful
 Level: 18

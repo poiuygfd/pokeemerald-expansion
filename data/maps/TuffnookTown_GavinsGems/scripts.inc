@@ -10,6 +10,7 @@ TuffnookTown_GavinsGems_EventScript_Gavin::
 	waitmovement 0
 	message TuffnookTown_GavinsGems_Text_OhWowACustomer
 	waitmessage
+	goto_if_set FLAG_IS_CHAMPION, TuffnookTown_GavinsGems_EventScript_PostGameShop
 	pokemart TuffnookTown_GavinsGems_Pokemart_TypeGems
 	msgbox TuffnookTown_GavinsGems_Text_HaveAGoodOneKid, MSGBOX_DEFAULT
 	setflag FLAG_MET_GAVIN
@@ -21,13 +22,46 @@ TuffnookTown_GavinsGems_EventScript_GavinRepeat::
 	faceplayer
 	message TuffnookTown_GavinsGems_Text_WelcomeBackKid
 	waitmessage
+	goto_if_set FLAG_IS_CHAMPION, TuffnookTown_GavinsGems_EventScript_PostGameShop
 	pokemart TuffnookTown_GavinsGems_Pokemart_TypeGems
+	msgbox TuffnookTown_GavinsGems_Text_HaveAGoodOneKid, MSGBOX_DEFAULT
+	release
+	end
+
+TuffnookTown_GavinsGems_EventScript_PostGameShop::
+	pokemart TuffnookTown_GavinsGems_Pokemart_TypeGemsPostGame
 	msgbox TuffnookTown_GavinsGems_Text_HaveAGoodOneKid, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 TuffnookTown_GavinsGems_Pokemart_TypeGems:
+	.2byte ITEM_NORMAL_GEM
+	.2byte ITEM_GRASS_GEM
+	.2byte ITEM_FIRE_GEM
+	.2byte ITEM_WATER_GEM
+	.2byte ITEM_ELECTRIC_GEM
+	.2byte ITEM_FLYING_GEM
+	.2byte ITEM_BUG_GEM
+	.2byte ITEM_FIGHTING_GEM
+	.2byte ITEM_PSYCHIC_GEM
+	.2byte ITEM_POISON_GEM
+	.2byte ITEM_ROCK_GEM
+	.2byte ITEM_GROUND_GEM
+	.2byte ITEM_GHOST_GEM
+	.2byte ITEM_ICE_GEM
+	.2byte ITEM_DRAGON_GEM
+	.2byte ITEM_DARK_GEM
+	.2byte ITEM_STEEL_GEM
+	.2byte ITEM_FAIRY_GEM
+	pokemartlistend
+
+	.align 2
+TuffnookTown_GavinsGems_Pokemart_TypeGemsPostGame:
+	.2byte ITEM_DAMP_ROCK
+	.2byte ITEM_HEAT_ROCK
+	.2byte ITEM_SMOOTH_ROCK
+	.2byte ITEM_ICY_ROCK
 	.2byte ITEM_NORMAL_GEM
 	.2byte ITEM_GRASS_GEM
 	.2byte ITEM_FIRE_GEM

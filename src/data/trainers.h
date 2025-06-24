@@ -13796,7 +13796,7 @@ F_TRAINER_FEMALE |
 #line 5497
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 5498
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_ACE_POKEMON,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_ACE_POKEMON | AI_FLAG_FORCE_SETUP_FIRST_TURN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -13826,6 +13826,8 @@ F_TRAINER_FEMALE |
 #line 5510
             .species = SPECIES_MACHOP,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 5510
+            .heldItem = ITEM_NUGGET,
 #line 5514
             .ev = TRAINER_PARTY_EVS(150, 100, 0, 0, 0, 0),
 #line 5513
@@ -13839,9 +13841,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 5516
-                MOVE_KARATE_CHOP,
-                MOVE_SEISMIC_TOSS,
-                MOVE_KNOCK_OFF,
+                MOVE_LOW_KICK,
+                MOVE_FLING,
+                MOVE_FOCUS_ENERGY,
             },
             },
             {

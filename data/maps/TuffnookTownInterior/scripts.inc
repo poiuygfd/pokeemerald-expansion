@@ -21,6 +21,14 @@ TuffnookTownInterior_EventScript_Lass::
 	msgbox TuffnookTownInterior_Text_ScaryCave, MSGBOX_NPC
 	end
 
+TuffnookTownInterior_EventScript_OldMan::
+	msgbox TuffnookTownInterior_Text_LivedHereAllMyLife, MSGBOX_NPC
+	end
+
+TuffnookTownInterior_EventScript_Camper::
+	msgbox TuffnookTownInterior_Text_ThatShopOverThere, MSGBOX_NPC
+	end
+
 TuffnookTownInterior_EventScript_PowerUpPunchMan::
 	lock
 	faceplayer
@@ -152,6 +160,32 @@ TuffnookTownInterior_Text_ScaryCave:
 	.string "POKéMON of terrifying strength.\p"
 	.string "Because of that, most people have\n"
 	.string "been too scared to enter the cave…$"
+
+TuffnookTownInterior_Text_LivedHereAllMyLife:
+	.string "I've lived here all me life!\p"
+	.string "Back in my day, the people of the desert\n"
+	.string "dug out this cave out of desparation.\p"
+	.string "We were caught in a particularly bad\n"
+	.string "sandstorm, and people were getting\l"
+	.string "hurt by the day!\p"
+	.string "Since then, we've further hollowed out\n"
+	.string "and fully moved into this cave.\p"
+	.string "We've even carved out a niche in some\n"
+	.string "mining exports ye can't get anywhere\l"
+	.string "else in HOENN!\p"
+	.string "Hmm? What was that, young'un?\n"
+	.string "Why didn't we just… leave the desert…?\p"
+	.string "Gya ha ha! I guess we always were a\n"
+	.string "stubborn bunch!$"
+
+TuffnookTownInterior_Text_ThatShopOverThere:
+	.string "That shop over there sells some very\n"
+	.string "pretty and cleanly cut gemstones.\p"
+	.string "Problem is though…\n"
+	.string "The are ridiculously expensive!\p"
+	.string "I guess gemstones are just expensive…\p"
+	.string "But I don't think that man gets very\n"
+	.string "much business as a result…$"
 
 TuffnookTownInterior_Text_BaneOfWalls:
 	.string "NO WALL CAN WITHSTAND MY MIGHT!\p"

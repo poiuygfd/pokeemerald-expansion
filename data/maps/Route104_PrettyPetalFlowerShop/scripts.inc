@@ -101,13 +101,34 @@ Route104_PrettyPetalFlowerShop_EventScript_MulchMan::
 	faceplayer
 	message Route104_PrettyPetalFlowerShop_Text_IAmTheMulchMan
 	waitmessage
+	goto_if_set FLAG_IS_CHAMPION, Route104_PrettyPetalFlowerShop_EventScript_PostGameShop
 	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Mulch
+	msgbox Route104_PrettyPetalFlowerShop_Text_MulchYouLater, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_PostGameShop::
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_MulchPostGame
 	msgbox Route104_PrettyPetalFlowerShop_Text_MulchYouLater, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 Route104_PrettyPetalFlowerShop_Pokemart_Mulch:
+	.2byte ITEM_GROWTH_MULCH
+	.2byte ITEM_DAMP_MULCH
+	.2byte ITEM_STABLE_MULCH
+	.2byte ITEM_GOOEY_MULCH
+	.2byte ITEM_RICH_MULCH
+	.2byte ITEM_SURPRISE_MULCH
+	pokemartlistend
+
+	.align 2
+Route104_PrettyPetalFlowerShop_Pokemart_MulchPostGame:
+	.2byte ITEM_ELECTRIC_SEED
+	.2byte ITEM_PSYCHIC_SEED
+	.2byte ITEM_MISTY_SEED
+	.2byte ITEM_GRASSY_SEED
 	.2byte ITEM_GROWTH_MULCH
 	.2byte ITEM_DAMP_MULCH
 	.2byte ITEM_STABLE_MULCH

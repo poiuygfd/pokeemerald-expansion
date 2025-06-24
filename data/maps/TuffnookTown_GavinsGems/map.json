@@ -39,5 +39,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_HARD_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_GAVINS_GEMS_HARD_STONE"
+    }
+  ]
 }

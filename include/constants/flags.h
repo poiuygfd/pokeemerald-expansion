@@ -1273,13 +1273,13 @@
 #define FLAG_HIDDEN_ITEM_TUFFNOOK_ROCKY_HELMET                      0x4BF // Hidden Rocky Helmet
 #define FLAG_ITEM_NAVEL_ROCK_FLAME_ORB                              0x4C0 // Navel Rock Flame Orb
 #define FLAG_ITEM_NAVEL_ROCK_TOXIC_ORB                              0x4C1 // Navel Rock Toxic Orb
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_127_DAMP_ROCK                        0x4C2 // Hidden Damp Rock
+#define FLAG_HIDDEN_ITEM_FIERY_PATH_HEAT_ROCK                       0x4C3 // Hidden Heat Rock
+#define FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK                      0x4C4 // Hidden Smooth Rock
+#define FLAG_HIDDEN_ITEM_SHOAL_CAVE_ICY_ROCK                        0x4C5 // Hidden Icy Rock
+#define FLAG_HIDE_GAME_CORNER_LOADED_DICE_MAN                       0x4C6 // Loaded Dice Gift (Appears after 4 Badges)
+#define FLAG_RECEIVED_LOADED_DICE                                   0x4C7 // Received Loaded Dice Gift
+#define FLAG_HIDDEN_ITEM_GAVINS_GEMS_HARD_STONE                     0x4C8 // Hidden Hard Stone
 #define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag

@@ -1,4 +1,5 @@
 MauvilleCity_GameCorner_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_GameCorner_OnTransition
 	.byte 0
 
     @ Game Corner prices
@@ -16,6 +17,19 @@ MauvilleCity_GameCorner_MapScripts::
 	.set GIMMIGHOUL_COIN_1, 5
 	.set GIMMIGHOUL_COIN_9, 45
 	.set GIMMIGHOUL_COIN_99, 495
+
+MauvilleCity_GameCorner_OnTransition:
+	call MauvilleCity_GameCorner_EventScript_ShowOrHideLoadedDiceMan
+	end
+
+MauvilleCity_GameCorner_EventScript_ShowOrHideLoadedDiceMan::
+	goto_if_unset FLAG_BADGE04_GET, MauvilleCity_GameCorner_EventScript_HideLoadedDiceMan
+	clearflag FLAG_HIDE_GAME_CORNER_LOADED_DICE_MAN
+	return
+
+MauvilleCity_GameCorner_EventScript_HideLoadedDiceMan::
+	setflag FLAG_HIDE_GAME_CORNER_LOADED_DICE_MAN
+	return
 
 MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	lock
@@ -600,6 +614,22 @@ MauvilleCity_GameCorner_EventScript_Maniac::
 	goto MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
 	end
 
+MauvilleCity_GameCorner_EventScript_LoadedDiceMan::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_LOADED_DICE, MauvilleCity_GameCorner_EventScript_LoadedDiceReceived
+	msgbox MauvilleCity_GameCorner_Text_WantedToRigGames, MSGBOX_DEFAULT
+	giveitem ITEM_LOADED_DICE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_LOADED_DICE
+	goto MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
+	end
+
+MauvilleCity_GameCorner_EventScript_LoadedDiceReceived:
+	msgbox MauvilleCity_GameCorner_Text_MightBeGettingHooked, MSGBOX_DEFAULT
+	goto MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
+	end
+
 MauvilleCity_GameCorner_EventScript_Woman::
 	lock
 	faceplayer
@@ -942,6 +972,22 @@ MauvilleCity_GameCorner_Text_DifficultToStopOn7:
 	.string "right on “7.”\p"
 	.string "If it stops on “7” during the REEL TIME\n"
 	.string "bonus game, you'll receive extra COINS.$"
+
+MauvilleCity_GameCorner_Text_WantedToRigGames:
+	.string "I came here with a weighted dice cause\n"
+	.string "I figured I could make easy money by\l"
+	.string "rigging the games in my favor…\p"
+	.string "But all they have here are slots and\n"
+	.string "roulettes! No dice games whatsoever!\p"
+	.string "Tch! Won't be needing this junk!\n"
+	.string "Here, kid, you can have this.\p"
+	.string "Good luck finding a use for it though…$"
+
+MauvilleCity_GameCorner_Text_MightBeGettingHooked:
+	.string "I figured since I was already here\n"
+	.string "that I would try playing legit…\p"
+	.string "Oh man, this is bad.\n"
+	.string "I think I might be getting hooked…$"
 
 MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 	.string "Here's some information for you\n"
