@@ -1,14 +1,31 @@
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 {
-    ITEM_LEFTOVERS,
-    ITEM_WHITE_HERB,
-    ITEM_QUICK_CLAW,
-    ITEM_MENTAL_HERB,
-    ITEM_BRIGHT_POWDER,
-    ITEM_CHOICE_BAND,
-    ITEM_KINGS_ROCK,
-    ITEM_FOCUS_BAND,
+    ITEM_AIR_BALLOON,
+    ITEM_SHELL_BELL,
+    ITEM_ABILITY_SHIELD,
     ITEM_SCOPE_LENS,
+    ITEM_EXPERT_BELT,
+    ITEM_FLAME_ORB,
+    ITEM_TOXIC_ORB,
+    ITEM_WEAKNESS_POLICY,
+    ITEM_BLUNDER_POLICY,
+    ITEM_FOCUS_BAND,
+    ITEM_FOCUS_SASH,
+    ITEM_THROAT_SPRAY,
+    ITEM_LIGHT_CLAY,
+    ITEM_TERRAIN_EXTENDER,
+    ITEM_EVIOLITE,
+    ITEM_HEAVY_DUTY_BOOTS,
+    ITEM_LOADED_DICE,
+    ITEM_CHOICE_BAND,
+    ITEM_CHOICE_SPECS,
+    ITEM_CHOICE_SCARF,
+    ITEM_LEFTOVERS,
+    ITEM_LIFE_ORB,
+    ITEM_CLEAR_AMULET,
+    ITEM_COVERT_CLOAK,
+    ITEM_ROCKY_HELMET,
+    ITEM_ASSAULT_VEST,
     ITEM_LIST_END
 };
 
@@ -39,6 +56,7 @@ static const u16 sFrontierExchangeCorner_Decors[] =
 
 static const u16 sFrontierExchangeCorner_EvolutionItems[] =
 {
+    ITEM_EVERSTONE,
     ITEM_LINKING_CORD,
     ITEM_UPGRADE,
     ITEM_DUBIOUS_DISC,
@@ -46,6 +64,7 @@ static const u16 sFrontierExchangeCorner_EvolutionItems[] =
     ITEM_MALICIOUS_ARMOR,
     ITEM_RAZOR_FANG,
     ITEM_WHIPPED_DREAM,
+    ITEM_PRISM_SCALE,
     ITEM_REAPER_CLOTH,
     ITEM_KINGS_ROCK,
     ITEM_GALARICA_CUFF,
@@ -92,15 +111,32 @@ static const u16 sFrontierExchangeCorner_MegaStones[] =
 
 static const u8 *const sFrontierExchangeCorner_HoldItemDescriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AirBalloonDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ShellBellDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AbilityShieldDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ExpertBeltDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_FlameOrbDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ToxicOrbDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicyDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ThroatSprayDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LightClayDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_TerrainExtenderDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvioliteDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_HeavyDutyBootsDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LoadedDiceDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarfDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LifeOrbDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ClearAmuletDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CovertCloakDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RockyHelmetDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AssaultVestDesc,
     gText_Exit
 };
 
@@ -131,6 +167,8 @@ static const u8 *const sFrontierExchangeCorner_DecorDescriptions[] =
 
 static const u8 *const sFrontierExchangeCorner_EvolutionItemDescriptions[] =
 {
+    BattleFrontier_ExchangeServiceCorner_Text_EverstoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
     BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
     BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
     BattleFrontier_ExchangeServiceCorner_Text_EvoItemDesc,
