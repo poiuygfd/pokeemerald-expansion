@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/TuffnookTown_GavinsGems/border.bin",
       "blockdata_filepath": "data/layouts/TuffnookTown_GavinsGems/map.bin"
+    },
+    {
+      "id": "LAYOUT_SOMEWHERE_ELSE",
+      "name": "SomewhereElse_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SomewhereElse/border.bin",
+      "blockdata_filepath": "data/layouts/SomewhereElse/map.bin"
     }
   ]
 }

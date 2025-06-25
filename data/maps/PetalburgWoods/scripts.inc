@@ -1,5 +1,14 @@
 PetalburgWoods_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, PetalburgWoods_OnLoad
 	.byte 0
+
+PetalburgWoods_OnLoad:
+	call_if_set FLAG_OBTAINED_EGG, PetalburgWoods_EventScript_CloseEggPath
+	end
+
+PetalburgWoods_EventScript_CloseEggPath::
+	setmetatile 42, 35, METATILE_General_TreeCorner, TRUE
+	return
 
 PetalburgWoods_EventScript_DevonResearcherLeft::
 	lockall

@@ -1177,3 +1177,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TuffnookTown_House2/scripts.inc"
 
 	.include "data/maps/TuffnookTown_GavinsGems/scripts.inc"
+
+	.include "data/maps/SomewhereElse/scripts.inc"
