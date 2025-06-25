@@ -46,6 +46,43 @@ LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale:
 	release
 	end
 
+LilycoveCity_DepartmentStoreRooftop_EventScript_ItemSaleWoman::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_DepartmentStoreRooftop_Pokemart_ClearOutSale
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftop_Pokemart_ClearOutSale:
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_QUICK_CLAW
+	.2byte ITEM_SAFETY_GOGGLES
+	.2byte ITEM_UTILITY_UMBRELLA
+	.2byte ITEM_EJECT_BUTTON
+	.2byte ITEM_EJECT_PACK
+	.2byte ITEM_RED_CARD
+	.2byte ITEM_BRIGHT_POWDER
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ZOOM_LENS
+	.2byte ITEM_METRONOME
+	.2byte ITEM_IRON_BALL
+	.2byte ITEM_LAGGING_TAIL
+	.2byte ITEM_BLACK_SLUDGE
+	.2byte ITEM_STICKY_BARB
+	.2byte ITEM_SHED_SHELL
+	.2byte ITEM_BIG_ROOT
+	.2byte ITEM_FLOAT_STONE
+	.2byte ITEM_ROOM_SERVICE
+	.2byte ITEM_PROTECTIVE_PADS
+	.2byte ITEM_PUNCHING_GLOVE
+	.2byte ITEM_BERSERK_GENE
+	pokemartlistend
+
 LilycoveCity_DepartmentStoreRooftop_EventScript_Man::
 	lock
 	faceplayer

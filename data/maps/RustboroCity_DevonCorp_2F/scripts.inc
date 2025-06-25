@@ -70,6 +70,22 @@ RustboroCity_DevonCorp_2F_EventScript_ReceivedAbilityCapsule::
 	release
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_BoxLinkScientist::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BOX_LINK, RustboroCity_DevonCorp_2F_EventScript_ReceivedBoxLink
+	msgbox RustboroCity_DevonCorp_2F_Text_GiveBoxLink, MSGBOX_DEFAULT
+	giveitem ITEM_POKEMON_BOX_LINK
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_BOX_LINK
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceivedBoxLink::
+	msgbox RustboroCity_DevonCorp_2F_Text_RecievedBoxLink, MSGBOX_DEFAULT
+	release
+	end
+
 RustboroCity_DevonCorp_2F_EventScript_FossilScientist::
 	lock
 	faceplayer
@@ -336,6 +352,19 @@ RustboroCity_DevonCorp_2F_Text_GiveAbilityCapsule:
 RustboroCity_DevonCorp_2F_Text_RecievedCapsule:
 	.string "I've heard that we've sent a batch\n"
 	.string "to the DEPARTMENT STORE in LILYCOVE.$"
+
+RustboroCity_DevonCorp_2F_Text_GiveBoxLink:
+	.string "I've been at work on a machine that\n"
+	.string "can access the BOX SYSTEM on the go…\p"
+	.string "And it's going great!\p"
+	.string "Here, I heard you've really helped\n"
+	.string "us out of a pinch with TEAM AQUA.\p"
+	.string "I'd like you to take this.\n"
+	.string "On the house!$"
+
+RustboroCity_DevonCorp_2F_Text_RecievedBoxLink:
+	.string "Just select that while in your BAG\n"
+	.string "and you can swap your PARTY any time!$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "I've been trying to develop a device\n"

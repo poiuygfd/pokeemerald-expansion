@@ -236,8 +236,14 @@ RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "up before you go on your way.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
-	.string "go with caution and care!$"
+	.string "MR. STONE: Oh, and one more thing just\n"
+	.string "before you go, {PLAYER}{KUN}.\p"
+	.string "My scientists at DEVON are always hard\n"
+	.string "at work on revolutionary new tech.\p"
+	.string "Try talking to some of them downstairs.\n"
+	.string "They might give you some free samples!\p"
+	.string "Well, then, {PLAYER}{KUN}, go with\n"
+	.string "caution and care!$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
 	.string "MR. STONE: I'm counting on you!$"

@@ -1,3 +1,62 @@
 MeteorFalls_B1F_2R_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MeteorFalls_B1F_2R_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MeteorFalls_B1F_2R_OnResume
 	.byte 0
 
+MeteorFalls_B1F_2R_OnTransition:
+	call_if_set FLAG_IS_CHAMPION, MeteorFalls_B1F_2R_EventScript_TryShowRoaringMoon
+	end
+
+MeteorFalls_B1F_2R_EventScript_TryShowRoaringMoon::
+	call_if_set FLAG_CAUGHT_ROARING_MOON, MeteorFalls_B1F_2R_EventScript_HideRoaringMoon
+	call_if_unset FLAG_CAUGHT_ROARING_MOON, MeteorFalls_B1F_2R_EventScript_ShowRoaringMoon
+	return
+
+MeteorFalls_B1F_2R_EventScript_ShowRoaringMoon::
+	goto_if_set FLAG_DEFEATED_ROARING_MOON, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_ROARING_MOON
+	return
+
+MeteorFalls_B1F_2R_EventScript_HideRoaringMoon::
+	setflag FLAG_HIDE_ROARING_MOON
+	return
+
+MeteorFalls_B1F_2R_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MeteorFalls_B1F_2R_EventScript_TryRemoveRoaringMoon
+	end
+
+MeteorFalls_B1F_2R_EventScript_TryRemoveRoaringMoon::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_METEOR_FALLS_ROARING_MOON
+	return
+
+MeteorFalls_B1F_2R_EventScript_RoaringMoon::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ROARING_MOON, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ROARING_MOON, 40
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MeteorFalls_B1F_2R_EventScript_DefeatedRoaringMoon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MeteorFalls_B1F_2R_EventScript_RanFromRoaringMoon
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MeteorFalls_B1F_2R_EventScript_RanFromRoaringMoon
+	setflag FLAG_CAUGHT_ROARING_MOON
+	release
+	end
+
+MeteorFalls_B1F_2R_EventScript_DefeatedRoaringMoon::
+	setflag FLAG_DEFEATED_ROARING_MOON
+	setvar VAR_0x8004, SPECIES_ROARING_MOON
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+MeteorFalls_B1F_2R_EventScript_RanFromRoaringMoon::
+	setvar VAR_0x8004, SPECIES_ROARING_MOON
+	goto Common_EventScript_LegendaryFlewAway
+	end

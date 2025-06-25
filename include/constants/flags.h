@@ -1280,9 +1280,9 @@
 #define FLAG_HIDE_GAME_CORNER_LOADED_DICE_MAN                       0x4C6 // Loaded Dice Gift (Appears after 4 Badges)
 #define FLAG_RECEIVED_LOADED_DICE                                   0x4C7 // Received Loaded Dice Gift
 #define FLAG_HIDDEN_ITEM_GAVINS_GEMS_HARD_STONE                     0x4C8 // Hidden Hard Stone
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
+#define FLAG_HIDDEN_ITEM_ALTERING_CAVE_BERSERK_GENE                 0x4C9 // Hidden Berserk Gene
+#define FLAG_RECEIVED_OVAL_CHARM                                    0x4CA // Received Oval Charm
+#define FLAG_RECEIVED_BOX_LINK                                      0x4CB // Received Pokemon Box Link
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag

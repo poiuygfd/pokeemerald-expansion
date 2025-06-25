@@ -294,6 +294,32 @@ BattleFrontier_OutsideWest_EventScript_Man4::
 	release
 	end
 
+BattleFrontier_OutsideWest_EventScript_OldSeaMapSailor::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_OLD_SEA_MAP, BattleFrontier_OutsideWest_EventScript_ObtainedMap
+	msgbox BattleFrontier_OutsideWest_Text_LostOnAVoyage, MSGBOX_DEFAULT
+	giveitem ITEM_OLD_SEA_MAP
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+	msgbox BattleFrontier_OutsideWest_Text_GonnaWatchSomeBattles, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_FRONTIER_OLD_SEA_MAP_SAILOR, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+BattleFrontier_OutsideWest_EventScript_ObtainedMap::
+	lock
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_GonnaWatchSomeBattles, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_FRONTIER_OLD_SEA_MAP_SAILOR, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
 BattleFrontier_OutsideWest_EventScript_PokefanF::
 	msgbox BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier, MSGBOX_NPC
 	end
@@ -515,3 +541,25 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "Oh, challenges can wait. I feel driven\n"
 	.string "to find the delightful creature!$"
 
+BattleFrontier_OutsideWest_Text_LostOnAVoyage:
+	.string "Aggghhh!\n"
+	.string "Blast it all!\p"
+	.string "I've been sailing 'round these parts\n"
+	.string "trying to follow this ragged old map\l"
+	.string "in search of rarities…\p"
+	.string "I thought I'd finally found the right\n"
+	.string "island this time…\p"
+	.string "But its just some island full o' battles\n"
+	.string "and trainers! Where's the treasure?!\p"
+	.string "This map is so old, I can't navigate\n"
+	.string "properly with it!\p"
+	.string "I give up! I never wanna see this blasted\n"
+	.string "piece o' junk ever again!\p"
+	.string "Here! Maybe you can find someone who can\n"
+	.string "actually read this thing!$"
+
+BattleFrontier_OutsideWest_Text_GonnaWatchSomeBattles:
+	.string "I'm just gonna watch some battles in\n"
+	.string "that BATTLE DOME over there.\p"
+	.string "Maybe some good entertainment will stop\n"
+	.string "me blood from boiling…$"

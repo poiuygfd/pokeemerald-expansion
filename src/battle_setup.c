@@ -501,9 +501,18 @@ void BattleSetup_StartLegendaryBattle(void)
         break;
     case SPECIES_LUGIA:
     case SPECIES_HO_OH:
+    case SPECIES_ZACIAN:
+    case SPECIES_ZAMAZENTA:
+    case SPECIES_JIRACHI:
+    case SPECIES_DIANCIE:
+    case SPECIES_ZERAORA:
+    case SPECIES_HEATRAN:
+    case SPECIES_OGERPON:
+    case SPECIES_MELOETTA:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
         break;
     case SPECIES_MEW:
+    case SPECIES_MEWTWO:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
     }

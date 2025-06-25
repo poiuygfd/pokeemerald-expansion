@@ -7199,7 +7199,7 @@ const struct Item gItemsInfo[] =
     [ITEM_SEA_INCENSE] =
     {
         .name = _("Sea Incense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = 20,
         .description = sSeaIncenseDesc,
@@ -7233,7 +7233,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ODD_INCENSE] =
     {
         .name = _("Odd Incense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = 20,
         .description = sOddIncenseDesc,
@@ -7249,7 +7249,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ROCK_INCENSE] =
     {
         .name = _("Rock Incense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = 20,
         .description = sRockIncenseDesc,
@@ -7280,7 +7280,7 @@ const struct Item gItemsInfo[] =
     [ITEM_WAVE_INCENSE] =
     {
         .name = _("Wave Incense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = 20,
         .description = sSeaIncenseDesc,
@@ -7296,7 +7296,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ROSE_INCENSE] =
     {
         .name = _("Rose Incense"),
-        .price = (I_PRICE >= GEN_7) ? 2000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = 20,
         .description = sRoseIncenseDesc,
@@ -7312,7 +7312,7 @@ const struct Item gItemsInfo[] =
     [ITEM_LUCK_INCENSE] =
     {
         .name = _("Luck Incense"),
-        .price = (I_PRICE >= GEN_7) ? 11000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_DOUBLE_PRIZE,
         .description = sLuckIncenseDesc,
         .pocket = POCKET_ITEMS,
@@ -7326,7 +7326,7 @@ const struct Item gItemsInfo[] =
     [ITEM_PURE_INCENSE] =
     {
         .name = _("Pure Incense"),
-        .price = (I_PRICE >= GEN_7) ? 6000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_REPEL,
         .description = sPureIncenseDesc,
         .pocket = POCKET_ITEMS,
@@ -14253,11 +14253,11 @@ const struct Item gItemsInfo[] =
     [ITEM_OIL_INCENSE] =
     {
         .name = _("Oil Incense"),
-        .price = (I_PRICE >= GEN_7) ? 11000 : 9600,
+        .price = (I_PRICE >= GEN_7) ? 15000 : 9600,
         .description = COMPOUND_STRING(
-            "A rare incense\n"
-            "made with essential\n"
-            "oils. Effect unknown."),
+            "You can always\n"
+            "trust essential\n"
+            "oils!"),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

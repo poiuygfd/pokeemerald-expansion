@@ -2,6 +2,7 @@ Route115_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, Route115_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route115_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route115_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, Route115_OnResume
 	.byte 0
 
 Route115_OnLoad:
@@ -13,14 +14,69 @@ Route115_OnTransition:
 	call_if_eq VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_HideMapNamePopup
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_115_WEST, AbnormalWeather_StartGroudonWeather
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_115_EAST, AbnormalWeather_StartGroudonWeather
+	call_if_set FLAG_IS_CHAMPION, Route115_EventScript_TryShowIronValiant
 	end
 
 Route115_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+Route115_EventScript_TryShowIronValiant::
+	call_if_set FLAG_CAUGHT_IRON_VALIANT, Route115_EventScript_HideIronValiant
+	call_if_unset FLAG_CAUGHT_IRON_VALIANT, Route115_EventScript_ShowIronValiant
+	return
+
+Route115_EventScript_ShowIronValiant::
+	goto_if_set FLAG_DEFEATED_IRON_VALIANT, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_IRON_VALIANT
+	return
+
+Route115_EventScript_HideIronValiant::
+	setflag FLAG_HIDE_IRON_VALIANT
+	return
+
+Route115_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route115_EventScript_TryRemoveIronValiant
+	end
+
+Route115_EventScript_TryRemoveIronValiant::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ROUTE_115_IRON_VALIANT
+	return
+
 Route115_EventScript_Woman::
 	msgbox Route115_Text_NeverKnowWhenCavePokemonWillAppear, MSGBOX_NPC
+	end
+
+Route115_EventScript_IronValiant::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_IRON_VALIANT, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_IRON_VALIANT, 40
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route115_EventScript_DefeatedIronValiant
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route115_EventScript_RanFromIronValiant
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route115_EventScript_RanFromIronValiant
+	setflag FLAG_CAUGHT_IRON_VALIANT
+	release
+	end
+
+Route115_EventScript_DefeatedIronValiant::
+	setflag FLAG_DEFEATED_IRON_VALIANT
+	setvar VAR_0x8004, SPECIES_IRON_VALIANT
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+Route115_EventScript_RanFromIronValiant::
+	setvar VAR_0x8004, SPECIES_IRON_VALIANT
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 Route115_EventScript_RouteSignRustboro::
