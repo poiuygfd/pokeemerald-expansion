@@ -270,7 +270,7 @@
 #define VAR_VERDANTURF_TENT_PRIZE                        0x40FA
 #define VAR_FALLARBOR_TENT_PRIZE                         0x40FB
 #define VAR_WHITE_ROCK_COUNT                             0x40FC
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
+#define VAR_POKELOT_BALL_PRIZE                           0x40FD
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 

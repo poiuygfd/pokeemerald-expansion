@@ -746,8 +746,8 @@
 
 #define FLAG_UNUSED_0x2B7                                           0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8                                           0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9                                           0x2B9 // Unused Flag
 
+#define FLAG_HIDE_DESTINY_KNOT_LADY                                      0x2B9
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1283,11 +1283,11 @@
 #define FLAG_HIDDEN_ITEM_ALTERING_CAVE_BERSERK_GENE                 0x4C9 // Hidden Berserk Gene
 #define FLAG_RECEIVED_OVAL_CHARM                                    0x4CA // Received Oval Charm
 #define FLAG_RECEIVED_BOX_LINK                                      0x4CB // Received Pokemon Box Link
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_110_ELECTRIC_SEED                    0x4CC // Hidden Electric Seed
+#define FLAG_HIDDEN_ITEM_ROUTE_123_PSYCHIC_SEED                     0x4CD // Hidden Psychic Seed
+#define FLAG_HIDDEN_ITEM_MT_PYRE_MISTY_SEED                         0x4CE // Hidden Misty Seed
+#define FLAG_HIDDEN_ITEM_ROUTE_119_GRASSY_SEED                      0x4CF // Hidden Grassy Seed
+#define FLAG_RECEIVED_DESTINY_KNOT                                  0x4D0 // Received Destiny Knot
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
@@ -1597,8 +1597,8 @@
 #define FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY        (DAILY_FLAGS_START + 0x12)
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13) // Unused Flag
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 0x14)
+#define FLAG_DAILY_PICKED_POKE_BALL                 (DAILY_FLAGS_START + 0x15)
 
-#define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
 #define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag

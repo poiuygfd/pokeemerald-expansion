@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -114,8 +114,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 9,
-      "y": 8,
+      "x": 30,
+      "y": 15,
       "elevation": 0,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL"
@@ -127,6 +127,14 @@
       "elevation": 0,
       "item": "ITEM_MAX_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_MAX_ETHER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_MISTY_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_MISTY_SEED"
     }
   ]
 }

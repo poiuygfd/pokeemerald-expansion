@@ -10,6 +10,7 @@ OldaleTown_OnTransition:
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
+	call OldaleTown_EventScript_ShowOrHideDestinyKnotLady
 	end
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
@@ -27,12 +28,36 @@ OldaleTown_EventScript_MoveMartEmployee::
 	setobjectmovementtype LOCALID_OLDALE_MART_EMPLOYEE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
+OldaleTown_EventScript_ShowOrHideDestinyKnotLady::
+	goto_if_unset FLAG_BADGE01_GET, OldaleTown_EventScript_HideDestinyKnotLady
+	clearflag FLAG_HIDE_DESTINY_KNOT_LADY
+	return
+
+OldaleTown_EventScript_HideDestinyKnotLady::
+	setflag FLAG_HIDE_DESTINY_KNOT_LADY
+	return
+
 OldaleTown_EventScript_TownSign::
 	msgbox OldaleTown_Text_TownSign, MSGBOX_SIGN
 	end
 
 OldaleTown_EventScript_Girl::
 	msgbox OldaleTown_Text_SavingMyProgress, MSGBOX_NPC
+	end
+
+OldaleTown_EventScript_DestinyKnotLady::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_DESTINY_KNOT,OldaleTown_EventScript_ObtainedDestinyKnot
+	msgbox OldaleTown_Text_YourDestiny, MSGBOX_DEFAULT
+	giveitem ITEM_DESTINY_KNOT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_DESTINY_KNOT
+	release
+	end
+
+OldaleTown_EventScript_ObtainedDestinyKnot::
+	msgbox OldaleTown_Text_SeeWhereYouGo, MSGBOX_NPC
 	end
 
 OldaleTown_EventScript_MartEmployee::
@@ -493,6 +518,18 @@ OldaleTown_Text_ObtainedMarin:
 OldaleTown_Text_SavingMyProgress:
 	.string "I want to take a rest, so I'm saving my\n"
 	.string "progress.$"
+
+OldaleTown_Text_YourDestiny:
+	.string "You there…\n"
+	.string "You became a TRAINER just recently, no?\p"
+	.string "And yet, you attained your first GYM\n"
+	.string "BADGE with such haste…\p"
+	.string "I believe it may be your destiny to\n"
+	.string "achieve greatness…$"
+
+OldaleTown_Text_SeeWhereYouGo:
+	.string "Fufufu…\n"
+	.string "I look forward to seeing where you go…$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"

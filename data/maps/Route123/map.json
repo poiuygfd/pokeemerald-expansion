@@ -835,6 +835,14 @@
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 44,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_PSYCHIC_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_PSYCHIC_SEED"
     }
   ]
 }

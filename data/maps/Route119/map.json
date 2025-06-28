@@ -846,8 +846,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 17,
-      "y": 82,
+      "x": 21,
+      "y": 122,
       "elevation": 3,
       "item": "ITEM_CALCIUM",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM"
@@ -918,6 +918,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route119_EventScript_TrainerTipsDecoration"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 82,
+      "elevation": 0,
+      "item": "ITEM_GRASSY_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_GRASSY_SEED"
     }
   ]
 }

@@ -797,6 +797,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route110_EventScript_CyclingRoadSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 34,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_ELECTRIC_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_ELECTRIC_SEED"
     }
   ]
 }
