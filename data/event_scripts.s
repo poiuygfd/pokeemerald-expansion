@@ -1159,23 +1159,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SecludedCove/scripts.inc"
 	.include "data/maps/NeglectedShrine/scripts.inc"
 	.include "data/scripts/dexnav.inc"
-
 	.include "data/maps/TuffnookTownExterior/scripts.inc"
-
 	.include "data/maps/TuffnookTown_Mart/scripts.inc"
-
 	.include "data/maps/TuffnookTown_PokemonCenter_1F/scripts.inc"
-
 	.include "data/maps/TuffnookTown_PokemonCenter_2F/scripts.inc"
-
 	.include "data/maps/TuffnookTownInterior/scripts.inc"
-
 	.include "data/maps/TuffnookTown_House1/scripts.inc"
-
 	.include "data/maps/TuffnookTown_House3/scripts.inc"
-
 	.include "data/maps/TuffnookTown_House2/scripts.inc"
-
 	.include "data/maps/TuffnookTown_GavinsGems/scripts.inc"
-
 	.include "data/maps/SomewhereElse/scripts.inc"
+	.include "data/maps/TuffnookTown_DepthsEntrance/scripts.inc"
+	.include "data/scripts/the_depths.inc"
+	.include "data/maps/TheDepths_B1F/scripts.inc"
+	.include "data/maps/TheDepths_B2F/scripts.inc"

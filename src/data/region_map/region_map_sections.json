@@ -1726,6 +1726,22 @@
       "y": 1,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_THE_DEPTHS",
+      "name": "THE DEPTHS",
+      "x": 9,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SOMEWHERE_ELSE",
+      "name": "SOMEWHERE ELSE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

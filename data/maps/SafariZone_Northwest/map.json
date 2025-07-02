@@ -65,13 +65,7 @@
       "flag": "FLAG_ITEM_SAFARI_ZONE_KANGASKHANITE"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
 }

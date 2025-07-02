@@ -589,7 +589,9 @@
     "NavelRock_Down11",
     "NavelRock_Bottom",
     "TrainerHill_Elevator",
-    "SomewhereElse"
+    "SomewhereElse",
+    "TheDepths_B1F",
+    "TheDepths_B2F"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
@@ -634,6 +636,7 @@
     "TuffnookTown_House1",
     "TuffnookTown_House2",
     "TuffnookTown_House3",
-    "TuffnookTown_GavinsGems"
+    "TuffnookTown_GavinsGems",
+    "TuffnookTown_DepthsEntrance"
   ]
 }

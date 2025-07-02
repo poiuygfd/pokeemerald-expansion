@@ -271,8 +271,8 @@
 #define VAR_FALLARBOR_TENT_PRIZE                         0x40FB
 #define VAR_WHITE_ROCK_COUNT                             0x40FC
 #define VAR_POKELOT_BALL_PRIZE                           0x40FD
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_DEPTHS_STATE                                 0x40FE
+#define VAR_DEPTHS_MON_STATE                             0x40FF
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

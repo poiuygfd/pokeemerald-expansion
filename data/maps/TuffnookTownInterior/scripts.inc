@@ -10,11 +10,23 @@ TuffnookTownInterior_EventScript_Boy::
 	end
 
 TuffnookTownInterior_EventScript_YoungBoy::
-	msgbox TuffnookTownInterior_Text_RockPaperScissors, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox TuffnookTownInterior_Text_RockPaperScissors, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
 	end
 
 TuffnookTownInterior_EventScript_YoungGirl::
-	msgbox TuffnookTownInterior_Text_IWillNotYield, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox TuffnookTownInterior_Text_IWillNotYield, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
 	end
 
 TuffnookTownInterior_EventScript_Lass::
@@ -182,7 +194,7 @@ TuffnookTownInterior_Text_ThatShopOverThere:
 	.string "That shop over there sells some very\n"
 	.string "pretty and cleanly cut gemstones.\p"
 	.string "Problem is though…\n"
-	.string "The are ridiculously expensive!\p"
+	.string "They are ridiculously expensive!\p"
 	.string "I guess gemstones are just expensive…\p"
 	.string "But I don't think that man gets very\n"
 	.string "much business as a result…$"

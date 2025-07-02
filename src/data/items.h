@@ -11514,7 +11514,7 @@ const struct Item gItemsInfo[] =
         .name = _("TM71"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Punching atttack\n"
+            "Punching attack\n"
             "that raises Attack\n"
             "of the user."),
         .importance = I_REUSABLE_TMS,

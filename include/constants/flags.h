@@ -744,10 +744,10 @@
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
 #define FLAG_HIDE_OGERPON_MASKS                                     0x2B6 // Hide Ogerpon's Masks
 
-#define FLAG_UNUSED_0x2B7                                           0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8                                           0x2B8 // Unused Flag
+#define FLAG_HIDE_DEPTHS_RUBY                                       0x2B7
+#define FLAG_HIDE_DEPTHS_SAPPHIRE                                   0x2B8
 
-#define FLAG_HIDE_DESTINY_KNOT_LADY                                      0x2B9
+#define FLAG_HIDE_DESTINY_KNOT_LADY                                 0x2B9 // Destiny Knot Lady
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

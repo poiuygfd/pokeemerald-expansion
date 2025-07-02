@@ -67,7 +67,7 @@ TuffnookTown_House3_Text_AStrangeMan:
 TuffnookTown_House3_Text_CanBeFoundInTheDesert:
 	.string "Have you heard?\p"
 	.string "Apparently, a POKéMON called {STR_VAR_1}\n"
-	.string "can be found in the desert just south.\p"
+	.string "can be found in the desert.\p"
 	.string "And yet, no matter how hard I look,\n"
 	.string "I just can't seem to find one!\p"
 	.string "Please! If you can find one, I'll\n"

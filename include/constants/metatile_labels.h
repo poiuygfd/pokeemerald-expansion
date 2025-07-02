@@ -242,9 +242,9 @@
 #define METATILE_General_TallGrass_TreeLeft    0x1C6
 #define METATILE_General_TallGrass_TreeRight   0x1C7
 #define METATILE_General_TallGrass_TreeUp      0x025
+#define METATILE_General_TreeCorner            0x1DC
 #define METATILE_General_YellowCaveIndent      0x1A8
 #define METATILE_General_YellowCaveOpen        0x1A9
-#define METATILE_General_TreeCorner            0x1DC
 
 // gTileset_GenericBuilding
 #define METATILE_GenericBuilding_TableEdge               0x2F1
@@ -371,6 +371,12 @@
 
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
+
+// gTileset_NavelRock
+#define METATILE_NavelRock_Floor             0x211
+#define METATILE_NavelRock_Gemrock_Empty     0x38E
+#define METATILE_NavelRock_Gemrock_Ruby      0x38D
+#define METATILE_NavelRock_Gemrock_Sapphire  0x38C
 
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A

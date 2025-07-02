@@ -10831,12 +10831,12 @@
               {
                 "min_level": 30,
                 "max_level": 35,
-                "species": "SPECIES_ROLYCOLY"
+                "species": "SPECIES_ONIX"
               },
               {
                 "min_level": 35,
                 "max_level": 40,
-                "species": "SPECIES_CARKOL"
+                "species": "SPECIES_GRAVELER"
               },
               {
                 "min_level": 35,
@@ -11804,6 +11804,1248 @@
                 "min_level": 5,
                 "max_level": 20,
                 "species": "SPECIES_SQUIRTLE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_ENTRANCE",
+          "base_label": "gNavelRock_Entrance",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_UP1",
+          "base_label": "gNavelRock_Up1",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_B1F",
+          "base_label": "gNavelRock_B1F",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_FORK",
+          "base_label": "gNavelRock_Fork",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_UP2",
+          "base_label": "gNavelRock_Up2",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_UP3",
+          "base_label": "gNavelRock_Up3",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_UP4",
+          "base_label": "gNavelRock_Up4",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN01",
+          "base_label": "gNavelRock_Down01",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN02",
+          "base_label": "gNavelRock_Down02",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN03",
+          "base_label": "gNavelRock_Down03",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN04",
+          "base_label": "gNavelRock_Down04",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN05",
+          "base_label": "gNavelRock_Down05",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN06",
+          "base_label": "gNavelRock_Down06",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN07",
+          "base_label": "gNavelRock_Down07",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN08",
+          "base_label": "gNavelRock_Down08",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN09",
+          "base_label": "gNavelRock_Down09",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN10",
+          "base_label": "gNavelRock_Down10",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_NAVEL_ROCK_DOWN11",
+          "base_label": "gNavelRock_Down11",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_CARKOL"
               }
             ]
           }

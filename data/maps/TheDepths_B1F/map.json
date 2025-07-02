@@ -1,0 +1,114 @@
+{
+  "id": "MAP_THE_DEPTHS_B1F",
+  "name": "TheDepths_B1F",
+  "layout": "LAYOUT_THE_DEPTHS_B1F",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_THE_DEPTHS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B1F_SAPPHIRE",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 9,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B1F_EventScript_RemoveSapphire",
+      "flag": "FLAG_HIDE_DEPTHS_SAPPHIRE"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B1F_RUBY",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 50,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B1F_EventScript_RemoveRuby",
+      "flag": "FLAG_HIDE_DEPTHS_RUBY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 34,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B1F_EventScript_GemSocket",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_TUFFNOOK_TOWN_DEPTHS_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 48,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B2F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TheDepths_EventScript_ForfeitChallenge"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "0",
+      "script": "TheDepths_B1F_EventScript_StrongPresence"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "0",
+      "script": "TheDepths_B1F_EventScript_StrongPresence"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "0",
+      "script": "TheDepths_B1F_EventScript_StrongPresence"
+    }
+  ],
+  "bg_events": []
+}

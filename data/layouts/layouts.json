@@ -4530,6 +4530,36 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/SomewhereElse/border.bin",
       "blockdata_filepath": "data/layouts/SomewhereElse/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUFFNOOK_TOWN_DEPTHS_ENTRANCE",
+      "name": "TuffnookTown_DepthsEntrance_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TuffnookTown_DepthsEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/TuffnookTown_DepthsEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B1F",
+      "name": "TheDepths_B1F_Layout",
+      "width": 60,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B2F",
+      "name": "TheDepths_B2F_Layout",
+      "width": 66,
+      "height": 52,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B2F/map.bin"
     }
   ]
 }
