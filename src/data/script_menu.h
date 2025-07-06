@@ -769,11 +769,15 @@ static const struct MenuAction MultichoiceList_FallarborTentRules[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_TagMatchType[] =
+static const struct MenuAction MultichoiceList_HillNormalOnly[] =
 {
     {gText_NormalTagMatch},
-    {gText_VarietyTagMatch},
-    {gText_UniqueTagMatch},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_HillNormalExpert[] =
+{
+    {gText_NormalTagMatch},
     {gText_ExpertTagMatch},
     {gText_Exit},
 };
@@ -805,6 +809,19 @@ static const struct MenuAction MultichoiceList_UltimateMoves[] =
     {COMPOUND_STRING("FRENZY PLANT")},
     {COMPOUND_STRING("BLAST BURN")},
     {COMPOUND_STRING("HYDRO CANNON")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_DepthsNormalOnly[] =
+{
+    {COMPOUND_STRING("NORMAL MODE")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_DepthsNormalExpert[] =
+{
+    {COMPOUND_STRING("NORMAL MODE")},
+    {COMPOUND_STRING("EXPERT MODE")},
     {gText_Exit},
 };
 
@@ -935,11 +952,14 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_WHERES_RAYQUAZA]            = MULTICHOICE(MultichoiceList_WheresRayquaza),
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
-    [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+    [MULTI_HILL_NORMAL_ONLY]           = MULTICHOICE(MultichoiceList_HillNormalOnly),
+    [MULTI_HILL_NORMAL_EXPERT]         = MULTICHOICE(MultichoiceList_HillNormalExpert),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_GALARICA_ITEM]              = MULTICHOICE(MultichoiceList_GalaricaItem),
-    [MULTI_PLEDGE_MOVES]              = MULTICHOICE(MultichoiceList_PledgeMoves),
-    [MULTI_ULTIMATE_MOVES]              = MULTICHOICE(MultichoiceList_UltimateMoves),
+    [MULTI_PLEDGE_MOVES]               = MULTICHOICE(MultichoiceList_PledgeMoves),
+    [MULTI_ULTIMATE_MOVES]             = MULTICHOICE(MultichoiceList_UltimateMoves),
+    [MULTI_DEPTHS_NORMAL_ONLY]         = MULTICHOICE(MultichoiceList_DepthsNormalOnly),
+    [MULTI_DEPTHS_NORMAL_EXPERT]       = MULTICHOICE(MultichoiceList_DepthsNormalExpert),
 };
 
 const u8 *const gStdStrings[] =

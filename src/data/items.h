@@ -14250,6 +14250,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Parcel,
     },
 
+    [ITEM_BATTLE_PASS] =
+    {
+        .name = _("Battle Pass"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Allows access to\n"
+            "TRAINER HILL and\n"
+            "THE DEPTHS."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RainbowPass,
+        .iconPalette = gItemIconPalette_RainbowPass,
+    },
+
     [ITEM_OIL_INCENSE] =
     {
         .name = _("Oil Incense"),

@@ -121,7 +121,8 @@ TrainerHill_Entrance_EventScript_AttendantEnd::
 TrainerHill_Entrance_EventScript_EntryTrigger::
 	lockall
 	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
-	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_Closed
+	checkitem ITEM_BATTLE_PASS
+    goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_Closed
 	msgbox TrainerHill_Entrance_Text_WelcomeToTrainerHill, MSGBOX_DEFAULT
 	trainerhill_getsaved
 	call_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_SaveGame
@@ -149,9 +150,29 @@ TrainerHill_Entrance_EventScript_Info::
 	end
 
 TrainerHill_Entrance_EventScript_ChooseChallenge::
-	multichoice 13, 2, MULTI_TAG_MATCH_TYPE, FALSE
+	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_CantChooseChallenge
+	message TrainerHill_Entrance_Text_ChooseDifficulty
+	waitmessage
+	multichoice 13, 2, MULTI_HILL_NORMAL_EXPERT, FALSE
 	switch VAR_RESULT
-	case 4, TrainerHill_Entrance_EventScript_CancelEntry
+	case 2, TrainerHill_Entrance_EventScript_CancelEntry
+	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
+	trainerhill_setmode VAR_RESULT
+	setvar VAR_TRAINER_HILL_IS_ACTIVE, 1
+	setvar VAR_TEMP_5, 0
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	msgbox TrainerHill_Entrance_Text_TimeProgessGetSetGo, MSGBOX_DEFAULT
+	trainerhill_start
+	releaseall
+	end
+
+TrainerHill_Entrance_EventScript_CantChooseChallenge::
+	message TrainerHill_Entrance_Text_CantChooseDifficulty
+	waitmessage
+	multichoice 13, 2, MULTI_HILL_NORMAL_ONLY, FALSE
+	switch VAR_RESULT
+	case 1, TrainerHill_Entrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
 	trainerhill_setmode VAR_RESULT
 	setvar VAR_TRAINER_HILL_IS_ACTIVE, 1
@@ -288,7 +309,7 @@ TrainerHill_Entrance_Pokemart_Expanded:
 
 TrainerHill_Entrance_Text_StillGettingReady:
 	.string "This is the TRAINER HILL where\n"
-	.string "you may enjoy tag battles with many\l"
+	.string "you may enjoy battles with many\l"
 	.string "TRAINERS.\p"
 	.string "Unfortunately, we're still getting\n"
 	.string "things ready. Please come back later!$"
@@ -296,7 +317,7 @@ TrainerHill_Entrance_Text_StillGettingReady:
 TrainerHill_Entrance_Text_WelcomeToTrainerHill:
 	.string "Welcome!\p"
 	.string "This is the TRAINER HILL where\n"
-	.string "you may enjoy tag battles with many\l"
+	.string "you may enjoy battles with many\l"
 	.string "TRAINERS!$"
 
 TrainerHill_Entrance_Text_SaveGameBeforeEnter:
@@ -318,6 +339,18 @@ TrainerHill_Entrance_Text_TrainersInEveryRoom:
 TrainerHill_Entrance_Text_LikeToChallengeTrainers:
 	.string "Would you like to challenge the\n"
 	.string "waiting TRAINERS?$"
+
+TrainerHill_Entrance_Text_CantChooseDifficulty:
+	.string "For now, you may only take on\n"
+	.string "our NORMAL difficulty.\p"
+	.string "If you return after entering the\n"
+	.string "HALL OF FAME, you may challenge\l"
+	.string "a higher difficulty.$"
+
+TrainerHill_Entrance_Text_ChooseDifficulty:
+	.string "For a TRAINER as strong as you, you\n"
+	.string "may attempt our EXPERT difficulty,\l"
+	.string "should you wish to do so.$"
 
 TrainerHill_Entrance_Text_TimeProgessGetSetGo:
 	.string "I will time your progress.\n"

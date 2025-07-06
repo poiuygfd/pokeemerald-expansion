@@ -995,9 +995,10 @@
 
 #define ITEM_CANDY_BAG 829
 #define ITEM_COSTUME_CASE 830
-#define ITEM_OIL_INCENSE 831
+#define ITEM_BATTLE_PASS 831
+#define ITEM_OIL_INCENSE 832
 
-#define ITEMS_COUNT 832
+#define ITEMS_COUNT 833
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

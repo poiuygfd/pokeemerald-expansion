@@ -254,9 +254,9 @@ static void (*const sHillFunctions[])(void) =
 static const u8 *const sModeStrings[NUM_TRAINER_HILL_MODES] =
 {
     [HILL_MODE_NORMAL]  = gText_NormalTagMatch,
+    [HILL_MODE_EXPERT]  = gText_ExpertTagMatch,
     [HILL_MODE_VARIETY] = gText_VarietyTagMatch,
     [HILL_MODE_UNIQUE]  = gText_UniqueTagMatch,
-    [HILL_MODE_EXPERT]  = gText_ExpertTagMatch,
 };
 
 static const struct ObjectEventTemplate sTrainerObjectEventTemplate =
@@ -627,7 +627,7 @@ void PrintOnTrainerHillRecordsWindow(void)
     AddTextPrinterParameterized3(0, FONT_NORMAL, x, 2, sRecordWinColors, TEXT_SKIP_DRAW, gText_TimeBoard);
 
     y = 18;
-    for (i = 0; i < NUM_TRAINER_HILL_MODES; i++)
+    for (i = 0; i < 2; i++) //for (i = 0; i < NUM_TRAINER_HILL_MODES; i++)
     {
         AddTextPrinterParameterized3(0, FONT_NORMAL, 0, y, sRecordWinColors, TEXT_SKIP_DRAW, sModeStrings[i]);
         y += 15;

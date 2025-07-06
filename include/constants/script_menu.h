@@ -121,12 +121,15 @@
 #define MULTI_WHERES_RAYQUAZA              110
 #define MULTI_SLATEPORT_TENT_RULES         111
 #define MULTI_FALLARBOR_TENT_RULES         112
-#define MULTI_TAG_MATCH_TYPE               113
-#define MULTI_BERRY_PLOT                   114
-#define MULTI_GALARICA_ITEM                115
-#define MULTI_GAME_CORNER_GIMMIGHOUL       116
-#define MULTI_PLEDGE_MOVES                 117
-#define MULTI_ULTIMATE_MOVES               118
+#define MULTI_HILL_NORMAL_ONLY             113
+#define MULTI_HILL_NORMAL_EXPERT           114
+#define MULTI_BERRY_PLOT                   115
+#define MULTI_GALARICA_ITEM                116
+#define MULTI_GAME_CORNER_GIMMIGHOUL       117
+#define MULTI_PLEDGE_MOVES                 118
+#define MULTI_ULTIMATE_MOVES               119
+#define MULTI_DEPTHS_NORMAL_ONLY           120
+#define MULTI_DEPTHS_NORMAL_EXPERT         121
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
