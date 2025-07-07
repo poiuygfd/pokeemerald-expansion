@@ -5,6 +5,7 @@ u32 ScriptGiveMon(u16 species, u8 level, u16 item);
 u8 ScriptGiveEgg(u16 species);
 void CreateScriptedWildMon(u16 species, u8 level, u16 item);
 void CreateScriptedDoubleWildMon(u16 species, u8 level, u16 item, u16 species2, u8 level2, u16 item2);
+void CreateBossMon(u16 species, u16 move1, u16 move2, u16 move3, u16 move4, u32 ability, u16 item);
 void ScriptSetMonMoveSlot(u8 monIndex, u16 move, u8 slot);
 void ReducePlayerPartyToSelectedMons(void);
 void HealPlayerParty(void);

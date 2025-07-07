@@ -94,6 +94,8 @@ TheDepths_B3F_EventScript_StrongPresence::
 	lock
 	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
 	setvar VAR_LEVEL_CAP, 1
+	setflag FLAG_PREVENT_BAG_USE
+	setflag FLAG_PREVENT_CATCHING
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
@@ -103,24 +105,27 @@ TheDepths_B3F_EventScript_StrongPresence::
 
 TheDepths_B3F_EventScript_MawileBattle::
 	settotemboost 1, 2, 1, 1, 1, 1
-	setwildbattle SPECIES_MAWILE, 30
+	setbossbattle SPECIES_MAWILE, MOVE_IRON_HEAD, MOVE_PLAY_ROUGH, MOVE_SUCKER_PUNCH, MOVE_FLAMETHROWER, 1
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 3
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B3F_EventScript_BattleAftermath
 
 TheDepths_B3F_EventScript_SableyeBattle::
 	settotemboost 1, 1, 1, 1, 1, 2
-	setwildbattle SPECIES_SABLEYE, 30
+	setbossbattle SPECIES_SABLEYE, MOVE_NIGHT_SHADE, MOVE_KNOCK_OFF, MOVE_WILL_O_WISP, MOVE_RECOVER, 2
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 3
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B3F_EventScript_BattleAftermath
 
 TheDepths_B3F_EventScript_CarbinkBattle::
 	settotemboost 1, 1, 1, 1, 2, 1
-	setwildbattle SPECIES_CARBINK, 30
+	setbossbattle SPECIES_CARBINK, MOVE_POWER_GEM, MOVE_DAZZLING_GLEAM, MOVE_REFLECT, MOVE_LIGHT_SCREEN, 0
 	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_BattleAftermath::
 	setvar VAR_DEPTHS_MON_STATE, 3
 	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
+	clearflag FLAG_PREVENT_BAG_USE
+	clearflag FLAG_PREVENT_CATCHING
+	msgbox TheDepths_Text_StrongPresenceLeaves
+	closemessage
 	end

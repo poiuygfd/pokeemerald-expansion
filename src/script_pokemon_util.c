@@ -157,6 +157,47 @@ void CreateScriptedDoubleWildMon(u16 species1, u8 level1, u16 item1, u16 species
     }
 }
 
+void CreateBossMon(u16 species, u16 move1, u16 move2, u16 move3, u16 move4, u32 ability, u16 item)
+{
+    u8 heldItem[2];
+    u8 setLevel = 1;
+    u8 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL)
+            && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_EGG)
+        {
+            u8 monLevel = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL, NULL);
+            if (monLevel > setLevel)
+                setLevel = monLevel;
+        }
+    }
+
+    ZeroEnemyPartyMons();
+    if (OW_SYNCHRONIZE_NATURE > GEN_3)
+        CreateMonWithNature(&gEnemyParty[0], species, setLevel, USE_RANDOM_IVS, PickWildMonNature());
+    else
+        CreateMon(&gEnemyParty[0], species, setLevel, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+
+    SetMonMoveSlot(&gEnemyParty[0], move1, 0);
+    SetMonMoveSlot(&gEnemyParty[0], move2, 1);
+    SetMonMoveSlot(&gEnemyParty[0], move3, 2);
+    SetMonMoveSlot(&gEnemyParty[0], move4, 3);
+
+    if (ability)
+    {
+        SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &ability);
+    }
+
+    if (item)
+    {
+        heldItem[0] = item;
+        heldItem[1] = item >> 8;
+        SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
+    }
+}
+
 void ScriptSetMonMoveSlot(u8 monIndex, u16 move, u8 slot)
 {
 // Allows monIndex to go out of bounds of gPlayerParty. Doesn't occur in vanilla

@@ -2512,6 +2512,23 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_setbossbattle(struct ScriptContext *ctx)
+{
+    u16 species = ScriptReadHalfword(ctx);
+    u16 move1 = ScriptReadHalfword(ctx);
+    u16 move2 = ScriptReadHalfword(ctx);
+    u16 move3 = ScriptReadHalfword(ctx);
+    u16 move4 = ScriptReadHalfword(ctx);
+    u8 ability = ScriptReadByte(ctx);
+    u16 item = ScriptReadHalfword(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+
+    CreateBossMon(species, move1, move2, move3, move4, ability, item);
+
+    return FALSE;
+}
+
 bool8 ScrCmd_dowildbattle(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);

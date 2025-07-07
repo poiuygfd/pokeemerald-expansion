@@ -54,33 +54,38 @@ TheDepths_B1F_EventScript_StrongPresence::
 	lock
 	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
 	setvar VAR_LEVEL_CAP, 1
+	setflag FLAG_PREVENT_BAG_USE
+	setflag FLAG_PREVENT_CATCHING
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B1F_EventScript_GeodudeBattle
 	call_if_eq VAR_RESULT, 1, TheDepths_B1F_EventScript_AronBattle
-	call_if_eq VAR_RESULT, 2, TheDepths_B1F_EventScript_RhyhornBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B1F_EventScript_RockruffBattle
 
 TheDepths_B1F_EventScript_GeodudeBattle::
 	settotemboost 1, 2, 1, 1, 1, 1
-	setwildbattle SPECIES_GEODUDE, 30
+	setbossbattle SPECIES_GEODUDE, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_EXPLOSION, MOVE_DYNAMIC_PUNCH, 1
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 1
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B1F_EventScript_BattleAftermath
 
 TheDepths_B1F_EventScript_AronBattle::
 	settotemboost 1, 1, 2, 1, 1, 1
-	setwildbattle SPECIES_ARON, 30
+	setbossbattle SPECIES_ARON, MOVE_STONE_EDGE, MOVE_IRON_HEAD, MOVE_HEAD_SMASH, MOVE_BODY_PRESS, 1
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 1
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B1F_EventScript_BattleAftermath
 
-TheDepths_B1F_EventScript_RhyhornBattle::
+TheDepths_B1F_EventScript_RockruffBattle::
 	settotemboost 1, 1, 1, 2, 1, 1
-	setwildbattle SPECIES_RHYHORN, 30
+	setbossbattle SPECIES_ROCKRUFF, MOVE_STONE_EDGE, MOVE_CRUNCH, MOVE_THUNDER_FANG, MOVE_FIRE_FANG, 1
 	dowildbattle
+	goto TheDepths_B1F_EventScript_BattleAftermath
+
+TheDepths_B1F_EventScript_BattleAftermath::
 	setvar VAR_DEPTHS_MON_STATE, 1
 	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
+	clearflag FLAG_PREVENT_BAG_USE
+	clearflag FLAG_PREVENT_CATCHING
+	msgbox TheDepths_Text_StrongPresenceLeaves
+	closemessage
 	end

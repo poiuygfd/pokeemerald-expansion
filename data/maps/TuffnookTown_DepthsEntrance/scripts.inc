@@ -8,8 +8,6 @@ TuffnookTown_DepthsEntrance_OnWarp:
 
 TuffnookTown_DepthsEntrance_EventScript_TurnPlayerNorth::
 	turnobject LOCALID_PLAYER, DIR_NORTH
-	setvar VAR_DEPTHS_STATE, 0
-	setvar VAR_DEPTHS_MON_STATE, 0 @ move these to the hiker when the hiker is made since currently these won't reset if player whites out
     end
 
 TuffnookTown_DepthsEntrance_EventScript_Cooltrainer::
@@ -24,6 +22,8 @@ TuffnookTown_DepthsEntrance_EventScript_Hiker::
 	lockall
 	checkitem ITEM_BATTLE_PASS
     goto_if_eq VAR_RESULT, FALSE, TuffnookTown_DepthsEntrance_EventScript_Closed
+	setvar VAR_DEPTHS_STATE, 0
+	setvar VAR_DEPTHS_MON_STATE, 0
 	message TuffnookTown_DepthsEntrance_Text_WelcomeToTheDepths
 	waitmessage
 	multichoice 15, 6, MULTI_YESNOINFO, FALSE
@@ -184,4 +184,4 @@ TuffnookTown_DepthsEntrance_Text_BetterLuckNextTime:
 TuffnookTown_DepthsEntrance_Text_StillGettingReady:
 	.string "Sorry, kid, we're still getting ready\n"
 	.string "here. Come back later if you want to\l"
-	.string "give us a challenge!$"
+	.string "challenge THE DEPTHS!$"

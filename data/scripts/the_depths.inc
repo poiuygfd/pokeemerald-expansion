@@ -103,3 +103,6 @@ TheDepths_Text_AlreadyActive:
 TheDepths_Text_StrongPresence:
     .string "You feel a strong presence nearby…\p"
     .string "The strong presence attacked!$"
+
+TheDepths_Text_StrongPresenceLeaves:
+    .string "The strong presence has left…$"

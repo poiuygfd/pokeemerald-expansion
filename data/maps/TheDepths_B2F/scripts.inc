@@ -92,6 +92,8 @@ TheDepths_B2F_EventScript_StrongPresence::
 	lock
 	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
 	setvar VAR_LEVEL_CAP, 1
+	setflag FLAG_PREVENT_BAG_USE
+	setflag FLAG_PREVENT_CATCHING
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
@@ -101,24 +103,27 @@ TheDepths_B2F_EventScript_StrongPresence::
 
 TheDepths_B2F_EventScript_ScraggyBattle::
 	settotemboost 1, 1, 1, 1, 1, 2
-	setwildbattle SPECIES_SCRAGGY, 30
+	setbossbattle SPECIES_SCRAGGY, MOVE_CRUNCH, MOVE_BODY_PRESS, MOVE_FOUL_PLAY, MOVE_BODY_SLAM, 2
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 2
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B2F_EventScript_BattleAftermath
 
 TheDepths_B2F_EventScript_MedititeBattle::
 	settotemboost 1, 2, 1, 1, 1, 1
-	setwildbattle SPECIES_MEDITITE, 30
+	setbossbattle SPECIES_MEDITITE, MOVE_ZEN_HEADBUTT, MOVE_HIGH_JUMP_KICK, MOVE_THUNDER_PUNCH, MOVE_DETECT, 0
 	dowildbattle
-	setvar VAR_DEPTHS_MON_STATE, 2
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	end
+	goto TheDepths_B2F_EventScript_BattleAftermath
 
 TheDepths_B2F_EventScript_RioluBattle::
 	settotemboost 1, 1, 1, 2, 1, 1
-	setwildbattle SPECIES_RIOLU, 30
+	setbossbattle SPECIES_RIOLU, MOVE_SUBSTITUTE, MOVE_FOCUS_PUNCH, MOVE_METAL_CLAW, MOVE_BULK_UP, 2
 	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_BattleAftermath::
 	setvar VAR_DEPTHS_MON_STATE, 2
 	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
+	clearflag FLAG_PREVENT_BAG_USE
+	clearflag FLAG_PREVENT_CATCHING
+	msgbox TheDepths_Text_StrongPresenceLeaves
+	closemessage
 	end

@@ -1006,15 +1006,6 @@
     {
       "type": "trigger",
       "x": 39,
-      "y": 61,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 39,
       "y": 62,
       "elevation": 0,
       "var": "TRIGGER_RUN_IMMEDIATELY",
@@ -1115,24 +1106,6 @@
       "type": "trigger",
       "x": 39,
       "y": 73,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 39,
-      "y": 74,
-      "elevation": 0,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 39,
-      "y": 75,
       "elevation": 0,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1279,7 +1252,7 @@
     {
       "type": "hidden_item",
       "x": 38,
-      "y": 73,
+      "y": 71,
       "elevation": 0,
       "item": "ITEM_SMOOTH_ROCK",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK"
