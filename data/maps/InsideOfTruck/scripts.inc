@@ -22,7 +22,7 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	end
 
 InsideOfTruck_EventScript_SetIntroFlagsMale::
-	setvar VAR_LEVEL_CAP, 12
+	setvar VAR_LEVEL_CAP, 15
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	setvar VAR_LITTLEROOT_INTRO_STATE, 1
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM
@@ -36,7 +36,7 @@ InsideOfTruck_EventScript_SetIntroFlagsMale::
 	end
 
 InsideOfTruck_EventScript_SetIntroFlagsFemale::
-	setvar VAR_LEVEL_CAP, 12
+	setvar VAR_LEVEL_CAP, 15
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F
 	setvar VAR_LITTLEROOT_INTRO_STATE, 2
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM

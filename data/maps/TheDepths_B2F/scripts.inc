@@ -90,6 +90,8 @@ TheDepths_B2F_EventScript_GemSocket::
 
 TheDepths_B2F_EventScript_StrongPresence::
 	lock
+	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
+	setvar VAR_LEVEL_CAP, 1
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
@@ -102,6 +104,7 @@ TheDepths_B2F_EventScript_ScraggyBattle::
 	setwildbattle SPECIES_SCRAGGY, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 2
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B2F_EventScript_MedititeBattle::
@@ -109,6 +112,7 @@ TheDepths_B2F_EventScript_MedititeBattle::
 	setwildbattle SPECIES_MEDITITE, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 2
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B2F_EventScript_RioluBattle::
@@ -116,4 +120,5 @@ TheDepths_B2F_EventScript_RioluBattle::
 	setwildbattle SPECIES_RIOLU, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 2
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end

@@ -92,6 +92,8 @@ TheDepths_B3F_EventScript_GemSocket::
 
 TheDepths_B3F_EventScript_StrongPresence::
 	lock
+	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
+	setvar VAR_LEVEL_CAP, 1
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
@@ -104,6 +106,7 @@ TheDepths_B3F_EventScript_MawileBattle::
 	setwildbattle SPECIES_MAWILE, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 3
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B3F_EventScript_SableyeBattle::
@@ -111,6 +114,7 @@ TheDepths_B3F_EventScript_SableyeBattle::
 	setwildbattle SPECIES_SABLEYE, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 3
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B3F_EventScript_CarbinkBattle::
@@ -118,4 +122,5 @@ TheDepths_B3F_EventScript_CarbinkBattle::
 	setwildbattle SPECIES_CARBINK, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 3
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end

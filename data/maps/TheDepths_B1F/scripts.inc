@@ -52,6 +52,8 @@ TheDepths_B1F_EventScript_GemSocket::
 
 TheDepths_B1F_EventScript_StrongPresence::
 	lock
+	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
+	setvar VAR_LEVEL_CAP, 1
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
 	random 3
@@ -64,6 +66,7 @@ TheDepths_B1F_EventScript_GeodudeBattle::
 	setwildbattle SPECIES_GEODUDE, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 1
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B1F_EventScript_AronBattle::
@@ -71,6 +74,7 @@ TheDepths_B1F_EventScript_AronBattle::
 	setwildbattle SPECIES_ARON, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 1
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end
 
 TheDepths_B1F_EventScript_RhyhornBattle::
@@ -78,4 +82,5 @@ TheDepths_B1F_EventScript_RhyhornBattle::
 	setwildbattle SPECIES_RHYHORN, 30
 	dowildbattle
 	setvar VAR_DEPTHS_MON_STATE, 1
+	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
 	end

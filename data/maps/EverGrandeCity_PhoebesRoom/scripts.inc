@@ -42,6 +42,7 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	setvar VAR_LEVEL_CAP, 54
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
