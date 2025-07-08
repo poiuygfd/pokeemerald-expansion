@@ -136,7 +136,7 @@ TrainerHill_Entrance_EventScript_AllFloorsUsed::
 TrainerHill_Entrance_EventScript_AskChallengeTrainers::
 	message TrainerHill_Entrance_Text_LikeToChallengeTrainers
 	waitmessage
-	multichoice 15, 6, MULTI_YESNOINFO, FALSE
+	multichoice 22, 6, MULTI_YESNOINFO, FALSE
 	switch VAR_RESULT
 	case 0, TrainerHill_Entrance_EventScript_ChooseChallenge
 	case 1, TrainerHill_Entrance_EventScript_CancelEntry
@@ -153,7 +153,7 @@ TrainerHill_Entrance_EventScript_ChooseChallenge::
 	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_CantChooseChallenge
 	message TrainerHill_Entrance_Text_ChooseDifficulty
 	waitmessage
-	multichoice 13, 2, MULTI_HILL_NORMAL_EXPERT, FALSE
+	multichoice 17, 6, MULTI_HILL_NORMAL_EXPERT, FALSE
 	switch VAR_RESULT
 	case 2, TrainerHill_Entrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
@@ -170,7 +170,7 @@ TrainerHill_Entrance_EventScript_ChooseChallenge::
 TrainerHill_Entrance_EventScript_CantChooseChallenge::
 	message TrainerHill_Entrance_Text_CantChooseDifficulty
 	waitmessage
-	multichoice 13, 2, MULTI_HILL_NORMAL_ONLY, FALSE
+	multichoice 17, 8, MULTI_HILL_NORMAL_ONLY, FALSE
 	switch VAR_RESULT
 	case 1, TrainerHill_Entrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
@@ -387,6 +387,9 @@ TrainerHill_Entrance_Text_ExplainTrainerHill:
 	.string "It is a race that measures how long\n"
 	.string "you take to reach our owner on\l"
 	.string "the rooftop from this counter.\p"
+	.string "You will have to climb up four\n"
+	.string "floors total, each one with two\l"
+	.string "TRAINERS itching for battle.\p"
 	.string "The fastest times are posted on\n"
 	.string "the Time Board--try competing with\l"
 	.string "your friends.\p"

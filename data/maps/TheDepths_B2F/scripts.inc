@@ -103,19 +103,19 @@ TheDepths_B2F_EventScript_StrongPresence::
 
 TheDepths_B2F_EventScript_ScraggyBattle::
 	settotemboost 1, 1, 1, 1, 1, 2
-	setbossbattle SPECIES_SCRAGGY, MOVE_CRUNCH, MOVE_BODY_PRESS, MOVE_FOUL_PLAY, MOVE_BODY_SLAM, 2
+	setbossbattle SPECIES_SCRAGGY, MOVE_CRUNCH, MOVE_BODY_PRESS, MOVE_BODY_SLAM, MOVE_BULK_UP, 2
 	dowildbattle
 	goto TheDepths_B2F_EventScript_BattleAftermath
 
 TheDepths_B2F_EventScript_MedititeBattle::
-	settotemboost 1, 2, 1, 1, 1, 1
-	setbossbattle SPECIES_MEDITITE, MOVE_ZEN_HEADBUTT, MOVE_HIGH_JUMP_KICK, MOVE_THUNDER_PUNCH, MOVE_DETECT, 0
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_MEDITITE, MOVE_HIGH_JUMP_KICK, MOVE_ZEN_HEADBUTT, MOVE_ROCK_SLIDE, MOVE_RECOVER, 0
 	dowildbattle
 	goto TheDepths_B2F_EventScript_BattleAftermath
 
 TheDepths_B2F_EventScript_RioluBattle::
 	settotemboost 1, 1, 1, 2, 1, 1
-	setbossbattle SPECIES_RIOLU, MOVE_SUBSTITUTE, MOVE_FOCUS_PUNCH, MOVE_METAL_CLAW, MOVE_BULK_UP, 2
+	setbossbattle SPECIES_RIOLU, MOVE_DRAIN_PUNCH, MOVE_FOCUS_PUNCH, MOVE_SUBSTITUTE, MOVE_BULK_UP, 2
 	dowildbattle
 	goto TheDepths_B2F_EventScript_BattleAftermath
 

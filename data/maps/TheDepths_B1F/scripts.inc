@@ -5,6 +5,7 @@ TheDepths_B1F_MapScripts::
 TheDepths_B1F_OnLoad:
 	call TheDepths_B1F_EventScript_SpawnRuby
 	call TheDepths_B1F_EventScript_SpawnSapphire
+	setflag FLAG_DISABLE_BAG
 	end
 
 TheDepths_B1F_EventScript_SpawnRuby::
@@ -65,19 +66,19 @@ TheDepths_B1F_EventScript_StrongPresence::
 
 TheDepths_B1F_EventScript_GeodudeBattle::
 	settotemboost 1, 2, 1, 1, 1, 1
-	setbossbattle SPECIES_GEODUDE, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_EXPLOSION, MOVE_DYNAMIC_PUNCH, 1
+	setbossbattle SPECIES_GEODUDE, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_EXPLOSION, MOVE_ROCK_POLISH, 1
 	dowildbattle
 	goto TheDepths_B1F_EventScript_BattleAftermath
 
 TheDepths_B1F_EventScript_AronBattle::
-	settotemboost 1, 1, 2, 1, 1, 1
-	setbossbattle SPECIES_ARON, MOVE_STONE_EDGE, MOVE_IRON_HEAD, MOVE_HEAD_SMASH, MOVE_BODY_PRESS, 1
+	settotemboost 1, 1, 1, 1, 1, 2
+	setbossbattle SPECIES_ARON, MOVE_HEAD_SMASH, MOVE_IRON_HEAD, MOVE_BODY_PRESS, MOVE_AUTOTOMIZE, 1
 	dowildbattle
 	goto TheDepths_B1F_EventScript_BattleAftermath
 
 TheDepths_B1F_EventScript_RockruffBattle::
 	settotemboost 1, 1, 1, 2, 1, 1
-	setbossbattle SPECIES_ROCKRUFF, MOVE_STONE_EDGE, MOVE_CRUNCH, MOVE_THUNDER_FANG, MOVE_FIRE_FANG, 1
+	setbossbattle SPECIES_ROCKRUFF, MOVE_STONE_EDGE, MOVE_CRUNCH, MOVE_ROCK_TOMB, MOVE_SWORDS_DANCE, 1
 	dowildbattle
 	goto TheDepths_B1F_EventScript_BattleAftermath
 

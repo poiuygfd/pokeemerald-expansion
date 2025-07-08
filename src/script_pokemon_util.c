@@ -176,7 +176,7 @@ void CreateBossMon(u16 species, u16 move1, u16 move2, u16 move3, u16 move4, u32 
 
     ZeroEnemyPartyMons();
     if (OW_SYNCHRONIZE_NATURE > GEN_3)
-        CreateMonWithNature(&gEnemyParty[0], species, setLevel, USE_RANDOM_IVS, PickWildMonNature());
+        CreateMonWithNature(&gEnemyParty[0], species, setLevel, MAX_PER_STAT_IVS, PickWildMonNature());
     else
         CreateMon(&gEnemyParty[0], species, setLevel, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
 

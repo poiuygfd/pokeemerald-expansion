@@ -732,10 +732,10 @@
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
 
 // Event Flags
+#define FLAG_DEPTHS_USED_HEAL                                       0x2AE // Whether the heal has been used or not
+#define FLAG_DISABLE_BAG                                            0x2AF // Disables Bag menu item in The Depths
 #define FLAG_PREVENT_CATCHING                                       0x2B0 // Prevents catching in The Depths
 #define FLAG_PREVENT_BAG_USE                                        0x2B1 // Prevents bag use in The Depths
 #define FLAG_AVITORCH_CODE_USED                                     0x2B2 // Avitorch Event Flag

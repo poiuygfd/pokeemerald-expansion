@@ -104,8 +104,8 @@ TheDepths_B3F_EventScript_StrongPresence::
 	call_if_eq VAR_RESULT, 2, TheDepths_B3F_EventScript_CarbinkBattle
 
 TheDepths_B3F_EventScript_MawileBattle::
-	settotemboost 1, 2, 1, 1, 1, 1
-	setbossbattle SPECIES_MAWILE, MOVE_IRON_HEAD, MOVE_PLAY_ROUGH, MOVE_SUCKER_PUNCH, MOVE_FLAMETHROWER, 1
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_MAWILE, MOVE_IRON_HEAD, MOVE_PLAY_ROUGH, MOVE_SUCKER_PUNCH, MOVE_FLAMETHROWER, 2
 	dowildbattle
 	goto TheDepths_B3F_EventScript_BattleAftermath
 

@@ -703,8 +703,8 @@ BattleFrontier_Lounge7_Text_NotEnoughPointsYoungOne:
 BattleFrontier_Lounge7_Text_TakeCareOfYourPartner:
 	.string "Yes, yes, that is a very special POKéMON.\n"
 	.string "Be sure to take care of your partner.\p"
-	.string "Let me just take those BATTLE POINTS off\n"
-	.string "your hands then…$"
+	.string "Let me just take those BATTLE POINTS\n"
+	.string "off your hands then…$"
 
 BattleFrontier_Lounge7_Text_ComeBackWithPartner:
 	.string "Feel free to come back if you meet\n"

@@ -439,6 +439,7 @@ void Overworld_ResetBattleFlagsAndVars(void)
     FlagClear(B_FLAG_DYNAMAX_BATTLE);
     FlagClear(B_FLAG_SKY_BATTLE);
     FlagClear(B_FLAG_NO_WHITEOUT);
+    FlagClear(FLAG_DISABLE_BAG);
 }
 #endif
 

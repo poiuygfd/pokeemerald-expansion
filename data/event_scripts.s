@@ -1174,3 +1174,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TheDepths_B1F/scripts.inc"
 	.include "data/maps/TheDepths_B2F/scripts.inc"
 	.include "data/maps/TheDepths_B3F/scripts.inc"
+
+	.include "data/maps/TheDepths_B4F/scripts.inc"
