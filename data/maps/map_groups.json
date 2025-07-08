@@ -593,7 +593,11 @@
     "TheDepths_B1F",
     "TheDepths_B2F",
     "TheDepths_B3F",
-    "TheDepths_B4F"
+    "TheDepths_B4F",
+    "TheDepths_B5F",
+    "TheDepths_B6F",
+    "TheDepths_B7F",
+    "TheDepths_B8F"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

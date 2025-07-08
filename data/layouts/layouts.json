@@ -4580,6 +4580,46 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/TheDepths_B4F/border.bin",
       "blockdata_filepath": "data/layouts/TheDepths_B4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B5F",
+      "name": "TheDepths_B5F_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B5F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B5F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B6F",
+      "name": "TheDepths_B6F_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B6F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B6F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B7F",
+      "name": "TheDepths_B7F_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B7F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B7F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_DEPTHS_B8F",
+      "name": "TheDepths_B8F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/TheDepths_B8F/border.bin",
+      "blockdata_filepath": "data/layouts/TheDepths_B8F/map.bin"
     }
   ]
 }

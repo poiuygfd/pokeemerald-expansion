@@ -731,19 +731,22 @@
 #define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 
-// Event Flags
+// The Depths Flags
+#define FLAG_B6F_SPAWNED_GEMS                                       0x2AD // Whether gems have been spawned on B6F so they aren't re-generated every door enter/exit
 #define FLAG_DEPTHS_USED_HEAL                                       0x2AE // Whether the heal has been used or not
 #define FLAG_DISABLE_BAG                                            0x2AF // Disables Bag menu item in The Depths
 #define FLAG_PREVENT_CATCHING                                       0x2B0 // Prevents catching in The Depths
 #define FLAG_PREVENT_BAG_USE                                        0x2B1 // Prevents bag use in The Depths
+
+// Event Flags
 #define FLAG_AVITORCH_CODE_USED                                     0x2B2 // Avitorch Event Flag
 #define FLAG_HIDE_COSPLAY_PIKACHU                                   0x2B3 // Hide Cosplay Pikachu
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki
 #define FLAG_HIDE_REGIDRAGO                                         0x2B5 // Hide Regidrago
 #define FLAG_HIDE_OGERPON_MASKS                                     0x2B6 // Hide Ogerpon's Masks
 
+// More Depths Flags
 #define FLAG_HIDE_DEPTHS_RUBY                                       0x2B7
 #define FLAG_HIDE_DEPTHS_SAPPHIRE                                   0x2B8
 

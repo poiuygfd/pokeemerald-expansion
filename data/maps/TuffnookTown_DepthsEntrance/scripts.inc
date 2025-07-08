@@ -26,6 +26,7 @@ TuffnookTown_DepthsEntrance_EventScript_Hiker::
 	setvar VAR_DEPTHS_STATE, 0
 	setvar VAR_DEPTHS_MON_STATE, 0
 	clearflag FLAG_DEPTHS_USED_HEAL
+	clearflag FLAG_B6F_SPAWNED_GEMS
 	message TuffnookTown_DepthsEntrance_Text_WelcomeToTheDepths
 	waitmessage
 	multichoice 22, 6, MULTI_YESNOINFO, FALSE

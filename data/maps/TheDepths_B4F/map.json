@@ -34,7 +34,14 @@
       "x": 10,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_THE_DEPTHS_B4F",
+      "dest_map": "MAP_TUFFNOOK_TOWN_DEPTHS_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B5F",
       "dest_warp_id": "0"
     }
   ],

@@ -1,0 +1,272 @@
+{
+  "id": "MAP_THE_DEPTHS_B6F",
+  "name": "TheDepths_B6F",
+  "layout": "LAYOUT_THE_DEPTHS_B6F",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_THE_DEPTHS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_SAPPHIRE_1",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 44,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveSapphire1",
+      "flag": "FLAG_HIDE_DEPTHS_SAPPHIRE"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_RUBY_1",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 49,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveRuby1",
+      "flag": "FLAG_HIDE_DEPTHS_RUBY"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_RUBY_2",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 13,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveRuby2",
+      "flag": "FLAG_HIDE_DEPTHS_RUBY"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_SAPPHIRE_2",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 40,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveSapphire2",
+      "flag": "FLAG_HIDE_DEPTHS_SAPPHIRE"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_SAPPHIRE_3",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 17,
+      "y": 54,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveSapphire3",
+      "flag": "FLAG_HIDE_DEPTHS_SAPPHIRE"
+    },
+    {
+      "local_id": "LOCALID_THE_DEPTHS_B6F_RUBY_3",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 50,
+      "y": 54,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_RemoveRuby3",
+      "flag": "FLAG_HIDE_DEPTHS_RUBY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 25,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheDepths_B6F_EventScript_GemSocket",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_TUFFNOOK_TOWN_DEPTHS_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 21,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 44,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 49,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 13,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 39,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 17,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 47,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B6F",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 24,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_THE_DEPTHS_B7F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TheDepths_EventScript_ForfeitChallenge"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    }
+  ],
+  "bg_events": []
+}
