@@ -158,3 +158,33 @@ TheDepths_B6F_EventScript_GemSocket::
 	setvar VAR_DEPTHS_STATE, 6
 	release
 	end
+
+TheDepths_B6F_EventScript_StrongPresence::
+	lock
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_SandslashBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B6F_EventScript_SandacondaBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B6F_EventScript_ExcadrillBattle
+
+TheDepths_B6F_EventScript_SandslashBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_SANDSLASH, MOVE_DIG, MOVE_BRICK_BREAK, MOVE_SHADOW_CLAW, MOVE_SANDSTORM, 2
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_SandacondaBattle::
+	settotemboost 1, 1, 2, 1, 1, 1
+	setbossbattle SPECIES_SANDACONDA, MOVE_DIG, MOVE_BODY_PRESS, MOVE_HEADBUTT, MOVE_GLARE, 0
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_ExcadrillBattle::
+	settotemboost 1, 1, 1, 1, 1, 2
+	setbossbattle SPECIES_EXCADRILL, MOVE_BULLDOZE, MOVE_METAL_CLAW, MOVE_CRUSH_CLAW, MOVE_HONE_CLAWS, 2
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_BattleAftermath::
+	setvar VAR_DEPTHS_MON_STATE, 6
+	goto TheDepths_EventScript_BattleAftermath

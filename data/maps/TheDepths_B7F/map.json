@@ -171,45 +171,45 @@
       "x": 28,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "6",
+      "script": "TheDepths_B7F_EventScript_StrongPresence"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "6",
+      "script": "TheDepths_B7F_EventScript_StrongPresence"
     },
     {
       "type": "trigger",
       "x": 30,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "6",
+      "script": "TheDepths_B7F_EventScript_StrongPresence"
     },
     {
       "type": "trigger",
       "x": 31,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "6",
+      "script": "TheDepths_B7F_EventScript_StrongPresence"
     },
     {
       "type": "trigger",
       "x": 32,
       "y": 27,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_DEPTHS_MON_STATE",
+      "var_value": "6",
+      "script": "TheDepths_B7F_EventScript_StrongPresence"
     }
   ],
   "bg_events": []

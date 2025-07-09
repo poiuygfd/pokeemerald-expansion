@@ -169,3 +169,33 @@ TheDepths_B7F_EventScript_GemSocket::
 	setvar VAR_DEPTHS_STATE, 7
 	release
 	end
+
+TheDepths_B7F_EventScript_StrongPresence::
+	lock
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B7F_EventScript_CrobatBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B7F_EventScript_ExploudBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B7F_EventScript_MachampBattle
+
+TheDepths_B7F_EventScript_CrobatBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_CROBAT, MOVE_CROSS_POISON, MOVE_DUAL_WINGBEAT, MOVE_LEECH_LIFE, MOVE_MEAN_LOOK, 0
+	dowildbattle
+	goto TheDepths_B7F_EventScript_BattleAftermath
+
+TheDepths_B7F_EventScript_ExploudBattle::
+	settotemboost 1, 1, 1, 1, 2, 1
+	setbossbattle SPECIES_EXPLOUD, MOVE_HYPER_VOICE, MOVE_ICE_BEAM, MOVE_SHOCK_WAVE, MOVE_FIRE_BLAST, 2
+	dowildbattle
+	goto TheDepths_B7F_EventScript_BattleAftermath
+
+TheDepths_B7F_EventScript_MachampBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_MACHAMP, MOVE_CROSS_CHOP, MOVE_MEGA_KICK, MOVE_DUAL_CHOP, MOVE_FOCUS_ENERGY, 1
+	dowildbattle
+	goto TheDepths_B7F_EventScript_BattleAftermath
+
+TheDepths_B7F_EventScript_BattleAftermath::
+	setvar VAR_DEPTHS_MON_STATE, 7
+	goto TheDepths_EventScript_BattleAftermath

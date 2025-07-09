@@ -92,12 +92,7 @@ TheDepths_B3F_EventScript_GemSocket::
 
 TheDepths_B3F_EventScript_StrongPresence::
 	lock
-	copyvar VAR_TEMP_1, VAR_LEVEL_CAP
-	setvar VAR_LEVEL_CAP, 1
-	setflag FLAG_PREVENT_BAG_USE
-	setflag FLAG_PREVENT_CATCHING
-	msgbox TheDepths_Text_StrongPresence
-	closemessage
+	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B3F_EventScript_MawileBattle
 	call_if_eq VAR_RESULT, 1, TheDepths_B3F_EventScript_SableyeBattle
@@ -123,9 +118,4 @@ TheDepths_B3F_EventScript_CarbinkBattle::
 
 TheDepths_B3F_EventScript_BattleAftermath::
 	setvar VAR_DEPTHS_MON_STATE, 3
-	copyvar VAR_LEVEL_CAP, VAR_TEMP_1
-	clearflag FLAG_PREVENT_BAG_USE
-	clearflag FLAG_PREVENT_CATCHING
-	msgbox TheDepths_Text_StrongPresenceLeaves
-	closemessage
-	end
+	goto TheDepths_EventScript_BattleAftermath

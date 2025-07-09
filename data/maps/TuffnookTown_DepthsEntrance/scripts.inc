@@ -23,6 +23,7 @@ TuffnookTown_DepthsEntrance_EventScript_Hiker::
 	lockall
 	checkitem ITEM_BATTLE_PASS
     goto_if_eq VAR_RESULT, FALSE, TuffnookTown_DepthsEntrance_EventScript_Closed
+	goto_if_eq VAR_DEPTHS_MON_STATE, 8, TuffnookTown_DepthsEntrance_EventScript_UnclaimedPrize
 	setvar VAR_DEPTHS_STATE, 0
 	setvar VAR_DEPTHS_MON_STATE, 0
 	clearflag FLAG_DEPTHS_USED_HEAL
@@ -96,6 +97,14 @@ TuffnookTown_DepthsEntrance_EventScript_ExpertMode::
 
 TuffnookTown_DepthsEntrance_EventScript_SaveFailed::
 	goto TuffnookTown_DepthsEntrance_EventScript_CancelEntry
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_UnclaimedPrize::
+	msgbox TuffnookTown_DepthsEntrance_Text_ClaimPrize, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_PATCH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_DEPTHS_MON_STATE, 0
+	releaseall
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_Closed::
@@ -184,6 +193,11 @@ TuffnookTown_DepthsEntrance_Text_BetterLuckNextTime:
 	.string "Better luck next time, kid.\p"
 	.string "If you wish to challenge THE DEPTHS\n"
     .string "again, come back anytime!$"
+
+TuffnookTown_DepthsEntrance_Text_ClaimPrize:
+	.string "Looks like you have an unclaimed\n"
+	.string "prize here.\p"
+	.string "Here you go!$"
 
 TuffnookTown_DepthsEntrance_Text_StillGettingReady:
 	.string "Sorry, kid, we're still getting ready\n"

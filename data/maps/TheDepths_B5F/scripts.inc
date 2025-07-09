@@ -159,3 +159,33 @@ TheDepths_B5F_EventScript_GemSocket::
 	setvar VAR_DEPTHS_STATE, 5
 	release
 	end
+
+TheDepths_B5F_EventScript_StrongPresence::
+	lock
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B5F_EventScript_VibravaBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B5F_EventScript_KrokorokBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B5F_EventScript_FraxureBattle
+
+TheDepths_B5F_EventScript_VibravaBattle::
+	settotemboost 1, 1, 1, 1, 2, 1
+	setbossbattle SPECIES_VIBRAVA, MOVE_EARTH_POWER, MOVE_DRAGON_PULSE, MOVE_BOOMBURST, MOVE_FISSURE, 0
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_KrokorokBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_KROKOROK, MOVE_POWER_TRIP, MOVE_EARTHQUAKE, MOVE_DIG, MOVE_SWAGGER, 1
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_FraxureBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_FRAXURE, MOVE_DRAGON_CLAW, MOVE_BREAKING_SWIPE, MOVE_CRUNCH, MOVE_SCARY_FACE, 1
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_BattleAftermath::
+	setvar VAR_DEPTHS_MON_STATE, 5
+	goto TheDepths_EventScript_BattleAftermath

@@ -72,6 +72,24 @@ TheDepths_EventScript_GemSocketActive::
     release
     end
 
+TheDepths_EventScript_StrongPresence::
+	copyvar VAR_TEMP_LEVEL_CAP, VAR_LEVEL_CAP
+	setvar VAR_LEVEL_CAP, 1
+	setflag FLAG_PREVENT_BAG_USE
+	setflag FLAG_PREVENT_CATCHING
+	msgbox TheDepths_Text_StrongPresence
+	closemessage
+    return
+
+TheDepths_EventScript_BattleAftermath::
+    copyvar VAR_LEVEL_CAP, VAR_TEMP_LEVEL_CAP
+	setvar VAR_TEMP_LEVEL_CAP, 0
+	clearflag FLAG_PREVENT_BAG_USE
+	clearflag FLAG_PREVENT_CATCHING
+	msgbox TheDepths_Text_StrongPresenceLeaves
+	closemessage
+    end
+
 TheDepths_Text_ForfeitChallenge:
 	.string "Would you like to forfeit this dive\n"
 	.string "and return to the surface?$"
