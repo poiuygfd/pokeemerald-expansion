@@ -2,10 +2,17 @@
 LilycoveCity_ContestLobby_EventScript_SpeakToContestReceptionist::
 	lock
 	faceplayer
+	checkitem ITEM_CONTEST_PASS
+    goto_if_eq VAR_RESULT, FALSE, LilycoveCity_ContestLobby_EventScript_NoContestPass
 	goto_if_ne VAR_CONTEST_PRIZE_PICKUP, 0, LilycoveCity_ContestLobby_EventScript_PickUpPrize
 	call_if_set FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
 	call_if_unset FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
 	goto LilycoveCity_ContestLobby_EventScript_AskEnterContest
+	end
+
+LilycoveCity_ContestLobby_EventScript_NoContestPass::
+	msgbox LilycoveCity_ContestLobby_Text_ReceptionDontHaveContestPass, MSGBOX_DEFAULT
+	release
 	end
 
 LilycoveCity_ContestLobby_EventScript_ReceptionWelcome::
@@ -1355,6 +1362,17 @@ LilycoveCity_ContestLobby_EventScript_DelayIfContestWithRSPlayer::
 LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer::
 	delay 9
 	return
+
+LilycoveCity_ContestLobby_Text_ReceptionDontHaveContestPass:
+	.string "Hello!\p"
+	.string "This is the reception counter for\n"
+	.string "POKéMON CONTESTS.\p"
+	.string "Oh? It appears that you don't have\n"
+	.string "a CONTEST PASS.\p"
+	.string "We're very sorry, but you cannot enter\n"
+	.string "without a CONTEST PASS.\p"
+	.string "Please come back when you have a\n"
+	.string "CONTEST PASS!$"
 
 LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase:
 	.string "Hello!\p"

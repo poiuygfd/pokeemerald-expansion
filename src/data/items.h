@@ -14257,8 +14257,8 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "Allows access to\n"
-            "TRAINER HILL and\n"
-            "THE DEPTHS."),
+            "Trainer Hill and\n"
+            "The Depths."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

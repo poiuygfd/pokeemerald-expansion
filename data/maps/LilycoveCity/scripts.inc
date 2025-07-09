@@ -7,6 +7,8 @@ LilycoveCity_OnTransition:
 	setflag FLAG_VISITED_LILYCOVE_CITY
 	setvar VAR_CONTEST_HALL_STATE, 0
 	setflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER
+	setflag FLAG_HIDE_LILYCOVE_SCOTT
+	call_if_eq VAR_SCOTT_LILYCOVE_STATE, 1, LilycoveCity_EventScript_ShowScott
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 	call Common_EventScript_SetupRivalGfxId
 	end
@@ -28,6 +30,10 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
 	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	return
+
+LilycoveCity_EventScript_ShowScott::
+	clearflag FLAG_HIDE_LILYCOVE_SCOTT
 	return
 
 LilycoveCity_EventScript_BerryGentleman::
@@ -226,6 +232,145 @@ LilycoveCity_EventScript_AquaGrunt4::
 	msgbox LilycoveCity_Text_IfWorldBecomesOurs, MSGBOX_NPC
 	end
 
+LilycoveCity_EventScript_TriggerScott1::
+	lockall
+	clearflag FLAG_HIDE_LILYCOVE_SCOTT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottMovement1
+	waitmovement 0
+	goto LilycoveCity_EventScript_LilycoveScott
+	end
+
+LilycoveCity_EventScript_TriggerScott2::
+	lockall
+	clearflag FLAG_HIDE_LILYCOVE_SCOTT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottMovement2
+	waitmovement 0
+	goto LilycoveCity_EventScript_LilycoveScott
+	end
+
+LilycoveCity_EventScript_TriggerScott3::
+	lockall
+	clearflag FLAG_HIDE_LILYCOVE_SCOTT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottMovement3
+	waitmovement 0
+	goto LilycoveCity_EventScript_LilycoveScott
+	end
+
+LilycoveCity_EventScript_TriggerScott4::
+	lockall
+	clearflag FLAG_HIDE_LILYCOVE_SCOTT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottMovement4
+	waitmovement 0
+	goto LilycoveCity_EventScript_LilycoveScott
+	end
+
+LilycoveCity_Movement_ScottMovement1:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	face_left
+	step_end
+
+LilycoveCity_Movement_ScottMovement2:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LilycoveCity_Movement_ScottMovement3:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	face_left
+	step_end
+
+LilycoveCity_Movement_ScottMovement4:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	face_left
+	step_end
+
+LilycoveCity_EventScript_LilycoveScott::
+	setvar VAR_SCOTT_LILYCOVE_STATE, 2
+	message LilycoveCity_Text_ScottGivePassChoice
+	waitmessage
+	multichoice 0, 0, MULTI_PASS_CHOICE, TRUE
+	switch VAR_RESULT
+	case 0, LilycoveCity_EventScript_BattlePass
+	case 1, LilycoveCity_EventScript_ContestPass
+	end
+
+LilycoveCity_EventScript_BattlePass::
+	msgbox LilycoveCity_Text_ScottChoseBattlePass, MSGBOX_DEFAULT
+	giveitem ITEM_BATTLE_PASS
+	msgbox LilycoveCity_Text_ExplainBattlePass, MSGBOX_DEFAULT
+	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceRight
+	waitmovement 0
+	delay 48
+	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox LilycoveCity_Text_ScottHaveContestPassAnyway, MSGBOX_DEFAULT
+	giveitem ITEM_CONTEST_PASS
+	msgbox LilycoveCity_Text_ExplainContestPass, MSGBOX_DEFAULT
+	msgbox LilycoveCity_Text_ScottTalkToYouLater, MSGBOX_DEFAULT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottLeave
+	waitmovement 0
+	removeobject LOCALID_LILYCOVE_SCOTT
+	setflag FLAG_HIDE_LILYCOVE_SCOTT
+	releaseall
+	end
+
+LilycoveCity_EventScript_ContestPass::
+	msgbox LilycoveCity_Text_ScottChoseContestPass, MSGBOX_DEFAULT
+	giveitem ITEM_CONTEST_PASS
+	msgbox LilycoveCity_Text_ExplainContestPass, MSGBOX_DEFAULT
+	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceRight
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox LilycoveCity_Text_ScottHaveBattlePassAnyway, MSGBOX_DEFAULT
+	giveitem ITEM_BATTLE_PASS
+	msgbox LilycoveCity_Text_ExplainBattlePass, MSGBOX_DEFAULT
+	msgbox LilycoveCity_Text_ScottTalkToYouLater, MSGBOX_DEFAULT
+	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottLeave
+	waitmovement 0
+	removeobject LOCALID_LILYCOVE_SCOTT
+	setflag FLAG_HIDE_LILYCOVE_SCOTT
+	releaseall
+	end
+
+LilycoveCity_Movement_ScottLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 LilycoveCity_EventScript_Rival::
 	lock
 	faceplayer
@@ -418,6 +563,69 @@ LilycoveCity_EventScript_Lotad::
 	waitmoncry
 	release
 	end
+
+LilycoveCity_Text_ScottGivePassChoice:
+	.string "SCOTT: Hey! {PLAYER}{KUN}!\n"
+	.string "How's it going?\p"
+	.string "I'm impressed you managed to get\n"
+	.string "six GYM BADGES so quickly.\p"
+	.string "Alright!\p"
+	.string "Which of these sounds more interesting\n"
+	.string "to you? I'll give it to you!$"
+
+LilycoveCity_Text_ScottChoseBattlePass:
+	.string "Right on, {PLAYER}{KUN}!\n"
+	.string "I knew you'd understand!\p"
+	.string "Here, this is yours now.$"
+
+LilycoveCity_Text_ScottChoseContestPass:
+	.string "Really?\n"
+	.string "That's the one you chose?\p"
+	.string "Well, if that's what you really want…$"
+
+LilycoveCity_Text_ExplainBattlePass:
+	.string "That BATTLE PASS will grant you\n"
+	.string "access to some BATTLE FACILITIES\l"
+	.string "other than the BATTLE TENTs that\l"
+	.string "just recently opened up.\p"
+	.string "Just north of MAUVILLE CITY you\n"
+	.string "can find the TRAINER HILL, and\l"
+	.string "inside TUFFNOOK TOWN you can go\l"
+	.string "visit THE DEPTHS.\p"
+	.string "Be sure to pay both places a visit\n"
+	.string "if you're looking for a tough new\l"
+	.string "challenge other than GYMS or TENTS.$"
+
+LilycoveCity_Text_ExplainContestPass:
+	.string "That CONTEST PASS, as I'm sure\n"
+	.string "you already know, will grant you\l"
+	.string "access to the POKéMON CONTESTS\l"
+	.string "here in LILYCOVE CITY.\p"
+	.string "Well, they may not be as intense as\n"
+	.string "a tough BATTLE, but they are still\l"
+	.string "a challenge for you to overcome in\l"
+	.string "their own right.$"
+
+LilycoveCity_Text_ScottHaveBattlePassAnyway:
+	.string "Heh! Did you think I'd let you off\n"
+	.string "that easily?\p"
+	.string "A strong TRAINER like you should\n"
+	.string "strive to push yourself with even\l"
+	.string "tougher BATTLES.\p"
+	.string "That being said, you're taking this\n"
+	.string "one too!$"
+
+LilycoveCity_Text_ScottHaveContestPassAnyway:
+	.string "Oh, what the heck!\n"
+	.string "I'm feeling generous today.\p"
+	.string "You can have this one, too!$"
+
+LilycoveCity_Text_ScottTalkToYouLater:
+	.string "Well, I'm off!\n"
+	.string "I'll catch you later, {PLAYER}{KUN}.\p"
+	.string "Whether you take on TRAINER HILL,\n"
+	.string "THE DEPTHS or CONTESTS, I wish\l"
+	.string "you and your team the best of luck!$"
 
 LilycoveCity_Text_MayShoppingLetsBattle:
 	.string "MAY: Oh, hey?\n"

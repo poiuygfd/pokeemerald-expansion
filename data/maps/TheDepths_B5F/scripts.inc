@@ -156,6 +156,7 @@ TheDepths_B5F_EventScript_GemSocket::
 	setmetatile 31, 31, METATILE_NavelRock_Floor, FALSE
 	setmetatile 32, 31, METATILE_NavelRock_Floor, FALSE
 	special DrawWholeMapView
+	playse SE_BANG
 	setvar VAR_DEPTHS_STATE, 5
 	release
 	end

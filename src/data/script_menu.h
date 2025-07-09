@@ -825,6 +825,12 @@ static const struct MenuAction MultichoiceList_DepthsNormalExpert[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_PassChoice[] =
+{
+    {COMPOUND_STRING("BATTLE PASS")},
+    {COMPOUND_STRING("CONTEST PASS")},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -960,6 +966,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_ULTIMATE_MOVES]             = MULTICHOICE(MultichoiceList_UltimateMoves),
     [MULTI_DEPTHS_NORMAL_ONLY]         = MULTICHOICE(MultichoiceList_DepthsNormalOnly),
     [MULTI_DEPTHS_NORMAL_EXPERT]       = MULTICHOICE(MultichoiceList_DepthsNormalExpert),
+    [MULTI_PASS_CHOICE]                = MULTICHOICE(MultichoiceList_PassChoice),
 };
 
 const u8 *const gStdStrings[] =

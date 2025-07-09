@@ -130,6 +130,7 @@
 #define MULTI_ULTIMATE_MOVES               119
 #define MULTI_DEPTHS_NORMAL_ONLY           120
 #define MULTI_DEPTHS_NORMAL_EXPERT         121
+#define MULTI_PASS_CHOICE                  122
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

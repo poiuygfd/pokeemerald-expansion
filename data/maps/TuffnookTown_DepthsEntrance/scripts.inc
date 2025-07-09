@@ -100,6 +100,15 @@ TuffnookTown_DepthsEntrance_EventScript_SaveFailed::
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_UnclaimedPrize::
+	goto_if_unset FLAG_DEPTHS_USED_HEAL, TuffnookTown_DepthsEntrance_EventScript_NoHealPrize
+	msgbox TuffnookTown_DepthsEntrance_Text_ClaimPrize, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_DEPTHS_MON_STATE, 0
+	releaseall
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_NoHealPrize::
 	msgbox TuffnookTown_DepthsEntrance_Text_ClaimPrize, MSGBOX_DEFAULT
 	giveitem ITEM_ABILITY_PATCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull

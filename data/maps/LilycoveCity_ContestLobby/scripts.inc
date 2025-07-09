@@ -612,6 +612,8 @@ LilycoveCity_ContestLobby_EventScript_FaceOriginalDirection::
 	end
 
 LilycoveCity_ContestLobby_EventScript_LinkContestReceptionist::
+	checkitem ITEM_CONTEST_PASS
+    goto_if_eq VAR_RESULT, FALSE, LilycoveCity_ContestLobby_EventScript_NoContestPass
 	special ClearLinkContestFlags
 	lock
 	faceplayer

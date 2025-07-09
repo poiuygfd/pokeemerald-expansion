@@ -16,10 +16,21 @@ TheDepths_B8F_EventScript_PrizeGiver::
 	faceplayer
 	goto_if_eq VAR_DEPTHS_STATE, 8, TheDepths_B8F_EventScript_ClaimedPrize
 	goto_if_eq VAR_DEPTHS_MON_STATE, 8, TheDepths_B8F_EventScript_CantClaimPrize
+	goto_if_unset FLAG_DEPTHS_USED_HEAL, TheDepths_B8F_EventScript_NoHealPrize
 	msgbox TheDepths_B8F_Text_CongratsOnMakingIt, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
+	goto_if_eq VAR_RESULT, FALSE, TheDepths_B8F_EventScript_CantClaimPrize
+	setvar VAR_DEPTHS_STATE, 8
+	msgbox TheDepths_B8F_Text_HeadOnOut, MSGBOX_DEFAULT
+	release
+	end
+
+TheDepths_B8F_EventScript_NoHealPrize::
+	msgbox TheDepths_B8F_Text_CongratsOnMakingItNoHeal, MSGBOX_DEFAULT
 	giveitem ITEM_ABILITY_PATCH
 	goto_if_eq VAR_RESULT, FALSE, TheDepths_B8F_EventScript_CantClaimPrize
 	setvar VAR_DEPTHS_STATE, 8
+	msgbox TheDepths_B8F_Text_HeadOnOut, MSGBOX_DEFAULT
 	release
 	end
 
@@ -43,6 +54,17 @@ TheDepths_B8F_Text_CongratsOnMakingIt:
 	.string "That's no easy feat, you know.\n"
 	.string "I think you've earned yourself\l"
 	.string "a little prize!$"
+
+TheDepths_B8F_Text_CongratsOnMakingItNoHeal:
+	.string "Congrats, kid!\n"
+	.string "You made it to the bottom!\p"
+	.string "Not only that, but I've been\n"
+	.string "informed you didn't even heal\l"
+	.string "your POKéMON.\p"
+	.string "Making it all the way down here\n"
+	.string "without even needing to heal…\p"
+	.string "You've got some serious guts, kid!\n"
+	.string "Here, a special prize, just for you!$"
 
 TheDepths_B8F_Text_HeadOnOut:
 	.string "You can head on out through the\n"
