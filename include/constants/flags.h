@@ -1291,12 +1291,12 @@
 #define FLAG_HIDDEN_ITEM_MT_PYRE_MISTY_SEED                         0x4CE // Hidden Misty Seed
 #define FLAG_HIDDEN_ITEM_ROUTE_119_GRASSY_SEED                      0x4CF // Hidden Grassy Seed
 #define FLAG_RECEIVED_DESTINY_KNOT                                  0x4D0 // Received Destiny Knot
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
+#define FLAG_ITEM_MT_CHIMNEY_SHARP_BREAK                            0x4D1 // Mt. Chimney Sharp Beak
+#define FLAG_ITEM_ROUTE_119_SILVER_POWDER                           0x4D2 // Route 119 Silver Powder
+#define FLAG_RECEIVED_BLACK_BELT                                    0x4D3 // Received Black Belt
+#define FLAG_RECEIVED_CLEAR_AMULET                                  0x4D4 // Received Clear Amulet
+#define FLAG_HIDE_SLATEPORT_METRONOME_MAN                           0x4D5 // Metronome Gift (Appears after 2 Badges)
+#define FLAG_RECEIVED_METRONOME                                     0x4D6 // Received Metronome Gift
 #define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag

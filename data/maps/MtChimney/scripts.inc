@@ -479,6 +479,10 @@ MtChimney_EventScript_RouteSign::
 	msgbox MtChimney_Text_RouteSign, MSGBOX_SIGN
 	end
 
+MtChimney_EventScript_BirdLass::
+	msgbox MtChimney_Text_HaveYouSeenMyBird, MSGBOX_NPC
+	end
+
 MtChimney_EventScript_Shelby::
 	trainerbattle_single TRAINER_SHELBY_1, MtChimney_Text_ShelbyIntro, MtChimney_Text_ShelbyDefeat, MtChimney_EventScript_DefeatedShelby
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -752,6 +756,12 @@ MtChimney_Text_MachineMakesNoResponse:
 MtChimney_Text_RouteSign:
 	.string "{DOWN_ARROW} JAGGED PATH\n"
 	.string "LAVARIDGE TOWN AHEAD$"
+
+MtChimney_Text_HaveYouSeenMyBird:
+	.string "Hey, uh, have you seen my PIDGEY?\n"
+	.string "I've been looking for a while now.\p"
+	.string "Maybe, uh, the volcano wasn't the\n"
+	.string "best place for a leisurely walk…$"
 
 MtChimney_Text_ShelbyIntro:
 	.string "I've been to the hot springs and\n"

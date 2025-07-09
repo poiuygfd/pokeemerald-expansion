@@ -289,6 +289,17 @@ Route113_GlassWorkshop_EventScript_TryGiveItemAgain::
 	end
 
 Route113_GlassWorkshop_EventScript_NinjaBoy::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_CLEAR_AMULET, Route113_GlassWorkshop_EventScript_AmuletGiven
+	msgbox Route113_GlassWorkshop_Text_IMadeThisAmulet, MSGBOX_DEFAULT
+	giveitem ITEM_CLEAR_AMULET
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CLEAR_AMULET
+	release
+	end
+
+Route113_GlassWorkshop_EventScript_AmuletGiven::
 	msgbox Route113_GlassWorkshop_Text_FunToBlowGlassFlute, MSGBOX_NPC
 	end
 
@@ -383,6 +394,14 @@ Route113_GlassWorkshop_Text_HaventGotYourSootSack:
 	.string "with you, huff-puff.\p"
 	.string "You have to keep it with you to collect\n"
 	.string "volcanic ash, huff-puff.$"
+
+Route113_GlassWorkshop_Text_IMadeThisAmulet:
+	.string "Working for the boss here is fun,\n"
+	.string "huff-puff.\p"
+	.string "I made this amulet under his\n"
+	.string "supervision, huff-puff.\p"
+	.string "You can have it as thanks for visiting,\n"
+	.string "huff-puff.$"
 
 Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
 	.string "It's fun to blow a glass flute while\n"

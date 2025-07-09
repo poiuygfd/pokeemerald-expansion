@@ -338,6 +338,7 @@ LilycoveCity_EventScript_BattlePass::
 	waitmovement 0
 	removeobject LOCALID_LILYCOVE_SCOTT
 	setflag FLAG_HIDE_LILYCOVE_SCOTT
+	addvar VAR_SCOTT_STATE, 1
 	releaseall
 	end
 
@@ -347,7 +348,7 @@ LilycoveCity_EventScript_ContestPass::
 	msgbox LilycoveCity_Text_ExplainContestPass, MSGBOX_DEFAULT
 	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceRight
 	waitmovement 0
-	delay 30
+	delay 48
 	applymovement LOCALID_LILYCOVE_SCOTT, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox LilycoveCity_Text_ScottHaveBattlePassAnyway, MSGBOX_DEFAULT
@@ -358,6 +359,7 @@ LilycoveCity_EventScript_ContestPass::
 	waitmovement 0
 	removeobject LOCALID_LILYCOVE_SCOTT
 	setflag FLAG_HIDE_LILYCOVE_SCOTT
+	addvar VAR_SCOTT_STATE, 1
 	releaseall
 	end
 

@@ -29,6 +29,21 @@ FallarborTown_EventScript_Gentleman::
 	msgbox FallarborTown_Text_HaveYouChallengedFlannery, MSGBOX_NPC
 	end
 
+FallarborTown_EventScript_BlackBeltBlackBelt::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BLACK_BELT, FallarborTown_EventScript_BlackBelt
+	msgbox FallarborTown_Text_BecomeMyStudent, MSGBOX_DEFAULT
+	giveitem ITEM_BLACK_BELT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_BLACK_BELT
+	release
+	end
+
+FallarborTown_EventScript_BlackBelt::
+	msgbox FallarborTown_Text_GoMyStudent, MSGBOX_NPC
+	end
+
 FallarborTown_EventScript_Azurill::
 	lock
 	faceplayer
@@ -80,6 +95,26 @@ FallarborTown_Text_HaveYouChallengedFlannery:
 	.string "It wouldn't surprise me to see FLANNERY\n"
 	.string "become a great TRAINER in her own\l"
 	.string "right.$"
+
+FallarborTown_Text_BecomeMyStudent:
+	.string "I can see it in your eyes.\p"
+	.string "You want to learn.\p"
+	.string "And you want to learn from the best.\p"
+	.string "Very well!\n"
+	.string "I shall teach you how to use my very\l"
+	.string "own, secret martial arts technique!\p"
+	.string "Now, take a deep breath…\p"
+	.string "My goodness!\n"
+	.string "You're a natural at this!\p"
+	.string "Well, I've taught you everything that\n"
+	.string "I know, my student.\p"
+	.string "Take this, as proof of your mastery\n"
+	.string "over my special martial arts.$"
+
+FallarborTown_Text_GoMyStudent:
+	.string "Go, my student!\p"
+	.string "Use what I have taught you wisely\n"
+	.string "and become the best!$"
 
 FallarborTown_Text_BattleTentSign:
 	.string "BATTLE TENT FALLARBOR SITE\n"
