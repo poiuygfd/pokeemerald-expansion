@@ -359,6 +359,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 0,
         SHADOW(0, 12, SHADOW_SIZE_S)
         FOOTPRINT(Avitorch)
+        OVERWORLD(
+            sPicTable_Avitorch,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            sAnimTable_Following,
+            gOverworldPalette_Avitorch,
+            gShinyOverworldPalette_Avitorch
+        )
         .levelUpLearnset = sAvitorchLevelUpLearnset,
         .teachableLearnset = sAvitorchTeachableLearnset,
         .eggMoveLearnset = sAvitorchEggMoveLearnset,
@@ -477,6 +486,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 0,
         SHADOW(2, 7, SHADOW_SIZE_L)
         FOOTPRINT(Regitube)
+        OVERWORLD(
+            sPicTable_Regitube,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Regitube,
+            gShinyOverworldPalette_Regitube
+        )
         .isLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRegitubeLevelUpLearnset,

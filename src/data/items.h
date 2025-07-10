@@ -14230,8 +14230,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
-        .iconPic = gItemIcon_SootSack,
-        .iconPalette = gItemIconPalette_SootSack,
+        .iconPic = gItemIcon_CandyBag,
+        .iconPalette = gItemIconPalette_CandyBag,
     },
 
     [ITEM_COSTUME_CASE] =

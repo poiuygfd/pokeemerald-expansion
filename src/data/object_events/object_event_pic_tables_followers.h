@@ -206,10 +206,10 @@ static const struct SpriteFrameImage sPicTable_PikachuF[] = {
 };
 #endif //P_GENDER_DIFFERENCES
 #if P_COSPLAY_PIKACHU_FORMS
-/*static const struct SpriteFrameImage sPicTable_PikachuCosplay[] = {
+static const struct SpriteFrameImage sPicTable_PikachuCosplay[] = {
     overworld_ascending_frames(gObjectEventPic_PikachuCosplay, 4, 4),
 };
-static const struct SpriteFrameImage sPicTable_PikachuRockStar[] = {
+/*static const struct SpriteFrameImage sPicTable_PikachuRockStar[] = {
     overworld_ascending_frames(gObjectEventPic_PikachuRockStar, 4, 4),
 };
 static const struct SpriteFrameImage sPicTable_PikachuBelle[] = {
@@ -6735,12 +6735,12 @@ static const struct SpriteFrameImage sPicTable_MissingNo[] = {
     overworld_ascending_frames(gObjectEventPic_MissingNo, 4, 4),
 };
 
-//static const struct SpriteFrameImage sPicTable_Avitorch[] = {
-//    overworld_ascending_frames(gObjectEventPic_Avitorch, 4, 4),
-//};
+static const struct SpriteFrameImage sPicTable_Avitorch[] = {
+    overworld_ascending_frames(gObjectEventPic_Avitorch, 4, 4),
+};
 
-//static const struct SpriteFrameImage sPicTable_Regitube[] = {
-//    overworld_ascending_frames(gObjectEventPic_Regitube, 4, 4),
-//};
+static const struct SpriteFrameImage sPicTable_Regitube[] = {
+    overworld_ascending_frames(gObjectEventPic_Regitube, 4, 4),
+};
 
 #endif //OW_POKEMON_OBJECT_EVENTS
