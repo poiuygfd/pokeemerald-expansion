@@ -18121,7 +18121,7 @@ static const struct LevelUpMove sMarshadowLevelUpLearnset[] = {
 
 #if P_FAMILY_POIPOLE
 static const struct LevelUpMove sPoipoleLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_DRAGON_PULSE),
+    LEVEL_UP_MOVE( 1, MOVE_NASTY_PLOT),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_HELPING_HAND),
@@ -18131,8 +18131,8 @@ static const struct LevelUpMove sPoipoleLevelUpLearnset[] = {
     LEVEL_UP_MOVE(21, MOVE_CHARM),
     LEVEL_UP_MOVE(28, MOVE_VENOSHOCK),
     LEVEL_UP_MOVE(35, MOVE_VENOM_DRENCH),
-    LEVEL_UP_MOVE(42, MOVE_NASTY_PLOT),
-    LEVEL_UP_MOVE(49, MOVE_POISON_JAB),
+    LEVEL_UP_MOVE(42, MOVE_POISON_JAB),
+    LEVEL_UP_MOVE(49, MOVE_DRAGON_PULSE),
     LEVEL_UP_MOVE(56, MOVE_GASTRO_ACID),
     LEVEL_UP_MOVE(63, MOVE_TOXIC),
     LEVEL_UP_END

@@ -675,7 +675,7 @@
 #define FLAG_HIDE_CUTSCENE_REGIGIGAS  0x272 // Regigigas used in Regitube event
 #define FLAG_HIDE_STATIC_REGIGIGAS  0x273 // Regigigas "statue" before bringing the 5 other Regis
 #define FLAG_AWOKEN_REGIGIGAS  0x274 // Whether the player has woke up Regigigas or not
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_TALKED_TO_POIPOLE_GIRL  0x275 // Talked to Poipole giver but didn't take Poipole
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag

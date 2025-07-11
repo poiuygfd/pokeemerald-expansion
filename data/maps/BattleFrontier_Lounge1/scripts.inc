@@ -150,6 +150,74 @@ BattleFrontier_Lounge1_EventScript_Boy2::
 	msgbox BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt, MSGBOX_NPC
 	end
 
+BattleFrontier_Lounge1_EventScript_PoipoleGirl::
+	lock
+	goto_if_set FLAG_RECEIVED_POIPOLE, BattleFrontier_Lounge1_EventScript_AlreadyGotPoipole
+	goto_if_set FLAG_TALKED_TO_POIPOLE_GIRL, BattleFrontier_Lounge1_EventScript_SkipDialogue
+	setflag FLAG_TALKED_TO_POIPOLE_GIRL
+	msgbox BattleFrontier_Lounge1_Text_DubiousLittleCreature, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, BattleFrontier_Lounge1_EventScript_ReceivePoipole
+	msgbox BattleFrontier_Lounge1_Text_ComeBackIfChangeMind, MSGBOX_DEFAULT
+	release
+	end
+
+BattleFrontier_Lounge1_EventScript_SkipDialogue::
+	msgbox BattleFrontier_Lounge1_Text_ChangedYourMind, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, BattleFrontier_Lounge1_EventScript_ReceivePoipole
+	msgbox BattleFrontier_Lounge1_Text_ComeBackIfChangeMind, MSGBOX_DEFAULT
+	release
+	end
+
+BattleFrontier_Lounge1_EventScript_ReceivePoipole::
+	msgbox BattleFrontier_Lounge1_Text_ThankYouTrainer, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_POIPOLE
+	givemon SPECIES_POIPOLE, 35
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, BattleFrontier_Lounge1_EventScript_ReceivePoipoleParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, BattleFrontier_Lounge1_EventScript_ReceivePoipolePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+BattleFrontier_Lounge1_EventScript_ReceivePoipoleParty::
+	call BattleFrontier_Lounge1_EventScript_ReceivedPoipoleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_Lounge1_EventScript_ThanksForTaking
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto BattleFrontier_Lounge1_EventScript_ThanksForTaking
+	end
+
+BattleFrontier_Lounge1_EventScript_ReceivePoipolePC::
+	call BattleFrontier_Lounge1_EventScript_ReceivedPoipoleFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_Lounge1_EventScript_SendPoipoleToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto BattleFrontier_Lounge1_EventScript_SendPoipoleToPC
+	end
+
+BattleFrontier_Lounge1_EventScript_SendPoipoleToPC::
+	call Common_EventScript_TransferredToPC
+	goto BattleFrontier_Lounge1_EventScript_ThanksForTaking
+	end
+
+BattleFrontier_Lounge1_EventScript_ReceivedPoipoleFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message BattleFrontier_Lounge1_Text_PlayerReceivedPoipole
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_POIPOLE
+	return
+
+BattleFrontier_Lounge1_EventScript_ThanksForTaking::
+	msgbox BattleFrontier_Lounge1_Text_ThanksForTakingPoipole, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_POIPOLE
+	release
+	end
+
+BattleFrontier_Lounge1_EventScript_AlreadyGotPoipole::
+	msgbox BattleFrontier_Lounge1_Text_HowIsPoipoleDoing, MSGBOX_NPC
+	release
+	end
+
 BattleFrontier_Lounge1_Text_PokemonBreederIntro:
 	.string "For 70 years I have raised POKéMON!\n"
 	.string "I am the man they revere as\l"
@@ -256,3 +324,43 @@ BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt:
 	.string "But I didn't do anything special\l"
 	.string "raising it…$"
 
+BattleFrontier_Lounge1_Text_DubiousLittleCreature:
+	.string "The other day, I was out and about\n"
+	.string "for a walk.\p"
+	.string "But when I looked up, perhaps my eyes\n"
+	.string "were just playing tricks on me…\p"
+	.string "But I saw what almost looked like a\n"
+	.string "tear in the fabric of space itself!\p"
+	.string "I blinked and it was gone, but after\n"
+	.string "that I saw this weird little POKéMON\l"
+	.string "I've never seen before looking dazed.\p"
+	.string "Even that top BREEDER over there said\n"
+	.string "he's never seen a POKéMON quite like it\l"
+	.string "in his 70 years of BREEDING.\p"
+	.string "I wouldn't say that I'm a bad TRAINER,\n"
+	.string "but taking care of a never-before-seen\l"
+	.string "POKéMON seems beyond me.\p"
+	.string "Could you maybe take it off my hands?$"
+
+BattleFrontier_Lounge1_Text_ComeBackIfChangeMind:
+	.string "Oh, okay then…\n"
+	.string "If you change your mind, I'll be waiting.$"
+
+BattleFrontier_Lounge1_Text_ChangedYourMind:
+	.string "Oh, it's you again.\p"
+	.string "Did you change your mind?\n"
+	.string "Would you take this little one off of me?$"
+
+BattleFrontier_Lounge1_Text_ThankYouTrainer:
+	.string "Oh, thank you!\n"
+	.string "Here you go.$"
+
+BattleFrontier_Lounge1_Text_PlayerReceivedPoipole:
+	.string "{PLAYER} received POIPOLE!$"
+
+BattleFrontier_Lounge1_Text_HowIsPoipoleDoing:
+	.string "How is that little one doing now?\n"
+	.string "I hope you're treating it well.$"
+
+BattleFrontier_Lounge1_Text_ThanksForTakingPoipole:
+	.string "I hope the two of you get along well!$"
