@@ -33,6 +33,10 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_HEATRAN
 	clearflag FLAG_DEFEATED_ZERAORA
 	clearflag FLAG_DEFEATED_OGERPON
+	clearflag FLAG_DEFEATED_ROARING_MOON
+	clearflag FLAG_DEFEATED_IRON_VALIANT
+	clearflag FLAG_DEFEATED_REGIGIGAS
+	clearflag FLAG_DEFEATED_REGITUBE
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::

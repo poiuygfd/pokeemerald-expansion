@@ -305,6 +305,10 @@ Route120_EventScript_Ogerpon::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route120_EventScript_RanFromOgerpon
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route120_EventScript_RanFromOgerpon
 	setflag FLAG_CAUGHT_OGERPON
+	addobject LOCALID_HEARTHFLAME_MASK
+	addobject LOCALID_WELLSPRING_MASK
+	addobject LOCALID_CORNERSTONE_MASK
+	msgbox Route120_Text_OgerponDroppedSomething, MSGBOX_DEFAULT
 	release
 	end
 
@@ -484,6 +488,9 @@ Kecleon_Text_UseDevonScopeMonAttacked:
 	.string "An invisible POKéMON became completely\n"
 	.string "visible!\p"
 	.string "The startled POKéMON attacked!$"
+
+Route120_Text_OgerponDroppedSomething:
+	.string "OGERPON dropped something…$"
 
 Route120_Text_RouteSignFortree:
 	.string "ROUTE 120\n"

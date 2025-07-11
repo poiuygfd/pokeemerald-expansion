@@ -351,6 +351,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route109_EventScript_ChillingWaterGiver",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE_109_BEACH_TUBES",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 27,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route109_EventScript_InnerTubes",
+      "flag": "FLAG_HIDE_BEACH_TUBES"
+    },
+    {
+      "local_id": "LOCALID_ROUTE_109_REGITUBE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(REGITUBE)",
+      "x": 27,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route109_EventScript_Regitube",
+      "flag": "FLAG_HIDE_REGITUBE"
+    },
+    {
+      "local_id": "LOCALID_ROUTE_109_REGIGIGAS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(REGIGIGAS)",
+      "x": 27,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CUTSCENE_REGIGIGAS"
     }
   ],
   "warp_events": [
@@ -427,14 +469,6 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_3"
-    },
-    {
-      "type": "sign",
-      "x": 27,
-      "y": 46,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route109_EventScript_InnerTubes"
     }
   ]
 }

@@ -276,6 +276,12 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ZERAORA
 	setflag FLAG_HIDE_OGERPON
 	setflag FLAG_HIDE_OGERPON_MASKS
+	setflag FLAG_HIDE_ROARING_MOON
+	setflag FLAG_HIDE_IRON_VALIANT
+	setflag FLAG_HIDE_REGIGIGAS
+	setflag FLAG_HIDE_CUTSCENE_REGIGIGAS
+	setflag FLAG_HIDE_STATIC_REGIGIGAS
+	setflag FLAG_HIDE_REGITUBE
 	setflag FLAG_SYS_B_DASH
 	call EventScript_ResetAllBerries
 	end

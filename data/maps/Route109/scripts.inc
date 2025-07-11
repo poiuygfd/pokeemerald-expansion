@@ -2,7 +2,46 @@
 @  These are labeled in DewfordTown/scripts.inc
 
 Route109_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Route109_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, Route109_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, Route109_OnResume
 	.byte 0
+
+Route109_OnLoad:
+	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_HideInnerTubes
+	end
+
+Route109_EventScript_HideInnerTubes::
+	setmetatile 27, 45, METATILE_General_SandPit_Center, FALSE
+	return
+
+Route109_OnTransition:
+	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_TryShowRegitube
+	end
+
+Route109_EventScript_TryShowRegitube::
+	call_if_set FLAG_CAUGHT_REGITUBE, Route109_EventScript_HideRegitube
+	call_if_unset FLAG_CAUGHT_REGITUBE, Route109_EventScript_ShowRegitube
+	return
+
+Route109_EventScript_ShowRegitube::
+	goto_if_set FLAG_DEFEATED_REGITUBE, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_REGITUBE
+	return
+
+Route109_EventScript_HideRegitube::
+	setflag FLAG_HIDE_REGITUBE
+	return
+
+Route109_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route109_EventScript_TryRemoveRegitube
+	end
+
+Route109_EventScript_TryRemoveRegitube::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ROUTE_109_REGITUBE
+	return
 
 Route109_EventScript_StartDepartForDewford::
 	call EventScript_BackupMrBrineyLocation
@@ -312,6 +351,37 @@ Route109_EventScript_ChoseNotToSail::
 	release
 	end
 
+Route109_EventScript_Regitube::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_REGITUBE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_REGITUBE, 50
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route109_EventScript_DefeatedRegitube
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route109_EventScript_RanFromRegitube
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route109_EventScript_RanFromRegitube
+	setflag FLAG_CAUGHT_REGITUBE
+	release
+	end
+
+Route109_EventScript_DefeatedRegitube::
+	setflag FLAG_DEFEATED_REGITUBE
+	setvar VAR_0x8004, SPECIES_REGITUBE
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+Route109_EventScript_RanFromRegitube::
+	setvar VAR_0x8004, SPECIES_REGITUBE
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
 Route109_EventScript_SeashoreHouseGirl::
 	msgbox Route109_Text_ChillAtMyPapasSpot, MSGBOX_NPC
 	end
@@ -393,7 +463,103 @@ Route109_EventScript_TrainerTipsSign::
 
 Route109_EventScript_InnerTubes::
 	msgbox Route109_Text_PileOfInnerTubes, MSGBOX_SIGN
+	checkspecies SPECIES_REGIGIGAS, NO_PARTY_SCREEN
+	goto_if_eq VAR_RESULT, TRUE, Route109_EventScript_SpawnRegitube
 	end
+
+Route109_EventScript_SpawnRegitube::
+	lockall
+	msgbox Route109_Text_RegigigasReacting, MSGBOX_DEFAULT
+	closemessage
+	call_if_eq VAR_FACING, DIR_SOUTH, Route109_EventScript_PlayerMove1
+	call_if_eq VAR_FACING, DIR_NORTH, Route109_EventScript_PlayerMove2
+	call_if_eq VAR_FACING, DIR_EAST, Route109_EventScript_PlayerMove3
+	call_if_eq VAR_FACING, DIR_WEST, Route109_EventScript_PlayerMove4
+	delay 20
+	fadescreen FADE_TO_BLACK
+	addobject LOCALID_ROUTE_109_REGIGIGAS
+	playse SE_BALL_OPEN
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	delay 100
+	playmoncry SPECIES_REGIGIGAS, CRY_MODE_NORMAL
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 160
+	fadescreen FADE_TO_WHITE
+	setflag FLAG_HIDE_BEACH_TUBES
+	removeobject LOCALID_ROUTE_109_BEACH_TUBES
+	call Route109_EventScript_HideInnerTubes
+	addobject LOCALID_ROUTE_109_REGITUBE
+	clearflag FLAG_HIDE_REGITUBE
+	special DrawWholeMapView
+	playse SE_ORB
+	delay 90
+	fadescreen FADE_FROM_WHITE
+	delay 120
+	applymovement LOCALID_ROUTE_109_REGIGIGAS, Route109_Movement_EnterBall
+	waitmovement 0
+	removeobject LOCALID_ROUTE_109_REGIGIGAS
+	setflag FLAG_HIDE_CUTSCENE_REGIGIGAS
+	special DrawWholeMapView
+	releaseall
+	end
+
+Route109_Movement_EnterBall:
+	enter_pokeball
+	step_end
+
+Route109_EventScript_PlayerMove1::
+	applymovement LOCALID_PLAYER, Route109_Movement_PlayerMovement1
+	waitmovement 0
+	return
+
+Route109_EventScript_PlayerMove2::
+	applymovement LOCALID_PLAYER, Route109_Movement_PlayerMovement2
+	waitmovement 0
+	return
+
+Route109_EventScript_PlayerMove3::
+	applymovement LOCALID_PLAYER, Route109_Movement_PlayerMovement3
+	waitmovement 0
+	return
+
+Route109_EventScript_PlayerMove4::
+	applymovement LOCALID_PLAYER, Route109_Movement_PlayerMovement4
+	waitmovement 0
+	return
+
+Route109_Movement_PlayerMovement1:
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	face_right
+	step_end
+
+Route109_Movement_PlayerMovement2:
+	walk_left
+	walk_left
+	face_right
+	step_end
+
+Route109_Movement_PlayerMovement3:
+	walk_down
+	walk_left
+	face_right
+	step_end
+
+Route109_Movement_PlayerMovement4:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	face_right
+	step_end
 
 Route109_EventScript_David::
 	trainerbattle_single TRAINER_DAVID, Route109_Text_DavidIntro, Route109_Text_DavidDefeated
@@ -596,3 +762,8 @@ Route109_Text_TrainerTipsSign:
 
 Route109_Text_PileOfInnerTubes:
 	.string "It's a pile of inflatable inner tubes.$"
+
+Route109_Text_RegigigasReacting:
+	.string "Huh?\p"
+	.string "REGIGIGAS appears to be reacting to\n"
+	.string "the pile of inner tubes…$"

@@ -671,10 +671,10 @@
 #define FLAG_NAVEL_ROCK_GUARDIAN_MOVED  0x26E // Guardian has moved
 #define FLAG_BIRCH_TUFFNOOK_TALKED_TO  0x26F // Tuffnook Prof. Birch event
 #define FLAG_HIDE_LILYCOVE_SCOTT  0x270 // Scott gift giver in Lilycove
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
+#define FLAG_HIDE_BEACH_TUBES  0x271 // Event with Regitube and Regigigas has occurred
+#define FLAG_HIDE_CUTSCENE_REGIGIGAS  0x272 // Regigigas used in Regitube event
+#define FLAG_HIDE_STATIC_REGIGIGAS  0x273 // Regigigas "statue" before bringing the 5 other Regis
+#define FLAG_AWOKEN_REGIGIGAS  0x274 // Whether the player has woke up Regigigas or not
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
