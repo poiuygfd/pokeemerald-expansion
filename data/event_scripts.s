@@ -1179,3 +1179,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TheDepths_B6F/scripts.inc"
 	.include "data/maps/TheDepths_B7F/scripts.inc"
 	.include "data/maps/TheDepths_B8F/scripts.inc"
+	.include "data/maps/HerosKeep_Exterior/scripts.inc"
+	.include "data/maps/HerosKeep_Interior/scripts.inc"

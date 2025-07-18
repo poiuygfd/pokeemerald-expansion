@@ -76,14 +76,14 @@
 #define FLAG_DEFEATED_MEWTWO        0x3E // Mewtwo Flags
 #define FLAG_CAUGHT_MEWTWO          0x3F
 #define FLAG_HIDE_MEWTWO            0x40
-#define FLAG_RECEIVED_POIPOLE       0x41 // Poipole Flag
-#define FLAG_RECEIVED_GENESECT      0x42 // Genesect Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
+#define FLAG_DEFEATED_ZACIAN        0x41 // Zacian Flags
+#define FLAG_CAUGHT_ZACIAN          0x42
+#define FLAG_HIDE_ZACIAN            0x43
+#define FLAG_DEFEATED_ZAMAZENTA     0x44 // Zamazenta Flags
+#define FLAG_CAUGHT_ZAMAZENTA       0x45
+#define FLAG_HIDE_ZAMAZENTA         0x46
+#define FLAG_RECEIVED_POIPOLE       0x47 // Poipole Flag
+#define FLAG_RECEIVED_GENESECT      0x48 // Genesect Flag
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
@@ -1297,8 +1297,8 @@
 #define FLAG_RECEIVED_CLEAR_AMULET                                  0x4D4 // Received Clear Amulet
 #define FLAG_HIDE_SLATEPORT_METRONOME_MAN                           0x4D5 // Metronome Gift (Appears after 2 Badges)
 #define FLAG_RECEIVED_METRONOME                                     0x4D6 // Received Metronome Gift
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
+#define FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD                           0x4D7 // Hero's Keep Rusted Sword
+#define FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD                          0x4D8 // Hero's Keep Rusted Shield
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag

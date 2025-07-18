@@ -498,7 +498,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "TUFFNOOK TOWN",
+      "name": "ABANDONED SHIP",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -1732,6 +1732,14 @@
       "name": "THE DEPTHS",
       "x": 9,
       "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_HEROS_KEEP",
+      "name": "HERO'S KEEP",
+      "x": 13,
+      "y": 5,
       "width": 1,
       "height": 1
     },

@@ -75,6 +75,8 @@ static const u8 sCondMsg45[] = _("Your POKéMON is staring spellbound\nat the ni
 static const u8 sCondMsg46[] = _("Your POKéMON is happily gazing at\nthe beautiful, starry sky!");
 static const u8* const sNightTexts[] = {sCondMsg45, sCondMsg46, NULL};
 static const u8 sCondMsg50[] = _("{STR_VAR_1} is disturbed by the\nabnormal weather!");
+static const u8 sCondMsg51[] = _("{STR_VAR_1} is emitting a strange\ndroning noise…");
+static const u8 sCondMsg52[] = _("{STR_VAR_1} has a pensive look in\nits eyes…");
 
 // See the struct definition in follower_helper.h for more info
 const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT] =
@@ -390,6 +392,42 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
             MATCH_NOT_SPECIES(SPECIES_GROUDON),
             MATCH_NOT_SPECIES(SPECIES_RAYQUAZA),
         }
+    },
+    [COND_MSG_REGI_AT_CHAMBER_1] =
+    {
+        .text = sCondMsg51,
+        .emotion = FOLLOWER_EMOTION_PENSIVE,
+        .conditions =
+        {
+            MATCH_MAPSEC(MAPSEC_SEALED_CHAMBER),
+            MATCH_SPECIES(SPECIES_REGIROCK),
+            MATCH_SPECIES(SPECIES_REGICE),
+            MATCH_SPECIES(SPECIES_REGISTEEL),
+        },
+    },
+    [COND_MSG_REGI_AT_CHAMBER_2] =
+    {
+        .text = sCondMsg51,
+        .emotion = FOLLOWER_EMOTION_PENSIVE,
+        .conditions =
+        {
+            MATCH_MAPSEC(MAPSEC_SEALED_CHAMBER),
+            MATCH_SPECIES(SPECIES_REGIELEKI),
+            MATCH_SPECIES(SPECIES_REGIDRAGO),
+            MATCH_SPECIES(SPECIES_REGITUBE),
+            MATCH_SPECIES(SPECIES_REGIGIGAS),
+        },
+    },
+    [COND_MSG_HERO_AT_KEEP] =
+    {
+        .text = sCondMsg52,
+        .emotion = FOLLOWER_EMOTION_PENSIVE,
+        .conditions =
+        {
+            MATCH_MAPSEC(MAPSEC_HEROS_KEEP),
+            MATCH_SPECIES(SPECIES_ZACIAN),
+            MATCH_SPECIES(SPECIES_ZAMAZENTA),
+        },
     },
 };
 

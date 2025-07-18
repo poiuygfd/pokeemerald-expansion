@@ -37,6 +37,8 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_IRON_VALIANT
 	clearflag FLAG_DEFEATED_REGIGIGAS
 	clearflag FLAG_DEFEATED_REGITUBE
+	clearflag FLAG_DEFEATED_ZACIAN
+	clearflag FLAG_DEFEATED_ZAMAZENTA
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::

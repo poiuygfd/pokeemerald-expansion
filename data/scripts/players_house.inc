@@ -473,12 +473,22 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	copyvar VAR_0x8004, VAR_RESULT
 	special InitRoamer
 	copyvar VAR_ROAMER_POKEMON, VAR_RESULT
+	call_if_eq VAR_ROAMER_POKEMON, 0, PlayersHouse_1F_EventScript_UnhideRustedShield
+	call_if_eq VAR_ROAMER_POKEMON, 1, PlayersHouse_1F_EventScript_UnhideRustedSword
 	msgbox PlayersHouse_1F_Text_StillUnknownPokemon, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
 	releaseall
 	end
+
+PlayersHouse_1F_EventScript_UnhideRustedShield::
+	clearflag FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD
+	return
+
+PlayersHouse_1F_EventScript_UnhideRustedSword::
+	clearflag FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD
+	return
 
 @ Never called.
 PlayersHouse_1F_EventScript_AirLatiBroadcast::

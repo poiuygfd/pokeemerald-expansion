@@ -1,0 +1,126 @@
+HerosKeep_Interior_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HerosKeep_Interior_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, HerosKeep_Interior_OnResume
+	.byte 0
+
+HerosKeep_Interior_OnTransition:
+	goto_if_set FLAG_SYS_TOWER_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_DOME_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_PALACE_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_ARENA_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_FACTORY_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_PIKE_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	goto_if_set FLAG_SYS_PYRAMID_GOLD, HerosKeep_Interior_EventScript_ChooseDoggo
+	end
+
+HerosKeep_Interior_EventScript_ChooseDoggo::
+	call_if_eq VAR_ROAMER_POKEMON, 0, HerosKeep_Interior_EventScript_TryShowZacian
+	call_if_eq VAR_ROAMER_POKEMON, 1, HerosKeep_Interior_EventScript_TryShowZamazenta
+	end
+
+HerosKeep_Interior_EventScript_TryShowZacian::
+	call_if_set FLAG_CAUGHT_ZACIAN, HerosKeep_Interior_EventScript_HideZacian
+	call_if_unset FLAG_CAUGHT_ZACIAN, HerosKeep_Interior_EventScript_ShowZacian
+	return
+
+HerosKeep_Interior_EventScript_TryShowZamazenta::
+	call_if_set FLAG_CAUGHT_ZAMAZENTA, HerosKeep_Interior_EventScript_HideZamazenta
+	call_if_unset FLAG_CAUGHT_ZAMAZENTA, HerosKeep_Interior_EventScript_ShowZamazenta
+	return
+
+HerosKeep_Interior_EventScript_ShowZacian::
+	goto_if_set FLAG_DEFEATED_ZACIAN, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_ZACIAN
+	return
+
+HerosKeep_Interior_EventScript_ShowZamazenta::
+	goto_if_set FLAG_DEFEATED_ZAMAZENTA, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_ZAMAZENTA
+	return
+
+HerosKeep_Interior_EventScript_HideZacian::
+	setflag FLAG_HIDE_ZACIAN
+	return
+
+HerosKeep_Interior_EventScript_HideZamazenta::
+	setflag FLAG_HIDE_ZAMAZENTA
+	return
+
+HerosKeep_Interior_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, HerosKeep_Interior_EventScript_TryRemoveZacian
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, HerosKeep_Interior_EventScript_TryRemoveZamazenta
+	end
+
+HerosKeep_Interior_EventScript_TryRemoveZacian::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_HEROS_KEEP_ZACIAN
+	return
+
+HerosKeep_Interior_EventScript_TryRemoveZamazenta::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_HEROS_KEEP_ZAMAZENTA
+	return
+
+HerosKeep_Interior_EventScript_Zacian::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ZACIAN, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ZACIAN, 70, ITEM_RUSTED_SWORD
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HerosKeep_Interior_EventScript_DefeatedZacian
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HerosKeep_Interior_EventScript_RanFromZacian
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HerosKeep_Interior_EventScript_RanFromZacian
+	setflag FLAG_CAUGHT_ZACIAN
+	release
+	end
+
+HerosKeep_Interior_EventScript_DefeatedZacian::
+	setflag FLAG_DEFEATED_ZACIAN
+	setvar VAR_0x8004, SPECIES_ZACIAN
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+HerosKeep_Interior_EventScript_RanFromZacian::
+	setvar VAR_0x8004, SPECIES_ZACIAN
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+HerosKeep_Interior_EventScript_Zamazenta::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ZAMAZENTA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ZAMAZENTA, 70, ITEM_RUSTED_SHIELD
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HerosKeep_Interior_EventScript_DefeatedZamazenta
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HerosKeep_Interior_EventScript_RanFromZamazenta
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HerosKeep_Interior_EventScript_RanFromZamazenta
+	setflag FLAG_CAUGHT_ZAMAZENTA
+	release
+	end
+
+HerosKeep_Interior_EventScript_DefeatedZamazenta::
+	setflag FLAG_DEFEATED_ZAMAZENTA
+	setvar VAR_0x8004, SPECIES_ZAMAZENTA
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+HerosKeep_Interior_EventScript_RanFromZamazenta::
+	setvar VAR_0x8004, SPECIES_ZAMAZENTA
+	goto Common_EventScript_LegendaryFlewAway
+	end

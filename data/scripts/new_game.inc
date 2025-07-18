@@ -282,6 +282,10 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CUTSCENE_REGIGIGAS
 	setflag FLAG_HIDE_STATIC_REGIGIGAS
 	setflag FLAG_HIDE_REGITUBE
+	setflag FLAG_HIDE_ZACIAN
+	setflag FLAG_HIDE_ZAMAZENTA
+	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD
+	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD
 	setflag FLAG_SYS_B_DASH
 	call EventScript_ResetAllBerries
 	end

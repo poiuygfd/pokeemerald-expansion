@@ -4620,6 +4620,26 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/TheDepths_B8F/border.bin",
       "blockdata_filepath": "data/layouts/TheDepths_B8F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HEROS_KEEP_EXTERIOR",
+      "name": "HerosKeep_Exterior_Layout",
+      "width": 21,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/HerosKeep_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/HerosKeep_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_HEROS_KEEP_INTERIOR",
+      "name": "HerosKeep_Interior_Layout",
+      "width": 31,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/HerosKeep_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/HerosKeep_Interior/map.bin"
     }
   ]
 }

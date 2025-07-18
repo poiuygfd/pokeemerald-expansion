@@ -434,7 +434,9 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "SecludedCove",
-    "NeglectedShrine"
+    "NeglectedShrine",
+    "HerosKeep_Exterior",
+    "HerosKeep_Interior"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
