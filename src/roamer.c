@@ -150,8 +150,10 @@ bool8 TryAddRoamer(u16 species, u8 level)
 void InitRoamer(void)
 {
     if (gSpecialVar_0x8004 == 0) // Red
-        TryAddRoamer(SPECIES_LATIAS, 30);
-    else
+        TryAddRoamer(SPECIES_ZAMAZENTA, 60);
+    else if (gSpecialVar_0x8004 == 1) // Blue
+        TryAddRoamer(SPECIES_ZACIAN, 60);
+    else // Not TV Related
         TryAddRoamer(SPECIES_LATIOS, 30);
 }
 

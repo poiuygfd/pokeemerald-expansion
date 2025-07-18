@@ -242,10 +242,18 @@
     },
     {
       "type": "hidden_item",
-      "x": 37,
-      "y": 7,
+      "x": 36,
+      "y": 4,
       "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_THICK_CLUB",
+      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 36,
+      "y": 4,
+      "elevation": 3,
+      "item": "ITEM_THICK_CLUB",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
     }
   ]

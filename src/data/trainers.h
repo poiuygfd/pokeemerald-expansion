@@ -14365,50 +14365,50 @@ F_TRAINER_FEMALE |
             },
             {
 #line 5748
-            .species = SPECIES_MURKROW,
+            .species = SPECIES_ALTARIA,
             .gender = TRAINER_MON_RANDOM_GENDER,
-#line 5748
-            .heldItem = ITEM_EVIOLITE,
 #line 5752
-            .ev = TRAINER_PARTY_EVS(250, 0, 0, 0, 0, 200),
+            .ev = TRAINER_PARTY_EVS(250, 200, 0, 0, 0, 0),
 #line 5751
-            .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
+            .iv = TRAINER_PARTY_IVS(26, 26, 26, 26, 26, 26),
 #line 5750
-            .ability = ABILITY_PRANKSTER,
+            .ability = ABILITY_CLOUD_NINE,
 #line 5749
             .lvl = 30,
 #line 5753
-            .nature = NATURE_IMPISH,
-            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
-            .moves = {
-#line 5754
-                MOVE_TAILWIND,
-                MOVE_HAZE,
-                MOVE_ROOST,
-                MOVE_FOUL_PLAY,
-            },
-            },
-            {
-#line 5759
-            .species = SPECIES_ALTARIA,
-            .gender = TRAINER_MON_RANDOM_GENDER,
-#line 5763
-            .ev = TRAINER_PARTY_EVS(250, 200, 0, 0, 0, 0),
-#line 5762
-            .iv = TRAINER_PARTY_IVS(26, 26, 26, 26, 26, 26),
-#line 5761
-            .ability = ABILITY_CLOUD_NINE,
-#line 5760
-            .lvl = 31,
-#line 5764
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 5765
+#line 5754
                 MOVE_EARTHQUAKE,
                 MOVE_DRAGON_CLAW,
                 MOVE_DRAGON_DANCE,
                 MOVE_AERIAL_ACE,
+            },
+            },
+            {
+#line 5759
+            .species = SPECIES_TROPIUS,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 5759
+            .heldItem = ITEM_SITRUS_BERRY,
+#line 5763
+            .ev = TRAINER_PARTY_EVS(250, 0, 0, 0, 0, 200),
+#line 5762
+            .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
+#line 5761
+            .ability = ABILITY_HARVEST,
+#line 5760
+            .lvl = 31,
+#line 5764
+            .nature = NATURE_BOLD,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 5765
+                MOVE_TAILWIND,
+                MOVE_WIDE_GUARD,
+                MOVE_LEECH_SEED,
+                MOVE_AIR_SLASH,
             },
             },
             {
@@ -44711,52 +44711,52 @@ F_TRAINER_FEMALE |
             },
             {
 #line 17841
-            .species = SPECIES_MURKROW,
+            .species = SPECIES_TALONFLAME,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17841
-            .heldItem = ITEM_EVIOLITE,
+            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
 #line 17845
-            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
+            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
 #line 17844
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17843
-            .ability = ABILITY_PRANKSTER,
+            .ability = ABILITY_GALE_WINGS,
 #line 17842
             .lvl = 50,
 #line 17846
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17847
                 MOVE_TAILWIND,
-                MOVE_HAZE,
+                MOVE_WILL_O_WISP,
                 MOVE_ROOST,
-                MOVE_FOUL_PLAY,
+                MOVE_BRAVE_BIRD,
             },
             },
             {
 #line 17852
-            .species = SPECIES_TALONFLAME,
+            .species = SPECIES_TROPIUS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17852
-            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 17856
-            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
 #line 17855
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17854
-            .ability = ABILITY_GALE_WINGS,
+            .ability = ABILITY_HARVEST,
 #line 17853
             .lvl = 54,
 #line 17857
-            .nature = NATURE_JOLLY,
+            .nature = NATURE_BOLD,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17858
                 MOVE_TAILWIND,
-                MOVE_WILL_O_WISP,
-                MOVE_ROOST,
-                MOVE_BRAVE_BIRD,
+                MOVE_WIDE_GUARD,
+                MOVE_LEECH_SEED,
+                MOVE_AIR_SLASH,
             },
             },
             {
@@ -44886,52 +44886,52 @@ F_TRAINER_FEMALE |
             },
             {
 #line 17917
-            .species = SPECIES_MURKROW,
+            .species = SPECIES_TALONFLAME,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17917
-            .heldItem = ITEM_EVIOLITE,
+            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
 #line 17921
-            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
+            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
 #line 17920
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17919
-            .ability = ABILITY_PRANKSTER,
+            .ability = ABILITY_GALE_WINGS,
 #line 17918
             .lvl = 55,
 #line 17922
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17923
                 MOVE_TAILWIND,
-                MOVE_HAZE,
+                MOVE_WILL_O_WISP,
                 MOVE_ROOST,
-                MOVE_FOUL_PLAY,
+                MOVE_BRAVE_BIRD,
             },
             },
             {
 #line 17928
-            .species = SPECIES_TALONFLAME,
+            .species = SPECIES_TROPIUS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17928
-            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 17932
-            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
 #line 17931
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17930
-            .ability = ABILITY_GALE_WINGS,
+            .ability = ABILITY_HARVEST,
 #line 17929
             .lvl = 59,
 #line 17933
-            .nature = NATURE_JOLLY,
+            .nature = NATURE_BOLD,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17934
                 MOVE_TAILWIND,
-                MOVE_WILL_O_WISP,
-                MOVE_ROOST,
-                MOVE_BRAVE_BIRD,
+                MOVE_WIDE_GUARD,
+                MOVE_LEECH_SEED,
+                MOVE_AIR_SLASH,
             },
             },
             {
@@ -45061,52 +45061,52 @@ F_TRAINER_FEMALE |
             },
             {
 #line 17993
-            .species = SPECIES_MURKROW,
+            .species = SPECIES_TALONFLAME,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17993
-            .heldItem = ITEM_EVIOLITE,
+            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
 #line 17997
-            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
+            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
 #line 17996
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17995
-            .ability = ABILITY_PRANKSTER,
+            .ability = ABILITY_GALE_WINGS,
 #line 17994
             .lvl = 60,
 #line 17998
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17999
                 MOVE_TAILWIND,
-                MOVE_HAZE,
+                MOVE_WILL_O_WISP,
                 MOVE_ROOST,
-                MOVE_FOUL_PLAY,
+                MOVE_BRAVE_BIRD,
             },
             },
             {
 #line 18004
-            .species = SPECIES_TALONFLAME,
+            .species = SPECIES_TROPIUS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 18004
-            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 18008
-            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
 #line 18007
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 18006
-            .ability = ABILITY_GALE_WINGS,
+            .ability = ABILITY_HARVEST,
 #line 18005
             .lvl = 64,
 #line 18009
-            .nature = NATURE_JOLLY,
+            .nature = NATURE_BOLD,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 18010
                 MOVE_TAILWIND,
-                MOVE_WILL_O_WISP,
-                MOVE_ROOST,
-                MOVE_BRAVE_BIRD,
+                MOVE_WIDE_GUARD,
+                MOVE_LEECH_SEED,
+                MOVE_AIR_SLASH,
             },
             },
             {
@@ -45236,52 +45236,52 @@ F_TRAINER_FEMALE |
             },
             {
 #line 18069
-            .species = SPECIES_MURKROW,
+            .species = SPECIES_TALONFLAME,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 18069
-            .heldItem = ITEM_EVIOLITE,
+            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
 #line 18073
-            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
+            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
 #line 18072
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 18071
-            .ability = ABILITY_PRANKSTER,
+            .ability = ABILITY_GALE_WINGS,
 #line 18070
             .lvl = 65,
 #line 18074
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 18075
                 MOVE_TAILWIND,
-                MOVE_HAZE,
+                MOVE_WILL_O_WISP,
                 MOVE_ROOST,
-                MOVE_FOUL_PLAY,
+                MOVE_BRAVE_BIRD,
             },
             },
             {
 #line 18080
-            .species = SPECIES_TALONFLAME,
+            .species = SPECIES_TROPIUS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 18080
-            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 18084
-            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
 #line 18083
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 18082
-            .ability = ABILITY_GALE_WINGS,
+            .ability = ABILITY_HARVEST,
 #line 18081
             .lvl = 69,
 #line 18085
-            .nature = NATURE_JOLLY,
+            .nature = NATURE_BOLD,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 18086
                 MOVE_TAILWIND,
-                MOVE_WILL_O_WISP,
-                MOVE_ROOST,
-                MOVE_BRAVE_BIRD,
+                MOVE_WIDE_GUARD,
+                MOVE_LEECH_SEED,
+                MOVE_AIR_SLASH,
             },
             },
             {

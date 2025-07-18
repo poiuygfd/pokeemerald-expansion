@@ -4,58 +4,40 @@ FallarborTown_CozmosHouse_MapScripts::
 FallarborTown_CozmosHouse_EventScript_ProfCozmo::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_RETURN, FallarborTown_CozmosHouse_EventScript_GaveMeteorite
-	checkitem ITEM_METEORITE
-	goto_if_eq VAR_RESULT, TRUE, FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite
-	msgbox FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow, MSGBOX_DEFAULT
-	release
+	goto_if_set FLAG_RECEIVED_TM_RETURN, FallarborTown_CozmosHouse_EventScript_CheckMeteorite
+	goto FallarborTown_CozmosHouse_EventScript_GiveReturn
 	end
 
-FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite::
-	call_if_unset FLAG_TEMP_2, FallarborTown_CozmosHouse_EventScript_NoticeMeteorite
-	call_if_set FLAG_TEMP_2, FallarborTown_CozmosHouse_EventScript_AskForMeteorite
-	goto_if_eq VAR_RESULT, NO, FallarborTown_CozmosHouse_EventScript_DeclineGiveMeteorite
+FallarborTown_CozmosHouse_EventScript_GiveReturn::
 	msgbox FallarborTown_CozmosHouse_Text_PleaseUseThisTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_RETURN
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setvar VAR_0x8004, ITEM_METEORITE
-	call Common_EventScript_PlayerHandedOverTheItem
 	setflag FLAG_RECEIVED_TM_RETURN
-	msgbox FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT
+	msgbox FallarborTown_CozmosHouse_Text_ExplainReturn, MSGBOX_DEFAULT
 	release
 	end
 
-FallarborTown_CozmosHouse_EventScript_NoticeMeteorite::
-	msgbox FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow, MSGBOX_DEFAULT
-	msgbox FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt, MSGBOX_YESNO
-	return
+FallarborTown_CozmosHouse_EventScript_CheckMeteorite::
+	checkitem ITEM_METEORITE
+	goto_if_eq VAR_RESULT, TRUE, FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite
+	goto FallarborTown_CozmosHouse_EventScript_NotPlayerHasMeteorite
+	end
 
-FallarborTown_CozmosHouse_EventScript_AskForMeteorite::
-	msgbox FallarborTown_CozmosHouse_Text_MayIHaveMeteorite, MSGBOX_YESNO
-	return
-
-FallarborTown_CozmosHouse_EventScript_DeclineGiveMeteorite::
-	setflag FLAG_TEMP_2
-	msgbox FallarborTown_CozmosHouse_Text_CrushedWithDisappointment, MSGBOX_DEFAULT
+FallarborTown_CozmosHouse_EventScript_PlayerHasMeteorite::
+	msgbox FallarborTown_CozmosHouse_Text_FoundAnotherOneAnyway, MSGBOX_DEFAULT
 	release
 	end
 
-FallarborTown_CozmosHouse_EventScript_GaveMeteorite::
-	msgbox FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT
+FallarborTown_CozmosHouse_EventScript_NotPlayerHasMeteorite::
+	msgbox FallarborTown_CozmosHouse_Text_ReallyKindTrainer, MSGBOX_DEFAULT
 	release
 	end
 
 FallarborTown_CozmosHouse_EventScript_CozmosWife::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_RETURN, FallarborTown_CozmosHouse_EventScript_CozmoIsHappy
-	goto_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, FallarborTown_CozmosHouse_EventScript_CozmoIsSad
+	goto_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, FallarborTown_CozmosHouse_EventScript_CozmoIsHappy
 	msgbox FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls, MSGBOX_DEFAULT
-	release
-	end
-
-FallarborTown_CozmosHouse_EventScript_CozmoIsSad::
-	msgbox FallarborTown_CozmosHouse_Text_FeelSorryForCozmo, MSGBOX_DEFAULT
 	release
 	end
 
@@ -64,44 +46,40 @@ FallarborTown_CozmosHouse_EventScript_CozmoIsHappy::
 	release
 	end
 
-FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow:
-	.string "PROF. COZMO: Oh…\n"
-	.string "I never should have let myself be\l"
-	.string "conned into telling TEAM MAGMA where\l"
-	.string "you can find METEORITES…\p"
-	.string "That METEORITE from METEOR FALLS…\n"
-	.string "It's never going to be mine now…$"
+FallarborTown_CozmosHouse_Text_PleaseUseThisTM:
+	.string "PROF. COZMO: Oh! It's you!\p"
+	.string "I heard that you followed TEAM MAGMA\n"
+	.string "up to MT. CHIMNEY after they stole my\l"
+	.string "METEORITE, and even battled against\l"
+	.string "their LEADER…\p"
+	.string "To think you would go that far for\n"
+	.string "someone you just met…\p"
+	.string "You're a really kind young TRAINER!\n"
+	.string "I want you to have this as thanks.\p"
+	.string "This TM, it represents my feeling of\n"
+	.string "of gratitude. Please use it!$"
 
-FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:
-	.string "Oh!\n"
-	.string "Hah?\p"
+FallarborTown_CozmosHouse_Text_ExplainReturn:
+	.string "That TM I just gave you is RETURN.\p"
+	.string "It's a move that powers up the stronger\n"
+	.string "the bond is betwen you and your POKéMON.$"
+
+FallarborTown_CozmosHouse_Text_ReallyKindTrainer:
+	.string "PROF. COZMO: You're both strong and kind…\n"
+	.string "If anyone can bring TEAM MAGMA to\l"
+	.string "justice, I bet it will be you!$"
+
+FallarborTown_CozmosHouse_Text_FoundAnotherOneAnyway:
+	.string "PROF. COZMO: Oh!\n"
 	.string "That item…\p"
-	.string "Could it be?\p"
 	.string "Is it the METEORITE that TEAM MAGMA\n"
 	.string "took from METEOR FALLS?\p"
-	.string "Please, may I have it?\p"
-	.string "I'm not asking for it for free.\n"
-	.string "How about in exchange for this TM?$"
-
-FallarborTown_CozmosHouse_Text_PleaseUseThisTM:
-	.string "PROF. COZMO: This TM, it represents\n"
-	.string "my feeling of gratitude.\l"
-	.string "Please use it!$"
-
-FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch:
-	.string "PROF. COZMO: Oh, I can't believe it.\n"
-	.string "This is really, really great!\p"
-	.string "This is really going to help my research!$"
-
-FallarborTown_CozmosHouse_Text_CrushedWithDisappointment:
-	.string "PROF. COZMO: Oh, but…\n"
-	.string "I'm crushed with disappointment…$"
-
-FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
-	.string "PROF. COZMO: Please, may I have that\n"
-	.string "METEORITE?\p"
-	.string "I'm not asking for it for free.\n"
-	.string "How about in exchange for this TM?$"
+	.string "Not only did you chase off TEAM MAGMA\n"
+	.string "but you even retrieved the METEORITE!\p"
+	.string "That being said, I think you should\n"
+	.string "hold onto that METEORITE.\p"
+	.string "I managed to find another sample while\n"
+	.string "searching through METEOR FALLS anyway!$"
 
 FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls:
 	.string "PROF. COZMO went off to METEOR FALLS\n"

@@ -56,7 +56,7 @@ Route115_EventScript_IronValiant::
 	playmoncry SPECIES_IRON_VALIANT, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_IRON_VALIANT, 40
+	setwildbattle SPECIES_IRON_VALIANT, 40, ITEM_BOOSTER_ENERGY
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

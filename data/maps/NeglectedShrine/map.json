@@ -47,8 +47,8 @@
       "x": 8,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_NEGLECTED_SHRINE",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ROUTE114",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],

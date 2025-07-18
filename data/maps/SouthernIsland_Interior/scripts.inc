@@ -108,7 +108,7 @@ SouthernIsland_Interior_EventScript_DefeatedCourtney::
 	msgbox SouthernIsland_Interior_Text_LatiasCry2, MSGBOX_DEFAULT
 	removeobject LOCALID_LATIAS
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LATIAS
-	givemon SPECIES_LATIAS, 25
+	givemon SPECIES_LATIAS, 25, ITEM_SOUL_DEW
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, SouthernIsland_Interior_EventScript_SendLatiasParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, SouthernIsland_Interior_EventScript_SendLatiasPC
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -149,7 +149,6 @@ SouthernIsland_Interior_EventScript_ReceivedLatiasFanfare::
 SouthernIsland_Interior_EventScript_StevenFarewell::
 	msgbox SouthernIsland_Interior_Text_StevenGoodbye, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_ROUTE_118_LATIOS
-	setvar VAR_ROAMER_POKEMON, 1
 	special InitRoamer
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
 	warp MAP_ROUTE118, 44, 10

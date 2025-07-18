@@ -4034,7 +4034,7 @@
     {
       "id": "LAYOUT_BIRTH_ISLAND_EXTERIOR",
       "name": "BirthIsland_Exterior_Layout",
-      "width": 30,
+      "width": 39,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",

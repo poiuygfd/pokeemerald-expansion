@@ -1,6 +1,7 @@
 BirthIsland_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, BirthIsland_Exterior_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, BirthIsland_Exterior_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, BirthIsland_Exterior_OnLoad
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, BirthIsland_Exterior_OnReturnToField
 	.byte 0
 
@@ -36,6 +37,22 @@ BirthIsland_Exterior_EventScript_TryRemoveDeoxys::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_BIRTH_ISLAND_DEOXYS
+	return
+
+BirthIsland_Exterior_OnLoad:
+	call_if_unset FLAG_IS_CHAMPION, BirthIsland_Exterior_RemoveStairs
+	end
+
+BirthIsland_Exterior_RemoveStairs::
+	setmetatile 18, 21, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 19, 21, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 20, 21, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 18, 22, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 19, 22, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 20, 22, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 18, 23, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 19, 23, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 20, 23, METATILE_General_RockWall_RockBase, TRUE
 	return
 
 BirthIsland_Exterior_EventScript_Triangle::

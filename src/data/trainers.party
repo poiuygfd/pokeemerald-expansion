@@ -5745,19 +5745,8 @@ Nature: Timid
 - Hurricane
 - Weather Ball
 
-Murkrow @ Eviolite
-Level: 30
-Ability: Prankster
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-EVs: 250 HP / 200 SpD
-Nature: Impish
-- Tailwind
-- Haze
-- Roost
-- Foul Play
-
 Altaria
-Level: 31
+Level: 30
 Ability: Cloud Nine
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 EVs: 250 HP / 200 Atk
@@ -5766,6 +5755,17 @@ Nature: Adamant
 - Dragon Claw
 - Dragon Dance
 - Aerial Ace
+
+Tropius @ Sitrus Berry
+Level: 31
+Ability: Harvest
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+EVs: 250 HP / 200 SpD
+Nature: Bold
+- Tailwind
+- Wide Guard
+- Leech Seed
+- Air Slash
 
 Pidgeot @ Pidgeotite
 Level: 33
@@ -17838,19 +17838,8 @@ Nature: Adamant
 - Dragon Dance
 - Rest
 
-Murkrow @ Eviolite
-Level: 50
-Ability: Prankster
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpD
-Nature: Impish
-- Tailwind
-- Haze
-- Roost
-- Foul Play
-
 Talonflame @ Heavy Duty Boots
-Level: 54
+Level: 50
 Ability: Gale Wings
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk
@@ -17859,6 +17848,17 @@ Nature: Jolly
 - Will-O-Wisp
 - Roost
 - Brave Bird
+
+Tropius @ Sitrus Berry
+Level: 54
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Bold
+- Tailwind
+- Wide Guard
+- Leech Seed
+- Air Slash
 
 Pidgeot @ Pidgeotite
 Level: 55
@@ -17914,19 +17914,8 @@ Nature: Adamant
 - Dragon Dance
 - Rest
 
-Murkrow @ Eviolite
-Level: 55
-Ability: Prankster
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpD
-Nature: Impish
-- Tailwind
-- Haze
-- Roost
-- Foul Play
-
 Talonflame @ Heavy Duty Boots
-Level: 59
+Level: 55
 Ability: Gale Wings
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk
@@ -17935,6 +17924,17 @@ Nature: Jolly
 - Will-O-Wisp
 - Roost
 - Brave Bird
+
+Tropius @ Sitrus Berry
+Level: 59
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Bold
+- Tailwind
+- Wide Guard
+- Leech Seed
+- Air Slash
 
 Pidgeot @ Pidgeotite
 Level: 60
@@ -17990,19 +17990,8 @@ Nature: Adamant
 - Dragon Dance
 - Roost
 
-Murkrow @ Eviolite
-Level: 60
-Ability: Prankster
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpD
-Nature: Impish
-- Tailwind
-- Haze
-- Roost
-- Foul Play
-
 Talonflame @ Heavy Duty Boots
-Level: 64
+Level: 60
 Ability: Gale Wings
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk
@@ -18011,6 +18000,17 @@ Nature: Jolly
 - Will-O-Wisp
 - Roost
 - Brave Bird
+
+Tropius @ Sitrus Berry
+Level: 64
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Bold
+- Tailwind
+- Wide Guard
+- Leech Seed
+- Air Slash
 
 Pidgeot @ Pidgeotite
 Level: 65
@@ -18066,19 +18066,8 @@ Nature: Adamant
 - Dragon Dance
 - Rest
 
-Murkrow @ Eviolite
-Level: 65
-Ability: Prankster
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpD
-Nature: Impish
-- Tailwind
-- Haze
-- Roost
-- Foul Play
-
 Talonflame @ Heavy Duty Boots
-Level: 69
+Level: 65
 Ability: Gale Wings
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk
@@ -18087,6 +18076,17 @@ Nature: Jolly
 - Will-O-Wisp
 - Roost
 - Brave Bird
+
+Tropius @ Sitrus Berry
+Level: 69
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD
+Nature: Bold
+- Tailwind
+- Wide Guard
+- Leech Seed
+- Air Slash
 
 Pidgeot @ Pidgeotite
 Level: 70

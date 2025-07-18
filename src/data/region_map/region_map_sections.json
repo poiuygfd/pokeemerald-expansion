@@ -692,7 +692,7 @@
       "id": "MAPSEC_SKY_PILLAR",
       "name": "SKY PILLAR",
       "x": 19,
-      "y": 10,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -1610,8 +1610,8 @@
     {
       "id": "MAPSEC_BIRTH_ISLAND",
       "name": "BIRTH ISLAND",
-      "x": 0,
-      "y": 0,
+      "x": 20,
+      "y": 11,
       "width": 1,
       "height": 1
     },

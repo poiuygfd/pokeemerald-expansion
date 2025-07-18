@@ -38,7 +38,7 @@ MeteorFalls_B1F_2R_EventScript_RoaringMoon::
 	playmoncry SPECIES_ROARING_MOON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_ROARING_MOON, 40
+	setwildbattle SPECIES_ROARING_MOON, 40, ITEM_BOOSTER_ENERGY
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

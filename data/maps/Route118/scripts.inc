@@ -101,6 +101,10 @@ Route118_EventScript_StevenTrigger::
 	applymovement LOCALID_ROUTE118_LATIOS, Route118_Movement_LatiosEnter
 	waitmovement 0
 	delay 30
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE118_STEVEN, Common_Movement_ExclamationMark
+	waitmovement 0
 	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchLatios
 	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenWatchLatios
 	waitmovement 0

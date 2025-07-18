@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE129",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_BIRTH_ISLAND_EXTERIOR",
+      "offset": -17,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -78,13 +83,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
 }
