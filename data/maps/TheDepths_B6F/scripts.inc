@@ -162,6 +162,12 @@ TheDepths_B6F_EventScript_GemSocket::
 
 TheDepths_B6F_EventScript_StrongPresence::
 	lock
+	goto_if_set FLAG_DEPTHS_IS_NORMAL, TheDepths_B6F_EventScript_NormalPresence
+	goto_if_set FLAG_DEPTHS_IS_EXPERT, TheDepths_B6F_EventScript_ExpertPresence
+	goto_if_set FLAG_DEPTHS_IS_MASTER, TheDepths_B6F_EventScript_MasterPresence
+	goto TheDepths_B6F_EventScript_NormalPresence
+
+TheDepths_B6F_EventScript_NormalPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_SandslashBattle
@@ -183,6 +189,56 @@ TheDepths_B6F_EventScript_SandacondaBattle::
 TheDepths_B6F_EventScript_ExcadrillBattle::
 	settotemboost 1, 1, 1, 1, 1, 2
 	setbossbattle SPECIES_EXCADRILL, MOVE_BULLDOZE, MOVE_METAL_CLAW, MOVE_CRUSH_CLAW, MOVE_HONE_CLAWS, 2
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_ExpertPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_FlygonBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B6F_EventScript_KrookodileBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B6F_EventScript_HaxorusBattle
+
+TheDepths_B6F_EventScript_FlygonBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_FLYGON, MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_DRAGON_TAIL, MOVE_DRAGON_DANCE, 0
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_KrookodileBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_KROOKODILE, MOVE_POWER_TRIP, MOVE_EARTHQUAKE, MOVE_KNOCK_OFF, MOVE_HONE_CLAWS, 1
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_HaxorusBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_HAXORUS, MOVE_DRAGON_CLAW, MOVE_IRON_HEAD, MOVE_TRAILBLAZE, MOVE_SWORDS_DANCE, 1
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_MasterPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_GarchompBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B6F_EventScript_MetagrossBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B6F_EventScript_ArchaludonBattle
+
+TheDepths_B6F_EventScript_GarchompBattle::
+	settotemboost 1, 2, 1, 2, 1, 1
+	setbossbattle SPECIES_GARCHOMP, MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_SCALE_SHOT, MOVE_SWORDS_DANCE, 2
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_MetagrossBattle::
+	settotemboost 1, 2, 2, 1, 1, 1
+	setbossbattle SPECIES_METAGROSS, MOVE_METEOR_MASH, MOVE_ZEN_HEADBUTT, MOVE_KNOCK_OFF, MOVE_BULLET_PUNCH, 0
+	dowildbattle
+	goto TheDepths_B6F_EventScript_BattleAftermath
+
+TheDepths_B6F_EventScript_ArchaludonBattle::
+	settotemboost 1, 1, 1, 1, 2, 2
+	setbossbattle SPECIES_ARCHALUDON, MOVE_FLASH_CANNON, MOVE_DRAGON_PULSE, MOVE_BODY_PRESS, MOVE_ELECTRO_SHOT, 0
 	dowildbattle
 	goto TheDepths_B6F_EventScript_BattleAftermath
 

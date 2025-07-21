@@ -34,6 +34,12 @@
 	special CallTrainerHillFunction
 	.endm
 
+	@ Set the win flags for Normal, Expert or Master mode, used for determining eligibility for Master Mode and Genesect gift
+	.macro trainerhill_setmodewon
+	setvar VAR_0x8004, TRAINER_HILL_FUNC_SET_MODE_WON
+	special CallTrainerHillFunction
+	.endm
+
 	@ Get the current challenge status (TRAINER_HILL_PLAYER_STATUS_*)
 	.macro trainerhill_getstatus
 	setvar VAR_0x8004, TRAINER_HILL_FUNC_GET_CHALLENGE_STATUS

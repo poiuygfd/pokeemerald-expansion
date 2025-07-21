@@ -14,6 +14,7 @@ TrainerHill_Roof_EventScript_Owner::
 	case 2, TrainerHill_Roof_EventScript_AlreadyReceivedPrize
 TrainerHill_Roof_EventScript_Arrived::
 	msgbox TrainerHill_Roof_Text_YouFinallyCameBravo, MSGBOX_DEFAULT
+	trainerhill_setmodewon
 TrainerHill_Roof_EventScript_GivePrize::
 	trainerhill_giveprize
 	switch VAR_RESULT

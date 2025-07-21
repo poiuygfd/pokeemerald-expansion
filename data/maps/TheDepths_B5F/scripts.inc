@@ -163,6 +163,12 @@ TheDepths_B5F_EventScript_GemSocket::
 
 TheDepths_B5F_EventScript_StrongPresence::
 	lock
+	goto_if_set FLAG_DEPTHS_IS_NORMAL, TheDepths_B5F_EventScript_NormalPresence
+	goto_if_set FLAG_DEPTHS_IS_EXPERT, TheDepths_B5F_EventScript_ExpertPresence
+	goto_if_set FLAG_DEPTHS_IS_MASTER, TheDepths_B5F_EventScript_MasterPresence
+	goto TheDepths_B5F_EventScript_NormalPresence
+
+TheDepths_B5F_EventScript_NormalPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B5F_EventScript_VibravaBattle
@@ -184,6 +190,56 @@ TheDepths_B5F_EventScript_KrokorokBattle::
 TheDepths_B5F_EventScript_FraxureBattle::
 	settotemboost 1, 2, 1, 1, 1, 1
 	setbossbattle SPECIES_FRAXURE, MOVE_DRAGON_CLAW, MOVE_BREAKING_SWIPE, MOVE_CRUNCH, MOVE_SCARY_FACE, 1
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_ExpertPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B5F_EventScript_ConkeldurrBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B5F_EventScript_MienshaoBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B5F_EventScript_MedichamBattle
+
+TheDepths_B5F_EventScript_ConkeldurrBattle::
+	settotemboost 1, 1, 1, 1, 1, 2
+	setbossbattle SPECIES_CONKELDURR, MOVE_DRAIN_PUNCH, MOVE_KNOCK_OFF, MOVE_ROCK_SLIDE, MOVE_MACH_PUNCH, 0
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_MienshaoBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_MIENSHAO, MOVE_BRICK_BREAK, MOVE_TRIPLE_AXEL, MOVE_ACROBATICS, MOVE_REVERSAL, 0
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_MedichamBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_MEDICHAM, MOVE_HIGH_JUMP_KICK, MOVE_ZEN_HEADBUTT, MOVE_ICE_PUNCH, MOVE_RECOVER, 0
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_MasterPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B5F_EventScript_ChandelureBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B5F_EventScript_GengarBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B5F_EventScript_AegislashBattle
+
+TheDepths_B5F_EventScript_ChandelureBattle::
+	settotemboost 1, 1, 1, 2, 2, 1
+	setbossbattle SPECIES_CHANDELURE, MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_ENERGY_BALL, MOVE_CALM_MIND, 1
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_GengarBattle::
+	settotemboost 1, 1, 1, 2, 2, 1
+	setbossbattle SPECIES_GENGAR, MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_HYPNOSIS, MOVE_DESTINY_BOND, 0
+	dowildbattle
+	goto TheDepths_B5F_EventScript_BattleAftermath
+
+TheDepths_B5F_EventScript_AegislashBattle::
+	settotemboost 1, 2, 1, 2, 1, 1
+	setbossbattle SPECIES_AEGISLASH, MOVE_IRON_HEAD, MOVE_SACRED_SWORD, MOVE_SWORDS_DANCE, MOVE_KINGS_SHIELD, 0
 	dowildbattle
 	goto TheDepths_B5F_EventScript_BattleAftermath
 

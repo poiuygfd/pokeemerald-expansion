@@ -91,6 +91,12 @@ TheDepths_B2F_EventScript_GemSocket::
 
 TheDepths_B2F_EventScript_StrongPresence::
 	lock
+	goto_if_set FLAG_DEPTHS_IS_NORMAL, TheDepths_B2F_EventScript_NormalPresence
+	goto_if_set FLAG_DEPTHS_IS_EXPERT, TheDepths_B2F_EventScript_ExpertPresence
+	goto_if_set FLAG_DEPTHS_IS_MASTER, TheDepths_B2F_EventScript_MasterPresence
+	goto TheDepths_B2F_EventScript_NormalPresence	
+
+TheDepths_B2F_EventScript_NormalPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B2F_EventScript_ScraggyBattle
@@ -112,6 +118,56 @@ TheDepths_B2F_EventScript_MedititeBattle::
 TheDepths_B2F_EventScript_RioluBattle::
 	settotemboost 1, 1, 1, 2, 1, 1
 	setbossbattle SPECIES_RIOLU, MOVE_DRAIN_PUNCH, MOVE_FOCUS_PUNCH, MOVE_SUBSTITUTE, MOVE_BULK_UP, 2
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_ExpertPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B2F_EventScript_AggronBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B2F_EventScript_GolemBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B2F_EventScript_CoalossalBattle
+
+TheDepths_B2F_EventScript_AggronBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_AGGRON, MOVE_HEAD_SMASH, MOVE_HEAVY_SLAM, MOVE_BODY_PRESS, MOVE_EARTHQUAKE, 1
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_GolemBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_GOLEM, MOVE_ROCK_BLAST, MOVE_EARTHQUAKE, MOVE_EXPLOSION, MOVE_ROCK_POLISH, 1
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_CoalossalBattle::
+	settotemboost 1, 1, 1, 1, 2, 1
+	setbossbattle SPECIES_COALOSSAL, MOVE_POWER_GEM, MOVE_FLAMETHROWER, MOVE_EARTH_POWER, MOVE_METEOR_BEAM, 0
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_MasterPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B2F_EventScript_GlimmoraBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B2F_EventScript_NoivernBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B2F_EventScript_ForretressBattle
+
+TheDepths_B2F_EventScript_GlimmoraBattle::
+	settotemboost 1, 1, 2, 1, 2, 1
+	setbossbattle SPECIES_GLIMMORA, MOVE_POWER_GEM, MOVE_SLUDGE_WAVE, MOVE_MORTAL_SPIN, MOVE_SPIKY_SHIELD, 0
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_NoivernBattle::
+	settotemboost 1, 1, 1, 2, 2, 1
+	setbossbattle SPECIES_NOIVERN, MOVE_DRAGON_PULSE, MOVE_AIR_SLASH, MOVE_BOOMBURST, MOVE_ROOST, 1
+	dowildbattle
+	goto TheDepths_B2F_EventScript_BattleAftermath
+
+TheDepths_B2F_EventScript_ForretressBattle::
+	settotemboost 1, 2, 1, 1, 1, 2
+	setbossbattle SPECIES_FORRETRESS, MOVE_HEAVY_SLAM, MOVE_LUNGE, MOVE_CURSE, MOVE_THUNDER_WAVE, 0
 	dowildbattle
 	goto TheDepths_B2F_EventScript_BattleAftermath
 

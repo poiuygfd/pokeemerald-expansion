@@ -93,6 +93,12 @@ TheDepths_B3F_EventScript_GemSocket::
 
 TheDepths_B3F_EventScript_StrongPresence::
 	lock
+	goto_if_set FLAG_DEPTHS_IS_NORMAL, TheDepths_B3F_EventScript_NormalPresence
+	goto_if_set FLAG_DEPTHS_IS_EXPERT, TheDepths_B3F_EventScript_ExpertPresence
+	goto_if_set FLAG_DEPTHS_IS_MASTER, TheDepths_B3F_EventScript_MasterPresence
+	goto TheDepths_B3F_EventScript_NormalPresence
+
+TheDepths_B3F_EventScript_NormalPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B3F_EventScript_MawileBattle
@@ -114,6 +120,56 @@ TheDepths_B3F_EventScript_SableyeBattle::
 TheDepths_B3F_EventScript_CarbinkBattle::
 	settotemboost 1, 1, 1, 1, 2, 1
 	setbossbattle SPECIES_CARBINK, MOVE_POWER_GEM, MOVE_DAZZLING_GLEAM, MOVE_REFLECT, MOVE_LIGHT_SCREEN, 0
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_ExpertPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B3F_EventScript_CrobatBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B3F_EventScript_ExploudBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B3F_EventScript_MachampBattle
+
+TheDepths_B3F_EventScript_CrobatBattle::
+	settotemboost 1, 2, 1, 1, 1, 1
+	setbossbattle SPECIES_CROBAT, MOVE_CROSS_POISON, MOVE_DUAL_WINGBEAT, MOVE_LEECH_LIFE, MOVE_MEAN_LOOK, 0
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_ExploudBattle::
+	settotemboost 1, 1, 1, 1, 2, 1
+	setbossbattle SPECIES_EXPLOUD, MOVE_HYPER_VOICE, MOVE_ICE_BEAM, MOVE_SURF, MOVE_FIRE_BLAST, 2
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_MachampBattle::
+	settotemboost 1, 1, 1, 2, 1, 1
+	setbossbattle SPECIES_MACHAMP, MOVE_CROSS_CHOP, MOVE_MEGA_KICK, MOVE_STONE_EDGE, MOVE_FOCUS_ENERGY, 1
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_MasterPresence::
+	call TheDepths_EventScript_StrongPresence
+	random 3
+	call_if_eq VAR_RESULT, 0, TheDepths_B3F_EventScript_VolcaronaBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B3F_EventScript_UrsalunaBattle
+	call_if_eq VAR_RESULT, 2, TheDepths_B3F_EventScript_GholdengoBattle
+
+TheDepths_B3F_EventScript_VolcaronaBattle::
+	settotemboost 1, 1, 2, 1, 2, 1
+	setbossbattle SPECIES_VOLCARONA, MOVE_FIERY_DANCE, MOVE_BUG_BUZZ, MOVE_MORNING_SUN, MOVE_QUIVER_DANCE, 0
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_UrsalunaBattle::
+	settotemboost 1, 1, 2, 2, 1, 1
+	setbossbattle SPECIES_URSALUNA_BLOODMOON, MOVE_BLOOD_MOON, MOVE_EARTH_POWER, MOVE_MOONLIGHT, MOVE_CALM_MIND, 0
+	dowildbattle
+	goto TheDepths_B3F_EventScript_BattleAftermath
+
+TheDepths_B3F_EventScript_GholdengoBattle::
+	settotemboost 1, 1, 2, 1, 2, 1
+	setbossbattle SPECIES_GHOLDENGO, MOVE_MAKE_IT_RAIN, MOVE_SHADOW_BALL, MOVE_RECOVER, MOVE_NASTY_PLOT, 0
 	dowildbattle
 	goto TheDepths_B3F_EventScript_BattleAftermath
 

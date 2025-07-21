@@ -56,6 +56,7 @@ static void GiveChallengePrize(void);
 static void CheckFinalTime(void);
 static void TrainerHillResumeTimer(void);
 static void TrainerHillSetPlayerLost(void);
+static void TrainerHillSetModeWon(void);
 static void TrainerHillGetChallengeStatus(void);
 static void BufferChallengeTime(void);
 static void GetAllFloorsUsed(void);
@@ -149,7 +150,7 @@ static const u16 sPrizeListRareCandy1[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, I
 static const u16 sPrizeListLuxuryBall1[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxRevive1[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxEther1[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
-static const u16 sPrizeListElixir1[]     = {ITEM_ELIXIR,           ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir1[]     = {ITEM_ABILITY_PATCH,    ITEM_ABILITY_CAPSULE, ITEM_MAX_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_GREAT_BALL};
 static const u16 sPrizeListRoar[]        = {ITEM_TM_ROAR,          ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListSludgeBomb[]  = {ITEM_TM_SLUDGE_BOMB,   ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListToxic[]       = {ITEM_TM_TOXIC,         ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
@@ -160,7 +161,7 @@ static const u16 sPrizeListRareCandy2[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, I
 static const u16 sPrizeListLuxuryBall2[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxRevive2[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxEther2[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
-static const u16 sPrizeListElixir2[]     = {ITEM_ELIXIR,           ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir2[]     = {ITEM_ABILITY_PATCH,    ITEM_ABILITY_CAPSULE, ITEM_MAX_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_GREAT_BALL};
 static const u16 sPrizeListBrickBreak[]  = {ITEM_ABILITY_PATCH,    ITEM_ABILITY_CAPSULE, ITEM_MAX_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_GREAT_BALL};
 static const u16 sPrizeListTorment[]     = {ITEM_TM_TORMENT,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListSkillSwap[]   = {ITEM_TM_SKILL_SWAP,    ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
@@ -237,6 +238,7 @@ static void (*const sHillFunctions[])(void) =
     [TRAINER_HILL_FUNC_CHECK_FINAL_TIME]      = CheckFinalTime,
     [TRAINER_HILL_FUNC_RESUME_TIMER]          = TrainerHillResumeTimer,
     [TRAINER_HILL_FUNC_SET_LOST]              = TrainerHillSetPlayerLost,
+    [TRAINER_HILL_FUNC_SET_MODE_WON]          = TrainerHillSetModeWon,
     [TRAINER_HILL_FUNC_GET_CHALLENGE_STATUS]  = TrainerHillGetChallengeStatus,
     [TRAINER_HILL_FUNC_GET_CHALLENGE_TIME]    = BufferChallengeTime,
     [TRAINER_HILL_FUNC_GET_ALL_FLOORS_USED]   = GetAllFloorsUsed,
@@ -509,6 +511,16 @@ static void TrainerHillSetPlayerLost(void)
 #endif //FREE_TRAINER_HILL
 }
 
+static void TrainerHillSetModeWon(void)
+{
+    if (gSaveBlock1Ptr->trainerHill.mode == HILL_MODE_NORMAL) //Normal
+        FlagSet(FLAG_SYS_HILL_NORMAL_WIN);
+    else if (gSaveBlock1Ptr->trainerHill.mode == HILL_MODE_EXPERT) //Expert
+        FlagSet(FLAG_SYS_HILL_EXPERT_WIN);
+    else if (gSaveBlock1Ptr->trainerHill.mode == HILL_MODE_VARIETY) //Master
+        FlagSet(FLAG_SYS_HILL_MASTER_WIN);
+}
+
 static void TrainerHillGetChallengeStatus(void)
 {
 #if FREE_TRAINER_HILL == FALSE
@@ -627,7 +639,7 @@ void PrintOnTrainerHillRecordsWindow(void)
     AddTextPrinterParameterized3(0, FONT_NORMAL, x, 2, sRecordWinColors, TEXT_SKIP_DRAW, gText_TimeBoard);
 
     y = 18;
-    for (i = 0; i < 2; i++) //for (i = 0; i < NUM_TRAINER_HILL_MODES; i++)
+    for (i = 0; i < 3; i++) //for (i = 0; i < NUM_TRAINER_HILL_MODES; i++)
     {
         AddTextPrinterParameterized3(0, FONT_NORMAL, 0, y, sRecordWinColors, TEXT_SKIP_DRAW, sModeStrings[i]);
         y += 15;
@@ -1089,7 +1101,7 @@ static u16 GetPrizeItemId(void)
     // The below conditional will always be true, because a Trainer Hill challenge can't be entered
     // until the player has entered the Hall of Fame (FLAG_SYS_GAME_CLEAR is set) and because all
     // of the available challenge modes have the full 8 trainers (NUM_TRAINER_HILL_TRAINERS).
-    if (FlagGet(FLAG_SYS_GAME_CLEAR) && sHillData->challenge.numTrainers == NUM_TRAINER_HILL_TRAINERS)
+    if (/*FlagGet(FLAG_SYS_GAME_CLEAR) &&*/ sHillData->challenge.numTrainers == NUM_TRAINER_HILL_TRAINERS)
         i = GetPrizeListId(TRUE);
     else
         i = GetPrizeListId(FALSE);
@@ -1116,15 +1128,15 @@ static u16 GetPrizeItemId(void)
     // entering the Hall of Fame, there would be 1 additional prize possibility (ITEM_MAX_ETHER)
     // as Normal / Unique modes would use sPrizeListSets[0][3] / sPrizeListSets[1][3] respectively.
     minutes = (signed)(gSaveBlock1Ptr->trainerHill.timer) / (60 * 60);
-    if (minutes < 12)
+    if (minutes < 15) //buffed from 12 to 15 to compensate for harder teams and earlier availability
         id = 0; // Depends on list
-    else if (minutes < 13)
+    else if (minutes < 18) //buffed from 13 to 18
         id = 1; // ITEM_ETHER
-    else if (minutes < 14)
+    else if (minutes < 20) //buffed from 14 to 20
         id = 2; // ITEM_MAX_POTION
-    else if (minutes < 16)
+    else if (minutes < 22) //buffed from 16 to 22
         id = 3; // ITEM_REVIVE
-    else if (minutes < 18)
+    else if (minutes < 25) //buffed from 18 to 25
         id = 4; // ITEM_FLUFFY_TAIL
     else
         id = 5; // ITEM_GREAT_BALL

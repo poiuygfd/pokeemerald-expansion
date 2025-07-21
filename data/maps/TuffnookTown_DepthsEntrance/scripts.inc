@@ -24,13 +24,14 @@ TuffnookTown_DepthsEntrance_EventScript_Hiker::
 	checkitem ITEM_BATTLE_PASS
     goto_if_eq VAR_RESULT, FALSE, TuffnookTown_DepthsEntrance_EventScript_Closed
 	goto_if_eq VAR_DEPTHS_MON_STATE, 8, TuffnookTown_DepthsEntrance_EventScript_UnclaimedPrize
+	goto_if_eq VAR_TEMP_1, 1, TuffnookTown_DepthsEntrance_EventScript_ChallengeStarted
 	setvar VAR_DEPTHS_STATE, 0
 	setvar VAR_DEPTHS_MON_STATE, 0
 	clearflag FLAG_DEPTHS_USED_HEAL
 	clearflag FLAG_B6F_SPAWNED_GEMS
 	message TuffnookTown_DepthsEntrance_Text_WelcomeToTheDepths
 	waitmessage
-	multichoice 22, 6, MULTI_YESNOINFO, FALSE
+	multichoice 0, 0, MULTI_YESNOINFO, FALSE
 	switch VAR_RESULT
 	case 0, TuffnookTown_DepthsEntrance_EventScript_ChooseChallenge
 	case 1, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
@@ -39,8 +40,24 @@ TuffnookTown_DepthsEntrance_EventScript_Hiker::
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_Info::
+	message TuffnookTown_DepthsEntrance_Text_WhichTopic
+	waitmessage
+	multichoice 0, 0, MULTI_DEPTHS_EXPLAIN_MODE, FALSE
+	switch VAR_RESULT
+	case 0, TuffnookTown_DepthsEntrance_EventScript_ExplainTheDepths
+	case 1, TuffnookTown_DepthsEntrance_EventScript_ExplainTheDepthsModes
+	case 2, TuffnookTown_DepthsEntrance_EventScript_AskAgain
+	case MULTI_B_PRESSED, TuffnookTown_DepthsEntrance_EventScript_AskAgain
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_ExplainTheDepths::
 	msgbox TuffnookTown_DepthsEntrance_Text_ExplainTheDepths, MSGBOX_DEFAULT
-	goto TuffnookTown_DepthsEntrance_EventScript_AskAgain
+	goto TuffnookTown_DepthsEntrance_EventScript_Info
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_ExplainTheDepthsModes::
+	msgbox TuffnookTown_DepthsEntrance_Text_ExplainTheDepthsModes, MSGBOX_DEFAULT
+	goto TuffnookTown_DepthsEntrance_EventScript_Info
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_CancelEntry::
@@ -51,7 +68,7 @@ TuffnookTown_DepthsEntrance_EventScript_CancelEntry::
 TuffnookTown_DepthsEntrance_EventScript_AskAgain::
 	message TuffnookTown_DepthsEntrance_Text_GotWhatItTakes
 	waitmessage
-	multichoice 22, 6, MULTI_YESNOINFO, FALSE
+	multichoice 0, 0, MULTI_YESNOINFO, FALSE
 	switch VAR_RESULT
 	case 0, TuffnookTown_DepthsEntrance_EventScript_ChooseChallenge
 	case 1, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
@@ -60,29 +77,37 @@ TuffnookTown_DepthsEntrance_EventScript_AskAgain::
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_ChooseChallenge::
-	goto_if_unset FLAG_SYS_GAME_CLEAR, TuffnookTown_DepthsEntrance_EventScript_NotChampion
 	message TuffnookTown_DepthsEntrance_Text_ChooseDifficulty
 	waitmessage
-	multichoice 17, 6, MULTI_DEPTHS_NORMAL_EXPERT, FALSE
+	multichoice 0, 0, MULTI_DEPTHS_CHOOSE_MODE, FALSE
 	switch VAR_RESULT
 	case 0, TuffnookTown_DepthsEntrance_EventScript_NormalMode
 	case 1, TuffnookTown_DepthsEntrance_EventScript_ExpertMode
-	case 2, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
-	case MULTI_B_PRESSED, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
-	end
-
-TuffnookTown_DepthsEntrance_EventScript_NotChampion::
-	message TuffnookTown_DepthsEntrance_Text_CantChooseDifficulty
-	waitmessage
-	multichoice 17, 8, MULTI_DEPTHS_NORMAL_ONLY, FALSE
-	switch VAR_RESULT
-	case 0, TuffnookTown_DepthsEntrance_EventScript_NormalMode
-	case 1, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
+	case 2, TuffnookTown_DepthsEntrance_EventScript_MasterMode
+	case 3, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TuffnookTown_DepthsEntrance_EventScript_CancelEntry
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_NormalMode::
+	setflag FLAG_DEPTHS_IS_NORMAL
+	goto TuffnookTown_DepthsEntrance_EventScript_BeginTheDepths
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_ExpertMode::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, TuffnookTown_DepthsEntrance_EventScript_NoExpert
+	setflag FLAG_DEPTHS_IS_EXPERT
+	goto TuffnookTown_DepthsEntrance_EventScript_BeginTheDepths
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_MasterMode::
+	goto_if_unset FLAG_SYS_DEPTHS_EXPERT_WIN, TuffnookTown_DepthsEntrance_EventScript_NoMaster
+	setflag FLAG_DEPTHS_IS_MASTER
+	goto TuffnookTown_DepthsEntrance_EventScript_BeginTheDepths
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_BeginTheDepths::
 	msgbox TuffnookTown_DepthsEntrance_Text_GoodLuckDownThere, MSGBOX_DEFAULT
+	setvar VAR_TEMP_1, 1
 	closemessage
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
@@ -91,12 +116,19 @@ TuffnookTown_DepthsEntrance_EventScript_NormalMode::
 	releaseall
 	end
 
-TuffnookTown_DepthsEntrance_EventScript_ExpertMode::
-	goto TuffnookTown_DepthsEntrance_EventScript_NormalMode
+TuffnookTown_DepthsEntrance_EventScript_ChallengeStarted::
+	msgbox TuffnookTown_DepthsEntrance_Text_BestOfLuck, MSGBOX_NPC
+	releaseall
 	end
 
-TuffnookTown_DepthsEntrance_EventScript_SaveFailed::
-	goto TuffnookTown_DepthsEntrance_EventScript_CancelEntry
+TuffnookTown_DepthsEntrance_EventScript_NoExpert::
+	msgbox TuffnookTown_DepthsEntrance_Text_ExpertDifficultyIsLocked, MSGBOX_DEFAULT
+	goto TuffnookTown_DepthsEntrance_EventScript_ChooseChallenge
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_NoMaster::
+	msgbox TuffnookTown_DepthsEntrance_Text_MasterDifficultyIsLocked, MSGBOX_DEFAULT
+	goto TuffnookTown_DepthsEntrance_EventScript_ChooseChallenge
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_UnclaimedPrize::
@@ -152,30 +184,38 @@ TuffnookTown_DepthsEntrance_Text_NotGotWhatItTakes:
 	.string "That's fine, not everyone is brave\l"
 	.string "enough to face THE DEPTHS.$"
 
-TuffnookTown_DepthsEntrance_Text_CantChooseDifficulty:
-	.string "For someone of your skill level\n"
-	.string "the only option available to you\l"
-	.string "is the NORMAL difficulty.\p"
-	.string "Come back when you've entered the\n"
-	.string "HALL OF FAME if you wanna see the\l"
-	.string "true terror of THE DEPTHS.$"
-
 TuffnookTown_DepthsEntrance_Text_ChooseDifficulty:
-	.string "For someone of your skill level\n"
-	.string "you might be able to take on our\l"
-	.string "EXPERT difficulty.\p"
-	.string "Feel free to take on whatever\n"
-	.string "takes your fancy though.$"
+	.string "What difficulty were you hoping\n"
+	.string "to try yer hand at today then?$"
+
+TuffnookTown_DepthsEntrance_Text_ExpertDifficultyIsLocked:
+	.string "Sorry kid, can't let you do that.\n"
+	.string "EXPERT MODE seems a bit beyond you.\p"
+	.string "Try coming back when you enter\n"
+	.string "the HALL OF FAME.$"
+
+TuffnookTown_DepthsEntrance_Text_MasterDifficultyIsLocked:
+	.string "Sorry kid, can't let you do that.\n"
+	.string "MASTER MODE seems a bit beyond you.\p"
+	.string "Try coming back when you've beat\n"
+	.string "EXPERT MODE.$"
 
 TuffnookTown_DepthsEntrance_Text_SaveYourGame:
 	.string "Just before you head down there,\n"
-	.string "you'll need to save your game.\p"
+	.string "you'll need to save your game.$"
 
 TuffnookTown_DepthsEntrance_Text_GoodLuckDownThere:
+	.string "Alright then, good luck down there.\p"
 	.string "If you want to call it quits early,\n"
 	.string "you can climb back up the ladder.\p"
-	.string "Alright then, good luck down there.\n"
-	.string "You're gonna need it!$"
+	.string "Otherwise, I will see you on the\n"
+	.string "other side!$"
+
+TuffnookTown_DepthsEntrance_Text_BestOfLuck:
+	.string "Best of luck, kid.$"
+
+TuffnookTown_DepthsEntrance_Text_WhichTopic:
+	.string "Which topic would you like?$"
 
 TuffnookTown_DepthsEntrance_Text_ExplainTheDepths:
 	.string "In THE DEPTHS, your aim is to make\n"
@@ -197,6 +237,21 @@ TuffnookTown_DepthsEntrance_Text_ExplainTheDepths:
 	.string "earn yourself a prize!\p"
 	.string "Oh, and you won't earn any Exp.\n"
 	.string "Points while you're in THE DEPTHS.$"
+
+TuffnookTown_DepthsEntrance_Text_ExplainTheDepthsModes:
+	.string "There are three difficulty modes\n"
+	.string "you can find in THE DEPTHS.\p"
+	.string "NORMAL MODE is your standard mode\n"
+	.string "anyone can try.\p"
+	.string "Don't let that fool you though,\n"
+	.string "it's still tough as nails!\p"
+	.string "EXPERT MODE is a challenging time\n"
+	.string "only those who enter the HALL OF FAME\l"
+	.string "can give a go.\p"
+	.string "And for the real nutjobs who beat\n"
+	.string "EXPERT MODE, we have MASTER MODE.\p"
+	.string "This mode will really push you to\n"
+	.string "your absolute limits!$"
 
 TuffnookTown_DepthsEntrance_Text_BetterLuckNextTime:
 	.string "Better luck next time, kid.\p"

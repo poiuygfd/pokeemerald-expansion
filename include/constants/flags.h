@@ -728,11 +728,11 @@
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 
 // The Depths Flags
+#define FLAG_DEPTHS_IS_NORMAL                                       0x2AA // Difficulty mode is Normal (Doing this rather than a var since there are more spare flags than vars)
+#define FLAG_DEPTHS_IS_EXPERT                                       0x2AB // Diffuculty mode is Expert
+#define FLAG_DEPTHS_IS_MASTER                                       0x2AC // Difficulty mode is Master
 #define FLAG_B6F_SPAWNED_GEMS                                       0x2AD // Whether gems have been spawned on B6F so they aren't re-generated every door enter/exit
 #define FLAG_DEPTHS_USED_HEAL                                       0x2AE // Whether the heal has been used or not
 #define FLAG_DISABLE_BAG                                            0x2AF // Disables Bag menu item in The Depths
@@ -1162,7 +1162,7 @@
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_1_TM_RAIN_DANCE  0x44E
 #define FLAG_ITEM_ROUTE_121_CARBOS                                  0x44F
 #define FLAG_ITEM_ROUTE_123_ULTRA_BALL                              0x450
-#define FLAG_ITEM_ROUTE_126_GREEN_SHARD                             0x451
+#define FLAG_ITEM_ROUTE_124_GREEN_SHARD                             0x451
 #define FLAG_ITEM_ROUTE_119_HYPER_POTION_2                          0x452
 #define FLAG_ITEM_ROUTE_120_HYPER_POTION                            0x453
 #define FLAG_ITEM_ROUTE_120_NEST_BALL                               0x454
@@ -1299,7 +1299,7 @@
 #define FLAG_RECEIVED_METRONOME                                     0x4D6 // Received Metronome Gift
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD                           0x4D7 // Hero's Keep Rusted Sword
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD                          0x4D8 // Hero's Keep Rusted Shield
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
+#define FLAG_ITEM_ROUTE_126_GARDEVOIRITE                            0x4D9 // Gardevoir Mega Stone
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
@@ -1395,12 +1395,13 @@
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
 #define FLAG_VISITED_TUFFNOOK_TOWN                  (SYSTEM_FLAGS + 0x21) // Tuffnook Town Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
-#define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
-#define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
+
+#define FLAG_SYS_HILL_NORMAL_WIN                    (SYSTEM_FLAGS + 0x22)
+#define FLAG_SYS_HILL_EXPERT_WIN                    (SYSTEM_FLAGS + 0x23)
+#define FLAG_SYS_HILL_MASTER_WIN                    (SYSTEM_FLAGS + 0x24)
+#define FLAG_SYS_DEPTHS_NORMAL_WIN                  (SYSTEM_FLAGS + 0x25)
+#define FLAG_SYS_DEPTHS_EXPERT_WIN                  (SYSTEM_FLAGS + 0x26)
+#define FLAG_SYS_DEPTHS_MASTER_WIN                  (SYSTEM_FLAGS + 0x27)
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)

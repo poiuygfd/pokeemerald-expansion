@@ -136,7 +136,7 @@ TrainerHill_Entrance_EventScript_AllFloorsUsed::
 TrainerHill_Entrance_EventScript_AskChallengeTrainers::
 	message TrainerHill_Entrance_Text_LikeToChallengeTrainers
 	waitmessage
-	multichoice 22, 6, MULTI_YESNOINFO, FALSE
+	multichoice 0, 0, MULTI_YESNOINFO, FALSE
 	switch VAR_RESULT
 	case 0, TrainerHill_Entrance_EventScript_ChooseChallenge
 	case 1, TrainerHill_Entrance_EventScript_CancelEntry
@@ -145,17 +145,34 @@ TrainerHill_Entrance_EventScript_AskChallengeTrainers::
 	end
 
 TrainerHill_Entrance_EventScript_Info::
+	message TrainerHill_Entrance_Text_WhichTopic
+	waitmessage
+	multichoice 0, 0, MULTI_HILL_EXPLAIN_MODE, FALSE
+	switch VAR_RESULT
+	case 0, TrainerHill_Entrance_EventScript_ExplainTrainerHill
+	case 1, TrainerHill_Entrance_EventScript_ExplainTrainerHillModes
+	case 2, TrainerHill_Entrance_EventScript_AskChallengeTrainers
+	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_AskChallengeTrainers
+	end
+
+TrainerHill_Entrance_EventScript_ExplainTrainerHill::
 	msgbox TrainerHill_Entrance_Text_ExplainTrainerHill, MSGBOX_DEFAULT
-	goto TrainerHill_Entrance_EventScript_AskChallengeTrainers
+	goto TrainerHill_Entrance_EventScript_Info
+	end
+
+TrainerHill_Entrance_EventScript_ExplainTrainerHillModes::
+	msgbox TrainerHill_Entrance_Text_ExplainTrainerHillModes, MSGBOX_DEFAULT
+	goto TrainerHill_Entrance_EventScript_Info
 	end
 
 TrainerHill_Entrance_EventScript_ChooseChallenge::
-	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_CantChooseChallenge
+	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_NoExpert
+	goto_if_unset FLAG_SYS_HILL_EXPERT_WIN, TrainerHill_Entrance_EventScript_NoMaster
 	message TrainerHill_Entrance_Text_ChooseDifficulty
 	waitmessage
-	multichoice 17, 6, MULTI_HILL_NORMAL_EXPERT, FALSE
+	multichoice 0, 0, MULTI_HILL_CHOOSE_MODE, FALSE
 	switch VAR_RESULT
-	case 2, TrainerHill_Entrance_EventScript_CancelEntry
+	case 3, TrainerHill_Entrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
 	trainerhill_setmode VAR_RESULT
 	setvar VAR_TRAINER_HILL_IS_ACTIVE, 1
@@ -167,12 +184,14 @@ TrainerHill_Entrance_EventScript_ChooseChallenge::
 	releaseall
 	end
 
-TrainerHill_Entrance_EventScript_CantChooseChallenge::
-	message TrainerHill_Entrance_Text_CantChooseDifficulty
+TrainerHill_Entrance_EventScript_NoExpert::
+	message TrainerHill_Entrance_Text_ChooseDifficulty
 	waitmessage
-	multichoice 17, 8, MULTI_HILL_NORMAL_ONLY, FALSE
+	multichoice 0, 0, MULTI_HILL_CHOOSE_MODE, FALSE
 	switch VAR_RESULT
-	case 1, TrainerHill_Entrance_EventScript_CancelEntry
+	case 1, TrainerHill_Entrance_EventScript_DifficultyLocked1
+	case 2, TrainerHill_Entrance_EventScript_DifficultyLocked2
+	case 3, TrainerHill_Entrance_EventScript_CancelEntry
 	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
 	trainerhill_setmode VAR_RESULT
 	setvar VAR_TRAINER_HILL_IS_ACTIVE, 1
@@ -182,6 +201,34 @@ TrainerHill_Entrance_EventScript_CantChooseChallenge::
 	msgbox TrainerHill_Entrance_Text_TimeProgessGetSetGo, MSGBOX_DEFAULT
 	trainerhill_start
 	releaseall
+	end
+
+TrainerHill_Entrance_EventScript_NoMaster::
+	message TrainerHill_Entrance_Text_ChooseDifficulty
+	waitmessage
+	multichoice 0, 0, MULTI_HILL_CHOOSE_MODE, FALSE
+	switch VAR_RESULT
+	case 2, TrainerHill_Entrance_EventScript_DifficultyLocked2
+	case 3, TrainerHill_Entrance_EventScript_CancelEntry
+	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
+	trainerhill_setmode VAR_RESULT
+	setvar VAR_TRAINER_HILL_IS_ACTIVE, 1
+	setvar VAR_TEMP_5, 0
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	msgbox TrainerHill_Entrance_Text_TimeProgessGetSetGo, MSGBOX_DEFAULT
+	trainerhill_start
+	releaseall
+	end
+
+TrainerHill_Entrance_EventScript_DifficultyLocked1::
+	msgbox TrainerHill_Entrance_Text_ExpertDifficultyIsLocked, MSGBOX_DEFAULT
+	goto TrainerHill_Entrance_EventScript_ChooseChallenge
+	end
+
+TrainerHill_Entrance_EventScript_DifficultyLocked2::
+	msgbox TrainerHill_Entrance_Text_MasterDifficultyIsLocked, MSGBOX_DEFAULT
+	goto TrainerHill_Entrance_EventScript_ChooseChallenge
 	end
 
 TrainerHill_Entrance_EventScript_CancelEntry::
@@ -340,17 +387,21 @@ TrainerHill_Entrance_Text_LikeToChallengeTrainers:
 	.string "Would you like to challenge the\n"
 	.string "waiting TRAINERS?$"
 
-TrainerHill_Entrance_Text_CantChooseDifficulty:
-	.string "For now, you may only take on\n"
-	.string "our NORMAL difficulty.\p"
-	.string "If you return after entering the\n"
-	.string "HALL OF FAME, you may challenge\l"
-	.string "a higher difficulty.$"
-
 TrainerHill_Entrance_Text_ChooseDifficulty:
-	.string "For a TRAINER as strong as you, you\n"
-	.string "may attempt our EXPERT difficulty,\l"
-	.string "should you wish to do so.$"
+	.string "Which difficulty mode were you\n"
+	.string "hoping to challenge today?$"
+
+TrainerHill_Entrance_Text_ExpertDifficultyIsLocked:
+	.string "I'm sorry, but EXPERT MODE is\n"
+	.string "unavailable to you.\p"
+	.string "Please try again when you enter\n"
+	.string "the HALL OF FAME.$"
+
+TrainerHill_Entrance_Text_MasterDifficultyIsLocked:
+	.string "I'm sorry, but MASTER MODE is\n"
+	.string "unavailable to you.\p"
+	.string "Please try again when you have\n"
+	.string "beaten EXPERT MODE.$"
 
 TrainerHill_Entrance_Text_TimeProgessGetSetGo:
 	.string "I will time your progress.\n"
@@ -381,6 +432,9 @@ TrainerHill_Entrance_Text_MovedReceptionHereForSwitch:
 TrainerHill_Entrance_Text_ThankYouForPlaying:
 	.string "Thank you for playing!$"
 
+TrainerHill_Entrance_Text_WhichTopic:
+	.string "Which topic would you like?$"
+
 TrainerHill_Entrance_Text_ExplainTrainerHill:
 	.string "Here at the TRAINER HILL, we conduct\n"
 	.string "an event called the Time Attack.\p"
@@ -393,9 +447,26 @@ TrainerHill_Entrance_Text_ExplainTrainerHill:
 	.string "The fastest times are posted on\n"
 	.string "the Time Board--try competing with\l"
 	.string "your friends.\p"
+	.string "Additionally, you will recieve a\n"
+	.string "prize based on how fast your time was.\p"
 	.string "In TRAINER battles along the way,\n"
 	.string "neither Exp. Points nor money will\l"
 	.string "be awarded.$"
+
+TrainerHill_Entrance_Text_ExplainTrainerHillModes:
+	.string "There are three difficulty modes\n"
+	.string "available at TRAINER HILL.\p"
+	.string "The standard difficulty is NORMAL\n"
+	.string "MODE, which is still a challenge\l"
+	.string "for the average TRAINER.\p"
+	.string "EXPERT MODE is available to those\n"
+	.string "who enter the HALL OF FAME.\p"
+	.string "It is a very tough challenge for\n"
+	.string "TRAINERs who have proven themselves.\p"
+	.string "Lastly is MASTER MODE, available only\n"
+	.string "to those who can clear EXPERT MODE.\p"
+	.string "This is a challenge that will push\n"
+	.string "TRAINERs to the absolute limit.$"
 
 @ Unused
 TrainerHill_Entrance_Text_NeedAtLeastTwoPokemon:

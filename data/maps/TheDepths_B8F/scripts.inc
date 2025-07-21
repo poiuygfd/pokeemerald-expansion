@@ -14,6 +14,7 @@ TheDepths_B8F_EventScript_ExitDepths::
 TheDepths_B8F_EventScript_PrizeGiver::
 	lock
 	faceplayer
+	call TheDepths_B8F_EventScript_CheckModeWin
 	goto_if_eq VAR_DEPTHS_STATE, 8, TheDepths_B8F_EventScript_ClaimedPrize
 	goto_if_eq VAR_DEPTHS_MON_STATE, 8, TheDepths_B8F_EventScript_CantClaimPrize
 	goto_if_unset FLAG_DEPTHS_USED_HEAL, TheDepths_B8F_EventScript_NoHealPrize
@@ -33,6 +34,27 @@ TheDepths_B8F_EventScript_NoHealPrize::
 	msgbox TheDepths_B8F_Text_HeadOnOut, MSGBOX_DEFAULT
 	release
 	end
+
+TheDepths_B8F_EventScript_CheckModeWin::
+	call_if_set FLAG_DEPTHS_IS_NORMAL, TheDepths_B8F_EventScript_SetNormalWin
+	call_if_set FLAG_DEPTHS_IS_EXPERT, TheDepths_B8F_EventScript_SetExpertWin
+	call_if_set FLAG_DEPTHS_IS_MASTER, TheDepths_B8F_EventScript_SetMasterWin
+	return
+
+TheDepths_B8F_EventScript_SetNormalWin::
+	setflag FLAG_SYS_DEPTHS_NORMAL_WIN
+	clearflag FLAG_DEPTHS_IS_NORMAL
+	return
+
+TheDepths_B8F_EventScript_SetExpertWin::
+	setflag FLAG_SYS_DEPTHS_EXPERT_WIN
+	clearflag FLAG_DEPTHS_IS_EXPERT
+	return
+
+TheDepths_B8F_EventScript_SetMasterWin::
+	setflag FLAG_SYS_DEPTHS_MASTER_WIN
+	clearflag FLAG_DEPTHS_IS_MASTER
+	return
 
 TheDepths_B8F_EventScript_ClaimedPrize::
 	msgbox TheDepths_B8F_Text_HeadOnOut, MSGBOX_DEFAULT

@@ -769,17 +769,19 @@ static const struct MenuAction MultichoiceList_FallarborTentRules[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_HillNormalOnly[] =
-{
-    {gText_NormalTagMatch},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_HillNormalExpert[] =
+static const struct MenuAction MultichoiceList_HillChooseMode[] =
 {
     {gText_NormalTagMatch},
     {gText_ExpertTagMatch},
+    {gText_VarietyTagMatch},
     {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_HillExplainMode[] =
+{
+    {COMPOUND_STRING("What's TRAINER HILL?")},
+    {COMPOUND_STRING("Modes")},
+    {gText_Cancel2},
 };
 
 static const struct MenuAction MultichoiceList_BerryPlot[] =
@@ -812,17 +814,19 @@ static const struct MenuAction MultichoiceList_UltimateMoves[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_DepthsNormalOnly[] =
-{
-    {COMPOUND_STRING("NORMAL MODE")},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_DepthsNormalExpert[] =
+static const struct MenuAction MultichoiceList_DepthsChooseMode[] =
 {
     {COMPOUND_STRING("NORMAL MODE")},
     {COMPOUND_STRING("EXPERT MODE")},
+    {COMPOUND_STRING("MASTER MODE")},
     {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_DepthsExplainMode[] =
+{
+    {COMPOUND_STRING("What's THE DEPTHS?")},
+    {COMPOUND_STRING("Modes")},
+    {gText_Cancel2},
 };
 
 static const struct MenuAction MultichoiceList_PassChoice[] =
@@ -958,14 +962,14 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_WHERES_RAYQUAZA]            = MULTICHOICE(MultichoiceList_WheresRayquaza),
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
-    [MULTI_HILL_NORMAL_ONLY]           = MULTICHOICE(MultichoiceList_HillNormalOnly),
-    [MULTI_HILL_NORMAL_EXPERT]         = MULTICHOICE(MultichoiceList_HillNormalExpert),
+    [MULTI_HILL_CHOOSE_MODE]           = MULTICHOICE(MultichoiceList_HillChooseMode),
+    [MULTI_HILL_EXPLAIN_MODE]          = MULTICHOICE(MultichoiceList_HillExplainMode),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_GALARICA_ITEM]              = MULTICHOICE(MultichoiceList_GalaricaItem),
     [MULTI_PLEDGE_MOVES]               = MULTICHOICE(MultichoiceList_PledgeMoves),
     [MULTI_ULTIMATE_MOVES]             = MULTICHOICE(MultichoiceList_UltimateMoves),
-    [MULTI_DEPTHS_NORMAL_ONLY]         = MULTICHOICE(MultichoiceList_DepthsNormalOnly),
-    [MULTI_DEPTHS_NORMAL_EXPERT]       = MULTICHOICE(MultichoiceList_DepthsNormalExpert),
+    [MULTI_DEPTHS_CHOOSE_MODE]         = MULTICHOICE(MultichoiceList_DepthsChooseMode),
+    [MULTI_DEPTHS_EXPLAIN_MODE]        = MULTICHOICE(MultichoiceList_DepthsExplainMode),
     [MULTI_PASS_CHOICE]                = MULTICHOICE(MultichoiceList_PassChoice),
 };
 
