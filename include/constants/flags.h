@@ -676,7 +676,7 @@
 #define FLAG_HIDE_STATIC_REGIGIGAS  0x273 // Regigigas "statue" before bringing the 5 other Regis
 #define FLAG_AWOKEN_REGIGIGAS  0x274 // Whether the player has woke up Regigigas or not
 #define FLAG_TALKED_TO_POIPOLE_GIRL  0x275 // Talked to Poipole giver but didn't take Poipole
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
+#define FLAG_DEFEATED_CHARIZARD_FAN  0x276 // Defeated the No. 1 Charizard Fan
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
@@ -1300,7 +1300,7 @@
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD                           0x4D7 // Hero's Keep Rusted Sword
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD                          0x4D8 // Hero's Keep Rusted Shield
 #define FLAG_ITEM_ROUTE_126_GARDEVOIRITE                            0x4D9 // Gardevoir Mega Stone
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
+#define FLAG_RECEIVED_CHARIZARDITE_Z                                0x4DA // Received Charizard's Z Mega Stone
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag

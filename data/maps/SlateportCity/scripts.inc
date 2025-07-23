@@ -546,7 +546,6 @@ SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_ODD_INCENSE
 	.2byte ITEM_ROCK_INCENSE
 	.2byte ITEM_WAVE_INCENSE
-	.2byte ITEM_OIL_INCENSE
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine

@@ -2102,3 +2102,6 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon
 
 const u32 gItemIcon_CandyBag[] = INCBIN_U32("graphics/items/icons/candy_bag.4bpp.lz");
 const u16 gItemIconPalette_CandyBag[] = INCBIN_U16("graphics/items/icon_palettes/candy_bag.gbapal");
+
+const u32 gItemIcon_CharizarditeZ[] = INCBIN_U32("graphics/items/icons/charizardite_z.4bpp.lz");
+const u16 gItemIconPalette_CharizarditeZ[] = INCBIN_U16("graphics/items/icon_palettes/charizardite_z.gbapal");

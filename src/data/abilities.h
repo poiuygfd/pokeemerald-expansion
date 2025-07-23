@@ -2438,5 +2438,17 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Buoyant Power"),
         .description = COMPOUND_STRING("Ups Water-type moves."),
         .aiRating = 6,
+    },
+
+    [ABILITY_NEPOTISM] =
+    {
+        .name = _("Nepotism"),
+        .description = COMPOUND_STRING("Game Freak's favorite child."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
     }
 };

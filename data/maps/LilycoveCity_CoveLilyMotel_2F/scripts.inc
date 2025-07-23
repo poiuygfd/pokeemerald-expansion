@@ -31,16 +31,55 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_ShowDiploma::
 	release
 	end
 
+LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFan::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_CHARIZARDITE_Z, LilycoveCity_CoveLilyMotel_2F_EventScript_NeedToTrain
+	goto_if_set FLAG_DEFEATED_CHARIZARD_FAN, LilycoveCity_CoveLilyMotel_2F_EventScript_RecieveMegaStone
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_TheNo1CharizardFan, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidYes
+	call_if_eq VAR_RESULT, NO, LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidNo
+	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidYes::
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_KnewYoudAgree, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidNo::
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_Preposterous, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_X_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated1
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_MoreWhereThatCameFrom, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Y_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated2
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Z_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated3
+	setflag FLAG_DEFEATED_CHARIZARD_FAN
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFan, MSGBOX_DEFAULT
+	giveitem ITEM_CHARIZARDITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CHARIZARDITE_Z
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_RecieveMegaStone::
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFanShort, MSGBOX_DEFAULT
+	giveitem ITEM_CHARIZARDITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CHARIZARDITE_Z
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_NeedToTrain::
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_WeNeedToTrain, MSGBOX_DEFAULT
+	release
+	end
+
 LilycoveCity_CoveLilyMotel_2F_EventScript_Programmer::
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer, MSGBOX_NPC
 	end
 
 LilycoveCity_CoveLilyMotel_2F_EventScript_GraphicArtist::
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist, MSGBOX_NPC
-	end
-
-LilycoveCity_CoveLilyMotel_2F_EventScript_FatMan::
-	msgbox LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute, MSGBOX_NPC
 	end
 
 LilycoveCity_CoveLilyMotel_2F_EventScript_Woman::
@@ -84,6 +123,105 @@ LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis:
 	.string "Let me give you something in\n"
 	.string "recognition of your feat!$"
 
+LilycoveCity_CoveLilyMotel_2F_Text_TheNo1CharizardFan:
+	.string "I'm the number one CHARIZARD fan!\p"
+	.string "Don't you just love CHARIZARD?\n"
+	.string "Everyone loves CHARIZARD!\p"
+	.string "That's why we gave CHARIZARD two MEGA\n"
+	.string "EVOLUTIONS instead of one!\p"
+	.string "Don't you agree?$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_KnewYoudAgree:
+	.string "I knew you'd agree!\p"
+	.string "You seem like someone who knows what\n"
+	.string "is what!\p"
+	.string "Still, you'll never be as big a CHARIZARD\n"
+	.string "fan as me! Maybe I'll let you have\l"
+	.string "second place though! Hohoho!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_Preposterous:
+	.string "What? It's unfair that CHARIZARD gets\n"
+	.string "two MEGAS when VENUSAUR and BLASTOISE\l"
+	.string "only get one each?\p"
+	.string "That's preposterous!\n"
+	.string "Why, you! I ought to teach you a lesson!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_MoreWhereThatCameFrom:
+	.string "N-no way!\p"
+	.string "How did you beat the might of my\n"
+	.string "unstoppable CHARIZARD…?\p"
+	.string "…Tch, it doesn't matter!\n"
+	.string "Didn't I just tell you CHARIZARD has\l"
+	.string "two MEGA EVOLUTIONS?\p"
+	.string "Now that you've been tired out and\n"
+	.string "whittled down by my first CHARIZARD…\p"
+	.string "Face the wrath of my SECOND CHARIZARD!!!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice:
+	.string "That… That wasn't enough?\n"
+	.string "But… How?\p"
+	.string "I threw everything I had at you!\n"
+	.string "And yet you're still standing?\p"
+	.string "No… NO!!\n"
+	.string "I can't let it end like this!!\p"
+	.string "You leave me no choice.\p"
+	.string "Nobody was supposed to know about this.\n"
+	.string "Nobody but me…\p"
+	.string "But I just can't let it end like this!\n"
+	.string "I hope you've said your prayers!\p"
+	.string "Because you're about to see something\n"
+	.string "so terrifying, so powerful…\p"
+	.string "That you'll never be able to look at\n"
+	.string "CHARIZARD the same again!\p"
+	.string "Have at thee!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated1:
+	.string "Impossible!\n"
+	.string "How did you best my CHARIZARD's might?$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated2:
+	.string "Incomprehensible!\n"
+	.string "How do you keep getting away with this?$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated3:
+	.string "Words cannot describe my bewilderment!\n"
+	.string "I threw everything I had, and failed…$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFan:
+	.string "I can't believe it!\n"
+	.string "The X MEGA didn't work, nor the Y MEGA…\p"
+	.string "And even after showing the forbidden\n"
+	.string "Z MEGA, I still couldn't win…\p"
+	.string "Could it be…\p"
+	.string "That you are a true CHARIZARD fan\n"
+	.string "after all?\p"
+	.string "To know CHARIZARD's weak points\n"
+	.string "so thoroughly in order to best me…\p"
+	.string "You must know CHARIZARD in and out!\n"
+	.string "There's no other explanation!\l"
+	.string "You're a fan!\p"
+	.string "Here, I think that CHARIZARD's true\n"
+	.string "potential has been hidden from the\l"
+	.string "world long enough.\p"
+	.string "Take this MEGA STONE, and harness the\n"
+	.string "power of the forbidden MEGA CHARIZARD Z\l"
+	.string "for yourself!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFanShort:
+	.string "Here, I think that CHARIZARD's true\n"
+	.string "potential has been hidden from the\l"
+	.string "world long enough.\p"
+	.string "Take this MEGA STONE, and harness the\n"
+	.string "power of the forbidden MEGA CHARIZARD Z\l"
+	.string "for yourself!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_WeNeedToTrain:
+	.string "Me and my CHARIZARDS are going to need\n"
+	.string "to do a lot of training.\p"
+	.string "We're going to become so strong, we'll\n"
+	.string "never lose to anyone ever again!\p"
+	.string "When that happens, I demand a rematch!$"
+
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer:
 	.string "Me? You're talking to me?\n"
 	.string "I'm the PROGRAMMER.\p"
@@ -93,14 +231,6 @@ LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer:
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist:
 	.string "I'm the GRAPHIC ARTIST! Aren't the\n"
 	.string "POKéMON of HOENN interesting?$"
-
-LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute:
-	.string "The girl TUBERS, they're cute, hey?\n"
-	.string "To battle against a cute TUBER…\p"
-	.string "Whoop, it's so awesome!\p"
-	.string "And the TWINS! Aren't they cute?\n"
-	.string "A 2-on-2 battle with TWINS…\p"
-	.string "Whoop, it's unbearably fun!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart:
 	.string "The sea breeze tickles my heart.\n"

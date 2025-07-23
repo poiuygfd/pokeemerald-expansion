@@ -1643,8 +1643,10 @@
 #define SPECIES_AVITORCH_CALM                           1526
 #define SPECIES_AVITORCH_ENRAGED                        1527
 #define SPECIES_REGITUBE                                1528
+#define SPECIES_CHARIZARD_MEGA_Z                        1529
+#define SPECIES_CHARIZARD_OMEGA_Z                       1530
 
-#define SPECIES_EGG                                     (SPECIES_REGITUBE + 1)
+#define SPECIES_EGG                                     (SPECIES_CHARIZARD_OMEGA_Z + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

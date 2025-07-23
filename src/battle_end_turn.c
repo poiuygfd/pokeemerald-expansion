@@ -1465,6 +1465,7 @@ static bool32 HandleEndTurnAbilities(u32 battler)
     case ABILITY_SCHOOLING:
     case ABILITY_SHIELDS_DOWN:
     case ABILITY_ZEN_MODE:
+    case ABILITY_NEPOTISM:
         if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, 0, MOVE_NONE))
             effect = TRUE;
     }

@@ -14266,19 +14266,18 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_RainbowPass,
     },
 
-    [ITEM_OIL_INCENSE] =
+    [ITEM_CHARIZARDITE_Z] =
     {
-        .name = _("Oil Incense"),
-        .price = (I_PRICE >= GEN_7) ? 15000 : 9600,
-        .description = COMPOUND_STRING(
-            "You can always\n"
-            "trust essential\n"
-            "oils!"),
+        .name = _("Charizardite Z"),
+        .pluralName = _("Charizardites Z"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sCharizarditeDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 10,
-        .iconPic = gItemIcon_LuckIncense,
-        .iconPalette = gItemIconPalette_LuckIncense,
+        .flingPower = 80,
+        .iconPic = gItemIcon_CharizarditeZ,
+        .iconPalette = gItemIconPalette_CharizarditeZ,
     },
 };

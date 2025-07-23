@@ -866,17 +866,20 @@
 #define TRAINER_GLACIA_REMATCH              860
 #define TRAINER_DRAKE_REMATCH               861
 #define TRAINER_STEVEN_REMATCH              862
-#define TRAINER_RED                         863
-#define TRAINER_LEAF                        864
-#define TRAINER_BRENDAN_PLACEHOLDER         865
-#define TRAINER_MAY_PLACEHOLDER             866
+#define TRAINER_CHARIZARD_FAN_X_MEGA        863
+#define TRAINER_CHARIZARD_FAN_Y_MEGA        864
+#define TRAINER_CHARIZARD_FAN_Z_MEGA        865
+#define TRAINER_RED                         866
+#define TRAINER_LEAF                        867
+#define TRAINER_BRENDAN_PLACEHOLDER         868
+#define TRAINER_MAY_PLACEHOLDER             869
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      867
-#define MAX_TRAINERS_COUNT                  875
+#define TRAINERS_COUNT                      870
+#define MAX_TRAINERS_COUNT                  878
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
