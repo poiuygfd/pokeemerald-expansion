@@ -677,7 +677,7 @@
 #define FLAG_AWOKEN_REGIGIGAS  0x274 // Whether the player has woke up Regigigas or not
 #define FLAG_TALKED_TO_POIPOLE_GIRL  0x275 // Talked to Poipole giver but didn't take Poipole
 #define FLAG_DEFEATED_CHARIZARD_FAN  0x276 // Defeated the No. 1 Charizard Fan
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
+#define FLAG_HIDE_CHARIZARD_FAN  0x277 // Hide the No. 1 Charizard Fan
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
@@ -725,9 +725,11 @@
 #define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
 #define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
+
+// Special Starter Codes
+#define FLAG_KANTO_STARTERS                                         0x2A7 // Replace Hoenn Starters with Kanto Starters
+#define FLAG_KALOS_STARTERS                                         0x2A8 // Replace Hoenn Starters with Kalos Starters
+#define FLAG_ZA_STARTERS                                            0x2A9 // Replace Hoenn Starters with ZA Starters
 
 // The Depths Flags
 #define FLAG_DEPTHS_IS_NORMAL                                       0x2AA // Difficulty mode is Normal (Doing this rather than a var since there are more spare flags than vars)

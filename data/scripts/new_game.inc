@@ -286,6 +286,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ZAMAZENTA
 	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD
 	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD
+	setflag FLAG_HIDE_CHARIZARD_FAN
 	setflag FLAG_SYS_B_DASH
 	call EventScript_ResetAllBerries
 	end

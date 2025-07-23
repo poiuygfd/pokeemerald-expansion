@@ -29,12 +29,17 @@
 #include "task.h"
 #include "window.h"
 #include "menu_specialized.h"
+#include "naming_screen.h"
+#include "event_data.h"
+#include "fieldmap.h"
+#include "constants/metatile_labels.h"
 
 // Top level PC menu options
 enum {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
     MENU_DECORATION,
+    MENU_CODE,
     MENU_TURNOFF
 };
 
@@ -113,6 +118,7 @@ static void Mailbox_MailOptionsProcessInput(u8);
 static void PlayerPC_ItemStorage(u8);
 static void PlayerPC_Mailbox(u8);
 static void PlayerPC_Decoration(u8);
+static void PlayerPC_Code(u8);
 static void PlayerPC_TurnOff(u8);
 
 static void Mailbox_DoMailMoveToBag(u8);
@@ -181,6 +187,11 @@ static EWRAM_DATA u8 sTopMenuNumOptions = 0;
 EWRAM_DATA struct PlayerPCItemPageStruct gPlayerPCItemPageInfo = {};
 static EWRAM_DATA struct ItemStorageMenu *sItemStorageMenu = NULL;
 
+static const u8 sText_Gen1Code[] = _("Nostalgia");
+static const u8 sText_Gen6Code[] = _("NewEra");
+static const u8 sText_ZACode[] = _("OneCity");
+static const u8 sText_Gen3Code[] = _("Revert");
+
 static const u8 sText_WithdrawItem[] = _("WITHDRAW ITEM");
 static const u8 sText_DepositItem[] = _("DEPOSIT ITEM");
 static const u8 sText_TossItem[] = _("TOSS ITEM");
@@ -204,17 +215,35 @@ static const struct MenuAction sPlayerPCMenuActions[] =
     [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} },
     [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
     [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
+    [MENU_CODE]        = { COMPOUND_STRING("ENTER CODE"),   {PlayerPC_Code} },
     [MENU_TURNOFF]     = { COMPOUND_STRING("TURN OFF"),     {PlayerPC_TurnOff} }
+};
+
+static const u8 *const sBedroomPC_StarterCodes[] =
+{
+    sText_Gen1Code,
+    sText_Gen6Code,
+    sText_ZACode,
+    sText_Gen3Code
 };
 
 static const u8 sBedroomPC_OptionOrder[] =
 {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
-    MENU_DECORATION,
+    MENU_CODE,
     MENU_TURNOFF
 };
 #define NUM_BEDROOM_PC_OPTIONS ARRAY_COUNT(sBedroomPC_OptionOrder)
+
+static const u8 sBedroomPC_OptionOrder2[] =
+{
+    MENU_ITEMSTORAGE,
+    MENU_MAILBOX,
+    MENU_DECORATION,
+    MENU_TURNOFF
+};
+#define NUM_BEDROOM_PC_OPTIONS_2 ARRAY_COUNT(sBedroomPC_OptionOrder)
 
 static const u8 sPlayerPC_OptionOrder[] =
 {
@@ -385,6 +414,9 @@ void BedroomPC(void)
 {
     sTopMenuOptionOrder = sBedroomPC_OptionOrder;
     sTopMenuNumOptions = NUM_BEDROOM_PC_OPTIONS;
+    if (FlagGet(FLAG_RESCUED_BIRCH))
+        sTopMenuOptionOrder = sBedroomPC_OptionOrder2;
+        sTopMenuNumOptions = NUM_BEDROOM_PC_OPTIONS_2;
     DisplayItemMessageOnField(CreateTask(TaskDummy, 0), gText_WhatWouldYouLike, InitPlayerPCMenu);
 }
 
@@ -500,9 +532,65 @@ static void PlayerPC_Decoration(u8 taskId)
     DoPlayerRoomDecorationMenu(taskId);
 }
 
+static void CheckSubmittedCode(void)
+{
+    u8 i;
+    u8 successCode;
+
+    successCode = 6;
+
+    for (i = 0; i < ARRAY_COUNT(sBedroomPC_StarterCodes); i++)
+    {
+        if (StringCompare(gStringVar2, sBedroomPC_StarterCodes[i]) == 0)
+            successCode = i;
+    }
+
+    switch (successCode)
+    {
+        case 0: // Kanto Starters
+            FlagSet(FLAG_KANTO_STARTERS);
+            FlagClear(FLAG_KALOS_STARTERS);
+            FlagClear(FLAG_ZA_STARTERS);
+            PlaySE(SE_SUCCESS);
+            break;
+        case 1: // Kalos Starters
+            FlagSet(FLAG_KALOS_STARTERS);
+            FlagClear(FLAG_KANTO_STARTERS);
+            FlagClear(FLAG_ZA_STARTERS);
+            PlaySE(SE_SUCCESS);
+            break;
+        case 2: // Legends Z-A Starters
+            FlagSet(FLAG_ZA_STARTERS);
+            FlagClear(FLAG_KANTO_STARTERS);
+            FlagClear(FLAG_KALOS_STARTERS);
+            PlaySE(SE_SUCCESS);
+            break;
+        case 3: // Hoenn Starters
+            FlagClear(FLAG_KANTO_STARTERS);
+            FlagClear(FLAG_KALOS_STARTERS);
+            FlagClear(FLAG_ZA_STARTERS);
+            PlaySE(SE_SUCCESS);
+            break;
+        default: 
+            PlaySE(SE_FAILURE);
+            break;
+    }
+
+    if (gSaveBlock2Ptr->playerGender == MALE)
+            MapGridSetMetatileIdAt(0 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_BrendanPC_Off);
+    else
+            MapGridSetMetatileIdAt(8 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_MayPC_Off);
+    CB2_ReturnToFieldContinueScript();
+}
+
+static void PlayerPC_Code(u8 taskId)
+{
+    DoNamingScreen(NAMING_SCREEN_CODE, gStringVar2, 0, 0, 0, CheckSubmittedCode);
+}
+
 static void PlayerPC_TurnOff(u8 taskId)
 {
-    if (sTopMenuNumOptions == NUM_BEDROOM_PC_OPTIONS) // Flimsy way to determine if Bedroom PC is in use
+    if (sTopMenuNumOptions == NUM_BEDROOM_PC_OPTIONS || sTopMenuNumOptions == NUM_BEDROOM_PC_OPTIONS_2) // Flimsy way to determine if Bedroom PC is in use
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
             ScriptContext_SetupScript(LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC);

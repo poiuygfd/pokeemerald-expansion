@@ -9,12 +9,17 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	call Common_EventScript_PlayerHandedOverTheItem
 	setflag FLAG_DELIVERED_STEVEN_LETTER
 	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
-	compare VAR_STARTER_MON, 0
-	goto_if_eq GraniteCave_StevensRoom_EventScript_GetSceptileStone
-	compare VAR_STARTER_MON, 1
-	goto_if_eq GraniteCave_StevensRoom_EventScript_GetBlazikenStone
-	compare VAR_STARTER_MON, 2
-	goto_if_eq GraniteCave_StevensRoom_EventScript_GetSwampertStone
+	goto_if_set FLAG_KANTO_STARTERS, GraniteCave_StevensRoom_EventScript_GiveKantoStones
+	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetSceptileStone
+	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetBlazikenStone
+	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetSwampertStone
+	release
+	return
+
+GraniteCave_StevensRoom_EventScript_GiveKantoStones::
+	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetVenusaurStone
+	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetCharizardStones
+	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetBlastoiseStone
 	release
 	return
 
@@ -72,6 +77,24 @@ GraniteCave_StevensRoom_EventScript_GetBlazikenStone:
 
 GraniteCave_StevensRoom_EventScript_GetSwampertStone:
 	giveitem ITEM_SWAMPERTITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetVenusaurStone:
+	giveitem ITEM_VENUSAURITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetCharizardStones:
+	giveitem ITEM_CHARIZARDITE_X
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	giveitem ITEM_CHARIZARDITE_Y
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	clearflag FLAG_HIDE_CHARIZARD_FAN
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetBlastoiseStone:
+	giveitem ITEM_BLASTOISINITE
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
 	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
 

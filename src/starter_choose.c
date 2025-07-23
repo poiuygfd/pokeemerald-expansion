@@ -117,6 +117,27 @@ static const u16 sStarterMon[STARTER_MON_COUNT] =
     SPECIES_MUDKIP,
 };
 
+static const u16 sKantoStarterMon[STARTER_MON_COUNT] =
+{
+    SPECIES_BULBASAUR,
+    SPECIES_CHARMANDER,
+    SPECIES_SQUIRTLE,
+};
+
+static const u16 sKalosStarterMon[STARTER_MON_COUNT] =
+{
+    SPECIES_CHESPIN,
+    SPECIES_FENNEKIN,
+    SPECIES_FROAKIE,
+};
+
+static const u16 sZAStarterMon[STARTER_MON_COUNT] =
+{
+    SPECIES_CHIKORITA,
+    SPECIES_TEPIG,
+    SPECIES_TOTODILE,
+};
+
 static const struct BgTemplate sBgTemplates[3] =
 {
     {
@@ -352,7 +373,15 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+
+    if (FlagGet(FLAG_KANTO_STARTERS))
+        return sKantoStarterMon[chosenStarterId];
+    else if (FlagGet(FLAG_KALOS_STARTERS))
+        return sKalosStarterMon[chosenStarterId];
+    else if (FlagGet(FLAG_ZA_STARTERS))
+        return sZAStarterMon[chosenStarterId];
+    else
+        return sStarterMon[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)

@@ -2155,7 +2155,7 @@ static const struct NamingScreenTemplate sAvitorchCodeScreenTemplate =
 {
     .copyExistingString = FALSE,
     .maxChars = AVITORCH_CODE_LENGTH,
-    .iconFunction = 0,
+    .iconFunction = 5,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,

@@ -20400,10 +20400,10 @@ Nature: Jolly
 
 === TRAINER_CHARIZARD_FAN_X_MEGA ===
 Name: ZARD FAN
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
-Music: Cool
+Music: Suspicious
 Items: Full Restore
 Double Battle: Yes
 
@@ -20420,10 +20420,10 @@ Nature: Jolly
 
 === TRAINER_CHARIZARD_FAN_Y_MEGA ===
 Name: ZARD FAN
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
-Music: Cool
+Music: Suspicious
 Items: Full Restore
 Double Battle: Yes
 
@@ -20440,10 +20440,10 @@ Nature: Timid
 
 === TRAINER_CHARIZARD_FAN_Z_MEGA ===
 Name: ZARD FAN
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
-Music: Cool
+Music: Suspicious
 Items: Full Restore
 Double Battle: Yes
 
@@ -20451,7 +20451,67 @@ Charizard @ Charizardite Z
 Level: 80
 Ability: Blaze
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Nature: Adamant
+- Flare Blitz
+- Earthquake
+- Rock Slide
+- Dragon Dance
+
+=== TRAINER_CHARIZARD_FAN_X_MEGA_EARLY ===
+Name: ZARD FAN
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Items: Full Restore
+Double Battle: Yes
+
+Charizard @ Charizardite X
+Level: 50
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Flare Blitz
+- Dragon Claw
+- Thunder Punch
+- Dragon Dance
+
+=== TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY ===
+Name: ZARD FAN
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Items: Full Restore
+Double Battle: Yes
+
+Charizard @ Charizardite Y
+Level: 50
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Nature: Timid
+- Weather Ball
+- Air Slash
+- Solar Beam
+- Heat Wave
+
+=== TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY ===
+Name: ZARD FAN
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Items: Full Restore
+Double Battle: Yes
+
+Charizard @ Charizardite Z
+Level: 50
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
 Nature: Adamant
 - Flare Blitz
 - Earthquake

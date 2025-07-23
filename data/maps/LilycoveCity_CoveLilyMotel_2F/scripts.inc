@@ -47,12 +47,62 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidYes::
 	end
 
 LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidNo::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidNoPreLeague
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_Preposterous, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_X_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated1
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_MoreWhereThatCameFrom, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Y_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated2
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_UtterDisbelief, MSGBOX_DEFAULT
+	applymovement LOCALID_COVE_LILY_GAME_DESIGNER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight
+	applymovement LOCALID_COVE_LILY_GRAPHICS_ARTIST, LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight
+	applymovement LOCALID_COVE_LILY_WOMAN, LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight
+	applymovement LOCALID_COVE_LILY_GAMEBOY_KID, LilycoveCity_CoveLilyMotel_2F_Movement_ShockDown
+	applymovement LOCALID_COVE_LILY_PROGRAMMER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockDown
+	call_if_eq VAR_FACING, DIR_NORTH, LilycoveCity_CoveLilyMotel_2F_PlayerShockUp
+	call_if_eq VAR_FACING, DIR_SOUTH, LilycoveCity_CoveLilyMotel_2F_PlayerShockDown
+	call_if_eq VAR_FACING, DIR_EAST, LilycoveCity_CoveLilyMotel_2F_PlayerShockRight
+	playse SE_PIN
+	delay 10
+	applymovement LOCALID_COVE_LILY_CHARIZARD_FAN, LilycoveCity_CoveLilyMotel_2F_Movement_CharizardFanGamerRage
+	playse SE_LEDGE
+	delay 20
+	playse SE_LEDGE
+	waitmovement
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_GamerRage, MSGBOX_DEFAULT
+	faceplayer
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Z_MEGA, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated3
+	setflag FLAG_DEFEATED_CHARIZARD_FAN
+	applymovement LOCALID_COVE_LILY_GAME_DESIGNER, Common_Movement_FaceLeft
+	applymovement LOCALID_COVE_LILY_WOMAN, Common_Movement_FaceLeft
+	applymovement LOCALID_COVE_LILY_PROGRAMMER, Common_Movement_FaceLeft
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFan, MSGBOX_DEFAULT
+	giveitem ITEM_CHARIZARDITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_CHARIZARDITE_Z
+	release
+	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_CharizardFanSaidNoPreLeague::
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_Preposterous, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_X_MEGA_EARLY, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated1
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_MoreWhereThatCameFrom, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated2
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_UtterDisbelief, MSGBOX_DEFAULT
+	call_if_eq VAR_FACING, DIR_NORTH, LilycoveCity_CoveLilyMotel_2F_PlayerShockUp
+	call_if_eq VAR_FACING, DIR_SOUTH, LilycoveCity_CoveLilyMotel_2F_PlayerShockDown
+	call_if_eq VAR_FACING, DIR_EAST, LilycoveCity_CoveLilyMotel_2F_PlayerShockRight
+	playse SE_PIN
+	delay 10
+	applymovement LOCALID_COVE_LILY_CHARIZARD_FAN, LilycoveCity_CoveLilyMotel_2F_Movement_CharizardFanGamerRage
+	playse SE_LEDGE
+	delay 20
+	playse SE_LEDGE
+	waitmovement
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_GamerRage, MSGBOX_DEFAULT
+	faceplayer
+	msgbox LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY, LilycoveCity_CoveLilyMotel_2F_Text_CharizardFanDefeated3
 	setflag FLAG_DEFEATED_CHARIZARD_FAN
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFan, MSGBOX_DEFAULT
 	giveitem ITEM_CHARIZARDITE_Z
@@ -73,6 +123,41 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_NeedToTrain::
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_WeNeedToTrain, MSGBOX_DEFAULT
 	release
 	end
+
+LilycoveCity_CoveLilyMotel_2F_Movement_CharizardFanGamerRage::
+	jump_in_place_down
+	jump_in_place_down
+	step_end
+
+LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight::
+	emote_exclamation_mark
+	face_right
+	step_end
+
+LilycoveCity_CoveLilyMotel_2F_Movement_ShockDown::
+	emote_exclamation_mark
+	face_down
+	step_end
+
+LilycoveCity_CoveLilyMotel_2F_Movement_ShockUp::
+	emote_exclamation_mark
+	face_down
+	step_end
+
+LilycoveCity_CoveLilyMotel_2F_PlayerShockUp::
+	applymovement LOCALID_PLAYER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockUp
+	return
+
+LilycoveCity_CoveLilyMotel_2F_PlayerShockDown::
+	applymovement LOCALID_PLAYER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockDown
+	return
+
+LilycoveCity_CoveLilyMotel_2F_PlayerShockRight::
+	applymovement LOCALID_PLAYER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, LilycoveCity_CoveLilyMotel_2F_Movement_ShockRight
+	return
 
 LilycoveCity_CoveLilyMotel_2F_EventScript_Programmer::
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer, MSGBOX_NPC
@@ -155,15 +240,19 @@ LilycoveCity_CoveLilyMotel_2F_Text_MoreWhereThatCameFrom:
 	.string "two MEGA EVOLUTIONS?\p"
 	.string "Now that you've been tired out and\n"
 	.string "whittled down by my first CHARIZARD…\p"
-	.string "Face the wrath of my SECOND CHARIZARD!!!$"
+	.string "Face the wrath of my SECOND CHARIZARD!!$"
 
-LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice:
+LilycoveCity_CoveLilyMotel_2F_Text_UtterDisbelief:
 	.string "That… That wasn't enough?\n"
 	.string "But… How?\p"
 	.string "I threw everything I had at you!\n"
-	.string "And yet you're still standing?\p"
+	.string "And yet you're still standing?$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_GamerRage:
 	.string "No… NO!!\n"
-	.string "I can't let it end like this!!\p"
+	.string "I can't let it end like this!!$"
+
+LilycoveCity_CoveLilyMotel_2F_Text_YouLeaveMeNoChoice:
 	.string "You leave me no choice.\p"
 	.string "Nobody was supposed to know about this.\n"
 	.string "Nobody but me…\p"
@@ -204,8 +293,7 @@ LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFan:
 	.string "potential has been hidden from the\l"
 	.string "world long enough.\p"
 	.string "Take this MEGA STONE, and harness the\n"
-	.string "power of the forbidden MEGA CHARIZARD Z\l"
-	.string "for yourself!$"
+	.string "power of MEGA CHARIZARD Z yourself!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_AreYouATrueCharizardFanShort:
 	.string "Here, I think that CHARIZARD's true\n"
