@@ -492,6 +492,15 @@ LilycoveCity_ContestLobby_EventScript_NinjaBoy::
 	msgbox LilycoveCity_ContestLobby_Text_MadePokeblocksWithFamily, MSGBOX_NPC
 	end
 
+LilycoveCity_ContestLobby_EventScript_MeloettaHintGiver::
+	goto_if_set FLAG_CAUGHT_MELOETTA, LilycoveCity_ContestLobby_EventScript_MeloettaCaught
+	msgbox LilycoveCity_ContestLobby_Text_SawPokemonWithBeautifulVoice, MSGBOX_NPC
+	end
+
+LilycoveCity_ContestLobby_EventScript_MeloettaCaught::
+	msgbox LilycoveCity_ContestLobby_Text_BringThatPokemonToVisit, MSGBOX_NPC
+	end
+
 LilycoveCity_ContestLobby_EventScript_ContestWinner1::
 	lockall
 	fadescreen FADE_TO_BLACK
@@ -1080,3 +1089,21 @@ LilycoveCity_ContestLobby_Text_MadePokeblocksWithFamily:
 	.string "I bet you can make smoother, better\n"
 	.string "{POKEBLOCK}S if you have more people.$"
 
+LilycoveCity_ContestLobby_Text_SawPokemonWithBeautifulVoice:
+	.string "I saw this rare looking POKéMON in\n"
+	.string "the CONTEST HALL the other day.\p"
+	.string "It had such a beautiful voice…\p"
+	.string "It seemed completely enraptured by\n"
+	.string "the MASTER RANK CONTESTS.\p"
+	.string "Who knows?\n"
+	.string "Maybe you'll meet it if you can win\l"
+	.string "a MASTER RANK CONTEST?$"
+
+LilycoveCity_ContestLobby_Text_BringThatPokemonToVisit:
+	.string "So, you were able to befriend that\n"
+	.string "POKéMON with the lovely voice then?\p"
+	.string "Be sure to bring it back here from\n"
+	.string "time to time to watch the CONTESTS.\p"
+	.string "Or maybe the two of you could even\n"
+	.string "enter a CONTEST together?\p"
+	.string "I'll be rooting for the pair of you!$"

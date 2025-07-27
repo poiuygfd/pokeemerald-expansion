@@ -43,50 +43,51 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_DEFEATED_JIRACHI       0x20 // Jirachi Flags
-#define FLAG_CAUGHT_JIRACHI         0x21
-#define FLAG_HIDE_JIRACHI           0x22
-#define FLAG_DEFEATED_ZERAORA       0x23 // Zeraora Flags
-#define FLAG_CAUGHT_ZERAORA         0x24
-#define FLAG_HIDE_ZERAORA           0x25
-#define FLAG_DEFEATED_HEATRAN       0x26 // Heatran Flags
-#define FLAG_CAUGHT_HEATRAN         0x27
-#define FLAG_HIDE_HEATRAN           0x28
-#define FLAG_DEFEATED_OGERPON       0x29 // Ogerpon Flags
-#define FLAG_CAUGHT_OGERPON         0x2A
-#define FLAG_HIDE_OGERPON           0x2B
-#define FLAG_DEFEATED_DIANCIE       0x2C // Diancie Flags
-#define FLAG_CAUGHT_DIANCIE         0x2D
-#define FLAG_HIDE_DIANCIE           0x2E
-#define FLAG_DEFEATED_MELOETTA      0x2F // Meloetta Flags
-#define FLAG_CAUGHT_MELOETTA        0x30
-#define FLAG_HIDE_MELOETTA          0x31
-#define FLAG_DEFEATED_ROARING_MOON  0x32 // Roaring Moon Flags
-#define FLAG_CAUGHT_ROARING_MOON    0x33
-#define FLAG_HIDE_ROARING_MOON      0x34
-#define FLAG_DEFEATED_IRON_VALIANT  0x35 // Iron Valiant Flags
-#define FLAG_CAUGHT_IRON_VALIANT    0x36
-#define FLAG_HIDE_IRON_VALIANT      0x37
-#define FLAG_DEFEATED_REGIGIGAS     0x38 // Regigigas Flags
-#define FLAG_CAUGHT_REGIGIGAS       0x39
-#define FLAG_HIDE_REGIGIGAS         0x3A
-#define FLAG_DEFEATED_REGITUBE      0x3B // Regitube Flags
-#define FLAG_CAUGHT_REGITUBE        0x3C
-#define FLAG_HIDE_REGITUBE          0x3D
-#define FLAG_DEFEATED_MEWTWO        0x3E // Mewtwo Flags
-#define FLAG_CAUGHT_MEWTWO          0x3F
-#define FLAG_HIDE_MEWTWO            0x40
-#define FLAG_DEFEATED_ZACIAN        0x41 // Zacian Flags
-#define FLAG_CAUGHT_ZACIAN          0x42
-#define FLAG_HIDE_ZACIAN            0x43
-#define FLAG_DEFEATED_ZAMAZENTA     0x44 // Zamazenta Flags
-#define FLAG_CAUGHT_ZAMAZENTA       0x45
-#define FLAG_HIDE_ZAMAZENTA         0x46
-#define FLAG_RECEIVED_POIPOLE       0x47 // Poipole Flag
-#define FLAG_RECEIVED_GENESECT      0x48 // Genesect Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
+#define FLAG_DEFEATED_JIRACHI               0x20 // Jirachi Flags
+#define FLAG_CAUGHT_JIRACHI                 0x21
+#define FLAG_HIDE_JIRACHI                   0x22
+#define FLAG_DEFEATED_ZERAORA               0x23 // Zeraora Flags
+#define FLAG_CAUGHT_ZERAORA                 0x24
+#define FLAG_HIDE_ZERAORA                   0x25
+#define FLAG_DEFEATED_HEATRAN               0x26 // Heatran Flags
+#define FLAG_CAUGHT_HEATRAN                 0x27
+#define FLAG_HIDE_HEATRAN                   0x28
+#define FLAG_DEFEATED_OGERPON               0x29 // Ogerpon Flags
+#define FLAG_CAUGHT_OGERPON                 0x2A
+#define FLAG_HIDE_OGERPON                   0x2B
+#define FLAG_DEFEATED_DIANCIE               0x2C // Diancie Flags
+#define FLAG_CAUGHT_DIANCIE                 0x2D
+#define FLAG_HIDE_DIANCIE                   0x2E
+#define FLAG_DEFEATED_MELOETTA              0x2F // Meloetta Flags
+#define FLAG_CAUGHT_MELOETTA                0x30
+#define FLAG_HIDE_MELOETTA                  0x31
+#define FLAG_DEFEATED_ROARING_MOON          0x32 // Roaring Moon Flags
+#define FLAG_CAUGHT_ROARING_MOON            0x33
+#define FLAG_HIDE_ROARING_MOON              0x34
+#define FLAG_DEFEATED_IRON_VALIANT          0x35 // Iron Valiant Flags
+#define FLAG_CAUGHT_IRON_VALIANT            0x36
+#define FLAG_HIDE_IRON_VALIANT              0x37
+#define FLAG_DEFEATED_REGIGIGAS             0x38 // Regigigas Flags
+#define FLAG_CAUGHT_REGIGIGAS               0x39
+#define FLAG_HIDE_REGIGIGAS                 0x3A
+#define FLAG_DEFEATED_REGITUBE              0x3B // Regitube Flags
+#define FLAG_CAUGHT_REGITUBE                0x3C
+#define FLAG_HIDE_REGITUBE                  0x3D
+#define FLAG_DEFEATED_MEWTWO                0x3E // Mewtwo Flags
+#define FLAG_CAUGHT_MEWTWO                  0x3F
+#define FLAG_HIDE_MEWTWO                    0x40
+#define FLAG_DEFEATED_ZACIAN                0x41 // Zacian Flags
+#define FLAG_CAUGHT_ZACIAN                  0x42
+#define FLAG_HIDE_ZACIAN                    0x43
+#define FLAG_DEFEATED_ZAMAZENTA             0x44 // Zamazenta Flags
+#define FLAG_CAUGHT_ZAMAZENTA               0x45
+#define FLAG_HIDE_ZAMAZENTA                 0x46
+#define FLAG_DEFEATED_URSALUNA_BM           0x47 // Ursaluna Bloodmoon Flags
+#define FLAG_CAUGHT_URSALUNA_BM             0x48
+#define FLAG_HIDE_URSALUNA_BM               0x49
+#define FLAG_RECEIVED_POIPOLE               0x4A // Poipole Flag
+#define FLAG_RECEIVED_GENESECT              0x4B // Genesect Flag
+
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 
 // DexNav Flags
@@ -678,7 +679,7 @@
 #define FLAG_TALKED_TO_POIPOLE_GIRL  0x275 // Talked to Poipole giver but didn't take Poipole
 #define FLAG_DEFEATED_CHARIZARD_FAN  0x276 // Defeated the No. 1 Charizard Fan
 #define FLAG_HIDE_CHARIZARD_FAN  0x277 // Hide the No. 1 Charizard Fan
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
+#define FLAG_HIDE_CONTEST_MELOETTA  0x278 // Meloetta watching Master Rank Contests
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
@@ -1303,7 +1304,7 @@
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD                          0x4D8 // Hero's Keep Rusted Shield
 #define FLAG_ITEM_ROUTE_126_GARDEVOIRITE                            0x4D9 // Gardevoir Mega Stone
 #define FLAG_RECEIVED_CHARIZARDITE_Z                                0x4DA // Received Charizard's Z Mega Stone
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_ABILITY_PATCH                   0x4DB // Safari Zone Ability Patch
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
 #define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag

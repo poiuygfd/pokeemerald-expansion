@@ -1181,3 +1181,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TheDepths_B8F/scripts.inc"
 	.include "data/maps/HerosKeep_Exterior/scripts.inc"
 	.include "data/maps/HerosKeep_Interior/scripts.inc"
+	.include "data/maps/SafariZone_UrsalunaCave/scripts.inc"

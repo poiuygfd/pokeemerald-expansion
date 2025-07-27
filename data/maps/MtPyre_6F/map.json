@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
@@ -65,6 +65,20 @@
       "trainer_sight_or_berry_tree_id": "ITEM_BANETTITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MT_PYRE_BANETTITE"
+    },
+    {
+      "local_id": "LOCALID_MT_PYRE_EX_TEAM_PLASMA_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 1,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtPyre_6F_EventScript_ExTeamPlasma",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -83,10 +97,6 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

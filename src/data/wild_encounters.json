@@ -9656,14 +9656,14 @@
                 "species": "SPECIES_QWILFISH_HISUI"
               },
               {
-                "min_level": 30,
+                "min_level": 25,
                 "max_level": 35,
-                "species": "SPECIES_OCTILLERY"
+                "species": "SPECIES_DRATINI"
               },
               {
-                "min_level": 35,
+                "min_level": 30,
                 "max_level": 40,
-                "species": "SPECIES_OCTILLERY"
+                "species": "SPECIES_DRATINI"
               }
             ]
           }

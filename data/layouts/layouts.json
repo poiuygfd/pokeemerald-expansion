@@ -4640,6 +4640,16 @@
       "secondary_tileset": "gTileset_BattlePalace",
       "border_filepath": "data/layouts/HerosKeep_Interior/border.bin",
       "blockdata_filepath": "data/layouts/HerosKeep_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_URSALUNA_CAVE",
+      "name": "SafariZone_UrsalunaCave_Layout",
+      "width": 17,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SafariZone_UrsalunaCave/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_UrsalunaCave/map.bin"
     }
   ]
 }

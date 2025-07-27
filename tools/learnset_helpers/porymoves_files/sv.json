@@ -21297,12 +21297,16 @@
         "Move": "MOVE_CONFUSE_RAY"
       },
       {
-        "Level": 27,
+        "Level": 26,
         "Move": "MOVE_CALM_MIND"
       },
       {
-        "Level": 32,
+        "Level": 29,
         "Move": "MOVE_ROLE_PLAY"
+      },
+      {
+        "Level": 32,
+        "Move": "MOVE_PSYSHIELD_BASH"
       },
       {
         "Level": 37,

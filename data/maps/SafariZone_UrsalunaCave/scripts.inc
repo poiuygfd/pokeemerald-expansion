@@ -1,0 +1,62 @@
+SafariZone_UrsalunaCave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SafariZone_UrsalunaCave_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, SafariZone_UrsalunaCave_OnResume
+	.byte 0
+
+SafariZone_UrsalunaCave_OnTransition:
+	call_if_set FLAG_IS_CHAMPION, SafariZone_UrsalunaCave_EventScript_TryShowUrsaluna
+	end
+
+SafariZone_UrsalunaCave_EventScript_TryShowUrsaluna::
+	call_if_set FLAG_CAUGHT_URSALUNA_BM, SafariZone_UrsalunaCave_EventScript_HideUrsaluna
+	call_if_unset FLAG_CAUGHT_URSALUNA_BM, SafariZone_UrsalunaCave_EventScript_ShowUrsaluna
+	return
+
+SafariZone_UrsalunaCave_EventScript_ShowUrsaluna::
+	goto_if_set FLAG_DEFEATED_URSALUNA_BM, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_URSALUNA_BM
+	return
+
+SafariZone_UrsalunaCave_EventScript_HideUrsaluna::
+	setflag FLAG_HIDE_URSALUNA_BM
+	return
+
+SafariZone_UrsalunaCave_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SafariZone_UrsalunaCave_EventScript_TryRemoveUrsaluna
+	end
+
+SafariZone_UrsalunaCave_EventScript_TryRemoveUrsaluna::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SAFARI_ZONE_URSALUNA_BM
+	return
+
+SafariZone_UrsalunaCave_EventScript_Ursaluna::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_URSALUNA_BLOODMOON, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_URSALUNA_BLOODMOON, 40
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SafariZone_UrsalunaCave_EventScript_DefeatedUrsaluna
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SafariZone_UrsalunaCave_EventScript_RanFromUrsaluna
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SafariZone_UrsalunaCave_EventScript_RanFromUrsaluna
+	setflag FLAG_CAUGHT_URSALUNA_BM
+	release
+	end
+
+SafariZone_UrsalunaCave_EventScript_DefeatedUrsaluna::
+	setflag FLAG_DEFEATED_URSALUNA_BM
+	setvar VAR_0x8004, SPECIES_URSALUNA_BLOODMOON
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SafariZone_UrsalunaCave_EventScript_RanFromUrsaluna::
+	setvar VAR_0x8004, SPECIES_URSALUNA_BLOODMOON
+	goto Common_EventScript_LegendaryFlewAway
+	end
