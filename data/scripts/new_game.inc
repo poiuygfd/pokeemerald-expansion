@@ -114,6 +114,7 @@ EventScript_ResetAllBerries::
 
 EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CONTEST_POKE_BALL
+	setflag FLAG_HIDE_CONTEST_MELOETTA
 	setflag FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE
 	setflag FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE
 	setflag FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE
@@ -287,6 +288,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD
 	setflag FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD
 	setflag FLAG_HIDE_CHARIZARD_FAN
+	setflag FLAG_HIDE_MELOETTA
 	setflag FLAG_SYS_B_DASH
 	call EventScript_ResetAllBerries
 	end

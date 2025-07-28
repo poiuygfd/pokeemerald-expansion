@@ -680,7 +680,7 @@
 #define FLAG_DEFEATED_CHARIZARD_FAN  0x276 // Defeated the No. 1 Charizard Fan
 #define FLAG_HIDE_CHARIZARD_FAN  0x277 // Hide the No. 1 Charizard Fan
 #define FLAG_HIDE_CONTEST_MELOETTA  0x278 // Meloetta watching Master Rank Contests
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
+#define FLAG_MELOETTA_MASTER_WON  0x279 // Winning a Master Contest triggers Meloetta spawn in Lilycove
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag

@@ -31,6 +31,7 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_LUGIA
 	clearflag FLAG_DEFEATED_HO_OH
 	clearflag FLAG_DEFEATED_JIRACHI
+	clearflag FLAG_DEFEATED_DIANCIE
 	clearflag FLAG_DEFEATED_HEATRAN
 	clearflag FLAG_DEFEATED_ZERAORA
 	clearflag FLAG_DEFEATED_OGERPON
@@ -40,6 +41,7 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_REGITUBE
 	clearflag FLAG_DEFEATED_ZACIAN
 	clearflag FLAG_DEFEATED_ZAMAZENTA
+	clearflag FLAG_DEFEATED_MELOETTA
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::

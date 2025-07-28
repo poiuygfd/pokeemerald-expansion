@@ -1705,7 +1705,7 @@ const struct ContestPokemon gContestOpponents[] =
         .trainerName = _("JADE"),
         .trainerGfxId = OBJ_EVENT_GFX_BEAUTY,
         .aiFlags = CONTEST_AI_SET_F,
-        .whichRank = CONTEST_RANK_NORMAL,
+        .whichRank = CONTEST_RANK_HYPER,
         .aiPool_Cool = TRUE,
         .aiPool_Beauty = TRUE,
         .aiPool_Cute = FALSE,
@@ -2657,8 +2657,8 @@ const struct ContestPokemon gContestOpponents[] =
     },
     [CONTEST_OPPONENT_FRANKIE] = {
         .filter = CONTEST_FILTER_NONE,
-        .species = SPECIES_PICHU,
-        .nickname = _("CHUPY"),
+        .species = SPECIES_MIMIKYU,
+        .nickname = _("MIMU"),
         .trainerName = _("FRANKIE"),
         .trainerGfxId = OBJ_EVENT_GFX_YOUNGSTER,
         .aiFlags = CONTEST_AI_SET_21,
@@ -2670,10 +2670,10 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SWEET_KISS,
-            MOVE_ATTRACT,
-            MOVE_REST,
-            MOVE_TAIL_WHIP
+            MOVE_DESTINY_BOND,
+            MOVE_BABY_DOLL_EYES,
+            MOVE_GIGA_IMPACT,
+            MOVE_SLEEP_TALK
         },
         .cool = 25,
         .beauty = 150,

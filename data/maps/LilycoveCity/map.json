@@ -352,6 +352,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_LILYCOVE_SCOTT"
+    },
+    {
+      "local_id": "LOCALID_LILYCOVE_MELOETTA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MELOETTA)",
+      "x": 61,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LilycoveCity_EventScript_Meloetta",
+      "flag": "FLAG_HIDE_MELOETTA"
     }
   ],
   "warp_events": [

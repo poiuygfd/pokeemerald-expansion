@@ -494,11 +494,21 @@ LilycoveCity_ContestLobby_EventScript_NinjaBoy::
 
 LilycoveCity_ContestLobby_EventScript_MeloettaHintGiver::
 	goto_if_set FLAG_CAUGHT_MELOETTA, LilycoveCity_ContestLobby_EventScript_MeloettaCaught
+	goto_if_set FLAG_MELOETTA_MASTER_WON, LilycoveCity_ContestLobby_EventScript_CheckMeloettaState
 	msgbox LilycoveCity_ContestLobby_Text_SawPokemonWithBeautifulVoice, MSGBOX_NPC
 	end
 
 LilycoveCity_ContestLobby_EventScript_MeloettaCaught::
 	msgbox LilycoveCity_ContestLobby_Text_BringThatPokemonToVisit, MSGBOX_NPC
+	end
+
+LilycoveCity_ContestLobby_EventScript_CheckMeloettaState::
+	goto_if_unset FLAG_DEFEATED_MELOETTA, LilycoveCity_ContestLobby_EventScript_SawMeloetta
+	msgbox LilycoveCity_ContestLobby_Text_SawPokemonWithBeautifulVoice, MSGBOX_NPC
+	end
+
+LilycoveCity_ContestLobby_EventScript_SawMeloetta::
+	msgbox LilycoveCity_ContestLobby_Text_SawThatPokemonAtLighthouse, MSGBOX_NPC
 	end
 
 LilycoveCity_ContestLobby_EventScript_ContestWinner1::
@@ -1098,6 +1108,15 @@ LilycoveCity_ContestLobby_Text_SawPokemonWithBeautifulVoice:
 	.string "Who knows?\n"
 	.string "Maybe you'll meet it if you can win\l"
 	.string "a MASTER RANK CONTEST?$"
+
+LilycoveCity_ContestLobby_Text_SawThatPokemonAtLighthouse:
+	.string "I saw that POKéMON with the lovely\n"
+	.string "voice waiting by the lighthouse.\p"
+	.string "It almost looked like it was waiting\n"
+	.string "for someone…\p"
+	.string "You won a MASTER RANK CONTEST recently,\n"
+	.string "did you not?\p"
+	.string "Perhaps it may be worth checking out.$"
 
 LilycoveCity_ContestLobby_Text_BringThatPokemonToVisit:
 	.string "So, you were able to befriend that\n"

@@ -1,6 +1,7 @@
 LilycoveCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, LilycoveCity_OnLoad
+	map_script MAP_SCRIPT_ON_RESUME, LilycoveCity_OnResume
 	.byte 0
 
 LilycoveCity_OnTransition:
@@ -10,8 +11,23 @@ LilycoveCity_OnTransition:
 	setflag FLAG_HIDE_LILYCOVE_SCOTT
 	call_if_eq VAR_SCOTT_LILYCOVE_STATE, 1, LilycoveCity_EventScript_ShowScott
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
+	call_if_set FLAG_MELOETTA_MASTER_WON, LilycoveCity_EventScript_TryShowMeloetta
 	call Common_EventScript_SetupRivalGfxId
 	end
+
+LilycoveCity_EventScript_TryShowMeloetta::
+	call_if_set FLAG_CAUGHT_MELOETTA, LilycoveCity_EventScript_HideMeloetta
+	call_if_unset FLAG_CAUGHT_MELOETTA, LilycoveCity_EventScript_ShowMeloetta
+	return
+
+LilycoveCity_EventScript_ShowMeloetta::
+	goto_if_set FLAG_DEFEATED_MELOETTA, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_MELOETTA
+	return
+
+LilycoveCity_EventScript_HideMeloetta::
+	setflag FLAG_HIDE_MELOETTA
+	return
 
 LilycoveCity_OnLoad:
 	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
@@ -30,6 +46,16 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
 	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	return
+
+LilycoveCity_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, LilycoveCity_EventScript_TryRemoveMeloetta
+	end
+
+LilycoveCity_EventScript_TryRemoveMeloetta::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_LILYCOVE_MELOETTA
 	return
 
 LilycoveCity_EventScript_ShowScott::
@@ -537,6 +563,37 @@ LilycoveCity_EventScript_RivalFlyAway::
 	fadedefaultbgm
 	setflag FLAG_MET_RIVAL_LILYCOVE
 	release
+	end
+
+LilycoveCity_EventScript_Meloetta::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_MELOETTA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_MELOETTA, 30
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, LilycoveCity_EventScript_DefeatedMeloetta
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LilycoveCity_EventScript_RanFromMeloetta
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, LilycoveCity_EventScript_RanFromMeloetta
+	setflag FLAG_CAUGHT_MELOETTA
+	release
+	end
+
+LilycoveCity_EventScript_DefeatedMeloetta::
+	setflag FLAG_DEFEATED_MELOETTA
+	setvar VAR_0x8004, SPECIES_MELOETTA
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+LilycoveCity_EventScript_RanFromMeloetta::
+	setvar VAR_0x8004, SPECIES_MELOETTA
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 LilycoveCity_EventScript_SchoolKidM::

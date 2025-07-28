@@ -11,7 +11,6 @@ ContestHall_OnReturn:
 	end
 
 ContestHall_OnTransition:
-	setflag FLAG_HIDE_CONTEST_MELOETTA
 	call ContestHall_EventScript_ReadyContestMusic
 	setvar VAR_TEMP_0, 1
 	call ContestHall_EventScript_AddRandomAudienceMembers
@@ -374,11 +373,6 @@ ContestHall_EventScript_CreateMasterContestAudience::
 	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 28, 9, 9, 3, DIR_NORTH
 	createvobject OBJ_EVENT_GFX_SCHOOL_KID_M, 29, 10, 9, 3, DIR_NORTH
 	createvobject OBJ_EVENT_GFX_MART_EMPLOYEE, 30, 11, 9, 3, DIR_NORTH
-	call_if_unset FLAG_CAUGHT_MELOETTA, ContestHall_EventScript_CreateMasterContestMeloetta
-	return
-
-ContestHall_EventScript_CreateMasterContestMeloetta::
-	clearflag FLAG_HIDE_CONTEST_MELOETTA
 	clearflag FLAG_DEFEATED_MELOETTA
 	return
 
@@ -432,6 +426,7 @@ ContestHall_EventScript_SetExitWarpHyperContest::
 	end
 
 ContestHall_EventScript_SetExitWarpMasterContest::
+	setflag FLAG_HIDE_CONTEST_MELOETTA
 	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4
 	waitstate
 	end

@@ -187,6 +187,15 @@ LilycoveCity_ContestLobby_EventScript_EnterMon::
 	closemessage
 	releaseall
 	setvar VAR_CONTEST_HALL_STATE, 1
+	call_if_eq VAR_CONTEST_RANK, CONTEST_RANK_MASTER, LilycoveCity_ContestLobby_EventScript_TryShowMeloetta
+	return
+
+LilycoveCity_ContestLobby_EventScript_TryShowMeloetta::
+	call_if_unset FLAG_CAUGHT_MELOETTA, LilycoveCity_ContestLobby_EventScript_ShowMeloetta
+	return
+
+LilycoveCity_ContestLobby_EventScript_ShowMeloetta::
+	clearflag FLAG_HIDE_CONTEST_MELOETTA
 	return
 
 ContestHall_EventScript_DoContest::
@@ -458,6 +467,7 @@ ContestHall_EventScript_AudienceReactToContestant::
 	applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
 	applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
 	applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_MELOETTA, ContestHall_Movement_AudienceMemberLookLeft
 	waitmovement 0
 	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_AudienceMemberLookRight
 	waitmovement 0
@@ -929,6 +939,7 @@ ContestHall_EventScript_AudienceLookAround::
 	applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
 	applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
 	applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_MELOETTA, ContestHall_Movement_AudienceMemberLookLeft
 	delay 30
 	applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_AudienceMemberLookLeft
 	applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_AudienceMemberLookDown
@@ -1149,6 +1160,7 @@ ContestHall_EventScript_GiveLuxuryBall::
 	return
 
 ContestHall_EventScript_ReceiveContestRibbon::
+	call_if_eq VAR_CONTEST_RANK, CONTEST_RANK_MASTER, ContestHall_EventScript_ShowMeloetta
 	special GiveMonContestRibbon
 	incrementgamestat GAME_STAT_RECEIVED_RIBBONS
 	setflag FLAG_SYS_RIBBON_GET
@@ -1160,6 +1172,10 @@ ContestHall_EventScript_ReceiveContestRibbon::
 	special BufferContestWinnerMonName
 	msgbox ContestHall_Text_PutRibbonOnMon, MSGBOX_DEFAULT
 	releaseall
+	return
+
+ContestHall_EventScript_ShowMeloetta::
+	setflag FLAG_MELOETTA_MASTER_WON
 	return
 
 ContestHall_Movement_MCWalkDown:
