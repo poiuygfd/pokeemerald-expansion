@@ -6171,6 +6171,14 @@ Cry_Avitorch::
 Cry_Regitube::
 	.incbin "sound/direct_sound_samples/cries/regitube.bin"
 
+	.align 2
+Cry_CharizardMegaZ::
+	.incbin "sound/direct_sound_samples/cries/charizard_mega_z.bin"
+
+	.align 2
+Cry_CharizardOmegaZ::
+	.incbin "sound/direct_sound_samples/cries/charizard_omega_z.bin"
+
 .endif @ P_CRIES_ENABLED
 
 	.align 2
