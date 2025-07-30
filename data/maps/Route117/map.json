@@ -407,6 +407,14 @@
       "elevation": 3,
       "item": "ITEM_REPEL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_REPEL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "item": "ITEM_MIRROR_HERB",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_MIRROR_HERB"
     }
   ]
 }

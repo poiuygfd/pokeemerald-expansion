@@ -6822,6 +6822,21 @@ BattleScript_PowerConstruct::
 	waitmessage B_WAIT_TIME_SHORT
 	end3
 
+BattleScript_Nepotism::
+	flushtextbox
+	printstring STRINGID_NEPOTISMPRESENCEOFMONEY
+	waitmessage B_WAIT_TIME_SHORT
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	handleformchange BS_ATTACKER, 0
+	handleformchange BS_ATTACKER, 1
+	playanimation BS_ATTACKER, B_ANIM_POWER_CONSTRUCT
+	waitanimation
+	handleformchange BS_ATTACKER, 2
+	printstring STRINGID_NEPOTISMTRANSFORM
+	waitmessage B_WAIT_TIME_SHORT
+	end3
+
 BattleScript_UltraBurst::
 	flushtextbox
 	trytrainerslidezmovemsg

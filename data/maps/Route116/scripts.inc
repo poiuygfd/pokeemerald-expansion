@@ -149,6 +149,22 @@ Route116_EventScript_BrineyTrigger::
 	releaseall
 	end
 
+Route116_EventScript_ZoomLensBugCatcher::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ZOOM_LENS, Route116_EventScript_ReceivedZoomLens
+	msgbox Route116_Text_BugsAreGiantHere, MSGBOX_DEFAULT
+	giveitem ITEM_ZOOM_LENS
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_ZOOM_LENS
+	release
+	end
+
+Route116_EventScript_ReceivedZoomLens::
+	msgbox Route104_Text_WonderHowMyBrotherIs, MSGBOX_DEFAULT
+	release
+	end
+
 Route116_EventScript_GlassesMan::
 	lock
 	faceplayer
@@ -413,6 +429,22 @@ Route116_Text_TokenOfAppreciation:
 	.string "your delivering our package, I have\l"
 	.string "a gift of a new kind of POKé BALL\l"
 	.string "for our most wonderful TRAINER!$"
+
+Route116_Text_BugsAreGiantHere:
+	.string "I bought me a magnifying glass to\n"
+	.string "help me search for BUGS recently.\p"
+	.string "Thing is, every bug I've seen so\n"
+	.string "far is the size of me leg!\p"
+	.string "Won't be needing this hunk o' junk.\n"
+	.string "Here, this is yours now!$"
+
+Route104_Text_WonderHowMyBrotherIs:
+	.string "Wonder how my brother's doing?\p"
+	.string "We came to RUSTBORO with our\n"
+	.string "magnifying glasses together to\l"
+	.string "hunt for bugs.\p"
+	.string "Think he went south of RUSTBORO\n"
+	.string "though, instead of east like me.$"
 
 Route116_Text_CanYouHelpMeFindGlasses:
 	.string "I dropped my glasses…\n"

@@ -309,6 +309,22 @@ Route119_EventScript_CyclingTriathleteM::
 	msgbox Route119_Text_TallGrassSnaresBikeTires, MSGBOX_NPC
 	end
 
+Route119_EventScript_ScopeLensBugCatcher::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_SCOPE_LENS, Route119_EventScript_ReceivedScopeLens
+	msgbox Route119_Text_BugsAreRatherLargeHere, MSGBOX_DEFAULT
+	giveitem ITEM_SCOPE_LENS
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_SCOPE_LENS
+	release
+	end
+
+Route119_EventScript_ReceivedScopeLens::
+	msgbox Route119_Text_BrothersWentToRustboro, MSGBOX_DEFAULT
+	release
+	end
+
 Route119_EventScript_RouteSignFortree::
 	msgbox Route119_Text_RouteSignFortree, MSGBOX_SIGN
 	end
@@ -587,6 +603,23 @@ Route119_Text_TallGrassSnaresBikeTires:
 	.string "It's a no-go…\p"
 	.string "The tall grass snares BIKE tires.\n"
 	.string "There's no way you can cycle here.$"
+
+Route119_Text_BugsAreRatherLargeHere:
+	.string "Well, well, well…\p"
+	.string "It appears I made an error in\n"
+	.string "my purchasing of items.\p"
+	.string "I purchased a magnifying glass to\n"
+	.string "assist in spotting BUGs…\p"
+	.string "But, I have yet to see a BUG that\n"
+	.string "is smaller than my head!\p"
+	.string "Well, this is rather useless to me.\n"
+	.string "Perhaps you can put it to better use.$"
+
+Route119_Text_BrothersWentToRustboro:
+	.string "My two brothers headed to RUSTBORO\n"
+	.string "with magnifying glasses of thier own.\p"
+	.string "I wonder if they have had any luck\n"
+	.string "with their own BUG catching quests?$"
 
 Route119_Text_CanYourMonMakeSecretBase:
 	.string "Can your POKéMON use its SECRET POWER\n"

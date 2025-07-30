@@ -338,6 +338,22 @@ Route104_EventScript_ReceivedBulletSeed::
 	release
 	end
 
+Route104_EventScript_WideLensBugCatcher::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_WIDE_LENS, Route104_EventScript_ReceivedWideLens
+	msgbox Route104_Text_BugsAreMassiveHere, MSGBOX_DEFAULT
+	giveitem ITEM_WIDE_LENS
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_WIDE_LENS
+	release
+	end
+
+Route104_EventScript_ReceivedWideLens::
+	msgbox Route104_Text_MaybeIllCheckTheWoods, MSGBOX_DEFAULT
+	release
+	end
+
 Route104_EventScript_Girl2::
 	msgbox Route104_Text_ImNotATrainer, MSGBOX_NPC
 	end
@@ -1033,10 +1049,26 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 
 Route104_Text_TMsAreOneTimeUse:
 	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "A TM, TECHNICAL MACHINE, is good for\n"
+	.string "as many uses as you need.\p"
+	.string "No need to think twice before using it!$"
+
+Route104_Text_BugsAreMassiveHere:
+	.string "I've come here to look for new BUGS\n"
+	.string "for my collection.\p"
+	.string "I even bought this magnifying glass\n"
+	.string "thinking it would make BUGS easier\l"
+	.string "to spot than with just my eyes…\p"
+	.string "I'm beginning to realise though that\n"
+	.string "every BUG round here is the size of\l"
+	.string "my arm, if not bigger!\p"
+	.string "I won't be needing this anymore.\n"
+	.string "Here, you can have it.$"
+
+Route104_Text_MaybeIllCheckTheWoods:
+	.string "Maybe I should check PETALBURG WOODS.\n"
+	.string "That seems like a place that would be\l"
+	.string "crawling with bugs!$"
 
 Route104_Text_DontNeedThisTakeIt:
 	.string "This FLOWER SHOP started selling\n"

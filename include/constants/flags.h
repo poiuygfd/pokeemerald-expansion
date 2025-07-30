@@ -1305,10 +1305,10 @@
 #define FLAG_ITEM_ROUTE_126_GARDEVOIRITE                            0x4D9 // Gardevoir Mega Stone
 #define FLAG_RECEIVED_CHARIZARDITE_Z                                0x4DA // Received Charizard's Z Mega Stone
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_ABILITY_PATCH                   0x4DB // Safari Zone Ability Patch
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE_117_MIRROR_HERB                      0x4DC // Hidden Mirror Herb
+#define FLAG_RECEIVED_WIDE_LENS                                     0x4DD // Received Wide Lens
+#define FLAG_RECEIVED_ZOOM_LENS                                     0x4DE // Received Zoom Lens
+#define FLAG_RECEIVED_SCOPE_LENS                                    0x4DF // Received Scope Lens
 #define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
 #define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
 #define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
