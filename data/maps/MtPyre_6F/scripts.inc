@@ -66,11 +66,11 @@ MtPyre_6F_EventScript_ReceiveGenesect::
 MtPyre_6F_EventScript_ReceiveGenesectParty::
 	call MtPyre_6F_EventScript_ReceivedGenesectFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MtPyre_6F_EventScript_ReceivedGenesect
+	goto_if_eq VAR_RESULT, NO, MtPyre_6F_EventScript_ShockDrive
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 	setflag FLAG_RECEIVED_GENESECT
-	goto MtPyre_6F_EventScript_ReceivedGenesect
+	goto MtPyre_6F_EventScript_ShockDrive
 	end
 
 MtPyre_6F_EventScript_ReceiveGenesectPC::
@@ -84,7 +84,7 @@ MtPyre_6F_EventScript_ReceiveGenesectPC::
 MtPyre_6F_EventScript_SendGenesectToPC::
 	call Common_EventScript_TransferredToPC
 	setflag FLAG_RECEIVED_GENESECT
-	goto MtPyre_6F_EventScript_ReceivedGenesect
+	goto MtPyre_6F_EventScript_ShockDrive
 	end
 
 MtPyre_6F_EventScript_ReceivedGenesectFanfare::

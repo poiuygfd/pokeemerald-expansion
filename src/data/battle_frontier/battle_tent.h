@@ -2897,7 +2897,7 @@ const struct TrainerMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_IMPISH
     },
-    [SLATEPORT_TENT_MON_GOLDEEN] = {
+    [VERDANTURF_TENT_MON_GOLDEEN] = {
         .species = SPECIES_GOLDEEN,
         .moves = {MOVE_WATERFALL, MOVE_SMART_STRIKE, MOVE_PECK, MOVE_HORN_ATTACK},
         .heldItem = ITEM_CHOICE_SCARF,
@@ -4036,7 +4036,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_BOLD
     },
-    [SLATEPORT_TENT_MON_ZANGOOSE] = {
+    [FALLARBOR_TENT_MON_ZANGOOSE] = {
         .species = SPECIES_ZANGOOSE,
         .moves = {MOVE_CRUSH_CLAW, MOVE_DOUBLE_KICK, MOVE_DIG, MOVE_COUNTER},
         .heldItem = ITEM_QUICK_CLAW,
