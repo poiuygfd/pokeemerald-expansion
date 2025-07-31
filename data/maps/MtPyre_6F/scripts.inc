@@ -4,6 +4,10 @@ MtPyre_6F_MapScripts::
 MtPyre_6F_EventScript_ExTeamPlasma::
 	lock
 	faceplayer
+	goto_if_eq VAR_GENESECT_DRIVE_STATE, 1, MtPyre_6F_EventScript_ShockDrive
+	goto_if_eq VAR_GENESECT_DRIVE_STATE, 2, MtPyre_6F_EventScript_BurnDrive
+	goto_if_eq VAR_GENESECT_DRIVE_STATE, 3, MtPyre_6F_EventScript_ChillDrive
+	goto_if_eq VAR_GENESECT_DRIVE_STATE, 4, MtPyre_6F_EventScript_DouseDrive
 	goto_if_set FLAG_RECEIVED_GENESECT, MtPyre_6F_EventScript_ReceivedGenesect
 	goto_if_set FLAG_SYS_HILL_MASTER_WIN, MtPyre_6F_EventScript_YouAreTrustworthyHill
 	goto_if_set FLAG_SYS_DEPTHS_MASTER_WIN, MtPyre_6F_EventScript_YouAreTrustworthyDepths
@@ -90,6 +94,60 @@ MtPyre_6F_EventScript_ReceivedGenesectFanfare::
 	waitfanfare
 	bufferspeciesname STR_VAR_1, SPECIES_GENESECT
 	return
+
+MtPyre_6F_EventScript_ShockDrive::
+	msgbox MtPyre_6F_Text_AlsoTakeThese, MSGBOX_DEFAULT
+	setvar VAR_GENESECT_DRIVE_STATE, 1
+	giveitem ITEM_SHOCK_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 2
+	giveitem ITEM_BURN_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 3
+	giveitem ITEM_CHILL_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 4
+	giveitem ITEM_DOUSE_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 5
+	release
+	end
+
+MtPyre_6F_EventScript_BurnDrive::
+	msgbox MtPyre_6F_Text_AlsoTakeThese, MSGBOX_DEFAULT
+	setvar VAR_GENESECT_DRIVE_STATE, 2
+	giveitem ITEM_BURN_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 3
+	giveitem ITEM_CHILL_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 4
+	giveitem ITEM_DOUSE_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 5
+	release
+	end
+
+MtPyre_6F_EventScript_ChillDrive::
+	msgbox MtPyre_6F_Text_AlsoTakeThese, MSGBOX_DEFAULT
+	setvar VAR_GENESECT_DRIVE_STATE, 3
+	giveitem ITEM_CHILL_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 4
+	giveitem ITEM_DOUSE_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 5
+	release
+	end
+
+MtPyre_6F_EventScript_DouseDrive::
+	msgbox MtPyre_6F_Text_AlsoTakeThese, MSGBOX_DEFAULT
+	setvar VAR_GENESECT_DRIVE_STATE, 4
+	giveitem ITEM_DOUSE_DRIVE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setvar VAR_GENESECT_DRIVE_STATE, 5
+	release
+	end
 
 MtPyre_6F_EventScript_ReceivedGenesect::
 	msgbox MtPyre_6F_Text_FinallyGoHome, MSGBOX_DEFAULT
@@ -195,6 +253,11 @@ MtPyre_6F_Text_BeenLookingForATrainer:
 	.string "even tougher trials since then.\p"
 	.string "I believe you can be trusted with this.\n"
 	.string "Please take care of this GENESECT!$"
+
+MtPyre_6F_Text_AlsoTakeThese:
+	.string "Oh, you should also take these.\p"
+	.string "Giving one of these to GENESECT will\n"
+	.string "change the type of its TECHNO BLAST.$"
 
 MtPyre_6F_Text_FinallyGoHome:
 	.string "Now that I have found a TRAINER to look\n"
