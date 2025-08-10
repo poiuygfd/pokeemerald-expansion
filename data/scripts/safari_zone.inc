@@ -116,22 +116,25 @@ Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
 	.string "Come in and enjoy the SAFARI ZONE!$"
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
-	.string "When you enter the SAFARI ZONE, you\n"
-	.string "start with 30 SAFARI BALLS for\l"
-	.string "catching POKéMON.\p"
-	.string "The SAFARI Game is over when you run\n"
-	.string "out of SAFARI BALLS, or when you've\l"
-	.string "walked 500 steps.\p"
+	.string "Our SAFARI ZONE requires a small\n"
+	.string "fee of ¥500 to enter, but once you\l"
+	.string "enter you're welcome to stay for\l"
+	.string "as long as you would like.\p"
+	.string "There are many rare POKéMON to be\n"
+	.string "found in multiple distinct zones.\p"
+	.string "Additionally, there are FEEDERS in\n"
+	.string "various locations you can leave\l"
+	.string "{POKEBLOCK}s on to entice POKéMON.\p"
 	.string "Come in and enjoy the SAFARI ZONE!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
 	.string "Welcome to the SAFARI ZONE!\p"
 	.string "All you can catch for just ¥500!\n"
-	.string "Would you like to play a SAFARI Game?$"
+	.string "Would you like to enter the SAFARI ZONE?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
 	.string "Okay.\n"
-	.string "Please play another time!$"
+	.string "Please visit another time!$"
 
 Route121_SafariZoneEntrance_Text_NotEnoughMoney:
 	.string "You don't have enough money.\n"
@@ -147,9 +150,9 @@ Route121_SafariZoneEntrance_Text_Received30SafariBalls:
 	.string "{PLAYER} received 30 SAFARI BALLS.$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
-	.string "We'll let you know when your game\n"
-	.string "is over.\p"
-	.string "So, until then, enjoy yourself, please!\n"
+	.string "Thank you for your patronage!\p"
+	.string "You can talk to our attendant when you\n"
+	.string "would like to leave.\p"
 	.string "Off you go on your wild excursion!$"
 
 Route121_SafariZoneEntrance_Text_PCIsFull:
@@ -157,28 +160,24 @@ Route121_SafariZoneEntrance_Text_PCIsFull:
 	.string "Your PC BOX is full.$"
 
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
-	.string "Excuse me!\n"
+	.string "Oh!\n"
 	.string "You seem to be without a {POKEBLOCK} CASE.\p"
-	.string "Your SAFARI Game will be much more\n"
-	.string "fruitful if you use {POKEBLOCK}S.\p"
-	.string "Please come back with a {POKEBLOCK} CASE.\p"
+	.string "I won't stop you from entering the SAFARI\n"
+	.string "ZONE, but your SAFARI Game will be much\l"
+	.string "more fruitful if you use {POKEBLOCK}S.\p"
 	.string "You may obtain a {POKEBLOCK} CASE from\n"
 	.string "the LILYCOVE CONTEST HALL.$"
 
 SafariZone_South_Text_StillHaveTimeExit:
-	.string "You still have time left. Would you like\n"
-	.string "to exit the SAFARI ZONE now?$"
+	.string "Would you like to exit the SAFARI ZONE?$"
 
 SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 	.string "Please enjoy the rest of your wild\n"
 	.string "adventure!$"
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
-	.string "Okay.\p"
-	.string "I'll take back your remaining SAFARI\n"
-	.string "BALLS.\p"
 	.string "Thank you for playing.\n"
-	.string "We hope to see you again.$"
+	.string "We hope to see you again!$"
 
 SafariZone_South_Text_GoodLuck:
 	.string "Good luck!\p"
@@ -251,6 +250,13 @@ SafariZone_RestHouse_Text_FatMan:
 	.string "I think POKéMON with the same sort of\n"
 	.string "nature are drawn by a certain {POKEBLOCK}.$"
 
+SafariZone_RestHouse_Text_Cooltrainer:
+	.string "Have you seen any strange POKéMON?\p"
+	.string "You can find special forms of certain\n"
+	.string "POKéMON usually found in other regions.\p"
+	.string "I found a ZIGZAGOON from the GALAR\n"
+	.string "region the other day!$"
+
 SafariZone_South_Text_AreaOffLimits1:
 	.string "This area is still under construction.\n"
 	.string "It's off-limits, sorry!$"
@@ -279,12 +285,12 @@ SafariZone_Southeast_Text_RichBoy:
 	.string "from somewhere other than HOENN.$"
 
 SafariZone_Northeast_Text_Boy:
-	.string "I only have a couple SAFARI BALLS left.\p"
+	.string "There are so many unique POKéMON here.\p"
 	.string "I'm having a hard time trying to\n"
 	.string "decide what I should catch.$"
 
 SafariZone_Northeast_Text_Woman:
-	.string "I heard that you can see PIKACHU here.\n"
+	.string "I heard that you can see KANGASKHAN here.\n"
 	.string "Where might one be?$"
 
 SafariZone_Northeast_Text_Girl:
