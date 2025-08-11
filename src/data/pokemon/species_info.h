@@ -518,7 +518,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
-        .abilities = { ABILITY_QUICK_DRAW, ABILITY_QUICK_DRAW, ABILITY_QUICK_DRAW },
+        .abilities = { ABILITY_REACTIVE_FIRE, ABILITY_REACTIVE_FIRE, ABILITY_REACTIVE_FIRE },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Slowbro"),
         .cryId = CRY_SLOWBRO_MEGA,
@@ -527,10 +527,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 20,
         .weight = 865,
         .description = COMPOUND_STRING(
-            "A recently discovered Mega Evolution when a\n"
-            "Galarian Slowbro was exposed to a Slowbronite.\n"
-            "The force of poisonous shots fired from its\n"
-            "cannon can pierce through entire cargo ships."),
+            "A recently discovered Mega Evolution when\n"
+            "a Slowbro from Galar found a Slowbronite.\n"
+            "The force of poisonous shots fired from\n"
+            "its cannon can pierce through cargo ships."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 326,

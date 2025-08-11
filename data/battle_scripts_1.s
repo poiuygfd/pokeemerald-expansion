@@ -9213,6 +9213,13 @@ BattleScript_QuickDrawActivation::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_ReactiveFireActivation::
+	flushtextbox
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_REACTEDTOSUPEREFFECTIVE
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_CustapBerryActivation::
 	flushtextbox
 	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT

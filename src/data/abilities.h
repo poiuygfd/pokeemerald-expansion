@@ -2440,6 +2440,13 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
+    [ABILITY_REACTIVE_FIRE] =
+    {
+        .name = _("Reactive Fire"),
+        .description = COMPOUND_STRING("Priority by super effective."),
+        .aiRating = 6,
+    },
+
     [ABILITY_NEPOTISM] =
     {
         .name = _("Nepotism"),

@@ -4964,6 +4964,16 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_REACTIVE_FIRE:
+            if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
+            && IsBattlerTurnDamaged(gBattlerTarget)
+            && IsBattlerAlive(gBattlerTarget)
+            && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_SUPER_EFFECTIVE)
+            {
+                gStatuses4[battler] |= STATUS4_REACTIVEFIRE;
+                BattleScriptPushCursor();
+                effect++;
+            }
         }
         break;
     case ABILITYEFFECT_MOVE_END_ATTACKER: // Same as above, but for attacker

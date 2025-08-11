@@ -528,6 +528,7 @@ extern const u8 BattleScript_AntivirusPreventsOHKO[];
 extern const u8 BattleScript_PunisherActivates[];
 extern const u8 BattleScript_SleepClausePreventsEnd[];
 extern const u8 BattleScript_PowerConstruct[];
+extern const u8 BattleScript_ReactiveFireActivation[];
 extern const u8 BattleScript_Nepotism[];
 
 extern const u8 BattleScript_AbilityProtectsDoesntAffect[];

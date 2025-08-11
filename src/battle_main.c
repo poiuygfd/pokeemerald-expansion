@@ -4831,8 +4831,8 @@ s32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
         // Quick Claw / Quick Draw / Custap Berry - always first
         // Stall / Mycelium Might - last but before Lagging Tail
         // Lagging Tail - always last
-        bool32 battler1HasQuickEffect = gProtectStructs[battler1].quickDraw || gProtectStructs[battler1].usedCustapBerry;
-        bool32 battler2HasQuickEffect = gProtectStructs[battler2].quickDraw || gProtectStructs[battler2].usedCustapBerry;
+        bool32 battler1HasQuickEffect = gProtectStructs[battler1].quickDraw || gProtectStructs[battler1].reactiveFire || gProtectStructs[battler1].usedCustapBerry;
+        bool32 battler2HasQuickEffect = gProtectStructs[battler2].quickDraw || gProtectStructs[battler2].reactiveFire || gProtectStructs[battler2].usedCustapBerry;
         bool32 battler1HasStallingAbility = ability1 == ABILITY_STALL || (ability1 == ABILITY_MYCELIUM_MIGHT && IsBattleMoveStatus(gChosenMoveByBattler[battler1]));
         bool32 battler2HasStallingAbility = ability2 == ABILITY_STALL || (ability2 == ABILITY_MYCELIUM_MIGHT && IsBattleMoveStatus(gChosenMoveByBattler[battler2]));
 
@@ -5080,6 +5080,7 @@ static void TurnValuesCleanUp(bool8 var0)
             gProtectStructs[i].quash = FALSE;
             gProtectStructs[i].usedCustapBerry = FALSE;
             gProtectStructs[i].quickDraw = FALSE;
+            gProtectStructs[i].reactiveFire = FALSE;
             memset(&gQueuedStatBoosts[i], 0, sizeof(struct QueuedStatBoost));
         }
         else
@@ -5237,8 +5238,12 @@ static void TryChangingTurnOrderEffects(u32 battler1, u32 battler2, u32 *quickCl
     // Quick Draw
     if (ability1 == ABILITY_QUICK_DRAW && !IsBattleMoveStatus(gChosenMoveByBattler[battler1]) && quickDrawRandom[battler1])
         gProtectStructs[battler1].quickDraw = TRUE;
+    // Reactive Fire
+    if (ability1 == ABILITY_REACTIVE_FIRE && (gStatuses4[battler1] & STATUS4_REACTIVEFIRE))
+        gProtectStructs[battler1].reactiveFire = TRUE;
+        gStatuses4[battler1] &= ~(STATUS4_REACTIVEFIRE);
     // Quick Claw and Custap Berry
-    if (!gProtectStructs[battler1].quickDraw
+    if (!gProtectStructs[battler1].quickDraw && !gProtectStructs[battler1].reactiveFire
      && ((holdEffectBattler1 == HOLD_EFFECT_QUICK_CLAW && quickClawRandom[battler1])
      || (holdEffectBattler1 == HOLD_EFFECT_CUSTAP_BERRY && HasEnoughHpToEatBerry(battler1, 4, gBattleMons[battler1].item))))
         gProtectStructs[battler1].usedCustapBerry = TRUE;
@@ -5247,8 +5252,12 @@ static void TryChangingTurnOrderEffects(u32 battler1, u32 battler2, u32 *quickCl
     // Quick Draw
     if (ability2 == ABILITY_QUICK_DRAW && !IsBattleMoveStatus(gChosenMoveByBattler[battler2]) && quickDrawRandom[battler2])
         gProtectStructs[battler2].quickDraw = TRUE;
+    // Reactive Fire
+    if (ability2 == ABILITY_REACTIVE_FIRE && (gStatuses4[battler2] & STATUS4_REACTIVEFIRE))
+        gProtectStructs[battler2].reactiveFire = TRUE;
+        gStatuses4[battler2] &= ~(STATUS4_REACTIVEFIRE);
     // Quick Claw and Custap Berry
-    if (!gProtectStructs[battler2].quickDraw
+    if (!gProtectStructs[battler2].quickDraw && !gProtectStructs[battler2].reactiveFire
      && ((holdEffectBattler2 == HOLD_EFFECT_QUICK_CLAW && quickClawRandom[battler2])
      || (holdEffectBattler2 == HOLD_EFFECT_CUSTAP_BERRY && HasEnoughHpToEatBerry(battler2, 4, gBattleMons[battler2].item))))
         gProtectStructs[battler2].usedCustapBerry = TRUE;
@@ -5266,7 +5275,7 @@ static void CheckChangingTurnOrderEffects(void)
             gBattleStruct->quickClawBattlerId++;
             if (gChosenActionByBattler[battler] == B_ACTION_USE_MOVE
              && gChosenMoveByBattler[battler] != MOVE_FOCUS_PUNCH   // quick claw message doesn't need to activate here
-             && (gProtectStructs[battler].usedCustapBerry || gProtectStructs[battler].quickDraw)
+             && (gProtectStructs[battler].usedCustapBerry || gProtectStructs[battler].quickDraw || gProtectStructs[battler].reactiveFire)
              && !(gBattleMons[battler].status1 & STATUS1_SLEEP)
              && !(gDisableStructs[gBattlerAttacker].truantCounter)
              && !(gProtectStructs[battler].noValidMoves))
@@ -5293,6 +5302,14 @@ static void CheckChangingTurnOrderEffects(void)
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
                     RecordAbilityBattle(battler, gLastUsedAbility);
                     BattleScriptExecute(BattleScript_QuickDrawActivation);
+                }
+                else if (gProtectStructs[battler].reactiveFire)
+                {
+                    gBattlerAbility = battler;
+                    gLastUsedAbility = gBattleMons[battler].ability;
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                    RecordAbilityBattle(battler, gLastUsedAbility);
+                    BattleScriptExecute(BattleScript_ReactiveFireActivation);
                 }
                 return;
             }

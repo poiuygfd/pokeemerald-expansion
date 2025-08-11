@@ -905,6 +905,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_FORFEITBATTLEGAVEMONEY]               = COMPOUND_STRING("You gave ¥{B_BUFF1} to the winner…{PAUSE_UNTIL_PRESS}"),
     [STRINGID_POWERCONSTRUCTPRESENCEOFMANY]         = COMPOUND_STRING("You sense the presence of many!"),
     [STRINGID_POWERCONSTRUCTTRANSFORM]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} transformed into its Complete Forme!"),
+    [STRINGID_REACTEDTOSUPEREFFECTIVE]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} reacted fast to being hit by a super-effective move!"),
     [STRINGID_NEPOTISMPRESENCEOFMONEY]              = COMPOUND_STRING("You sense the presence of money!"),
     [STRINGID_NEPOTISMTRANSFORM]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} transformed into Omega Charizard Z!"),
 };

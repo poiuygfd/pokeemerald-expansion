@@ -170,7 +170,8 @@ struct ProtectStruct
     u16 usedAllySwitch:1;
     u16 lashOutAffected:1;
     u16 assuranceDoubled:1;
-    u16 padding:3;
+    u16 reactiveFire:1;
+    u16 padding:2;
     // End of 16-bit bitfield
     u16 physicalDmg;
     u16 specialDmg;
@@ -212,9 +213,8 @@ struct SpecialStatus
     // End of byte
     u8 dancerUsedMove:1;
     u8 dancerOriginalTarget:3;
-    u8 unused:4;
-    // End of byte
     u8 antivirusBlocked:1;
+    u8 unused:3;
 };
 
 struct SideTimer
