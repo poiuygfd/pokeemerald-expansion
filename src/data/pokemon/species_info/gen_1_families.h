@@ -10480,6 +10480,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sSlowbroGalarLevelUpLearnset,
         .teachableLearnset = sSlowbroGalarTeachableLearnset,
         .formSpeciesIdTable = sSlowbroFormSpeciesIdTable,
+        .formChangeTable = sSlowbroGalarFormChangeTable,
     },
 
 #if P_GEN_2_CROSS_EVOS

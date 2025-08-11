@@ -25,6 +25,7 @@ static const struct FormChange sCharizardFormChangeTable[] = {
 
 static const struct FormChange sCharizardMegaZFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_HP_PERCENT,    SPECIES_CHARIZARD_OMEGA_Z, ABILITY_NEPOTISM, HP_LOWER_EQ_THAN, 50},
+    {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_CHARMANDER
 
@@ -118,6 +119,11 @@ static const struct FormChange sSlowbroFormChangeTable[] = {
 #if P_MEGA_EVOLUTIONS
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SLOWBRO_MEGA, ITEM_SLOWBRONITE},
 #endif
+    {FORM_CHANGE_TERMINATOR},
+};
+
+static const struct FormChange sSlowbroGalarFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SLOWBRO_MEGA_G, ITEM_SLOWBRONITE},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_SLOWPOKE

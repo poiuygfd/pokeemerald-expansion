@@ -310,6 +310,7 @@ static const u16 sSlowbroFormSpeciesIdTable[] = {
 #endif
 #if P_GALARIAN_FORMS
     SPECIES_SLOWBRO_GALAR,
+    SPECIES_SLOWBRO_MEGA_G,
 #endif
     FORM_SPECIES_END,
 };
