@@ -18,3 +18,12 @@ LilycoveCity_PokemonCenter_2F_EventScript_RecordCorner::
 	call CableClub_EventScript_RecordCorner
 	end
 
+LilycoveCity_PokemonCenter_2F_EventScript_MrCap::
+	buffernumberstring STR_VAR_1, VAR_LEVEL_CAP
+	msgbox LilycoveCity_PokemonCenter_2F_Text_YourCurrentLevelCap, MSGBOX_NPC
+	end
+
+LilycoveCity_PokemonCenter_2F_Text_YourCurrentLevelCap::
+	.string "Hello there! I'm MR. CAP!\n"
+	.string "I can tell you the current level cap!\p"
+	.string "Your current level cap is {STR_VAR_1}.$"

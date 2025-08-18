@@ -430,11 +430,6 @@ void Overworld_ResetBattleFlagsAndVars(void)
         VarSet(B_VAR_WILD_AI_FLAGS,0);
     #endif
 
-    #if VAR_TEMP_LEVEL_CAP != 0
-        VarSet(VAR_LEVEL_CAP, VAR_TEMP_LEVEL_CAP);
-        VarSet(VAR_TEMP_LEVEL_CAP, 0);
-    #endif
-
     FlagClear(B_FLAG_INVERSE_BATTLE);
     FlagClear(B_FLAG_FORCE_DOUBLE_WILD);
     FlagClear(B_SMART_WILD_AI_FLAG);
@@ -464,6 +459,11 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     {
         VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 0);
         VarSet(VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE);
+    }
+    if (VarGet(VAR_TEMP_LEVEL_CAP) != 0)
+    {
+        VarSet(VAR_LEVEL_CAP, VarGet(VAR_TEMP_LEVEL_CAP));
+        VarSet(VAR_TEMP_LEVEL_CAP, 0);
     }
     FollowerNPC_TryRemoveFollowerOnWhiteOut();
 }
