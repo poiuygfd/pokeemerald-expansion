@@ -77,7 +77,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart2:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	pokemartlistend
 
 	.align 2
@@ -105,7 +105,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart2Full:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_Text_LearnToUseItemsProperly:

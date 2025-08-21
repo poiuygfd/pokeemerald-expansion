@@ -90,7 +90,7 @@ PetalburgCity_Mart_Pokemart_Badge1:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_REPEL
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -114,7 +114,7 @@ PetalburgCity_Mart_Pokemart_Badge2:
 	.2byte ITEM_REVIVE
 	.2byte ITEM_REPEL
 	.2byte ITEM_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -142,7 +142,7 @@ PetalburgCity_Mart_Pokemart_Badge3:
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -176,7 +176,7 @@ PetalburgCity_Mart_Pokemart_Badge4:
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -212,7 +212,7 @@ PetalburgCity_Mart_Pokemart_Badge5:
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -250,7 +250,7 @@ PetalburgCity_Mart_Pokemart_Badge6:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -290,7 +290,7 @@ PetalburgCity_Mart_Pokemart_Badge7:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -332,7 +332,7 @@ PetalburgCity_Mart_Pokemart_Badge8:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK

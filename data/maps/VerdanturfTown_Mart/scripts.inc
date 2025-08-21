@@ -72,13 +72,14 @@ VerdanturfTown_Mart_Pokemart_Badge2:
 	.2byte ITEM_REVIVE
 	.2byte ITEM_REPEL
 	.2byte ITEM_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -99,7 +100,7 @@ VerdanturfTown_Mart_Pokemart_Badge3:
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -108,6 +109,7 @@ VerdanturfTown_Mart_Pokemart_Badge3:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -132,7 +134,7 @@ VerdanturfTown_Mart_Pokemart_Badge4:
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -141,6 +143,7 @@ VerdanturfTown_Mart_Pokemart_Badge4:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -167,7 +170,7 @@ VerdanturfTown_Mart_Pokemart_Badge5:
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -176,6 +179,7 @@ VerdanturfTown_Mart_Pokemart_Badge5:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -204,7 +208,7 @@ VerdanturfTown_Mart_Pokemart_Badge6:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -213,6 +217,7 @@ VerdanturfTown_Mart_Pokemart_Badge6:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -243,7 +248,7 @@ VerdanturfTown_Mart_Pokemart_Badge7:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -252,6 +257,7 @@ VerdanturfTown_Mart_Pokemart_Badge7:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
@@ -284,7 +290,7 @@ VerdanturfTown_Mart_Pokemart_Badge8:
 	.2byte ITEM_LURE
 	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_POKE_DOLL
+	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_X_SP_ATK
@@ -293,6 +299,7 @@ VerdanturfTown_Mart_Pokemart_Badge8:
 	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_YELLOW_NECTAR
 	.2byte ITEM_FAB_MAIL
 	pokemartlistend
 
