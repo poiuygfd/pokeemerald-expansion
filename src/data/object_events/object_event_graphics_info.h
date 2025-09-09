@@ -2647,7 +2647,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HotSpringsOldWoman
     .width = 16,
     .height = 32,
     .paletteSlot = PALSLOT_NPC_4,
-    .shadowSize = SHADOW_SIZE_M,
+    .shadowSize = SHADOW_SIZE_NONE,
     .inanimate = FALSE,
     .compressed = FALSE,
     .tracks = TRACKS_FOOT,

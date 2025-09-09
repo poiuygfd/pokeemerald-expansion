@@ -5263,9 +5263,9 @@ static void TryChangingTurnOrderEffects(u32 battler1, u32 battler2, u32 *quickCl
     if (ability1 == ABILITY_QUICK_DRAW && !IsBattleMoveStatus(gChosenMoveByBattler[battler1]) && quickDrawRandom[battler1])
         gProtectStructs[battler1].quickDraw = TRUE;
     // Reactive Fire
-    if (ability1 == ABILITY_REACTIVE_FIRE && (gStatuses4[battler1] & STATUS4_REACTIVEFIRE))
+    if (ability1 == ABILITY_REACTIVE_FIRE && gBattleMons[battler1].volatiles.reactiveFire)
         gProtectStructs[battler1].reactiveFire = TRUE;
-        gStatuses4[battler1] &= ~(STATUS4_REACTIVEFIRE);
+        gBattleMons[battler1].volatiles.reactiveFire = FALSE;
     // Quick Claw and Custap Berry
     if (!gProtectStructs[battler1].quickDraw && !gProtectStructs[battler1].reactiveFire
      && ((holdEffectBattler1 == HOLD_EFFECT_QUICK_CLAW && quickClawRandom[battler1])
@@ -5277,9 +5277,9 @@ static void TryChangingTurnOrderEffects(u32 battler1, u32 battler2, u32 *quickCl
     if (ability2 == ABILITY_QUICK_DRAW && !IsBattleMoveStatus(gChosenMoveByBattler[battler2]) && quickDrawRandom[battler2])
         gProtectStructs[battler2].quickDraw = TRUE;
     // Reactive Fire
-    if (ability2 == ABILITY_REACTIVE_FIRE && (gStatuses4[battler2] & STATUS4_REACTIVEFIRE))
+    if (ability2 == ABILITY_REACTIVE_FIRE && gBattleMons[battler2].volatiles.reactiveFire)
         gProtectStructs[battler2].reactiveFire = TRUE;
-        gStatuses4[battler2] &= ~(STATUS4_REACTIVEFIRE);
+        gBattleMons[battler2].volatiles.reactiveFire = FALSE;
     // Quick Claw and Custap Berry
     if (!gProtectStructs[battler2].quickDraw && !gProtectStructs[battler2].reactiveFire
      && ((holdEffectBattler2 == HOLD_EFFECT_QUICK_CLAW && quickClawRandom[battler2])

@@ -4202,7 +4202,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             && gBattleMons[battler].hp == gBattleMons[battler].maxHP)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
-                gStatuses4[battler] |= STATUS4_ANTIVIRUS;
+                gBattleMons[battler].volatiles.antivirus = TRUE;
                 BattleScriptPushCursorAndCallback(BattleScript_AntivirusActivates);
                 effect++;
             }
@@ -4450,9 +4450,9 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 break;
             case ABILITY_ANTIVIRUS:
                 if (!IsBattlerAtMaxHp(battler)
-                && (gStatuses4[battler] & STATUS4_ANTIVIRUS))
+                && gBattleMons[battler].volatiles.antivirus)
                 {
-                    gStatuses4[battler] &= ~(STATUS4_ANTIVIRUS);
+                    gBattleMons[battler].volatiles.antivirus = FALSE;
                     BattleScriptPushCursorAndCallback(BattleScript_AntivirusDeactivates);
                     effect++;
                 }
@@ -5002,7 +5002,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             && IsBattlerAlive(gBattlerTarget)
             && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_SUPER_EFFECTIVE)
             {
-                gStatuses4[battler] |= STATUS4_REACTIVEFIRE;
+                gBattleMons[battler].volatiles.antivirus = TRUE;
                 BattleScriptPushCursor();
                 effect++;
             }

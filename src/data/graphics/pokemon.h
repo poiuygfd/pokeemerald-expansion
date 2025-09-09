@@ -26761,10 +26761,10 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gObjectEventPic_Avitorch[] = INCBIN_COMP("graphics/pokemon/avitorch/overworld.4bpp");
     const u16 gOverworldPalette_Avitorch[] = INCBIN_U16("graphics/pokemon/avitorch/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_Avitorch[] = INCBIN_U16("graphics/pokemon/avitorch/overworld_shiny.gbapal");
-    
+
     const u32 gMonFrontPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/anim_front.4bpp.smol");
     const u16 gMonPalette_AvitorchEnraged[] = INCBIN_U16("graphics/pokemon/avitorch/enraged/normal.gbapal");
-    const u32 gMonBackPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/back.4bpp..smol");
+    const u32 gMonBackPic_AvitorchEnraged[] = INCBIN_U32("graphics/pokemon/avitorch/enraged/back.4bpp.smol");
     const u16 gMonShinyPalette_AvitorchEnraged[] = INCBIN_U16("graphics/pokemon/avitorch/enraged/shiny.gbapal");
     const u8 gMonIcon_AvitorchEnraged[] = INCBIN_U8("graphics/pokemon/avitorch/enraged/icon.4bpp");
 

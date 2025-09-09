@@ -1908,7 +1908,7 @@ static void Cmd_adjustdamage(void)
         }
 
         if (GetBattlerAbility(battlerDef) == ABILITY_ANTIVIRUS
-        && (gStatuses4[battlerDef] & STATUS4_ANTIVIRUS)
+        && gBattleMons[battlerDef].volatiles.antivirus
         && gBattleStruct->moveDamage[battlerDef] >= gBattleMons[battlerDef].hp)
         {
             gBattleStruct->moveDamage[battlerDef] = gBattleMons[battlerDef].hp - 1;
@@ -10931,7 +10931,7 @@ static void Cmd_tryKO(void)
         gBattlerAbility = gBattlerTarget;
     }
     else if (targetAbility == ABILITY_ANTIVIRUS
-    && (gStatuses4[gBattlerTarget] & STATUS4_ANTIVIRUS))
+    && gBattleMons[gBattlerTarget].volatiles.antivirus)
     {
         gBattleStruct->moveResultFlags[gBattlerTarget] |= MOVE_RESULT_MISSED;
         gLastUsedAbility = ABILITY_ANTIVIRUS;

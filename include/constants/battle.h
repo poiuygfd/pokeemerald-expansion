@@ -178,7 +178,7 @@ enum VolatileFlags
     F(VOLATILE_SYRUP_BOMB,                  syrupBomb,                     (u32, 1)) \
     F(VOLATILE_GLAIVE_RUSH,                 glaiveRush,                    (u32, 1)) \
     F(VOLATILE_ANTIVIRUS,                   antivirus,                     (u32, 1)) \
-    F(VOLATILE_REACTIVEFIRE,                reactiveFire,                  (u32, 1)) \
+    F(VOLATILE_REACTIVE_FIRE,               reactiveFire,                  (u32, 1)) \
     F(VOLATILE_LEECH_SEED,                  leechSeed,                     (enum BattlerId, MAX_BITS(4)), V_BATON_PASSABLE) \
     F(VOLATILE_LOCK_ON,                     lockOn,                        (u32, 2), V_BATON_PASSABLE) \
     F(VOLATILE_PERISH_SONG,                 perishSong,                    (u32, 1), V_BATON_PASSABLE) \
