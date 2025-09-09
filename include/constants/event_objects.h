@@ -246,43 +246,11 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
-#define OBJ_EVENT_GFX_E_BRENDAN_NORMAL           242
-#define OBJ_EVENT_GFX_RS_BRENDAN_NORMAL          243
-#define OBJ_EVENT_GFX_E_BRENDAN_MACH_BIKE        244
-#define OBJ_EVENT_GFX_RS_BRENDAN_MACH_BIKE       245
-#define OBJ_EVENT_GFX_E_BRENDAN_ACRO_BIKE        246
-#define OBJ_EVENT_GFX_RS_BRENDAN_ACRO_BIKE       247
-#define OBJ_EVENT_GFX_E_BRENDAN_SURFING          248
-#define OBJ_EVENT_GFX_RS_BRENDAN_SURFING         249
-#define OBJ_EVENT_GFX_E_BRENDAN_FIELD_MOVE       250
-#define OBJ_EVENT_GFX_RS_BRENDAN_FIELD_MOVE      251
-#define OBJ_EVENT_GFX_E_BRENDAN_FISHING          252
-#define OBJ_EVENT_GFX_RS_BRENDAN_FISHING         253
-#define OBJ_EVENT_GFX_E_BRENDAN_WATERING         254
-#define OBJ_EVENT_GFX_RS_BRENDAN_WATERING        255
-#define OBJ_EVENT_GFX_E_BRENDAN_DECORATING       256
-#define OBJ_EVENT_GFX_RS_BRENDAN_DECORATING      257
-#define OBJ_EVENT_GFX_E_MAY_NORMAL               258
-#define OBJ_EVENT_GFX_RS_MAY_NORMAL              259
-#define OBJ_EVENT_GFX_E_MAY_MACH_BIKE            260
-#define OBJ_EVENT_GFX_RS_MAY_MACH_BIKE           261
-#define OBJ_EVENT_GFX_E_MAY_ACRO_BIKE            262
-#define OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE           263
-#define OBJ_EVENT_GFX_E_MAY_SURFING              264
-#define OBJ_EVENT_GFX_RS_MAY_SURFING             265
-#define OBJ_EVENT_GFX_E_MAY_FIELD_MOVE           266
-#define OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE          267
-#define OBJ_EVENT_GFX_E_MAY_FISHING              268
-#define OBJ_EVENT_GFX_RS_MAY_FISHING             269
-#define OBJ_EVENT_GFX_E_MAY_WATERING             270
-#define OBJ_EVENT_GFX_RS_MAY_WATERING            271
-#define OBJ_EVENT_GFX_E_MAY_DECORATING           272
-#define OBJ_EVENT_GFX_RS_MAY_DECORATING          273
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        274
+#define NUM_OBJ_EVENT_GFX                        242
 
 
 // These are dynamic object gfx ids.
