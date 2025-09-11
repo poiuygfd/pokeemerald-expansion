@@ -1143,15 +1143,14 @@ PetalburgCity_Gym_EventScript_GymStatue::
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "DAD: Hm?\p"
 	.string "Well, if it isn't {PLAYER}!\n"
-	.string "So you're all finished moving in?\p"
-	.string "I'm surprised that you managed to\n"
-	.string "get here by yourself.\p"
-	.string "Oh, I see.\n"
-	.string "You're with your POKéMON.\p"
-	.string "Hm… Then I guess you're going to\n"
-	.string "become a TRAINER like me, {PLAYER}.\p"
-	.string "That's great news!\n"
-	.string "I'll be looking forward to it!$"
+	.string "Looking to take on your first GYM?\n"
+	.string "LEADER already?\p"
+	.string "Hahaha!\n"
+	.string "That enthusiasm will get you far!\p"
+	.string "That being said, I think you're going\n"
+	.string "to need to be a little stronger than\l"
+	.string "you are now before we can battle.\p"
+	.string "I would recommend…$"
 
 PetalburgCity_Gym_Text_WallyIdLikeAPokemon:
 	.string "Um… I…\n"
@@ -1175,17 +1174,17 @@ PetalburgCity_Gym_Text_DadHmISee:
 PetalburgCity_Gym_Text_DadPlayerGoWithWally:
 	.string "DAD: {PLAYER}, you heard that,\n"
 	.string "right?\p"
-	.string "Go with WALLY and make sure that he\n"
-	.string "safely catches a POKéMON.$"
+	.string "Could you go with WALLY and make sure\n"
+	.string "that he safely catches a POKéMON?$"
 
 PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon:
-	.string "WALLY, here, I'll loan you my POKéMON.\p"
+	.string "WALLY, here, I'll lend you my POKéMON.\p"
 	.string "WALLY received a ZIGZAGOON!$"
 
 PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall:
 	.string "WALLY: Oh, wow!\n"
 	.string "A POKéMON!\p"
-	.string "DAD: Hm. I'll give you a POKé BALL, too.\n"
+	.string "DAD: Here. I'll give you a POKé BALL, too.\n"
 	.string "Go for it!\p"
 	.string "WALLY received a POKé BALL!$"
 
@@ -1225,10 +1224,9 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "GYMS and defeat their LEADERS.\p"
 	.string "Collect BADGES from them,\n"
 	.string "understood?\p"
-	.string "Of course, I'm a GYM LEADER, too.\n"
-	.string "We'll battle one day, {PLAYER}.\p"
-	.string "But that's only after you become\n"
-	.string "stronger.$"
+	.string "Once you've become stronger, then\n"
+	.string "We'll finally be able to battle.\p"
+	.string "I will be looking forward to it!$"
 
 PetalburgCity_Gym_Text_NormanGoToRustboro:
 	.string "DAD: Hm? Aren't you going to the\n"
@@ -1247,7 +1245,9 @@ PetalburgCity_Gym_Text_NormanGoToDewford:
 	.string "who are stronger than you, {PLAYER}.\p"
 	.string "Across the sea in DEWFORD TOWN is a\n"
 	.string "GYM LEADER named BRAWLY.\p"
-	.string "You should go challenge him.$"
+	.string "MAUVILLE CITY past the RUSTURF TUNNEL\n"
+	.string "also houses a GYM, ran by WATTSON.\p"
+	.string "You should go challenge one of them.$"
 
 PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "DAD: Hm… {PLAYER}, you have gotten\n"

@@ -681,8 +681,8 @@
 #define FLAG_HIDE_CHARIZARD_FAN  0x277 // Hide the No. 1 Charizard Fan
 #define FLAG_HIDE_CONTEST_MELOETTA  0x278 // Meloetta watching Master Rank Contests
 #define FLAG_MELOETTA_MASTER_WON  0x279 // Winning a Master Contest triggers Meloetta spawn in Lilycove
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
+#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_DAD  0x27A // Used for revamped game intro
+#define FLAG_HIDE_LITTLEROOT_TOWN_DAD_OUTSIDE  0x27B // Same as above
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
@@ -792,7 +792,7 @@
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0x2DD
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
+#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_DAD                0x2DE
 #define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1

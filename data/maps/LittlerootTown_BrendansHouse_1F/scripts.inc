@@ -31,6 +31,7 @@ LittlerootTown_BrendansHouse_1F_OnTransition:
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToStairs::
 	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 8, 4
+	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_DAD, 6, 4
 	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -41,6 +42,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToTV::
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor::
 	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 9, 8
+	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_DAD, 6, 4
 	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -287,10 +289,25 @@ PlayersHouse_1F_Text_IsntItNiceInHere:
 	.string "MOM: See, {PLAYER}?\n"
 	.string "Isn't it nice in here, too?$"
 
-PlayersHouse_1F_Text_MoversPokemonGoSetClock:
+PlayersHouse_1F_Text_MoversPokemon:
 	.string "The mover's POKéMON do all the work\n"
 	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
+	.string "This is so convenient!$"
+
+PlayersHouse_1F_Text_MadeItInOne:
+	.string "DAD: Ah, {PLAYER}!\n"
+	.string "I am glad to see you in one piece!$"
+
+PlayersHouse_1F_Text_SorryAboutTruckRide:
+	.string "Sorry that you had to ride in the\n"
+	.string "truck with our stuff.\p"
+	.string "I hope the ride over wasn't too bumpy!\p"
+	.string "Well, here we are.\n"
+	.string "It is a nice little town, isn't it?\p"
+	.string "I bet you want to see your new room\n"
+	.string "don't you? Go right on ahead!$"
+
+PlayersHouse_1F_Text_GoSetClock:
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
 	.string "DAD bought you a new clock to mark\n"
@@ -301,6 +318,12 @@ PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "MOM: Well, {PLAYER}?\p"
 	.string "Aren't you interested in seeing your\n"
 	.string "very own room?$"
+
+PlayersHouse_1F_Text_JustHelpingUnpack:
+	.string "DAD: I'm just helping the movers\n"
+	.string "with unpacking our things.\p"
+	.string "I would feel bad making them do\n"
+	.string "all of the work!$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
 	.string "MOM: {PLAYER}.\p"
@@ -325,6 +348,11 @@ PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "PROF. BIRCH is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
+
+PlayersHouse_1F_Text_YouShouldSeeBirch:
+	.string "DAD: BIRCH has a kid around your age.\n"
+	.string "You should go visit them, maybe you\l"
+	.string "two could be friends!$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
 	.string "MOM: See you, honey!$"

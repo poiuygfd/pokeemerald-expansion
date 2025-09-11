@@ -8,7 +8,18 @@ PlayersHouse_1F_EventScript_EnterHouseMovingIn::
 	waitmovement 0
 	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale
 	call_if_eq VAR_0x8005, FEMALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale
-	msgbox PlayersHouse_1F_Text_MoversPokemonGoSetClock, MSGBOX_DEFAULT
+	msgbox PlayersHouse_1F_Text_MoversPokemon, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_DadComeGreetPlayerMale
+	call_if_eq VAR_0x8005, FEMALE, PlayersHouse_1F_EventScript_DadComeGreetPlayerFemale
+	applymovement VAR_0x8004, Common_Movement_FacePlayer
+	waitmovement 0
+	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale
+	call_if_eq VAR_0x8005, FEMALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale
+	msgbox PlayersHouse_1F_Text_GoSetClock, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerWalkIn
@@ -27,8 +38,70 @@ PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale::
 	waitmovement 0
 	return
 
+PlayersHouse_1F_EventScript_DadComeGreetPlayerMale::
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 20
+	msgbox PlayersHouse_1F_Text_MadeItInOne, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, PlayersHouse_1F_Movement_WalkToPlayerMale
+	waitmovement 0
+	msgbox PlayersHouse_1F_Text_SorryAboutTruckRide, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, PlayersHouse_1F_Movement_WalkFromPlayerMale
+	waitmovement 0
+	return
+
+PlayersHouse_1F_EventScript_DadComeGreetPlayerFemale::
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_ExclamationMark
+	playse SE_PIN
+	waitmovement 20
+	msgbox PlayersHouse_1F_Text_MadeItInOne, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, PlayersHouse_1F_Movement_WalkToPlayerFemale
+	waitmovement 0
+	msgbox PlayersHouse_1F_Text_SorryAboutTruckRide, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, PlayersHouse_1F_Movement_WalkFromPlayerFemale
+	waitmovement 0
+	return
+
 PlayersHouse_1F_Movement_PlayerWalkIn:
 	walk_up
+	step_end
+
+PlayersHouse_1F_Movement_WalkToPlayerMale:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+PlayersHouse_1F_Movement_WalkToPlayerFemale:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+PlayersHouse_1F_Movement_WalkFromPlayerMale:
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+PlayersHouse_1F_Movement_WalkFromPlayerFemale:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
 	step_end
 
 PlayersHouse_1F_EventScript_MomGoSeeRoom::
@@ -146,6 +219,7 @@ PlayersHouse_1F_EventScript_SetWatchedBroadcast::
 
 PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
 	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymMale
@@ -166,11 +240,14 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	setvar VAR_TEMP_1, 1
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
 	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
 	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
 
 PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
 	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale
@@ -190,6 +267,8 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	closemessage
 	setvar VAR_TEMP_1, 1
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
+	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
@@ -311,8 +390,21 @@ PlayersHouse_1F_EventScript_Mom::
 	release
 	end
 
+PlayersHouse_1F_EventScript_Dad::
+	lock
+	faceplayer
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_1F_EventScript_JustHelpingUnpack
+	msgbox PlayersHouse_1F_Text_YouShouldSeeBirch, MSGBOX_DEFAULT
+	release
+	end
+
 PlayersHouse_1F_EventScript_DontPushYourselfTooHard::
 	msgbox PlayersHouse_1F_Text_DontPushYourselfTooHard, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouse_1F_EventScript_JustHelpingUnpack::
+	msgbox PlayersHouse_1F_Text_JustHelpingUnpack, MSGBOX_DEFAULT
 	release
 	end
 
@@ -477,6 +569,8 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	call_if_eq VAR_ROAMER_POKEMON, 1, PlayersHouse_1F_EventScript_UnhideRustedSword
 	msgbox PlayersHouse_1F_Text_StillUnknownPokemon, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_DAD
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_DAD
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
 	releaseall

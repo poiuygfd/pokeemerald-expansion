@@ -157,7 +157,9 @@ void ResetMenuAndMonGlobals(void)
 static void ResetOutfitData(void)
 {
     memset(gSaveBlock2Ptr->outfits, 0, sizeof(gSaveBlock2Ptr->outfits));
-    UnlockOutfit(DEFAULT_OUTFIT);
+    UnlockOutfit(OUTFIT_MAGICAL_BLUE);
+    UnlockOutfit(OUTFIT_RUBY_RED);
+    UnlockOutfit(OUTFIT_EMERALD_GREEN);
     gSaveBlock2Ptr->currOutfitId = DEFAULT_OUTFIT;
 }
 

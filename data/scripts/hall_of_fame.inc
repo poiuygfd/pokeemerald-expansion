@@ -51,7 +51,8 @@ EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::
 EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent::
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 3
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 3
-	clearflag FLAG_HIDE_PLAYERS_HOUSE_DAD
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_DAD
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_DAD
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent::
