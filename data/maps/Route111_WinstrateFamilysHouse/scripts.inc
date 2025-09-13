@@ -18,6 +18,7 @@ Route111_WinstrateFamilysHouse_EventScript_Victoria::
 	giveitem ITEM_HM_ROCK_SMASH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MACHO_BRACE
+	setflag FLAG_HIDE_ROUTE_111_ROCK_SMASH_TIP_GUY
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 

@@ -712,9 +712,13 @@ Route111_Text_RootFossilDisappeared:
 
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
 	.string "Oh, no!\p"
-	.string "My uncle in MAUVILLE told me to take\n"
-	.string "ROCK SMASH with me if I was going to\l"
-	.string "ROUTE 111!$"
+	.string "These rocks are blocking the way to\n"
+	.string "ROUTE 111!\p"
+	.string "I heard that WINSTRATE family has ROCK\n"
+	.string "SMASH HIDDEN MACHINES that they give\l"
+	.string "out to TRAINERS that can beat them…\p"
+	.string "But I'm not a strong enough TRAINER\n"
+	.string "to pull that off…$"
 
 Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"

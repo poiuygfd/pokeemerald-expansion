@@ -1306,8 +1306,8 @@ PetalburgCity_Gym_Text_ExplainMegaRing:
 	.string "Now you will be able to do that\n"
 	.string "with some of your POKéMON.\p"
 	.string "It doesn't work with every kind\n"
-	.string "of POKéMON though, and you will\p"
-	.string "need to find special stones and\n"
+	.string "of POKéMON though, and you will\l"
+	.string "need to find special stones and\l"
 	.string "give them to your POKéMON.$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:

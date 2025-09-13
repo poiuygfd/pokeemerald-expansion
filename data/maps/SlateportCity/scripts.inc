@@ -6,6 +6,7 @@ SlateportCity_MapScripts::
 SlateportCity_OnTransition:
 	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 0
 	call SlateportCity_EventScript_EnterSlateport
+	call_if_unset FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA, SlateportCity_EventScript_MovePeopleAquaLine
 	call_if_eq VAR_SLATEPORT_CITY_STATE, 1, SlateportCity_EventScript_MovePeopleForSternInterview
 	call_if_eq VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 1, SlateportCity_EventScript_SetReadyForScottScene
 	end
@@ -14,6 +15,11 @@ SlateportCity_EventScript_EnterSlateport::
 	setflag FLAG_VISITED_SLATEPORT_CITY
 	setvar VAR_CONTEST_HALL_STATE, 0
 	setflag FLAG_HIDE_SLATEPORT_CITY_CONTEST_REPORTER
+	return
+
+SlateportCity_EventScript_MovePeopleAquaLine::
+	setobjectxyperm LOCALID_SLATEPORT_MAN_1, 0, 0
+	setobjectxyperm LOCALID_SLATEPORT_WOMAN, 0, 0
 	return
 
 SlateportCity_EventScript_MovePeopleForSternInterview::
@@ -470,6 +476,16 @@ SlateportCity_EventScript_AquaGrunt11::
 	msgbox SlateportCity_Text_HotSpringsAfterOperation, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_SLATEPORT_GRUNT_11, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+SlateportCity_EventScript_PirateFan::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_PirateConvention, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SLATEPORT_PIRATE_FAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
 	end
@@ -1079,6 +1095,15 @@ SlateportCity_Text_HotSpringsAfterOperation:
 	.string "That's what our leader said.\n"
 	.string "I can't wait!$"
 
+SlateportCity_Text_PirateConvention:
+	.string "I didn't know the OCEANIC MUSEUM was\n"
+	.string "hosting a pirate convention!\p"
+	.string "Look at all these other guys!\n"
+	.string "I have no idea what they're talking\l"
+	.string "about, but I bet its something pirate-y!\p"
+	.string "I just had to get into cosplay and join\n"
+	.string "this line!$"
+
 SlateportCity_Text_SeaIsSoWet:
 	.string "The sea is just so vast…\p"
 	.string "Could the sea have been made by\n"
@@ -1095,9 +1120,15 @@ SlateportCity_Text_BuyTooMuch:
 	.string "away and buy too much.$"
 
 SlateportCity_Text_GetNameRaterToHelpYou:
-	.string "If you want to change your POKéMON's\n"
-	.string "nickname, you'll have to get the NAME\l"
-	.string "RATER to help you.$"
+	.string "For a while, if you want to change your\n"
+	.string "POKéMON's nickname, you had to get the\l"
+	.string "NAME RATER to help you.\p"
+	.string "Then people realised they could just…\n"
+	.string "call their POKéMON something different?\p"
+	.string "Pressing the A Button in your POKéMON's\n"
+	.string "summary screen will let you rename them.\p"
+	.string "Some people still like to use the NAME\n"
+	.string "RATER though to end up on TV.$"
 
 SlateportCity_Text_CantChangeTradeMonName:
 	.string "Any POKéMON you get in a trade,\n"
