@@ -171,7 +171,7 @@ RustboroCity_EventScript_ConfideBoy::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CONFIDE , RustboroCity_EventScript_ReceivedConfide
 	msgbox RustboroCity_Text_TellingSecrets, MSGBOX_DEFAULT
-	giveitem ITEM_TM62
+	giveitem ITEM_TM_CONFIDE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CONFIDE
 	msgbox RustboroCity_Text_GivenConfide, MSGBOX_DEFAULT

@@ -14,7 +14,7 @@ VerdanturfTown_House_EventScript_BodyPressBlackBelt::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_BODY_PRESS , VerdanturfTown_House_EventScript_ReceivedBodyPress
 	msgbox VerdanturfTown_House_Text_OffenseDefense, MSGBOX_DEFAULT
-	giveitem ITEM_TM58
+	giveitem ITEM_TM_BODY_PRESS
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_BODY_PRESS 
 	msgbox VerdanturfTown_House_Text_ExplainBodyPress, MSGBOX_DEFAULT

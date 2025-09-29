@@ -46,7 +46,7 @@ TuffnookTownInterior_EventScript_PowerUpPunchMan::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_POWER_UP_PUNCH , TuffnookTownInterior_EventScript_ReceivedPowerUpPunch
 	msgbox TuffnookTownInterior_Text_BaneOfWalls, MSGBOX_DEFAULT
-	giveitem ITEM_TM71
+	giveitem ITEM_TM_POWER_UP_PUNCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_POWER_UP_PUNCH
 	msgbox TuffnookTownInterior_Text_PowerUpPunchExplanation, MSGBOX_DEFAULT

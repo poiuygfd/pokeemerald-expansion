@@ -427,7 +427,7 @@ Route109_EventScript_ChillingWaterGiver::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CHILLING_WATER, Route109_EventScript_ExplainChillingWater
 	msgbox Route109_Text_WaterIsWarm, MSGBOX_DEFAULT
-	giveitem ITEM_TM72
+	giveitem ITEM_TM_CHILLING_WATER
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHILLING_WATER
 	msgbox Route109_Text_ChillingWaterExplanation, MSGBOX_DEFAULT

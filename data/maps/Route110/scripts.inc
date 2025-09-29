@@ -78,7 +78,7 @@ Route110_EventScript_FlingGiver::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_FLING, Route110_EventScript_ExplainFling
 	msgbox Route110_Text_FlingingStones, MSGBOX_DEFAULT
-	giveitem ITEM_TM74
+	giveitem ITEM_TM_FLING
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FLING
 	msgbox Route110_Text_FlingExplanation, MSGBOX_DEFAULT

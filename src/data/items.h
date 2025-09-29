@@ -11651,7 +11651,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM_COACHING] =
     {
         .name = ITEM_NAME("TM51"),
         .price = 3000,
@@ -11665,7 +11665,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_DAZZLING_GLEAM] =
     {
         .name = ITEM_NAME("TM52"),
         .price = 3000,
@@ -11679,7 +11679,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_FOCUS_BLAST] =
     {
         .name = ITEM_NAME("TM53"),
         .price = 55000,
@@ -11693,7 +11693,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM54] =
+    [ITEM_TM_GIGA_IMPACT] =
     {
         .name = ITEM_NAME("TM54"),
         .price = 75000,
@@ -11707,7 +11707,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM55] =
+    [ITEM_TM_U_TURN] =
     {
         .name = ITEM_NAME("TM55"),
         .price = 3000,
@@ -11721,7 +11721,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM56] =
+    [ITEM_TM_SHADOW_CLAW] =
     {
         .name = ITEM_NAME("TM56"),
         .price = 3000,
@@ -11735,7 +11735,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM57] =
+    [ITEM_TM_TAILWIND] =
     {
         .name = ITEM_NAME("TM57"),
         .price = 3000,
@@ -11749,7 +11749,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM58] =
+    [ITEM_TM_BODY_PRESS] =
     {
         .name = ITEM_NAME("TM58"),
         .price = 3000,
@@ -11763,7 +11763,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM59] =
+    [ITEM_TM_TRICK_ROOM] =
     {
         .name = ITEM_NAME("TM59"),
         .price = 3000,
@@ -11777,7 +11777,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM60] =
+    [ITEM_TM_ALLURING_VOICE] =
     {
         .name = ITEM_NAME("TM60"),
         .price = 3000,
@@ -11791,7 +11791,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM61] =
+    [ITEM_TM_STONE_EDGE] =
     {
         .name = ITEM_NAME("TM61"),
         .price = 3000,
@@ -11805,7 +11805,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM62] =
+    [ITEM_TM_CONFIDE] =
     {
         .name = ITEM_NAME("TM62"),
         .price = 3000,
@@ -11819,7 +11819,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM63] =
+    [ITEM_TM_SCALE_SHOT] =
     {
         .name = ITEM_NAME("TM63"),
         .price = 3000,
@@ -11833,7 +11833,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM64] =
+    [ITEM_TM_WEATHER_BALL] =
     {
         .name = ITEM_NAME("TM64"),
         .price = 3000,
@@ -11847,7 +11847,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM65] =
+    [ITEM_TM_FLAME_CHARGE] =
     {
         .name = ITEM_NAME("TM65"),
         .price = 3000,
@@ -11861,7 +11861,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM66] =
+    [ITEM_TM_SUBSTITUTE] =
     {
         .name = ITEM_NAME("TM66"),
         .price = 30000,
@@ -11875,7 +11875,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM67] =
+    [ITEM_TM_ENERGY_BALL] =
     {
         .name = ITEM_NAME("TM67"),
         .price = 3000,
@@ -11889,7 +11889,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM68] =
+    [ITEM_TM_DUAL_WINGBEAT] =
     {
         .name = ITEM_NAME("TM68"),
         .price = 3000,
@@ -11903,7 +11903,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM69] =
+    [ITEM_TM_WORK_UP] =
     {
         .name = ITEM_NAME("TM69"),
         .price = 3000,
@@ -11917,7 +11917,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM70] =
+    [ITEM_TM_TERRAIN_PULSE] =
     {
         .name = ITEM_NAME("TM70"),
         .price = 3000,
@@ -11931,7 +11931,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM71] =
+    [ITEM_TM_POWER_UP_PUNCH] =
     {
         .name = ITEM_NAME("TM71"),
         .price = 3000,
@@ -11945,7 +11945,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM72] =
+    [ITEM_TM_CHILLING_WATER] =
     {
         .name = ITEM_NAME("TM72"),
         .price = 3000,
@@ -11959,7 +11959,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM73] =
+    [ITEM_TM_ACROBATICS] =
     {
         .name = ITEM_NAME("TM73"),
         .price = 30000,
@@ -11973,7 +11973,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM74] =
+    [ITEM_TM_FLING] =
     {
         .name = ITEM_NAME("TM74"),
         .price = 3000,
@@ -11987,7 +11987,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM75] =
+    [ITEM_TM_SUPERCELL_SLAM] =
     {
         .name = ITEM_NAME("TM75"),
         .price = 3000,
@@ -12388,6 +12388,30 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
+    [ITEM_HM_ROCK_CLIMB] =
+    {
+        .name = ITEM_NAME("HM09"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A charging attack\n"
+            "that can confuse\n"
+            "the target."),
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
+
+    [ITEM_HM10] =
+    {
+        .name = ITEM_NAME("HM10"),
+        .price = 0,
+        .description = sQuestionMarksDesc, // Todo
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
 
 // Charms
 
@@ -14665,6 +14689,8 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
 
+// New key items
+
     [ITEM_CANDY_BAG] =
     {
         .name = ITEM_NAME("Candy Bag"),
@@ -14712,22 +14738,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_RainbowPass,
         .iconPalette = gItemIconPalette_RainbowPass,
-    },
-
-    [ITEM_CHARIZARDITE_Z] =
-    {
-        .name = ITEM_NAME("Charizardite Z"),
-        .pluralName = ITEM_PLURAL_NAME("Charizardites Z"),
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = sCharizarditeDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_CharizarditeZ,
-        .iconPalette = gItemIconPalette_CharizarditeZ,
-    },
+    }, 
 
     [ITEM_OUTFIT_BOX] =
     {
@@ -14743,6 +14754,182 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_OutfitBox,
 	    .iconPic = gItemIcon_OutfitBox,
 	    .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+// HM Replacements
+
+    [ITEM_HATCHET] =
+    {
+        .name = ITEM_NAME("Hatchet"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A tool used to\n"
+            "cut down small\n"
+            "trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_TAXI_PHONE] =
+    {
+        .name = ITEM_NAME("Taxi Phone"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A phone with a\n"
+            "dedicated hotline\n"
+            "for the Air Taxi."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_BRINEYS_KEYS] =
+    {
+        .name = ITEM_NAME("Briney's Keys"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Allows you to\n"
+            "sail Briney's boat\n"
+            "around the sea."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_POWER_GLOVES] =
+    {
+        .name = ITEM_NAME("Power Gloves"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Muscle-enhancing\n"
+            "gloves that let\n"
+            "you push boulders."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_FLASHLIGHT] =
+    {
+        .name = ITEM_NAME("Flashlight"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A device used\n"
+            "to illuminate dark\n"
+            "caves and areas."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_PICKAXE] =
+    {
+        .name = ITEM_NAME("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A tool used to\n"
+            "break cracked\n"
+            "rocks apart."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_KOI_CHARM] =
+    {
+        .name = ITEM_NAME("Koi Charm"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A charm that\n"
+            "allows you to\n"
+            "scale waterfalls."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_SCUBA_GEAR] =
+    {
+        .name = ITEM_NAME("Scuba Gear"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Gear that allows\n"
+            "you to dive deep\n"
+            "underwater."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_CLIMBING_GEAR] =
+    {
+        .name = ITEM_NAME("Climbing Gear"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Gear that allows\n"
+            "you to scale up\n"
+            "rocky cliffs."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+    [ITEM_HM10_REPLACE] =
+    {
+        .name = ITEM_NAME("???"),
+        .price = 0,
+        .description = sQuestionMarksDesc, // Todo
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .iconPic = gItemIcon_PokeRadar,
+        .iconPalette = gItemIconPalette_PokeRadar,
+    },
+
+//New hold items
+
+    [ITEM_CHARIZARDITE_Z] =
+    {
+        .name = ITEM_NAME("Charizardite Z"),
+        .pluralName = ITEM_PLURAL_NAME("Charizardites Z"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sCharizarditeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_CharizarditeZ,
+        .iconPalette = gItemIconPalette_CharizarditeZ,
     },
 };
 

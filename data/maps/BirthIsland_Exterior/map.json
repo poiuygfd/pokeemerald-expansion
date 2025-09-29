@@ -2,7 +2,7 @@
   "id": "MAP_BIRTH_ISLAND_EXTERIOR",
   "name": "BirthIsland_Exterior",
   "layout": "LAYOUT_BIRTH_ISLAND_EXTERIOR",
-  "music": "MUS_NONE",
+  "music": "MUS_ROUTE119",
   "region_map_section": "MAPSEC_BIRTH_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -63,6 +63,61 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 23,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicOutTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 23,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicOutTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 23,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicOutTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 24,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicInTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 24,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicInTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 24,
+      "elevation": 0,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "BirthIsland_Exterior_EventScript_MusicInTrigger"
+    }
+  ],
   "bg_events": []
 }

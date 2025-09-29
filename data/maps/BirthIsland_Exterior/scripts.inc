@@ -55,6 +55,14 @@ BirthIsland_Exterior_RemoveStairs::
 	setmetatile 20, 23, METATILE_General_RockWall_RockBase, TRUE
 	return
 
+BirthIsland_Exterior_EventScript_MusicOutTrigger::
+	fadenewbgm MUS_NONE
+	end
+
+BirthIsland_Exterior_EventScript_MusicInTrigger::
+	fadenewbgm MUS_ROUTE119
+	end
+
 BirthIsland_Exterior_EventScript_Triangle::
 	lock
 	faceplayer

@@ -11747,63 +11747,148 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 20,
+                "max_level": 45,
                 "species": "SPECIES_TREECKO"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
+                "max_level": 45,
                 "species": "SPECIES_TORCHIC"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_MUDKIP"
+                "max_level": 45,
+                "species": "SPECIES_CHESPIN"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_MUDKIP"
+                "max_level": 45,
+                "species": "SPECIES_FENNEKIN"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_MARIN"
-              },
-              {
-                "min_level": 5,
-                "max_level": 20,
+                "max_level": 45,
                 "species": "SPECIES_BULBASAUR"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
+                "max_level": 45,
                 "species": "SPECIES_CHARMANDER"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_CHARMANDER"
+                "max_level": 45,
+                "species": "SPECIES_CHIKORITA"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
+                "max_level": 45,
+                "species": "SPECIES_CHIKORITA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_TYPHLOSION_HISUI"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_FROAKIE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_FROAKIE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_FROAKIE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_FROAKIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_MARIN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_MARIN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 25,
+                "species": "SPECIES_MARIN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 25,
                 "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
                 "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_SQUIRTLE"
+                "max_level": 45,
+                "species": "SPECIES_TOTODILE"
               },
               {
                 "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_SQUIRTLE"
+                "max_level": 45,
+                "species": "SPECIES_MARIN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_MARIN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 45,
+                "species": "SPECIES_MARIN"
               }
             ]
           }

@@ -1268,7 +1268,7 @@
 #define FLAG_RECEIVED_FLING                                         0x4B4 // Fling TM Gift
 #define FLAG_RECEIVED_CHILLING_WATER                                0x4B5 // Chilling Water TM Gift
 #define FLAG_RECEIVED_POWER_UP_PUNCH                                0x4B6 // Power Up Punch TM Gift
-#define FLAG_ITEM_TM75                                              0x4B7 // Magma Hideout TM Supercell Slam
+#define FLAG_ITEM_MAGMA_HIDEOUT_TM75                                0x4B7 // Magma Hideout TM Supercell Slam
 #define FLAG_RECEIVED_FLOAT_STONE                                   0x4B8 // Float Stone Gift Flags
 #define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B9
 #define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4BA

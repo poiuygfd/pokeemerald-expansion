@@ -360,6 +360,7 @@ LilycoveCity_EventScript_BattlePass::
 	giveitem ITEM_CONTEST_PASS
 	msgbox LilycoveCity_Text_ExplainContestPass, MSGBOX_DEFAULT
 	msgbox LilycoveCity_Text_ScottTalkToYouLater, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottLeave
 	waitmovement 0
 	removeobject LOCALID_LILYCOVE_SCOTT
@@ -381,6 +382,7 @@ LilycoveCity_EventScript_ContestPass::
 	giveitem ITEM_BATTLE_PASS
 	msgbox LilycoveCity_Text_ExplainBattlePass, MSGBOX_DEFAULT
 	msgbox LilycoveCity_Text_ScottTalkToYouLater, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_LILYCOVE_SCOTT, LilycoveCity_Movement_ScottLeave
 	waitmovement 0
 	removeobject LOCALID_LILYCOVE_SCOTT

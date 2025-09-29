@@ -12,11 +12,23 @@ TuffnookTown_DepthsEntrance_EventScript_TurnPlayerNorth::
     end
 
 TuffnookTown_DepthsEntrance_EventScript_Cooltrainer::
+	checkitem ITEM_BATTLE_PASS
+    goto_if_eq VAR_RESULT, FALSE, TuffnookTown_DepthsEntrance_EventScript_ManTrainerHillClosed
 	msgbox TuffnookTown_DepthsEntrance_Text_PreparingForNextDive, MSGBOX_NPC
 	end
 
+TuffnookTown_DepthsEntrance_EventScript_ManTrainerHillClosed::
+	msgbox TuffnookTown_DepthsEntrance_Text_ILoveBigHoles, MSGBOX_NPC
+	end
+
 TuffnookTown_DepthsEntrance_EventScript_Picnicker::
+	checkitem ITEM_BATTLE_PASS
+    goto_if_eq VAR_RESULT, FALSE, TuffnookTown_DepthsEntrance_EventScript_GirlTrainerHillClosed
 	msgbox TuffnookTown_DepthsEntrance_Text_ThisPlaceIsTough, MSGBOX_NPC
+	end
+
+TuffnookTown_DepthsEntrance_EventScript_GirlTrainerHillClosed::
+	msgbox TuffnookTown_DepthsEntrance_Text_NoviceAtCaveDiving, MSGBOX_NPC
 	end
 
 TuffnookTown_DepthsEntrance_EventScript_Hiker::
@@ -159,11 +171,23 @@ TuffnookTown_DepthsEntrance_Movement_HikerMove:
 	face_down
 	step_end
 
+TuffnookTown_DepthsEntrance_Text_ILoveBigHoles:
+	.string "I can't wait for this place to open\n"
+	.string "to the public.\p"
+	.string "If there's two things in life I love\n"
+	.string "its tough battles and big ol' holes!$"
+
 TuffnookTown_DepthsEntrance_Text_PreparingForNextDive:
 	.string "I'm just preparing for my next dive\n"
 	.string "into THE DEPTHS.\p"
 	.string "For a COOLTRAINER like me, this will\n"
 	.string "surely be a breeze!$"
+
+TuffnookTown_DepthsEntrance_Text_NoviceAtCaveDiving:
+	.string "I've come to get a bit stronger at\n"
+	.string "this place when it opens.\p"
+	.string "I'm a bit of a novice at cave diving\n"
+	.string "though, so I'm a bit worried…$"
 
 TuffnookTown_DepthsEntrance_Text_ThisPlaceIsTough:
 	.string "This place is tough…\n"
