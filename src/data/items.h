@@ -14769,9 +14769,9 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
-        .iconPic = gItemIcon_PokeRadar,
-        .iconPalette = gItemIconPalette_PokeRadar,
+        .fieldUseFunc = ItemUseOutOfBattle_Hatchet,
+        .iconPic = gItemIcon_Hatchet,
+        .iconPalette = gItemIconPalette_Hatchet,
     },
 
     [ITEM_TAXI_PHONE] =
@@ -14849,9 +14849,9 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
-        .iconPic = gItemIcon_PokeRadar,
-        .iconPalette = gItemIconPalette_PokeRadar,
+        .fieldUseFunc = ItemUseOutOfBattle_Pickaxe,
+        .iconPic = gItemIcon_Pickaxe,
+        .iconPalette = gItemIconPalette_Pickaxe,
     },
 
     [ITEM_KOI_CHARM] =

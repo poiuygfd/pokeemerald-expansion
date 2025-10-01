@@ -8,7 +8,7 @@ EventScript_CutTree::
 	buffermovename STR_VAR_2, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	msgbox Text_MonUsedCut, MSGBOX_DEFAULT
 	closemessage
 EventScript_CutTreeCommon:
 	isfollowerfieldmoveuser VAR_0x8004
@@ -24,16 +24,38 @@ EventScript_CutTreeDown:: @ fallthrough
 	releaseall
 	end
 
+@ Cut with the Hatchet
+EventScript_WantToHatchetCut::
+	msgbox Text_WantToHatchetCut, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+EventScript_HatchetCut::
+	msgbox Text_PlayerUsedHatchet, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	playse SE_M_CUT
+	applymovement VAR_LAST_TALKED, Movement_CutTreeDown
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 @ Use cut from party menu
 EventScript_UseCut::
 	lockall
 	goto EventScript_CutTreeCommon
+
+@ Use Hatchet from bag
+EventScript_UseHatchetCut::
+	lockall
+	goto EventScript_HatchetCut
 
 Movement_CutTreeDown:
 	cut_tree
 	step_end
 
 EventScript_CheckTreeCantCut::
+	checkitem ITEM_HATCHET
+	goto_if_eq VAR_RESULT, TRUE, EventScript_WantToHatchetCut
 	msgbox Text_CantCut, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -48,8 +70,17 @@ Text_WantToCut:
 	.string "CUT down!\p"
 	.string "Would you like to CUT it?$"
 
-Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+Text_WantToHatchetCut:
+	.string "This tree looks like it can be\n"
+	.string "CUT down!\p"
+	.string "Would you like to CUT it with\n"
+	.string "your HATCHET?$"
+
+Text_MonUsedCut:
+	.string "{STR_VAR_1} used CUT.$"
+
+Text_PlayerUsedHatchet:
+	.string "{PLAYER} used the HATCHET.$"
 
 Text_CantCut:
 	.string "This tree looks like it can be\n"
@@ -59,6 +90,10 @@ Text_CantCut:
 EventScript_UseRockSmash::
 	lockall
 	goto EventScript_RockSmashCommon
+
+EventScript_UsePickaxeSmash::
+	lockall
+	goto EventScript_PickaxeSmash
 
 @ Interact with smashable rock
 EventScript_RockSmash::
@@ -70,7 +105,7 @@ EventScript_RockSmash::
 	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	msgbox Text_MonUsedRockSmash, MSGBOX_DEFAULT
 	closemessage
 EventScript_RockSmashCommon:
 	@ check if follower should use the field move
@@ -81,6 +116,25 @@ EventScript_RockSmashCommon:
 EventScript_SmashRock:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
+	applymovement VAR_LAST_TALKED, Movement_SmashRock
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	specialvar VAR_RESULT, TryUpdateRusturfTunnelState
+	goto_if_eq VAR_RESULT, TRUE, EventScript_EndSmash
+	special RockSmashWildEncounter
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndSmash
+	waitstate
+	releaseall
+	end
+
+EventScript_WantToPickaxeSmash::
+	msgbox Text_WantToPickaxeSmash, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
+EventScript_PickaxeSmash::
+	msgbox Text_PlayerUsedPickaxe, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	playse SE_M_ROCK_THROW
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
@@ -204,6 +258,8 @@ Movement_SmashRock:
 	step_end
 
 EventScript_CantSmashRock::
+	checkitem ITEM_PICKAXE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_WantToPickaxeSmash
 	msgbox Text_CantSmash, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -216,6 +272,16 @@ EventScript_CancelSmash::
 Text_WantToSmash:
 	.string "This rock appears to be breakable.\n"
 	.string "Would you like to use ROCK SMASH?$"
+
+Text_WantToPickaxeSmash:
+	.string "This rock appears to be breakable.\n"
+	.string "Would you like to use your PICKAXE?$"
+
+Text_MonUsedRockSmash:
+	.string "{STR_VAR_1} used ROCK SMASH.$"
+
+Text_PlayerUsedPickaxe:
+	.string "{PLAYER} used the PICKAXE.$"
 
 Text_CantSmash:
 	.string "It's a rugged rock, but a POKéMON\n"
@@ -268,10 +334,21 @@ Text_WantToStrength:
 	.string "may be able to push it aside.\p"
 	.string "Would you like to use STRENGTH?$"
 
+Text_WantToGloveStrength:
+	.string "It's a big boulder, but you\n"
+	.string "may be able to push it aside.\p"
+	.string "Would you like to use your\n"
+	.string "POWER GLOVES?$"
+
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used STRENGTH!\p"
+	.string "{STR_VAR_1} used STRENGTH.\p"
 	.string "{STR_VAR_1}'s STRENGTH made it\n"
-	.string "possible to move boulders around!$"
+	.string "possible to move boulders around.$"
+
+Text_PlayerUsedGloves:
+	.string "{PLAYER} used the POWER GLOVES.\p"
+	.string "The POWER GLOVES made it\n"
+	.string "possible to move boulders around.$"
 
 Text_CantStrength:
 	.string "It's a big boulder, but a POKéMON\n"
@@ -387,6 +464,8 @@ EventScript_UseDig::
 	lockall
 	goto EventScript_DigCommon
 
+Text_MonUsedSecretPower:
+	.string "{STR_VAR_1} used SECRET POWER.$"
 
 EventScript_CutGrassCommon:
 	isfollowerfieldmoveuser VAR_0x8004
@@ -429,7 +508,7 @@ EventScript_UseDefog::
 	lockall
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_DEFOG
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	msgbox Text_MonUsedDefog, MSGBOX_DEFAULT
 	closemessage
 	isfollowerfieldmoveuser VAR_0x8004
 	setfieldeffectargument 3, VAR_0x8004 @ skip pose if so
@@ -441,6 +520,9 @@ EventScript_UseDefog::
 	waitstate
 	releaseall
 	end
+
+Text_MonUsedDefog:
+    .string "{STR_VAR_1} used DEFOG.$"
 
 EventScript_UseRockClimb::
 	lockall
@@ -466,11 +548,11 @@ EventScript_EndRockClimb::
 
 Text_WantToRockClimb:
     .string "The cliff is steep.\n"
-    .string "Would you like to use Rock Climb?$"
+    .string "Would you like to use ROCK CLIMB?$"
 
 Text_MonUsedRockClimb:
-    .string "{STR_VAR_1} used Rock Climb!$"
+    .string "{STR_VAR_1} used ROCK CLIMB.$"
 
 Text_CantRockClimb:
     .string "The cliff is steep.\n"
-    .string "A Pokémon may be able to climb it.$"
+    .string "A POKéMON may be able to climb it.$"

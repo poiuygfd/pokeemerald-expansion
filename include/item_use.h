@@ -40,6 +40,8 @@ void ItemUseOutOfBattle_CannotUse(u8 taskId);
 void ItemUseOutOfBattle_ExpShare(u8 taskId);
 void ItemUseOutOfBattle_CostumeCase(u8 taskId);
 void ItemUseOutOfBattle_OutfitBox(u8 taskId);
+void ItemUseOutOfBattle_Hatchet(u8 taskId);
+void ItemUseOutOfBattle_Pickaxe(u8 taskId);
 void ItemUseInBattle_BagMenu(u8 taskId);
 void ItemUseInBattle_PartyMenu(u8 taskId);
 void ItemUseInBattle_PartyMenuChooseMove(u8 taskId);

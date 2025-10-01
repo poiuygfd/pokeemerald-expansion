@@ -1742,10 +1742,16 @@ extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
 extern const u32 gItemIcon_CandyBag[];
 extern const u16 gItemIconPalette_CandyBag[];
-extern const u32 gItemIcon_CharizarditeZ[];
-extern const u16 gItemIconPalette_CharizarditeZ[];
 extern const u32 gItemIcon_OutfitBox[];
 extern const u16 gItemIconPalette_OutfitBox[];
+
+extern const u32 gItemIcon_Hatchet[];
+extern const u16 gItemIconPalette_Hatchet[];
+extern const u32 gItemIcon_Pickaxe[];
+extern const u16 gItemIconPalette_Pickaxe[];
+
+extern const u32 gItemIcon_CharizarditeZ[];
+extern const u16 gItemIconPalette_CharizarditeZ[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];

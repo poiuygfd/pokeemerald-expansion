@@ -1663,4 +1663,62 @@ static void Task_OpenRegisteredOutfitBox(u8 taskId)
     }
 }
 
+static void ItemUseOnFieldCB_Hatchet(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_UseHatchetCut);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_Hatchet(u8 taskId)
+{
+    if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
+    {
+        if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            sItemUseOnFieldCB = ItemUseOnFieldCB_Hatchet;
+            gFieldCallback = FieldCB_UseItemOnField;
+            gBagMenu->newScreenCallback = CB2_ReturnToField;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else
+        {
+            gTasks[taskId].func = ItemUseOnFieldCB_Hatchet;
+        }
+    }
+    else
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
+static void ItemUseOnFieldCB_Pickaxe(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_UsePickaxeSmash);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_Pickaxe(u8 taskId)
+{
+    if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
+    {
+        if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            sItemUseOnFieldCB = ItemUseOnFieldCB_Pickaxe;
+            gFieldCallback = FieldCB_UseItemOnField;
+            gBagMenu->newScreenCallback = CB2_ReturnToField;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else
+        {
+            gTasks[taskId].func = ItemUseOnFieldCB_Pickaxe;
+        }
+    }
+    else
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
 #undef tUsingRegisteredKeyItem
