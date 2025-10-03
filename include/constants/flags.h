@@ -1384,20 +1384,19 @@
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_PETALBURG_CITY                 (SYSTEM_FLAGS + 0x16)
-#define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x17)
-#define FLAG_VISITED_MAUVILLE_CITY                  (SYSTEM_FLAGS + 0x18)
-#define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)
-#define FLAG_VISITED_FORTREE_CITY                   (SYSTEM_FLAGS + 0x1A)
-#define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)
-#define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
-#define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
-#define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
+#define FLAG_VISITED_TUFFNOOK_TOWN                  (SYSTEM_FLAGS + 0x16)
+#define FLAG_VISITED_PETALBURG_CITY                 (SYSTEM_FLAGS + 0x17)
+#define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x18)
+#define FLAG_VISITED_MAUVILLE_CITY                  (SYSTEM_FLAGS + 0x19)
+#define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x1A)
+#define FLAG_VISITED_FORTREE_CITY                   (SYSTEM_FLAGS + 0x1B)
+#define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1C)
+#define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1D)
+#define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1E)
+#define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1F)
 
-#define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
-#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
-
-#define FLAG_VISITED_TUFFNOOK_TOWN                  (SYSTEM_FLAGS + 0x21) // Tuffnook Town Flag
+#define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x20) // Seems to be related to linking.
+#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x21)
 
 #define FLAG_SYS_HILL_NORMAL_WIN                    (SYSTEM_FLAGS + 0x22)
 #define FLAG_SYS_HILL_EXPERT_WIN                    (SYSTEM_FLAGS + 0x23)

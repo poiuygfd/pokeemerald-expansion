@@ -34,18 +34,18 @@ LilycoveCity_OnLoad:
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
-	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, TRUE
-	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, TRUE
-	setmetatile 76, 13, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 13, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 76, 14, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 77, 14, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 76, 15, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 15, METATILE_Lilycove_Wailmer3, TRUE
-	setmetatile 77, 16, METATILE_Lilycove_Wailmer0_Alt, TRUE
-	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
-	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	setmetatile 76, 12, METATILE_General_WetLandNorth, TRUE
+	setmetatile 77, 12, METATILE_General_WetLandNorth, TRUE
+	setmetatile 76, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 13, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 14, METATILE_General_CalmWater, TRUE
+	setmetatile 76, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 15, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 16, METATILE_General_CalmWater, TRUE
+	setmetatile 77, 17, METATILE_General_CalmWater, TRUE
+	setmetatile 78, 17, METATILE_General_CalmWater, TRUE
 	return
 
 LilycoveCity_OnResume:
@@ -625,6 +625,19 @@ LilycoveCity_EventScript_Lotad::
 	release
 	end
 
+LilycoveCity_EventScript_Wailmer::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_WAILMER, CRY_MODE_NORMAL
+	msgbox LilycoveCity_Text_Wailmer, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
 LilycoveCity_Text_ScottGivePassChoice:
 	.string "SCOTT: Hey! {PLAYER}{KUN}!\n"
 	.string "How's it going?\p"
@@ -1037,4 +1050,7 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 
 LilycoveCity_Text_Lotad:
 	.string "LOTAD: Lolo!$"
+
+LilycoveCity_Text_Wailmer:
+	.string "WAILMER: Wai…$"
 

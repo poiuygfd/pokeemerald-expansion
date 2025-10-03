@@ -366,6 +366,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_EventScript_Meloetta",
       "flag": "FLAG_HIDE_MELOETTA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WAILMER)",
+      "x": 76,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LilycoveCity_EventScript_Wailmer",
+      "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WAILMER)",
+      "x": 76,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LilycoveCity_EventScript_Wailmer",
+      "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WAILMER)",
+      "x": 77,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LilycoveCity_EventScript_Wailmer",
+      "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     }
   ],
   "warp_events": [

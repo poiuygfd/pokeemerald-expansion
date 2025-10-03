@@ -152,6 +152,7 @@ SouthernIsland_Interior_EventScript_StevenFarewell::
 	special InitRoamer
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
 	warp MAP_ROUTE118, 44, 10
+	waitstate
 	releaseall
 	end
 

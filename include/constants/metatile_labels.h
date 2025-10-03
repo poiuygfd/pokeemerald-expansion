@@ -245,6 +245,7 @@
 #define METATILE_General_TreeCorner            0x1DC
 #define METATILE_General_YellowCaveIndent      0x1A8
 #define METATILE_General_YellowCaveOpen        0x1A9
+#define METATILE_General_WetLandNorth          0x1BE
 
 // gTileset_GenericBuilding
 #define METATILE_GenericBuilding_TableEdge               0x2F1

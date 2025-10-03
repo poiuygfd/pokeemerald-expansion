@@ -199,11 +199,11 @@
 // Eg: You may rename FLAG_UNUSED_0x264 to a descriptive name and use it below.
 
 // Badge boost flags
-#define B_FLAG_BADGE_BOOST_ATTACK   FLAG_BADGE01_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Attack by x1.1
-#define B_FLAG_BADGE_BOOST_DEFENSE  FLAG_BADGE05_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Defense by x1.1
-#define B_FLAG_BADGE_BOOST_SPEED    FLAG_BADGE03_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Speed by x1.1
-#define B_FLAG_BADGE_BOOST_SPATK    FLAG_BADGE07_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Sp. Atk by x1.1
-#define B_FLAG_BADGE_BOOST_SPDEF    FLAG_BADGE07_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Sp. Def by x1.1
+#define B_FLAG_BADGE_BOOST_ATTACK   FLAG_BADGE04_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Attack by x1.1
+#define B_FLAG_BADGE_BOOST_DEFENSE  FLAG_BADGE04_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Defense by x1.1
+#define B_FLAG_BADGE_BOOST_SPEED    FLAG_BADGE06_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Speed by x1.1
+#define B_FLAG_BADGE_BOOST_SPATK    FLAG_BADGE05_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Sp. Atk by x1.1
+#define B_FLAG_BADGE_BOOST_SPDEF    FLAG_BADGE05_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokémon's Sp. Def by x1.1
 // Other battle flags
 #define B_FLAG_INVERSE_BATTLE       0     // If this flag is set, the battle's type effectiveness are inversed. For example, fire is super effective against water.
 #define B_FLAG_FORCE_DOUBLE_WILD    0     // If this flag is set, all land and surfing wild battles will be double battles.
@@ -311,7 +311,7 @@
 #define B_TOXIC_REVERSAL                GEN_LATEST // In Gen5+, bad poison will change to regular poison at the end of battles.
 #define B_TRY_CATCH_TRAINER_BALL        GEN_LATEST // In Gen4+, trying to catch a Trainer's Pokémon does not consume the Poké Ball.
 #define B_SLEEP_CLAUSE                  FALSE      // Enables Sleep Clause all the time in every case, overriding B_FLAG_SLEEP_CLAUSE. Use that for modularity.
-#define B_PARTNER_MONS_MARKED_SEEN      FALSE      // If TRUE, if your double battle partner sends out a Pokémon you haven't encountered yet, it will be marked as SEEN in your Pokédex.
+#define B_PARTNER_MONS_MARKED_SEEN      TRUE       // If TRUE, if your double battle partner sends out a Pokémon you haven't encountered yet, it will be marked as SEEN in your Pokédex.
 
 #define NUM_BEEPS_GEN_LATEST            4                    // Loops 4 times
 #define NUM_BEEPS_GEN_3                 -1                   // Loops infinitely

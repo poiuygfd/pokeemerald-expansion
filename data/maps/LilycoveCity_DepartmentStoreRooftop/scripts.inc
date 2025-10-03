@@ -101,6 +101,10 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyMan::
 	msgbox LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty, MSGBOX_NPC
 	end
 
+LilycoveCity_DepartmentStoreRooftop_EventScript_BrokeWoman::
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_FlatBroke, MSGBOX_NPC
+	end
+
 LilycoveCity_DepartmentStoreRooftop_EventScript_VendingMachine::
 	lockall
 	message LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike
@@ -235,6 +239,10 @@ LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
 
 LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
 	.string "Ohh… I'm bone-dry thirsty!$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_FlatBroke:
+	.string "I spent way too much money today…\n"
+	.string "Now I'm flat broke…$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
 	.string "It's a VENDING MACHINE.\n"
