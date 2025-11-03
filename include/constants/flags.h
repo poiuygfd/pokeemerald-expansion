@@ -683,8 +683,8 @@
 #define FLAG_MELOETTA_MASTER_WON  0x279 // Winning a Master Contest triggers Meloetta spawn in Lilycove
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_DAD  0x27A // Used for revamped game intro
 #define FLAG_HIDE_LITTLEROOT_TOWN_DAD_OUTSIDE  0x27B // Same as above
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
+#define FLAG_HIDE_VERDANTURF_TOWN_TEAM_AQUA  0x27C // Used for Team Aqua Shelly in Verdanturf
+#define FLAG_HIDE_VERDANTURF_TOWN_DEVON_EMPLOYEE  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag

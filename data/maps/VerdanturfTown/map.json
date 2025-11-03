@@ -77,6 +77,76 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VerdanturfTown_EventScript_Camper",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_VERDANTURF_SHELLY",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VERDANTURF_TOWN_TEAM_AQUA"
+    },
+    {
+      "local_id": "LOCALID_VERDANTURF_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VERDANTURF_TOWN_TEAM_AQUA"
+    },
+    {
+      "local_id": "LOCALID_VERDANTURF_WALLY",
+      "graphics_id": "OBJ_EVENT_GFX_WALLY",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VERDANTURF_TOWN_TEAM_AQUA"
+    },
+    {
+      "local_id": "LOCALID_VERDANTURF_WANDAS_BF",
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VERDANTURF_TOWN_DEVON_EMPLOYEE"
+    },
+    {
+      "local_id": "LOCALID_VERDANTURF_DEVON_EMPLOYEE",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VERDANTURF_TOWN_DEVON_EMPLOYEE"
     }
   ],
   "warp_events": [
@@ -130,7 +200,53 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VERDANTURF_TOWN_STATE",
+      "var_value": "0",
+      "script": "VerdanturfTown_EventScript_AquaTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_VERDANTURF_TOWN_STATE",
+      "var_value": "0",
+      "script": "VerdanturfTown_EventScript_AquaTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_VERDANTURF_TOWN_STATE",
+      "var_value": "0",
+      "script": "VerdanturfTown_EventScript_AquaTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_VERDANTURF_TOWN_STATE",
+      "var_value": "0",
+      "script": "VerdanturfTown_EventScript_AquaTrigger4"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_VERDANTURF_TOWN_STATE",
+      "var_value": "0",
+      "script": "VerdanturfTown_EventScript_AquaTrigger5"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

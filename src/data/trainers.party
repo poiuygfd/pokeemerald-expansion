@@ -20515,6 +20515,30 @@ Nature: Adamant
 - Rock Slide
 - Dragon Dance
 
+=== TRAINER_SHELLY_VERDANTURF ===
+Name: SHELLY
+Class: Aqua Admin
+Pic: Aqua Admin F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Poochyena
+Level: 13
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
+Carvanha
+Level: 13
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
+Arrokuda
+Level: 15
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
 === TRAINER_RED ===
 Name: RED
 Class: Rival

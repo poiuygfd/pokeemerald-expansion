@@ -302,80 +302,73 @@ RusturfTunnel_EventScript_Grunt::
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
-	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
-	giveitem ITEM_DEVON_PARTS
+	msgbox RusturfTunnel_Text_AGruntsDetermination, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
-	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntEscape
+	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntCharge
+	delay 52
+	playse SE_M_ROCK_THROW
+	applymovement LOCALID_RUSTURF_TUNNEL_ROCK, Movement_SmashRock
 	waitmovement 0
 	removeobject LOCALID_RUSTURF_TUNNEL_GRUNT
-	delay 50
-	addobject LOCALID_RUSTURF_TUNNEL_BRINEY
-	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
+	delay 60
+	addobject LOCALID_RUSTURF_TUNNEL_WANDAS_BF
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_WandaBFApproachPeeko
 	waitmovement 0
-	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerMoveAsideForBriney
-	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko2
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox RusturfTunnel_Text_PeekoGladToSeeYouSafe, MSGBOX_DEFAULT
-	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, Common_Movement_FacePlayer
+	msgbox RusturfTunnel_Text_WhatWasThatCrash, MSGBOX_DEFAULT
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	message RusturfTunnel_Text_ThankYouLetsGoHomePeeko
+	msgbox RusturfTunnel_Text_RescuingPeeko, MSGBOX_DEFAULT
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	message RusturfTunnel_Text_DivideAndConquer
 	waitmessage
 	waitse
 	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
 	waitbuttonpress
 	waitmoncry
 	closemessage
-	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchBrineyExit
-	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyExit
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_WandaBFExit
 	applymovement LOCALID_RUSTURF_TUNNEL_PEEKO, RusturfTunnel_Movement_PeekoExit
 	waitmovement 0
-	removeobject LOCALID_RUSTURF_TUNNEL_BRINEY
+	removeobject LOCALID_RUSTURF_TUNNEL_WANDAS_BF
 	removeobject LOCALID_RUSTURF_TUNNEL_PEEKO
-	clearflag FLAG_DEVON_GOODS_STOLEN
-	setflag FLAG_RECOVERED_DEVON_GOODS
-	setvar VAR_RUSTBORO_CITY_STATE, 4
-	setvar VAR_BRINEY_HOUSE_STATE, 1
+	removeobject LOCALID_RUSTURF_TUNNEL_ROCK
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND
+	setflag FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1
 	release
 	end
 
-RusturfTunnel_Movement_PushPlayerAsideForGrunt:
+RusturfTunnel_Movement_GruntCharge:
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+RusturfTunnel_Movement_WandaBFApproachPeeko:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	face_down
-	lock_facing_direction
-	walk_up
-	unlock_facing_direction
-	walk_in_place_faster_left
 	step_end
 
-RusturfTunnel_Movement_PlayerMoveAsideForBriney:
-	walk_down
-	walk_in_place_faster_up
-	step_end
-
-RusturfTunnel_Movement_GruntEscape:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-RusturfTunnel_Movement_BrineyApproachPeeko1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-RusturfTunnel_Movement_BrineyExit:
+RusturfTunnel_Movement_WandaBFExit:
 	walk_left
 	walk_left
 	walk_left
@@ -387,18 +380,6 @@ RusturfTunnel_Movement_BrineyExit:
 	walk_left
 	walk_left
 	walk_left
-	step_end
-
-RusturfTunnel_Movement_PlayerWatchBrineyExit:
-	delay_16
-	delay_8
-	delay_4
-	walk_in_place_faster_left
-	step_end
-
-RusturfTunnel_Movement_BrineyApproachPeeko2:
-	delay_16
-	walk_right
 	step_end
 
 RusturfTunnel_Movement_PeekoExit:
@@ -438,33 +419,44 @@ RusturfTunnel_Text_GruntDefeat:
 	.string "Urrrggh! My career in crime comes to\n"
 	.string "a dead end!$"
 
-RusturfTunnel_Text_GruntTakePackage:
+RusturfTunnel_Text_AGruntsDetermination:
 	.string "This is plain not right…\p"
-	.string "The BOSS told me this would be a\n"
+	.string "SHELLY told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
 	.string "from DEVON.\p"
 	.string "Tch!\n"
-	.string "You want it back that badly, take it!$"
+	.string "I was banking on getting a raise today!\p"
+	.string "No… I won't let this end here!\p"
+	.string "I WILL get this package to SHELLY!\n"
+	.string "Just watch me!!$"
 
-RusturfTunnel_Text_PeekoGladToSeeYouSafe:
-	.string "PEEKO!\n"
-	.string "Am I glad to see you're safe!$"
-
-RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
-	.string "PEEKO owes her life to you!\p"
-	.string "They call me MR. BRINEY.\n"
-	.string "And, you are?\p"
+RusturfTunnel_Text_WhatWasThatCrash:
+	.string "What was that loud crash?!\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "Ah, so you are {PLAYER}{KUN}!\n"
-	.string "I sincerely thank you!\p"
-	.string "Now, if there's anything that troubles\n"
-	.string "you, don't hesitate to tell me!\p"
-	.string "You can usually find me in my cottage\n"
-	.string "by the sea near PETALBURG WOODS.\p"
-	.string "Come, PEEKO, we should make our way\n"
-	.string "home.\p"
+	.string "Seriously?!\n"
+	.string "He just ran right through the rock?!\p"
+	.string "That darn TEAM AQUA goon, he could have\n"
+	.string "really set off the POKéMON that live\l"
+	.string "in this cave!\p"
+	.string "They startle really easily and can\n"
+	.string "cause a lot of damage with their voices!\p"
+	.string "Thankfully, it seems alright.$"
+
+RusturfTunnel_Text_RescuingPeeko:
+	.string "Is this the POKéMON that AQUA guy\n"
+	.string "ran off with?\p"
+	.string "I talked to that old man, BRINEY.\n"
+	.string "He said some scoundrel made off with\l"
+	.string "his POKéMON.$"
+
+RusturfTunnel_Text_DivideAndConquer:
+	.string "Alright, let's divide and conquer!\p"
+	.string "I'll get this POKéMON back to BRINEY\n"
+	.string "safely and in one piece.\p"
+	.string "You chase after that GRUNT!\n"
+	.string "I'll meet up with you afterwards!\p"
 	.string "PEEKO: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
