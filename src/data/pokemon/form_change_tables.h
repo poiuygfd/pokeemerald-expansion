@@ -123,7 +123,7 @@ static const struct FormChange sSlowbroFormChangeTable[] = {
 };
 
 static const struct FormChange sSlowbroGalarFormChangeTable[] = {
-    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SLOWBRO_MEGA_G, ITEM_SLOWBRONITE},
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SLOWBRO_MEGA_G, ITEM_SLOWBRONITE_G},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_SLOWPOKE

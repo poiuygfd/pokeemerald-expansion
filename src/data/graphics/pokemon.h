@@ -26778,6 +26778,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_shiny.gbapal");
 
+    const u32 gMonFrontPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/front.4bpp.smol");
+    const u16 gMonPalette_CastformMega[] = INCBIN_U16("graphics/pokemon/castform/mega/normal.gbapal");
+    const u32 gMonBackPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMega[] = INCBIN_U16("graphics/pokemon/castform/mega/shiny.gbapal");
+    const u8 gMonIcon_CastformMega[] = INCBIN_U8("graphics/pokemon/castform/mega/icon.4bpp");
+
     const u32 gMonFrontPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/front.4bpp.smol");
     const u16 gMonPalette_SlowbroMegaG[] = INCBIN_U16("graphics/pokemon/slowbro/mega_g/normal.gbapal");
     const u32 gMonBackPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/back.4bpp.smol");

@@ -2112,5 +2112,11 @@ const u16 gItemIconPalette_Hatchet[] = INCBIN_U16("graphics/items/icon_palettes/
 const u32 gItemIcon_Pickaxe[] = INCBIN_U32("graphics/items/icons/pickaxe.4bpp.lz");
 const u16 gItemIconPalette_Pickaxe[] = INCBIN_U16("graphics/items/icon_palettes/pickaxe.gbapal");
 
+const u32 gItemIcon_Castformite[] = INCBIN_U32("graphics/items/icons/castformite.4bpp.lz");
+const u16 gItemIconPalette_Castformite[] = INCBIN_U16("graphics/items/icon_palettes/castformite.gbapal");
+
+const u32 gItemIcon_SlowbroniteG[] = INCBIN_U32("graphics/items/icons/slowbronite_g.4bpp.lz");
+const u16 gItemIconPalette_SlowbroniteG[] = INCBIN_U16("graphics/items/icon_palettes/slowbronite_g.gbapal");
+
 const u32 gItemIcon_CharizarditeZ[] = INCBIN_U32("graphics/items/icons/charizardite_z.4bpp.lz");
 const u16 gItemIconPalette_CharizarditeZ[] = INCBIN_U16("graphics/items/icon_palettes/charizardite_z.gbapal");

@@ -14931,8 +14931,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
-        .iconPic = gItemIcon_Aggronite,
-        .iconPalette = gItemIconPalette_Aggronite,
+        .iconPic = gItemIcon_Castformite,
+        .iconPalette = gItemIconPalette_Castformite,
     },
 
     [ITEM_SLOWBRONITE_G] =
@@ -14950,8 +14950,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
-        .iconPic = gItemIcon_Slowbronite,
-        .iconPalette = gItemIconPalette_Slowbronite,
+        .iconPic = gItemIcon_SlowbroniteG,
+        .iconPalette = gItemIconPalette_SlowbroniteG,
     },
 
     [ITEM_CHARIZARDITE_Z] =

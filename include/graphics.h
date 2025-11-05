@@ -1750,6 +1750,10 @@ extern const u16 gItemIconPalette_Hatchet[];
 extern const u32 gItemIcon_Pickaxe[];
 extern const u16 gItemIconPalette_Pickaxe[];
 
+extern const u32 gItemIcon_Castformite[];
+extern const u16 gItemIconPalette_Castformite[];
+extern const u32 gItemIcon_SlowbroniteG[];
+extern const u16 gItemIconPalette_SlowbroniteG[];
 extern const u32 gItemIcon_CharizarditeZ[];
 extern const u16 gItemIconPalette_CharizarditeZ[];
 

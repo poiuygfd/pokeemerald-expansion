@@ -535,22 +535,22 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .pokemonOffset = -5,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_CastformNormal,
+        .frontPic = gMonFrontPic_CastformMega,
         .frontPicSize = MON_COORDS_SIZE(24, 32),
         .frontPicYOffset = 17,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .enemyMonElevation = 16,
-        .backPic = gMonBackPic_CastformNormal,
+        .enemyMonElevation = 17,
+        .backPic = gMonBackPic_CastformMega,
         .backPicSize = MON_COORDS_SIZE(32, 64),
-        .backPicYOffset = 0,
+        .backPicYOffset = 2,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_CastformNormal,
-        .shinyPalette = gMonShinyPalette_CastformNormal,
-        .iconSprite = gMonIcon_CastformNormal,
+        .palette = gMonPalette_CastformMega,
+        .shinyPalette = gMonShinyPalette_CastformMega,
+        .iconSprite = gMonIcon_CastformMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(1, 10, SHADOW_SIZE_S)
+        SHADOW(1, 12, SHADOW_SIZE_M)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sCastformLevelUpLearnset,
@@ -646,9 +646,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .weight = 12,
         .description = COMPOUND_STRING(
             "When Mega Evolved, Rainy Form Castform's\n"
-            "immense rainstorms make those caught nearby\n"
-            "feel like they are in the middle of a typhoon\n"
-            "even if the sky was dry mere moments earlier."),
+            "immense rainstorms make those nearby feel\n"
+            "like they are in the middle of a typhoon\n"
+            "even if the sky was dry moments earlier."),
         .pokemonScale = 328,
         .pokemonOffset = -5,
         .trainerScale = 256,
@@ -706,7 +706,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .description = COMPOUND_STRING(
             "When Mega Evolved, Snowy Form Castform's\n"
             "intense chills make those around it feel as\n"
-            "if they were caught in a ferocious blizzard,\n"
+            "if they were caught in a ferocious blizzard\n"
             "even on a hot Summer day."),
         .pokemonScale = 328,
         .pokemonOffset = -5,
