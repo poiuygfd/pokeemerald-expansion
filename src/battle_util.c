@@ -2385,6 +2385,42 @@ static enum MoveCanceller CancellerPowderStatus(void)
     return MOVE_STEP_SUCCESS;
 }
 
+static enum MoveCanceller CancellerWeatherman(void)
+{
+    u32 moveType = GetBattleMoveType(gCurrentMove);
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_WEATHERMAN)
+    {
+        if (moveType == TYPE_FIRE && !(gBattleWeather & (B_WEATHER_SUN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SUN, TRUE))
+            {
+                gBattlerAbility = gBattlerAttacker;
+                BattleScriptCall(BattleScript_WeathermanActivatesSun);
+                return MOVE_STEP_BREAK;
+            }
+        }
+        else if (moveType == TYPE_WATER && !(gBattleWeather & (B_WEATHER_RAIN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_RAIN, TRUE))
+            {
+                gBattlerAbility = gBattlerAttacker;
+                BattleScriptCall(BattleScript_WeathermanActivatesRain);
+                return MOVE_STEP_BREAK;
+            }
+        }
+        else if (moveType == TYPE_ICE && !(gBattleWeather & (B_WEATHER_SNOW | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SNOW, TRUE))
+            {
+                gBattlerAbility = gBattlerAttacker;
+                BattleScriptCall(BattleScript_WeathermanActivatesSnow);
+                return MOVE_STEP_BREAK;
+            }
+        }
+    }
+    return MOVE_STEP_SUCCESS;
+}
+
 static enum MoveCanceller CancellerProtean(void)
 {
     u32 moveType = GetBattleMoveType(gCurrentMove);
@@ -2608,6 +2644,7 @@ static enum MoveCanceller (*const sMoveSuccessOrderCancellers[])(void) =
     [CANCELLER_WEATHER_PRIMAL] = CancellerWeatherPrimal,
     [CANCELLER_DYNAMAX_BLOCKED] = CancellerDynamaxBlocked,
     [CANCELLER_POWDER_STATUS] = CancellerPowderStatus,
+    [CANCELLER_WEATHERMAN] = CancellerWeatherman,
     [CANCELLER_PROTEAN] = CancellerProtean,
     [CANCELLER_PSYCHIC_TERRAIN] = CancellerPsychicTerrain,
     [CANCELLER_EXPLODING_DAMP] = CancellerExplodingDamp,
@@ -5235,6 +5272,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
         switch (gLastUsedAbility)
         {
         case ABILITY_FORECAST:
+        case ABILITY_WEATHERMAN:
         case ABILITY_FLOWER_GIFT:
             if ((IsBattlerWeatherAffected(battler, gBattleWeather)
              || gBattleWeather == B_WEATHER_NONE

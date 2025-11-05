@@ -1010,9 +1010,11 @@
 #define ITEM_CLIMBING_GEAR 843
 #define ITEM_HM10_REPLACE 844
 
-#define ITEM_CHARIZARDITE_Z 845
+#define ITEM_CASTFORMITE 845
+#define ITEM_SLOWBRONITE_G 846
+#define ITEM_CHARIZARDITE_Z 847
 
-#define ITEMS_COUNT 846
+#define ITEMS_COUNT 848
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

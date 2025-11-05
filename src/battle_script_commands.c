@@ -7883,6 +7883,7 @@ static bool32 DoSwitchInEffectsForBattler(u32 battler)
                     return TRUE;
                 break;
             case ABILITY_FORECAST:
+            case ABILITY_WEATHERMAN:
             case ABILITY_FLOWER_GIFT:
             case ABILITY_PROTOSYNTHESIS:
                 if (AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, i, 0, 0, 0))

@@ -2440,6 +2440,15 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
+    [ABILITY_WEATHERMAN] =
+    {
+        .name = _("Weatherman"),
+        .description = COMPOUND_STRING("Fr/Wtr/Ice change weather."),
+        .aiRating = 9,
+        .cantBeCopied = TRUE,
+        .cantBeTraced = TRUE,
+    },
+
     [ABILITY_REACTIVE_FIRE] =
     {
         .name = _("Reactive Fire"),

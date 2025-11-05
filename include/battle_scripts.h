@@ -543,6 +543,9 @@ extern const u8 BattleScript_AlreadyParalyzed[];
 extern const u8 BattleScript_AlreadyBurned[];
 extern const u8 BattleScript_PrintAbilityMadeIneffective[];
 extern const u8 BattleScript_ItDoesntAffectFoe[];
+extern const u8 BattleScript_WeathermanActivatesSun[];
+extern const u8 BattleScript_WeathermanActivatesRain[];
+extern const u8 BattleScript_WeathermanActivatesSnow[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];
