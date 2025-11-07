@@ -187,6 +187,24 @@ Route103_Movement_WatchRivalExitFacingEastOrWest:
 	walk_in_place_faster_down
 	step_end
 
+Route103_EventScript_Weatherman::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_WEATHERMAN, Route103_EventScript_WeathermanDefeated
+	msgbox Route103_Text_WeatherIsNice, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WEATHERMAN_FINAL, Route103_Text_YouAreUnbreakable
+	msgbox Route103_Text_ATasteOfOurPower, MSGBOX_DEFAULT
+	giveitem ITEM_CASTFORMITE
+	msgbox Route103_Text_ComeBattleUsAgain, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_WEATHERMAN
+	release
+	end
+
+Route103_EventScript_WeathermanDefeated::
+	msgbox Route103_Text_ComeBattleUsAgain, MSGBOX_DEFAULT
+	release
+	end
+
 Route103_EventScript_Boy::
 	msgbox Route103_Text_ShouldHaveBroughtPotion, MSGBOX_NPC
 	end
@@ -346,6 +364,68 @@ Route103_Text_ShortcutToOldale:
 	.string "If you cross the sea from here,\n"
 	.string "it'll be a shortcut to OLDALE TOWN.\p"
 	.string "Fufufu, that's useful, isn't it?$"
+
+Route103_Text_WeatherIsNice:
+	.string "The weather is nice here, isn't it?\p"
+	.string "No pouring rain, no blistering heat,\n"
+	.string "no freezing cold…\p"
+	.string "Its just so… peaceful.\p"
+	.string "But that's the thing about weather.\n"
+	.string "It can change at any time.\p"
+	.string "We've changed too, you know, me\n"
+	.string "and CASTFORM.\p"
+	.string "I already felt that creating a new\n"
+	.string "artificial POKéMON was a breakthrough.\p"
+	.string "But now, I've broken through another\n"
+	.string "wall, one I thought unbreakable.\p"
+	.string "And now, me and CASTFORM are going to\n"
+	.string "show you…\p"
+	.string "Show you the new power we've obtained!\p"
+	.string "Are you ready?\n"
+	.string "I sure hope you are, because we can't\l"
+	.string "wait any longer!\p"
+	.string "Come at us!$"
+
+Route103_Text_YouAreUnbreakable:
+	.string "Yeesh, you're like an unbreakable wall\n"
+	.string "yourself, you know…$"
+
+Route103_Text_ATasteOfOurPower:
+	.string "You really are on another level.\p"
+	.string "That being said, this time I don't\n"
+	.string "believe it was the fault of either\l"
+	.string "myself or CASTFORM.\p"
+	.string "Maybe those other times, too.\n"
+	.string "You're just freakishly strong!\p"
+	.string "However, I am truly grateful to you\n"
+	.string "for pushing me and CASTFORM so hard.\p"
+	.string "Through a combination of a lot of work,\n"
+	.string "research, experimental sciences and\l"
+	.string "most importantly, the unbreakable bond\l"
+	.string "me and CASTFORM forged through our\l"
+	.string "desire to beat you…\p"
+	.string "I have created the world's first ever\n"
+	.string "synthetic MEGA STONE.\p"
+	.string "And, by extension, the world's first\n"
+	.string "man-made MEGA EVOLUTION!\p"
+	.string "And you know what?\n"
+	.string "It wasn't just one stone I made.\p"
+	.string "Here, as a token of my gratitude, I want\n"
+	.string "you to take this CASTFORMITE.\p"
+	.string "I already know you have a CASTFORM of\n"
+	.string "your own.\p" 
+	.string "I caught up with my ex-colleagues after\n"
+	.string "my breakthrough and was shocked to hear\l"
+	.string "you saved the whole WEATHER INSTITUTE!\p"
+	.string "Be sure to give MEGA CASTFORM a try!$"
+
+Route103_Text_ComeBattleUsAgain:
+	.string "For now, I think I'm going to try and\n"
+	.string "become even stronger myself.\p"
+	.string "Perhaps building a team of more POKéMON\n"
+	.string "such that CASTFORM does not bear this\l"
+	.string "burden alone may help too.\p"
+	.string "When that happens I'd like a rematch!$"
 
 Route103_Text_RouteSign:
 	.string "ROUTE 103\n"

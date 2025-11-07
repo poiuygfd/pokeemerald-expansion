@@ -684,12 +684,12 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_DAD  0x27A // Used for revamped game intro
 #define FLAG_HIDE_LITTLEROOT_TOWN_DAD_OUTSIDE  0x27B // Same as above
 #define FLAG_HIDE_VERDANTURF_TOWN_TEAM_AQUA  0x27C // Used for Team Aqua Shelly in Verdanturf
-#define FLAG_HIDE_VERDANTURF_TOWN_DEVON_EMPLOYEE  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
+#define FLAG_HIDE_VERDANTURF_TOWN_DEVON_EMPLOYEE  0x27D // Also used for Verdanturf
+#define FLAG_HIDE_WEATHERMAN_RAIN  0x27E // Weatherman's first appearance on Route 127
+#define FLAG_HIDE_WEATHERMAN_SUN  0x27F // Weatherman's second appearance on Mt. Chimney
+#define FLAG_HIDE_WEATHERMAN_SNOW  0x280 // Weatherman's third appearance in Shoal Cave
+#define FLAG_HIDE_WEATHERMAN_FINAL  0x281 // Weatherman's final appearance
+#define FLAG_DEFEATED_WEATHERMAN  0x282 // Defeated Weatherman
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
@@ -1234,7 +1234,7 @@
 
 #define FLAG_ITEM_ROUTE_110_MANECTITE                               0x493 // Manectric Mega Stone
 #define FLAG_ITEM_ROUTE_111_GALLADITE                               0x494 // Gallade Mega Stone
-#define FLAG_ITEM_SHOAL_CAVE_GLALITITE                              0x495 // Glalie Mega Stone
+#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_BANETTITE                                 0x496 // Banette Mega Stone
 #define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
 #define FLAG_ITEM_ROUTE_114_ALTARIANITE                             0x498 // Altaria Mega Stone

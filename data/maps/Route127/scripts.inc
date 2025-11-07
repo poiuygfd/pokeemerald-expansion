@@ -20,6 +20,36 @@ Route127_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+Route127_EventScript_WeathermanRain::
+	lock
+	faceplayer
+	goto_if_eq VAR_WEATHERMAN_STATE, 1, Route127_EventScript_BattleWeatherman
+	msgbox Route127_Text_ExResearcher, MSGBOX_DEFAULT
+	setvar VAR_WEATHERMAN_STATE, 1
+	release
+	end
+
+Route127_EventScript_BattleWeatherman::
+	msgbox Route127_Text_ReadyToBattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route127_EventScript_WeathermanWait
+	msgbox Route127_Text_HereWeCome, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WEATHERMAN_RAIN, Route127_Text_ExperimentFailed
+	msgbox Route127_Text_LetsTryFireNext, MSGBOX_DEFAULT
+	closemessage
+	fadescreenspeed FADE_TO_BLACK, 2
+	setflag FLAG_HIDE_WEATHERMAN_RAIN
+	clearflag FLAG_HIDE_WEATHERMAN_SUN
+	removeobject LOCALID_ROUTE_127_WEATHERMAN
+	delay 10
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+Route127_EventScript_WeathermanWait::
+	msgbox Route127_Text_TakeTimeToPrepare, MSGBOX_DEFAULT
+	release
+	end
+
 Route127_EventScript_Camden::
 	trainerbattle_single TRAINER_CAMDEN, Route127_Text_CamdenIntro, Route127_Text_CamdenDefeat
 	msgbox Route127_Text_CamdenPostBattle, MSGBOX_AUTOCLOSE
@@ -75,4 +105,50 @@ Route127_EventScript_RematchKoji::
 	trainerbattle_rematch TRAINER_KOJI_1, Route127_Text_KojiRematchIntro, Route127_Text_KojiRematchDefeat
 	msgbox Route127_Text_KojiPostRematch, MSGBOX_AUTOCLOSE
 	end
+
+Route127_Text_ExResearcher:
+	.string "Hm?\p"
+	.string "How'd you find me in a secluded\n"
+	.string "place like this?\p"
+	.string "Well, perhaps you can help me out\n"
+	.string "since you're here.\p"
+	.string "I'm an ex-researcher for the WEATHER\n"
+	.string "INSTITUTE near FORTREE.\p"
+	.string "At the WEATHER INSTITUTE, we were able\n"
+	.string "to achieve something truly marvelous\l"
+	.string "and create an entirely new POKéMON.\p"
+	.string "I am now trying to draw out the true\n"
+	.string "potential of this POKéMON, CASTFORM.\p"
+	.string "Please, battle me!\p"
+	.string "I want to expose CASTFORM to the\n"
+	.string "very essence of WATER here in the\l"
+	.string "middle of the ocean to draw out\l"
+	.string "its true hidden powers!\p"
+	.string "When you're ready, talk to me again.$"
+
+Route127_Text_ReadyToBattle:
+	.string "Ready to battle me and my CASTFORM?$"
+
+Route127_Text_TakeTimeToPrepare:
+	.string "No worries, take all the time you\n"
+	.string "need to prepare.$"
+
+Route127_Text_HereWeCome:
+	.string "Alright then, here we come!$"
+
+Route127_Text_ExperimentFailed:
+	.string "Experiment failed…$"
+
+Route127_Text_LetsTryFireNext:
+	.string "Well that could have went better.\p"
+	.string "I definitely feel like I wasn't able\n"
+	.string "to draw out CASTFORM's power there…\p"
+	.string "Well, onto the next location.\p"
+	.string "Somewhere where I can maybe expose\n"
+	.string "CASTFORM to the true essence of FIRE…\p"
+	.string "So it would have to be somewhere\n"
+	.string "that's really, really hot.\p"
+	.string "Well, I'll think of something.\n"
+	.string "If I see you again, then please battle\l"
+	.string "me once more if you wouldn't mind.$"
 

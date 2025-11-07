@@ -20539,6 +20539,97 @@ Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
 
+=== TRAINER_WEATHERMAN_RAIN ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Hurricane
+- Thunder
+
+Pelipper @ Damp Rock
+Level: 38
+Ability: Drizzle
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Tailwind
+- Wide Guard
+
+=== TRAINER_WEATHERMAN_SUN ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Solar Beam
+
+Torkoal @ Heat Rock
+Level: 38
+Ability: Drought
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Will-O-Wisp
+- Stealth Rock
+
+=== TRAINER_WEATHERMAN_SNOW ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Blizzard
+
+Ninetales-Alola @ Icy Rock
+Level: 38
+Ability: Snow Warning
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Aurora Veil
+- Encore
+
+=== TRAINER_WEATHERMAN_FINAL ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Castform @ Castformite
+Level: 45
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Weather Ball
+- Flamethrower
+- Hydro Pump
+- Blizzard
+
 === TRAINER_RED ===
 Name: RED
 Class: Rival

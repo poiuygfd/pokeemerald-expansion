@@ -44,6 +44,67 @@ ShoalCave_LowTideEntranceRoom_Text_NoSpaceInYourBag:
 	.string "You should make room and come back\n"
 	.string "for a SHELL BELL.$"
 
+ShoalCave_Text_GlalieIsTheBest:
+	.string "Here in SHOAL CAVE, you can find a\n"
+	.string "POKéMON called SNORUNT.\p"
+	.string "SNORUNT can evolve into two different\n"
+	.string "species of POKéMON.\p"
+	.string "Now, any true TRAINER worth their salt\n"
+	.string "knows that GLALIE is the best evolution.\p"
+	.string "With its HIDDEN ABILITY, MOODY, it can\n"
+	.string "snowball out of control.\p"
+	.string "It even has a MEGA EVOLUTION that can\n"
+	.string "turn NORMAL moves into ICE moves that\l"
+	.string "really pack a punch.\p"
+	.string "Now, that fool over there has the gall\n"
+	.string "to insist that FROSLASS is better…\p"
+	.string "What utter ignorance, I say!\p"
+	.string "If you want to follow the correct path\n"
+	.string "for SNORUNT, then bring me 8 SHOAL SALT.\p"
+	.string "Do that, and I know I can trust you with\n"
+	.string "the power of a GLALITITE.$"
+
+ShoalCave_Text_DidYouGetShoalSalt:
+	.string "Did you bring 8 SHOAL SALT to trade\n"
+	.string "for a GLALITITE?$"
+
+ShoalCave_Text_CanBeFoundInLowTide:
+	.string "I understand, they can be hard to gather.\n"
+	.string "You can find SHOAL SALT during low tide.\p"
+	.string "You may not find enough in a single day\n"
+	.string "though, so be sure to keep checking!$"
+
+ShoalCave_Text_FroslassIsTheBest:
+	.string "Here in SHOAL CAVE, you can find a\n"
+	.string "POKéMON called SNORUNT.\p"
+	.string "SNORUNT can evolve into two different\n"
+	.string "species of POKéMON.\p"
+	.string "It doesn't take a genius though to see\n"
+	.string "that FROSLASS is the best evolution.\p"
+	.string "The blistering speed of FROSLASS lets\n"
+	.string "it get off useful support like SPIKES\l"
+	.string "no problem at all.\p"
+	.string "It even has a MEGA EVOLUTION with truly\n"
+	.string "incredible speed and power that the\l"
+	.string "other evolution can't hope to match.\p"
+	.string "Now, that buffoon over there somehow\n"
+	.string "believes that GLALIE is better…\p"
+	.string "What complete idiocy, I say!\p"
+	.string "If you want to follow the correct path\n"
+	.string "for SNORUNT, then bring me 8 SHOAL SHELLS.\p"
+	.string "Do that, and I know I can trust you with\n"
+	.string "the power of a FROSLASSITE.$"
+
+ShoalCave_Text_DidYouGetShoalShells:
+	.string "Did you bring 8 SHOAL SHELLS to trade\n"
+	.string "for a FROSLASSITE?$"
+
+ShoalCave_Text_CanBeFoundInHighTide:
+	.string "I understand, they can be hard to gather.\n"
+	.string "You can find SHOAL SHELLS during high tide.\p"
+	.string "You may not find enough in a single day\n"
+	.string "though, so be sure to keep checking!$"
+
 ShoalCave_Text_WasShoalSaltNowNothing:
 	.string "There was some SHOAL SALT here.\n"
 	.string "But, there's nothing here now.$"

@@ -167,8 +167,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 13,
-      "y": 6,
+      "x": 51,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -177,6 +177,20 @@
       "trainer_sight_or_berry_tree_id": "ITEM_RARE_CANDY",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_127_RARE_CANDY"
+    },
+    {
+      "local_id": "LOCALID_ROUTE_127_WEATHERMAN",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route127_EventScript_WeathermanRain",
+      "flag": "FLAG_HIDE_WEATHERMAN_RAIN"
     }
   ],
   "warp_events": [],

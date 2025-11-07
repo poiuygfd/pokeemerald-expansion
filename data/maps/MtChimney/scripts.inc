@@ -147,6 +147,36 @@ MtChimney_EventScript_NotEnoughMoney::
 	release
 	end
 
+MtChimney_EventScript_WeathermanSun::
+	lock
+	faceplayer
+	goto_if_eq VAR_WEATHERMAN_STATE, 2, MtChimney_EventScript_BattleWeatherman
+	msgbox MtChimney_Text_AHotExperiment, MSGBOX_DEFAULT
+	setvar VAR_WEATHERMAN_STATE, 2
+	release
+	end
+
+MtChimney_EventScript_BattleWeatherman::
+	msgbox MtChimney_Text_ReadyToBegin, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MtChimney_EventScript_WeathermanWait
+	msgbox MtChimney_Text_LetUsCommence, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WEATHERMAN_SUN, MtChimney_Text_AnotherFailure
+	msgbox MtChimney_Text_ToTheCold, MSGBOX_DEFAULT
+	closemessage
+	fadescreenspeed FADE_TO_BLACK, 2
+	setflag FLAG_HIDE_WEATHERMAN_SUN
+	clearflag FLAG_HIDE_WEATHERMAN_SNOW
+	removeobject LOCALID_MT_CHIMNEY_WEATHERMAN
+	delay 10
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+MtChimney_EventScript_WeathermanWait::
+	msgbox MtChimney_Text_DontTakeTooLong, MSGBOX_DEFAULT
+	release
+	end
+
 MtChimney_Movement_ArchieApproachPlayerEast:
 	walk_up
 	walk_up
@@ -729,6 +759,46 @@ MtChimney_Text_YouveNotGotTheMoney:
 
 MtChimney_Text_OhFineThen:
 	.string "Oh, fine then.$"
+
+MtChimney_Text_AHotExperiment:
+	.string "So, we meet again after all.\p"
+	.string "Truth be told, I was hoping we would.\n"
+	.string "You were a great help to me before.\p"
+	.string "This time, I've come here to a volcano.\n"
+	.string "I'm hoping that a place this unbearably\l"
+	.string "hot might be what CASTFORM needs to\l"
+	.string "truly harness the essence of FIRE.\p"
+	.string "Once again, when you've prepared well,\n"
+	.string "I would like to have a battle with you.\p"
+	.string "Come talk to me when you've prepared\n"
+	.string "yourself adequately.$"
+
+MtChimney_Text_ReadyToBegin:
+	.string "Ready to begin the experiment?$"
+
+MtChimney_Text_DontTakeTooLong:
+	.string "That's fine, make sure you're prepared.\p"
+	.string "Don't take too long though, I don't\n"
+	.string "know how much longer I can last in\l"
+	.string "this heat…$"
+
+MtChimney_Text_LetUsCommence:
+	.string "Alright!\n"
+	.string "Let us commence!$"
+
+MtChimney_Text_AnotherFailure:
+	.string "And that's another failure…$"
+
+MtChimney_Text_ToTheCold:
+	.string "Still not enough?\p"
+	.string "Are you really just that strong?\n"
+	.string "Or is CASTFORM really just that weak?\p"
+	.string "Well, I won't give up here!\n"
+	.string "Onto the next area!\p"
+	.string "Time to find somewhere extra cold for\n"
+	.string "CASTFORM to really embrace the essence\l"
+	.string "of ICE, and so I can cool down a bit.\p"
+	.string "Hopefully I will see you there!$"
 
 MtChimney_Text_MetoriteFittedOnMachine:
 	.string "A METEORITE is fitted on a mysterious\n"
