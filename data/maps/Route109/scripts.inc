@@ -16,6 +16,8 @@ Route109_EventScript_HideInnerTubes::
 	return
 
 Route109_OnTransition:
+	call Common_EventScript_SetupRivalGfxId
+	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_TryShowRegitube
 	end
 
@@ -453,6 +455,228 @@ Route109_EventScript_Zigzagoon::
 	release
 	end
 
+Route109_EventScript_RivalTrigger1::
+	setvar VAR_0x8008, 1
+	goto Route109_EventScript_RivalScene
+	end
+
+Route109_EventScript_RivalTrigger2::
+	setvar VAR_0x8008, 2
+	goto Route109_EventScript_RivalScene
+	end
+
+Route109_EventScript_RivalTrigger3::
+	setvar VAR_0x8008, 3
+	goto Route109_EventScript_RivalScene
+	end
+
+Route109_EventScript_RivalScene::
+	lockall
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route109_EventScript_PlayMayMusic
+	call_if_eq VAR_RESULT, FEMALE, Route109_EventScript_PlayBrendanMusic
+	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_Delay48
+	waitmovement 0
+	delay 30
+	call_if_eq VAR_0x8008, 1, Route109_EventScript_RivalApproachPlayer1
+	call_if_eq VAR_0x8008, 2, Route109_EventScript_RivalApproachPlayer2
+	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalApproachPlayer3
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route109_EventScript_MayBattle
+	goto_if_eq VAR_RESULT, FEMALE, Route109_EventScript_BrendanBattle
+	releaseall
+	end
+
+Route109_EventScript_PlayMayMusic::
+	playbgm MUS_ENCOUNTER_MAY, TRUE
+	return
+
+Route109_EventScript_PlayBrendanMusic::
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	return
+
+Route109_EventScript_MayBattle::
+	msgbox Route109_Text_MayLetsBattle, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, Route109_EventScript_MayBattleTreecko
+	case 1, Route109_EventScript_MayBattleTorchic
+	case 2, Route109_EventScript_MayBattleMudkip
+	end
+
+Route109_EventScript_MayBattleTreecko::
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_109_TREECKO, Route109_Text_MayDefeated
+	goto Route109_EventScript_MayDefeated
+	end
+
+Route109_EventScript_MayBattleTorchic::
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_109_TORCHIC, Route109_Text_MayDefeated
+	goto Route109_EventScript_MayDefeated
+	end
+
+Route109_EventScript_MayBattleMudkip::
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_109_MUDKIP, Route109_Text_MayDefeated
+	goto Route109_EventScript_MayDefeated
+	end
+
+Route109_EventScript_MayDefeated::
+	msgbox Route109_Text_MayTakeThis, MSGBOX_DEFAULT
+	call Route109_EventScript_GiveItemfinder
+	msgbox Route109_Text_MayExplainItemfinder, MSGBOX_DEFAULT
+	goto Route109_EventScript_RivalExit
+	end
+
+Route109_EventScript_BrendanBattle::
+	msgbox Route109_Text_BrendanLetsBattle, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, Route109_EventScript_BrendanBattleTreecko
+	case 1, Route109_EventScript_BrendanBattleTorchic
+	case 2, Route109_EventScript_BrendanBattleMudkip
+	end
+
+Route109_EventScript_BrendanBattleTreecko::
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_109_TREECKO, Route109_Text_BrendanDefeated
+	goto Route109_EventScript_BrendanDefeated
+	end
+
+Route109_EventScript_BrendanBattleTorchic::
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_109_TORCHIC, Route109_Text_BrendanDefeated
+	goto Route109_EventScript_BrendanDefeated
+	end
+
+Route109_EventScript_BrendanBattleMudkip::
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_109_MUDKIP, Route109_Text_BrendanDefeated
+	goto Route109_EventScript_BrendanDefeated
+	end
+
+Route109_EventScript_BrendanDefeated::
+	msgbox Route109_Text_BrendanTakeThis, MSGBOX_DEFAULT
+	call Route109_EventScript_GiveItemfinder
+	msgbox Route109_Text_BrendanExplainItemfinder, MSGBOX_DEFAULT
+	goto Route109_EventScript_RivalExit
+	end
+
+Route109_EventScript_GiveItemfinder::
+	giveitem ITEM_DOWSING_MACHINE
+	return
+
+Route109_EventScript_RivalExit::
+	closemessage
+	call_if_eq VAR_0x8008, 1, Route109_EventScript_MoveRival1
+	call_if_eq VAR_0x8008, 2, Route109_EventScript_MoveRival2
+	call_if_eq VAR_0x8008, 3, Route109_EventScript_MoveRival3
+	setobjectmovementtype LOCALID_ROUTE109_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ROUTE109_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
+	removeobject LOCALID_ROUTE109_RIVAL
+	addobject LOCALID_ROUTE109_RIVAL_ON_BIKE
+	delay 45
+	call_if_eq VAR_0x8008, 1, Route109_EventScript_RivalExit1
+	call_if_eq VAR_0x8008, 2, Route109_EventScript_RivalExit2
+	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalExit3
+	removeobject LOCALID_ROUTE109_RIVAL_ON_BIKE
+	setvar VAR_ROUTE109_STATE, 1
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	releaseall
+	end
+
+Route109_EventScript_RivalApproachPlayer1::
+	applymovement LOCALID_ROUTE109_RIVAL, Route109_Movement_RivalApproachPlayer1
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalApproachPlayer2::
+	applymovement LOCALID_ROUTE109_RIVAL, Route109_Movement_RivalApproachPlayer2
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalApproachPlayer3::
+	applymovement LOCALID_ROUTE109_RIVAL, Route109_Movement_RivalApproachPlayer3
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalExit1::
+	applymovement LOCALID_ROUTE109_RIVAL_ON_BIKE, Route109_Movement_RivalExit1
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalExit2::
+	applymovement LOCALID_ROUTE109_RIVAL_ON_BIKE, Route109_Movement_RivalExit2
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalExit3::
+	applymovement LOCALID_ROUTE109_RIVAL_ON_BIKE, Route109_Movement_RivalExit3
+	waitmovement 0
+	return
+
+Route109_EventScript_MoveRival1::
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 33, 55
+	return
+
+Route109_EventScript_MoveRival2::
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 34, 55
+	return
+
+Route109_EventScript_MoveRival3::
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 35, 55
+	return
+
+Route109_Movement_RivalApproachPlayer1:
+	walk_down
+	walk_left
+	walk_in_place_faster_down
+	step_end
+
+Route109_Movement_RivalApproachPlayer2:
+	walk_down
+	step_end
+
+Route109_Movement_RivalApproachPlayer3:
+	walk_down
+	walk_right
+	walk_in_place_faster_down
+	step_end
+
+Route109_Movement_RivalExit1:
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route109_Movement_RivalExit2:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route109_Movement_RivalExit3:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
 Route109_EventScript_SeashoreHouseSign::
 	msgbox Route109_Text_SeashoreHouseSign, MSGBOX_SIGN
 	end
@@ -667,11 +891,11 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've made land in SLATEPORT!\p"
 	.string "I suppose you're going to visit CAPT.\n"
-	.string "STERN and deliver the DEVON GOODS?$"
+	.string "STERN and deliver the DEVON PARTS?$"
 
 Route109_Text_BrineySailToDewfordQuestion:
 	.string "MR. BRINEY: I thought you're supposed\n"
-	.string "to deliver the DEVON GOODS.\p"
+	.string "to deliver the DEVON PARTS.\p"
 	.string "Would you like to sail back to\n"
 	.string "DEWFORD, then?$"
 
@@ -682,7 +906,7 @@ Route109_Text_BrineyDewfordItIs:
 
 Route109_Text_BrineyDeliverDevonGoods:
 	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the DEVON GOODS. I'll be waiting.$"
+	.string "the DEVON PARTS. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInSlateport:
 	.string "MR. BRINEY: Ahoy! We've made land in\n"
@@ -747,6 +971,58 @@ Route109_Text_ZigzagoonPicksUpLitter:
 
 Route109_Text_ZigzagoonCry:
 	.string "ZIGZAGOON: Guguu?$"
+
+Route109_Text_MayLetsBattle:
+	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
+	.string "While I was searching for other\n"
+	.string "POKéMON, my POKéMON grew stronger.\p"
+	.string "So…\n"
+	.string "How about a little battle?$"
+
+Route109_Text_MayDefeated:
+	.string "Yikes!\n"
+	.string "You're better than I expected!$"
+
+Route109_Text_MayTakeThis:
+	.string "MAY: {PLAYER}{KUN}, you've been busy\n"
+	.string "training, too, haven't you?\p"
+	.string "I think you deserve a reward!\n"
+	.string "This is from me!$"
+
+Route109_Text_MayExplainItemfinder:
+	.string "MAY: That's a DOWSING MACHINE.\p"
+	.string "Try it out. If there is an item that's\n"
+	.string "not visible, it emits a sound.\p"
+	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
+	.string "I know it's a little silly coming from\n"
+	.string "me, but I think you should train a lot\l"
+	.string "harder for the next time.$"
+
+Route109_Text_BrendanLetsBattle:
+	.string "BRENDAN: Hey, {PLAYER}.\n"
+	.string "So this is where you were.\l"
+	.string "How's it going?\p"
+	.string "Have you been raising your POKéMON?\n"
+	.string "I'll check for you.$"
+
+Route109_Text_BrendanDefeated:
+	.string "Hmm…\n"
+	.string "You're pretty good.$"
+
+Route109_Text_BrendanTakeThis:
+	.string "BRENDAN: {PLAYER}, you've trained\n"
+	.string "without me noticing…\p"
+	.string "Good enough!\n"
+	.string "Here, take this.$"
+
+Route109_Text_BrendanExplainItemfinder:
+	.string "BRENDAN: That's a DOWSING MACHINE.\p"
+	.string "Use it to root around for items that\n"
+	.string "aren't visible.\p"
+	.string "If it senses something, it emits\n"
+	.string "a sound.\p"
+	.string "Anyway, I'm off to look for new\n"
+	.string "POKéMON.$"
 
 Route109_Text_SeashoreHouseSign:
 	.string "SEASHORE HOUSE\p"

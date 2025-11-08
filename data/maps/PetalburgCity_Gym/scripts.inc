@@ -53,12 +53,12 @@ PetalburgCity_Gym_EventScript_CheckNormanForRematch::
 	setorcopyvar VAR_TRAINER_BATTLE_OPPONENT_A, TRAINER_NORMAN_1
 	specialvar VAR_RESULT, IsTrainerReadyForRematch
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontMoveNormanToFront
-	goto_if_eq VAR_PETALBURG_GYM_STATE, 8, PetalburgCity_Gym_EventScript_DontMoveNormanToFront
+	goto_if_eq VAR_PETALBURG_GYM_STATE, 9, PetalburgCity_Gym_EventScript_DontMoveNormanToFront
 	setobjectxyperm LOCALID_PETALBURG_GYM_NORMAN, 4, 107
 	return
 
 PetalburgCity_Gym_EventScript_DontMoveNormanToFront::
-	setvar VAR_PETALBURG_GYM_STATE, 8
+	setvar VAR_PETALBURG_GYM_STATE, 9
 	end
 
 PetalburgCity_Gym_OnWarp:
@@ -107,9 +107,10 @@ PetalburgCity_Gym_EventScript_Norman::
 	case 3, PetalburgCity_Gym_EventScript_NormanOneBadge
 	case 4, PetalburgCity_Gym_EventScript_NormanTwoBadges
 	case 5, PetalburgCity_Gym_EventScript_NormanThreeBadges
-	case 6, PetalburgCity_Gym_EventScript_NormanBattle
-	case 7, PetalburgCity_Gym_EventScript_NormanPostBattle
-	case 8, PetalburgCity_Gym_EventScript_NormanRematch
+	case 6, PetalburgCity_Gym_EventScript_NormanMegaRing
+	case 7, PetalburgCity_Gym_EventScript_NormanBattle
+	case 8, PetalburgCity_Gym_EventScript_NormanPostBattle
+	case 9, PetalburgCity_Gym_EventScript_NormanRematch
 	msgbox PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon, MSGBOX_DEFAULT
 	closemessage
 	switch VAR_FACING
@@ -367,15 +368,22 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry::
 	release
 	end
 
-PetalburgCity_Gym_EventScript_NormanBattle::
+PetalburgCity_Gym_EventScript_NormanMegaRing::
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING
+	msgbox PetalburgCity_Gym_Text_ExplainMegaRing, MSGBOX_DEFAULT
+	setvar VAR_PETALBURG_GYM_STATE, 7
+	end
+
+PetalburgCity_Gym_EventScript_NormanBattle::
+	msgbox PetalburgCity_Gym_Text_NormanIntro2, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanDefeat
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_PETALBURG_GYM
-	setvar VAR_PETALBURG_GYM_STATE, 7
+	setvar VAR_PETALBURG_GYM_STATE, 8
 	setflag FLAG_BADGE05_GET
 	setvar VAR_LEVEL_CAP, 33
 	special ResetHealLocationFromDewford
@@ -406,8 +414,6 @@ PetalburgCity_Gym_EventScript_GiveFacade::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	setflag FLAG_RECEIVED_TM_FACADE
 	msgbox PetalburgCity_Gym_Text_ExplainFacade, MSGBOX_DEFAULT
-	giveitem ITEM_MEGA_RING
-	msgbox PetalburgCity_Gym_Text_ExplainMegaRing, MSGBOX_DEFAULT
 	return
 
 PetalburgCity_Gym_EventScript_WallysDadArrivesNorth::
@@ -1253,16 +1259,38 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "DAD: Hm… {PLAYER}, you have gotten\n"
 	.string "stronger.\p"
 	.string "I can tell by the number of BADGES\n"
-	.string "that you've earned.$"
+	.string "that you've earned.\p"
+	.string "Still, I think if you were to earn\n"
+	.string "one more GYM BADGE first, then we\l"
+	.string "could have a battle on equal footing.$"
 
 PetalburgCity_Gym_Text_NormanIntro:
 	.string "DAD: Hm…\n"
 	.string "So, you did get four GYM BADGES.\p"
 	.string "Fine, as I promised, we will have\n"
 	.string "a POKéMON battle.\p"
-	.string "If you can beat me, I'll give you\n"
-	.string "something special as a reward.\p"
-	.string "{PLAYER}…\p"
+	.string "There is still one more thing that\n"
+	.string "I feel you should have though if we\l"
+	.string "are to battle on an even field.\p"
+	.string "{PLAYER}, you should take this.$"
+
+PetalburgCity_Gym_Text_ExplainMegaRing:
+	.string "This is a MEGA RING.\n"
+	.string "It's a very rare item first found\l"
+	.string "in a place called the KALOS REGION.\p"
+	.string "With that MEGA RING, a MEGA STONE\n"
+	.string "on one of your POKéMON, and a\l"
+	.string "strong bond, you and your POKéMON\l"
+	.string "can achieve MEGA EVOLUTION.\p"
+	.string "Only certain POKéMON are capable\n"
+	.string "of MEGA EVOLUTION, but the final\l"
+	.string "evolution of the POKéMON that PROF.\l"
+	.string "BIRCH gave you should be able to.\p"
+	.string "I will be using MEGA EVOLUTION\n"
+	.string "myself, so I would recommend giving\l"
+	.string "a MEGA STONE to one of your POKéMON.$"
+
+PetalburgCity_Gym_Text_NormanIntro2:
 	.string "I'm so happy that I can have\n"
 	.string "a real battle with my own child.\p"
 	.string "But, a battle is a battle!\p"
@@ -1298,17 +1326,6 @@ PetalburgCity_Gym_Text_ExplainFacade:
 	.string "or burned.\p"
 	.string "It might be able to turn a bad\n"
 	.string "situation into an advantage.$"
-
-PetalburgCity_Gym_Text_ExplainMegaRing:
-	.string "DAD: And here is your present.\p"
-	.string "This is a MEGA RING. You saw what\n"
-	.string "I did with my KANGASKHAN?\p"
-	.string "Now you will be able to do that\n"
-	.string "with some of your POKéMON.\p"
-	.string "It doesn't work with every kind\n"
-	.string "of POKéMON though, and you will\l"
-	.string "need to find special stones and\l"
-	.string "give them to your POKéMON.$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "DAD: As the GYM LEADER, I can't\n"

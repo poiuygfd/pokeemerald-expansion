@@ -683,12 +683,12 @@ VerdanturfTown_Text_YouGotItThankYou:
 	.string "I was getting worried, so I came\n"
 	.string "to come find you.\p"
 	.string "So? How did it go?\n"
-	.string "The DEVON GOODS?\p"
+	.string "The DEVON PARTS?\p"
 	.string "You did it!\n"
 	.string "You got them back!\p"
 	.string "You really are a great TRAINER!\p"
 	.string "I know! As my thanks, I'll give you\n"
-	.string "this EXP. Share! We developed this\l"
+	.string "this EXP. SHARE! We developed this\l"
 	.string "to help with training up POKéMON!$"
 
 VerdanturfTown_Text_PleaseComeWithMe:

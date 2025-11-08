@@ -19,8 +19,6 @@ Route110_OnResume:
 	end
 
 Route110_OnTransition:
-	call Common_EventScript_SetupRivalGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_eq VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_SaveCyclingMusic
 	end
 
@@ -380,221 +378,83 @@ Route110_EventScript_EndChallenge::
 	fadedefaultbgm
 	return
 
-Route110_EventScript_RivalTrigger1::
+Route110_EventScript_WallyTrigger1::
 	setvar VAR_0x8008, 1
-	goto Route110_EventScript_RivalScene
+	goto Route110_EventScript_WallyScene
 	end
 
-Route110_EventScript_RivalTrigger2::
+Route110_EventScript_WallyTrigger2::
 	setvar VAR_0x8008, 2
-	goto Route110_EventScript_RivalScene
+	goto Route110_EventScript_WallyScene
 	end
 
-Route110_EventScript_RivalTrigger3::
+Route110_EventScript_WallyTrigger3::
 	setvar VAR_0x8008, 3
-	goto Route110_EventScript_RivalScene
+	goto Route110_EventScript_WallyScene
 	end
 
-Route110_EventScript_RivalScene::
+Route110_EventScript_WallyScene::
 	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route110_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, Route110_EventScript_PlayBrendanMusic
-	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_Delay48
 	waitmovement 0
 	delay 30
-	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalApproachPlayer1
-	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalApproachPlayer2
-	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalApproachPlayer3
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route110_EventScript_MayBattle
-	goto_if_eq VAR_RESULT, FEMALE, Route110_EventScript_BrendanBattle
-	releaseall
-	end
-
-Route110_EventScript_PlayMayMusic::
-	playbgm MUS_ENCOUNTER_MAY, TRUE
-	return
-
-Route110_EventScript_PlayBrendanMusic::
-	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
-	return
-
-Route110_EventScript_MayBattle::
-	msgbox Route110_Text_MayLetsBattle, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route110_EventScript_MayBattleTreecko
-	case 1, Route110_EventScript_MayBattleTorchic
-	case 2, Route110_EventScript_MayBattleMudkip
-	end
-
-Route110_EventScript_MayBattleTreecko::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TREECKO, Route110_Text_MayDefeated
-	goto Route110_EventScript_MayDefeated
-	end
-
-Route110_EventScript_MayBattleTorchic::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TORCHIC, Route110_Text_MayDefeated
-	goto Route110_EventScript_MayDefeated
-	end
-
-Route110_EventScript_MayBattleMudkip::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_MUDKIP, Route110_Text_MayDefeated
-	goto Route110_EventScript_MayDefeated
-	end
-
-Route110_EventScript_MayDefeated::
-	msgbox Route110_Text_MayTakeThis, MSGBOX_DEFAULT
-	call Route110_EventScript_GiveItemfinder
-	msgbox Route110_Text_MayExplainItemfinder, MSGBOX_DEFAULT
-	goto Route110_EventScript_RivalExit
-	end
-
-Route110_EventScript_BrendanBattle::
-	msgbox Route110_Text_BrendanLetsBattle, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route110_EventScript_BrendanBattleTreecko
-	case 1, Route110_EventScript_BrendanBattleTorchic
-	case 2, Route110_EventScript_BrendanBattleMudkip
-	end
-
-Route110_EventScript_BrendanBattleTreecko::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TREECKO, Route110_Text_BrendanDefeated
-	goto Route110_EventScript_BrendanDefeated
-	end
-
-Route110_EventScript_BrendanBattleTorchic::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TORCHIC, Route110_Text_BrendanDefeated
-	goto Route110_EventScript_BrendanDefeated
-	end
-
-Route110_EventScript_BrendanBattleMudkip::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Route110_Text_BrendanDefeated
-	goto Route110_EventScript_BrendanDefeated
-	end
-
-Route110_EventScript_BrendanDefeated::
-	msgbox Route110_Text_BrendanTakeThis, MSGBOX_DEFAULT
-	call Route110_EventScript_GiveItemfinder
-	msgbox Route110_Text_BrendanExplainItemfinder, MSGBOX_DEFAULT
-	goto Route110_EventScript_RivalExit
-	end
-
-Route110_EventScript_GiveItemfinder::
-	giveitem ITEM_DOWSING_MACHINE
-	return
-
-Route110_EventScript_RivalExit::
+	call_if_eq VAR_0x8008, 1, Route110_EventScript_WallyApproachPlayer1
+	call_if_eq VAR_0x8008, 2, Route110_EventScript_WallyApproachPlayer2
+	call_if_eq VAR_0x8008, 3, Route110_EventScript_WallyApproachPlayer3
+	msgbox Route110_Text_WallyLetsBattle, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLY_ROUTE_110, Route110_Text_WallyDefeated
+	msgbox Route110_Text_WallyWillGetStronger, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8008, 1, Route110_EventScript_MoveRival1
-	call_if_eq VAR_0x8008, 2, Route110_EventScript_MoveRival2
-	call_if_eq VAR_0x8008, 3, Route110_EventScript_MoveRival3
-	setobjectmovementtype LOCALID_ROUTE110_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
-	setobjectmovementtype LOCALID_ROUTE110_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
-	removeobject LOCALID_ROUTE110_RIVAL
-	addobject LOCALID_ROUTE110_RIVAL_ON_BIKE
-	delay 45
-	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalExit1
-	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalExit2
-	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalExit3
-	removeobject LOCALID_ROUTE110_RIVAL_ON_BIKE
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit
+	waitmovement 0
+	removeobject LOCALID_ROUTE110_WALLY
 	setvar VAR_ROUTE110_STATE, 1
-	savebgm MUS_DUMMY
-	fadedefaultbgm
 	releaseall
 	end
 
-Route110_EventScript_RivalApproachPlayer1::
-	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer1
+Route110_EventScript_WallyApproachPlayer1::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer1
 	waitmovement 0
 	return
 
-Route110_EventScript_RivalApproachPlayer2::
-	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer2
+Route110_EventScript_WallyApproachPlayer2::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer2
 	waitmovement 0
 	return
 
-Route110_EventScript_RivalApproachPlayer3::
-	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer3
+Route110_EventScript_WallyApproachPlayer3::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer3
 	waitmovement 0
 	return
 
-Route110_EventScript_RivalExit1::
-	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit1
-	waitmovement 0
-	return
-
-Route110_EventScript_RivalExit2::
-	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit2
-	waitmovement 0
-	return
-
-Route110_EventScript_RivalExit3::
-	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit3
-	waitmovement 0
-	return
-
-Route110_EventScript_MoveRival1::
-	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 33, 55
-	return
-
-Route110_EventScript_MoveRival2::
-	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 34, 55
-	return
-
-Route110_EventScript_MoveRival3::
-	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 35, 55
-	return
-
-Route110_Movement_RivalApproachPlayer1:
-	walk_down
+Route110_Movement_WallyApproachPlayer1:
+	walk_up
 	walk_left
-	walk_in_place_faster_down
+	walk_in_place_faster_up
 	step_end
 
-Route110_Movement_RivalApproachPlayer2:
-	walk_down
+Route110_Movement_WallyApproachPlayer2:
+	walk_up
 	step_end
 
-Route110_Movement_RivalApproachPlayer3:
-	walk_down
+Route110_Movement_WallyApproachPlayer3:
+	walk_up
 	walk_right
-	walk_in_place_faster_down
+	walk_in_place_faster_up
 	step_end
 
-Route110_Movement_RivalExit1:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	step_end
-
-Route110_Movement_RivalExit2:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
+Route110_Movement_WallyExit:
 	walk_fast_down
-	step_end
-
-Route110_Movement_RivalExit3:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 Route110_EventScript_BirchScene1::
@@ -792,57 +652,27 @@ Route110_Text_FlingExplanation:
 	.string "held item as an attack.\p"
 	.string "Use it wisely, you only get one throw!$"
 
-Route110_Text_MayLetsBattle:
-	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
-	.string "While I was searching for other\n"
-	.string "POKéMON, my POKéMON grew stronger.\p"
-	.string "So…\n"
-	.string "How about a little battle?$"
+Route110_Text_WallyLetsBattle:
+	.string "WALLY: Oh, hi, {PLAYER}.\p"
+	.string "I've just been training my POKéMON\n"
+	.string "here after VERDANTURF.\p"
+	.string "Say, {PLAYER}, do you think we could\n"
+	.string "have a little battle?\p"
+	.string "I want to see how strong you really\n"
+	.string "are firsthand.\p"
+	.string "Me and my team have been working hard\n"
+	.string "though, so we won't go down easy!$"
 
-Route110_Text_MayDefeated:
-	.string "Yikes!\n"
-	.string "You're better than I expected!$"
+Route110_Text_WallyDefeated:
+	.string "Facing you down myself really puts\n"
+	.string "your strength into perspective.$"
 
-Route110_Text_MayTakeThis:
-	.string "MAY: {PLAYER}{KUN}, you've been busy\n"
-	.string "training, too, haven't you?\p"
-	.string "I think you deserve a reward!\n"
-	.string "This is from me!$"
-
-Route110_Text_MayExplainItemfinder:
-	.string "MAY: That's a DOWSING MACHINE.\p"
-	.string "Try it out. If there is an item that's\n"
-	.string "not visible, it emits a sound.\p"
-	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
-	.string "I know it's a little silly coming from\n"
-	.string "me, but I think you should train a lot\l"
-	.string "harder for the next time.$"
-
-Route110_Text_BrendanLetsBattle:
-	.string "BRENDAN: Hey, {PLAYER}.\n"
-	.string "So this is where you were.\l"
-	.string "How's it going?\p"
-	.string "Have you been raising your POKéMON?\n"
-	.string "I'll check for you.$"
-
-Route110_Text_BrendanDefeated:
-	.string "Hmm…\n"
-	.string "You're pretty good.$"
-
-Route110_Text_BrendanTakeThis:
-	.string "BRENDAN: {PLAYER}, you've trained\n"
-	.string "without me noticing…\p"
-	.string "Good enough!\n"
-	.string "Here, take this.$"
-
-Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's a DOWSING MACHINE.\p"
-	.string "Use it to root around for items that\n"
-	.string "aren't visible.\p"
-	.string "If it senses something, it emits\n"
-	.string "a sound.\p"
-	.string "Anyway, I'm off to look for new\n"
-	.string "POKéMON.$"
+Route110_Text_WallyWillGetStronger:
+	.string "WALLY: Looks like me and KIRLIA\n"
+	.string "still have a long way to go.\p"
+	.string "We won't give up here, though!\n"
+	.string "We're going to become even stronger!\p"
+	.string "I'll see you around, {PLAYER}!$"
 
 Route110_Text_RideBikeAtFullSpeed:
 	.string "Wouldn't it be great to ride a BIKE\n"

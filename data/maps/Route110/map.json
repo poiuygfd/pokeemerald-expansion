@@ -370,32 +370,18 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_ROUTE110_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "local_id": "LOCALID_ROUTE110_WALLY",
+      "graphics_id": "OBJ_EVENT_GFX_WALLY",
       "x": 34,
       "y": 54,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_ROUTE_110_RIVAL"
-    },
-    {
-      "local_id": "LOCALID_ROUTE110_RIVAL_ON_BIKE",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
-      "x": 34,
-      "y": 54,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ROUTE_110_RIVAL_ON_BIKE"
+      "flag": "FLAG_HIDE_ROUTE_110_WALLY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
@@ -589,29 +575,29 @@
     {
       "type": "trigger",
       "x": 33,
-      "y": 56,
+      "y": 52,
       "elevation": 3,
       "var": "VAR_ROUTE110_STATE",
       "var_value": "0",
-      "script": "Route110_EventScript_RivalTrigger1"
+      "script": "Route110_EventScript_WallyTrigger1"
     },
     {
       "type": "trigger",
       "x": 34,
-      "y": 56,
+      "y": 52,
       "elevation": 3,
       "var": "VAR_ROUTE110_STATE",
       "var_value": "0",
-      "script": "Route110_EventScript_RivalTrigger2"
+      "script": "Route110_EventScript_WallyTrigger2"
     },
     {
       "type": "trigger",
       "x": 35,
-      "y": 56,
+      "y": 52,
       "elevation": 3,
       "var": "VAR_ROUTE110_STATE",
       "var_value": "0",
-      "script": "Route110_EventScript_RivalTrigger3"
+      "script": "Route110_EventScript_WallyTrigger3"
     },
     {
       "type": "trigger",

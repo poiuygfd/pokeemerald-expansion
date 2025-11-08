@@ -10744,7 +10744,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Modest
 
-=== TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
+=== TRAINER_BRENDAN_ROUTE_109_MUDKIP ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10756,12 +10756,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Sizzlipede
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 Atk
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Shellos
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -10833,7 +10833,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Adamant
 
-=== TRAINER_BRENDAN_ROUTE_110_TREECKO ===
+=== TRAINER_BRENDAN_ROUTE_109_TREECKO ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10845,12 +10845,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Shellos
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Shroomish
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -10922,7 +10922,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Adamant
 
-=== TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
+=== TRAINER_BRENDAN_ROUTE_109_TORCHIC ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10934,12 +10934,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Shroomish
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Sizzlipede
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 Atk
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -11011,7 +11011,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Modest
 
-=== TRAINER_MAY_ROUTE_110_MUDKIP ===
+=== TRAINER_MAY_ROUTE_109_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -11023,12 +11023,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Shellos
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Sizzlipede
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 Atk
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -11100,7 +11100,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Adamant
 
-=== TRAINER_MAY_ROUTE_110_TREECKO ===
+=== TRAINER_MAY_ROUTE_109_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -11112,12 +11112,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Shellos
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Shroomish
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -11189,7 +11189,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Adamant
 
-=== TRAINER_MAY_ROUTE_110_TORCHIC ===
+=== TRAINER_MAY_ROUTE_109_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -11201,12 +11201,12 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Shroomish
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 SpA
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Sizzlipede
 Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP / 50 Atk
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Pikachu
 Level: 20
@@ -13733,7 +13733,7 @@ Cramorant
 Level: 27
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_WALLY_MAUVILLE ===
+=== TRAINER_WALLY_ROUTE_110 ===
 Name: WALLY
 Class: Rival
 Pic: Wally
@@ -13742,25 +13742,25 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
-Budew
-Level: 17
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 100 HP / 50 Atk / 50 SpA
-
-Tandemaus
-Level: 17
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 100 HP / 50 Atk / 50 SpA
-
 Swablu
 Level: 18
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 100 HP / 50 Atk / 50 SpA
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
+Tandemaus
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
+Roselia
+Level: 20
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
 
 Kirlia
 Level: 20
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 100 HP / 50 Atk / 50 SpA
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
 
 === TRAINER_WALLY_VR_2 ===
 Name: WALLY
