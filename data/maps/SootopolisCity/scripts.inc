@@ -588,12 +588,21 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	clearflag FLAG_SYS_WEATHER_CTRL
 	setvar VAR_SKY_PILLAR_STATE, 2
 	clearflag FLAG_LEGENDARIES_IN_SOOTOPOLIS
-	fadenewbgm MUS_SURF
+	goto_if_unset FLAG_IS_PLAYER_BOATING, SootopolisCity_EventScript_SailingMusic
+	goto_if_set FLAG_IS_PLAYER_BOATING, SootopolisCity_EventScript_SurfingMusic
 	delay 120
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	warpwhitefade MAP_SOOTOPOLIS_CITY, 29, 53
 	waitstate
 	end
+
+SootopolisCity_EventScript_SurfingMusic::
+	fadenewbgm MUS_SURF
+	return
+
+SootopolisCity_EventScript_SailingMusic::
+	fadenewbgm MUS_SAILING
+	return
 
 SootopolisCity_EventScript_SetRoughWater::
 	setmetatile 27, 43, METATILE_Sootopolis_RoughWater, FALSE

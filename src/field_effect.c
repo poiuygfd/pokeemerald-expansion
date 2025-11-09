@@ -3225,7 +3225,10 @@ u8 FldEff_UseSurf(void)
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
     Overworld_ClearSavedMusic();
-    Overworld_ChangeMusicTo(MUS_SURF);
+    if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
+        Overworld_ChangeMusicTo(MUS_SAILING);
+    else
+        Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;
 }
 
@@ -3259,6 +3262,10 @@ static void SurfFieldEffect_FieldMovePose(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    
+    //if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
+        //task->tState++;
+
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         SetPlayerAvatarFieldMove();
@@ -3271,6 +3278,10 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+    //if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
+        //task->tState++;
+
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
         gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;

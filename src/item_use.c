@@ -1692,6 +1692,35 @@ void ItemUseOutOfBattle_Hatchet(u8 taskId)
     }
 }
 
+static void ItemUseOnFieldCB_BrineysKeys(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_UseBrineysKeys);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_BrineysKeys(u8 taskId)
+{
+    if (IsPlayerFacingSurfableFishableWater() == TRUE)
+    {
+        if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            sItemUseOnFieldCB = ItemUseOnFieldCB_BrineysKeys;
+            gFieldCallback = FieldCB_UseItemOnField;
+            gBagMenu->newScreenCallback = CB2_ReturnToField;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else
+        {
+            gTasks[taskId].func = ItemUseOnFieldCB_BrineysKeys;
+        }
+    }
+    else
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
 static void ItemUseOnFieldCB_Pickaxe(u8 taskId)
 {
     LockPlayerFieldControls();

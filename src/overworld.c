@@ -1232,8 +1232,10 @@ void Overworld_PlaySpecialMapMusic(void)
             music = gSaveBlock1Ptr->savedMusic;
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
             music = MUS_UNDERWATER;
-        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
             music = MUS_SURF;
+        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
+            music = MUS_SAILING;
     }
 
     if (music != GetCurrentMapMusic())
@@ -1258,10 +1260,12 @@ static void TransitionMapMusic(void)
         u16 currentMusic = GetCurrentMapMusic();
         if (newMusic != MUS_ABNORMAL_WEATHER && newMusic != MUS_NONE)
         {
-            if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF)
+            if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF || currentMusic == MUS_SAILING)
                 return;
-            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
                 newMusic = MUS_SURF;
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
+                newMusic = MUS_SAILING;
         }
         if (newMusic != currentMusic)
         {
@@ -1302,7 +1306,7 @@ void TryFadeOutOldMapMusic(void)
     u16 warpMusic = GetWarpDestinationMusic();
     if (FlagGet(FLAG_DONT_TRANSITION_MUSIC) != TRUE && warpMusic != GetCurrentMapMusic())
     {
-        if (currentMusic == MUS_SURF
+        if ((currentMusic == MUS_SURF || currentMusic == MUS_SAILING)
             && VarGet(VAR_SKY_PILLAR_STATE) == 2
             && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY)
             && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY)
