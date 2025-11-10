@@ -333,6 +333,10 @@ Route119_EventScript_WeatherInstituteSign::
 	msgbox Route119_Text_WeatherInstitute, MSGBOX_SIGN
 	end
 
+Route119_EventScript_MrMegasStonesSign::
+	msgbox Route119_Text_MrMegasStones, MSGBOX_SIGN
+	end
+
 Route119_EventScript_Brent::
 	trainerbattle_single TRAINER_BRENT, Route119_Text_BrentIntro, Route119_Text_BrentDefeat
 	msgbox Route119_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
@@ -632,6 +636,9 @@ Route119_Text_RouteSignFortree:
 
 Route119_Text_WeatherInstitute:
 	.string "WEATHER INSTITUTE$"
+
+Route119_Text_MrMegasStones:
+	.string "MR. MEGA'S STONES$"
 
 Route119_Text_TrainerTipsDecoration:
 	.string "TRAINER TIPS\p"

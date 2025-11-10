@@ -1184,3 +1184,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/HerosKeep_Exterior/scripts.inc"
 	.include "data/maps/HerosKeep_Interior/scripts.inc"
 	.include "data/maps/SafariZone_UrsalunaCave/scripts.inc"
+
+	.include "data/maps/Route119_MrMegasStones/scripts.inc"

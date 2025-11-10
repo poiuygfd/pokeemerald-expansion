@@ -249,8 +249,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 36,
-      "y": 59,
+      "x": 34,
+      "y": 60,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -562,8 +562,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 24,
-      "y": 42,
+      "x": 35,
+      "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -627,6 +627,13 @@
       "y": 109,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 44,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE119_MR_MEGAS_STONES",
       "dest_warp_id": "0"
     }
   ],
@@ -952,6 +959,14 @@
       "elevation": 0,
       "item": "ITEM_GRASSY_SEED",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_GRASSY_SEED"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route119_EventScript_MrMegasStonesSign"
     }
   ]
 }

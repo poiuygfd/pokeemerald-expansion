@@ -512,7 +512,7 @@
 #define FLAG_ENABLE_WINONA_MATCH_CALL        0x1D7
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
-#define FLAG_IS_PLAYER_BOATING               0x1DA // Whether the player is surfing or boating
+#define FLAG_IS_PLAYER_BOATING               0x1DA // Whether the player is surfing or sailing
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -689,7 +689,7 @@
 #define FLAG_HIDE_WEATHERMAN_SNOW  0x280 // Weatherman's third appearance in Shoal Cave
 #define FLAG_HIDE_WEATHERMAN_FINAL  0x281 // Weatherman's final appearance
 #define FLAG_DEFEATED_WEATHERMAN  0x282 // Defeated Weatherman
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
+#define FLAG_MET_MR_MEGA  0x283 // Player has met Mr. Mega
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag

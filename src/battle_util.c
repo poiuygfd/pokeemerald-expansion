@@ -10297,6 +10297,14 @@ bool32 CanBattlerGetOrLoseItem(u32 battler, u16 itemId)
     else if (holdEffect == HOLD_EFFECT_BOOSTER_ENERGY
          && (gSpeciesInfo[gBattleMons[battler].species].isParadox || gSpeciesInfo[gBattleMons[gBattlerTarget].species].isParadox))
         return FALSE;
+    else if (itemId == ITEM_CASTFORMITE && 
+         (species == SPECIES_CASTFORM_RAINY || species == SPECIES_CASTFORM_MEGA_RAINY
+         || species == SPECIES_CASTFORM_SUNNY || species == SPECIES_CASTFORM_MEGA_SUNNY
+         || species == SPECIES_CASTFORM_SNOWY || species == SPECIES_CASTFORM_MEGA_SNOWY))
+        return FALSE;
+    else if (itemId == ITEM_CHARIZARDITE_Z && 
+         (species == SPECIES_CHARIZARD_MEGA_Z || species == SPECIES_CHARIZARD_OMEGA_Z))
+        return FALSE;
     else
         return TRUE;
 }
