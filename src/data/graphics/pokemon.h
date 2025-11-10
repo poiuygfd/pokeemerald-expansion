@@ -26778,6 +26778,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_Regitube[] = INCBIN_U16("graphics/pokemon/regitube/overworld_shiny.gbapal");
 
+    const u32 gMonFrontPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/front.4bpp.smol");
+    const u16 gMonPalette_SlowbroMegaG[] = INCBIN_U16("graphics/pokemon/slowbro/mega_g/normal.gbapal");
+    const u32 gMonBackPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/back.4bpp.smol");
+    const u16 gMonShinyPalette_SlowbroMegaG[] = INCBIN_U16("graphics/pokemon/slowbro/mega_g/shiny.gbapal");
+    const u8 gMonIcon_SlowbroMegaG[] = INCBIN_U8("graphics/pokemon/slowbro/mega_g/icon.4bpp");
+
     const u32 gMonFrontPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/front.4bpp.smol");
     const u16 gMonPalette_CastformMega[] = INCBIN_U16("graphics/pokemon/castform/mega/normal.gbapal");
     const u32 gMonBackPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/back.4bpp.smol");
@@ -26796,11 +26802,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_CastformMegaRainy[] = INCBIN_U16("graphics/pokemon/castform/mega_rainy/shiny.gbapal");
     const u8 gMonIcon_CastformMegaRainy[] = INCBIN_U8("graphics/pokemon/castform/mega_rainy/icon.4bpp");
 
-    const u32 gMonFrontPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/front.4bpp.smol");
-    const u16 gMonPalette_SlowbroMegaG[] = INCBIN_U16("graphics/pokemon/slowbro/mega_g/normal.gbapal");
-    const u32 gMonBackPic_SlowbroMegaG[] = INCBIN_U32("graphics/pokemon/slowbro/mega_g/back.4bpp.smol");
-    const u16 gMonShinyPalette_SlowbroMegaG[] = INCBIN_U16("graphics/pokemon/slowbro/mega_g/shiny.gbapal");
-    const u8 gMonIcon_SlowbroMegaG[] = INCBIN_U8("graphics/pokemon/slowbro/mega_g/icon.4bpp");
+    const u32 gMonFrontPic_CastformMegaSnowy[] = INCBIN_U32("graphics/pokemon/castform/mega_snowy/front.4bpp.smol");
+    const u16 gMonPalette_CastformMegaSnowy[] = INCBIN_U16("graphics/pokemon/castform/mega_snowy/normal.gbapal");
+    const u32 gMonBackPic_CastformMegaSnowy[] = INCBIN_U32("graphics/pokemon/castform/mega_snowy/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMegaSnowy[] = INCBIN_U16("graphics/pokemon/castform/mega_snowy/shiny.gbapal");
+    const u8 gMonIcon_CastformMegaSnowy[] = INCBIN_U8("graphics/pokemon/castform/mega_snowy/icon.4bpp");
 
     const u32 gMonFrontPic_CharizardMegaZ[] = INCBIN_U32("graphics/pokemon/charizard/mega_z/anim_front.4bpp.smol");
     const u16 gMonPalette_CharizardMegaZ[] = INCBIN_U16("graphics/pokemon/charizard/mega_z/normal.gbapal");

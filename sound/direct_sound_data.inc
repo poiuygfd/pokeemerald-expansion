@@ -6172,6 +6172,10 @@ Cry_Regitube::
 	.incbin "sound/direct_sound_samples/cries/regitube.bin"
 
 	.align 2
+Cry_CastformMega::
+	.incbin "sound/direct_sound_samples/cries/castform_mega.bin"
+
+	.align 2
 Cry_CharizardMegaZ::
 	.incbin "sound/direct_sound_samples/cries/charizard_mega_z.bin"
 

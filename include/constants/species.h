@@ -1643,11 +1643,11 @@
 #define SPECIES_AVITORCH_CALM                           1526
 #define SPECIES_AVITORCH_ENRAGED                        1527
 #define SPECIES_REGITUBE                                1528
-#define SPECIES_CASTFORM_MEGA                           1529
-#define SPECIES_CASTFORM_MEGA_SUNNY                     1530
-#define SPECIES_CASTFORM_MEGA_RAINY                     1531
-#define SPECIES_CASTFORM_MEGA_SNOWY                     1532
-#define SPECIES_SLOWBRO_MEGA_G                          1533
+#define SPECIES_SLOWBRO_MEGA_G                          1529
+#define SPECIES_CASTFORM_MEGA                           1530
+#define SPECIES_CASTFORM_MEGA_SUNNY                     1531
+#define SPECIES_CASTFORM_MEGA_RAINY                     1532
+#define SPECIES_CASTFORM_MEGA_SNOWY                     1533
 #define SPECIES_CHARIZARD_MEGA_Z                        1534
 #define SPECIES_CHARIZARD_OMEGA_Z                       1535
 

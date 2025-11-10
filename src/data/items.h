@@ -14917,24 +14917,6 @@ const struct Item gItemsInfo[] =
 
 //New hold items
 
-    [ITEM_CASTFORMITE] =
-    {
-        .name = ITEM_NAME("Castformite"),
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = COMPOUND_STRING(
-            "This stone enables\n"
-            "Castform to Mega\n"
-            "Evolve in battle."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_MEGA_STONE,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_Castformite,
-        .iconPalette = gItemIconPalette_Castformite,
-    },
-
     [ITEM_SLOWBRONITE_G] =
     {
         .name = ITEM_NAME("Slowbronite G"),
@@ -14952,6 +14934,24 @@ const struct Item gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_SlowbroniteG,
         .iconPalette = gItemIconPalette_SlowbroniteG,
+    },
+
+    [ITEM_CASTFORMITE] =
+    {
+        .name = ITEM_NAME("Castformite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Castform to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Castformite,
+        .iconPalette = gItemIconPalette_Castformite,
     },
 
     [ITEM_CHARIZARDITE_Z] =

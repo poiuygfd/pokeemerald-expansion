@@ -2428,6 +2428,7 @@ gCryTable::
 	cry Cry_MissingNo
 	cry Cry_Avitorch
 	cry Cry_Regitube
+	cry Cry_CastformMega
 	cry Cry_CharizardMegaZ
 	cry Cry_CharizardOmegaZ
 .endif @ P_CRIES_ENABLED
@@ -4862,6 +4863,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_MissingNo
 	cry_reverse Cry_Avitorch
 	cry_reverse Cry_Regitube
+	cry_reverse Cry_CastformMega
 	cry_reverse Cry_CharizardMegaZ
 	cry_reverse Cry_CharizardOmegaZ
 .endif @ P_CRIES_ENABLED
