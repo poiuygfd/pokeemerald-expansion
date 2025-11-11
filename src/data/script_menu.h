@@ -835,6 +835,15 @@ static const struct MenuAction MultichoiceList_PassChoice[] =
     {COMPOUND_STRING("CONTEST PASS")},
 };
 
+static const struct MenuAction MultichoiceList_NotebookPages[] =
+{
+    {COMPOUND_STRING("Entry 1")},
+    {COMPOUND_STRING("Entry 2")},
+    {COMPOUND_STRING("Entry 3")},
+    {COMPOUND_STRING("Entry 4")},
+    {COMPOUND_STRING("I'm done")},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -971,6 +980,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_DEPTHS_CHOOSE_MODE]         = MULTICHOICE(MultichoiceList_DepthsChooseMode),
     [MULTI_DEPTHS_EXPLAIN_MODE]        = MULTICHOICE(MultichoiceList_DepthsExplainMode),
     [MULTI_PASS_CHOICE]                = MULTICHOICE(MultichoiceList_PassChoice),
+    [MULTI_NOTEBOOK_PAGES]             = MULTICHOICE(MultichoiceList_NotebookPages),
 };
 
 const u8 *const gStdStrings[] =

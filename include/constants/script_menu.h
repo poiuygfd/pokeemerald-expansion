@@ -131,6 +131,7 @@
 #define MULTI_DEPTHS_CHOOSE_MODE           120
 #define MULTI_DEPTHS_EXPLAIN_MODE          121
 #define MULTI_PASS_CHOICE                  122
+#define MULTI_NOTEBOOK_PAGES               123
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

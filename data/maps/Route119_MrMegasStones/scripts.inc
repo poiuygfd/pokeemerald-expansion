@@ -58,8 +58,7 @@ Route119_MrMegasStones_Mart_MegaStoneMart:
 	.2byte ITEM_LATIOSITE
 	.2byte ITEM_DIANCITE
 	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 Route119_MrMegasStones_EventScript_BoxesOfStuff::
 	msgbox Route119_MrMegasStones_Text_BoxesOfStuff, MSGBOX_SIGN
@@ -89,8 +88,35 @@ Route119_MrMegasStones_EventScript_MrMegasNotebook::
 	end
 
 Route119_MrMegasStones_EventScript_ChoosePage::
-	msgbox Route119_MrMegasStones_Text_WhichPage, MSGBOX_DEFAULT
+	message Route119_MrMegasStones_Text_WhichPage
+	waitmessage
+	multichoice 0, 0, MULTI_NOTEBOOK_PAGES, FALSE
+	switch VAR_RESULT
+	case 0, Route119_MrMegasStones_EventScript_Entry1
+	case 1, Route119_MrMegasStones_EventScript_Entry2
+	case 2, Route119_MrMegasStones_EventScript_Entry3
+	case 3, Route119_MrMegasStones_EventScript_Entry4
 	release
+	end
+
+Route119_MrMegasStones_EventScript_Entry1::
+	msgbox Route119_MrMegasStones_Text_Entry1, MSGBOX_DEFAULT
+	goto Route119_MrMegasStones_EventScript_ChoosePage
+	end
+
+Route119_MrMegasStones_EventScript_Entry2::
+	msgbox Route119_MrMegasStones_Text_Entry2, MSGBOX_DEFAULT
+	goto Route119_MrMegasStones_EventScript_ChoosePage
+	end
+
+Route119_MrMegasStones_EventScript_Entry3::
+	msgbox Route119_MrMegasStones_Text_Entry3, MSGBOX_DEFAULT
+	goto Route119_MrMegasStones_EventScript_ChoosePage
+	end
+
+Route119_MrMegasStones_EventScript_Entry4::
+	msgbox Route119_MrMegasStones_Text_Entry4, MSGBOX_DEFAULT
+	goto Route119_MrMegasStones_EventScript_ChoosePage
 	end
 
 Route119_MrMegasStones_Text_MrMegaIntroduction:
@@ -164,8 +190,108 @@ Route119_MrMegasStones_Text_ResearchMachine:
 
 Route119_MrMegasStones_Text_MrMegasNotebook:
 	.string "A notebook written by MR. MEGA.\n"
-	.string "It seems to document his findings\p"
+	.string "It seems to document his findings.\p"
 	.string "Read further?$"
 
 Route119_MrMegasStones_Text_WhichPage:
-	.string "nope.$"
+	.string "Which entry would you like to read?$"
+
+Route119_MrMegasStones_Text_Entry1:
+	.string "It all happened not long after I\n"
+	.string "first moved to the HOENN region.\p"
+	.string "I went to watch a promotional battle\n"
+	.string "between the CHAMPION of HOENN and\l"
+	.string "the CHAMPION of KALOS.\p"
+	.string "I'd just went with a friend out of\n"
+	.string "obligation at first.\p"
+	.string "But that match was my first time ever\n"
+	.string "witnessing MEGA EVOLUTION.\p"
+	.string "It entranced me, and my mind was full\n"
+	.string "of questions.\p"
+	.string "What is the relationship between the\n"
+	.string "KEY STONE and MEGA STONE?\p"
+	.string "Why do these stones resonate with\n"
+	.string "some POKéMON but not others?\p"
+	.string "And is a strong bond really required\n"
+	.string "to achieve MEGA EVOLUTION?\p"
+	.string "I will be using this notebook to\n"
+	.string "document all my findings.$"
+
+Route119_MrMegasStones_Text_Entry2:
+	.string "The first thing I wanted to know was\n"
+	.string "about the origins of MEGA EVOLUTION.\p"
+	.string "In the SINNOH region that I called\n"
+	.string "once called home, there was simply\l"
+	.string "no such concept as MEGA EVOLUTION.\p"
+	.string "My findings led me to believe that\n"
+	.string "KALOS and HOENN are the regions that\l"
+	.string "have the strongest ties to MEGA\l"
+	.string "EVOLUTION.\p"
+	.string "However, further digging also shows that\n"
+	.string "the phenomenon has also been observed\l"
+	.string "in the KANTO and ALOLA regions before.\p"
+	.string "What is it about the HOENN and KALOS\n"
+	.string "regions that allowed for this to occur?\p"
+	.string "My research into this topic will continue\n"
+	.string "later, but for now I wish to know more\l"
+	.string "about the process itself.$"
+
+Route119_MrMegasStones_Text_Entry3:
+	.string "The thing that I have stumbled across\n"
+	.string "the most during my research is that to\l"
+	.string "achieve MEGA EVOLUTION, three things\l"
+	.string "are absolutely required.\p"
+	.string "A KEY STONE, for the TRAINER.\p"
+	.string "A MEGA STONE, for the POKéMON.\p"
+	.string "And a strong bond between TRAINER\n"
+	.string "and POKéMON.\p"
+	.string "With these three things, MEGA EVOLUTION\n"
+	.string "is made possible.\p"
+	.string "My current hypothesis is that the main\n"
+	.string "culprit, however, for the phenomenon of\l"
+	.string "MEGA EVOLUTION lies within MEGA STONES.\p"
+	.string "Cases are very scant, and I had to do a\n"
+	.string "lot of digging to find them, but cases\l"
+	.string "of POKéMON MEGA EVOLVING on their own\l"
+	.string "without a bond or KEY STONE exist.\p"
+	.string "However, these instances seem to be\n"
+	.string "caused by an external force, and the\l"
+	.string "POKéMON are noted as being in pain.\p"
+	.string "This leads me to believe that MEGA\n"
+	.string "EVOLUTION is a painful process for\l"
+	.string "the POKéMON, and that the existence\l"
+	.string "of the KEY STONE and a strong bond\l"
+	.string "makes the process less stressful on\l"
+	.string "the POKéMON's bodies.\p"
+	.string "This hypothesis has yet to be confirmed\n"
+	.string "of course, but it is what makes the\l"
+	.string "most sense to me currently.$"
+
+Route119_MrMegasStones_Text_Entry4:
+	.string "One aspect that I find strange about\n"
+	.string "MEGA EVOLUTION is the existence of\l"
+	.string "POKéMON that possess multiple.\p"
+	.string "It was to my understanding that the\n"
+	.string "power of MEGA EVOLUTION could draw\l"
+	.string "out the true latent powers of a\l"
+	.string "POKéMON, allowing them access to\l"
+	.string "their true strength temporarily.\p"
+	.string "And yet, it appears that the POKéMON\n"
+	.string "CHARIZARD and RAICHU possess multiple\l"
+	.string "kinds of MEGA EVOLUTION.\p"
+	.string "It is also rumoured that the LEGENDARY\n"
+	.string "POKéMON MEWTWO also has two MEGAS.\p"
+	.string "If this process draws out a POKéMON's\n"
+	.string "true form, then how can a POKéMON\l"
+	.string "possess multiple?\p"
+	.string "It feels like the more I dive into\n"
+	.string "my research, the more questions I find.\p"
+	.string "That being said, this topic intrigues\n"
+	.string "me to no end.\p"
+	.string "I will eventually answer every question\n"
+	.string "I have about MEGA EVOLUTION!\p"
+	.string "… … … … … …\n"
+	.string "… … … … … …\p"
+	.string "All the pages after this one are blank.\n"
+	.string "It appears this is all MR. MEGA has\l"
+	.string "written for now.$"
