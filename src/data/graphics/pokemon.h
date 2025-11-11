@@ -26808,13 +26808,13 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_CastformMegaSnowy[] = INCBIN_U16("graphics/pokemon/castform/mega_snowy/shiny.gbapal");
     const u8 gMonIcon_CastformMegaSnowy[] = INCBIN_U8("graphics/pokemon/castform/mega_snowy/icon.4bpp");
 
-    const u32 gMonFrontPic_CharizardMegaZ[] = INCBIN_U32("graphics/pokemon/charizard/mega_z/anim_front.4bpp.smol");
+    const u32 gMonFrontPic_CharizardMegaZ[] = INCBIN_U32("graphics/pokemon/charizard/mega_z/front.4bpp.smol");
     const u16 gMonPalette_CharizardMegaZ[] = INCBIN_U16("graphics/pokemon/charizard/mega_z/normal.gbapal");
     const u32 gMonBackPic_CharizardMegaZ[] = INCBIN_U32("graphics/pokemon/charizard/mega_z/back.4bpp.smol");
     const u16 gMonShinyPalette_CharizardMegaZ[] = INCBIN_U16("graphics/pokemon/charizard/mega_z/shiny.gbapal");
     const u8 gMonIcon_CharizardMegaZ[] = INCBIN_U8("graphics/pokemon/charizard/mega_z/icon.4bpp");
 
-    const u32 gMonFrontPic_CharizardOmegaZ[] = INCBIN_U32("graphics/pokemon/charizard/omega_z/anim_front.4bpp.smol");
+    const u32 gMonFrontPic_CharizardOmegaZ[] = INCBIN_U32("graphics/pokemon/charizard/omega_z/front.4bpp.smol");
     const u16 gMonPalette_CharizardOmegaZ[] = INCBIN_U16("graphics/pokemon/charizard/omega_z/normal.gbapal");
     const u32 gMonBackPic_CharizardOmegaZ[] = INCBIN_U32("graphics/pokemon/charizard/omega_z/back.4bpp.smol");
     const u16 gMonShinyPalette_CharizardOmegaZ[] = INCBIN_U16("graphics/pokemon/charizard/omega_z/shiny.gbapal");
