@@ -266,6 +266,16 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SurfBlob = {
     .callback = UpdateSurfBlobFieldEffect,
 };
 
+const struct SpriteTemplate gFieldEffectObjectTemplate_BrineysBoat = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .oam = &gObjectEventBaseOam_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_MrBrineysBoat,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateSurfBlobFieldEffect,
+};
+
 static const struct SpriteFrameImage sPicTable_Arrow[] = {
     overworld_frame(gFieldEffectObjectPic_Arrow, 2, 2, 0),
     overworld_frame(gFieldEffectObjectPic_Arrow, 2, 2, 1),
