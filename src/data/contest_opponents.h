@@ -1236,8 +1236,8 @@ const struct ContestPokemon gContestOpponents[] =
     },
     [CONTEST_OPPONENT_ASHTON] = {
         .filter = CONTEST_FILTER_NONE,
-        .species = SPECIES_GOLDEEN,
-        .nickname = _("GOLDEN"),
+        .species = SPECIES_FINNEON,
+        .nickname = _("FINNON"),
         .trainerName = _("ASHTON"),
         .trainerGfxId = OBJ_EVENT_GFX_MAN_3,
         .aiFlags = CONTEST_AI_SET_19,
@@ -1250,8 +1250,8 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_WATER_PULSE,
-            MOVE_HORN_ATTACK,
-            MOVE_HORN_DRILL,
+            MOVE_AQUA_RING,
+            MOVE_GUST,
             MOVE_TAIL_WHIP
         },
         .cool = 70,
@@ -2077,8 +2077,8 @@ const struct ContestPokemon gContestOpponents[] =
     },
     [CONTEST_OPPONENT_COLTIN] = {
         .filter = CONTEST_FILTER_NONE,
-        .species = SPECIES_CUBONE,
-        .nickname = _("CUBIN"),
+        .species = SPECIES_LITLEO,
+        .nickname = _("LITLO"),
         .trainerName = _("COLTIN"),
         .trainerGfxId = OBJ_EVENT_GFX_MAN_4,
         .aiFlags = CONTEST_AI_SET_2,
@@ -2090,9 +2090,9 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_BONEMERANG,
-            MOVE_BONE_RUSH,
-            MOVE_REST,
+            MOVE_FIRE_FANG,
+            MOVE_TAKE_DOWN,
+            MOVE_BITE,
             MOVE_GROWL
         },
         .cool = 40,

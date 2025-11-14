@@ -222,7 +222,7 @@ TheDepths_B5F_EventScript_MasterPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
 	call_if_eq VAR_RESULT, 0, TheDepths_B5F_EventScript_ChandelureBattle
-	call_if_eq VAR_RESULT, 1, TheDepths_B5F_EventScript_GengarBattle
+	call_if_eq VAR_RESULT, 1, TheDepths_B5F_EventScript_DusknoirBattle
 	call_if_eq VAR_RESULT, 2, TheDepths_B5F_EventScript_AegislashBattle
 
 TheDepths_B5F_EventScript_ChandelureBattle::
@@ -231,9 +231,9 @@ TheDepths_B5F_EventScript_ChandelureBattle::
 	dowildbattle
 	goto TheDepths_B5F_EventScript_BattleAftermath
 
-TheDepths_B5F_EventScript_GengarBattle::
-	settotemboost 1, 1, 1, 2, 2, 1
-	setbossbattle SPECIES_GENGAR, MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_HYPNOSIS, MOVE_DESTINY_BOND, 0
+TheDepths_B5F_EventScript_DusknoirBattle::
+	settotemboost 1, 2, 2, 1, 1, 1
+	setbossbattle SPECIES_DUSKNOIR, MOVE_POLTERGEIST, MOVE_ICE_PUNCH, MOVE_SHADOW_PUNCH, MOVE_DESTINY_BOND, 0
 	dowildbattle
 	goto TheDepths_B5F_EventScript_BattleAftermath
 

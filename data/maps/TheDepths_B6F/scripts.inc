@@ -220,13 +220,13 @@ TheDepths_B6F_EventScript_HaxorusBattle::
 TheDepths_B6F_EventScript_MasterPresence::
 	call TheDepths_EventScript_StrongPresence
 	random 3
-	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_GarchompBattle
+	call_if_eq VAR_RESULT, 0, TheDepths_B6F_EventScript_GoodraBattle
 	call_if_eq VAR_RESULT, 1, TheDepths_B6F_EventScript_MetagrossBattle
 	call_if_eq VAR_RESULT, 2, TheDepths_B6F_EventScript_ArchaludonBattle
 
-TheDepths_B6F_EventScript_GarchompBattle::
-	settotemboost 1, 2, 1, 2, 1, 1
-	setbossbattle SPECIES_GARCHOMP, MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_SCALE_SHOT, MOVE_SWORDS_DANCE, 2
+TheDepths_B6F_EventScript_GoodraBattle::
+	settotemboost 1, 1, 2, 2, 1, 1
+	setbossbattle SPECIES_GOODRA, MOVE_DRAGON_PULSE, MOVE_MUDDY_WATER, MOVE_THUNDERBOLT, MOVE_POWER_WHIP, 2
 	dowildbattle
 	goto TheDepths_B6F_EventScript_BattleAftermath
 
