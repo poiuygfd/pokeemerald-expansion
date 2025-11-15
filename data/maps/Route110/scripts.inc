@@ -116,6 +116,10 @@ Route110_EventScript_Boy2::
 	msgbox Route110_Text_WhichShouldIChoose, MSGBOX_NPC
 	end
 
+Route110_EventScript_WallyHint::
+	msgbox Route110_Text_BoyWasLookingForYou, MSGBOX_NPC
+	end
+
 Route110_EventScript_SlateportCitySign::
 	msgbox Route110_Text_SlateportCitySign, MSGBOX_SIGN
 	end
@@ -409,6 +413,15 @@ Route110_EventScript_WallyScene::
 	trainerbattle_no_intro TRAINER_WALLY_ROUTE_110, Route110_Text_WallyDefeated
 	msgbox Route110_Text_WallyWillGetStronger, MSGBOX_DEFAULT
 	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox Route110_Text_RegisteredWally, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_WALLY_MATCH_CALL
+	msgbox Route110_Text_WallyLeaves, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit
 	waitmovement 0
 	removeobject LOCALID_ROUTE110_WALLY
@@ -672,6 +685,16 @@ Route110_Text_WallyWillGetStronger:
 	.string "still have a long way to go.\p"
 	.string "We won't give up here, though!\n"
 	.string "We're going to become even stronger!\p"
+	.string "I know!\p"
+	.string "Let's register each other in our\n"
+	.string "POKéNAVS so we can have a rematch!$"
+
+Route110_Text_RegisteredWally:
+	.string "{PLAYER} registered WALLY\n"
+	.string "in the POKéNAV.$"
+
+Route110_Text_WallyLeaves:
+	.string "Okay, time to train!\n"
 	.string "I'll see you around, {PLAYER}!$"
 
 Route110_Text_RideBikeAtFullSpeed:
@@ -775,6 +798,14 @@ Route110_Text_AcroBikesDoNotQualify:
 	.string "of collisions and their total times.\p"
 	.string "ACRO BIKES do not qualify for rating.\n"
 	.string "They are easy to turn, so it's not fair.$"
+
+Route110_Text_BoyWasLookingForYou:
+	.string "Those clothes…\n"
+	.string "There was a boy looking for someone\l"
+	.string "just now, and the description he gave\l"
+	.string "sounds just like you.\p"
+	.string "He's down the grass path there.\n"
+	.string "You better go see what he wants.$"
 
 Route110_Text_SlateportCitySign:
 	.string "ROUTE 110\n"

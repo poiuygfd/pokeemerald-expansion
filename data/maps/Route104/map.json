@@ -462,20 +462,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_ROUTE104_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 17,
-      "y": 50,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_Rival",
-      "flag": "FLAG_HIDE_ROUTE_104_RIVAL"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 5,
       "y": 8,
@@ -547,17 +533,7 @@
       "dest_warp_id": "5"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 51,
-      "elevation": 3,
-      "var": "VAR_ROUTE104_STATE",
-      "var_value": "1",
-      "script": "Route104_EventScript_RivalTrigger"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

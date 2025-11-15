@@ -526,6 +526,15 @@ Route109_EventScript_MayDefeated::
 	msgbox Route109_Text_MayTakeThis, MSGBOX_DEFAULT
 	call Route109_EventScript_GiveItemfinder
 	msgbox Route109_Text_MayExplainItemfinder, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox Route109_Text_RegisteredMay, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+	msgbox Route109_Text_MayLeaves, MSGBOX_DEFAULT
 	goto Route109_EventScript_RivalExit
 	end
 
@@ -556,6 +565,15 @@ Route109_EventScript_BrendanDefeated::
 	msgbox Route109_Text_BrendanTakeThis, MSGBOX_DEFAULT
 	call Route109_EventScript_GiveItemfinder
 	msgbox Route109_Text_BrendanExplainItemfinder, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox Route109_Text_RegisteredBrendan, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+	msgbox Route109_Text_BrendanLeaves, MSGBOX_DEFAULT
 	goto Route109_EventScript_RivalExit
 	end
 
@@ -993,6 +1011,15 @@ Route109_Text_MayExplainItemfinder:
 	.string "MAY: That's a DOWSING MACHINE.\p"
 	.string "Try it out. If there is an item that's\n"
 	.string "not visible, it emits a sound.\p"
+	.string "Oh, yeah!\p"
+	.string "We should also register each other in\n"
+	.string "our POKéNAVS!$"
+
+Route109_Text_RegisteredMay:
+	.string "{PLAYER} registered MAY\n"
+	.string "in the POKéNAV.$"
+
+Route109_Text_MayLeaves:
 	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
 	.string "I know it's a little silly coming from\n"
 	.string "me, but I think you should train a lot\l"
@@ -1021,6 +1048,14 @@ Route109_Text_BrendanExplainItemfinder:
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"
 	.string "a sound.\p"
+	.string "While we're here, we might as well\n"
+	.string "register each other in our POKéNAVS.$"
+
+Route109_Text_RegisteredBrendan:
+	.string "{PLAYER} registered BRENDAN\n"
+	.string "in the POKéNAV.$"
+
+Route109_Text_BrendanLeaves:
 	.string "Anyway, I'm off to look for new\n"
 	.string "POKéMON.$"
 

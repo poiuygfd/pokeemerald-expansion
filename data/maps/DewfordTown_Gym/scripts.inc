@@ -151,6 +151,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setflag FLAG_BADGE02_GET
 	setvar VAR_LEVEL_CAP, 24
 	addvar VAR_PETALBURG_GYM_STATE, 1
+	setflag FLAG_HIDE_DEWFORD_TOWN_TENTACOOL
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers

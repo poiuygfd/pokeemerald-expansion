@@ -627,6 +627,16 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	release
 	end
 
+DewfordTown_EventScript_Tentacool::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_TENTACOOL, CRY_MODE_NORMAL
+	msgbox DewfordTown_Text_Tentacool, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 DewfordTown_Text_TinyIslandCommunity:
 	.string "DEWFORD is a tiny island community.\n"
 	.string "If something gets trendy here,\l"
@@ -789,3 +799,6 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_Text_Tentacool:
+	.string "TENTACOOL: Coooool!$"
