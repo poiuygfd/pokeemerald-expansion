@@ -133,11 +133,23 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
-	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	lock
+	goto_if_unset FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_BrawlySecondGym
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
 	msgbox DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_Gym_EventScript_BrawlySecondGym::
+	goto_if_set FLAG_BADGE03_GET, DewfordTown_Gym_EventScript_BrawlyThirdGym
+	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	release
+	end
+
+DewfordTown_Gym_EventScript_BrawlyThirdGym::
+	trainerbattle_single TRAINER_BRAWLY_2, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	release
 	end
 
@@ -149,7 +161,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM
 	setflag FLAG_BADGE02_GET
-	setvar VAR_LEVEL_CAP, 24
+	call DewfordTown_Gym_EventScript_SetLevelCap
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setflag FLAG_HIDE_DEWFORD_TOWN_TENTACOOL
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
@@ -168,6 +180,15 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	release
 	end
+
+DewfordTown_Gym_EventScript_SetLevelCap::
+	goto_if_set FLAG_BADGE03_GET, DewfordTown_Gym_EventScript_SetHigherCap
+	setvar VAR_LEVEL_CAP, 24
+	return
+
+DewfordTown_Gym_EventScript_SetHigherCap::
+	setvar VAR_LEVEL_CAP, 29
+	return
 
 DewfordTown_Gym_EventScript_GiveBulkUp::
 	giveitem ITEM_TM_COACHING

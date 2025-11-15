@@ -364,11 +364,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 11
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Poochyena
-Level: 11
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
@@ -3616,11 +3616,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Machop
-Level: 13
+Level: 16
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Makuhita
-Level: 13
+Level: 16
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_HITOSHI ===
@@ -3840,7 +3840,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Electrike
-Level: 17
+Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Quick Attack
 - Thunder Wave
@@ -3848,7 +3848,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Leer
 
 Voltorb
-Level: 17
+Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Charge
 - Shock Wave
@@ -5493,21 +5493,22 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Potion
+Items: Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
-Riolu
-Level: 15
-Ability: Prankster
+Stufful
+Level: 16
+Ability: Fluffy
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
-Nature: Jolly
-- Force Palm
-- Metal Claw
-- Coaching
+Nature: Careful
+- Stomp
+- Brick Break
+- Brutal Swing
+- Baby-Doll Eyes
 
-Machop @ Nugget
+Machop @ Big Nugget
 Level: 16
 Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
@@ -5515,20 +5516,10 @@ EVs: 150 HP / 100 Atk
 Nature: Adamant
 - Low Kick
 - Fling
-- Focus Energy
-
-Stufful
-Level: 18
-Ability: Fluffy
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 150 HP / 100 Atk
-Nature: Careful
-- Stomp
-- Brutal Swing
-- Baby-Doll Eyes
+- Coaching
 
 Makuhita @ Sitrus Berry
-Level: 19
+Level: 18
 Ability: Guts
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Atk
@@ -5538,7 +5529,117 @@ Nature: Careful
 - Fake Out
 - Coaching
 
+Riolu
+Level: 20
+Ability: Prankster
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 150 HP / 100 Atk
+Nature: Jolly
+- Force Palm
+- Metal Claw
+- Feint
+
+=== TRAINER_BRAWLY_2 ===
+Name: BRAWLY
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Items: Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
+
+Bewear
+Level: 20
+Ability: Fluffy
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 150 HP / 100 Atk
+Nature: Careful
+- Stomp
+- Brick Break
+- Brutal Swing
+- Baby-Doll Eyes
+
+Machoke @ Big Nugget
+Level: 20
+Ability: Guts
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 150 HP / 100 Atk
+Nature: Adamant
+- Low Kick
+- Fling
+- Coaching
+
+Hariyama
+Level: 22
+Ability: Guts
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 HP / 100 Atk
+Nature: Careful
+- Arm Thrust
+- Reversal
+- Fake Out
+- Coaching
+
+Lucario @ Sitrus Berry
+Level: 24
+Ability: Prankster
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 150 HP / 100 Atk
+Nature: Jolly
+- Force Palm
+- Metal Claw
+- Feint
+
 === TRAINER_WATTSON_1 ===
+Name: WATTSON
+Class: Leader
+Pic: Leader Wattson
+Gender: Male
+Music: Male
+Items: Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Plusle
+Level: 16
+Ability: Plus
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 HP / 100 Spe
+Nature: Bold
+- Discharge
+- Swift
+
+Minun
+Level: 16
+Ability: Minus
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 HP / 100 Spe
+Nature: Bold
+- Discharge
+- Swift
+
+Magnemite
+Level: 18
+Ability: Sturdy
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+EVs: 150 HP / 100 Atk
+Nature: Hardy
+- Shock Wave
+- Magnet Bomb
+- Thunder Wave
+
+Electrike @ Sitrus Berry
+Level: 20
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 HP / 100 Atk
+Nature: Jolly
+- Thunder Fang
+- Fire Fang
+- Howl
+- Thunder Wave
+
+=== TRAINER_WATTSON_2 ===
 Name: WATTSON
 Class: Leader
 Pic: Leader Wattson
@@ -5552,25 +5653,25 @@ Plusle
 Level: 20
 Ability: Plus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 150 HP / 150 Spe
+EVs: 150 HP / 100 Spe
 Nature: Bold
-- Discharge
+- Shock Wave
 - Swift
 
 Minun
 Level: 20
 Ability: Minus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 150 HP / 150 Spe
+EVs: 150 HP / 100 Spe
 Nature: Bold
-- Discharge
+- Shock Wave
 - Swift
 
 Magneton
 Level: 22
 Ability: Sturdy
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-EVs: 150 HP / 150 Atk
+EVs: 150 HP / 100 Atk
 Nature: Hardy
 - Shock Wave
 - Magnet Bomb
@@ -5579,7 +5680,7 @@ Nature: Hardy
 Manectric @ Sitrus Berry
 Level: 24
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-EVs: 150 HP / 150 Atk
+EVs: 150 HP / 100 Atk
 Nature: Jolly
 - Thunder Fang
 - Fire Fang
@@ -5937,11 +6038,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Ralts
-Level: 9
+Level: 13
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Eevee
-Level: 9
+Level: 13
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_TED ===
@@ -6080,11 +6181,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Espurr (F)
-Level: 9
+Level: 10
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Shroomish
-Level: 9
+Level: 10
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GEORGIA ===
@@ -6849,11 +6950,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 9
+Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Rockruff
-Level: 9
+Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TOMMY ===
@@ -6866,11 +6967,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 8
+Level: 12
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
 Aron
-Level: 8
+Level: 13
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 === TRAINER_JOEY ===
@@ -6883,11 +6984,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Stufful
-Level: 8
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Machop
-Level: 8
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEN ===
@@ -8917,11 +9018,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Meditite
-Level: 13
+Level: 17
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Stufful
-Level: 13
+Level: 17
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_LAURA ===
@@ -8934,11 +9035,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Meditite
-Level: 13
+Level: 16
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Riolu
-Level: 13
+Level: 16
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CYNDY_1 ===
@@ -12063,11 +12164,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 8
+Level: 12
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Carbink
-Level: 8
+Level: 13
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_BRENDEN ===
@@ -12080,11 +12181,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Machop
-Level: 13
+Level: 15
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Crabrawler
-Level: 13
+Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LILITH ===
@@ -12097,11 +12198,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Stufful
-Level: 13
+Level: 15
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Pancham
-Level: 13
+Level: 16
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CRISTIAN ===
@@ -12114,11 +12215,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Makuhita
-Level: 13
+Level: 16
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Riolu
-Level: 13
+Level: 16
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SYLVIA ===
@@ -12745,11 +12846,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Stufful
-Level: 9
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Marill
-Level: 9
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VIVI ===
@@ -12981,11 +13082,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wurmple
-Level: 8
+Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Nincada
-Level: 8
+Level: 10
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_DOUG ===
@@ -13247,7 +13348,7 @@ Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Rockruff
-Level: 8
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERIC ===
@@ -13592,7 +13693,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Meditite
-Level: 17
+Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bide
 - Detect
@@ -13600,7 +13701,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thunder Punch
 
 Meditite
-Level: 17
+Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thunder Punch
 - Detect
@@ -14895,11 +14996,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zigzagoon @ Nugget
-Level: 8
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Poochyena
-Level: 8
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SARAH ===
@@ -14913,11 +15014,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Lotad
-Level: 8
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Zigzagoon @ Nugget
-Level: 8
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DARIAN ===
@@ -15945,7 +16046,7 @@ Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Drilbur
-Level: 8
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHNSON ===
@@ -15962,7 +16063,7 @@ Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Applin
-Level: 8
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MELINA ===
@@ -16583,82 +16684,6 @@ Nature: Jolly
 - Roost
 - Dual Wingbeat
 
-=== TRAINER_BRAWLY_2 ===
-Name: BRAWLY
-Class: Leader
-Pic: Leader Brawly
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Bewear @ Shell Bell
-Level: 52
-Ability: Fluffy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Careful
-- Close Combat
-- Double-Edge
-- Brutal Swing
-- Bulk Up
-
-Machamp @ Custap Berry
-Level: 52
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Careful
-- Cross Chop
-- Stone Edge
-- Bulk Up
-- Coaching
-
-Gallade @ Sitrus Berry
-Level: 51
-Ability: Sharpness
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Sacred Sword
-- Psycho Cut
-- Night Slash
-- Swords Dance
-
-Falinks @ Leftovers
-Level: 50
-Ability: Battle Armor
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Def
-Nature: Impish
-- Body Press
-- Knock Off
-- Iron Defense
-- No Retreat
-
-Hariyama @ Flame Orb
-Level: 54
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Adamant
-- Close Combat
-- Headlong Rush
-- Facade
-- Protect
-
-Lucario @ Lucarionite
-Level: 55
-Ability: Justified
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Close Combat
-- Meteor Mash
-- Extreme Speed
-- Swords Dance
-
 === TRAINER_BRAWLY_3 ===
 Name: BRAWLY
 Class: Leader
@@ -16886,82 +16911,6 @@ Nature: Jolly
 - Meteor Mash
 - Extreme Speed
 - Swords Dance
-
-=== TRAINER_WATTSON_2 ===
-Name: WATTSON
-Class: Leader
-Pic: Leader Wattson
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Plusle @ Wise Glasses
-Level: 52
-Ability: Plus
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Timid
-- Discharge
-- Thunderbolt
-- Encore
-- Nasty Plot
-
-Minun @ Sitrus Berry
-Level: 52
-Ability: Minus
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Spe
-Nature: Timid
-- Discharge
-- Charm
-- Encore
-- Helping Hand
-
-Bellibolt @ Leftovers
-Level: 51
-Ability: Electromorphosis
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Discharge
-- Muddy Water
-- Zap Cannon
-- Slack Off
-
-Pincurchin @ Terrain Extender
-Level: 50
-Ability: Electric Surge
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Careful
-- Zing Zap
-- Liquidation
-- Volt Switch
-- Recover
-
-Magnezone @ Life Orb
-Level: 54
-Ability: Analytic
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Flash Cannon
-- Discharge
-- Thunder
-- Rain Dance
-
-Manectric @ Manectite
-Level: 55
-Ability: Lightning Rod
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Modest
-- Thunderbolt
-- Volt Switch
-- Overheat
-- Thunder Wave
 
 === TRAINER_WATTSON_3 ===
 Name: WATTSON
@@ -20533,17 +20482,17 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Poochyena
-Level: 13
+Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
 
 Carvanha
-Level: 13
+Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
 
 Arrokuda
-Level: 15
+Level: 17
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
 
