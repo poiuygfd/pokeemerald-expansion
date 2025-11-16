@@ -9,14 +9,8 @@ OldaleTown_OnTransition:
 	setflag FLAG_VISITED_OLDALE_TOWN
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
-	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
 	call OldaleTown_EventScript_ShowOrHideDestinyKnotLady
 	end
-
-@ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
-OldaleTown_EventScript_SetOldaleState::
-	setvar VAR_OLDALE_TOWN_STATE, 1
-	return
 
 OldaleTown_EventScript_BlockWestEntrance::
 	setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 11
@@ -311,11 +305,11 @@ OldaleTown_EventScript_ReceivedMarinFanfare::
 
 OldaleTown_EventScript_MarinGiftLeave::
 	msgbox OldaleTown_Text_MarinThankYou, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_MARIN_GIFT, OldaleTown_Movement_MarinGiftExit
 	waitmovement 0
 	removeobject LOCALID_MARIN_GIFT
-	setvar VAR_OLDALE_MARIN_STATE, 1
-	setflag FLAG_HIDE_OLDALE_TOWN_MARIN_GIFT
+	setvar VAR_OLDALE_TOWN_STATE, 1
 	releaseall
 	end
 
@@ -509,8 +503,9 @@ OldaleTown_Text_MarinGiftMessage:
 
 OldaleTown_Text_MarinThankYou:
 	.string "Please take care of that one, young\n"
-	.string "one. I wish the both of you a fun and\l"
-	.string "exciting journey. Farewell!$"
+	.string "one, show it the world I could not.\p"
+	.string "I wish the both of you a fun and\n"
+	.string "exciting journey.$"
 
 OldaleTown_Text_ObtainedMarin:
 	.string "{PLAYER} received MARIN.$"

@@ -40,8 +40,6 @@ PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale::
 
 PlayersHouse_1F_EventScript_DadComeGreetPlayerMale::
 	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterDown
-	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_ExclamationMark
-	playse SE_PIN
 	waitmovement 20
 	msgbox PlayersHouse_1F_Text_MadeItInOne, MSGBOX_DEFAULT
 	closemessage
@@ -235,6 +233,15 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox PlayersHouse_1F_Text_ShowYouAroundOneDay, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1
@@ -263,6 +270,15 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_DAD, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox PlayersHouse_1F_Text_ShowYouAroundOneDay, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1

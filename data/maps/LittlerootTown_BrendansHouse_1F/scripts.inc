@@ -335,12 +335,19 @@ PlayersHouse_1F_Text_OhComeQuickly:
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
 	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+	.string "Your DAD'S interview is on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
 	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "I wish you could have seen where your\n"
+	.string "DAD is working now.\p"
+	.string "That's too bad.$"
+
+PlayersHouse_1F_Text_ShowYouAroundOneDay:
+	.string "DAD: I am sure that I will have the\n"
+	.string "opportunity to show you around myself\l"
+	.string "some day.\p"
+	.string "Don't worry about it.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Oh, yes.\n"
