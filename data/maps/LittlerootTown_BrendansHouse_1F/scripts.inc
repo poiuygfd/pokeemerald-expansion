@@ -412,13 +412,12 @@ PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "keyboard.\p"
 	.string "Better get going!$"
 
-PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
-	.string "the road running!”$"
+PlayersHouse_1F_Text_DexnavManual:
+	.string "It's the instruction booklet for\n"
+	.string "the DEXNAV.\p"
+	.string "“Wild POKéMON are easily startled.\n"
+	.string "To get close to them, hold the A Button\l"
+	.string "down to slowly sneak up on them!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "DAD: Hm?\p"

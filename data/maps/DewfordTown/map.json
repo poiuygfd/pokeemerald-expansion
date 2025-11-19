@@ -71,7 +71,7 @@
       "x": 12,
       "y": 8,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -169,7 +169,35 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "DewfordTown_EventScript_WantToLand"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "DewfordTown_EventScript_WantToLand"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "DewfordTown_EventScript_WantToLand"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

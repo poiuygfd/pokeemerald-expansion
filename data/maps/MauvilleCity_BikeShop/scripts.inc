@@ -183,7 +183,7 @@ MauvilleCity_BikeShop_Text_RydelGreeting:
 	.string "I'm the owner of this cycle shop.$"
 
 MauvilleCity_BikeShop_Text_DidYouComeFromFarAway:
-	.string "RYDEL: Your RUNNING SHOES…\n"
+	.string "RYDEL: Your shoes…\n"
 	.string "They're awfully filthy.\p"
 	.string "Did you come from far away?$"
 

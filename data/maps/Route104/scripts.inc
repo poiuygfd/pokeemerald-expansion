@@ -133,6 +133,48 @@ Route104_EventScript_Girl2::
 	end
 
 Route104_EventScript_SailToDewford::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setflag FLAG_IS_PLAYER_BOATING
+	setflag FLAG_BRINEY_STEERING_BOAT
+	dofieldeffect FLDEFF_USE_SURF
+	waitstate
+	applymovement LOCALID_ROUTE104_BRINEY, Route104_Movement_BrineyBoardBoat
+	waitmovement 0
+	removeobject LOCALID_ROUTE104_BRINEY
+	msgbox Route104_Text_BrineyOffWeGo, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+Route104_EventScript_WantToLand::
+	lock
+	msgbox Route104_Text_WantToLandHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route104_EventScript_GetOffBoat
+	release
+	end
+
+Route104_EventScript_GetOffBoat::
+	showobjectat LOCALID_PLAYER, MAP_ROUTE104
+	clearflag FLAG_BRINEY_STEERING_BOAT
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	hideobjectat LOCALID_DEWFORD_BOAT, MAP_DEWFORD_TOWN
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
+	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
+	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
+	waitstate
+	release
+	end
+
+Route104_Movement_BrineyBoardBoat:
+	walk_down
+	walk_down
+	step_end
+
+Route104_EventScript_SailToDewfordOld::
 	setobjectsubpriority LOCALID_ROUTE104_BRINEY, MAP_ROUTE104, 0
 	setobjectsubpriority LOCALID_PLAYER, MAP_ROUTE104, 0
 	applymovement LOCALID_ROUTE104_BRINEY, Route104_Movement_BrineyBoardBoat
@@ -622,11 +664,6 @@ Route104_Movement_PlayerMoveForBriney:
 	walk_in_place_faster_right
 	step_end
 
-Route104_Movement_BrineyBoardBoat:
-	walk_down
-	walk_down
-	step_end
-
 Route104_Movement_BrineyExitBoat:
 	walk_down
 	walk_in_place_faster_left
@@ -843,6 +880,14 @@ Route104_Text_MaybeIllCheckTheWoods:
 	.string "Maybe I should check PETALBURG WOODS.\n"
 	.string "That seems like a place that would be\l"
 	.string "crawling with bugs!$"
+
+Route104_Text_BrineyOffWeGo:
+	.string "MR. BRINEY: Alright, PEEKO!\n"
+	.string "We're setting sail!$"
+
+Route104_Text_WantToLandHere:
+	.string "MR. BRINEY: Did you want to\n"
+	.string "land near PETALBURG?$"
 
 Route104_Text_DontNeedThisTakeIt:
 	.string "This FLOWER SHOP started selling\n"

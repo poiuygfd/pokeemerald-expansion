@@ -2035,8 +2035,9 @@ MatchCall_Text_Mom2::
 MatchCall_Text_Mom3::
 	.string "MOM: {PLAYER}…\n"
 	.string "Don't worry about me or the house.\p"
-	.string "Wear those RUNNING SHOES until\n"
-	.string "they fall apart, honey!$"
+	.string "Oh, but make sure to change your\n"
+	.string "clothes every now and again with\l"
+	.string "that OUTFIT BOX!$"
 
 MatchCall_Text_Roxanne1::
 	.string "ROXANNE: Oh, hello, {PLAYER}!\p"

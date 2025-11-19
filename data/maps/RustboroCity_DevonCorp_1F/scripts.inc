@@ -89,8 +89,8 @@ RustboroCity_DevonCorp_1F_Text_StaffGotRobbed:
 	.string "got robbed of an important parcel.$"
 
 RustboroCity_DevonCorp_1F_Text_ThoseShoesAreOurProduct:
-	.string "Hey, those RUNNING SHOES!\n"
-	.string "They're one of our products!\p"
+	.string "Hey, that DEXNAV!\n"
+	.string "That's one of our products!\p"
 	.string "It makes me happy when I see someone\n"
 	.string "using something we made.$"
 

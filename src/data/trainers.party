@@ -263,10 +263,14 @@ AI: Check Bad Move
 Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Howl
+- Tackle
 
 Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Howl
+- Tackle
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -366,10 +370,16 @@ AI: Check Bad Move
 Poochyena
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 50 Spe
+- Howl
+- Bite
 
 Poochyena
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 50 Spe
+- Howl
+- Bite
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: GRUNT
@@ -3120,11 +3130,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Arrokuda
-Level: 26
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
-Level: 26
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOMINIK ===
@@ -12095,13 +12105,19 @@ AI: Check Bad Move
 
 Mightyena
 Level: 36
+Ability: Intimidate
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 Atk / 50 Spe
+EVs: 50 Atk / 100 Spe
+- Howl
+- Crunch
 
 Mightyena
 Level: 36
+Ability: Intimidate
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 Atk / 50 Spe
+EVs: 50 Atk / 100 Spe
+- Howl
+- Crunch
 
 === TRAINER_GRUNT_UNUSED ===
 Name: GRUNT

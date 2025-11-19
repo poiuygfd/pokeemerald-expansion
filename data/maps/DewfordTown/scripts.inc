@@ -20,6 +20,28 @@ DewfordTown_EventScript_Briney::
 	case MULTI_B_PRESSED, DewfordTown_EventScript_CancelSailSelect
 	end
 
+DewfordTown_EventScript_WantToLand::
+	lock
+	msgbox DewfordTown_Text_WantToLandHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GetOffBoat
+	release
+	end
+
+DewfordTown_EventScript_GetOffBoat::
+	showobjectat LOCALID_PLAYER, MAP_ROUTE104
+	clearflag FLAG_BRINEY_STEERING_BOAT
+	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	warp MAP_DEWFORD_TOWN, 11, 9
+	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
+	waitstate
+	release
+	end
+
 DewfordTown_EventScript_ChoosePetalburg::
 	msgbox DewfordTown_Text_PetalburgWereSettingSail, MSGBOX_DEFAULT
 	closemessage
@@ -700,6 +722,10 @@ DewfordTown_Text_SlateportWereSettingSail:
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
+
+DewfordTown_Text_WantToLandHere:
+	.string "MR. BRINEY: Did you want to\n"
+	.string "land near DEWFORD?$"
 
 DewfordTown_Text_GettingItchToFish:
 	.string "This is a renowned fishing spot.\n"
