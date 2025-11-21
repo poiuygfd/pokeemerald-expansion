@@ -1,23 +1,62 @@
 DewfordTown_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, DewfordTown_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_OnTransition
 	.byte 0
 
 DewfordTown_OnTransition:
 	setflag FLAG_VISITED_DEWFORD_TOWN
+	call_if_eq VAR_BOARD_BRINEY_BOAT_STATE, 1, DewfordTown_EventScript_SetBrineyPos
+	end
+
+DewfordTown_EventScript_SetBrineyPos:
+	setobjectxyperm LOCALID_DEWFORD_BRINEY, 13, 9
+	return
+
+DewfordTown_OnFrame:
+	map_script_2 VAR_BOARD_BRINEY_BOAT_STATE, 1, DewfordTown_EventScript_StartSailing
+	.2byte 0
+
+DewfordTown_EventScript_StartSailing::
+	lockall
+	goto DewfordTown_EventScript_Sailing
 	end
 
 DewfordTown_EventScript_Briney::
 	lock
 	faceplayer
-	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, DewfordTown_EventScript_ReturnToPetalburgPrompt
-	message DewfordTown_Text_WhereAreWeBound
-	waitmessage
-	multichoicedefault 21, 6, MULTI_BRINEY_ON_DEWFORD, 2, FALSE
-	switch VAR_RESULT
-	case 0, DewfordTown_EventScript_ChoosePetalburg
-	case 1, DewfordTown_EventScript_ChooseSlateport
-	case 2, DewfordTown_EventScript_CancelSailSelect
-	case MULTI_B_PRESSED, DewfordTown_EventScript_CancelSailSelect
+	msgbox DewfordTown_Text_ReadyToSetSail, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_DeclineSailing
+	goto DewfordTown_EventScript_SettingSail
+	end
+
+DewfordTown_EventScript_DeclineSailing::
+	msgbox DewfordTown_Text_JustTellMeWhenYouNeedToSetSail, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_SettingSail::
+	msgbox DewfordTown_Text_AnchorsAweigh, MSGBOX_DEFAULT
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 1
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	warp MAP_DEWFORD_TOWN, 12, 9
+	waitstate
+	releaseall
+	end
+
+DewfordTown_EventScript_Sailing::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setflag FLAG_IS_PLAYER_BOATING
+	setflag FLAG_BRINEY_STEERING_BOAT
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	dofieldeffect FLDEFF_USE_SURF
+	waitstate
+	applymovement LOCALID_DEWFORD_BRINEY, DewfordTown_Movement_BrineyBoardBoat
+	waitmovement 0
+	removeobject LOCALID_DEWFORD_BRINEY
+	msgbox DewfordTown_Text_BrineyOffWeGo, MSGBOX_DEFAULT
+	closemessage
+	releaseall
 	end
 
 DewfordTown_EventScript_WantToLand::
@@ -28,52 +67,26 @@ DewfordTown_EventScript_WantToLand::
 	end
 
 DewfordTown_EventScript_GetOffBoat::
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
 	clearflag FLAG_BRINEY_STEERING_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setrespawn HEAL_LOCATION_DEWFORD_TOWN
 	warp MAP_DEWFORD_TOWN, 11, 9
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	waitstate
 	release
 	end
 
-DewfordTown_EventScript_ChoosePetalburg::
-	msgbox DewfordTown_Text_PetalburgWereSettingSail, MSGBOX_DEFAULT
-	closemessage
-	goto DewfordTown_EventScript_SailToPetalburg
-	release
-	end
-
-DewfordTown_EventScript_ChooseSlateport::
-	msgbox DewfordTown_Text_SlateportWereSettingSail, MSGBOX_DEFAULT
-	closemessage
-	goto DewfordTown_EventScript_SailToSlateport
-	release
-	end
-
-DewfordTown_EventScript_CancelSailSelect::
-	msgbox DewfordTown_Text_JustTellMeWhenYouNeedToSetSail, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-DewfordTown_EventScript_ReturnToPetalburgPrompt::
-	msgbox DewfordTown_Text_SetSailBackToPetalburg, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_SailBackToPetalburg
-	msgbox DewfordTown_Text_GoDeliverIllBeWaiting, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_SailBackToPetalburg::
-	msgbox DewfordTown_Text_PetalburgWereSettingSail2, MSGBOX_DEFAULT
-	closemessage
-	goto DewfordTown_EventScript_SailToPetalburg
-	end
+DewfordTown_Movement_BrineyBoardBoat:
+	walk_left
+	walk_up
+	step_end
 
 DewfordTown_EventScript_Woman::
 	msgbox DewfordTown_Text_TinyIslandCommunity, MSGBOX_NPC
@@ -132,481 +145,20 @@ DewfordTown_EventScript_FishingNotSoGood::
 	release
 	end
 
-DewfordTown_EventScript_SailToPetalburg::
-	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
-	setobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN, 0
-	applymovement LOCALID_DEWFORD_BRINEY, DewfordTown_Movement_BrineyBoardBoat
-	waitmovement 0
-	removeobject LOCALID_DEWFORD_BRINEY
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_PlayerBoardBoat
-	waitmovement 0
-	hideobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_DEWFORD_BOAT, DewfordTown_Movement_SailToPetalburg
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_SailToPetalburg
-	waitmovement 0
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
-	call Common_EventScript_StopBrineysBoatMusic
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_ExitBoatPetalburg
-	waitmovement 0
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	hideobjectat LOCALID_DEWFORD_BOAT, MAP_DEWFORD_TOWN
-	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
-	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
-	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
-	waitstate
+DewfordTown_EventScript_ScaredySpelunker::
+	goto_if_set FLAG_RECEIVED_ESCAPE_ROPE, DewfordTown_Text_ReceivedEscapeRope
+	msgbox DewfordTown_Text_SpelunkerScared, MSGBOX_DEFAULT
+	giveitem ITEM_ESCAPE_ROPE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_ESCAPE_ROPE
+	msgbox DewfordTown_Text_ReceivedEscapeRope, MSGBOX_DEFAULT
 	release
 	end
 
-DewfordTown_EventScript_SailToSlateport::
-	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
-	setobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN, 1
-	applymovement LOCALID_DEWFORD_BRINEY, DewfordTown_Movement_BrineyBoardBoat
-	waitmovement 0
-	removeobject LOCALID_DEWFORD_BRINEY
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_PlayerBoardBoat
-	waitmovement 0
-	hideobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_DEWFORD_BOAT, DewfordTown_Movement_SailToSlateport
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_SailToSlateport
-	waitmovement 0
-	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat LOCALID_PLAYER, MAP_ROUTE109
-	applymovement LOCALID_PLAYER, DewfordTown_Movement_ExitBoatSlateport
-	waitmovement 0
-	setobjectxyperm LOCALID_ROUTE109_BRINEY, 21, 26
-	addobject LOCALID_ROUTE109_BRINEY
-	setobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE109, 0
-	applymovement LOCALID_ROUTE109_BRINEY, DewfordTown_Movement_BrineyExitBoat
-	waitmovement 0
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	addobject LOCALID_ROUTE109_BOAT
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	hideobjectat LOCALID_DEWFORD_BOAT, MAP_DEWFORD_TOWN
-	call_if_unset FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
-	call_if_set FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateport
-	closemessage
-	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
-	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	resetobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE109
-	copyobjectxytoperm LOCALID_ROUTE109_BRINEY
+DewfordTown_EventScript_GiftedRope::
+	msgbox DewfordTown_Text_ReceivedEscapeRope, MSGBOX_NPC
 	release
 	end
-
-DewfordTown_EventScript_LandedSlateportDeliverGoods::
-	msgbox DewfordTown_Text_BrineyLandedInSlateportDeliverGoods, MSGBOX_DEFAULT
-	return
-
-DewfordTown_EventScript_LandedSlateport::
-	msgbox DewfordTown_Text_BrineyLandedInSlateport, MSGBOX_DEFAULT
-	return
-
-DewfordTown_Movement_SailToPetalburg:
-	walk_up
-	walk_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_left
-	walk_fast_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-DewfordTown_Movement_SailToSlateport:
-	walk_right
-	walk_fast_right
-	walk_fast_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	step_end
-
-DewfordTown_Movement_PlayerBoardBoat:
-	walk_right
-	walk_up
-	step_end
-
-DewfordTown_Movement_ExitBoatPetalburg:
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-DewfordTown_Movement_ExitBoatSlateport:
-	walk_up
-	walk_up
-	walk_up
-	walk_in_place_faster_down
-	step_end
-
-DewfordTown_Movement_BrineyBoardBoat:
-	walk_up
-	step_end
-
-DewfordTown_Movement_BrineyExitBoat:
-	walk_up
-	walk_up
-	step_end
 
 DewfordTown_EventScript_TrendyPhraseBoy::
 	lock
@@ -704,20 +256,18 @@ DewfordTown_Text_BrineyLandedInDewford:
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
-DewfordTown_Text_WhereAreWeBound:
+DewfordTown_Text_ReadyToSetSail:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
-	.string "Now, my friend, where are we bound?$"
+	.string "Are you ready to set sail, my friend?$"
 
-DewfordTown_Text_PetalburgWereSettingSail:
-	.string "MR. BRINEY: PETALBURG, is it?\p"
-	.string "Anchors aweigh!\n"
+DewfordTown_Text_AnchorsAweigh:
+	.string "MR. BRINEY: Anchors aweigh!\p"
 	.string "PEEKO, we're setting sail, my darling!$"
 
-DewfordTown_Text_SlateportWereSettingSail:
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+DewfordTown_Text_BrineyOffWeGo:
+	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
+	.string "We're setting sail!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"
@@ -771,6 +321,24 @@ DewfordTown_Text_FishingAdvice:
 	.string "immediately, but with bigger catches,\l"
 	.string "you need to time the pulls on your ROD\l"
 	.string "to haul them in.$"
+
+DewfordTown_Text_SpelunkerScared:
+	.string "Aiiiiyyeeeeee!!!\p"
+	.string "Uwoh… Sorry about that…\n"
+	.string "I was just spelunking in GRANITE CAVE…\p"
+	.string "But part-way through exploring, I ran\n"
+	.string "into this freaky little guy with gems\l"
+	.string "for eyes! Scared the life out of me!\p"
+	.string "I used my ESCAPE ROPE to get out of\n"
+	.string "there as fast as I could!\p"
+	.string "My heart can't take any more scares like\n"
+	.string "that…\p"
+	.string "My days as a spelunker are over!\n"
+	.string "You'll get more use out of this than me!$"
+
+DewfordTown_Text_ReceivedEscapeRope:
+	.string "I still feel sick…\n"
+	.string "I'm just gonna stick to mountains…$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:
 	.string "I like what's hip, happening, and trendy.\n"

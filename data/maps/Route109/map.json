@@ -28,10 +28,10 @@
     {
       "local_id": "LOCALID_ROUTE109_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
-      "x": 21,
-      "y": 26,
+      "x": 32,
+      "y": 28,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -42,8 +42,8 @@
     {
       "local_id": "LOCALID_ROUTE109_BRINEY",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 21,
-      "y": 24,
+      "x": 32,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 12,
-      "y": 36,
+      "x": 14,
+      "y": 43,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 25,
-      "y": 39,
+      "x": 32,
+      "y": 34,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 0,
@@ -107,14 +107,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
-      "x": 19,
-      "y": 10,
+      "x": 32,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "Route109_EventScript_Ricky",
       "flag": "0"
     },
@@ -159,8 +159,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
-      "x": 29,
-      "y": 32,
+      "x": 18,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
       "movement_range_x": 0,
@@ -172,8 +172,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
-      "x": 28,
-      "y": 31,
+      "x": 17,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
@@ -224,8 +224,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 30,
-      "y": 32,
+      "x": 19,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -263,8 +263,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 33,
-      "y": 6,
+      "x": 30,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -276,8 +276,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZIGZAGOON)",
-      "x": 32,
-      "y": 6,
+      "x": 29,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -340,11 +340,12 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE109_TM_GIVER",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 31,
-      "y": 16,
+      "x": 36,
+      "y": 3,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -397,8 +398,8 @@
     {
       "local_id": "LOCALID_ROUTE109_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 21,
-      "y": 19,
+      "x": 36,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -411,8 +412,8 @@
     {
       "local_id": "LOCALID_ROUTE109_RIVAL_ON_BIKE",
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
-      "x": 21,
-      "y": 19,
+      "x": 36,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -421,6 +422,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_ROUTE_109_RIVAL_ON_BIKE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 35,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route109_EventScript_PierBoy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 35,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route109_EventScript_ObstacleMan",
+      "flag": "FLAG_HIDE_ROUTE_109_OBSTACLE_MAN"
     }
   ],
   "warp_events": [
@@ -435,8 +462,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 20,
-      "y": 21,
+      "x": 35,
+      "y": 19,
       "elevation": 0,
       "var": "VAR_ROUTE109_STATE",
       "var_value": "0",
@@ -444,8 +471,8 @@
     },
     {
       "type": "trigger",
-      "x": 21,
-      "y": 21,
+      "x": 36,
+      "y": 19,
       "elevation": 0,
       "var": "VAR_ROUTE109_STATE",
       "var_value": "0",
@@ -453,12 +480,48 @@
     },
     {
       "type": "trigger",
-      "x": 22,
-      "y": 21,
+      "x": 35,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_ROUTE109_STATE",
       "var_value": "0",
       "script": "Route109_EventScript_RivalTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROUTE109_STATE",
+      "var_value": "0",
+      "script": "Route109_EventScript_RivalTrigger4"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "Route109_EventScript_WantToLand"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "Route109_EventScript_WantToLand"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_BOARD_BRINEY_BOAT_STATE",
+      "var_value": "0",
+      "script": "Route109_EventScript_WantToLand"
     }
   ],
   "bg_events": [
@@ -480,16 +543,16 @@
     },
     {
       "type": "hidden_item",
-      "x": 16,
-      "y": 23,
+      "x": 13,
+      "y": 16,
       "elevation": 3,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_REVIVE"
     },
     {
       "type": "hidden_item",
-      "x": 33,
-      "y": 5,
+      "x": 30,
+      "y": 2,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_1"
@@ -512,8 +575,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 13,
-      "y": 16,
+      "x": 20,
+      "y": 24,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_2"

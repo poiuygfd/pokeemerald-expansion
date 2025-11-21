@@ -690,9 +690,9 @@
 #define FLAG_HIDE_WEATHERMAN_FINAL  0x281 // Weatherman's final appearance
 #define FLAG_DEFEATED_WEATHERMAN  0x282 // Defeated Weatherman
 #define FLAG_MET_MR_MEGA  0x283 // Player has met Mr. Mega
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
+#define FLAG_HIDE_ROUTE_109_OBSTACLE_MAN  0x284 // Blocks the player from cutting straight to Slateport
+#define FLAG_HIDE_ROUTE_109_SPELUNKER  0x285 // Scaredy spelunker outside Granite Cave
+#define FLAG_HIDE_DEWFORD_TOWN_SPELUNKER  0x286 // Scaredy spelunker fled to Dewford Town
 #define FLAG_UNUSED_0x287  0x287 // Unused Flag
 #define FLAG_UNUSED_0x288  0x288 // Unused Flag
 #define FLAG_UNUSED_0x289  0x289 // Unused Flag

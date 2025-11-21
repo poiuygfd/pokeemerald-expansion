@@ -18,8 +18,13 @@ Route109_EventScript_HideInnerTubes::
 Route109_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
+	call_if_unset FLAG_HIDE_ROUTE_109_OBSTACLE_MAN, Route109_EventScript_ChangeTMGiverDirection
 	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_TryShowRegitube
 	end
+
+Route109_EventScript_ChangeTMGiverDirection::
+	setobjectmovementtype LOCALID_ROUTE109_TM_GIVER, MOVEMENT_TYPE_FACE_LEFT
+	return
 
 Route109_EventScript_TryShowRegitube::
 	call_if_set FLAG_CAUGHT_REGITUBE, Route109_EventScript_HideRegitube
@@ -320,6 +325,30 @@ Route109_EventScript_MrBriney::
 	goto Route109_EventScript_DeliveredDevonGoods
 	end
 
+Route109_EventScript_WantToLand::
+	lock
+	msgbox Route109_Text_WantToLandHere, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route109_EventScript_GetOffBoat
+	release
+	end
+
+Route109_EventScript_GetOffBoat::
+	clearflag FLAG_BRINEY_STEERING_BOAT
+	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setrespawn HEAL_LOCATION_SLATEPORT_CITY
+	warp MAP_ROUTE109, 32, 25
+	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
+	waitstate
+	release
+	end
+
 Route109_EventScript_HaveNotDeliveredDevonGood::
 	message Route109_Text_BrineySailToDewfordQuestion
 	msgbox Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
@@ -424,8 +453,17 @@ Route109_EventScript_Woman::
 	msgbox Route109_Text_LittleKidsDartAround, MSGBOX_NPC
 	end
 
+Route109_EventScript_OldMan::
+	msgbox Route109_Text_ZigzagoonPicksUpLitter, MSGBOX_NPC
+	end
+
+Route109_EventScript_PierBoy::
+	msgbox Route109_Text_ThisWasRecentlyConstructed, MSGBOX_NPC
+	end
+
 Route109_EventScript_ChillingWaterGiver::
 	lock
+	goto_if_unset FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS, Route109_EventScript_ChillingWaterObstacle
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CHILLING_WATER, Route109_EventScript_ExplainChillingWater
 	msgbox Route109_Text_WaterIsWarm, MSGBOX_DEFAULT
@@ -441,8 +479,13 @@ Route109_EventScript_ExplainChillingWater::
 	release
 	end
 
-Route109_EventScript_OldMan::
-	msgbox Route109_Text_ZigzagoonPicksUpLitter, MSGBOX_NPC
+Route109_EventScript_ChillingWaterObstacle::
+	msgbox Route109_Text_ColdWaterIsBetter, MSGBOX_DEFAULT
+	end
+
+Route109_EventScript_ObstacleMan::
+	lock
+	msgbox Route109_Text_HotWaterIsBetter, MSGBOX_DEFAULT
 	end
 
 Route109_EventScript_Zigzagoon::
@@ -467,6 +510,11 @@ Route109_EventScript_RivalTrigger2::
 
 Route109_EventScript_RivalTrigger3::
 	setvar VAR_0x8008, 3
+	goto Route109_EventScript_RivalScene
+	end
+
+Route109_EventScript_RivalTrigger4::
+	setvar VAR_0x8008, 3 @ don't forget to change this when you deal with the rival stuff
 	goto Route109_EventScript_RivalScene
 	end
 
@@ -941,6 +989,10 @@ Route109_Text_BrineyTellMeWhenYouNeedToSail:
 	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
+Route109_Text_WantToLandHere:
+	.string "MR. BRINEY: Did you want to\n"
+	.string "land near SLATEPORT?$"
+
 Route109_Text_ChillAtMyPapasSpot:
 	.string "Yo, TRAINERS!\n"
 	.string "Whether you're hot to trot,\l"
@@ -969,14 +1021,33 @@ Route109_Text_WereGoingToMakeBigCastle:
 	.string "We'll let you be a servant.$"
 
 Route109_Text_WaterIsWarm:
-	.string "The water round here is nice and warm!\n"
-	.string "Feels much better than cold water.\p"
+	.string "The water at the beach here is pretty\n"
+	.string "warm, much moreso than the water when\l"
+	.string "I'm out sailing at sea.\p"
+	.string "I much prefer the refreshing feeling of\n"
+	.string "some nice, cold water though.\p"
 	.string "Here, you can have this.$"
 
 Route109_Text_ChillingWaterExplanation:
 	.string "CHILLING WATER lets you blast the\n"
-	.string "opponent in the face with cold water,\l"
-	.string "lowering their ATTACK.$"
+	.string "opponent in the face with cold water.\p"
+	.string "POKéMON don't seem to appreciate it\n"
+	.string "as much as I do though, as it seems\l"
+	.string "to just lower their ATTACK.$"
+
+Route109_Text_HotWaterIsBetter:
+	.string "Are you crazy?\p"
+	.string "On what world is a cold shower better\n"
+	.string "than a hot shower?\p"
+	.string "Hot showers are much more relaxing\n"
+	.string "and enjoyable!$"
+
+Route109_Text_ColdWaterIsBetter:
+	.string "Are you serious?\p"
+	.string "Hot showers are obviously worse than\n"
+	.string "cold showers.\p"
+	.string "Cold showers are super refreshing and\n"
+	.string "more enjoyable!$"
 
 Route109_Text_ZigzagoonPicksUpLitter:
 	.string "The water around these parts is clean.\p"
@@ -989,6 +1060,14 @@ Route109_Text_ZigzagoonPicksUpLitter:
 
 Route109_Text_ZigzagoonCry:
 	.string "ZIGZAGOON: Guguu?$"
+
+Route109_Text_ThisWasRecentlyConstructed:
+	.string "This dock was constructed not too long\n"
+	.string "ago.\p"
+	.string "SLATEPORT'S main dock is on a different\n"
+	.string "side of town, but this dock was created\l"
+	.string "so that shipments to DEWFORD, PETALBURG\l"
+	.string "and RUSTBORO can be done faster.$"
 
 Route109_Text_MayLetsBattle:
 	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"

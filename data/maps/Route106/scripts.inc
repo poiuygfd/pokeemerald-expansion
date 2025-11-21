@@ -5,20 +5,9 @@ Route106_EventScript_TrainerTipsSign::
 	msgbox Route106_Text_TrainerTips, MSGBOX_SIGN
 	end
 
-Route106_EventScript_Hiker::
+Route106_EventScript_Spelunker::
 	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_ESCAPE_ROPE , Route106_Text_ReceivedEscapeRope
-	msgbox Route106_Text_HikerScared, MSGBOX_DEFAULT
-	giveitem ITEM_ESCAPE_ROPE
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_ESCAPE_ROPE
-	msgbox Route106_Text_ReceivedEscapeRope, MSGBOX_DEFAULT
-	release
-	end
-
-Route106_EventScript_GiftedRope::
-	msgbox Route106_Text_ReceivedEscapeRope, MSGBOX_NPC
+	msgbox Route106_Text_SelfAffirmation, MSGBOX_DEFAULT
 	release
 	end
 
@@ -58,26 +47,19 @@ Route106_EventScript_Ned::
 	msgbox Route106_Text_NedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route106_Text_SelfAffirmation:
+	.string "Come on, man.\n"
+	.string "You can do this…\p"
+	.string "You've scaled countless mountains!\n"
+	.string "What's one cave got on you?\p"
+	.string "One dark, deep, scary cave…\p"
+	.string "Agh! It's no good!\n"
+	.string "Now I'm thinking about how scary it is!\p"
+	.string "Gotta take deep breaths…\n"
+	.string "In and out, in and out…$"
+
 Route106_Text_TrainerTips:
 	.string "TRAINER TIPS\p"
 	.string "Advice on catching POKéMON with a ROD:\n"
 	.string "Press the A Button if you get a bite.$"
-
-Route106_Text_HikerScared:
-	.string "Aiiiiyyeeeeee!!!\p"
-	.string "Uwoh… Sorry about that…\n"
-	.string "I was just spelunking in this here cave…\p"
-	.string "But part-way through exploring, I ran\n"
-	.string "into this freaky little guy with gems\l"
-	.string "for eyes! Scared the life out of me!\p"
-	.string "I used my ESCAPE ROPE to get out of\n"
-	.string "there as fast as I could!\p"
-	.string "My heart can't take any more scares like\n"
-	.string "that…\p"
-	.string "My days as a spelunker are over!\n"
-	.string "You'll get more use out of this than me!$"
-
-Route106_Text_ReceivedEscapeRope:
-	.string "I still feel sick…\n"
-	.string "I'm just gonna stick to mountains…$"
 

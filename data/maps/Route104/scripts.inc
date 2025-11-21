@@ -154,15 +154,16 @@ Route104_EventScript_WantToLand::
 	end
 
 Route104_EventScript_GetOffBoat::
-	showobjectat LOCALID_PLAYER, MAP_ROUTE104
 	clearflag FLAG_BRINEY_STEERING_BOAT
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	hideobjectat LOCALID_DEWFORD_BOAT, MAP_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
-	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
+	setrespawn HEAL_LOCATION_PETALBURG_CITY
 	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	waitstate
@@ -882,7 +883,7 @@ Route104_Text_MaybeIllCheckTheWoods:
 	.string "crawling with bugs!$"
 
 Route104_Text_BrineyOffWeGo:
-	.string "MR. BRINEY: Alright, PEEKO!\n"
+	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
 	.string "We're setting sail!$"
 
 Route104_Text_WantToLandHere:

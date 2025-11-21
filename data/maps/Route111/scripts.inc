@@ -256,6 +256,30 @@ Route111_EventScript_SandstormTrigger::
 	doweather
 	end
 
+Route111_EventScript_BattlerGentleman::
+	lock
+	msgbox Route111_Text_BattlingWithStyle, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_BattlerManiac::
+	lock
+	msgbox Route111_Text_BattlingWithStrategy, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_InterruptBattleTrigger::
+	lock
+	msgbox Route111_Text_GetOutOfTheWay, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, Route111_Movement_PushPlayerBack
+	waitmovement 0
+	release
+	end
+
+Route111_Movement_PushPlayerBack:
+	walk_down
+	step_end
+
 Route111_EventScript_Victor::
 	lock
 	faceplayer
@@ -392,6 +416,14 @@ Route111_EventScript_Man2::
 	msgbox Route111_Text_WinstrateFamilyDestroyedMe, MSGBOX_NPC
 	end
 
+Route111_EventScript_DeliverLetterTrigger::
+	lock
+	msgbox Route111_Text_YouShouldDeliverLetter, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, Route111_Movement_PushPlayerBack
+	waitmovement 0
+	release
+	end
+
 Route111_EventScript_Hiker::
 	lock
 	faceplayer
@@ -426,6 +458,24 @@ Route111_EventScript_RockSmashTipFatMan::
 	applymovement LOCALID_ROUTE111_ROCK_SMASH_MAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	releaseall
+	end
+
+Route111_EventScript_Masquerain::
+	lock
+	waitse
+	playmoncry SPECIES_MASQUERAIN, CRY_MODE_NORMAL
+	msgbox Route111_Text_Masquerain, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Route111_EventScript_Dubwool::
+	lock
+	waitse
+	playmoncry SPECIES_DUBWOOL, CRY_MODE_NORMAL
+	msgbox Route111_Text_Dubwool, MSGBOX_DEFAULT
+	waitmoncry
+	release
 	end
 
 Route111_EventScript_Drew::
@@ -565,6 +615,23 @@ Route111_EventScript_TrainerHillSign::
 	msgbox Route111_Text_TrainerHillSign, MSGBOX_SIGN
 	end
 
+Route111_Text_GetOutOfTheWay:
+	.string "Hey!\n"
+	.string "Can't you see we're battling here?\p"
+	.string "Get out of the way!$"
+
+Route111_Text_BattlingWithStyle:
+	.string "You'll never defeat us!\n"
+	.string "We battle with style!\p"
+	.string "Our precise, elegant moves will\n"
+	.string "leave your eyes bewildered!$"
+
+Route111_Text_BattlingWithStrategy:
+	.string "You'll never defeat us!\n"
+	.string "We battle with strategy!\p"
+	.string "Our calculated, planned out attacks\n"
+	.string "will leave your mind boggled!$"
+
 Route111_Text_BattleOurFamily:
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
@@ -642,6 +709,18 @@ Route111_Text_WinstrateFamilyDestroyedMe:
 	.string "I challenged the WINSTRATE family,\n"
 	.string "but four matches in a row is tough\l"
 	.string "going… They destroyed me.$"
+
+Route111_Text_Masquerain:
+	.string "MASQUERAIN: Bzzzt! Bzzzzzt!$"
+
+Route111_Text_Dubwool:
+	.string "DUBWOOL: Beeeeh! Beeeeh!$"
+
+Route111_Text_YouShouldDeliverLetter:
+	.string "You still need to deliver the LETTER\n"
+	.string "to STEVEN.\p"
+	.string "You feel like should probably go and do\n"
+	.string "that first.$"
 
 Route111_Text_RouteSignMauville:
 	.string "ROUTE 111\n"
