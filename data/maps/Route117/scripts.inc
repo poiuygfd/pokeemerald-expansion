@@ -49,6 +49,22 @@ Route117_EventScript_TryMoveDayCareMan::
 Route117_EventScript_StopMoveDayCareMan::
 	return
 
+Route117_EventScript_DadCallsTrigger::
+	lockall
+	pokenavcall Route117_Text_DadPokenavCall
+	waitmessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox Route117_Text_RegisteredDadInPokenav, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
+	setvar VAR_ROUTE105_STATE, 1
+	setvar VAR_ROUTE117_STATE, 1
+	releaseall
+	end
+
 Route117_EventScript_Woman::
 	msgbox Route117_Text_ArentTheseFlowersPretty, MSGBOX_NPC
 	end
@@ -214,6 +230,26 @@ Route117_EventScript_Aisha::
 	trainerbattle_single TRAINER_AISHA, Route117_Text_AishaIntro, Route117_Text_AishaDefeat
 	msgbox Route117_Text_AishaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route117_Text_DadPokenavCall:
+	.string "… … … … … …\n"
+	.string "… … … … … Beep!\p"
+	.string "DAD: Oh, {PLAYER}?\p"
+	.string "… … … … … …\n"
+	.string "Where are you now?\l"
+	.string "It sounds busy wherever you are.\p"
+	.string "I just heard from DEVON's MR. STONE\n"
+	.string "about your POKéNAV, so I decided\l"
+	.string "to give you a call.\p"
+	.string "It sounds like you're doing fine,\n"
+	.string "so that's fine with me.\p"
+	.string "You take care now.\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"
+
+Route117_Text_RegisteredDadInPokenav:
+	.string "Registered DAD NORMAN\n"
+	.string "in the POKéNAV.$"
 
 Route117_Text_DayCarePokemonHadNewMove:
 	.string "I left my POKéMON at the DAY CARE.\p"

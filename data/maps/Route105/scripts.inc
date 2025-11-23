@@ -25,6 +25,22 @@ Route105_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+Route105_EventScript_DadCallsTrigger::
+	lockall
+	pokenavcall Route105_Text_DadPokenavCall
+	waitmessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox Route105_Text_RegisteredDadInPokenav, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
+	setvar VAR_ROUTE105_STATE, 1
+	setvar VAR_ROUTE117_STATE, 1
+	releaseall
+	end
+
 Route105_EventScript_Foster::
 	trainerbattle_single TRAINER_FOSTER, Route105_Text_FosterIntro, Route105_Text_FosterDefeated
 	msgbox Route105_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
@@ -76,7 +92,7 @@ Route105_EventScript_AndresRematch::
 	msgbox Route105_Text_AndresRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route104_Text_DadPokenavCall:
+Route105_Text_DadPokenavCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
 	.string "DAD: Oh, {PLAYER}?\p"
@@ -92,6 +108,6 @@ Route104_Text_DadPokenavCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
 
-Route104_Text_RegisteredDadInPokenav:
+Route105_Text_RegisteredDadInPokenav:
 	.string "Registered DAD NORMAN\n"
 	.string "in the POKéNAV.$"

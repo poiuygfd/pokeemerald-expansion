@@ -2,10 +2,20 @@
 @  These are labeled in DewfordTown/scripts.inc
 
 Route109_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route109_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, Route109_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route109_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route109_OnResume
 	.byte 0
+
+Route109_OnFrame:
+	map_script_2 VAR_BOARD_BRINEY_BOAT_STATE, 1, Route109_EventScript_StartSailing
+	.2byte 0
+
+Route109_EventScript_StartSailing::
+	lockall
+	goto Route109_EventScript_Sailing
+	end
 
 Route109_OnLoad:
 	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_HideInnerTubes
@@ -18,9 +28,15 @@ Route109_EventScript_HideInnerTubes::
 Route109_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
+	call_if_eq VAR_BOARD_BRINEY_BOAT_STATE, 1, Route109_EventScript_SetBrineyPos
 	call_if_unset FLAG_HIDE_ROUTE_109_OBSTACLE_MAN, Route109_EventScript_ChangeTMGiverDirection
 	call_if_set FLAG_HIDE_BEACH_TUBES, Route109_EventScript_TryShowRegitube
 	end
+
+Route109_EventScript_SetBrineyPos:
+	setobjectxyperm LOCALID_DEWFORD_BRINEY, 32, 25
+	setobjectmovementtype LOCALID_DEWFORD_BRINEY, MOVEMENT_TYPE_FACE_DOWN
+	return
 
 Route109_EventScript_ChangeTMGiverDirection::
 	setobjectmovementtype LOCALID_ROUTE109_TM_GIVER, MOVEMENT_TYPE_FACE_LEFT
@@ -50,279 +66,40 @@ Route109_EventScript_TryRemoveRegitube::
 	removeobject LOCALID_ROUTE_109_REGITUBE
 	return
 
-Route109_EventScript_StartDepartForDewford::
-	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE109, 0
-	setobjectsubpriority LOCALID_PLAYER, MAP_ROUTE109, 0
-	applymovement LOCALID_ROUTE109_BRINEY, Route109_Movement_BrineyEnterBoat
-	waitmovement 0
-	removeobject LOCALID_ROUTE109_BRINEY
-	switch VAR_FACING
-	case DIR_SOUTH, Route109_EventScript_EnterBoatSouth
-	case DIR_WEST, Route109_EventScript_EnterBoatWest
-	case DIR_EAST, Route109_EventScript_EnterBoatEast
-	end
-
-Route109_EventScript_EnterBoatSouth::
-	applymovement LOCALID_PLAYER, Route109_Movement_PlayerEnterBoatSouth
-	waitmovement 0
-	goto Route109_EventScript_DoSailToDewford
-	end
-
-Route109_EventScript_EnterBoatEast::
-	applymovement LOCALID_PLAYER, Route109_Movement_PlayerEnterBoatEast
-	waitmovement 0
-	goto Route109_EventScript_DoSailToDewford
-	end
-
-Route109_EventScript_EnterBoatWest::
-	applymovement LOCALID_PLAYER, Route109_Movement_PlayerEnterBoatWest
-	waitmovement 0
-	goto Route109_EventScript_DoSailToDewford
-	end
-
-Route109_EventScript_DoSailToDewford::
-	hideobjectat LOCALID_PLAYER, MAP_ROUTE109
-	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_ROUTE109_BOAT, Route109_Movement_SailToDewford
-	applymovement LOCALID_PLAYER, Route109_Movement_SailToDewford
-	waitmovement 0
-	delay 50
-	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	applymovement LOCALID_PLAYER, Route109_Movement_PlayerExitBoat
-	waitmovement 0
-	addobject LOCALID_DEWFORD_BOAT
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8
-	addobject LOCALID_DEWFORD_BRINEY
-	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
-	applymovement LOCALID_DEWFORD_BRINEY, Route109_Movement_BrineyExitBoat
-	waitmovement 0
-	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	hideobjectat LOCALID_ROUTE109_BOAT, MAP_ROUTE109
-	msgbox DewfordTown_Text_BrineyLandedInDewford, MSGBOX_DEFAULT
-	closemessage
-	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
-	resetobjectsubpriority LOCALID_PLAYER, MAP_ROUTE109
-	resetobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN
-	copyobjectxytoperm LOCALID_DEWFORD_BRINEY
-	release
-	end
-
-Route109_Movement_SailToDewford:
-	walk_in_place_faster_down
-	walk_down
-	walk_down
-	walk_fast_down
-	walk_fast_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_left
-	walk_left
-	walk_in_place_faster_down
-	step_end
-
-Route109_Movement_PlayerEnterBoatSouth:
-	walk_down
-	walk_down
-	step_end
-
-Route109_Movement_PlayerExitBoat:
-	walk_down
-	walk_down
-	walk_left
-	walk_in_place_faster_right
-	step_end
-
-Route109_Movement_PlayerEnterBoatEast:
-	walk_right
-	walk_down
-	step_end
-
-Route109_Movement_PlayerEnterBoatWest:
-	walk_left
-	walk_down
-	step_end
-
-Route109_Movement_BrineyEnterBoat:
-	walk_down
-	step_end
-
-Route109_Movement_BrineyExitBoat:
-	walk_down
-	walk_in_place_faster_left
-	step_end
-
 Route109_EventScript_MrBriney::
 	lock
 	faceplayer
-	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route109_EventScript_HaveNotDeliveredDevonGood
-	goto Route109_EventScript_DeliveredDevonGoods
+	msgbox Route109_Text_ReadyToSetSail, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route109_EventScript_DeclineSailing
+	goto Route109_EventScript_SettingSail
+	end
+
+Route109_EventScript_DeclineSailing::
+	msgbox Route109_Text_JustTellMeWhenYouNeedToSetSail, MSGBOX_DEFAULT
+	release
+	end
+
+Route109_EventScript_SettingSail::
+	msgbox Route109_Text_AnchorsAweigh, MSGBOX_DEFAULT
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 1
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	warp MAP_ROUTE109, 32, 26
+	waitstate
+	releaseall
+	end
+
+Route109_EventScript_Sailing::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setflag FLAG_IS_PLAYER_BOATING
+	setflag FLAG_BRINEY_STEERING_BOAT
+	dofieldeffect FLDEFF_USE_SURF
+	waitstate
+	applymovement LOCALID_ROUTE109_BRINEY, Route109_Movement_BrineyBoardBoat
+	waitmovement 0
+	removeobject LOCALID_ROUTE109_BRINEY
+	msgbox Route109_Text_BrineyOffWeGo, MSGBOX_DEFAULT
+	closemessage
+	releaseall
 	end
 
 Route109_EventScript_WantToLand::
@@ -349,38 +126,10 @@ Route109_EventScript_GetOffBoat::
 	release
 	end
 
-Route109_EventScript_HaveNotDeliveredDevonGood::
-	message Route109_Text_BrineySailToDewfordQuestion
-	msgbox Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route109_EventScript_StayHere
-	goto Route109_EventScript_SailToDewford
-	end
-
-Route109_EventScript_DeliveredDevonGoods::
-	message Route109_Text_BrineyWhereAreWeBound
-	waitmessage
-	multichoicedefault 21, 8, MULTI_BRINEY_OFF_DEWFORD, 1, FALSE
-	switch VAR_RESULT
-	case 0, Route109_EventScript_SailToDewford
-	case 1, Route109_EventScript_ChoseNotToSail
-	case MULTI_B_PRESSED, Route109_EventScript_ChoseNotToSail
-	end
-
-Route109_EventScript_SailToDewford::
-	msgbox Route109_Text_BrineyDewfordItIs, MSGBOX_DEFAULT
-	closemessage
-	goto Route109_EventScript_StartDepartForDewford
-	end
-
-Route109_EventScript_StayHere::
-	msgbox Route109_Text_BrineyDeliverDevonGoods, MSGBOX_DEFAULT
-	release
-	end
-
-Route109_EventScript_ChoseNotToSail::
-	msgbox Route109_Text_BrineyTellMeWhenYouNeedToSail, MSGBOX_DEFAULT
-	release
-	end
+Route109_Movement_BrineyBoardBoat:
+	walk_down
+	walk_down
+	step_end
 
 Route109_EventScript_Regitube::
 	lock
@@ -480,12 +229,19 @@ Route109_EventScript_ExplainChillingWater::
 	end
 
 Route109_EventScript_ChillingWaterObstacle::
+	lock
 	msgbox Route109_Text_ColdWaterIsBetter, MSGBOX_DEFAULT
+	waitmessage 0
+	closemessage
+	release
 	end
 
 Route109_EventScript_ObstacleMan::
 	lock
 	msgbox Route109_Text_HotWaterIsBetter, MSGBOX_DEFAULT
+	waitmessage 0
+	closemessage
+	release
 	end
 
 Route109_EventScript_Zigzagoon::
@@ -959,33 +715,20 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "I suppose you're going to visit CAPT.\n"
 	.string "STERN and deliver the DEVON PARTS?$"
 
-Route109_Text_BrineySailToDewfordQuestion:
-	.string "MR. BRINEY: I thought you're supposed\n"
-	.string "to deliver the DEVON PARTS.\p"
-	.string "Would you like to sail back to\n"
-	.string "DEWFORD, then?$"
-
-Route109_Text_BrineyDewfordItIs:
-	.string "MR. BRINEY: DEWFORD it is, then!\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
-
-Route109_Text_BrineyDeliverDevonGoods:
-	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the DEVON PARTS. I'll be waiting.$"
-
-DewfordTown_Text_BrineyLandedInSlateport:
-	.string "MR. BRINEY: Ahoy! We've made land in\n"
-	.string "SLATEPORT!\p"
-	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail again!$"
-
-Route109_Text_BrineyWhereAreWeBound:
+Route109_Text_ReadyToSetSail:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
-	.string "Now, my friend, where are we bound?$"
+	.string "Are you ready to set sail, my friend?$"
 
-Route109_Text_BrineyTellMeWhenYouNeedToSail:
+Route109_Text_AnchorsAweigh:
+	.string "MR. BRINEY: Anchors aweigh!\p"
+	.string "PEEKO, we're setting sail, my darling!$"
+
+Route109_Text_BrineyOffWeGo:
+	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
+	.string "We're setting sail!$"
+
+Route109_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
@@ -1066,8 +809,8 @@ Route109_Text_ThisWasRecentlyConstructed:
 	.string "ago.\p"
 	.string "SLATEPORT'S main dock is on a different\n"
 	.string "side of town, but this dock was created\l"
-	.string "so that shipments to DEWFORD, PETALBURG\l"
-	.string "and RUSTBORO can be done faster.$"
+	.string "so that shipments to DEWFORD, RUSTBORO\l"
+	.string "and PETALBURG can be done faster.$"
 
 Route109_Text_MayLetsBattle:
 	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
