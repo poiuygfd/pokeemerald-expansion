@@ -231,7 +231,7 @@ Route109_EventScript_ExplainChillingWater::
 Route109_EventScript_ChillingWaterObstacle::
 	lock
 	msgbox Route109_Text_ColdWaterIsBetter, MSGBOX_DEFAULT
-	waitmessage 0
+	waitmessage
 	closemessage
 	release
 	end
@@ -239,7 +239,7 @@ Route109_EventScript_ChillingWaterObstacle::
 Route109_EventScript_ObstacleMan::
 	lock
 	msgbox Route109_Text_HotWaterIsBetter, MSGBOX_DEFAULT
-	waitmessage 0
+	waitmessage
 	closemessage
 	release
 	end
