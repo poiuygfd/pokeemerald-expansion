@@ -283,6 +283,21 @@ PetalburgWoods_EventScript_Lyle::
 	msgbox PetalburgWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
 	end
 
+PetalburgWoods_EventScript_Alicia::
+	trainerbattle_single TRAINER_ALICIA, PetalburgWoods_Text_BattleWasFatedToHappen, PetalburgWoods_Text_FatedToLose
+	msgbox PetalburgWoods_Text_WonderWhatFateHasInStore, MSGBOX_AUTOCLOSE
+	end
+
+PetalburgWoods_EventScript_Sammy::
+	trainerbattle_single TRAINER_SAMMY, PetalburgWoods_Text_ThePowerOfBugs, PetalburgWoods_Text_ThatAnswersThat
+	msgbox PetalburgWoods_Text_DontUnderestimateBugs, MSGBOX_AUTOCLOSE
+	end
+
+PetalburgWoods_EventScript_Sharen::
+	trainerbattle_single TRAINER_SHAREN, PetalburgWoods_Text_UnfathomableWealth, PetalburgWoods_Text_SomeToYou
+	msgbox PetalburgWoods_Text_GoingToStartARestaurant, MSGBOX_AUTOCLOSE
+	end
+
 PetalburgWoods_EventScript_James::
 	trainerbattle_single TRAINER_JAMES_1, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose, PetalburgWoods_EventScript_TryRegisterJames
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -401,6 +416,46 @@ PetalburgWoods_Text_ICouldntWin:
 PetalburgWoods_Text_ImOutOfPokeBalls:
 	.string "I caught a bunch of POKéMON.\n"
 	.string "Now I'm out of POKé BALLS.$"
+
+PetalburgWoods_Text_BattleWasFatedToHappen:
+	.string "The pleasant scent of the woods\n"
+	.string "has lured me here.\p"
+	.string "Our battle must have been fated\n"
+	.string "to happen!$"
+
+PetalburgWoods_Text_FatedToLose:
+	.string "I suppose that means I was\n"
+	.string "fated to lose…$"
+
+PetalburgWoods_Text_WonderWhatFateHasInStore:
+	.string "I wonder what fate has in store\n"
+	.string "for me next…$"
+
+PetalburgWoods_Text_ThePowerOfBugs:
+	.string "Let's see!\n"
+	.string "Do you have what it takes to stand\l"
+	.string "up to the power of BUGS?$"
+
+PetalburgWoods_Text_ThatAnswersThat:
+	.string "Well, that answers that.$"
+
+PetalburgWoods_Text_DontUnderestimateBugs:
+	.string "You may have beat me, but don't\n"
+	.string "underestimate BUG POKéMON!$"
+
+PetalburgWoods_Text_UnfathomableWealth:
+	.string "Oh, I'm just so unfathomably\n"
+	.string "wealthy!\p"
+	.string "I simply don't know what to do\n"
+	.string "with all this money!$"
+
+PetalburgWoods_Text_SomeToYou:
+	.string "Well, I suppose giving some to\n"
+	.string "you is an option…$"
+
+PetalburgWoods_Text_GoingToStartARestaurant:
+	.string "Maybe I could start a restaurant\n"
+	.string "that exists only to serve me…$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
 	.string "If you take BUG POKéMON to school,\n"

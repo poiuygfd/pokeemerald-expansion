@@ -303,7 +303,7 @@
 #define FLAG_RECEIVED_RUNNING_SHOES          0x112
 #define FLAG_RECEIVED_QUICK_CLAW             0x113
 #define FLAG_RECEIVED_KINGS_ROCK             0x114
-#define FLAG_RECEIVED_MACHO_BRACE            0x115
+#define FLAG_DELIVERED_MACHO_BRACE           0x115
 #define FLAG_RECEIVED_SOOTHE_BELL            0x116
 #define FLAG_RECEIVED_WHITE_HERB             0x117
 #define FLAG_RECEIVED_SOFT_SAND              0x118
@@ -691,9 +691,9 @@
 #define FLAG_DEFEATED_WEATHERMAN  0x282 // Defeated Weatherman
 #define FLAG_MET_MR_MEGA  0x283 // Player has met Mr. Mega
 #define FLAG_HIDE_ROUTE_109_OBSTACLE_MAN  0x284 // Blocks the player from cutting straight to Slateport
-#define FLAG_HIDE_ROUTE_109_SPELUNKER  0x285 // Scaredy spelunker outside Granite Cave
+#define FLAG_HIDE_ROUTE_106_SPELUNKER  0x285 // Scaredy spelunker outside Granite Cave
 #define FLAG_HIDE_DEWFORD_TOWN_SPELUNKER  0x286 // Scaredy spelunker fled to Dewford Town
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
+#define FLAG_HIDE_ROUTE_111_BATTLERS  0x287 // Battler obstacles on Route 111
 #define FLAG_UNUSED_0x288  0x288 // Unused Flag
 #define FLAG_UNUSED_0x289  0x289 // Unused Flag
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag

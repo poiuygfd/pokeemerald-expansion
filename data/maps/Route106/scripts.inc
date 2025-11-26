@@ -1,14 +1,85 @@
 Route106_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route106_OnTransition
 	.byte 0
 
-Route106_EventScript_TrainerTipsSign::
-	msgbox Route106_Text_TrainerTips, MSGBOX_SIGN
+Route106_OnTransition:
+	call_if_eq VAR_ROUTE106_STATE, 1, Route106_EventScript_SetSpelunkerPos
+	end
+
+Route106_EventScript_SetSpelunkerPos:
+	setobjectxyperm LOCALID_ROUTE106_SPELUNKER, 51, 16
+	setobjectmovementtype LOCALID_ROUTE106_SPELUNKER, MOVEMENT_TYPE_FACE_RIGHT
+	return
+
+Route106_EventScript_SpelunkerTrigger1::
+	lock
+	msgbox Route106_Text_HeScream, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE106_SPELUNKER, Route106_Movement_SpelunkerRun1
+	waitmovement 0
+	removeobject LOCALID_ROUTE106_SPELUNKER
+	clearflag FLAG_HIDE_DEWFORD_TOWN_SPELUNKER
+	setvar VAR_ROUTE106_STATE, 2
+	release
+	end
+
+Route106_EventScript_SpelunkerTrigger2::
+	lock
+	msgbox Route106_Text_HeScream, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE106_SPELUNKER, Route106_Movement_SpelunkerRun2
+	waitmovement 0
+	removeobject LOCALID_ROUTE106_SPELUNKER
+	clearflag FLAG_HIDE_DEWFORD_TOWN_SPELUNKER
+	setvar VAR_ROUTE106_STATE, 2
+	release
 	end
 
 Route106_EventScript_Spelunker::
 	lock
 	msgbox Route106_Text_SelfAffirmation, MSGBOX_DEFAULT
 	release
+	end
+
+Route106_Movement_SpelunkerRun1:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route106_Movement_SpelunkerRun2:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route106_EventScript_TrainerTipsSign::
+	msgbox Route106_Text_TrainerTips, MSGBOX_SIGN
 	end
 
 Route106_EventScript_Douglas::
@@ -57,6 +128,9 @@ Route106_Text_SelfAffirmation:
 	.string "Now I'm thinking about how scary it is!\p"
 	.string "Gotta take deep breaths…\n"
 	.string "In and out, in and out…$"
+
+Route106_Text_HeScream:
+	.string "Aiiiiiyeeeeeeee!!!!!$"
 
 Route106_Text_TrainerTips:
 	.string "TRAINER TIPS\p"

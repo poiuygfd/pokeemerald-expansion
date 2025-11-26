@@ -692,10 +692,13 @@ Route111_Text_VickyDefeat:
 	.string "My granddaughter was right…$"
 
 Route111_Text_VickyPostBattle:
-	.string "If you're not in any hurry,\n"
-	.string "visit with us awhile.\p"
-	.string "We have something we would like\n"
-	.string "to give you.$"
+	.string "An impressive victory for one\n"
+	.string "as young as yourself.\p"
+	.string "Hm?\n"
+	.string "What's that?\p"
+	.string "A parcel from DEVON CORP?\n"
+	.string "Very well, come inside.\p"
+	.string "We can discuss this indoors.$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks:
 	.string "If you don't raise your POKéMON some\n"

@@ -71,6 +71,11 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	msgbox SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs, MSGBOX_DEFAULT
 	setvar VAR_0x8004, ITEM_DEVON_PARTS
 	call Common_EventScript_PlayerHandedOverTheItem
+	msgbox SlateportCity_OceanicMuseum_2F_Text_DidntOrderThese, MSGBOX_DEFAULT
+	pokenavcall SlateportCity_OceanicMuseum_2F_Text_ThatsWhereTheyAre
+	waitmessage
+	giveitem ITEM_LETTER
+	giveitem ITEM_PARCEL
 	msgbox SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -84,6 +89,9 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	clearflag FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 1
+	setvar VAR_ROUTE106_STATE, 1
+	setvar VAR_ROUTE111_STATE, 1
+	setflag FLAG_HIDE_ROUTE_111_BATTLERS
 	fadescreen FADE_FROM_BLACK
 	release
 	end
@@ -369,6 +377,43 @@ SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:
 	.string "Thank you for saving us!\p"
 	.string "Oh, yes, I almost forgot that you\n"
 	.string "even brought the parts from DEVON!$"
+
+SlateportCity_OceanicMuseum_2F_Text_DidntOrderThese:
+	.string "CAPT. STERN: These PARTS will be\n"
+	.string "integral for our expedition!\p"
+	.string "Oh?\n"
+	.string "I don't believe I ordered anything\l"
+	.string "that looks like this…\p"
+	.string "There's also a letter here that\n"
+	.string "seems to be addressed to someone…\p"
+	.string "Sorry, but could you give MR. STONE\n"
+	.string "a call and ask him about these?$"
+
+SlateportCity_OceanicMuseum_2F_Text_ThatsWhereTheyAre:
+	.string "MR. STONE: Hm?\n"
+	.string "Well, if it isn't {PLAYER}{KUN}!\p"
+	.string "Did you deliver those DEVON PARTS?\p"
+	.string "… … … … … …\n"
+	.string "… … … … … …\p"
+	.string "Ah!\n"
+	.string "I was wondering where those had gone!\p"
+	.string "That AQUA GRUNT must have also grabbed\n"
+	.string "them by mistake when he bolted with\l"
+	.string "the DEVON PARTS!\p"
+	.string "I'm really sorry to ask this, but\n"
+	.string "would it be possible to get you to\l"
+	.string "deliver those as well?\p"
+	.string "That LETTER needs to be delivered to\n"
+	.string "a man named STEVEN.\p"
+	.string "You should be able to find him in\n"
+	.string "GRANITE CAVE near DEWFORD.\p"
+	.string "And that PARCEL needs to be delivered\n"
+	.string "to the WINSTRATE FAMILY.\p"
+	.string "They live just north of MAUVILLE.\p"
+	.string "I'll have a reward ready for you\n"
+	.string "when you've delivered those, don't"
+	.string "you worry!\l"
+	.string "Thank you again, {PLAYER}{KUN}!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 	.string "CAPT. STERN: Whoops!\n"

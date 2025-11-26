@@ -61,3 +61,39 @@ GraniteCave_B2F_EventScript_RanFromDiancie::
 	setvar VAR_0x8004, SPECIES_DIANCIE
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+GraniteCave_B2F_EventScript_Kyle::
+	trainerbattle_single TRAINER_KYLE, GraniteCave_B2F_Text_PreparedForAllSituations, GraniteCave_B2F_Text_NotPrepatedForThis
+	msgbox GraniteCave_B2F_Text_AmIGoingToBeOK, MSGBOX_AUTOCLOSE
+	end
+
+GraniteCave_B2F_EventScript_Robby::
+	trainerbattle_single TRAINER_ROBBY, GraniteCave_B2F_Text_BigOlCave, GraniteCave_B2F_Text_DontLoveLosingThough
+	msgbox GraniteCave_B2F_Text_FocusOnTheCave, MSGBOX_AUTOCLOSE
+	end
+
+GraniteCave_B2F_Text_PreparedForAllSituations:
+	.string "I make sure I'm always prepared\n"
+	.string "for all situations.\p"
+	.string "A cave like this is no big deal\n"
+	.string "for me!$"
+
+GraniteCave_B2F_Text_NotPrepatedForThis:
+	.string "Uh oh.\n"
+	.string "I wasn't prepared for this.$"
+
+GraniteCave_B2F_Text_AmIGoingToBeOK:
+	.string "Stuck in a cave with all my\n"
+	.string "POKéMON fainted…\p"
+	.string "Am I… going to be okay…?$"
+
+GraniteCave_B2F_Text_BigOlCave:
+	.string "I love getting stuck into a big\n"
+	.string "ol' cave like this!$"
+
+GraniteCave_B2F_Text_DontLoveLosingThough:
+	.string "I don't love losing though.$"
+
+GraniteCave_B2F_Text_FocusOnTheCave:
+	.string "I'm going to go back to\n"
+	.string "focusing on this big ol' cave.$"

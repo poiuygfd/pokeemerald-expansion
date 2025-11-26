@@ -24,6 +24,9 @@ GraniteCave_StevensRoom_EventScript_GiveKantoStones::
 	return
 
 GraniteCave_StevensRoom_EventScript_MatchCallSteven::
+	msgbox GraniteCave_StevensRoom_Text_PokemonQuiteCapableLetsBattle, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_STEVEN_GRANITE_CAVE, GraniteCave_StevensRoom_Text_ThatWasRatherImpressive
 	msgbox GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -139,11 +142,24 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "Let me see…\n"
 	.string "Hmm… So that's the starter you chose…\p"
 	.string "In that case, I believe you may be\n"
-	.string "able to make use of this.$"
+	.string "able to eventually make use of this.$"
 
-GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
+GraniteCave_StevensRoom_Text_PokemonQuiteCapableLetsBattle:
 	.string "STEVEN: Your POKéMON appear quite\n"
 	.string "capable.\p"
+	.string "You certainly strike me as quite an\n"
+	.string "intriguing TRAINER.\p"
+	.string "I believe the best way to get to know\n"
+	.string "each other is through battle.\p"
+	.string "Let's have a quick bout. I want you to\n"
+	.string "Show me the kind of TRAINER you are.$"
+
+GraniteCave_StevensRoom_Text_ThatWasRatherImpressive:
+	.string "That was rather impressive, I must say.$"
+
+GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
+	.string "STEVEN: A marvelous display of\n"
+	.string "strength.\p"
 	.string "If you keep training, you could even\n"
 	.string "become the CHAMPION of the POKéMON\l"
 	.string "LEAGUE one day. That's what I think.\p"

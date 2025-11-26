@@ -102,7 +102,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route106_EventScript_Spelunker",
-      "flag": "FLAG_HIDE_ROUTE_109_SPELUNKER"
+      "flag": "FLAG_HIDE_ROUTE_106_SPELUNKER"
     }
   ],
   "warp_events": [
@@ -122,7 +122,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE106_STATE",
       "var_value": "1",
-      "script": "NULL"
+      "script": "Route106_EventScript_SpelunkerTrigger1"
     },
     {
       "type": "trigger",
@@ -131,7 +131,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE106_STATE",
       "var_value": "1",
-      "script": "NULL"
+      "script": "Route106_EventScript_SpelunkerTrigger1"
     },
     {
       "type": "trigger",
@@ -140,7 +140,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE106_STATE",
       "var_value": "1",
-      "script": "NULL"
+      "script": "Route106_EventScript_SpelunkerTrigger2"
     },
     {
       "type": "trigger",
@@ -149,7 +149,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE106_STATE",
       "var_value": "1",
-      "script": "NULL"
+      "script": "Route106_EventScript_SpelunkerTrigger1"
     }
   ],
   "bg_events": [
