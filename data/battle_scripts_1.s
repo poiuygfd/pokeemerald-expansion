@@ -916,8 +916,6 @@ BattleScript_CoachingBoostDef:
 
 BattleScript_EffectMagicalCheer::
 	attackcanceler
-	attackstring
-	ppreduce
 	jumpifnoally BS_ATTACKER, BattleScript_ButItFailed
 	copybyte gBattlerTarget, gBattlerAttacker
 	setallytonexttarget EffectMagicalCheer_CheckAllyStats

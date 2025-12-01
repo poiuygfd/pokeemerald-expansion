@@ -5560,7 +5560,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Bewear
-Level: 20
+Level: 21
 Ability: Fluffy
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5571,7 +5571,7 @@ Nature: Careful
 - Baby-Doll Eyes
 
 Machoke @ Big Nugget
-Level: 20
+Level: 21
 Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5660,7 +5660,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle
-Level: 20
+Level: 21
 Ability: Plus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5669,7 +5669,7 @@ Nature: Bold
 - Swift
 
 Minun
-Level: 20
+Level: 21
 Ability: Minus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5708,7 +5708,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Vulpix @ Heat Rock
-Level: 24
+Level: 25
 Ability: Drought
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Spe
@@ -5719,7 +5719,7 @@ Nature: Timid
 - Sunny Day
 
 Camerupt
-Level: 24
+Level: 25
 Ability: Solid Rock
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Atk
@@ -5729,19 +5729,8 @@ Nature: Serious
 - Rock Slide
 - Sunny Day
 
-Combusken @ Focus Sash
-Level: 25
-Ability: Speed Boost
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 200 HP / 150 Atk
-Nature: Adamant
-- Fire Punch
-- Double Kick
-- Swords Dance
-- Protect
-
 Armarouge
-Level: 26
+Level: 27
 Ability: Weak Armor
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 HP / 150 SpA
@@ -5751,7 +5740,7 @@ EVs: 200 HP / 150 SpA
 - Ally Switch
 
 Torkoal @ White Herb
-Level: 29
+Level: 28
 Ability: Drought
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 Def / 150 SpA
@@ -5759,6 +5748,16 @@ EVs: 200 Def / 150 SpA
 - Solar Beam
 - Body Press
 - Sunny Day
+
+Pyroar @ Sitrus Berry
+Level: 29
+Ability: Unnerve
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 200 HP / 150 Spe
+- Overheat
+- Echoed Voice
+- Noble Roar
+- Work Up
 
 === TRAINER_NORMAN_1 ===
 Name: NORMAN
@@ -5771,7 +5770,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Slaking
-Level: 34
+Level: 35
 Ability: Truant
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 200 Atk
@@ -5782,7 +5781,7 @@ Nature: Jolly
 - Slack Off
 
 Farigiraf
-Level: 34
+Level: 35
 Ability: Armor Tail
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 200 Def
@@ -5793,7 +5792,7 @@ Nature: Modest
 - Skill Swap
 
 Linoone @ Mago Berry
-Level: 33
+Level: 34
 Ability: Gluttony
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 200 Spe
@@ -5804,7 +5803,7 @@ Nature: Jolly
 - Dig
 
 Dudunsparce @ Throat Spray
-Level: 32
+Level: 33
 Ability: Serene Grace
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 200 SpA
@@ -5878,15 +5877,16 @@ Nature: Bold
 - Leech Seed
 - Air Slash
 
-Pidgeot @ Pidgeotite
+Skarmory @ Skarmorite
 Level: 33
-Ability: Big Pecks
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 200 SpA / 250 Spe
-Nature: Modest
-- Hurricane
-- Hyper Voice
-- Heat Wave
+EVs: 200 Atk / 250 Spe
+Nature: Adamant
+- Steel Wing
+- Drill Peck
+- Drill Run
+- Swords Dance
 
 === TRAINER_TATE_AND_LIZA_1 ===
 Name: TATE&LIZA
@@ -16461,16 +16461,16 @@ Nature: Brave
 - Magnet Rise
 - Thunder Wave
 
-Aerodactyl @ Aerodactylite
+Barbaracle @ Barbaracite
 Level: 55
-Ability: Pressure
+Ability: Tough Claws
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Rock Slide
-- Earthquake
-- Roost
-- Dual Wingbeat
+- Razor Shell
+- Brick Break
+- Shell Smash
 
 === TRAINER_ROXANNE_3 ===
 Name: ROXANNE
@@ -16537,16 +16537,16 @@ Nature: Brave
 - Magnet Rise
 - Thunder Wave
 
-Aerodactyl @ Aerodactylite
+Barbaracle @ Barbaracite
 Level: 60
-Ability: Pressure
+Ability: Tough Claws
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Rock Slide
-- Earthquake
-- Roost
-- Dual Wingbeat
+- Razor Shell
+- Brick Break
+- Shell Smash
 
 === TRAINER_ROXANNE_4 ===
 Name: ROXANNE
@@ -16613,16 +16613,16 @@ Nature: Brave
 - Magnet Rise
 - Thunder Wave
 
-Aerodactyl @ Aerodactylite
+Barbaracle @ Barbaracite
 Level: 65
-Ability: Pressure
+Ability: Tough Claws
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Rock Slide
-- Earthquake
-- Roost
-- Dual Wingbeat
+- Razor Shell
+- Brick Break
+- Shell Smash
 
 === TRAINER_ROXANNE_5 ===
 Name: ROXANNE
@@ -16689,16 +16689,16 @@ Nature: Brave
 - Magnet Rise
 - Thunder Wave
 
-Aerodactyl @ Aerodactylite
+Barbaracle @ Barbaracite
 Level: 70
-Ability: Pressure
+Ability: Tough Claws
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
 Nature: Jolly
 - Rock Slide
-- Earthquake
-- Roost
-- Dual Wingbeat
+- Razor Shell
+- Brick Break
+- Shell Smash
 
 === TRAINER_BRAWLY_3 ===
 Name: BRAWLY
@@ -17221,16 +17221,16 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Blaziken @ Blazikenite
+Pyroar @ Pyroarite
 Level: 55
-Ability: Speed Boost
+Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Flare Blitz
-- Close Combat
-- Swords Dance
-- Protect
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Hyper Voice
+- Fire Blast
+- Earth Power
+- Work Up
 
 === TRAINER_FLANNERY_3 ===
 Name: FLANNERY
@@ -17297,16 +17297,16 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Blaziken @ Blazikenite
+Pyroar @ Pyroarite
 Level: 60
-Ability: Speed Boost
+Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Flare Blitz
-- Close Combat
-- Swords Dance
-- Protect
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Hyper Voice
+- Fire Blast
+- Earth Power
+- Work Up
 
 === TRAINER_FLANNERY_4 ===
 Name: FLANNERY
@@ -17373,16 +17373,16 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Blaziken @ Blazikenite
+Pyroar @ Pyroarite
 Level: 65
-Ability: Speed Boost
+Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Flare Blitz
-- Close Combat
-- Swords Dance
-- Protect
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Hyper Voice
+- Fire Blast
+- Earth Power
+- Work Up
 
 === TRAINER_FLANNERY_5 ===
 Name: FLANNERY
@@ -17449,16 +17449,16 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Blaziken @ Blazikenite
+Pyroar @ Pyroarite
 Level: 70
-Ability: Speed Boost
+Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Flare Blitz
-- Close Combat
-- Swords Dance
-- Protect
+EVs: 252 SpA / 252 Spe
+Nature: Timid
+- Hyper Voice
+- Fire Blast
+- Earth Power
+- Work Up
 
 === TRAINER_NORMAN_2 ===
 Name: NORMAN
@@ -17829,16 +17829,16 @@ Nature: Bold
 - Leech Seed
 - Air Slash
 
-Pidgeot @ Pidgeotite
+Skarmory @ Skarmorite
 Level: 55
-Ability: Big Pecks
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Modest
-- Hurricane
-- Hyper Voice
-- Heat Wave
-- Roost
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Iron Head
+- Drill Peck
+- Drill Run
+- Swords Dance
 
 === TRAINER_WINONA_3 ===
 Name: WINONA
@@ -17905,16 +17905,16 @@ Nature: Bold
 - Leech Seed
 - Air Slash
 
-Pidgeot @ Pidgeotite
+Skarmory @ Skarmorite
 Level: 60
-Ability: Big Pecks
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Modest
-- Hurricane
-- Hyper Voice
-- Heat Wave
-- Roost
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Iron Head
+- Drill Peck
+- Drill Run
+- Swords Dance
 
 === TRAINER_WINONA_4 ===
 Name: WINONA
@@ -17981,16 +17981,16 @@ Nature: Bold
 - Leech Seed
 - Air Slash
 
-Pidgeot @ Pidgeotite
+Skarmory @ Skarmorite
 Level: 65
-Ability: Big Pecks
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Modest
-- Hurricane
-- Hyper Voice
-- Heat Wave
-- Roost
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Iron Head
+- Drill Peck
+- Drill Run
+- Swords Dance
 
 === TRAINER_WINONA_5 ===
 Name: WINONA
@@ -18057,16 +18057,16 @@ Nature: Bold
 - Leech Seed
 - Air Slash
 
-Pidgeot @ Pidgeotite
+Skarmory @ Skarmorite
 Level: 70
-Ability: Big Pecks
+Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Modest
-- Hurricane
-- Hyper Voice
-- Heat Wave
-- Roost
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Iron Head
+- Drill Peck
+- Drill Run
+- Swords Dance
 
 === TRAINER_TATE_AND_LIZA_2 ===
 Name: TATE&LIZA
