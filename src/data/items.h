@@ -6834,6 +6834,58 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_QuestionMark, // gItemIconPalette_Falinksite,
     },
 
+    [ITEM_SLOWBRONITE_G] =
+    {
+        .name = ITEM_NAME("Slowbronite G"),
+        .pluralName = ITEM_PLURAL_NAME("Slowbronites G"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Galarian Slowbro\n"
+            "to Mega Evolve."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_SlowbroniteG,
+        .iconPalette = gItemIconPalette_SlowbroniteG,
+    },
+
+    [ITEM_CASTFORMITE] =
+    {
+        .name = ITEM_NAME("Castformite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Castform to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Castformite,
+        .iconPalette = gItemIconPalette_Castformite,
+    },
+
+    [ITEM_CHARIZARDITE_Z] =
+    {
+        .name = ITEM_NAME("Charizardite Z"),
+        .pluralName = ITEM_PLURAL_NAME("Charizardites Z"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sCharizarditeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_CharizarditeZ,
+        .iconPalette = gItemIconPalette_CharizarditeZ,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =
@@ -15381,60 +15433,6 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
         .iconPic = gItemIcon_PokeRadar,
         .iconPalette = gItemIconPalette_PokeRadar,
-    },
-
-//New hold items
-
-    [ITEM_SLOWBRONITE_G] =
-    {
-        .name = ITEM_NAME("Slowbronite G"),
-        .pluralName = ITEM_PLURAL_NAME("Slowbronites G"),
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = COMPOUND_STRING(
-            "This stone enables\n"
-            "Galarian Slowbro\n"
-            "to Mega Evolve."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_MEGA_STONE,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_SlowbroniteG,
-        .iconPalette = gItemIconPalette_SlowbroniteG,
-    },
-
-    [ITEM_CASTFORMITE] =
-    {
-        .name = ITEM_NAME("Castformite"),
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = COMPOUND_STRING(
-            "This stone enables\n"
-            "Castform to Mega\n"
-            "Evolve in battle."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_MEGA_STONE,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_Castformite,
-        .iconPalette = gItemIconPalette_Castformite,
-    },
-
-    [ITEM_CHARIZARDITE_Z] =
-    {
-        .name = ITEM_NAME("Charizardite Z"),
-        .pluralName = ITEM_PLURAL_NAME("Charizardites Z"),
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = sCharizarditeDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_CharizarditeZ,
-        .iconPalette = gItemIconPalette_CharizarditeZ,
     },
 };
 

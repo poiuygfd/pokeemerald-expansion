@@ -2441,6 +2441,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
+    [ABILITY_REACTIVE_FIRE] =
+    {
+        .name = _("Reactive Fire"),
+        .description = COMPOUND_STRING("Priority by super effective."),
+        .aiRating = 6,
+    },
+
     [ABILITY_WEATHERMAN] =
     {
         .name = _("Weatherman"),
@@ -2448,13 +2455,6 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 9,
         .cantBeCopied = TRUE,
         .cantBeTraced = TRUE,
-    },
-
-    [ABILITY_REACTIVE_FIRE] =
-    {
-        .name = _("Reactive Fire"),
-        .description = COMPOUND_STRING("Priority by super effective."),
-        .aiRating = 6,
     },
 
     [ABILITY_NEPOTISM] =

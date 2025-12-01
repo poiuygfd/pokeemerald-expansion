@@ -739,9 +739,9 @@
 #define FLAG_DEPTHS_USED_HEAL                                       0x2AE // Whether the heal has been used or not
 #define FLAG_DISABLE_BAG                                            0x2AF // Disables Bag menu item in The Depths
 #define FLAG_PREVENT_CATCHING                                       0x2B0 // Prevents catching in The Depths
-#define FLAG_PREVENT_BAG_USE                                        0x2B1 // Prevents bag use in The Depths
 
 // Event Flags
+#define FLAG_UNUSED_0x2B1                                           0x2B1 // Unused Flag
 #define FLAG_AVITORCH_CODE_USED                                     0x2B2 // Avitorch Event Flag
 #define FLAG_HIDE_COSPLAY_PIKACHU                                   0x2B3 // Hide Cosplay Pikachu
 #define FLAG_HIDE_REGIELEKI                                         0x2B4 // Hide Regieleki

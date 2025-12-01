@@ -2848,34 +2848,34 @@ static enum MoveCanceler CancelerProtean(struct BattleContext *ctx)
     return MOVE_STEP_SUCCESS;
 }
 
-static enum MoveCanceler CancelerWeatherman(void)
+static enum MoveCanceler CancelerWeatherman(struct BattleContext *ctx)
 {
-    u32 moveType = GetBattleMoveType(gCurrentMove);
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_WEATHERMAN)
+    enum Type moveType = GetBattleMoveType(ctx->currentMove);
+    if (GetBattlerAbility(ctx->battlerAtk) == ABILITY_WEATHERMAN)
     {
         if (moveType == TYPE_FIRE && !(gBattleWeather & (B_WEATHER_SUN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
         {
-            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SUN, TRUE))
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_SUN, TRUE))
             {
-                gBattlerAbility = gBattlerAttacker;
+                gBattlerAbility = ctx->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesSun);
                 return MOVE_STEP_BREAK;
             }
         }
         else if (moveType == TYPE_WATER && !(gBattleWeather & (B_WEATHER_RAIN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
         {
-            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_RAIN, TRUE))
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_RAIN, TRUE))
             {
-                gBattlerAbility = gBattlerAttacker;
+                gBattlerAbility = ctx->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesRain);
                 return MOVE_STEP_BREAK;
             }
         }
         else if (moveType == TYPE_ICE && !(gBattleWeather & (B_WEATHER_SNOW | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
         {
-            if (TryChangeBattleWeather(gBattlerAttacker, BATTLE_WEATHER_SNOW, TRUE))
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_SNOW, TRUE))
             {
-                gBattlerAbility = gBattlerAttacker;
+                gBattlerAbility = ctx->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesSnow);
                 return MOVE_STEP_BREAK;
             }

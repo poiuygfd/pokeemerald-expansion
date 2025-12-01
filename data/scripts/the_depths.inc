@@ -75,7 +75,7 @@ TheDepths_EventScript_GemSocketActive::
 TheDepths_EventScript_StrongPresence::
 	copyvar VAR_TEMP_LEVEL_CAP, VAR_LEVEL_CAP
 	setvar VAR_LEVEL_CAP, 1
-	setflag FLAG_PREVENT_BAG_USE
+	setvar VAR_PREVENT_BAG_USE, 2
 	setflag FLAG_PREVENT_CATCHING
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
@@ -84,7 +84,7 @@ TheDepths_EventScript_StrongPresence::
 TheDepths_EventScript_BattleAftermath::
     copyvar VAR_LEVEL_CAP, VAR_TEMP_LEVEL_CAP
 	setvar VAR_TEMP_LEVEL_CAP, 0
-	clearflag FLAG_PREVENT_BAG_USE
+	setvar VAR_PREVENT_BAG_USE, 0
 	clearflag FLAG_PREVENT_CATCHING
 	msgbox TheDepths_Text_StrongPresenceLeaves
 	closemessage
