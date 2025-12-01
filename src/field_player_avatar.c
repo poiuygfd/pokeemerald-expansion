@@ -227,10 +227,6 @@ static void (*const sPlayerAvatarTransitionFuncs[])(struct ObjectEvent *) =
     [PLAYER_AVATAR_STATE_BIKE]         = PlayerAvatarTransition_Bike,
     [PLAYER_AVATAR_STATE_SURFING]      = PlayerAvatarTransition_Surfing,
     [PLAYER_AVATAR_STATE_UNDERWATER]   = PlayerAvatarTransition_Underwater,
-    [PLAYER_AVATAR_STATE_FIELD_MOVE]   = PlayerAvatarTransition_ReturnToField,
-    [PLAYER_AVATAR_STATE_FISHING]      = PlayerAvatarTransition_Dummy,
-    [PLAYER_AVATAR_STATE_WATERING]     = PlayerAvatarTransition_Dummy,
-    [PLAYER_AVATAR_STATE_VSSEEKER]     = PlayerAvatarTransition_Dummy,
     [PLAYER_AVATAR_STATE_CONTROLLABLE] = PlayerAvatarTransition_ReturnToField,
     [PLAYER_AVATAR_STATE_FORCED]       = PlayerAvatarTransition_Dummy,
     [PLAYER_AVATAR_STATE_DASH]         = PlayerAvatarTransition_Dummy,
@@ -1618,15 +1614,20 @@ void SetPlayerInvisibility(bool8 invisible)
 static void SetPlayerAvatarAnimation(u32 playerAnimId, u32 animNum)
 {
     EndORASDowsing();
-    ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_FIELD_MOVE));
-    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], ANIM_FIELD_MOVE);
+    u16 gfxId = GetPlayerAnimGraphicsIdByOutfitStateIdAndGender(gSaveBlock2Ptr->currOutfitId, playerAnimId, gSaveBlock2Ptr->playerGender);
+    ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], gfxId);
+    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], animNum);
+}
+
+void SetPlayerAvatarFieldMove(void)
+{
+    SetPlayerAvatarAnimation(PLAYER_AVATAR_GFX_FIELD_MOVE, ANIM_FIELD_MOVE);
 }
 
 void SetPlayerAvatarFishing(u8 direction)
 {
     EndORASDowsing();
-    ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_FISHING));
-    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingDirectionAnimNum(direction));
+    SetPlayerAvatarAnimation(PLAYER_AVATAR_GFX_FISHING, GetFaceDirectionAnimNum(direction));
 }
 
 void PlayerUseAcroBikeOnBumpySlope(u8 direction)
@@ -1639,8 +1640,7 @@ void PlayerUseAcroBikeOnBumpySlope(u8 direction)
 void SetPlayerAvatarWatering(u8 direction)
 {
     EndORASDowsing();
-    ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_WATERING));
-    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFaceDirectionAnimNum(direction));
+    SetPlayerAvatarAnimation(PLAYER_AVATAR_GFX_WATERING, GetFaceDirectionAnimNum(direction));
 }
 
 static void HideShowWarpArrow(struct ObjectEvent *objectEvent)
