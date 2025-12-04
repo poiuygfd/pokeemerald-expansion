@@ -15294,14 +15294,14 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Hatchet,
     },
 
-    [ITEM_TAXI_PHONE] =
+    [ITEM_EON_FLUTE] =
     {
-        .name = ITEM_NAME("Taxi Phone"),
+        .name = ITEM_NAME("Eon Flute"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A phone with a\n"
-            "dedicated hotline\n"
-            "for the Air Taxi."),
+            "Calls for Latias\n"
+            "to fly you to any\n"
+            "city on the map."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

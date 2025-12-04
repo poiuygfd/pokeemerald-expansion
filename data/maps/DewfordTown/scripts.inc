@@ -6,19 +6,37 @@ DewfordTown_MapScripts::
 DewfordTown_OnTransition:
 	setflag FLAG_VISITED_DEWFORD_TOWN
 	call_if_eq VAR_BOARD_BRINEY_BOAT_STATE, 1, DewfordTown_EventScript_SetBrineyPos
+	call_if_eq VAR_DEWFORD_TOWN_STATE, 0, DewfordTown_EventScript_CheckArrivalState
 	end
 
 DewfordTown_EventScript_SetBrineyPos:
 	setobjectxyperm LOCALID_DEWFORD_BRINEY, 13, 9
 	return
 
+DewfordTown_EventScript_CheckArrivalState:
+	call_if_unset FLAG_BRINEY_STEERING_BOAT, DewfordTown_EventScript_SetArrivalState
+	return
+
+DewfordTown_EventScript_SetArrivalState:
+	setvar VAR_DEWFORD_TOWN_STATE, 1
+	return
+
 DewfordTown_OnFrame:
 	map_script_2 VAR_BOARD_BRINEY_BOAT_STATE, 1, DewfordTown_EventScript_StartSailing
+	map_script_2 VAR_DEWFORD_TOWN_STATE, 1, DewfordTown_EventScript_BrineyFirstTimeLand
 	.2byte 0
 
 DewfordTown_EventScript_StartSailing::
 	lockall
 	goto DewfordTown_EventScript_Sailing
+	end
+
+DewfordTown_EventScript_BrineyFirstTimeLand::
+	lock
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	msgbox DewfordTown_Text_TentacoolInTheWay, MSGBOX_DEFAULT
+	setvar VAR_DEWFORD_TOWN_STATE, 2
+	release
 	end
 
 DewfordTown_EventScript_Briney::
@@ -229,27 +247,6 @@ DewfordTown_Text_HallSign:
 	.string "DEWFORD HALL\n"
 	.string "“Everyone's information exchange!”$"
 
-Route104_Text_LandedInDewfordDeliverLetter:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD.\p"
-	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, STEVEN!$"
-
-DewfordTown_Text_SetSailBackToPetalburg:
-	.string "MR. BRINEY: Have you delivered your\n"
-	.string "LETTER?\p"
-	.string "Or were you meaning to sail back to\n"
-	.string "PETALBURG?$"
-
-DewfordTown_Text_PetalburgWereSettingSail2:
-	.string "MR. BRINEY: PETALBURG it is, then!\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
-
-DewfordTown_Text_GoDeliverIllBeWaiting:
-	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
-
 DewfordTown_Text_BrineyLandedInDewford:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've hit land in DEWFORD!\p"
@@ -276,6 +273,16 @@ DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 DewfordTown_Text_WantToLandHere:
 	.string "MR. BRINEY: Did you want to\n"
 	.string "land near DEWFORD?$"
+
+DewfordTown_Text_TentacoolInTheWay:
+	.string "MR. BRINEY: Hmm…\n"
+	.string "This group of TENTACOOL is blocking\l"
+	.string "the way forward.\p"
+	.string "It seems we can't sail to SLATEPORT\n"
+	.string "just yet.\p"
+	.string "Perhaps a strong TRAINER such as\n"
+	.string "yourself could take on the DEWFORD\l"
+	.string "GYM in the mean time?$"
 
 DewfordTown_Text_GettingItchToFish:
 	.string "This is a renowned fishing spot.\n"

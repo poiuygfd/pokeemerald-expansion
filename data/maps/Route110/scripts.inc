@@ -101,7 +101,16 @@ Route110_EventScript_CyclingGuy1::
 	end
 
 Route110_EventScript_OldMan::
-	msgbox Route110_Text_TwoRoads, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_HIDE_ROUTE_110_TEAM_AQUA, Route110_EventScript_OldManAquaGone
+	msgbox Route110_Text_AquaBlockingThePath, MSGBOX_DEFAULT
+	release
+	end
+
+Route110_EventScript_OldManAquaGone::
+	msgbox Route110_Text_TwoRoads, MSGBOX_DEFAULT
+	release
 	end
 
 Route110_EventScript_OldWoman::
@@ -727,6 +736,19 @@ Route110_Text_TwoRoads:
 	.string "The two roads, one above, one below…\p"
 	.string "A road each for people and POKéMON.\n"
 	.string "Perhaps that is right and fair.$"
+
+Route110_Text_AquaBlockingThePath:
+	.string "Keh!\n"
+	.string "Those TEAM AQUA grunts have been\l"
+	.string "murmuring to themselves for ages!\p"
+	.string "Can't they see they're blocking\n"
+	.string "the road for people?\p"
+	.string "I wonder how long they plan on\n"
+	.string "being nuisances for…\p"
+	.string "If you're looking for something to\n"
+	.string "do in the mean time, the GYM in\l"
+	.string "MAUVILLE is a good place to visit\l"
+	.string "for any strong TRAINER.$"
 
 Route110_Text_WalkOnTheLowRoad:
 	.string "I don't have a BIKE, so I'll take\n"
