@@ -87,6 +87,7 @@ SlateportCity_EventScript_ScottScene::
 	setobjectxyperm LOCALID_SLATEPORT_SCOTT, 10, 12
 	setobjectmovementtype LOCALID_SLATEPORT_SCOTT, MOVEMENT_TYPE_FACE_DOWN
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 2
 	addvar VAR_SCOTT_STATE, 1
 	releaseall
@@ -488,6 +489,30 @@ SlateportCity_EventScript_PirateFan::
 	applymovement LOCALID_SLATEPORT_PIRATE_FAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
+	end
+
+SlateportCity_EventScript_RoadblockAqua1::
+	msgbox SlateportCity_Text_WhereIsTheBoss, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_RoadblockAqua2::
+	msgbox SlateportCity_Text_HopeThatKidDoesntShowUp, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_RoadblockAqua3::
+	msgbox SlateportCity_Text_DontForgetToHydrate, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_RoadblockMagma1::
+	msgbox SlateportCity_Text_WhereDidTeamAquaGo, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_RoadblockMagma2::
+	msgbox SlateportCity_Text_ThatBlastedTeamAqua, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_RoadblockMagma3::
+	msgbox SlateportCity_Text_GladWeDontHaveToFight, MSGBOX_SIGN
 	end
 
 SlateportCity_EventScript_DollClerk::
@@ -1103,6 +1128,36 @@ SlateportCity_Text_PirateConvention:
 	.string "about, but I bet its something pirate-y!\p"
 	.string "I just had to get into cosplay and join\n"
 	.string "this line!$"
+
+SlateportCity_Text_WhereIsTheBoss:
+	.string "Where's the boss at?\n"
+	.string "He said he'd show up himself this time…$"
+
+SlateportCity_Text_HopeThatKidDoesntShowUp:
+	.string "I hope that kid who thwarted our plans\n"
+	.string "in VERDANTURF doesn't show up again…$"
+
+SlateportCity_Text_DontForgetToHydrate:
+	.string "Don't forget to hydrate!\n"
+	.string "We need to be at peak performance!$"
+
+SlateportCity_Text_WhereDidTeamAquaGo:
+	.string "Gah!\n"
+	.string "Where did TEAM AQUA go?\p"
+	.string "I though they were supposed to be\n"
+	.string "causing a ruckus here in SLATEPORT!$"
+
+SlateportCity_Text_ThatBlastedTeamAqua:
+	.string "That blasted TEAM AQUA has given\n"
+	.string "us the slip!\p"
+	.string "They can't have gotten far!\n"
+	.string "Let's split up and search for clues!$"
+
+SlateportCity_Text_GladWeDontHaveToFight:
+	.string "I'm kind of glad we don't have to\n"
+	.string "battle with TEAM AQUA…\p"
+	.string "Their WATER type POKéMON are a bad\n"
+	.string "matchup for our FIRE and GROUND types…$"
 
 SlateportCity_Text_SeaIsSoWet:
 	.string "The sea is just so vast…\p"

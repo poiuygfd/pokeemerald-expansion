@@ -10,6 +10,8 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	setflag FLAG_DELIVERED_STEVEN_LETTER
 	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
 	goto_if_set FLAG_KANTO_STARTERS, GraniteCave_StevensRoom_EventScript_GiveKantoStones
+	goto_if_set FLAG_KALOS_STARTERS, GraniteCave_StevensRoom_EventScript_GiveKalosStones
+	goto_if_set FLAG_ZA_STARTERS, GraniteCave_StevensRoom_EventScript_GiveZAStones
 	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetSceptileStone
 	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetBlazikenStone
 	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetSwampertStone
@@ -20,6 +22,20 @@ GraniteCave_StevensRoom_EventScript_GiveKantoStones::
 	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetVenusaurStone
 	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetCharizardStones
 	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetBlastoiseStone
+	release
+	return
+
+GraniteCave_StevensRoom_EventScript_GiveKalosStones::
+	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetChesnaughtStone
+	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetDelphoxStone
+	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetGreninjaStone
+	release
+	return
+
+GraniteCave_StevensRoom_EventScript_GiveZAStones::
+	goto_if_eq VAR_STARTER_MON, 0, GraniteCave_StevensRoom_EventScript_GetMeganiumStone
+	goto_if_eq VAR_STARTER_MON, 1, GraniteCave_StevensRoom_EventScript_GetEmboarStone
+	goto_if_eq VAR_STARTER_MON, 2, GraniteCave_StevensRoom_EventScript_GetFeraligatrStone
 	release
 	return
 
@@ -98,6 +114,36 @@ GraniteCave_StevensRoom_EventScript_GetCharizardStones:
 
 GraniteCave_StevensRoom_EventScript_GetBlastoiseStone:
 	giveitem ITEM_BLASTOISINITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetChesnaughtStone:
+	giveitem ITEM_CHESNAUGHTITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetDelphoxStone:
+	giveitem ITEM_DELPHOXITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetGreninjaStone:
+	giveitem ITEM_GRENINJITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetMeganiumStone:
+	giveitem ITEM_MEGANIUMITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetEmboarStone:
+	giveitem ITEM_EMBOARITE
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
+
+GraniteCave_StevensRoom_EventScript_GetFeraligatrStone:
+	giveitem ITEM_FERALIGITE
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
 	goto GraniteCave_StevensRoom_EventScript_MatchCallSteven
 
