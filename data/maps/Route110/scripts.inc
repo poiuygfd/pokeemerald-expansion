@@ -406,10 +406,26 @@ Route110_EventScript_WallyTrigger3::
 	goto Route110_EventScript_WallyScene
 	end
 
+Route110_EventScript_WallyTrigger4::
+	setvar VAR_0x8008, 4
+	goto Route110_EventScript_WallyScene
+	end
+
+Route110_EventScript_WallyTrigger5::
+	setvar VAR_0x8008, 5
+	goto Route110_EventScript_WallyScene
+	end
+
+Route110_EventScript_WallyTrigger6::
+	setvar VAR_0x8008, 6
+	goto Route110_EventScript_WallyScene
+	end
+
 Route110_EventScript_WallyScene::
 	lockall
 	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_Delay48
@@ -418,6 +434,9 @@ Route110_EventScript_WallyScene::
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_WallyApproachPlayer1
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_WallyApproachPlayer2
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_WallyApproachPlayer3
+	call_if_eq VAR_0x8008, 4, Route110_EventScript_WallyApproachPlayer4
+	call_if_eq VAR_0x8008, 5, Route110_EventScript_WallyApproachPlayer5
+	call_if_eq VAR_0x8008, 6, Route110_EventScript_WallyApproachPlayer6
 	msgbox Route110_Text_WallyLetsBattle, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_WALLY_ROUTE_110, Route110_Text_WallyDefeated
 	msgbox Route110_Text_WallyWillGetStronger, MSGBOX_DEFAULT
@@ -431,8 +450,12 @@ Route110_EventScript_WallyScene::
 	setflag FLAG_ENABLE_WALLY_MATCH_CALL
 	msgbox Route110_Text_WallyLeaves, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit
-	waitmovement 0
+	call_if_eq VAR_0x8008, 1, Route110_EventScript_WallyExit1
+	call_if_eq VAR_0x8008, 2, Route110_EventScript_WallyExit1
+	call_if_eq VAR_0x8008, 3, Route110_EventScript_WallyExit1
+	call_if_eq VAR_0x8008, 4, Route110_EventScript_WallyExit3
+	call_if_eq VAR_0x8008, 5, Route110_EventScript_WallyExit2
+	call_if_eq VAR_0x8008, 6, Route110_EventScript_WallyExit2
 	removeobject LOCALID_ROUTE110_WALLY
 	setvar VAR_ROUTE110_STATE, 1
 	releaseall
@@ -453,6 +476,36 @@ Route110_EventScript_WallyApproachPlayer3::
 	waitmovement 0
 	return
 
+Route110_EventScript_WallyApproachPlayer4::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer4
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyApproachPlayer5::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer5
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyApproachPlayer6::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer6
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyExit1::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit1
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyExit2::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit2
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyExit3::
+	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyExit3
+	waitmovement 0
+	return
+
 Route110_Movement_WallyApproachPlayer1:
 	walk_up
 	walk_left
@@ -469,14 +522,54 @@ Route110_Movement_WallyApproachPlayer3:
 	walk_in_place_faster_up
 	step_end
 
-Route110_Movement_WallyExit:
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
+Route110_Movement_WallyApproachPlayer4:
+	walk_down
+	walk_left
+	walk_in_place_faster_down
+	step_end
+
+Route110_Movement_WallyApproachPlayer5:
+	walk_down
+	step_end
+
+Route110_Movement_WallyApproachPlayer6:
+	walk_down
+	walk_right
+	walk_in_place_faster_down
+	step_end
+
+Route110_Movement_WallyExit1:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route110_Movement_WallyExit2:
+	walk_left
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route110_Movement_WallyExit3:
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 Route110_EventScript_BirchScene1::

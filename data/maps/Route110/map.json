@@ -647,6 +647,33 @@
       "var": "VAR_REGISTER_BIRCH_STATE",
       "var_value": "1",
       "script": "Route110_EventScript_BirchScene4"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_ROUTE110_STATE",
+      "var_value": "0",
+      "script": "Route110_EventScript_WallyTrigger4"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_ROUTE110_STATE",
+      "var_value": "0",
+      "script": "Route110_EventScript_WallyTrigger5"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_ROUTE110_STATE",
+      "var_value": "0",
+      "script": "Route110_EventScript_WallyTrigger6"
     }
   ],
   "bg_events": [

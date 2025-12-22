@@ -270,7 +270,7 @@ Route109_EventScript_RivalTrigger3::
 	end
 
 Route109_EventScript_RivalTrigger4::
-	setvar VAR_0x8008, 3 @ don't forget to change this when you deal with the rival stuff
+	setvar VAR_0x8008, 4
 	goto Route109_EventScript_RivalScene
 	end
 
@@ -281,6 +281,7 @@ Route109_EventScript_RivalScene::
 	call_if_eq VAR_RESULT, FEMALE, Route109_EventScript_PlayBrendanMusic
 	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_Delay48
@@ -289,6 +290,7 @@ Route109_EventScript_RivalScene::
 	call_if_eq VAR_0x8008, 1, Route109_EventScript_RivalApproachPlayer1
 	call_if_eq VAR_0x8008, 2, Route109_EventScript_RivalApproachPlayer2
 	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalApproachPlayer3
+	call_if_eq VAR_0x8008, 4, Route109_EventScript_RivalApproachPlayer4
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route109_EventScript_MayBattle
 	goto_if_eq VAR_RESULT, FEMALE, Route109_EventScript_BrendanBattle
@@ -390,6 +392,7 @@ Route109_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 1, Route109_EventScript_MoveRival1
 	call_if_eq VAR_0x8008, 2, Route109_EventScript_MoveRival2
 	call_if_eq VAR_0x8008, 3, Route109_EventScript_MoveRival3
+	call_if_eq VAR_0x8008, 4, Route109_EventScript_MoveRival4
 	setobjectmovementtype LOCALID_ROUTE109_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
 	setobjectmovementtype LOCALID_ROUTE109_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
 	removeobject LOCALID_ROUTE109_RIVAL
@@ -397,7 +400,8 @@ Route109_EventScript_RivalExit::
 	delay 45
 	call_if_eq VAR_0x8008, 1, Route109_EventScript_RivalExit1
 	call_if_eq VAR_0x8008, 2, Route109_EventScript_RivalExit2
-	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalExit3
+	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalExit1
+	call_if_eq VAR_0x8008, 4, Route109_EventScript_RivalExit3
 	removeobject LOCALID_ROUTE109_RIVAL_ON_BIKE
 	setvar VAR_ROUTE109_STATE, 1
 	savebgm MUS_DUMMY
@@ -420,6 +424,11 @@ Route109_EventScript_RivalApproachPlayer3::
 	waitmovement 0
 	return
 
+Route109_EventScript_RivalApproachPlayer4::
+	applymovement LOCALID_ROUTE109_RIVAL, Route109_Movement_RivalApproachPlayer4
+	waitmovement 0
+	return
+
 Route109_EventScript_RivalExit1::
 	applymovement LOCALID_ROUTE109_RIVAL_ON_BIKE, Route109_Movement_RivalExit1
 	waitmovement 0
@@ -436,15 +445,19 @@ Route109_EventScript_RivalExit3::
 	return
 
 Route109_EventScript_MoveRival1::
-	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 33, 55
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 35, 18
 	return
 
 Route109_EventScript_MoveRival2::
-	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 34, 55
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 36, 18
 	return
 
 Route109_EventScript_MoveRival3::
-	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 35, 55
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 35, 16
+	return
+
+Route109_EventScript_MoveRival4::
+	setobjectxyperm LOCALID_ROUTE109_RIVAL_ON_BIKE, 36, 16
 	return
 
 Route109_Movement_RivalApproachPlayer1:
@@ -458,13 +471,17 @@ Route109_Movement_RivalApproachPlayer2:
 	step_end
 
 Route109_Movement_RivalApproachPlayer3:
-	walk_down
-	walk_right
-	walk_in_place_faster_down
+	walk_up
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+Route109_Movement_RivalApproachPlayer4:
+	walk_up
 	step_end
 
 Route109_Movement_RivalExit1:
-	walk_fast_left
+	walk_fast_right
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -475,8 +492,6 @@ Route109_Movement_RivalExit1:
 	step_end
 
 Route109_Movement_RivalExit2:
-	walk_fast_left
-	walk_fast_left
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -488,9 +503,9 @@ Route109_Movement_RivalExit2:
 
 Route109_Movement_RivalExit3:
 	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	walk_fast_up
+	walk_fast_up
+	walk_fast_right
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
