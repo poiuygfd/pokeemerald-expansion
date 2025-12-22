@@ -98,8 +98,8 @@
 #define VAR_GENESECT_DRIVE_STATE                         0x404E // For Genesect Drive gifts, so the player doesn't get repeat drives if their Bag is full
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
-#define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Now used for Marin Gift Giver
+#define VAR_OLDALE_TOWN_STATE                            0x4051 // Now used for Marin Gift Giver
+#define VAR_DEWFORD_TOWN_STATE                           0x4052
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Was unused, now used for Team Aqua Verdanturf stuff
