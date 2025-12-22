@@ -6306,15 +6306,29 @@ u16 GetBattleBGM(void)
         case SPECIES_KYOGRE:
         case SPECIES_GROUDON:
             return MUS_VS_KYOGRE_GROUDON;
+        case SPECIES_DEOXYS:
+            return MUS_RG_VS_DEOXYS;
+        case SPECIES_LUGIA:
+            return MUS_HG_VS_LUGIA;
+        case SPECIES_HO_OH:
+            return MUS_HG_VS_HO_OH;
+        case SPECIES_MEWTWO:
+            return MUS_RG_VS_MEWTWO;
+        case SPECIES_MEW:
+            return MUS_VS_MEW;
+        case SPECIES_ZACIAN:
+        case SPECIES_ZAMAZENTA:
+            return MUS_BW_VS_RESHIRAM_ZEKROM;
         case SPECIES_REGIROCK:
         case SPECIES_REGICE:
         case SPECIES_REGISTEEL:
         case SPECIES_REGIGIGAS:
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
+        case SPECIES_REGITUBE:
             return MUS_VS_REGI;
         default:
-            return MUS_RG_VS_LEGEND;
+            return MUS_DP_VS_LEGEND;
         }
     }
     else if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
@@ -6363,6 +6377,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_PKMN_TRAINER_1:
+            return MUS_HG_VS_CHAMPION;
+        case TRAINER_CLASS_PKMN_TRAINER_2:
             return MUS_RG_VS_CHAMPION;
         default:
             return MUS_VS_TRAINER;

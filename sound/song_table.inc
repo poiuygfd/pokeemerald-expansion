@@ -620,7 +620,7 @@ gSongTable::
 	song mus_dp_sandgem_day, MUSIC_PLAYER_BGM, 0
 	song mus_dp_floaroma_day, MUSIC_PLAYER_BGM, 0
 	song mus_dp_solaceon_day, MUSIC_PLAYER_BGM, 0
-	song mus_dp_route225_day, MUSIC_PLAYER_BGMMUSIC_PLAYER_BGM, 0
+	song mus_dp_route225_day, MUSIC_PLAYER_BGM, 0
 	song mus_dp_valor_lakefront_day, MUSIC_PLAYER_BGM, 0
 	song mus_dp_jubilife_day, MUSIC_PLAYER_BGM, 0
 	song mus_dp_canalave_day, MUSIC_PLAYER_BGM, 0
@@ -825,7 +825,7 @@ gSongTable::
 	song mus_hg_ecruteak, MUSIC_PLAYER_BGM, 0
 	song mus_hg_cianwood, MUSIC_PLAYER_BGM, 0
 	song mus_hg_route29, MUSIC_PLAYER_BGM, 0
-	song mus_hg_route3MUSIC_PLAYER_BGM, 0, 0
+	song mus_hg_route30, MUSIC_PLAYER_BGM, 0
 	song mus_hg_route34, MUSIC_PLAYER_BGM, 0
 	song mus_hg_route38, MUSIC_PLAYER_BGM, 0
 	song mus_hg_route42, MUSIC_PLAYER_BGM, 0
@@ -1083,7 +1083,7 @@ gSongTable::
 	song mus_bw_encounter_roughneck, MUSIC_PLAYER_BGM, 0
 	song mus_bw_opelucid_black, MUSIC_PLAYER_BGM, 0
 	song mus_bw_opelucid_white, MUSIC_PLAYER_BGM, 0
-	song mus_bw_route1MUSIC_PLAYER_BGM, 0, 0
+	song mus_bw_route10, MUSIC_PLAYER_BGM, 0
 	song mus_bw_victory_road, MUSIC_PLAYER_BGM, 0
 	song mus_bw_encounter_ace_trainer, MUSIC_PLAYER_BGM, 0
 	song mus_bw_pokemon_league, MUSIC_PLAYER_BGM, 0

@@ -293,8 +293,8 @@
 
 enum TrainerClassID
 {
-    TRAINER_CLASS_PKMN_TRAINER_1, // Unused (now used for Red and Leaf (if red gets his own theme, he'll use trainer_2))
-    TRAINER_CLASS_PKMN_TRAINER_2, // Unused
+    TRAINER_CLASS_PKMN_TRAINER_1, // Used for Red
+    TRAINER_CLASS_PKMN_TRAINER_2, // Used for Leaf
     TRAINER_CLASS_HIKER,
     TRAINER_CLASS_TEAM_AQUA,
     TRAINER_CLASS_PKMN_BREEDER,
