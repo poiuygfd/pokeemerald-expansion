@@ -17533,6 +17533,8 @@ void BS_TryTrainerSlideMsgLastOn(void)
     u32 battler = GetBattlerForBattleScript(cmd->battler);
     if ((shouldDoTrainerSlide = ShouldDoTrainerSlide(battler, TRAINER_SLIDE_LAST_SWITCHIN)))
     {
+        if (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA) == TRAINER_CLASS_LEADER)
+            PlayBGM(MUS_BW_VS_WINNING);
         gBattleScripting.battler = battler;
         BattleScriptPush(cmd->nextInstr);
         gBattlescriptCurrInstr = (shouldDoTrainerSlide == 1 ? BattleScript_TrainerASlideMsgRet : BattleScript_TrainerBSlideMsgRet);
