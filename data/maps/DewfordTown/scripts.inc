@@ -14,11 +14,16 @@ DewfordTown_EventScript_SetBrineyPos:
 	return
 
 DewfordTown_EventScript_CheckArrivalState:
+	call_if_set FLAG_HIDE_DEWFORD_TOWN_TENTACOOL, DewfordTown_EventScript_SetArrivalPostTentacool
 	call_if_unset FLAG_BRINEY_STEERING_BOAT, DewfordTown_EventScript_SetArrivalState
 	return
 
 DewfordTown_EventScript_SetArrivalState:
 	setvar VAR_DEWFORD_TOWN_STATE, 1
+	return
+
+DewfordTown_EventScript_SetArrivalPostTentacool:
+	setvar VAR_DEWFORD_TOWN_STATE, 2
 	return
 
 DewfordTown_OnFrame:
@@ -219,6 +224,32 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	release
 	end
 
+DewfordTown_EventScript_AbraMan::
+	lock
+	faceplayer
+	msgbox DewfordTown_Text_DoYouWishToTeleport, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_TeleportToMauville
+	msgbox DewfordTown_Text_LetMeKnowIfYouChangeYourMind, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_TeleportToMauville::
+	msgbox DewfordTown_Text_OffWeGo, MSGBOX_DEFAULT
+	warp MAP_MAUVILLE_CITY, 26, 8
+	waitstate
+	release
+	end
+
+DewfordTown_EventScript_Abra::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
+	msgbox DewfordTown_Text_Abra, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 DewfordTown_EventScript_Tentacool::
 	lock
 	faceplayer
@@ -400,6 +431,21 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_Text_DoYouWishToTeleport:
+	.string "Looking to get off this island?\n"
+	.string "Me and ABRA can take you to MAUVILLE.$"
+
+DewfordTown_Text_OffWeGo:
+	.string "Alright then!\n"
+	.string "Off we go!$"
+
+DewfordTown_Text_LetMeKnowIfYouChangeYourMind:
+	.string "Want to stick around a bit longer, eh?\n"
+	.string "We're here if you change your mind.$"
+
+DewfordTown_Text_Abra:
+	.string "ABRA: Braaaa…$"
 
 DewfordTown_Text_Tentacool:
 	.string "TENTACOOL: Coooool!$"

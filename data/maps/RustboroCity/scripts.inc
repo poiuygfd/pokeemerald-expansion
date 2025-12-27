@@ -678,6 +678,16 @@ RustboroCity_EventScript_Boy1::
 	msgbox RustboroCity_Text_YouCanHave2On2Battle, MSGBOX_NPC
 	end
 
+RustboroCity_EventScript_Wooloo::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_WOOLOO, CRY_MODE_NORMAL
+	msgbox RustboroCity_Text_Wooloo, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 RustboroCity_Text_WeShortenItToDevon:
 	.string "The DEVON CORPORATION…\n"
 	.string "We all just shorten it to DEVON.\p"
@@ -957,3 +967,6 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_Text_Wooloo:
+	.string "WOOLOO: Beeeeeehhh!$"

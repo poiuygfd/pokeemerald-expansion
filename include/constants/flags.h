@@ -696,8 +696,8 @@
 #define FLAG_HIDE_ROUTE_111_BATTLERS  0x287 // Battler obstacles on Route 111
 #define FLAG_HIDE_SLATEPORT_CITY_MAGMA_GRUNTS  0x288 // Magma Grunt Blockade in Slateport
 #define FLAG_HIDE_ABRA_TELEPORT_MAN  0x289 // Man who will let the player warp between Mauville and Dewford
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
+#define FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE  0x28A // Blocks the way to Dewford
+#define FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE  0x28B // Blocks the way to Mauville
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
 #define FLAG_UNUSED_0x28E  0x28E // Unused Flag

@@ -167,6 +167,32 @@ MauvilleCity_Movement_ScottExitEast:
 	walk_left
 	step_end
 
+MauvilleCity_EventScript_AbraMan::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_DoYouWishToTeleport, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MauvilleCity_EventScript_TeleportToDewford
+	msgbox MauvilleCity_Text_LetMeKnowIfYouChangeYourMind, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_EventScript_TeleportToDewford::
+	msgbox MauvilleCity_Text_OffWeGo, MSGBOX_DEFAULT
+	warp MAP_MAUVILLE_CITY, 3, 14
+	waitstate
+	release
+	end
+
+MauvilleCity_EventScript_Abra::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
+	msgbox MauvilleCity_Text_Abra, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 MauvilleCity_EventScript_Wattson::
 	lock
 	faceplayer
@@ -302,3 +328,18 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_Text_DoYouWishToTeleport:
+	.string "Access to DEWFORD TOWN is limited.\n"
+	.string "Me and ABRA can take you to DEWFORD.$"
+
+MauvilleCity_Text_OffWeGo:
+	.string "Alright then!\n"
+	.string "Off we go!$"
+
+MauvilleCity_Text_LetMeKnowIfYouChangeYourMind:
+	.string "Want to stick around a bit longer, eh?\n"
+	.string "We're here if you change your mind.$"
+
+MauvilleCity_Text_Abra:
+	.string "ABRA: Braaaa…$"

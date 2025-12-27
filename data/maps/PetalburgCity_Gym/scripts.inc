@@ -388,6 +388,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setvar VAR_LEVEL_CAP, 38
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
+	setflag FLAG_HIDE_ABRA_TELEPORT_MAN
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setvar VAR_0x8008, 5
