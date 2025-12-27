@@ -1555,8 +1555,8 @@ const struct ContestPokemon gContestOpponents[] =
     },
     [CONTEST_OPPONENT_DEVIN] = {
         .filter = CONTEST_FILTER_ONLY_POSTGAME,
-        .species = SPECIES_SNUBBULL,
-        .nickname = _("SNUBBINS"),
+        .species = SPECIES_BIDOOF,
+        .nickname = _("DOOF"),
         .trainerName = _("DEVIN"),
         .trainerGfxId = OBJ_EVENT_GFX_GENTLEMAN,
         .aiFlags = CONTEST_AI_SET_8,
@@ -1568,10 +1568,10 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_SCARY_FACE,
-            MOVE_TAUNT,
-            MOVE_TAIL_WHIP,
-            MOVE_BITE
+            MOVE_YAWN,
+            MOVE_SUPER_FANG,
+            MOVE_REST,
+            MOVE_TACKLE
         },
         .cool = 20,
         .beauty = 20,

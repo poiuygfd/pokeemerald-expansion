@@ -976,12 +976,12 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                     },
                     [2] =
                     {
-                        .species = SPECIES_FERROTHORN,
+                        .species = SPECIES_MAGCARGO,
                         .heldItem = ITEM_ROCKY_HELMET,
-                        .moves = {MOVE_GYRO_BALL, MOVE_POWER_WHIP, MOVE_INGRAIN, MOVE_IRON_DEFENSE},
+                        .moves = {MOVE_FLAMETHROWER, MOVE_POWER_GEM, MOVE_EARTH_POWER, MOVE_RECOVER},
                         .hpEV = 252,
                         .defenseEV = 4,
-                        .spDefenseEV = 252,
+                        .spAttackEV = 252,
                         .otId = TRAINER_HILL_OTID,
                         .hpIV = 31,
                         .attackIV = 31,
@@ -991,7 +991,7 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                         .spDefenseIV = 31,
                         .abilityNum = 0,
                         .personality = 0x0,
-                        .nickname = _("Ferrothorn"),
+                        .nickname = _("Magcargo"),
                         .friendship = MAX_FRIENDSHIP,
                     },
                     [3] =

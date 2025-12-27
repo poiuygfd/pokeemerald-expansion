@@ -1,9 +1,9 @@
 .set LOCALID_AIDE, 1
 .set LOCALID_BIRCH, 2
 .set LOCALID_RIVAL, 3
-.set LOCALID_BALL_CHARMANDER, 4
-.set LOCALID_BALL_SQUIRTLE, 5
-.set LOCALID_BALL_BULBASAUR, 6
+.set LOCALID_BALL_FENNEKIN, 4
+.set LOCALID_BALL_FROAKIE, 5
+.set LOCALID_BALL_CHESPIN, 6
 
 LittlerootTown_ProfessorBirchsLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_ProfessorBirchsLab_OnTransition
@@ -22,8 +22,8 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 
 	@ These are what they are now in this ROM hack.
 	@ 1: Beat Elite Four
-	@ 2: Birch told player to choose Kanto starter
-	@ 3: Chose Kanto starter
+	@ 2: Birch told player to choose Kalos starter
+	@ 3: Chose Kalos starter
 	@ 4: Entered lab after catching all Hoenn mons
 	@ 5: Recieved Shiny Charm from Birch
 
@@ -37,27 +37,27 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 LittlerootTown_ProfessorBirchsLab_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call ProfBirch_EventScript_UpdateLocation
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKantoStarterLayout
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForShinyCharm
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetKantoStarterLayout
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetKalosStarterLayout
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SetKantoStarterLayout::
+LittlerootTown_ProfessorBirchsLab_EventScript_SetKalosStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForShinyCharm::
 	specialvar VAR_RESULT, HasAllHoennMons
 	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_ReadyForShinyCharm
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKantoStarterLayout
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_ReadyForShinyCharm::
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKantoStarterLayout
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKantoStarterLayout::
+LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
 	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
 	setobjectxyperm LOCALID_RIVAL, 4, 9
@@ -65,8 +65,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKantoStarterLayout::
 
 LittlerootTown_ProfessorBirchsLab_OnWarp:
 	map_script_2 VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter
-	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKantoStarters
-	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKantoStarters
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKalosStarters
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKalosStarters
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
@@ -76,16 +76,16 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter::
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKantoStarters::
-	addobject LOCALID_BALL_CHARMANDER
-	addobject LOCALID_BALL_SQUIRTLE
-	addobject LOCALID_BALL_BULBASAUR
-	turnobject LOCALID_BALL_CHARMANDER, DIR_SOUTH
-	setobjectxy LOCALID_BALL_CHARMANDER, 8, 4
-	turnobject LOCALID_BALL_SQUIRTLE, DIR_SOUTH
-	setobjectxy LOCALID_BALL_SQUIRTLE, 9, 4
-	turnobject LOCALID_BALL_BULBASAUR, DIR_SOUTH
-	setobjectxy LOCALID_BALL_BULBASAUR, 10, 4
+LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForKalosStarters::
+	addobject LOCALID_BALL_FENNEKIN
+	addobject LOCALID_BALL_FROAKIE
+	addobject LOCALID_BALL_CHESPIN
+	turnobject LOCALID_BALL_FENNEKIN, DIR_SOUTH
+	setobjectxy LOCALID_BALL_FENNEKIN, 8, 4
+	turnobject LOCALID_BALL_FROAKIE, DIR_SOUTH
+	setobjectxy LOCALID_BALL_FROAKIE, 9, 4
+	turnobject LOCALID_BALL_CHESPIN, DIR_SOUTH
+	setobjectxy LOCALID_BALL_CHESPIN, 10, 4
 	turnobject LOCALID_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCH, 6, 4
 	end
@@ -97,7 +97,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
 LittlerootTown_ProfessorBirchsLab_OnFrame:
 	map_script_2 VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent
 	map_script_2 VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent
-	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_ChooseKantoStarter
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_ChooseKalosStarter
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GiveShinyCharm
 	.2byte 0
 
@@ -177,7 +177,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AideReceivedStarter::
 	release
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ChooseKantoStarter::
+LittlerootTown_ProfessorBirchsLab_EventScript_ChooseKalosStarter::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BeatChampionChoosePokemon, MSGBOX_DEFAULT
@@ -185,40 +185,40 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ChooseKantoStarter::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_Charmander::
+LittlerootTown_ProfessorBirchsLab_EventScript_Fennekin::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKantoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKalosStarter
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	showmonpic SPECIES_CHARMANDER, 10, 3
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeCharmander, MSGBOX_YESNO
+	showmonpic SPECIES_FENNEKIN, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeFennekin, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveCharmander
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveFennekin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_Squirtle::
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKantoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKalosStarter
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	showmonpic SPECIES_SQUIRTLE, 10, 3
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeSquirtle, MSGBOX_YESNO
+	showmonpic SPECIES_FROAKIE, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeFroakie, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveSquirtle
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveFroakie
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_Bulbasaur::
+LittlerootTown_ProfessorBirchsLab_EventScript_Chespin::
 	release
-	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKantoStarter
+	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKalosStarter
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	showmonpic SPECIES_BULBASAUR, 10, 3
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeBulbasaur, MSGBOX_YESNO
+	showmonpic SPECIES_CHESPIN, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeChespin, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveBulbasaur
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveChespin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKantoStarter::
+LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseKalosStarter::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BetterLeaveOthersAlone, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -229,41 +229,41 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_GiveCharmander::
-	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHARMANDER
-	givemon SPECIES_CHARMANDER, 5
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToParty
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToPC
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveFennekin::
+	bufferspeciesname STR_VAR_1, SPECIES_FENNEKIN
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FENNEKIN
+	givemon SPECIES_FENNEKIN, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToParty::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_CHARMANDER
+LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_FENNEKIN
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmander
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFennekin
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmander
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFennekin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendCharmanderToPC::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_CHARMANDER
+LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_FENNEKIN
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderTransferredToPC
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_FennekinTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderTransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FennekinTransferredToPC
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderTransferredToPC::
+LittlerootTown_ProfessorBirchsLab_EventScript_FennekinTransferredToPC::
 	call Common_EventScript_TransferredToPC
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmander
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFennekin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmander::
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFennekin::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2, MSGBOX_DEFAULT
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
@@ -274,41 +274,41 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCharmander::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_GiveSquirtle::
-	bufferspeciesname STR_VAR_1, SPECIES_SQUIRTLE
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SQUIRTLE
-	givemon SPECIES_SQUIRTLE, 5
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToParty
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToPC
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveFroakie::
+	bufferspeciesname STR_VAR_1, SPECIES_FROAKIE
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FROAKIE
+	givemon SPECIES_FROAKIE, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToParty::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_SQUIRTLE
+LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_FROAKIE
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtle
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFroakie
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtle
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFroakie
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendSquirtleToPC::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_SQUIRTLE
+LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_FROAKIE
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleTransferredToPC
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_FroakieTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleTransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_FroakieTransferredToPC
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleTransferredToPC::
+LittlerootTown_ProfessorBirchsLab_EventScript_FroakieTransferredToPC::
 	call Common_EventScript_TransferredToPC
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtle
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFroakie
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtle::
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFroakie::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2, MSGBOX_DEFAULT
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
@@ -319,41 +319,41 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedSquirtle::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_GiveBulbasaur::
-	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BULBASAUR
-	givemon SPECIES_BULBASAUR, 5
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToParty
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToPC
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveChespin::
+	bufferspeciesname STR_VAR_1, SPECIES_CHESPIN
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHESPIN
+	givemon SPECIES_CHESPIN, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToParty::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_BULBASAUR
+LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToParty::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_CHESPIN
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaur
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedChespin
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaur
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedChespin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendBulbasaurToPC::
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter
-	removeobject LOCALID_BALL_BULBASAUR
+LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToPC::
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter
+	removeobject LOCALID_BALL_CHESPIN
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurTransferredToPC
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ChespinTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurTransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChespinTransferredToPC
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurTransferredToPC::
+LittlerootTown_ProfessorBirchsLab_EventScript_ChespinTransferredToPC::
 	call Common_EventScript_TransferredToPC
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaur
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedChespin
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaur::
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedChespin::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2, MSGBOX_DEFAULT
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
@@ -364,9 +364,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedBulbasaur::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKantoStarter::
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter::
 	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedKantoStarter
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedKalosStarter
 	waitmessage
 	waitfanfare
 	return
@@ -771,30 +771,30 @@ LittlerootTown_ProfessorBirchsLab_Text_CanHaveAnyOneOfRarePokemon:
 	.string "You can have any one of these\n"
 	.string "three POKéMON!$"
 
-LittlerootTown_ProfessorBirchsLab_Text_YoullTakeCharmander:
+LittlerootTown_ProfessorBirchsLab_Text_YoullTakeFennekin:
 	.string "PROF. BIRCH: The FIRE POKéMON\n"
-	.string "CHARMANDER caught your eye!\p"
+	.string "FENNEKIN caught your eye!\p"
 	.string "You're as sharp as ever!\p"
-	.string "So the CHARMANDER is your choice?$"
+	.string "So the FENNEKIN is your choice?$"
 
-LittlerootTown_ProfessorBirchsLab_Text_YoullTakeSquirtle:
+LittlerootTown_ProfessorBirchsLab_Text_YoullTakeFroakie:
 	.string "PROF. BIRCH: The WATER POKéMON\n"
-	.string "SQUIRTLE is your choice!\p"
+	.string "FROAKIE is your choice!\p"
 	.string "You know how to pick a good one.\p"
-	.string "So, you'll take the SQUIRTLE?$"
+	.string "So, you'll take the FROAKIE?$"
 
-LittlerootTown_ProfessorBirchsLab_Text_YoullTakeBulbasaur:
+LittlerootTown_ProfessorBirchsLab_Text_YoullTakeChespin:
 	.string "PROF. BIRCH: The GRASS POKéMON\n"
-	.string "BULBASAUR is your choice!\p"
+	.string "CHESPIN is your choice!\p"
 	.string "You sure know what you're doing.\p"
-	.string "So, you'd like the BULBASAUR?$"
+	.string "So, you'd like the CHESPIN?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_TakeYourTimeAllInvaluable:
 	.string "PROF. BIRCH: Take your time before\n"
 	.string "you decide.\p"
 	.string "They're all invaluable POKéMON.$"
 
-LittlerootTown_ProfessorBirchsLab_Text_ReceivedKantoStarter:
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedKalosStarter:
 	.string "{PLAYER} received the {STR_VAR_1}\n"
 	.string "from PROF. BIRCH!$"
 
