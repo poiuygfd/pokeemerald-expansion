@@ -2,7 +2,7 @@
   "id": "MAP_TUFFNOOK_TOWN_HOUSE3",
   "name": "TuffnookTown_House3",
   "layout": "LAYOUT_TUFFNOOK_TOWN_HOUSE3",
-  "music": "MUS_FALLARBOR",
+  "music": "MUS_DP_SOLACEON_DAY",
   "region_map_section": "MAPSEC_TUFFNOOK_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_TUFFNOOK_TOWN_GAVINS_GEMS",
   "name": "TuffnookTown_GavinsGems",
   "layout": "LAYOUT_TUFFNOOK_TOWN_GAVINS_GEMS",
-  "music": "MUS_FALLARBOR",
+  "music": "MUS_DP_SOLACEON_DAY",
   "region_map_section": "MAPSEC_TUFFNOOK_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
