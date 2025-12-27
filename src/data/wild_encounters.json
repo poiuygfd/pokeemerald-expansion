@@ -9543,7 +9543,7 @@
               {
                 "min_level": 34,
                 "max_level": 34,
-                "species": "SPECIES_LEDYBA"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 33,
@@ -9623,7 +9623,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_VELUZA"
+                "species": "SPECIES_ALOMOMOLA"
               },
               {
                 "min_level": 25,
@@ -9633,7 +9633,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_VELUZA"
+                "species": "SPECIES_ALOMOMOLA"
               },
               {
                 "min_level": 30,
@@ -9643,7 +9643,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_VELUZA"
+                "species": "SPECIES_ALOMOMOLA"
               },
               {
                 "min_level": 25,
@@ -9697,7 +9697,7 @@
               {
                 "min_level": 34,
                 "max_level": 34,
-                "species": "SPECIES_SPINARAK"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 33,

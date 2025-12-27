@@ -753,25 +753,25 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone::
 	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_CharizarditeX
 	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_CharizarditeY
 	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_Blastoisinite
-	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_Beedrillite
-	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_Gengarite
-	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_MewtwoniteX
-	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_MewtwoniteY
-	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_Steelixite
-	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_Scizorite
-	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_Houndoominite
-	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_Tyranitarite
-	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_Sceptilite
-	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_Blazikenite
-	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_Swampertite
-	case 15, BattleFrontier_ExchangeServiceCorner_EventScript_Salamencite
-	case 16, BattleFrontier_ExchangeServiceCorner_EventScript_Metagrossite
-	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_Latiasite
-	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_Latiosite
-	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_Garchompite
-	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_Abomasite
-	case 21, BattleFrontier_ExchangeServiceCorner_EventScript_Audinite
-	case 22, BattleFrontier_ExchangeServiceCorner_EventScript_Diancite
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_Meganiumite
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_Feraligite
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_Emboarite
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_Pinsirite
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_Heracronite
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_Alakazite
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_Starminite
+	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_Slowbronite
+	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_Gardevoirite
+	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_Galladite
+	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_Chandelurite
+	case 15, BattleFrontier_ExchangeServiceCorner_EventScript_Lucarionite
+	case 16, BattleFrontier_ExchangeServiceCorner_EventScript_LucarioniteZ
+	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_Glimmoranite
+	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_RaichuniteX
+	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_RaichuniteY
+	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_Golisopite
+	case 21, BattleFrontier_ExchangeServiceCorner_EventScript_Emboarite
+	case 22, BattleFrontier_ExchangeServiceCorner_EventScript_Pinsirite
 	case 23, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
@@ -808,19 +808,139 @@ BattleFrontier_ExchangeServiceCorner_EventScript_Blastoisinite::
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_Beedrillite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_BeedrilliteConfirm, MSGBOX_YESNO
+BattleFrontier_ExchangeServiceCorner_EventScript_Meganiumite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_MeganiumiteConfirm, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
 	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_BEEDRILLITE
+	setvar VAR_0x8009, ITEM_MEGANIUMITE
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_Gengarite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_GengariteConfirm, MSGBOX_YESNO
+BattleFrontier_ExchangeServiceCorner_EventScript_Feraligite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_FeraligiteConfirm, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
 	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_GENGARITE
+	setvar VAR_0x8009, ITEM_FERALIGITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Emboarite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_EmboariteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_EMBOARITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Pinsirite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_PinsiriteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_PINSIRITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Heracronite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_HeracroniteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HERACRONITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Alakazite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_AlakaziteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_ALAKAZITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Starminite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_StarminiteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_STARMINITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Slowbronite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_SlowbroniteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_SLOWBRONITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Gardevoirite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_GardevoiriteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_GARDEVOIRITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Galladite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_GalladiteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_GALLADITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Chandelurite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ChandeluriteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_CHANDELURITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Lucarionite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_LucarioniteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_LUCARIONITE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_LucarioniteZ::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_LucarioniteZConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HARD_STONE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Glimmoranite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_GlimmoraniteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HARD_STONE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RaichuniteX::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_RaichuniteXConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HARD_STONE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RaichuniteY::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_RaichuniteYConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HARD_STONE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Golisopite::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_GolisopiteConfirm, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_HARD_STONE
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
@@ -837,126 +957,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_MewtwoniteY::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
 	setvar VAR_0x8008, 32
 	setvar VAR_0x8009, ITEM_MEWTWONITE_Y
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Steelixite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_SteelixiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_STEELIXITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Scizorite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ScizoriteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_SCIZORITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Houndoominite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_HoundoominiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_HOUNDOOMINITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Tyranitarite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_TyranitariteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_TYRANITARITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Sceptilite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_SceptiliteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_SCEPTILITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Blazikenite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_BlazikeniteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_BLAZIKENITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Swampertite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_SwampertiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_SWAMPERTITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Salamencite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_SalamenciteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_SALAMENCITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Metagrossite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_MetagrossiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_METAGROSSITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Latiasite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_LatiasiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_LATIASITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Latiosite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_LatiositeConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_LATIOSITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Garchompite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_GarchompiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_GARCHOMPITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Abomasite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_AbomasiteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_ABOMASITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Audinite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_AudiniteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_AUDINITE
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_Diancite::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_DianciteConfirm, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone
-	setvar VAR_0x8008, 32
-	setvar VAR_0x8009, ITEM_DIANCITE
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
@@ -1281,12 +1281,72 @@ BattleFrontier_ExchangeServiceCorner_Text_BlastoisiniteConfirm:
 	.string "You've chosen the BLASTOISINITE.\n"
 	.string "Is that correct?$"
 
-BattleFrontier_ExchangeServiceCorner_Text_BeedrilliteConfirm:
-	.string "You've chosen the BEEDRILLITE.\n"
+BattleFrontier_ExchangeServiceCorner_Text_MeganiumiteConfirm:
+	.string "You've chosen the MEGANIUMITE.\n"
 	.string "Is that correct?$"
 
-BattleFrontier_ExchangeServiceCorner_Text_GengariteConfirm:
-	.string "You've chosen the GENGARITE.\n"
+BattleFrontier_ExchangeServiceCorner_Text_FeraligiteConfirm:
+	.string "You've chosen the FERALIGITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_EmboariteConfirm:
+	.string "You've chosen the EMBOARITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PinsiriteConfirm:
+	.string "You've chosen the PINSIRITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_HeracroniteConfirm:
+	.string "You've chosen the HERACRONITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_AlakaziteConfirm:
+	.string "You've chosen the ALAKAZITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_StarminiteConfirm:
+	.string "You've chosen the STARMINITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_SlowbroniteConfirm:
+	.string "You've chosen the SLOWBRONITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_GardevoiriteConfirm:
+	.string "You've chosen the GARDEVOIRITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_GalladiteConfirm:
+	.string "You've chosen the GALLADITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ChandeluriteConfirm:
+	.string "You've chosen the CHANDELURITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_LucarioniteConfirm:
+	.string "You've chosen the LUCARIONITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_LucarioniteZConfirm:
+	.string "You've chosen the LUCARIONITE Z.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_GlimmoraniteConfirm:
+	.string "You've chosen the GLIMMORANITE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RaichuniteXConfirm:
+	.string "You've chosen the RAICHUNITE X.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RaichuniteYConfirm:
+	.string "You've chosen the RAICHUNITE Y.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_GolisopiteConfirm:
+	.string "You've chosen the GOLISOPITE.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_MewtwoniteXConfirm:
@@ -1294,67 +1354,7 @@ BattleFrontier_ExchangeServiceCorner_Text_MewtwoniteXConfirm:
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_MewtwoniteYConfirm:
-	.string "You've chosen the MEWTWONITE Y.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_SteelixiteConfirm:
-	.string "You've chosen the STEELIXITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_ScizoriteConfirm:
-	.string "You've chosen the SCIZORITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_HoundoominiteConfirm:
-	.string "You've chosen the HOUNDOOMINITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_TyranitariteConfirm:
-	.string "You've chosen the TYRANITARITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_SceptiliteConfirm:
-	.string "You've chosen the SCEPTILITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_BlazikeniteConfirm:
-	.string "You've chosen the BLAZIKENITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_SwampertiteConfirm:
-	.string "You've chosen the SWAMPERTITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_SalamenciteConfirm:
-	.string "You've chosen the SALAMENCITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_MetagrossiteConfirm:
-	.string "You've chosen the METAGROSSITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_LatiasiteConfirm:
-	.string "You've chosen the LATIASITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_LatiositeConfirm:
-	.string "You've chosen the LATIOSITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_GarchompiteConfirm:
-	.string "You've chosen the GARCHOMPITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_AbomasiteConfirm:
-	.string "You've chosen the ABOMASITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_AudiniteConfirm:
-	.string "You've chosen the AUDINITE.\n"
-	.string "Is that correct?$"
-
-BattleFrontier_ExchangeServiceCorner_Text_DianciteConfirm:
-	.string "You've chosen the DIANCITE.\n"
+	.string "You've chosen the METWONITE Y.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_WellSendItToPC:
