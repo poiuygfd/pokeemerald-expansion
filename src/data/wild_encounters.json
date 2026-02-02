@@ -2575,7 +2575,7 @@
               {
                 "min_level": 12,
                 "max_level": 12,
-                "species": "SPECIES_GULPIN"
+                "species": "SPECIES_LITLEO"
               },
               {
                 "min_level": 13,
@@ -2590,7 +2590,7 @@
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_LITLEO"
+                "species": "SPECIES_GULPIN"
               },
               {
                 "min_level": 13,
@@ -2729,7 +2729,7 @@
               {
                 "min_level": 12,
                 "max_level": 12,
-                "species": "SPECIES_GULPIN"
+                "species": "SPECIES_LITLEO"
               },
               {
                 "min_level": 13,
@@ -2744,7 +2744,7 @@
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_LITLEO"
+                "species": "SPECIES_GULPIN"
               },
               {
                 "min_level": 13,
