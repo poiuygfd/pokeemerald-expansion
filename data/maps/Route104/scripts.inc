@@ -150,7 +150,12 @@ Route104_EventScript_WantToLand::
 	lock
 	msgbox Route104_Text_WantToLandHere, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_GetOffBoat
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
 	release
+	end
+
+Route104_EventScript_DidNotLand::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
 	end
 
 Route104_EventScript_GetOffBoat::

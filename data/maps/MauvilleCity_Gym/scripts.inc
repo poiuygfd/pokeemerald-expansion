@@ -129,13 +129,16 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 
 MauvilleCity_Gym_EventScript_SetLevelCap::
 	setvar VAR_LEVEL_CAP, 24
+	clearflag FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE
 	goto_if_set FLAG_BADGE02_GET, DewfordTown_Gym_EventScript_SetHigherCap
 	return
 
 MauvilleCity_Gym_EventScript_SetHigherCap::
 	setvar VAR_LEVEL_CAP, 29
 	clearflag FLAG_HIDE_ABRA_TELEPORT_MAN
+	setflag FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE
 	setflag FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE
+	clearflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	return
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::

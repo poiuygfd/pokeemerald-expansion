@@ -2,7 +2,7 @@
   "id": "MAP_THE_DEPTHS_B6F",
   "name": "TheDepths_B6F",
   "layout": "LAYOUT_THE_DEPTHS_B6F",
-  "music": "MUS_RG_VICTORY_ROAD",
+  "music": "MUS_DP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_THE_DEPTHS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

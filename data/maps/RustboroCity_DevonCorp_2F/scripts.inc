@@ -70,19 +70,20 @@ RustboroCity_DevonCorp_2F_EventScript_ReceivedAbilityCapsule::
 	release
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_BoxLinkScientist::
+RustboroCity_DevonCorp_2F_EventScript_SlackerScientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_BOX_LINK, RustboroCity_DevonCorp_2F_EventScript_ReceivedBoxLink
-	msgbox RustboroCity_DevonCorp_2F_Text_GiveBoxLink, MSGBOX_DEFAULT
-	giveitem ITEM_POKEMON_BOX_LINK
+	goto_if_set FLAG_RECEIVED_RED_CARD, RustboroCity_DevonCorp_2F_EventScript_ReceivedRedCard
+	msgbox RustboroCity_DevonCorp_2F_Text_PleaseDontTellMyBoss, MSGBOX_DEFAULT
+	giveitem ITEM_RED_CARD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_BOX_LINK
+	setflag FLAG_RECEIVED_RED_CARD
+	msgbox RustboroCity_DevonCorp_2F_Text_ExplainRedCard, MSGBOX_DEFAULT
 	release
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceivedBoxLink::
-	msgbox RustboroCity_DevonCorp_2F_Text_RecievedBoxLink, MSGBOX_DEFAULT
+RustboroCity_DevonCorp_2F_EventScript_ReceivedRedCard::
+	msgbox RustboroCity_DevonCorp_2F_Text_RecievedRedCard, MSGBOX_DEFAULT
 	release
 	end
 
@@ -353,18 +354,28 @@ RustboroCity_DevonCorp_2F_Text_RecievedCapsule:
 	.string "I've heard that we've sent a batch\n"
 	.string "to the DEPARTMENT STORE in LILYCOVE.$"
 
-RustboroCity_DevonCorp_2F_Text_GiveBoxLink:
-	.string "I've been at work on a machine that\n"
-	.string "can access the BOX SYSTEM on the go…\p"
-	.string "And it's going great!\p"
-	.string "Here, I heard you've really helped\n"
-	.string "us out of a pinch with TEAM AQUA.\p"
-	.string "I'd like you to take this.\n"
-	.string "On the house!$"
+RustboroCity_DevonCorp_2F_Text_PleaseDontTellMyBoss:
+	.string "Huh?!\n"
+	.string "No, BOSS, I swear I wasn't…\p"
+	.string "Wait, you're not MR. STONE!\n"
+	.string "Oh, thank goodness…\p"
+	.string "Please, uh, don't tell my BOSS\n"
+	.string "that I was looking at funny pictures\l"
+	.string "on my phone instead of working…\p"
+	.string "In exchange, you can, uh…\n"
+	.string "You can have… this!$"
 
-RustboroCity_DevonCorp_2F_Text_RecievedBoxLink:
-	.string "Just select that while in your BAG\n"
-	.string "and you can swap your PARTY any time!$"
+RustboroCity_DevonCorp_2F_Text_ExplainRedCard:
+	.string "N-no, I didn't get that as a\n"
+	.string "punishment for slacking off before!\n"
+	.string "That's a hold item for your POKéMON\n"
+	.string "that forces any attacker to switch out.\p"
+	.string "I'm sure a young TRAINER like you will\n"
+	.string "find much more use for it than me!$"
+
+RustboroCity_DevonCorp_2F_Text_RecievedRedCard:
+	.string "I swear I'll do some work!\n"
+	.string "So please don't rat me out!$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "I've been trying to develop a device\n"

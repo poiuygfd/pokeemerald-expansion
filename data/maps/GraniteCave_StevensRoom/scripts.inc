@@ -59,6 +59,7 @@ GraniteCave_StevensRoom_EventScript_MatchCallSteven::
 	call_if_eq VAR_FACING, DIR_WEST, GraniteCave_StevensRoom_EventScript_StevenExitWestEast
 	call_if_eq VAR_FACING, DIR_EAST, GraniteCave_StevensRoom_EventScript_StevenExitWestEast
 	playse SE_EXIT
+	setvar VAR_GRANITE_CAVE_STATE, 1
 	removeobject LOCALID_GRANITE_CAVE_STEVEN
 	release
 	end

@@ -1287,7 +1287,7 @@
 #define FLAG_HIDDEN_ITEM_GAVINS_GEMS_HARD_STONE                     0x4C8 // Hidden Hard Stone
 #define FLAG_HIDDEN_ITEM_ALTERING_CAVE_BERSERK_GENE                 0x4C9 // Hidden Berserk Gene
 #define FLAG_RECEIVED_OVAL_CHARM                                    0x4CA // Received Oval Charm
-#define FLAG_RECEIVED_BOX_LINK                                      0x4CB // Received Pokemon Box Link
+#define FLAG_RECEIVED_RED_CARD                                      0x4CB // Received Red Card
 #define FLAG_HIDDEN_ITEM_ROUTE_110_ELECTRIC_SEED                    0x4CC // Hidden Electric Seed
 #define FLAG_HIDDEN_ITEM_ROUTE_123_PSYCHIC_SEED                     0x4CD // Hidden Psychic Seed
 #define FLAG_HIDDEN_ITEM_MT_PYRE_MISTY_SEED                         0x4CE // Hidden Misty Seed

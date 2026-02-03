@@ -178,7 +178,7 @@ MauvilleCity_EventScript_AbraMan::
 
 MauvilleCity_EventScript_TeleportToDewford::
 	msgbox MauvilleCity_Text_OffWeGo, MSGBOX_DEFAULT
-	warp MAP_MAUVILLE_CITY, 3, 14
+	warp MAP_DEWFORD_TOWN, 3, 14
 	waitstate
 	release
 	end

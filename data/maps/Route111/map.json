@@ -1219,29 +1219,29 @@
     {
       "type": "trigger",
       "x": 15,
-      "y": 96,
+      "y": 97,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_GRANITE_CAVE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111_EventScript_DeliverLetterTrigger"
     },
     {
       "type": "trigger",
       "x": 16,
       "y": 96,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_GRANITE_CAVE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111_EventScript_DeliverLetterTrigger"
     },
     {
       "type": "trigger",
       "x": 17,
       "y": 96,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_GRANITE_CAVE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111_EventScript_DeliverLetterTrigger"
     },
     {
       "type": "trigger",

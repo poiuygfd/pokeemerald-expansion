@@ -86,7 +86,12 @@ DewfordTown_EventScript_WantToLand::
 	lock
 	msgbox DewfordTown_Text_WantToLandHere, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GetOffBoat
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
 	release
+	end
+
+DewfordTown_EventScript_DidNotLand::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
 	end
 
 DewfordTown_EventScript_GetOffBoat::
@@ -169,7 +174,9 @@ DewfordTown_EventScript_FishingNotSoGood::
 	end
 
 DewfordTown_EventScript_ScaredySpelunker::
-	goto_if_set FLAG_RECEIVED_ESCAPE_ROPE, DewfordTown_Text_ReceivedEscapeRope
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ESCAPE_ROPE, DewfordTown_EventScript_GiftedRope
 	msgbox DewfordTown_Text_SpelunkerScared, MSGBOX_DEFAULT
 	giveitem ITEM_ESCAPE_ROPE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull

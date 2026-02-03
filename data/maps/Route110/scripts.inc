@@ -423,8 +423,12 @@ Route110_EventScript_WallyTrigger6::
 
 Route110_EventScript_WallyScene::
 	lockall
-	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
+	call_if_eq VAR_0x8008, 1, Route110_EventScript_WallyTurnToPlayer1
+	call_if_eq VAR_0x8008, 2, Route110_EventScript_WallyTurnToPlayer1
+	call_if_eq VAR_0x8008, 3, Route110_EventScript_WallyTurnToPlayer1
+	call_if_eq VAR_0x8008, 4, Route110_EventScript_WallyTurnToPlayer2
+	call_if_eq VAR_0x8008, 5, Route110_EventScript_WallyTurnToPlayer2
+	call_if_eq VAR_0x8008, 6, Route110_EventScript_WallyTurnToPlayer2
 	playse SE_PIN
 	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -448,6 +452,8 @@ Route110_EventScript_WallyScene::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WALLY_MATCH_CALL
+	msgbox Route110_Text_WallyGiveBoxLink, MSGBOX_DEFAULT
+	giveitem ITEM_POKEMON_BOX_LINK
 	msgbox Route110_Text_WallyLeaves, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_WallyExit1
@@ -460,6 +466,16 @@ Route110_EventScript_WallyScene::
 	setvar VAR_ROUTE110_STATE, 1
 	releaseall
 	end
+
+Route110_EventScript_WallyTurnToPlayer1::
+	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	return
+
+Route110_EventScript_WallyTurnToPlayer2::
+	applymovement LOCALID_ROUTE110_WALLY, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	return
 
 Route110_EventScript_WallyApproachPlayer1::
 	applymovement LOCALID_ROUTE110_WALLY, Route110_Movement_WallyApproachPlayer1
@@ -795,7 +811,17 @@ Route110_Text_RegisteredWally:
 	.string "{PLAYER} registered WALLY\n"
 	.string "in the POKéNAV.$"
 
+Route110_Text_WallyGiveBoxLink:
+	.string "I also think you should have this.\n"
+	.string "A gift from me!\p"
+	.string "Think of it as my thanks for driving\n"
+	.string "off TEAM AQUA in VERDANTURF before.$"
+
 Route110_Text_WallyLeaves:
+	.string "WALLY: That BOX LINK will let you\n"
+	.string "use the BOX system from anywhere!\p"
+	.string "It's a very handy tool if you catch\n"
+	.string "lots of POKéMON while out and about.\p"
 	.string "Okay, time to train!\n"
 	.string "I'll see you around, {PLAYER}!$"
 

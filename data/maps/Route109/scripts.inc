@@ -106,7 +106,12 @@ Route109_EventScript_WantToLand::
 	lock
 	msgbox Route109_Text_WantToLandHere, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route109_EventScript_GetOffBoat
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
 	release
+	end
+
+Route109_EventScript_DidNotLand::
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
 	end
 
 Route109_EventScript_GetOffBoat::
@@ -279,8 +284,10 @@ Route109_EventScript_RivalScene::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route109_EventScript_PlayMayMusic
 	call_if_eq VAR_RESULT, FEMALE, Route109_EventScript_PlayBrendanMusic
-	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
+	call_if_eq VAR_0x8008, 1, Route109_EventScript_RivalTurnToPlayer1
+	call_if_eq VAR_0x8008, 2, Route109_EventScript_RivalTurnToPlayer1
+	call_if_eq VAR_0x8008, 3, Route109_EventScript_RivalTurnToPlayer2
+	call_if_eq VAR_0x8008, 4, Route109_EventScript_RivalTurnToPlayer2
 	playse SE_PIN
 	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -408,6 +415,16 @@ Route109_EventScript_RivalExit::
 	fadedefaultbgm
 	releaseall
 	end
+
+Route109_EventScript_RivalTurnToPlayer1::
+	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	return
+
+Route109_EventScript_RivalTurnToPlayer2::
+	applymovement LOCALID_ROUTE109_RIVAL, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	return
 
 Route109_EventScript_RivalApproachPlayer1::
 	applymovement LOCALID_ROUTE109_RIVAL, Route109_Movement_RivalApproachPlayer1
