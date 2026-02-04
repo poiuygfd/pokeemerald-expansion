@@ -94,11 +94,6 @@ Route109_EventScript_Sailing::
 	setflag FLAG_BRINEY_STEERING_BOAT
 	dofieldeffect FLDEFF_USE_SURF
 	waitstate
-	applymovement LOCALID_ROUTE109_BRINEY, Route109_Movement_BrineyBoardBoat
-	waitmovement 0
-	removeobject LOCALID_ROUTE109_BRINEY
-	msgbox Route109_Text_BrineyOffWeGo, MSGBOX_DEFAULT
-	closemessage
 	releaseall
 	end
 
@@ -130,11 +125,6 @@ Route109_EventScript_GetOffBoat::
 	waitstate
 	release
 	end
-
-Route109_Movement_BrineyBoardBoat:
-	walk_down
-	walk_down
-	step_end
 
 Route109_EventScript_Regitube::
 	lock
@@ -755,10 +745,6 @@ Route109_Text_ReadyToSetSail:
 Route109_Text_AnchorsAweigh:
 	.string "MR. BRINEY: Anchors aweigh!\p"
 	.string "PEEKO, we're setting sail, my darling!$"
-
-Route109_Text_BrineyOffWeGo:
-	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
-	.string "We're setting sail!$"
 
 Route109_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"

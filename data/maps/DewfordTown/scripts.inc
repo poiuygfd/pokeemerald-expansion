@@ -74,11 +74,6 @@ DewfordTown_EventScript_Sailing::
 	waitmovement 0
 	dofieldeffect FLDEFF_USE_SURF
 	waitstate
-	applymovement LOCALID_DEWFORD_BRINEY, DewfordTown_Movement_BrineyBoardBoat
-	waitmovement 0
-	removeobject LOCALID_DEWFORD_BRINEY
-	msgbox DewfordTown_Text_BrineyOffWeGo, MSGBOX_DEFAULT
-	closemessage
 	releaseall
 	end
 
@@ -110,11 +105,6 @@ DewfordTown_EventScript_GetOffBoat::
 	waitstate
 	release
 	end
-
-DewfordTown_Movement_BrineyBoardBoat:
-	walk_left
-	walk_up
-	step_end
 
 DewfordTown_EventScript_Woman::
 	msgbox DewfordTown_Text_TinyIslandCommunity, MSGBOX_NPC
@@ -299,10 +289,6 @@ DewfordTown_Text_ReadyToSetSail:
 DewfordTown_Text_AnchorsAweigh:
 	.string "MR. BRINEY: Anchors aweigh!\p"
 	.string "PEEKO, we're setting sail, my darling!$"
-
-DewfordTown_Text_BrineyOffWeGo:
-	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
-	.string "We're setting sail!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"

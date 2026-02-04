@@ -39,6 +39,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "event_scripts.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -3268,14 +3269,13 @@ static void SurfFieldEffect_FieldMovePose(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    
-    //if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
-        //task->tState++;
 
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
-        SetPlayerAvatarFieldMove();
-        ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
+        if (FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE) {
+            SetPlayerAvatarFieldMove();
+            ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
+        }
         task->tState++;
     }
 }
@@ -3285,13 +3285,12 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
 
-    //if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
-        //task->tState++;
-
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        if (FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE) {
+            gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
         task->tState++;
     }
 }
@@ -3326,6 +3325,22 @@ static void SurfFieldEffect_End(struct Task *task)
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
         if (followerObject)
             ObjectEventClearHeldMovementIfFinished(followerObject);
+        
+        if (FlagGet(FLAG_BRINEY_STEERING_BOAT) == TRUE) {
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE104) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE104)) {
+                ScriptContext_SetupScript(EventScript_MoveBrineyRoute104);
+            }
+            else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_DEWFORD_TOWN) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_DEWFORD_TOWN)) {
+                ScriptContext_SetupScript(EventScript_MoveBrineyDewfordTown);
+            }
+            else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE109) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE109)) {
+                ScriptContext_SetupScript(EventScript_MoveBrineyRoute109);
+            }
+            else {
+                ScriptContext_SetupScript(EventScript_BrineyIsSteering);
+            }
+        }
+
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
         UnfreezeObjectEvents();
         UnlockPlayerFieldControls();

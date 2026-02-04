@@ -138,11 +138,6 @@ Route104_EventScript_SailToDewford::
 	setflag FLAG_BRINEY_STEERING_BOAT
 	dofieldeffect FLDEFF_USE_SURF
 	waitstate
-	applymovement LOCALID_ROUTE104_BRINEY, Route104_Movement_BrineyBoardBoat
-	waitmovement 0
-	removeobject LOCALID_ROUTE104_BRINEY
-	msgbox Route104_Text_BrineyOffWeGo, MSGBOX_DEFAULT
-	closemessage
 	releaseall
 	end
 
@@ -174,11 +169,6 @@ Route104_EventScript_GetOffBoat::
 	waitstate
 	release
 	end
-
-Route104_Movement_BrineyBoardBoat:
-	walk_down
-	walk_down
-	step_end
 
 Route104_EventScript_Ivan::
 	trainerbattle_single TRAINER_IVAN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
@@ -391,10 +381,6 @@ Route104_Text_MaybeIllCheckTheWoods:
 	.string "Maybe I should check PETALBURG WOODS.\n"
 	.string "That seems like a place that would be\l"
 	.string "crawling with bugs!$"
-
-Route104_Text_BrineyOffWeGo:
-	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
-	.string "We're setting sail!$"
 
 Route104_Text_WantToLandHere:
 	.string "MR. BRINEY: Did you want to\n"
