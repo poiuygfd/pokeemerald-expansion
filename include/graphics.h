@@ -1687,6 +1687,8 @@ extern const u16 gItemIconPalette_OutfitBox[];
 
 extern const u32 gItemIcon_Hatchet[];
 extern const u16 gItemIconPalette_Hatchet[];
+extern const u32 gItemIcon_EonFlute[];
+extern const u16 gItemIconPalette_EonFlute[];
 extern const u32 gItemIcon_Pickaxe[];
 extern const u16 gItemIconPalette_Pickaxe[];
 

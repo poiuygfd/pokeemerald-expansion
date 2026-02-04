@@ -469,3 +469,12 @@ const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
 
 const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_tree.4bpp");
+
+const u32 gObjectEventPic_RubySapphireBrendanBike[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/acro_bike.4bpp");
+const u32 gObjectEventPic_RubySapphireMayBike[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/acro_bike.4bpp");
+const u32 gObjectEventPic_EmeraldBrendanBike[] = INCBIN_U32("graphics/object_events/pics/people/emerald_brendan/acro_bike.4bpp");
+const u32 gObjectEventPic_EmeraldMayBike[] = INCBIN_U32("graphics/object_events/pics/people/emerald_may/acro_bike.4bpp");
+const u32 gObjectEventPic_RubySapphireBrendanSurfing[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/surfing.4bpp");
+const u32 gObjectEventPic_RubySapphireMaySurfing[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/surfing.4bpp");
+const u32 gObjectEventPic_EmeraldBrendanSurfing[] = INCBIN_U32("graphics/object_events/pics/people/emerald_brendan/surfing.4bpp");
+const u32 gObjectEventPic_EmeraldMaySurfing[] = INCBIN_U32("graphics/object_events/pics/people/emerald_may/surfing.4bpp");

@@ -15739,8 +15739,8 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
-        .iconPic = gItemIcon_PokeRadar,
-        .iconPalette = gItemIconPalette_PokeRadar,
+        .iconPic = gItemIcon_EonFlute,
+        .iconPalette = gItemIconPalette_EonFlute,
     },
 
     [ITEM_BRINEYS_KEYS] =

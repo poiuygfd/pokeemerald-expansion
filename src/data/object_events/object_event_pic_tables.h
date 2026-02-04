@@ -1368,3 +1368,79 @@ static const struct SpriteFrameImage sPicTable_EmeraldMay[] = {
 static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
+
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanBike[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireBrendanBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMayBike[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireMayBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanBike[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldBrendanBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMayBike[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldMayBike, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanSurfing[] = {
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanSurfing, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMaySurfing[] = {
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireMaySurfing, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanSurfing[] = {
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldBrendanSurfing, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMaySurfing[] = {
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 5),
+};

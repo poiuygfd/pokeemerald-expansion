@@ -1985,6 +1985,9 @@ const u16 gItemIconPalette_OutfitBox[] = INCBIN_U16("graphics/items/icon_palette
 const u32 gItemIcon_Hatchet[] = INCBIN_U32("graphics/items/icons/hatchet.4bpp.lz");
 const u16 gItemIconPalette_Hatchet[] = INCBIN_U16("graphics/items/icon_palettes/hatchet.gbapal");
 
+const u32 gItemIcon_EonFlute[] = INCBIN_U32("graphics/items/icons/eon_flute.4bpp.lz");
+const u16 gItemIconPalette_EonFlute[] = INCBIN_U16("graphics/items/icon_palettes/eon_flute.gbapal");
+
 const u32 gItemIcon_Pickaxe[] = INCBIN_U32("graphics/items/icons/pickaxe.4bpp.lz");
 const u16 gItemIconPalette_Pickaxe[] = INCBIN_U16("graphics/items/icon_palettes/pickaxe.gbapal");
 

@@ -238,6 +238,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMay;
+
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -251,6 +252,16 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree;
+
+// Outfit graphics objects
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMaySurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMaySurfing;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -498,6 +509,14 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
+    [OBJ_EVENT_GFX_RS_BRENDAN_ACRO_BIKE] =     &gObjectEventGraphicsInfo_RubySapphireBrendanBike,
+    [OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE] =         &gObjectEventGraphicsInfo_RubySapphireMayBike,
+    [OBJ_EVENT_GFX_E_BRENDAN_ACRO_BIKE] =      &gObjectEventGraphicsInfo_EmeraldBrendanBike,
+    [OBJ_EVENT_GFX_E_MAY_ACRO_BIKE] =          &gObjectEventGraphicsInfo_EmeraldMayBike,
+    [OBJ_EVENT_GFX_RS_BRENDAN_SURFING] =       &gObjectEventGraphicsInfo_RubySapphireBrendanSurfing,
+    [OBJ_EVENT_GFX_RS_MAY_SURFING] =           &gObjectEventGraphicsInfo_RubySapphireMaySurfing,
+    [OBJ_EVENT_GFX_E_BRENDAN_SURFING] =        &gObjectEventGraphicsInfo_EmeraldBrendanSurfing,
+    [OBJ_EVENT_GFX_E_MAY_SURFING] =            &gObjectEventGraphicsInfo_EmeraldMaySurfing,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
