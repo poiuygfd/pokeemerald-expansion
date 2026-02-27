@@ -4660,6 +4660,16 @@
       "secondary_tileset": "gTileset_BikeShop",
       "border_filepath": "data/layouts/Route119_MrMegasStones/border.bin",
       "blockdata_filepath": "data/layouts/Route119_MrMegasStones/map.bin"
+    },
+    {
+      "id": "LAYOUT_EVER_GRANDE_CITY_WOLFE_CAVE",
+      "name": "EverGrandeCity_WolfeCave_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/EverGrandeCity_WolfeCave/border.bin",
+      "blockdata_filepath": "data/layouts/EverGrandeCity_WolfeCave/map.bin"
     }
   ]
 }

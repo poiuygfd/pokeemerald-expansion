@@ -1190,3 +1190,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route119_MrMegasStones/scripts.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+	.include "data/maps/EverGrandeCity_WolfeCave/scripts.inc"

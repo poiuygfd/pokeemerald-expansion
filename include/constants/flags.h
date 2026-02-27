@@ -698,9 +698,9 @@
 #define FLAG_HIDE_ABRA_TELEPORT_MAN  0x289 // Man who will let the player warp between Mauville and Dewford
 #define FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE  0x28A // Blocks the way to Dewford
 #define FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE  0x28B // Blocks the way to Mauville
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
+#define FLAG_HIDE_WOLFE_BODYGUARD  0x28C // Man who blocks the entrance to Wolfe's Cave
+#define FLAG_DEFEATED_WOLFE_GLICK  0x28D // Defeated the World Champ
+#define FLAG_TRADED_WOLFE_INCINEROAR  0x28E // Completed Wolfe's Incineroar trade
 #define FLAG_UNUSED_0x28F  0x28F // Unused Flag
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag

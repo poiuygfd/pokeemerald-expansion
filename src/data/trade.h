@@ -1095,6 +1095,22 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_PIKACHU
+    },
+    [INGAME_TRADE_INCINEROAR] =
+    {
+        .nickname = _("Incineroar"),
+        .species = SPECIES_INCINEROAR,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 2,
+        //.moves = { MOVE_PROTECT, MOVE_PARTING_SHOT, MOVE_FLARE_BLITZ, MOVE_FAKE_OUT },
+        .otId = 25613,
+        .conditions = {30, 30, 30, 30, 30},
+        .personality = 0x17,
+        .heldItem = ITEM_SAFETY_GOGGLES,
+        .mailNum = -1,
+        .otName = _("WOLFE"),
+        .otGender = MALE,
+        .sheen = 10
     }
 };
 

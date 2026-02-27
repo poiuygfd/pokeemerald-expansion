@@ -128,6 +128,22 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_
             [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("That's the way!\nHit me with everything you have!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can't remember the last time\nsomeone had me on the ropes!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("METAGROSS! MEGA EVOLVE!\nLet's show why we're the CHAMPION!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Bonus Trainers
+        [TRAINER_RED_METEOR_FALLS] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("… … …{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("… … …!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_LEAF_ARTISAN_CAVE] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Wowie, you sure are strong!\nI'm down to my last POKéMON!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not quite out of this yet!\nVENUSAUR! Lets show off our true power!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_WOLFE] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Oof, this is looking bad.\nI don't think we win these, chat.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Alright RAYQUAZA, I need you to lock in!\nWe're not throwing in the towel yet!{PAUSE_UNTIL_PRESS}"),
         }
     },
 };

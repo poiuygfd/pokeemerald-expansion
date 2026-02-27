@@ -6425,6 +6425,8 @@ u16 GetBattleBGM(void)
             return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_PKMN_TRAINER_2:
             return MUS_RG_VS_CHAMPION;
+        case TRAINER_CLASS_WORLD_CHAMP:
+            return MUS_BW_VS_WCS_CHAMPION;
         default:
             return MUS_VS_TRAINER;
         }

@@ -20752,6 +20752,82 @@ Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 100 HP / 50 Atk
 
+=== TRAINER_WOLFE ===
+Name: WOLFE
+Class: World Champ
+Pic: Champion Wolfe
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Yellow
+
+Hitmontop @ Eject Button
+Level: 80
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 132 Atk / 76 Def / 44 SpD / 4 Spe
+Nature: Adamant
+- Wide Guard
+- Fake Out
+- Close Combat
+- Feint
+
+Kyogre @ Blue Orb
+Level: 80
+Ability: Drizzle
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 204 HP / 204 Def / 44 SpA / 4 SpD / 52 Spe
+Nature: Modest
+- Origin Pulse
+- Ice Beam
+- Water Spout
+- Protect
+
+Gengar-Mega @ Gengarite
+Level: 80
+Ability: Shadow Tag
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 92 HP / 20 Def / 172 SpA / 4 SpD / 220 Spe
+Nature: Timid
+- Protect
+- Taunt
+- Sludge Bomb
+- Will-O-Wisp
+
+Raichu @ Assault Vest
+Level: 80
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 36 HP / 204 Def / 20 SpA / 68 SpD / 180 Spe
+Nature: Timid
+- Fake Out
+- Volt Switch
+- Endeavor
+- Nuzzle
+
+Bronzong @ Lum Berry
+Level: 80
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 68 Def / 188 SpD
+Nature: Sassy
+- Safeguard
+- Gyro Ball
+- Skill Swap
+- Trick Room
+
+Rayquaza @ Focus Sash
+Level: 80
+Ability: Air Lock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Dragon Ascent
+- Protect
+- Swords Dance
+- Extreme Speed
+
 === TRAINER_RED ===
 Name: RED
 Class: Rival

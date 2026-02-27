@@ -23,6 +23,28 @@ EverGrandeCity_EventScript_SetVisitedEverGrande::
 	setvar VAR_TEMP_1, 1
 	end
 
+EverGrandeCity_EventScript_WolfesBodyguard::
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_EventScript_YouAreReady
+	msgbox EverGrandeCity_Text_YouAreNotReady, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_EventScript_YouAreReady::
+	msgbox EverGrandeCity_Text_YouAreReady, MSGBOX_DEFAULT
+	closemessage
+	playse SE_BANG
+	applymovement LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD, EverGrandeCity_Movement_BodyguardExit
+	waitmovement 0
+	removeobject LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD
+	end
+
+EverGrandeCity_Movement_BodyguardExit:
+	slide_up
+	slide_up
+	step_end
+
 EverGrandeCity_Text_EnteringVictoryRoad:
 	.string "ENTERING VICTORY ROAD$"
 
@@ -34,4 +56,10 @@ EverGrandeCity_Text_CitySign:
 	.string "EVER GRANDE CITY\p"
 	.string "“The paradise of flowers, the sea,\n"
 	.string "and POKéMON.”$"
+
+EverGrandeCity_Text_YouAreNotReady:
+	.string "You are not ready.$"
+
+EverGrandeCity_Text_YouAreReady:
+	.string "You are ready.$"
 

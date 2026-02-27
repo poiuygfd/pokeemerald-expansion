@@ -110,7 +110,8 @@
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_E_BRENDAN             93
 #define TRAINER_PIC_E_MAY                 94
-#define TRAINER_PIC_COUNT                 95
+#define TRAINER_PIC_CHAMPION_WOLFE        95
+#define TRAINER_PIC_COUNT                 96
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -360,6 +361,7 @@ enum TrainerClassID
     TRAINER_CLASS_PYRAMID_KING,
     TRAINER_CLASS_RS_PROTAG,
     TRAINER_CLASS_E_PROTAG,
+    TRAINER_CLASS_WORLD_CHAMP,
     TRAINER_CLASS_COUNT,
 };
 

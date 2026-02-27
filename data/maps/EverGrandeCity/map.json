@@ -32,6 +32,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EverGrandeCity_EventScript_UltimateMoveTutor",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EverGrandeCity_EventScript_WolfesBodyguard",
+      "flag": "FLAG_HIDE_WOLFE_BODYGUARD"
     }
   ],
   "warp_events": [
@@ -62,6 +76,13 @@
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 29,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_EVER_GRANDE_CITY_WOLFE_CAVE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
