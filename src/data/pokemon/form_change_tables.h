@@ -1041,6 +1041,13 @@ static const struct FormChange sChandelureFormChangeTable[] =
 };
 #endif //P_FAMILY_LITWICK
 
+static const struct FormChange sHydreigonFormChangeTable[] =
+{
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_HYDREIGON_MEGA, ITEM_HYDREIGONITE},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_HYDREIGON},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #if P_FAMILY_TORNADUS
 static const struct FormChange sTornadusFormChangeTable[] =
 {

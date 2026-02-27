@@ -795,6 +795,64 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = sCastformMegaFormChangeTable,
     },
 
+    [SPECIES_HYDREIGON_MEGA] =
+    {
+        .baseHP        = 92,
+        .baseAttack    = 130,
+        .baseDefense   = 100,
+        .baseSpeed     = 128,
+        .baseSpAttack  = 150,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_DARK, TYPE_DRAGON),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 40,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON),
+        .abilities = { ABILITY_FAE_HUNTER, ABILITY_FAE_HUNTER, ABILITY_FAE_HUNTER },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Hydreigon"),
+        .cryId = CRY_HYDREIGON,
+        .natDexNum = NATIONAL_DEX_HYDREIGON,
+        .categoryName = _("Brutal"),
+        .height = 18,
+        .weight = 1600,
+        .description = COMPOUND_STRING(
+            "This brutal Pokémon travels the skies on\n"
+            "its six wings. The heads on their arms do\n"
+            "not have brains. They use all three heads\n"
+            "to consume and destroy everything."),
+        .pokemonScale = 267,
+        .pokemonOffset = 2,
+        .trainerScale = 286,
+        .trainerOffset = 1,
+        .frontPic = gMonFrontPic_Hydreigon,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 3,
+        .backPic = gMonBackPic_Hydreigon,
+        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_GROW_STUTTER,
+        .palette = gMonPalette_Hydreigon,
+        .shinyPalette = gMonShinyPalette_Hydreigon,
+        .iconSprite = gMonIcon_Hydreigon,
+        .iconPalIndex = 2,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(1, 16, SHADOW_SIZE_M)
+        FOOTPRINT(Hydreigon)
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sHydreigonLevelUpLearnset,
+        .teachableLearnset = sHydreigonTeachableLearnset,
+        .formSpeciesIdTable = sHydreigonFormSpeciesIdTable,
+        .formChangeTable = sHydreigonFormChangeTable,
+    },
+
     [SPECIES_CHARIZARD_MEGA_Z] =
     {
         .baseHP        = 78,

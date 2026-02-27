@@ -1678,8 +1678,9 @@
 #define SPECIES_CASTFORM_MEGA_SUNNY                     1557
 #define SPECIES_CASTFORM_MEGA_RAINY                     1558
 #define SPECIES_CASTFORM_MEGA_SNOWY                     1559
-#define SPECIES_CHARIZARD_MEGA_Z                        1560
-#define SPECIES_CHARIZARD_OMEGA_Z                       1561
+#define SPECIES_HYDREIGON_MEGA                          1560
+#define SPECIES_CHARIZARD_MEGA_Z                        1561
+#define SPECIES_CHARIZARD_OMEGA_Z                       1562
 
 #define SPECIES_EGG                                     (SPECIES_CHARIZARD_OMEGA_Z + 1)
 

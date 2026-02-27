@@ -2460,6 +2460,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
     },
 
+    [ABILITY_FAE_HUNTER] =
+    {
+        .name = _("Fae Hunter"),
+        .description = COMPOUND_STRING("Dragon good against Fairy."),
+        .aiRating = 6,
+    },
+
     [ABILITY_NEPOTISM] =
     {
         .name = _("Nepotism"),

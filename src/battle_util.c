@@ -7662,6 +7662,14 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (moveType == TYPE_FIRE)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
         break;
+    case ABILITY_FAE_HUNTER:
+        if (moveType == TYPE_FAIRY)
+        {
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
+            if (ctx->updateFlags)
+                RecordAbilityBattle(battlerDef, ctx->abilityDef);
+        }
+        break;
     default:
         break;
     }
@@ -8859,6 +8867,14 @@ static inline void MulByTypeEffectiveness(struct DamageContext *ctx, uq4_12_t *m
         && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);
+        if (ctx->updateFlags)
+            RecordAbilityBattle(ctx->battlerAtk, ctx->abilityAtk);
+    }
+    else if (ctx->moveType == TYPE_DRAGON && defType == TYPE_FAIRY
+        && ctx->abilityAtk == ABILITY_FAE_HUNTER
+        && mod == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(2.0);
         if (ctx->updateFlags)
             RecordAbilityBattle(ctx->battlerAtk, ctx->abilityAtk);
     }

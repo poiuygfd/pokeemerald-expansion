@@ -1042,9 +1042,10 @@
 
 #define ITEM_SLOWBRONITE_G 871
 #define ITEM_CASTFORMITE 872
-#define ITEM_CHARIZARDITE_Z 873
+#define ITEM_HYDREIGONITE 873
+#define ITEM_CHARIZARDITE_Z 874
 
-#define ITEMS_COUNT 874
+#define ITEMS_COUNT 875
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

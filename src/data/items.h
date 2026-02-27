@@ -6949,6 +6949,24 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Castformite,
     },
 
+    [ITEM_HYDREIGONITE] =
+    {
+        .name = ITEM_NAME("Hydreigonite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Hydreigon to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_QuestionMark, // gItemIcon_Chandelurite,
+        .iconPalette = gItemIconPalette_QuestionMark, // gItemIconPalette_Chandelurite,
+    },
+
     [ITEM_CHARIZARDITE_Z] =
     {
         .name = ITEM_NAME("Charizardite Z"),

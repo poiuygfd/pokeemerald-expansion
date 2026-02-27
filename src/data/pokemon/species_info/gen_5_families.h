@@ -12292,6 +12292,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sHydreigonLevelUpLearnset,
         .teachableLearnset = sHydreigonTeachableLearnset,
+        .formSpeciesIdTable = sHydreigonFormSpeciesIdTable,
+        .formChangeTable = sHydreigonFormChangeTable,
     },
 #endif //P_FAMILY_DEINO
 

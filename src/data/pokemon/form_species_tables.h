@@ -1428,6 +1428,12 @@ static const u16 sBraviaryFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_RUFFLET
 
+static const u16 sHydreigonFormSpeciesIdTable[] = {
+    SPECIES_HYDREIGON,
+    SPECIES_HYDREIGON_MEGA,
+    FORM_SPECIES_END,
+};
+
 #if P_FAMILY_TORNADUS
 static const u16 sTornadusFormSpeciesIdTable[] = {
     SPECIES_TORNADUS_INCARNATE,
