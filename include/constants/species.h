@@ -1669,18 +1669,19 @@
 // New Species
 #define SPECIES_MARIN                                   1550
 #define SPECIES_MISSINGNO                               1551
+#define SPECIES_ROTOM_STEREO                            1552
 #define SPECIES_AVITORCH                                SPECIES_AVITORCH_CALM
-#define SPECIES_AVITORCH_CALM                           1552
-#define SPECIES_AVITORCH_ENRAGED                        1553
-#define SPECIES_REGITUBE                                1554
-#define SPECIES_SLOWBRO_MEGA_G                          1555
-#define SPECIES_CASTFORM_MEGA                           1556
-#define SPECIES_CASTFORM_MEGA_SUNNY                     1557
-#define SPECIES_CASTFORM_MEGA_RAINY                     1558
-#define SPECIES_CASTFORM_MEGA_SNOWY                     1559
-#define SPECIES_HYDREIGON_MEGA                          1560
-#define SPECIES_CHARIZARD_MEGA_Z                        1561
-#define SPECIES_CHARIZARD_OMEGA_Z                       1562
+#define SPECIES_AVITORCH_CALM                           1553
+#define SPECIES_AVITORCH_ENRAGED                        1554
+#define SPECIES_REGITUBE                                1555
+#define SPECIES_SLOWBRO_MEGA_G                          1556
+#define SPECIES_CASTFORM_MEGA                           1557
+#define SPECIES_CASTFORM_MEGA_SUNNY                     1558
+#define SPECIES_CASTFORM_MEGA_RAINY                     1559
+#define SPECIES_CASTFORM_MEGA_SNOWY                     1560
+#define SPECIES_HYDREIGON_MEGA                          1561
+#define SPECIES_CHARIZARD_MEGA_Z                        1562
+#define SPECIES_CHARIZARD_OMEGA_Z                       1563
 
 #define SPECIES_EGG                                     (SPECIES_CHARIZARD_OMEGA_Z + 1)
 

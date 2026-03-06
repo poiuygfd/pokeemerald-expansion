@@ -26806,6 +26806,15 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gOverworldPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_MissingNo[] = INCBIN_U16("graphics/pokemon/missingno/overworld_shiny.gbapal");
 
+    const u32 gMonFrontPic_RotomStereo[] = INCBIN_U32("graphics/pokemon/rotom/stereo/anim_front.4bpp.smol");
+    const u16 gMonPalette_RotomStereo[] = INCBIN_U16("graphics/pokemon/rotom/stereo/normal.gbapal");
+    const u32 gMonBackPic_RotomStereo[] = INCBIN_U32("graphics/pokemon/rotom/stereo/back.4bpp.smol");
+    const u16 gMonShinyPalette_RotomStereo[] = INCBIN_U16("graphics/pokemon/rotom/stereo/shiny.gbapal");
+    const u8 gMonIcon_RotomStereo[] = INCBIN_U8("graphics/pokemon/rotom/stereo/icon.4bpp");
+    //const u32 gObjectEventPic_RotomStereo[] = INCBIN_COMP("graphics/pokemon/rotom/stereo/overworld.4bpp");
+    //const u16 gOverworldPalette_RotomStereo[] = INCBIN_U16("graphics/pokemon/rotom/stereo/overworld_normal.gbapal");
+    //const u16 gShinyOverworldPalette_RotomStereo[] = INCBIN_U16("graphics/pokemon/rotom/stereo/overworld_shiny.gbapal");
+
     const u32 gMonFrontPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/anim_front.4bpp.smol");
     const u16 gMonPalette_AvitorchCalm[] = INCBIN_U16("graphics/pokemon/avitorch/normal.gbapal");
     const u32 gMonBackPic_AvitorchCalm[] = INCBIN_U32("graphics/pokemon/avitorch/back.4bpp.smol");

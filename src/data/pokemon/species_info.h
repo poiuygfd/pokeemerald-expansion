@@ -307,6 +307,83 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggMoveLearnset = sMissingNoEggMoveLearnset,
     },
 
+    [SPECIES_ROTOM_STEREO] =
+    {
+        .baseHP        = 50,
+        .baseAttack    = 65,
+        .baseDefense   = 107,
+        .baseSpeed     = 86,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 107,
+    #if P_UPDATED_TYPES >= GEN_5
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_NORMAL),
+    #else
+        .types = ROTOM_FAMILY_TYPES,
+    #endif
+        .catchRate = 45,
+        .expYield = ROTOM_APPLIANCE_EXP_YIELD,
+        .evYield_Speed = 1,
+        .evYield_SpAttack = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
+        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Rotom"),
+        .cryId = CRY_ROTOM,
+        .natDexNum = NATIONAL_DEX_ROTOM,
+        .categoryName = _("Plasma"),
+        .height = 3,
+        .weight = 3,
+        .description = COMPOUND_STRING(
+            "When Rotom enters a mini stereo system\n"
+            "it gains a cheery, upbeat personality.\n"
+            "It may play pranks on people, blasting\n"
+            "music at high volumes to make them jump."),
+        .pokemonScale = 530,
+        .pokemonOffset = 13,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_RotomStereo,
+        .frontPicSize = MON_COORDS_SIZE(56, 48),
+        .frontPicYOffset = 10,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+        ),
+        .frontAnimId = ANIM_ZIGZAG_FAST,
+        .enemyMonElevation = 10,
+        .backPic = gMonBackPic_RotomStereo,
+        .backPicSize = MON_COORDS_SIZE(64, 40),
+        .backPicYOffset = 5,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_RotomStereo,
+        .shinyPalette = gMonShinyPalette_RotomStereo,
+        .iconSprite = gMonIcon_RotomStereo,
+        .iconPalIndex = 5,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-1, 11, SHADOW_SIZE_M)
+        FOOTPRINT(Rotom)
+        OVERWORLD(
+            sPicTable_RotomHeat,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_RotomHeat,
+            gShinyOverworldPalette_RotomHeat
+        )
+        .levelUpLearnset = sRotomLevelUpLearnset,
+        .teachableLearnset = sRotomTeachableLearnset,
+        .formSpeciesIdTable = sRotomFormSpeciesIdTable,
+        .formChangeTable = sRotomFormChangeTable,
+    },
+
     [SPECIES_AVITORCH_CALM] =
     {
         .baseHP        = 120,

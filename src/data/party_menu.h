@@ -542,9 +542,9 @@ static const struct WindowTemplate sCatalogSelectWindowTemplate =
 {
     .bg = 2,
     .tilemapLeft = 17,
-    .tilemapTop = 5,
+    .tilemapTop = 3,
     .width = 12,
-    .height = 14,
+    .height = 16,
     .paletteNum = 14,
     .baseBlock = 0x2E9,
 };
@@ -752,6 +752,7 @@ struct
     [MENU_CATALOG_FRIDGE]  = {COMPOUND_STRING("Refrigerator"),    CursorCb_CatalogFridge},
     [MENU_CATALOG_FAN]     = {COMPOUND_STRING("Electric fan"),    CursorCb_CatalogFan},
     [MENU_CATALOG_MOWER]   = {COMPOUND_STRING("Lawn mower"),      CursorCb_CatalogMower},
+    [MENU_CATALOG_STEREO]  = {COMPOUND_STRING("Stereo system"),   CursorCb_CatalogStereo},
     [MENU_CHANGE_FORM]     = {COMPOUND_STRING("Change form"),     CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY]  = {COMPOUND_STRING("Change Ability"),  CursorCb_ChangeAbility},
     [MENU_COSTUME_NONE]    = {COMPOUND_STRING("No costume"),      CursorCb_CostumeNone},
@@ -775,7 +776,7 @@ static const u8 sPartyMenuAction_RegisterSummaryCancel[] = {MENU_REGISTER, MENU_
 static const u8 sPartyMenuAction_TradeSummaryCancel1[] = {MENU_TRADE1, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_TradeSummaryCancel2[] = {MENU_TRADE2, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_TakeItemTossCancel[] = {MENU_TAKE_ITEM, MENU_TOSS, MENU_CANCEL1};
-static const u8 sPartyMenuAction_RotomCatalog[] = {MENU_CATALOG_BULB, MENU_CATALOG_OVEN, MENU_CATALOG_WASHING, MENU_CATALOG_FRIDGE, MENU_CATALOG_FAN, MENU_CATALOG_MOWER, MENU_CANCEL1};
+static const u8 sPartyMenuAction_RotomCatalog[] = {MENU_CATALOG_BULB, MENU_CATALOG_OVEN, MENU_CATALOG_WASHING, MENU_CATALOG_FRIDGE, MENU_CATALOG_FAN, MENU_CATALOG_MOWER, MENU_CATALOG_STEREO, MENU_CANCEL1};
 static const u8 sPartyMenuAction_ZygardeCube[] = {MENU_CHANGE_FORM, MENU_CHANGE_ABILITY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_CostumeCase[] = {MENU_COSTUME_NONE, MENU_COSTUME_ROCK, MENU_COSTUME_POP, MENU_COSTUME_BELLE, MENU_COSTUME_PHD, MENU_COSTUME_LIBRE, MENU_CANCEL1};
 
@@ -1141,20 +1142,22 @@ static const u8 *const sUnused_StatStrings[] =
     gText_Speed2
 };
 
-#define ROTOM_BASE_MOVE  MOVE_THUNDER_SHOCK
-#define ROTOM_HEAT_MOVE  MOVE_OVERHEAT
-#define ROTOM_WASH_MOVE  MOVE_HYDRO_PUMP
-#define ROTOM_FROST_MOVE MOVE_BLIZZARD
-#define ROTOM_FAN_MOVE   MOVE_AIR_SLASH
-#define ROTOM_MOW_MOVE   MOVE_LEAF_STORM
+#define ROTOM_BASE_MOVE     MOVE_THUNDER_SHOCK
+#define ROTOM_HEAT_MOVE     MOVE_OVERHEAT
+#define ROTOM_WASH_MOVE     MOVE_HYDRO_PUMP
+#define ROTOM_FROST_MOVE    MOVE_BLIZZARD
+#define ROTOM_FAN_MOVE      MOVE_AIR_SLASH
+#define ROTOM_MOW_MOVE      MOVE_LEAF_STORM
+#define ROTOM_STEREO_MOVE   MOVE_BOOMBURST
 
-static const u16 sRotomFormChangeMoves[5] =
+static const u16 sRotomFormChangeMoves[6] =
 {
     ROTOM_HEAT_MOVE,
     ROTOM_WASH_MOVE,
     ROTOM_FROST_MOVE,
     ROTOM_FAN_MOVE,
     ROTOM_MOW_MOVE,
+    ROTOM_STEREO_MOVE,
 };
 
 #define PIKACHU_COSPLAY_MOVE  MOVE_THUNDER_SHOCK
