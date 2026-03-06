@@ -370,13 +370,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         SHADOW(-1, 11, SHADOW_SIZE_M)
         FOOTPRINT(Rotom)
         OVERWORLD(
-            sPicTable_RotomHeat,
+            sPicTable_RotomStereo,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_RotomHeat,
-            gShinyOverworldPalette_RotomHeat
+            gOverworldPalette_RotomStereo,
+            gShinyOverworldPalette_RotomStereo
         )
         .levelUpLearnset = sRotomLevelUpLearnset,
         .teachableLearnset = sRotomTeachableLearnset,

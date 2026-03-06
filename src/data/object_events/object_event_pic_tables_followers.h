@@ -6737,6 +6737,10 @@ static const struct SpriteFrameImage sPicTable_MissingNo[] = {
     overworld_ascending_frames(gObjectEventPic_MissingNo, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_RotomStereo[] = {
+    overworld_ascending_frames(gObjectEventPic_RotomStereo, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Avitorch[] = {
     overworld_ascending_frames(gObjectEventPic_Avitorch, 4, 4),
 };
