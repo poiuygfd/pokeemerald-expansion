@@ -28,6 +28,16 @@ EventScript_UseBrineysKeys::
 	goto EventScript_ReleaseUseSurf
 	end
 
+EventScript_CurrentTooFast::
+	lockall
+	checkfieldmove FIELD_MOVE_SURF
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CurrentTooFastEndMsg
+	playse SE_SELECT
+	msgbox Text_CurrentTooFast
+EventScript_CurrentTooFastEndMsg::
+	releaseall
+	end
+
 EventScript_MoveBrineyRoute104::
 	lock
 	delay 16
@@ -74,3 +84,4 @@ Movement_BrineyBoard109:
 Text_BrineyOffWeGo:
 	.string "MR. BRINEY: Alright, PEEKO, {PLAYER}{KUN}!\n"
 	.string "We're setting sail!$"
+

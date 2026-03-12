@@ -11,6 +11,7 @@ enum {
     NAMING_SCREEN_WALDA,
     NAMING_SCREEN_AVITORCH,
     NAMING_SCREEN_CODE,
+    NAMING_SCREEN_RIVAL,
 };
 
 extern void BattleMainCB2(void);
