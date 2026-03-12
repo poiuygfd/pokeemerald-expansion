@@ -701,7 +701,7 @@
 #define FLAG_HIDE_WOLFE_BODYGUARD  0x28C // Man who blocks the entrance to Wolfe's Cave
 #define FLAG_DEFEATED_WOLFE_GLICK  0x28D // Defeated the World Champ
 #define FLAG_TRADED_WOLFE_INCINEROAR  0x28E // Completed Wolfe's Incineroar trade
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
+#define FLAG_TRADED_WALLACE_FEEBAS  0x28F // Completed Wallace's Feebas trade
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag

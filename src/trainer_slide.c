@@ -132,8 +132,8 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_
         // Bonus Trainers
         [TRAINER_WALLACE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("The strength of the HOENN region's saviour\nis truly something impressive!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I'll show you a truly elegant finale!\nWitness the power of my MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("The strength of the HOENN region's\nsaviour is truly something impressive!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I'll show you a truly elegant finale!\nWitness the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_RED_METEOR_FALLS] =
         {

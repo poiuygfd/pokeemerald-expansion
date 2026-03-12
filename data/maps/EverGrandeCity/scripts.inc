@@ -34,13 +34,33 @@ EverGrandeCity_EventScript_WolfesBodyguard::
 EverGrandeCity_EventScript_YouAreReady::
 	msgbox EverGrandeCity_Text_YouAreReady, MSGBOX_DEFAULT
 	closemessage
-	playse SE_BANG
+	delay 20
+	applymovement LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD, EverGrandeCity_Movement_BodyguardSpin
+	waitmovement 0
+	playse SE_M_EXPLOSION
 	applymovement LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD, EverGrandeCity_Movement_BodyguardExit
 	waitmovement 0
 	removeobject LOCALID_EVER_GRANDE_CITY_WOLFE_BODYGUARD
 	end
 
+EverGrandeCity_Movement_BodyguardSpin:
+	face_up
+	delay_4
+	face_left
+	delay_4
+	face_down
+	delay_4
+	face_right
+	delay_4
+	step_end
+
 EverGrandeCity_Movement_BodyguardExit:
+	face_up
+	disable_anim
+	slide_up
+	slide_up
+	slide_up
+	slide_up
 	slide_up
 	slide_up
 	step_end

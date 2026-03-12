@@ -62,12 +62,42 @@ CaveOfOrigin_B1F_EventScript_AtSkyPillar::
 CaveOfOrigin_B1F_EventScript_WallaceSuperboss::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS, CaveOfOrigin_B1F_EventScript_Defeated
+	goto_if_set FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS, CaveOfOrigin_B1F_EventScript_WallaceOfferTrade
 	msgbox CaveOfOrigin_B1F_Text_IveBeenTraining, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_WALLACE, CaveOfOrigin_B1F_Text_WallaceDefeat
 	msgbox CaveOfOrigin_B1F_Text_StillNotStrongEnough, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS
 	delay 10
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_WallaceOfferTrade::
+	goto_if_set FLAG_TRADED_WALLACE_FEEBAS, CaveOfOrigin_B1F_EventScript_Defeated
+	setvar VAR_0x8008, INGAME_TRADE_FEEBAS
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox CaveOfOrigin_B1F_Text_WallaceOfferTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CaveOfOrigin_B1F_EventScript_DeclineTradeWallace
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, CaveOfOrigin_B1F_EventScript_DeclineTradeWallace
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	msgbox CaveOfOrigin_B1F_Text_WallaceAfterTrade, MSGBOX_DEFAULT
+	setflag FLAG_TRADED_WALLACE_FEEBAS
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_DeclineTradeWallace::
+	msgbox CaveOfOrigin_B1F_Text_WallaceDeclineTrade, MSGBOX_DEFAULT
 	release
 	end
 
@@ -159,4 +189,31 @@ CaveOfOrigin_B1F_Text_StillNotStrongEnough:
 	.string "Or perhaps you are simply too strong…\p"
 	.string "Either way, it appears that I must\n"
 	.string "continue my training a bit longer!$"
+
+CaveOfOrigin_B1F_Text_WallaceOfferTrade:
+	.string "I have a gift for you, if you\n"
+	.string "would be so gracious as to accept.\p"
+	.string "I have here a POKéMON called FEEBAS\n"
+	.string "that I wish to trade to you.\p"
+	.string "I will accept any POKéMON in return\n"
+	.string "so feel free to trade me whatever\l"
+	.string "you would like.$"
+
+CaveOfOrigin_B1F_Text_WallaceDeclineTrade:
+	.string "Did you wish to trade me something\n"
+	.string "else, or merely change your mind?\p"
+	.string "Either way, I will be waiting here\n"
+	.string "if you would like to trade.$"
+
+CaveOfOrigin_B1F_Text_WallaceAfterTrade:
+	.string "Ohoho! Were you surprised?\p"
+	.string "FEEBAS evolves into a POKéMON that\n"
+	.string "is one of my personal favourites,\l"
+	.string "the POKéMON MILOTIC.\p"
+	.string "I find it inspiring that through\n"
+	.string "enough perseverence even a POKéMON\l"
+	.string "such as FEEBAS can become a truly\l"
+	.string "graceful and majestic POKéMON.\p"
+	.string "I hope that MILOTIC treats you\n"
+	.string "as well as treats me.$"
 

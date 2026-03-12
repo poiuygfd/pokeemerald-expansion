@@ -37068,7 +37068,7 @@
               {
                 "min_level": 10,
                 "max_level": 30,
-                "species": "SPECIES_FEEBAS"
+                "species": "SPECIES_WISHIWASHI_SOLO"
               },
               {
                 "min_level": 30,
@@ -37083,7 +37083,7 @@
               {
                 "min_level": 30,
                 "max_level": 35,
-                "species": "SPECIES_FEEBAS"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 35,

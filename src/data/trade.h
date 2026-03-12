@@ -984,6 +984,7 @@ static const union AffineAnimCmd *const sAffineAnims_CrossingMonPics[] =
 
 static const struct InGameTrade sIngameTrades[] =
 {
+    //Hoenn Region Trades
     [INGAME_TRADE_SEEDOT] =
     {
         .nickname = _("Deez"),
@@ -1064,6 +1065,7 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_BAGON
     },
+    //Special Superboss Trades
     [INGAME_TRADE_EEVEE] =
     {
         .nickname = _("Eevee"),
@@ -1078,7 +1080,6 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("LEAF"),
         .otGender = FEMALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_EEVEE
     },
     [INGAME_TRADE_PIKACHU] =
     {
@@ -1094,7 +1095,21 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("RED"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_PIKACHU
+    },
+    [INGAME_TRADE_FEEBAS] =
+    {
+        .nickname = _("Feebas"),
+        .species = SPECIES_FEEBAS,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 1,
+        .otId = 04541,
+        .conditions = {30, 30, 30, 30, 30},
+        .personality = 0x0F,
+        .heldItem = ITEM_PRISM_SCALE,
+        .mailNum = -1,
+        .otName = _("WALLACE"),
+        .otGender = MALE,
+        .sheen = 10
     },
     [INGAME_TRADE_INCINEROAR] =
     {
