@@ -127,6 +127,27 @@ static const u16 sRegionMapBg_Pal[] = INCBIN_U16("graphics/pokenav/region_map/ma
 static const u32 sRegionMapBg_GfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.8bpp.smol");
 static const u32 sRegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.bin.smolTM");
 
+// MMJ Brendan/May
+static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/brendan_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_MayPal[] = INCBIN_U16("graphics/pokenav/region_map/may_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_MayGfx[] = INCBIN_U8("graphics/pokenav/region_map/may_icon.4bpp");
+// RS Brendan/May
+static const u16 sRegionMapPlayerIcon_RSBrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/rs_brendan_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_RSBrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/rs_brendan_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_RSMayPal[] = INCBIN_U16("graphics/pokenav/region_map/rs_may_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_RSMayGfx[] = INCBIN_U8("graphics/pokenav/region_map/rs_may_icon.4bpp");
+// E Brendan/May
+static const u16 sRegionMapPlayerIcon_EBrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/e_brendan_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_EBrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/e_brendan_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_EMayPal[] = INCBIN_U16("graphics/pokenav/region_map/e_may_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_EMayGfx[] = INCBIN_U8("graphics/pokenav/region_map/e_may_icon.4bpp");
+// Red/Leaf
+static const u16 sRegionMapPlayerIcon_RedPal[] = INCBIN_U16("graphics/pokenav/region_map/red_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_RedGfx[] = INCBIN_U8("graphics/pokenav/region_map/red_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_LeafPal[] = INCBIN_U16("graphics/pokenav/region_map/leaf_icon.gbapal");
+static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCBIN_U8("graphics/pokenav/region_map/leaf_icon.4bpp");
+
 #include "data/region_map/region_map_layout.h"
 #include "data/region_map/region_map_entries.h"
 
@@ -1155,22 +1176,22 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
 {
     switch (GetRegionForSectionId(mapSecId))
     {
-        case REGION_KANTO:
-            switch (GetKantoSubregion(mapSecId))
-            {
-                case KANTO_SUBREGION_SEVII123:
-                    return REGION_MAP_SEVII123;
-                case KANTO_SUBREGION_SEVII45:
-                    return REGION_MAP_SEVII45;
-                case KANTO_SUBREGION_SEVII67:
-                    return REGION_MAP_SEVII67;
-                case KANTO_SUBREGION_KANTO:
-                default:
-                    return REGION_MAP_KANTO;
-            }
-        case REGION_HOENN:
+    case REGION_KANTO:
+        switch (GetKantoSubregion(mapSecId))
+        {
+        case KANTO_SUBREGION_SEVII123:
+            return REGION_MAP_SEVII123;
+        case KANTO_SUBREGION_SEVII45:
+            return REGION_MAP_SEVII45;
+        case KANTO_SUBREGION_SEVII67:
+            return REGION_MAP_SEVII67;
+        case KANTO_SUBREGION_KANTO:
         default:
-            return REGION_MAP_HOENN;
+            return REGION_MAP_KANTO;
+        }
+    case REGION_HOENN:
+    default:
+        return REGION_MAP_HOENN;
     }
 }
 
@@ -1185,21 +1206,21 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
 
     switch (GetCurrentRegion())
     {
-        case REGION_KANTO:
-            switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
-            {
-                case KANTO_SUBREGION_SEVII123:
-                    return sRegionMapSections_Sevii123[y][x];
-                case KANTO_SUBREGION_SEVII45:
-                    return sRegionMapSections_Sevii45[y][x];
-                case KANTO_SUBREGION_SEVII67:
-                    return sRegionMapSections_Sevii67[y][x];
-                case KANTO_SUBREGION_KANTO:
-                default:
-                    return sRegionMapSections_Kanto[y][x];
-            }
-        case REGION_HOENN:
+    case REGION_KANTO:
+        switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
+        {
+        case KANTO_SUBREGION_SEVII123:
+                return sRegionMapSections_Sevii123[y][x];
+        case KANTO_SUBREGION_SEVII45:
+                return sRegionMapSections_Sevii45[y][x];
+        case KANTO_SUBREGION_SEVII67:
+                return sRegionMapSections_Sevii67[y][x];
+        case KANTO_SUBREGION_KANTO:
         default:
+                return sRegionMapSections_Kanto[y][x];
+        }
+    case REGION_HOENN:
+    default:
             return sRegionMap_MapSectionLayout[y][x];
     }
 }
@@ -1736,6 +1757,21 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
     {
         sRegionMap->playerIconSprite = NULL;
         return;
+    }
+    if (IS_FRLG && gSaveBlock2Ptr->playerGender == FEMALE)
+    {
+        sheet.data = sRegionMapPlayerIcon_LeafGfx;
+        palette.data = sRegionMapPlayerIcon_LeafPal;
+    }
+    else if (gSaveBlock2Ptr->playerGender == FEMALE)
+    {
+        sheet.data = sRegionMapPlayerIcon_MayGfx;
+        palette.data = sRegionMapPlayerIcon_MayPal;
+    }
+    else if (IS_FRLG)
+    {
+        sheet.data = sRegionMapPlayerIcon_RedGfx;
+        palette.data = sRegionMapPlayerIcon_RedPal;
     }
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&palette);
