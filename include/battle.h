@@ -87,10 +87,9 @@ struct ProtectStruct
     u32 padding1:1;
     // End of 32-bit bitfield
     u16 helpingHand:3;
-    u16 assuranceDoubled:1;
     u16 reactiveFire:1;
     u16 revengeDoubled:4;
-    u16 padding:7;
+    u16 padding:8;
     // End of 16-bit bitfield
     u16 physicalDmg;
     u16 specialDmg;

@@ -81,9 +81,9 @@
 #define FLAG_DEFEATED_REGITUBE              0x3B // Regitube Flags
 #define FLAG_CAUGHT_REGITUBE                0x3C
 #define FLAG_HIDE_REGITUBE                  0x3D
-#define FLAG_DEFEATED_MEWTWO                0x3E // Mewtwo Flags
-#define FLAG_CAUGHT_MEWTWO                  0x3F
-#define FLAG_HIDE_MEWTWO                    0x40
+#define FLAG_DEFEATED_MEWTWO_E              0x3E // Mewtwo Flags
+#define FLAG_CAUGHT_MEWTWO_E                0x3F
+#define FLAG_HIDE_MEWTWO_E                  0x40
 #define FLAG_DEFEATED_ZACIAN                0x41 // Zacian Flags
 #define FLAG_CAUGHT_ZACIAN                  0x42
 #define FLAG_HIDE_ZACIAN                    0x43

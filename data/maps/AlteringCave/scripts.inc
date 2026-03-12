@@ -9,17 +9,17 @@ AlteringCave_OnTransition:
 	end
 
 AlteringCave_EventScript_TryShowMewtwo::
-	call_if_set FLAG_CAUGHT_MEWTWO, AlteringCave_EventScript_HideMewtwo
-	call_if_unset FLAG_CAUGHT_MEWTWO, AlteringCave_EventScript_ShowMewtwo
+	call_if_set FLAG_CAUGHT_MEWTWO_E, AlteringCave_EventScript_HideMewtwo
+	call_if_unset FLAG_CAUGHT_MEWTWO_E, AlteringCave_EventScript_ShowMewtwo
 	return
 
 AlteringCave_EventScript_ShowMewtwo::
-	goto_if_set FLAG_DEFEATED_MEWTWO, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MEWTWO
+	goto_if_set FLAG_DEFEATED_MEWTWO_E, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_MEWTWO_E
 	return
 
 AlteringCave_EventScript_HideMewtwo::
-	setflag FLAG_HIDE_MEWTWO
+	setflag FLAG_HIDE_MEWTWO_E
 	return
 
 AlteringCave_OnResume:
@@ -48,12 +48,12 @@ AlteringCave_EventScript_Mewtwo::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_EventScript_DefeatedMewtwo
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_EventScript_RanFromMewtwo
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_EventScript_RanFromMewtwo
-	setflag FLAG_CAUGHT_MEWTWO
+	setflag FLAG_CAUGHT_MEWTWO_E
 	release
 	end
 
 AlteringCave_EventScript_DefeatedMewtwo::
-	setflag FLAG_DEFEATED_MEWTWO
+	setflag FLAG_DEFEATED_MEWTWO_E
 	setvar VAR_0x8004, SPECIES_MEWTWO
 	goto Common_EventScript_LegendaryFlewAway
 	end
