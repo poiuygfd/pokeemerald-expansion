@@ -603,10 +603,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 20,
         .weight = 865,
         .description = COMPOUND_STRING(
-            "A recently discovered Mega Evolution when\n"
-            "a Slowbro from Galar found a Slowbronite.\n"
-            "The force of poisonous shots fired from\n"
-            "its cannon can pierce through cargo ships."),
+            "The Mega Evolved form of a Slowbro from\n"
+            "the Galar region. Unlike its Kantonian\n"
+            "variant who focuses on raw defense, this\n"
+            "form possesses immense firepower."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 326,
@@ -663,8 +663,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .description = COMPOUND_STRING(
             "An experiment by an ex-Weather Institute\n"
             "employee to grant Castform the power he\n"
-            "believes it should have. Mega Castform\n"
-            "has complete control over weather."),
+            "believes it deserves. Mega Castform has\n"
+            "gained complete control over weather."),
         .pokemonScale = 328,
         .pokemonOffset = -5,
         .trainerScale = 256,
@@ -897,10 +897,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 18,
         .weight = 1600,
         .description = COMPOUND_STRING(
-            "This brutal Pokémon travels the skies on\n"
-            "its six wings. The heads on their arms do\n"
-            "not have brains. They use all three heads\n"
-            "to consume and destroy everything."),
+            "After being scarred in battle by Fairy-type\n"
+            "Pokémon, this Pokémon Mega Evolved to be\n"
+            "more fierce. It mercilessly hunts down all\n"
+            "Fairy type Pokemon to enact revenge."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
