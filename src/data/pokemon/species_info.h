@@ -890,6 +890,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON),
         .abilities = { ABILITY_FAE_HUNTER, ABILITY_FAE_HUNTER, ABILITY_FAE_HUNTER },
         .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = TRUE,
         .speciesName = _("Hydreigon"),
         .cryId = CRY_HYDREIGON,
         .natDexNum = NATIONAL_DEX_HYDREIGON,
@@ -900,7 +901,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             "After being scarred in battle by Fairy-type\n"
             "Pokémon, this Pokémon Mega Evolved to be\n"
             "more fierce. It mercilessly hunts down all\n"
-            "Fairy type Pokemon to enact revenge."),
+            "Fairy type Pokémon to enact revenge."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,

@@ -1787,6 +1787,8 @@ extern const u32 gItemIcon_SlowbroniteG[];
 extern const u16 gItemIconPalette_SlowbroniteG[];
 extern const u32 gItemIcon_Castformite[];
 extern const u16 gItemIconPalette_Castformite[];
+extern const u32 gItemIcon_Hydreigonite[];
+extern const u16 gItemIconPalette_Hydreigonite[];
 extern const u32 gItemIcon_CharizarditeZ[];
 extern const u16 gItemIconPalette_CharizarditeZ[];
 
