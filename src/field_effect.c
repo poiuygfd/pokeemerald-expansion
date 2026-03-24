@@ -3330,6 +3330,8 @@ u8 FldEff_UseSurf(void)
     Overworld_ClearSavedMusic();
     if (FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
         Overworld_ChangeMusicTo(MUS_SAILING);
+    else if (IS_FRLG)
+        Overworld_ChangeMusicTo(MUS_RG_SURF);
     else
         Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;

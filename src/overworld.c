@@ -1293,6 +1293,8 @@ void Overworld_PlaySpecialMapMusic(void)
             music = gSaveBlock1Ptr->savedMusic;
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
             music = MUS_UNDERWATER;
+        else if (IS_FRLG && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
+            music = MUS_RG_SURF;
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
             music = MUS_SURF;
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
@@ -1329,10 +1331,12 @@ static void TransitionMapMusic(void)
         u16 currentMusic = GetCurrentMapMusic();
         if (newMusic != MUS_ABNORMAL_WEATHER && newMusic != MUS_NONE)
         {
-            if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF || currentMusic == MUS_SAILING)
+            if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF || currentMusic == MUS_RG_SURF || currentMusic == MUS_SAILING)
                 return;
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
                 newMusic = MUS_SURF;
+            if (IS_FRLG && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == FALSE)
+                newMusic = MUS_RG_SURF;
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && FlagGet(FLAG_IS_PLAYER_BOATING) == TRUE)
                 newMusic = MUS_SAILING;
         }

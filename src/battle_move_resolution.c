@@ -2711,8 +2711,7 @@ static enum MoveEndResult MoveEndMirrorMove(void)
      && gBattlerAttacker != gBattlerTarget
      && IsBattlerAlive(gBattlerAttacker)
      && IsBattlerAlive(gBattlerTarget)
-     && !IsMoveMirrorMoveBanned(GetOriginallyUsedMove(gChosenMove))
-     && !IsBattlerUnaffectedByMove(gBattlerTarget))
+     && !IsMoveMirrorMoveBanned(GetOriginallyUsedMove(gChosenMove)))
     {
         gBattleStruct->lastTakenMove[gBattlerTarget] = gChosenMove;
         gBattleStruct->lastTakenMoveFrom[gBattlerTarget][gBattlerAttacker] = gChosenMove;
@@ -3017,7 +3016,7 @@ static enum MoveEndResult MoveEndMoveBlock(void)
         if (IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
          && IsBattlerAlive(gBattlerTarget)
          && IsBattlerAlive(gBattlerAttacker)
-         && gBattleMons[BATTLE_PARTNER(gBattlerTarget)].volatiles.semiInvulnerable != STATE_COMMANDER)
+         && gBattleStruct->battlerState[gBattlerTarget].commanderSpecies == SPECIES_NONE)
         {
             enum Ability targetAbility = GetBattlerAbility(gBattlerTarget);
             if (targetAbility == ABILITY_GUARD_DOG)
@@ -3751,7 +3750,7 @@ static enum MoveEndResult MoveEndClearBits(void)
         {
             enum BattlerId partner = BATTLE_PARTNER(i);
             gBattleStruct->battlerState[i].commanderSpecies = SPECIES_NONE;
-            if (IsBattlerAlive(partner))
+            if (gBattleMons[partner].volatiles.semiInvulnerable == STATE_COMMANDER)
                 gBattleMons[partner].volatiles.semiInvulnerable = STATE_NONE;
         }
     }
@@ -3790,8 +3789,8 @@ static enum MoveEndResult MoveEndDancer(void)
     // Set target for other Dancer mons; set bit so that mon cannot activate Dancer off of its own move
     if (!gSpecialStatuses[gBattlerAttacker].dancerUsedMove)
     {
-        gBattleScripting.savedBattler = gBattlerTarget | 0x4;
-        gBattleScripting.savedBattler |= (gBattlerAttacker << 4);
+        gBattleStruct->dancerSavedTarget = gBattlerTarget;
+        gBattleStruct->dancerSavedAttacker = gBattlerAttacker;
         gSpecialStatuses[gBattlerAttacker].dancerUsedMove = TRUE;
     }
 
