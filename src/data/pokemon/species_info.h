@@ -571,7 +571,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Regitube,
             gShinyOverworldPalette_Regitube
         )
-        .isLegendary = TRUE,
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRegitubeLevelUpLearnset,
         .teachableLearnset = sRegitubeTeachableLearnset,

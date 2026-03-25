@@ -1974,6 +1974,12 @@
 	.4byte \products
 	.endm
 
+	.macro setoutfitgfxintovar var:req, state=0 @ PLAYER_AVATAR_STATE_NORMAL
+	callnative SetCurrentOutfitGfxIntoVar
+	.2byte \var
+	.2byte \state
+	.endm
+
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req

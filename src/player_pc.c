@@ -30,6 +30,8 @@
 #include "window.h"
 #include "menu_specialized.h"
 #include "constants/layouts.h"
+#include "event_data.h"
+#include "naming_screen.h"
 
 // Top level PC menu options
 enum {
@@ -559,10 +561,15 @@ static void CheckSubmittedCode(void)
             break;
     }
 
-    if (gSaveBlock2Ptr->playerGender == MALE)
-            MapGridSetMetatileIdAt(0 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_BrendanPC_Off);
+    if (gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_2F_FRLG)
+        ScriptContext_SetupScript(EventScript_PalletTown_PlayersHouse_2F_ShutDownPC);
+    else if (gSaveBlock2Ptr->playerGender == MALE)
+        //MapGridSetMetatileIdAt(0 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_BrendanPC_Off);
+        ScriptContext_SetupScript(LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC);
     else
-            MapGridSetMetatileIdAt(8 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_MayPC_Off);
+        //MapGridSetMetatileIdAt(8 + MAP_OFFSET, 1 + MAP_OFFSET, METATILE_BrendansMaysHouse_MayPC_Off);
+        ScriptContext_SetupScript(LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC);
+
     CB2_ReturnToFieldContinueScript();
 }
 

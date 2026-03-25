@@ -268,14 +268,17 @@ static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
 static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_GFX_FEMALE_NORMAL},
-    [PLAYER_AVATAR_STATE_MACH_BIKE]  = {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE},
-    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
+    [PLAYER_AVATAR_STATE_BIKE]       = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
     [PLAYER_AVATAR_STATE_SURFING]    = {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_GFX_FEMALE_SURFING},
     [PLAYER_AVATAR_STATE_UNDERWATER] = {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_GFX_FEMALE_UNDERWATER},
-    [PLAYER_AVATAR_STATE_FIELD_MOVE] = {PLAYER_AVATAR_GFX_MALE_FIELD_MOVE, PLAYER_AVATAR_GFX_FEMALE_FIELD_MOVE},
-    [PLAYER_AVATAR_STATE_FISHING]    = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
-    [PLAYER_AVATAR_STATE_WATERING]   = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
-    [PLAYER_AVATAR_STATE_VSSEEKER]   = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
+};
+
+static const u8 sPlayerAvatarAnimGfxIds[][2] =
+{
+    [PLAYER_AVATAR_GFX_FIELD_MOVE] = {OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_MAY_FIELD_MOVE},
+    [PLAYER_AVATAR_GFX_FISHING]    = {OBJ_EVENT_GFX_BRENDAN_FISHING,    OBJ_EVENT_GFX_MAY_FISHING},
+    [PLAYER_AVATAR_GFX_WATERING]   = {OBJ_EVENT_GFX_BRENDAN_WATERING,   OBJ_EVENT_GFX_MAY_WATERING},
+    [PLAYER_AVATAR_GFX_VSSEEKER]   = {OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_MAY_FIELD_MOVE},
 };
 
 static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
@@ -292,34 +295,10 @@ static const u8 sRSAvatarGfxIds[GENDER_COUNT] =
 
 static const u8 sPlayerAvatarGfxToStateFlag[4] =
 {
-    u8 graphicsId;
-    u8 playerFlag;
-} sPlayerAvatarGfxToStateFlag[GENDER_COUNT][5] =
-{
-    [MALE] =
-    {
-        {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_FLAG_ON_FOOT},
-        {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_FLAG_MACH_BIKE},
-        {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
-        {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
-        {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
-    },
-    [FEMALE] =
-    {
-        {PLAYER_AVATAR_GFX_FEMALE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
-        {PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE,      PLAYER_AVATAR_FLAG_MACH_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,      PLAYER_AVATAR_FLAG_ACRO_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_SURFING,        PLAYER_AVATAR_FLAG_SURFING},
-        {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER,     PLAYER_AVATAR_FLAG_UNDERWATER},
-    }
-};
-
-static bool8 (*const sArrowWarpMetatileBehaviorChecks2[])(u8) =  //Duplicate of sArrowWarpMetatileBehaviorChecks
-{
-    [DIR_SOUTH - 1] = MetatileBehavior_IsSouthArrowWarp,
-    [DIR_NORTH - 1] = MetatileBehavior_IsNorthArrowWarp,
-    [DIR_WEST - 1]  = MetatileBehavior_IsWestArrowWarp,
-    [DIR_EAST - 1]  = MetatileBehavior_IsEastArrowWarp,
+    [PLAYER_AVATAR_STATE_NORMAL]     = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_BIKE]       = PLAYER_AVATAR_FLAG_BIKE,
+    [PLAYER_AVATAR_STATE_SURFING]    = PLAYER_AVATAR_FLAG_SURFING,
+    [PLAYER_AVATAR_STATE_UNDERWATER] = PLAYER_AVATAR_FLAG_UNDERWATER,
 };
 
 static bool8 (*const sPushBoulderFuncs[])(struct Task *, struct ObjectEvent *, struct ObjectEvent *) =
@@ -1143,23 +1122,7 @@ static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_Bike(struct ObjectEvent *objEvent)
 {
-    ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_MACH_BIKE));
-    ObjectEventTurn(objEvent, objEvent->movementDirection);
-    if (IS_FRLG)
-        SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_BIKE);
-    else
-        SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_MACH_BIKE);
-    BikeClearState(0, 0);
-}
-
-static void PlayerAvatarTransition_AcroBike(struct ObjectEvent *objEvent)
-{
-    ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_ACRO_BIKE));
-    ObjectEventTurn(objEvent, objEvent->movementDirection);
-    if (IS_FRLG)
-        SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_BIKE);
-    else
-        SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+    SetPlayerAvatarTransitionState(objEvent, PLAYER_AVATAR_STATE_BIKE);
     BikeClearState(0, 0);
     Bike_HandleBumpySlopeJump();
 }
@@ -1583,6 +1546,24 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
         return sRivalAvatarGfxIds[state][gender];
 }
 
+static u16 GetPlayerAvatarGraphicsIdByOutfitStateIdGenderAndIsAnim(u8 outfit, u8 state, u8 gender, bool32 isAnim)
+{
+    if (isAnim)
+        return gOutfits[outfit].animGfxIds[gender][state];
+    else
+        return gOutfits[outfit].avatarGfxIds[gender][state];
+}
+
+u16 GetPlayerAvatarGraphicsIdByOutfitStateIdAndGender(u8 outfit, u8 state, u8 gender)
+{
+    return GetPlayerAvatarGraphicsIdByOutfitStateIdGenderAndIsAnim(outfit, state, gender, FALSE);
+}
+
+u16 GetPlayerAnimGraphicsIdByOutfitStateIdAndGender(u8 outfit, u8 state, u8 gender)
+{
+    return GetPlayerAvatarGraphicsIdByOutfitStateIdGenderAndIsAnim(outfit, state, gender, TRUE);
+}
+
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     return GetPlayerAvatarGraphicsIdByOutfitStateIdAndGender(gSaveBlock2Ptr->currOutfitId, state, gender);
@@ -1603,34 +1584,31 @@ u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gSaveBlock2Ptr->playerGender);
 }
 
-enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
+/*enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
         // MMJ Outfit
         case OBJ_EVENT_GFX_MAY_NORMAL:
-        case OBJ_EVENT_GFX_MAY_MACH_BIKE:
-        case OBJ_EVENT_GFX_MAY_ACRO_BIKE:
+        case OBJ_EVENT_GFX_MAY_BIKE:
         case OBJ_EVENT_GFX_MAY_SURFING:
         case OBJ_EVENT_GFX_MAY_FIELD_MOVE:
         case OBJ_EVENT_GFX_MAY_UNDERWATER:
         case OBJ_EVENT_GFX_MAY_FISHING:
         case OBJ_EVENT_GFX_MAY_WATERING:
         // RS Outfit
-        case OBJ_EVENT_GFX_RS_MAY_NORMAL:
-        case OBJ_EVENT_GFX_RS_MAY_MACH_BIKE:
-        case OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE:
-        case OBJ_EVENT_GFX_RS_MAY_SURFING:
-        case OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE:
+        //case OBJ_EVENT_GFX_RS_MAY_NORMAL:
+        //case OBJ_EVENT_GFX_RS_MAY_BIKE:
+        //case OBJ_EVENT_GFX_RS_MAY_SURFING:
+        //case OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE:
         //case OBJ_EVENT_GFX_RS_MAY_UNDERWATER:
         //case OBJ_EVENT_GFX_RS_MAY_FISHING:
         //case OBJ_EVENT_GFX_RS_MAY_WATERING:
         // E Outfit
-        case OBJ_EVENT_GFX_E_MAY_NORMAL:
-        case OBJ_EVENT_GFX_E_MAY_MACH_BIKE:
-        case OBJ_EVENT_GFX_E_MAY_ACRO_BIKE:
-        case OBJ_EVENT_GFX_E_MAY_SURFING:
-        case OBJ_EVENT_GFX_E_MAY_FIELD_MOVE:
+        //case OBJ_EVENT_GFX_E_MAY_NORMAL:
+        //case OBJ_EVENT_GFX_E_MAY_BIKE:
+        //case OBJ_EVENT_GFX_E_MAY_SURFING:
+        //case OBJ_EVENT_GFX_E_MAY_FIELD_MOVE:
         //case OBJ_EVENT_GFX_E_MAY_UNDERWATER:
         //case OBJ_EVENT_GFX_E_MAY_FISHING:
         //case OBJ_EVENT_GFX_E_MAY_WATERING:
@@ -1646,7 +1624,7 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
         default:
             return MALE;
     }
-}
+}*/
 
 bool8 PartyHasMonWithSurf(void)
 {
@@ -1732,7 +1710,7 @@ void SetPlayerAvatarExtraStateTransition(u16 graphicsId, u8 transitionFlag)
     DoPlayerAvatarTransition();
 }
 
-void InitPlayerAvatar(s16 x, s16 y, enum Direction direction, enum Gender gender)
+void InitPlayerAvatar(s16 x, s16 y, enum Direction direction)
 {
     struct ObjectEventTemplate playerObjEventTemplate;
     u8 objectEventId;

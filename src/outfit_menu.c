@@ -26,6 +26,7 @@
 #include "text_window.h"
 #include "trainer_pokemon_sprites.h"
 #include "grid_menu.h"
+#include "event_data.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
@@ -777,7 +778,7 @@ static void Task_WaitFadeInOutfitMenu(u8 taskId)
 
 static void Task_WaitMessage(u8 taskId)
 {
-    if (!IsTextPrinterActive(WIN_MSGBOX) && (JOY_NEW(A_BUTTON | B_BUTTON) || --gTasks[taskId].data[0] == 0))
+    if (!IsTextPrinterActiveOnWindow(WIN_MSGBOX) && (JOY_NEW(A_BUTTON | B_BUTTON) || --gTasks[taskId].data[0] == 0))
     {
         ClearDialogWindowAndFrame(WIN_MSGBOX, TRUE);
         UpdateOutfitInfo();
@@ -1020,4 +1021,14 @@ bool8 IsPlayerWearingOutfit(u16 id)
 u32 GetOutfitPrice(u16 id)
 {
     return gOutfits[id].prices[gSaveBlock2Ptr->playerGender];
+}
+
+void SetCurrentOutfitGfxIntoVar(struct ScriptContext *ctx)
+{
+    u32 varId = ScriptReadHalfword(ctx);
+    u32 state = ScriptReadHalfword(ctx);
+    u32 gfxId = GetPlayerAvatarGraphicsIdByOutfitStateIdAndGender(
+        gSaveBlock2Ptr->currOutfitId, state, gSaveBlock2Ptr->playerGender);
+
+    VarSet(varId, gfxId);
 }

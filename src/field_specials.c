@@ -220,7 +220,7 @@ u16 GetPlayerAvatarBike(void)
 {
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_BIKE))
     {
-        if (gSaveBlock2Ptr->playerBike != MACH_BIKE)
+        if (gSaveBlock2Ptr->playerBike == ACRO_BIKE)
             return 1;
         else
             return 2;
@@ -4545,11 +4545,6 @@ void PreparePartyForSkyBattle(void)
     CompactPartySlots();
 }
 
-void EnterAvitorchCode(void)
-{
-    DoNamingScreen(NAMING_SCREEN_AVITORCH, gStringVar2, 0, 0, 0, CB2_ReturnToFieldContinueScript);
-}
-
 void GetAvitorchCodeFeedback(void)
 {
     //struct Pokemon *party = gPlayerParty;
@@ -5543,7 +5538,7 @@ static void Task_AnimateElevatorWindowView(u8 taskId)
 void ForcePlayerOntoBike(void)
 {
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ON_FOOT)
-        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_BIKE);
     Overworld_SetSavedMusic(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
     Overworld_ChangeMusicTo(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
 }

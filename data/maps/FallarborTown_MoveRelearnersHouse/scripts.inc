@@ -7,7 +7,7 @@ FallarborTown_MoveRelearnersHouse_EventScript_AvitorchGiftGiver::
 	goto_if_set FLAG_AVITORCH_CODE_USED, FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed
 	msgbox FallarborTown_MoveRelearnersHouse_Text_AvitorchGift, MSGBOX_DEFAULT
 	waitmessage
-	special EnterAvitorchCode
+	special EnterCode
 	waitstate
 	special GetAvitorchCodeFeedback
 	goto_if_eq VAR_RESULT, 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess
