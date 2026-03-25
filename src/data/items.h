@@ -16049,6 +16049,22 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_RainbowPass,
     }, 
 
+    [ITEM_HI_TECH_EARBUDS] =
+    {
+        .name = ITEM_NAME("HiTech Earbuds"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+             "Allows the changing\n"
+             "of music that plays\n"
+             "during battles."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+	    .iconPic = gItemIcon_HiTechEarbuds,
+	    .iconPalette = gItemIconPalette_HiTechEarbuds,
+    },
+
     [ITEM_OUTFIT_BOX] =
     {
         .name = ITEM_NAME("Outfit Box"),

@@ -1773,6 +1773,8 @@ extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
 extern const u32 gItemIcon_CandyBag[];
 extern const u16 gItemIconPalette_CandyBag[];
+extern const u32 gItemIcon_HiTechEarbuds[];
+extern const u16 gItemIconPalette_HiTechEarbuds[];
 extern const u32 gItemIcon_OutfitBox[];
 extern const u16 gItemIconPalette_OutfitBox[];
 

@@ -1001,7 +1001,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_EXPERT_BELT,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MIGHTYENA] = {
         .species = SPECIES_MIGHTYENA,
@@ -1009,7 +1009,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLACK_GLASSES,
         .ev = TRAINER_PARTY_EVS(0, 170, 170, 170, 0, 0),
         .nature = NATURE_HARDY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ZIGZAGOON] = {
         .species = SPECIES_ZIGZAGOON,
@@ -1017,7 +1017,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_BAND,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_JOLLY,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LINOONE] = {
         .species = SPECIES_LINOONE,
@@ -1025,7 +1025,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MENTAL_HERB,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 0, 170),
         .nature = NATURE_JOLLY,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_BEAUTIFLY] = {
         .species = SPECIES_BEAUTIFLY,
@@ -1033,7 +1033,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BIG_ROOT,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 128, 0),
         .nature = NATURE_HASTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DUSTOX] = {
         .species = SPECIES_DUSTOX,
@@ -1041,7 +1041,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ORAN_BERRY,
         .ev = TRAINER_PARTY_EVS(128, 0, 128, 0, 128, 128),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PIDGEY] = {
         .species = SPECIES_PIDGEY,
@@ -1049,7 +1049,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FOCUS_SASH,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PIDGEOTTO] = {
         .species = SPECIES_PIDGEOTTO,
@@ -1057,7 +1057,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WISE_GLASSES,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LOTAD] = {
         .species = SPECIES_LOTAD,
@@ -1065,7 +1065,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MYSTIC_WATER,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 170, 0),
         .nature = NATURE_DOCILE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LOMBRE] = {
         .species = SPECIES_LOMBRE,
@@ -1073,7 +1073,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MIRACLE_SEED,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SEEDOT] = {
         .species = SPECIES_SEEDOT,
@@ -1081,7 +1081,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_NORMAL_GEM,
         .ev = TRAINER_PARTY_EVS(128, 128, 128, 0, 0, 128),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_NUZLEAF] = {
         .species = SPECIES_NUZLEAF,
@@ -1089,7 +1089,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOPLE_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_WOOLOO] = {
         .species = SPECIES_WOOLOO,
@@ -1097,7 +1097,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CUSTAP_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DUBWOOL] = {
         .species = SPECIES_DUBWOOL,
@@ -1105,7 +1105,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ORAN_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 128, 0, 0, 0, 128),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_WINGULL] = {
         .species = SPECIES_WINGULL,
@@ -1113,7 +1113,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METAL_COAT,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PELIPPER] = {
         .species = SPECIES_PELIPPER,
@@ -1121,7 +1121,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_DRAGON_FANG,
         .ev = TRAINER_PARTY_EVS(0, 0, 170, 0, 170, 170),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_WATTREL] = {
         .species = SPECIES_WATTREL,
@@ -1129,7 +1129,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SHARP_BEAK,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_KILOWATTREL] = {
         .species = SPECIES_KILOWATTREL,
@@ -1137,7 +1137,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SILK_SCARF,
         .ev = TRAINER_PARTY_EVS(0, 170, 0, 170, 170, 0),
         .nature = NATURE_NAUGHTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_RALTS] = {
         .species = SPECIES_RALTS,
@@ -1145,7 +1145,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MAGO_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_KIRLIA] = {
         .species = SPECIES_KIRLIA,
@@ -1153,7 +1153,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_TWISTED_SPOON,
         .ev = TRAINER_PARTY_EVS(128, 0, 128, 0, 128, 128),
         .nature = NATURE_SASSY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TAILLOW] = {
         .species = SPECIES_TAILLOW,
@@ -1161,7 +1161,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FOCUS_SASH,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SWELLOW] = {
         .species = SPECIES_SWELLOW,
@@ -1169,7 +1169,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LAGGING_TAIL,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 0, 128),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MARILL] = {
         .species = SPECIES_MARILL,
@@ -1177,7 +1177,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_BAND,
         .ev = TRAINER_PARTY_EVS(252, 128, 0, 0, 0, 128),
         .nature = NATURE_LAX
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_AZUMARILL] = {
         .species = SPECIES_AZUMARILL,
@@ -1185,7 +1185,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_TWISTED_SPOON,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
         .nature = NATURE_CALM
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SHELLOS] = {
         .species = SPECIES_SHELLOS,
@@ -1193,7 +1193,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WHITE_HERB,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
         .nature = NATURE_BRAVE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SHROOMISH] = {
         .species = SPECIES_SHROOMISH,
@@ -1201,7 +1201,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MIRACLE_SEED,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PANSAGE] = {
         .species = SPECIES_PANSAGE,
@@ -1209,7 +1209,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LIECHI_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PANSEAR] = {
         .species = SPECIES_PANSEAR,
@@ -1217,7 +1217,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SALAC_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
         .nature = NATURE_NAIVE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PANPOUR] = {
         .species = SPECIES_PANPOUR,
@@ -1225,7 +1225,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_PETAYA_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_STEENEE] = {
         .species = SPECIES_STEENEE,
@@ -1233,7 +1233,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_STARF_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 102, 102, 102, 102, 102),
         .nature = NATURE_QUIRKY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_VIGOROTH] = {
         .species = SPECIES_VIGOROTH,
@@ -1241,7 +1241,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CUSTAP_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PIKACHU] = {
         .species = SPECIES_PIKACHU,
@@ -1249,7 +1249,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ABILITY_SHIELD,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 128, 0),
         .nature = NATURE_HASTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ROCKRUFF] = {
         .species = SPECIES_ROCKRUFF,
@@ -1257,7 +1257,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LYCANROC_DAY] = {
         .species = SPECIES_LYCANROC_MIDDAY,
@@ -1265,7 +1265,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_PASSHO_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LYCANROC_MDN] = {
         .species = SPECIES_LYCANROC_MIDNIGHT,
@@ -1273,7 +1273,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_RINDO_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 170, 170, 0, 0, 170),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_NINCADA] = {
         .species = SPECIES_NINCADA,
@@ -1281,7 +1281,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_POWER_HERB,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_NINJASK] = {
         .species = SPECIES_NINJASK,
@@ -1289,7 +1289,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METRONOME,
         .ev = TRAINER_PARTY_EVS(102, 0, 102, 102, 102, 102),
         .nature = NATURE_QUIRKY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_STUFFUL] = {
         .species = SPECIES_STUFFUL,
@@ -1297,7 +1297,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLUNDER_POLICY,
         .ev = TRAINER_PARTY_EVS(128, 128, 0, 252, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_WHISMUR] = {
         .species = SPECIES_WHISMUR,
@@ -1305,7 +1305,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_THROAT_SPRAY,
         .ev = TRAINER_PARTY_EVS(128, 0, 0, 252, 0, 128),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LOUDRED] = {
         .species = SPECIES_LOUDRED,
@@ -1313,7 +1313,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METRONOME,
         .ev = TRAINER_PARTY_EVS(128, 0, 128, 128, 0, 128),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ESPURR] = {
         .species = SPECIES_ESPURR,
@@ -1321,7 +1321,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METRONOME,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_QUIRKY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MEOWSTIC_M] = {
         .species = SPECIES_MEOWSTIC_M,
@@ -1329,7 +1329,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_NORMAL_GEM,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_BOLD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MEOWSTIC_F] = {
         .species = SPECIES_MEOWSTIC_F,
@@ -1337,7 +1337,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MAGNET,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 128, 128, 0),
         .nature = NATURE_CALM
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SKITTY] = {
         .species = SPECIES_SKITTY,
@@ -1345,7 +1345,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_BAND,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DELCATTY] = {
         .species = SPECIES_DELCATTY,
@@ -1353,7 +1353,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLUNDER_POLICY,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_BUNEARY] = {
         .species = SPECIES_BUNEARY,
@@ -1361,7 +1361,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_STICKY_BARB,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 128, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LOPUNNY] = {
         .species = SPECIES_LOPUNNY,
@@ -1369,7 +1369,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_PUNCHING_GLOVE,
         .ev = TRAINER_PARTY_EVS(0, 128, 128, 128, 0, 128),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FURFROU] = {
         .species = SPECIES_FURFROU,
@@ -1377,7 +1377,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_EJECT_BUTTON,
         .ev = TRAINER_PARTY_EVS(0, 128, 128, 252, 0, 0),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_EEVEE] = {
         .species = SPECIES_EEVEE,
@@ -1385,7 +1385,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WATMEL_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MAKUHITA] = {
         .species = SPECIES_MAKUHITA,
@@ -1393,7 +1393,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ZUBAT] = {
         .species = SPECIES_ZUBAT,
@@ -1401,7 +1401,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SILVER_POWDER,
         .ev = TRAINER_PARTY_EVS(128, 128, 0, 252, 0, 0),
         .nature = NATURE_NAIVE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GOLBAT] = {
         .species = SPECIES_GOLBAT,
@@ -1409,7 +1409,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SPELL_TAG,
         .ev = TRAINER_PARTY_EVS(0, 0, 128, 128, 128, 128),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GEODUDE] = {
         .species = SPECIES_GEODUDE,
@@ -1417,7 +1417,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ROCKY_HELMET,
         .ev = TRAINER_PARTY_EVS(128, 128, 0, 252, 0, 0),
         .nature = NATURE_BOLD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GRAVELER] = {
         .species = SPECIES_GRAVELER,
@@ -1425,7 +1425,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LEFTOVERS,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 0, 170),
         .nature = NATURE_CAREFUL
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_NOSEPASS] = {
         .species = SPECIES_NOSEPASS,
@@ -1433,7 +1433,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SHUCA_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 128, 0, 0, 0, 128),
         .nature = NATURE_CAREFUL
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ARON] = {
         .species = SPECIES_ARON,
@@ -1441,7 +1441,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_DRAGON_FANG,
         .ev = TRAINER_PARTY_EVS(170, 170, 170, 0, 0, 0),
         .nature = NATURE_NAUGHTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DRILBUR] = {
         .species = SPECIES_DRILBUR,
@@ -1449,7 +1449,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SOFT_SAND,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 170, 0, 0),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MACHOP] = {
         .species = SPECIES_MACHOP,
@@ -1457,7 +1457,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLACK_BELT,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MACHOKE] = {
         .species = SPECIES_MACHOKE,
@@ -1465,7 +1465,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SCOPE_LENS,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MEDITITE] = {
         .species = SPECIES_MEDITITE,
@@ -1473,7 +1473,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_KEE_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 128, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TENTACOOL] = {
         .species = SPECIES_TENTACOOL,
@@ -1481,7 +1481,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLACK_SLUDGE,
         .ev = TRAINER_PARTY_EVS(252, 0, 252, 0, 0, 0),
         .nature = NATURE_CAREFUL
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_RIOLU] = {
         .species = SPECIES_RIOLU,
@@ -1489,7 +1489,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MUSCLE_BAND,
         .ev = TRAINER_PARTY_EVS(170, 0, 0, 170, 0, 170),
         .nature = NATURE_NAIVE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ELECTRIKE] = {
         .species = SPECIES_ELECTRIKE,
@@ -1497,7 +1497,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_SCARF,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MAREEP] = {
         .species = SPECIES_MAREEP,
@@ -1505,7 +1505,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SITRUS_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_DOCILE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FLAAFFY] = {
         .species = SPECIES_FLAAFFY,
@@ -1513,7 +1513,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MAGNET,
         .ev = TRAINER_PARTY_EVS(0, 170, 0, 170, 170, 0),
         .nature = NATURE_RASH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PLUSLE] = {
         .species = SPECIES_PLUSLE,
@@ -1521,7 +1521,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_DAMP_ROCK,
         .ev = TRAINER_PARTY_EVS(0, 0, 252, 252, 0, 0),
         .nature = NATURE_QUIRKY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MINUN] = {
         .species = SPECIES_MINUN,
@@ -1529,7 +1529,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LIGHT_CLAY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 128, 128, 0),
         .nature = NATURE_SERIOUS
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GLOOM] = {
         .species = SPECIES_GLOOM,
@@ -1537,7 +1537,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLACK_SLUDGE,
         .ev = TRAINER_PARTY_EVS(128, 0, 128, 128, 128, 0),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TANDEMAUS] = {
         .species = SPECIES_TANDEMAUS,
@@ -1545,7 +1545,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LOADED_DICE,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 128, 0, 128),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MAUSHOLD] = {
         .species = SPECIES_MAUSHOLD,
@@ -1553,7 +1553,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOPLE_BERRY,
         .ev = TRAINER_PARTY_EVS(102, 0, 102, 102, 102, 102),
         .nature = NATURE_HARDY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_VOLBEAT] = {
         .species = SPECIES_VOLBEAT,
@@ -1561,7 +1561,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_OCCA_BERRY,
         .ev = TRAINER_PARTY_EVS(102, 0, 102, 102, 102, 102),
         .nature = NATURE_DOCILE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ILLUMISE] = {
         .species = SPECIES_ILLUMISE,
@@ -1569,7 +1569,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_COBA_BERRY,
         .ev = TRAINER_PARTY_EVS(128, 0, 128, 128, 0, 128),
         .nature = NATURE_BOLD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CHARJABUG] = {
         .species = SPECIES_CHARJABUG,
@@ -1577,7 +1577,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CELL_BATTERY,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 128, 0),
         .nature = NATURE_DOCILE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ROSELIA] = {
         .species = SPECIES_ROSELIA,
@@ -1585,7 +1585,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_POISON_BARB,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 128, 128, 0),
         .nature = NATURE_HASTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GULPIN] = {
         .species = SPECIES_GULPIN,
@@ -1593,7 +1593,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_EVIOLITE,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CAPSAKID] = {
         .species = SPECIES_CAPSAKID,
@@ -1601,7 +1601,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_HEAT_ROCK,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 170, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_NUMEL] = {
         .species = SPECIES_NUMEL,
@@ -1609,7 +1609,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_PASSHO_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 128, 0, 0, 128, 0),
         .nature = NATURE_LAX
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SIZZLIPEDE] = {
         .species = SPECIES_SIZZLIPEDE,
@@ -1617,7 +1617,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_HEAVY_DUTY_BOOTS,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SLUGMA] = {
         .species = SPECIES_SLUGMA,
@@ -1625,7 +1625,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHARTI_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SWABLU] = {
         .species = SPECIES_SWABLU,
@@ -1633,7 +1633,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_THROAT_SPRAY,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_BOLD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ZANGOOSE] = {
         .species = SPECIES_ZANGOOSE,
@@ -1641,7 +1641,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_QUICK_CLAW,
         .ev = TRAINER_PARTY_EVS(102, 0, 102, 102, 102, 102),
         .nature = NATURE_NAUGHTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SEVIPER] = {
         .species = SPECIES_SEVIPER,
@@ -1649,7 +1649,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SHED_SHELL,
         .ev = TRAINER_PARTY_EVS(128, 128, 128, 128, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_ZORUA] = {
         .species = SPECIES_ZORUA,
@@ -1657,7 +1657,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ROSELI_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 170, 0, 170, 170, 0),
         .nature = NATURE_RASH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_BARBOACH] = {
         .species = SPECIES_BARBOACH,
@@ -1665,7 +1665,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_RINDO_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 128, 128, 0, 0, 0),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FINNEON] = {
         .species = SPECIES_FINNEON,
@@ -1673,7 +1673,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MYSTIC_WATER,
         .ev = TRAINER_PARTY_EVS(170, 0, 0, 170, 170, 0),
         .nature = NATURE_HASTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PANCHAM] = {
         .species = SPECIES_PANCHAM,
@@ -1681,7 +1681,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLACK_GLASSES,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CRABRAWLER] = {
         .species = SPECIES_CRABRAWLER,
@@ -1689,7 +1689,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_RAWST_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_LAX
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TINKATINK] = {
         .species = SPECIES_TINKATINK,
@@ -1697,7 +1697,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_RED_CARD,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 170, 0),
         .nature = NATURE_HARDY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SANDSHREW] = {
         .species = SPECIES_SANDSHREW,
@@ -1705,7 +1705,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SOFT_SAND,
         .ev = TRAINER_PARTY_EVS(252, 128, 0, 0, 0, 128),
         .nature = NATURE_CAREFUL
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SILICOBRA] = {
         .species = SPECIES_SILICOBRA,
@@ -1713,7 +1713,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_PASSHO_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 0, 0),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TRAPINCH] = {
         .species = SPECIES_TRAPINCH,
@@ -1721,7 +1721,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_SPECS,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 170, 0),
         .nature = NATURE_SERIOUS
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CACNEA] = {
         .species = SPECIES_CACNEA,
@@ -1729,7 +1729,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LAX_INCENSE,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
         .nature = NATURE_JOLLY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_RELLOR] = {
         .species = SPECIES_RELLOR,
@@ -1737,7 +1737,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_HARD_STONE,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 170, 0),
         .nature = NATURE_SASSY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_BALTOY] = {
         .species = SPECIES_BALTOY,
@@ -1745,7 +1745,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHOICE_BAND,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 0, 0, 0),
         .nature = NATURE_DOCILE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_YAMASK] = {
         .species = SPECIES_YAMASK,
@@ -1753,7 +1753,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_BLUNDER_POLICY,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 0, 0, 0),
         .nature = NATURE_RELAXED
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_VOLTORB] = {
         .species = SPECIES_VOLTORB,
@@ -1761,7 +1761,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_NORMAL_GEM,
         .ev = TRAINER_PARTY_EVS(0, 170, 0, 170, 170, 0),
         .nature = NATURE_MILD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_KLINK] = {
         .species = SPECIES_KLINK,
@@ -1769,7 +1769,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WIDE_LENS,
         .ev = TRAINER_PARTY_EVS(102, 102, 102, 0, 102, 102),
         .nature = NATURE_QUIRKY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_TADBULB] = {
         .species = SPECIES_TADBULB,
@@ -1777,7 +1777,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_EVIOLITE,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_CALM
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MAGNEMITE] = {
         .species = SPECIES_MAGNEMITE,
@@ -1785,7 +1785,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METAL_COAT,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_SERIOUS
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SWIRLIX] = {
         .species = SPECIES_SWIRLIX,
@@ -1793,7 +1793,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FAIRY_FEATHER,
         .ev = TRAINER_PARTY_EVS(102, 0, 102, 102, 102, 102),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_SKIDDO] = {
         .species = SPECIES_SKIDDO,
@@ -1801,7 +1801,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LEFTOVERS,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_BOLD
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_KECLEON] = {
         .species = SPECIES_KECLEON,
@@ -1809,7 +1809,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SITRUS_BERRY,
         .ev = TRAINER_PARTY_EVS(170, 0, 0, 170, 170, 0),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DODUO] = {
         .species = SPECIES_DODUO,
@@ -1817,7 +1817,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_POWER_HERB,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
         .nature = NATURE_SERIOUS
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_KADABRA] = {
         .species = SPECIES_KADABRA,
@@ -1825,7 +1825,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_MUSCLE_BAND,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_DUNSPARCE] = {
         .species = SPECIES_DUNSPARCE,
@@ -1833,7 +1833,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_COVERT_CLOAK,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 0, 0, 0),
         .nature = NATURE_LAX
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MUNCHLAX] = {
         .species = SPECIES_MUNCHLAX,
@@ -1841,7 +1841,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_IAPAPA_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CHARCADET] = {
         .species = SPECIES_CHARCADET,
@@ -1849,7 +1849,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_CHARCOAL,
         .ev = TRAINER_PARTY_EVS(102, 102, 102, 102, 0, 102),
         .nature = NATURE_MODEST
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FLETCHLING] = {
         .species = SPECIES_FLETCHLING,
@@ -1857,7 +1857,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_FLYING_GEM,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 0, 128),
         .nature = NATURE_HASTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FLETCHINDER] = {
         .species = SPECIES_FLETCHINDER,
@@ -1865,7 +1865,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SALAC_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 128, 128, 252, 0, 0),
         .nature = NATURE_NAIVE
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_MIMIKYU] = {
         .species = SPECIES_MIMIKYU,
@@ -1873,7 +1873,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SPELL_TAG,
         .ev = TRAINER_PARTY_EVS(0, 252, 128, 128, 0, 0),
         .nature = NATURE_LONELY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_RHYHORN] = {
         .species = SPECIES_RHYHORN,
@@ -1881,7 +1881,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_ASSAULT_VEST,
         .ev = TRAINER_PARTY_EVS(102, 102, 102, 102, 0, 102),
         .nature = NATURE_IMPISH
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_PHANPY] = {
         .species = SPECIES_PHANPY,
@@ -1889,7 +1889,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_METRONOME,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 170, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_CUFANT] = {
         .species = SPECIES_CUFANT,
@@ -1897,7 +1897,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LIFE_ORB,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_RELAXED
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_GIMMIGHOUL] = {
         .species = SPECIES_GIMMIGHOUL,
@@ -1905,7 +1905,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_LIGHT_CLAY,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_SASSY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_JIGGLYPUFF] = {
         .species = SPECIES_JIGGLYPUFF,
@@ -1913,7 +1913,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_THROAT_SPRAY,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 170, 0),
         .nature = NATURE_QUIET
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_WAILMER] = {
         .species = SPECIES_WAILMER,
@@ -1921,7 +1921,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_POWER_HERB,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_FINIZEN] = {
         .species = SPECIES_FINIZEN,
@@ -1929,7 +1929,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WACAN_BERRY,
         .ev = TRAINER_PARTY_EVS(128, 128, 0, 128, 128, 0),
         .nature = NATURE_NAUGHTY
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_STARYU] = {
         .species = SPECIES_STARYU,
@@ -1937,7 +1937,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_SILK_SCARF,
         .ev = TRAINER_PARTY_EVS(0, 128, 0, 252, 128, 0),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_LUVDISC] = {
         .species = SPECIES_LUVDISC,
@@ -1945,7 +1945,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_WIDE_LENS,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 170, 170, 170),
         .nature = NATURE_TIMID
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [SLATEPORT_TENT_MON_HORSEA] = {
         .species = SPECIES_HORSEA,
@@ -1953,7 +1953,7 @@ const struct TrainerMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
         .heldItem = ITEM_DRAGON_FANG,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_MODEST,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     }
 };
 
@@ -3756,7 +3756,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
         .heldItem = ITEM_WISE_GLASSES,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_MODEST,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [FALLARBOR_TENT_MON_LOMBRE] = {
         .species = SPECIES_LOMBRE,
@@ -3764,7 +3764,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
         .heldItem = ITEM_MIRACLE_SEED,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
         .nature = NATURE_MODEST,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [FALLARBOR_TENT_MON_SEEDOT] = {
         .species = SPECIES_SEEDOT,
@@ -3870,7 +3870,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_ADAMANT,
-        .ball = BALL_POKE
+        //.ball = BALL_POKE
     },
     [FALLARBOR_TENT_MON_LYCANROC] = {
         .species = SPECIES_LYCANROC_MIDNIGHT,

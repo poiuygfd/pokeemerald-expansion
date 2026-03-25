@@ -3619,12 +3619,10 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_ANTIVIRUS:
-            if (!gSpecialStatuses[battler].switchInAbilityDone
-            && gBattleMons[battler].hp == gBattleMons[battler].maxHP)
+            if (shouldAbilityTrigger && gBattleMons[battler].hp == gBattleMons[battler].maxHP)
             {
-                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 gBattleMons[battler].volatiles.antivirus = TRUE;
-                BattleScriptPushCursorAndCallback(BattleScript_AntivirusActivates);
+                BattleScriptCall(BattleScript_AntivirusActivates);
                 effect++;
             }
             break;
@@ -4342,27 +4340,13 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
-        case ABILITY_PUNISHER:
-            if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
-             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && IsBattlerTurnDamaged(gBattlerTarget)
-             && IsBattlerAlive(gBattlerTarget)
-             && gBattleMons[gBattlerTarget].species != SPECIES_AVITORCH_ENRAGED)
-            {
-                TryBattleFormChange(battler, FORM_CHANGE_HIT_BY_MOVE);
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_PunisherActivates;
-                effect++;
-            }
-            break;
         case ABILITY_REACTIVE_FIRE:
-            if (!(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT)
-            && IsBattlerTurnDamaged(gBattlerTarget)
+            if (!gBattleStruct->unableToUseMove
+            && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
             && IsBattlerAlive(gBattlerTarget)
             && gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_SUPER_EFFECTIVE)
             {
-                gBattleMons[battler].volatiles.antivirus = TRUE;
-                BattleScriptPushCursor();
+                gBattleMons[battler].volatiles.reactiveFire = TRUE;
                 effect++;
             }
             break;
@@ -4469,6 +4453,9 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             break;
         case ABILITY_ICE_FACE:
             BattleScriptCall(BattleScript_IceFaceNullsDamage);
+            break;
+        case ABILITY_PUNISHER:
+            BattleScriptCall(BattleScript_PunisherActivates);
             break;
         default:
             BattleScriptCall(BattleScript_BattlerFormChange);
@@ -8937,12 +8924,12 @@ bool32 CanBattlerGetOrLoseItem(enum BattlerId fromBattler, enum BattlerId battle
     else if (holdEffect == HOLD_EFFECT_OGERPON_MASK && GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_OGERPON)
         return FALSE;
     else if (itemId == ITEM_CASTFORMITE && 
-         (species == SPECIES_CASTFORM_RAINY || species == SPECIES_CASTFORM_MEGA_RAINY
-         || species == SPECIES_CASTFORM_SUNNY || species == SPECIES_CASTFORM_MEGA_SUNNY
-         || species == SPECIES_CASTFORM_SNOWY || species == SPECIES_CASTFORM_MEGA_SNOWY))
+         (GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_RAINY || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_MEGA_RAINY
+         || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_SUNNY || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_MEGA_SUNNY
+         || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_SNOWY || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CASTFORM_MEGA_SNOWY))
         return FALSE;
     else if (itemId == ITEM_CHARIZARDITE_Z && 
-         (species == SPECIES_CHARIZARD_MEGA_Z || species == SPECIES_CHARIZARD_OMEGA_Z))
+         (GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CHARIZARD_MEGA_Z || GET_BASE_SPECIES_ID(fromSpecies) == SPECIES_CHARIZARD_OMEGA_Z))
         return FALSE;
     else
         return TRUE;

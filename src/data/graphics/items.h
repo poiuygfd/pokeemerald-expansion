@@ -2114,6 +2114,9 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon
 const u32 gItemIcon_CandyBag[] = INCBIN_U32("graphics/items/icons/candy_bag.4bpp.lz");
 const u16 gItemIconPalette_CandyBag[] = INCBIN_U16("graphics/items/icon_palettes/candy_bag.gbapal");
 
+const u32 gItemIcon_HiTechEarbuds[] = INCBIN_U32("graphics/items/icons/hi_tech_earbuds.4bpp.lz");
+const u16 gItemIconPalette_HiTechEarbuds[] = INCBIN_U16("graphics/items/icon_palettes/hi_tech_earbuds.gbapal");
+
 const u32 gItemIcon_OutfitBox[] = INCBIN_U32("graphics/items/icons/outfit_box.4bpp.lz");
 const u16 gItemIconPalette_OutfitBox[] = INCBIN_U16("graphics/items/icon_palettes/outfit_box.gbapal");
 
