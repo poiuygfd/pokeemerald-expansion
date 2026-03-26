@@ -182,10 +182,11 @@ void CreateBossMon(u16 species, enum Move move1, enum Move move2, enum Move move
     }
 
     ZeroEnemyPartyMons();
-    if (OW_SYNCHRONIZE_NATURE > GEN_3)
-        CreateMonWithNature(&gEnemyParty[0], species, setLevel, MAX_PER_STAT_IVS, PickWildMonNature());
-    else
-        CreateMon(&gEnemyParty[0], species, setLevel, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+    u32 personality = GetMonPersonality(species,
+        GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species),
+        GetSynchronizedNature(STATIC_WILDMON_ORIGIN, species),
+        RANDOM_UNOWN_LETTER);
+    CreateMonWithIVs(&gEnemyParty[0], species, setLevel, personality, OTID_STRUCT_PLAYER_ID, MAX_PER_STAT_IVS);
 
     SetMonMoveSlot(&gEnemyParty[0], move1, 0);
     SetMonMoveSlot(&gEnemyParty[0], move2, 1);
@@ -196,7 +197,6 @@ void CreateBossMon(u16 species, enum Move move1, enum Move move2, enum Move move
     {
         SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &ability);
     }
-
     if (item)
     {
         heldItem[0] = item;

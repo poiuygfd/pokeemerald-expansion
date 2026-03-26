@@ -763,7 +763,6 @@ BattleScript_EffectMagicalCheer::
 	setallytonexttarget EffectMagicalCheer_CheckAllyStats
 	goto BattleScript_ButItFailed
 EffectMagicalCheer_CheckAllyStats:
-	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPATK, MAX_STAT_STAGE, BattleScript_MagicalCheerWorks
 	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_MagicalCheerWorks
 	goto BattleScript_ButItFailed   @ ally at max spatk, spdef

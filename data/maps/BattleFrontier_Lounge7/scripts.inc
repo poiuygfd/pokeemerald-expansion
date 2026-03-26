@@ -562,6 +562,11 @@ BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection::
 	goto BattleFrontier_Lounge7_EventScript_ChooseNewMove
 	end
 
+BattleFrontier_Lounge7_EventScript_PartnerNotEnoughPoints::
+	msgbox BattleFrontier_Lounge7_Text_NotEnoughPointsYoungOne, MSGBOX_DEFAULT
+	goto BattleFrontier_Lounge7_EventScript_ChooseNewMove
+	end
+
 BattleFrontier_Lounge7_EventScript_TeachTutorMove::
 	goto_if_eq VAR_TEMP_FRONTIER_TUTOR_ID, 2, BattleFrontier_Lounge7_EventScript_PartnerTeachTutorMove
 	msgbox BattleFrontier_Lounge7_Text_TeachMoveToWhichMon, MSGBOX_DEFAULT
