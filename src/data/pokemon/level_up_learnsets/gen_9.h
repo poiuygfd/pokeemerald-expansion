@@ -22320,7 +22320,7 @@ static const struct LevelUpMove sMarinLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 5, MOVE_BABY_DOLL_EYES),
-    LEVEL_UP_MOVE( 8, MOVE_BUBBLE),
+    LEVEL_UP_MOVE( 8, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 11, MOVE_FAIRY_WIND),
     LEVEL_UP_MOVE( 15, MOVE_WATER_SPORT),
     LEVEL_UP_MOVE( 18, MOVE_BUBBLE_BEAM),
@@ -22341,6 +22341,7 @@ static const struct LevelUpMove sMarinLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sMissingNoLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 1, MOVE_SKY_ATTACK),
     LEVEL_UP_END
