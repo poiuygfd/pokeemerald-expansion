@@ -1254,6 +1254,22 @@ EventScript_RegionMap::
 	releaseall
 	end
 
+EventScript_EarbudsChooseMusic::
+	lockall
+	message gText_ChooseYourMusic
+	waitmessage
+	multichoice 21, 0, MULTI_MUSIC_SELECTION, FALSE
+	goto_if_eq VAR_RESULT, 5, EventScript_CancelMusicChoice
+	copyvar VAR_BATTLE_MUSIC_STATE, VAR_RESULT
+	msgbox gText_MusicChanged, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_CancelMusicChoice::
+	playse SE_PC_OFF
+	releaseall
+	end
+
 Common_EventScript_PlayBrineysBoatMusic::
 	setflag FLAG_DONT_TRANSITION_MUSIC
 	playbgm MUS_SAILING, FALSE
@@ -1395,6 +1411,13 @@ gText_PlayerHouseBootPC::
 
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
+
+gText_ChooseYourMusic::
+	.string "Which battle music would you like to\n"
+	.string "switch to?$"
+
+gText_MusicChanged::
+	.string "The music has been changed.$"
 
 gText_UnusedNicknameReceivedPokemon::
 	.string "Want to give a nickname to\n"

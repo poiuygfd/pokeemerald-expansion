@@ -6123,18 +6123,46 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_WORLD_CHAMP:
             return MUS_BW_VS_WCS_CHAMPION;
         default:
-            if (GetCurrentRegion() == REGION_KANTO)
+            switch (VarGet(VAR_BATTLE_MUSIC_STATE))
+            {
+            case 0:
                 return MUS_RG_VS_TRAINER;
-            else
+            case 1:
+                return MUS_HG_VS_TRAINER;
+            case 2:
                 return MUS_VS_TRAINER;
+            case 3:
+                return MUS_DP_VS_TRAINER;
+            case 4:
+                return MUS_BW_VS_TRAINER;
+            default:
+                if (GetCurrentRegion() == REGION_KANTO)
+                    return MUS_RG_VS_TRAINER;
+                else
+                    return MUS_VS_TRAINER;
+            }
         }
     }
     else
     {
-        if (GetCurrentRegion() == REGION_KANTO)
+        switch (VarGet(VAR_BATTLE_MUSIC_STATE))
+        {
+        case 0:
             return MUS_RG_VS_WILD;
-        else
+        case 1:
+            return MUS_HG_VS_WILD;
+        case 2:
             return MUS_VS_WILD;
+        case 3:
+            return MUS_DP_VS_WILD;
+        case 4:
+            return MUS_BW_VS_WILD;
+        default:
+            if (GetCurrentRegion() == REGION_KANTO)
+                return MUS_RG_VS_WILD;
+            else
+                return MUS_VS_WILD;
+        }
     }
 }
 

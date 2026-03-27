@@ -16051,7 +16051,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_HI_TECH_EARBUDS] =
     {
-        .name = ITEM_NAME("HiTech Earbuds"),
+        .name = ITEM_NAME("Hi-Tech Earbuds"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -16060,7 +16060,7 @@ const struct ItemInfo gItemsInfo[] =
              "during battles."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_HiTechEarbuds,
 	    .iconPic = gItemIcon_HiTechEarbuds,
 	    .iconPalette = gItemIconPalette_HiTechEarbuds,
     },

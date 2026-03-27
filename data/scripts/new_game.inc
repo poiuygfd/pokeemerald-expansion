@@ -300,6 +300,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CHARIZARD_FAN
 	setflag FLAG_HIDE_MELOETTA
 	setflag FLAG_SYS_B_DASH
+	setvar VAR_BATTLE_MUSIC_STATE, 2
 	call EventScript_ResetAllBerries
 	end
 

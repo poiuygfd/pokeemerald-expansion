@@ -2194,6 +2194,11 @@ static const struct FlyLocation sFlyLocations[] =
     },
     {
         .regionMapType = REGION_MAP_HOENN,
+        .mapsec = MAPSEC_TUFFNOOK_TOWN,
+        .flag = FLAG_VISITED_TUFFNOOK_TOWN,
+    },
+    {
+        .regionMapType = REGION_MAP_HOENN,
         .mapsec = MAPSEC_PETALBURG_CITY,
         .flag = FLAG_VISITED_PETALBURG_CITY,
     },

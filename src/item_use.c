@@ -1665,6 +1665,28 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     }
 }
 
+static void ItemUseOnFieldCB_HiTechEarbuds(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_EarbudsChooseMusic);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_HiTechEarbuds(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_HiTechEarbuds;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else
+    {
+        gTasks[taskId].func = ItemUseOnFieldCB_HiTechEarbuds;
+    }
+}
+
 void ItemUseOutOfBattle_OutfitBox(u8 taskId)
 {
     if (MenuHelpers_IsLinkActive() == TRUE)

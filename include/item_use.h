@@ -39,6 +39,7 @@ void ItemUseOutOfBattle_Honey(u8 taskId);
 void ItemUseOutOfBattle_CannotUse(u8 taskId);
 void ItemUseOutOfBattle_ExpShare(u8 taskId);
 void ItemUseOutOfBattle_CostumeCase(u8 taskId);
+void ItemUseOutOfBattle_HiTechEarbuds(u8 taskId);
 void ItemUseOutOfBattle_OutfitBox(u8 taskId);
 void ItemUseOutOfBattle_Hatchet(u8 taskId);
 void ItemUseOutOfBattle_BrineysKeys(u8 taskId);

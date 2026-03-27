@@ -70,20 +70,19 @@ RustboroCity_DevonCorp_2F_EventScript_ReceivedAbilityCapsule::
 	release
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_SlackerScientist::
+RustboroCity_DevonCorp_2F_EventScript_EarbudsScientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_RED_CARD, RustboroCity_DevonCorp_2F_EventScript_ReceivedRedCard
-	msgbox RustboroCity_DevonCorp_2F_Text_PleaseDontTellMyBoss, MSGBOX_DEFAULT
-	giveitem ITEM_RED_CARD
+	goto_if_set FLAG_RECEIVED_HI_TECH_EARBUDS, RustboroCity_DevonCorp_2F_EventScript_ReceivedEarbuds
+	msgbox RustboroCity_DevonCorp_2F_Text_GiveHiTechEarbuds, MSGBOX_DEFAULT
+	giveitem ITEM_HI_TECH_EARBUDS
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_RED_CARD
-	msgbox RustboroCity_DevonCorp_2F_Text_ExplainRedCard, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_HI_TECH_EARBUDS
 	release
 	end
 
-RustboroCity_DevonCorp_2F_EventScript_ReceivedRedCard::
-	msgbox RustboroCity_DevonCorp_2F_Text_RecievedRedCard, MSGBOX_DEFAULT
+RustboroCity_DevonCorp_2F_EventScript_ReceivedEarbuds::
+	msgbox RustboroCity_DevonCorp_2F_Text_RecievedEarbuds, MSGBOX_DEFAULT
 	release
 	end
 
@@ -354,28 +353,21 @@ RustboroCity_DevonCorp_2F_Text_RecievedCapsule:
 	.string "I've heard that we've sent a batch\n"
 	.string "to the DEPARTMENT STORE in LILYCOVE.$"
 
-RustboroCity_DevonCorp_2F_Text_PleaseDontTellMyBoss:
-	.string "Huh?!\n"
-	.string "No, BOSS, I swear I wasn't…\p"
-	.string "Wait, you're not MR. STONE!\n"
-	.string "Oh, thank goodness…\p"
-	.string "Please, uh, don't tell my BOSS\n"
-	.string "that I was looking at funny pictures\l"
-	.string "on my phone instead of working…\p"
-	.string "In exchange, you can, uh…\n"
-	.string "You can have… this!$"
+RustboroCity_DevonCorp_2F_Text_GiveHiTechEarbuds:
+	.string "I've been at work on a pair of\n"
+	.string "ultra high quality earbuds…\p"
+	.string "And they're coming along great!\p"
+	.string "Put these on and you'll be able to\n"
+	.string "experience a new generation of music!\p"
+	.string "Here, you can have a pair for all\n"
+	.string "you've done to help out DEVON CORP!$"
 
-RustboroCity_DevonCorp_2F_Text_ExplainRedCard:
-	.string "N-no, I didn't get that as a\n"
-	.string "punishment for slacking off before!\n"
-	.string "That's a hold item for your POKéMON\n"
-	.string "that forces any attacker to switch out.\p"
-	.string "I'm sure a young TRAINER like you will\n"
-	.string "find much more use for it than me!$"
-
-RustboroCity_DevonCorp_2F_Text_RecievedRedCard:
-	.string "I swear I'll do some work!\n"
-	.string "So please don't rat me out!$"
+RustboroCity_DevonCorp_2F_Text_RecievedEarbuds:
+	.string "I love getting to listen to music\n"
+	.string "all day for my job!\p"
+	.string "Now I just need to keep thinking of\n"
+	.string "things to add before they move me\l"
+	.string "to a new project…$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "I've been trying to develop a device\n"

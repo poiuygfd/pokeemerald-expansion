@@ -844,6 +844,16 @@ static const struct MenuAction MultichoiceList_NotebookPages[] =
     {COMPOUND_STRING("I'm done")},
 };
 
+static const struct MenuAction MultichoiceList_MusicSelection[] =
+{
+    {COMPOUND_STRING("KANTO")},
+    {COMPOUND_STRING("JOHTO")},
+    {COMPOUND_STRING("HOENN")},
+    {COMPOUND_STRING("SINNOH")},
+    {COMPOUND_STRING("UNOVA")},
+    {gText_Exit},
+};
+
 static const struct MenuAction sMultichoiceList_BikeShop[] = {
     { COMPOUND_STRING("BICYCLE{CLEAR_TO 0x49}{FONT_SMALL}¥1,000,000") },
     { COMPOUND_STRING("NO THANKS") }
@@ -1291,6 +1301,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_DEPTHS_EXPLAIN_MODE]        = MULTICHOICE(MultichoiceList_DepthsExplainMode),
     [MULTI_PASS_CHOICE]                = MULTICHOICE(MultichoiceList_PassChoice),
     [MULTI_NOTEBOOK_PAGES]             = MULTICHOICE(MultichoiceList_NotebookPages),
+    [MULTI_MUSIC_SELECTION]            = MULTICHOICE(MultichoiceList_MusicSelection),
     [MULTI_BIKE_SHOP]                  = MULTICHOICE(sMultichoiceList_BikeShop),
     [MULTI_EEVEELUTIONS]               = MULTICHOICE(sMultichoiceList_Eeveelutions),
     [MULTI_ISLAND_23]                  = MULTICHOICE(sMultichoiceList_Island23),
