@@ -4,9 +4,6 @@
 DOUBLE_BATTLE_TEST("Spread Moves: Ability and Item effects activate correctly after a multi target move")
 {
     GIVEN {
-        ASSUME(gItemsInfo[ITEM_LUM_BERRY].holdEffect == HOLD_EFFECT_CURE_STATUS);
-        ASSUME(gItemsInfo[ITEM_COVERT_CLOAK].holdEffect == HOLD_EFFECT_COVERT_CLOAK);
-        ASSUME(gItemsInfo[ITEM_EJECT_BUTTON].holdEffect == HOLD_EFFECT_EJECT_BUTTON);
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_LUM_BERRY); }
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_COVERT_CLOAK); }
         OPPONENT(SPECIES_GOLISOPOD) { Ability(ABILITY_EMERGENCY_EXIT); MaxHP(260); HP(131); }
@@ -60,8 +57,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: A spread move attack will activate both resist
     s16 opponentRightDmg[2];
 
     GIVEN {
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffect == HOLD_EFFECT_RESIST_BERRY);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffectParam == TYPE_NORMAL);
         PLAYER(SPECIES_GARDEVOIR);
         PLAYER(SPECIES_RALTS);
         OPPONENT(SPECIES_RAICHU) { Item(ITEM_CHILAN_BERRY); }
@@ -94,8 +89,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: If a spread move attack will activate a resist
     s16 opponentRightDmg[2];
 
     GIVEN {
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffect == HOLD_EFFECT_RESIST_BERRY);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffectParam == TYPE_NORMAL);
         PLAYER(SPECIES_GARDEVOIR);
         PLAYER(SPECIES_RALTS);
         OPPONENT(SPECIES_RAICHU)
@@ -183,7 +176,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: AOE move vs Disguise, Volt Absorb (right) and 
         ASSUME(GetMoveTarget(MOVE_DISCHARGE) == TARGET_FOES_AND_ALLY);
         ASSUME(GetMoveType(MOVE_DISCHARGE) == TYPE_ELECTRIC);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_MIMIKYU) { Ability(ABILITY_DISGUISE); }
+        PLAYER(SPECIES_MIMIKYU);
         OPPONENT(SPECIES_RAICHU) { Ability(ABILITY_LIGHTNING_ROD); }
         OPPONENT(SPECIES_LANTURN) { Ability(ABILITY_VOLT_ABSORB); HP(1); }
     } WHEN {
@@ -203,7 +196,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: AOE move vs Disguise, Volt Absorb (left) and L
         ASSUME(GetMoveTarget(MOVE_DISCHARGE) == TARGET_FOES_AND_ALLY);
         ASSUME(GetMoveType(MOVE_DISCHARGE) == TYPE_ELECTRIC);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_MIMIKYU) { Ability(ABILITY_DISGUISE); }
+        PLAYER(SPECIES_MIMIKYU);
         OPPONENT(SPECIES_LANTURN) { Ability(ABILITY_VOLT_ABSORB); HP(1); }
         OPPONENT(SPECIES_RAICHU) { Ability(ABILITY_LIGHTNING_ROD); }
     } WHEN {
@@ -218,32 +211,20 @@ DOUBLE_BATTLE_TEST("Spread Moves: AOE move vs Disguise, Volt Absorb (left) and L
 
 DOUBLE_BATTLE_TEST("Spread Moves: AOE move vs Eiscue and Mimikyu (Based on vanilla games)")
 {
-    s16 disguiseDamage;
-
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_EARTHQUAKE) == TARGET_FOES_AND_ALLY);
         ASSUME(GetMoveCategory(MOVE_EARTHQUAKE) == DAMAGE_CATEGORY_PHYSICAL);
         PLAYER(SPECIES_WOBBUFFET);
-        PLAYER(SPECIES_EISCUE) { Ability(ABILITY_ICE_FACE); }
-        OPPONENT(SPECIES_MIMIKYU) { Ability(ABILITY_DISGUISE); }
-        OPPONENT(SPECIES_EISCUE) { Ability(ABILITY_ICE_FACE); }
+        PLAYER(SPECIES_EISCUE);
+        OPPONENT(SPECIES_MIMIKYU);
+        OPPONENT(SPECIES_EISCUE);
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_EARTHQUAKE); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, playerLeft);
         ABILITY_POPUP(opponentLeft, ABILITY_DISGUISE);
-        HP_BAR(opponentLeft, captureDamage: &disguiseDamage);
         ABILITY_POPUP(playerRight, ABILITY_ICE_FACE);
         ABILITY_POPUP(opponentRight, ABILITY_ICE_FACE);
-        NONE_OF {
-            HP_BAR(playerRight);
-            HP_BAR(opponentRight);
-        }        
-    } THEN {
-        EXPECT_EQ(disguiseDamage, opponentLeft->maxHP / 8);
-        EXPECT_EQ(opponentLeft->species, SPECIES_MIMIKYU_BUSTED);
-        EXPECT_EQ(playerRight->species, SPECIES_EISCUE_NOICE);
-        EXPECT_EQ(opponentRight->species, SPECIES_EISCUE_NOICE);
     }
 }
 
@@ -251,9 +232,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: Spread move, Gem Boosted, vs Resist Berries")
 {
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_HYPER_VOICE) == TARGET_BOTH);
-        ASSUME(gItemsInfo[ITEM_NORMAL_GEM].holdEffect == HOLD_EFFECT_GEMS);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffect == HOLD_EFFECT_RESIST_BERRY);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffectParam == TYPE_NORMAL);
         PLAYER(SPECIES_WOBBUFFET) { Speed(40); Item(ITEM_NORMAL_GEM); }
         PLAYER(SPECIES_WYNAUT) { Speed(30); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(20); Item(ITEM_CHILAN_BERRY); }
@@ -274,9 +252,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: Explosion, Gem Boosted, vs Resist Berries")
 {
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_EXPLOSION) == TARGET_FOES_AND_ALLY);
-        ASSUME(gItemsInfo[ITEM_NORMAL_GEM].holdEffect == HOLD_EFFECT_GEMS);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffect == HOLD_EFFECT_RESIST_BERRY);
-        ASSUME(gItemsInfo[ITEM_CHILAN_BERRY].holdEffectParam == TYPE_NORMAL);
         PLAYER(SPECIES_WOBBUFFET) { Speed(40); Item(ITEM_NORMAL_GEM); }
         PLAYER(SPECIES_MISDREAVUS) { Speed(30); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(20); Item(ITEM_CHILAN_BERRY); }
@@ -299,11 +274,10 @@ DOUBLE_BATTLE_TEST("Spread Moves: Spread move vs Eiscue and Mimikyu with 1 Eject
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_RAZOR_LEAF) == TARGET_BOTH);
         ASSUME(GetMoveCategory(MOVE_RAZOR_LEAF) == DAMAGE_CATEGORY_PHYSICAL);
-        ASSUME(gItemsInfo[ITEM_EJECT_BUTTON].holdEffect == HOLD_EFFECT_EJECT_BUTTON);
         PLAYER(SPECIES_WOBBUFFET) { Speed(40); }
         PLAYER(SPECIES_WYNAUT) { Speed(30); }
-        OPPONENT(SPECIES_MIMIKYU) { Speed(20); Ability(ABILITY_DISGUISE); Item(ITEM_EJECT_BUTTON); }
-        OPPONENT(SPECIES_EISCUE) { Speed(10); Ability(ABILITY_ICE_FACE); }
+        OPPONENT(SPECIES_MIMIKYU) { Speed(20); Item(ITEM_EJECT_BUTTON); }
+        OPPONENT(SPECIES_EISCUE) { Speed(10); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_RAZOR_LEAF); SEND_OUT(opponentLeft, 2); }
@@ -465,7 +439,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: Unless move hits every target user will not in
 DOUBLE_BATTLE_TEST("Spread Moves: Focus Sash activates correctly")
 {
     GIVEN {
-        ASSUME(gItemsInfo[ITEM_FOCUS_SASH].holdEffect == HOLD_EFFECT_FOCUS_SASH);
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WYNAUT) { HP(2); MaxHP(2); Item(ITEM_FOCUS_SASH); }
         OPPONENT(SPECIES_WOBBUFFET) { HP(2); MaxHP(2); Item(ITEM_FOCUS_SASH); }
@@ -488,7 +461,6 @@ DOUBLE_BATTLE_TEST("Spread Moves: AOE ground type move vs Levitate and Air Ballo
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_EARTHQUAKE) == TARGET_FOES_AND_ALLY);
         ASSUME(GetMoveCategory(MOVE_EARTHQUAKE) == DAMAGE_CATEGORY_PHYSICAL);
-        ASSUME(gItemsInfo[ITEM_AIR_BALLOON].holdEffect == HOLD_EFFECT_AIR_BALLOON);
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_FLYGON) { Ability(ABILITY_LEVITATE); }

@@ -144,19 +144,15 @@ static s32 (*const sBattleAiFuncTable[])(enum BattlerId, enum BattlerId, enum Mo
 void AIDebugTimerStart()
 {
     // Set delay timer to count how long it takes for AI to choose action/move
-    if ((TESTING && gBattleTurnCounter == 0) || DEBUG_AI_DELAY_TIMER)
-        gBattleStruct->aiDelayTimer = gMain.vblankCounter1;
-    if (!TESTING && DEBUG_AI_DELAY_TIMER)
-        CycleCountStart();
+    gBattleStruct->aiDelayTimer = gMain.vblankCounter1;
+    CycleCountStart();
 }
 
 void AIDebugTimerEnd()
 {
     // We add to existing to compound multiple calls
-    if ((TESTING && gBattleTurnCounter == 0) || DEBUG_AI_DELAY_TIMER)
-        gBattleStruct->aiDelayFrames += gMain.vblankCounter1 - gBattleStruct->aiDelayTimer;
-    if (!TESTING && DEBUG_AI_DELAY_TIMER)
-        gBattleStruct->aiDelayCycles += CycleCountEnd();
+    gBattleStruct->aiDelayFrames += gMain.vblankCounter1 - gBattleStruct->aiDelayTimer;
+    gBattleStruct->aiDelayCycles += CycleCountEnd();
 }
 
 void BattleAI_SetupItems(void)
@@ -388,7 +384,8 @@ void ComputeBattlerDecisions(enum BattlerId battler)
 
         gAiLogicData->aiCalcInProgress = TRUE;
 
-        AIDebugTimerStart();
+        if (DEBUG_AI_DELAY_TIMER)
+            AIDebugTimerStart();
 
         // Setup battler and prediction data
         BattleAI_SetupAIData(0xF, battler);
@@ -409,7 +406,8 @@ void ComputeBattlerDecisions(enum BattlerId battler)
             BattlerChooseNonMoveAction();
         ModifySwitchAfterMoveScoring(battler);
 
-        AIDebugTimerEnd();
+        if (DEBUG_AI_DELAY_TIMER)
+            AIDebugTimerEnd();
 
         gAiLogicData->aiCalcInProgress = FALSE;
     }
@@ -731,7 +729,8 @@ void SetAiLogicDataForTurn(struct AiLogicData *aiData)
 
        gAiLogicData->aiCalcInProgress = TRUE;
     
-    AIDebugTimerStart();
+    if (DEBUG_AI_DELAY_TIMER)
+        AIDebugTimerStart();
 
     aiData->weatherHasEffect = HasWeatherEffect();
     weather = AI_GetWeather();
@@ -768,7 +767,8 @@ void SetAiLogicDataForTurn(struct AiLogicData *aiData)
         aiData->predictingMove = RandomPercentage(RNG_AI_PREDICT_MOVE, PREDICT_MOVE_CHANCE);
     }
 
-    AIDebugTimerEnd();
+    if (DEBUG_AI_DELAY_TIMER)
+        AIDebugTimerEnd();
         
     gAiLogicData->aiCalcInProgress = FALSE;
 }
@@ -2588,9 +2588,6 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
         break;
     case EFFECT_YAWN:
         if (gBattleMons[battlerDef].volatiles.yawn)
-            ADJUST_SCORE(-10);
-        else if ((aiData->holdEffects[battlerDef] == HOLD_EFFECT_FLAME_ORB && CanBeBurned(battlerDef, battlerDef, abilityDef))
-              || (aiData->holdEffects[battlerDef] == HOLD_EFFECT_TOXIC_ORB && CanBePoisoned(battlerDef, battlerDef, abilityDef, abilityDef)))
             ADJUST_SCORE(-10);
         else if (!AI_CanPutToSleep(battlerAtk, battlerDef, aiData->abilities[battlerDef], move, aiData->partnerMove))
             ADJUST_SCORE(-10);

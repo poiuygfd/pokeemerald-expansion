@@ -1588,8 +1588,6 @@ static enum CancelerResult CancelerCharging(struct BattleContext *ctx)
             gBattleScripting.animTurn = 1;
             gBattleScripting.animTargetsHit = 0;
             gProtectStructs[ctx->battlerAtk].chargingTurn = FALSE;
-            if (gBattleMoveEffects[GetMoveEffect(ctx->move)].semiInvulnerableEffect)
-                gBattleMons[ctx->battlerAtk].volatiles.semiInvulnerable = STATE_NONE;
             result = CANCELER_RESULT_SUCCESS;
         }
         else if (ctx->holdEffectAtk == HOLD_EFFECT_POWER_HERB)
@@ -1597,8 +1595,6 @@ static enum CancelerResult CancelerCharging(struct BattleContext *ctx)
             gBattleScripting.animTurn = 1;
             gBattleScripting.animTargetsHit = 0;
             gProtectStructs[ctx->battlerAtk].chargingTurn = FALSE;
-            if (gBattleMoveEffects[GetMoveEffect(ctx->move)].semiInvulnerableEffect)
-                gBattleMons[ctx->battlerAtk].volatiles.semiInvulnerable = STATE_NONE;
             gLastUsedItem = gBattleMons[ctx->battlerAtk].item;
             BattleScriptCall(BattleScript_PowerHerbActivation);
             result = CANCELER_RESULT_BREAK;
@@ -1863,16 +1859,14 @@ static enum CancelerResult CancelerNotFullyProtected(struct BattleContext *ctx)
 
 static bool32 IsMoveParentalBondAffected(struct BattleContext *ctx)
 {
-    enum BattleMoveEffects effect = GetMoveEffect(ctx->move);
-
     if (ctx->abilityAtk != ABILITY_PARENTAL_BOND
      || gBattleStruct->numSpreadTargets > 1
      || IsMoveParentalBondBanned(ctx->move)
      || GetMoveCategory(ctx->move) == DAMAGE_CATEGORY_STATUS
-     || gBattleMoveEffects[effect].twoTurnEffect
-     || effect == EFFECT_OHKO
+     || GetMoveEffect(ctx->move) == EFFECT_SEMI_INVULNERABLE
+     || GetMoveEffect(ctx->move) == EFFECT_TWO_TURNS_ATTACK
      || GetActiveGimmick(ctx->battlerAtk) == GIMMICK_Z_MOVE
-     || (effect == EFFECT_PRESENT && gBattleStruct->presentBasePower == 0)
+     || (GetMoveEffect(ctx->move) == EFFECT_PRESENT && gBattleStruct->presentBasePower == 0)
      || ctx->move == MOVE_STRUGGLE)
         return FALSE;
     return TRUE;
