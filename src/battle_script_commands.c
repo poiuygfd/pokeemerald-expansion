@@ -939,7 +939,7 @@ static const struct PickupItem sPickupTable[] =
 bool32 ProteanTryChangeType(enum BattlerId battler, enum Ability ability, enum Move move, enum Type moveType)
 {
       if ((ability == ABILITY_PROTEAN || ability == ABILITY_LIBERO)
-         && !gBattleMons[gBattlerAttacker].volatiles.usedProteanLibero
+         && !gBattleMons[battler].volatiles.usedProteanLibero
          && !gBattleStruct->bouncedMoveIsUsed
          && (gBattleMons[battler].types[0] != moveType || gBattleMons[battler].types[1] != moveType
              || (gBattleMons[battler].types[2] != moveType && gBattleMons[battler].types[2] != TYPE_MYSTERY))
@@ -1011,8 +1011,8 @@ static bool32 ShouldSkipToMoveEnd(void)
 static void Cmd_attackcanceler(void)
 {
     CMD_ARGS();
-    assertf(gBattlerAttacker < gBattlersCount, "invalid gBattlerAttacker: %d\nmove: %S", gBattlerAttacker, GetMoveName(gCurrentMove));
-    assertf(gBattlerTarget < gBattlersCount, "invalid gBattlerTarget: %d\nmove: %S", gBattlerTarget, GetMoveName(gCurrentMove));
+    assertf(gBattlerAttacker < MAX_BATTLERS_COUNT, "invalid gBattlerAttacker: %d\nmove: %S", gBattlerAttacker, GetMoveName(gCurrentMove));
+    assertf(gBattlerTarget < MAX_BATTLERS_COUNT, "invalid gBattlerTarget: %d\nmove: %S", gBattlerTarget, GetMoveName(gCurrentMove));
 
     if (gBattleStruct->battlerState[gBattlerAttacker].usedEjectItem)
     {
@@ -2906,6 +2906,7 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
         break;
     case MOVE_EFFECT_CORE_ENFORCER:
         if (HasBattlerActedThisTurn(gBattlerTarget)
+         && gBattleStruct->battlerState[gBattlerTarget].isFirstTurn != 2
          && !NoAliveMonsForEitherParty())
         {
             BattleScriptPush(battleScript);
@@ -5158,8 +5159,8 @@ static inline bool32 IsProtectivePadsProtected(enum BattlerId battler, enum Hold
 static void Cmd_moveend(void)
 {
     CMD_ARGS(u8 endMode, u8 endState);
-    assertf(gBattlerAttacker < gBattlersCount, "invalid gBattlerAttacker: %d\nmove: %S", gBattlerAttacker, GetMoveName(gCurrentMove));
-    assertf(gBattlerTarget < gBattlersCount, "invalid gBattlerTarget: %d\nmove: %S", gBattlerTarget, GetMoveName(gCurrentMove));
+    assertf(gBattlerAttacker < MAX_BATTLERS_COUNT, "invalid gBattlerAttacker: %d\nmove: %S", gBattlerAttacker, GetMoveName(gCurrentMove));
+    assertf(gBattlerTarget < MAX_BATTLERS_COUNT, "invalid gBattlerTarget: %d\nmove: %S", gBattlerTarget, GetMoveName(gCurrentMove));
 
     enum MoveEndResult result = DoMoveEnd(cmd->endMode, cmd->endState);
 
@@ -7990,7 +7991,7 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
     if (gBattleMons[battler].statStages[statId] > MAX_STAT_STAGE)
         gBattleMons[battler].statStages[statId] = MAX_STAT_STAGE;
 
-    if (ShouldDefiantCompetitiveActivate(battler, battlerAbility))
+    if (statValue <= -1 && ShouldDefiantCompetitiveActivate(battler, battlerAbility))
         stats = 0; // use single stat animations when Defiant/Competitive activate
     else
         stats &= ~(1u << statId);
@@ -9715,8 +9716,7 @@ static void Cmd_trysethelpinghand(void)
 
     gBattlerTarget = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
 
-    if (!(gAbsentBattlerFlags & (1u << gBattlerTarget))
-     && !HasBattlerActedThisTurn(gBattlerTarget))
+    if (IsBattlerAlive(gBattlerTarget) && !HasBattlerActedThisTurn(gBattlerTarget))
     {
         gProtectStructs[gBattlerTarget].helpingHand++;
         gBattlescriptCurrInstr = cmd->nextInstr;
@@ -10430,6 +10430,7 @@ static void Cmd_tryrecycleitem(void)
         gLastUsedItem = *usedHeldItem;
         *usedHeldItem = ITEM_NONE;
         gBattleMons[gBattlerAttacker].item = gLastUsedItem;
+        gBattleMons[gBattlerAttacker].volatiles.unburdenActive = FALSE;
 
         BtlController_EmitSetMonData(gBattlerAttacker, B_COMM_TO_CONTROLLER, REQUEST_HELDITEM_BATTLE, 0, sizeof(gBattleMons[gBattlerAttacker].item), &gBattleMons[gBattlerAttacker].item);
         MarkBattlerForControllerExec(gBattlerAttacker);
@@ -13188,6 +13189,7 @@ void BS_TryRecycleBerry(void)
         gLastUsedItem = *usedHeldItem;
         *usedHeldItem = ITEM_NONE;
         gBattleMons[gBattlerTarget].item = gLastUsedItem;
+        gBattleMons[gBattlerTarget].volatiles.unburdenActive = FALSE;
 
         BtlController_EmitSetMonData(gBattlerTarget, B_COMM_TO_CONTROLLER, REQUEST_HELDITEM_BATTLE, 0, sizeof(gBattleMons[gBattlerTarget].item), &gBattleMons[gBattlerTarget].item);
         MarkBattlerForControllerExec(gBattlerTarget);
