@@ -13,7 +13,7 @@ Route114_FossilManiacsTunnel_EventScript_MoveFossilManiac::
 	return
 
 Route114_FossilManiacsTunnel_OnLoad:
-	call_if_unset FLAG_SYS_GAME_CLEAR, Route114_FossilManiacsTunnel_EventScript_CloseDesertUnderpass
+	call_if_unset FLAG_BADGE05_GET, Route114_FossilManiacsTunnel_EventScript_CloseDesertUnderpass
 	end
 
 Route114_FossilManiacsTunnel_EventScript_CloseDesertUnderpass::

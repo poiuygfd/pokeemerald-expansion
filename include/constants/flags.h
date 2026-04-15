@@ -1233,11 +1233,11 @@
 #define FLAG_ITEM_ROUTE_110_MANECTITE                               0x493 // Manectric Mega Stone
 #define FLAG_ITEM_ROUTE_111_GALLADITE                               0x494 // Gallade Mega Stone
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_ITEM_MT_PYRE_BANETTITE                                 0x496 // Banette Mega Stone
+#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
-#define FLAG_ITEM_ROUTE_114_ALTARIANITE                             0x498 // Altaria Mega Stone
-#define FLAG_ITEM_METEOR_FALLS_AERODACTYLITE                        0x499 // Aerodactyl Mega Stone
-#define FLAG_ITEM_SAFARI_ZONE_KANGASKHANITE                         0x49A // Kangaskhan Mega Stone
+#define FLAG_ITEM_METEOR_FALLS_ALTARIANITE                          0x498 // Altaria Mega Stone
+#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
+#define FLAG_ITEM_SAFARI_ZONE_STARAPTITE                            0x49A // Staraptor Mega Stone
 #define FLAG_ITEM_MIRAGE_TOWER_AUSPICIOUS_ARMOR                     0x49B // Armarouge Evo Item
 #define FLAG_ITEM_MIRAGE_TOWER_MALICIOUS_ARMOR                      0x49C // Ceruledge Evo Item
 #define FLAG_RECEIVED_ROTOM_CATALOGUE                               0x49D // Rotom Form Change Item
@@ -1259,8 +1259,8 @@
 #define FLAG_ITEM_CAVE_OF_ORIGIN_REAPER_CLOTH                       0x4AD // Cave of Origin Reaper Cloth
 #define FLAG_RECEIVED_RAZOR_CLAW                                    0x4AE // Razor Claw Gift
 #define FLAG_ITEM_METEOR_FALLS_METAL_ALLOY                          0x4AF // Meteor Falls Metal Alloy
-#define FLAG_ITEM_DESERT_UNDERPASS_METAL_COAT                       0x4B0 // Desert Underpass Metal Coat
-#define FLAG_ITEM_DESERT_UNDERPASS_BLACK_AUGURITE                   0x4B1 // Desert Underpass Black Augurite
+#define FLAG_ITEM_DESERT_UNDERPASS_EXCADRITE                        0x4B0 // Desert Underpass Excadrite
+#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
 #define FLAG_ITEM_ALTERING_CAVE_PEAT_BLOCK                          0x4B2 // Altering Cave Peat Block
 #define FLAG_RECEIVED_LINKING_CORD                                  0x4B3 // Linking Cord Gift
 #define FLAG_RECEIVED_FLING                                         0x4B4 // Fling TM Gift

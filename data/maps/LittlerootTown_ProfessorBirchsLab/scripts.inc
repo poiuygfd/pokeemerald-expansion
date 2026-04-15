@@ -232,7 +232,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveFennekin::
 	bufferspeciesname STR_VAR_1, SPECIES_FENNEKIN
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FENNEKIN
-	givemon SPECIES_FENNEKIN, 5
+	givemon SPECIES_FENNEKIN, 5, ITEM_DELPHOXITE
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendFennekinToPC
 	hidemonpic
@@ -277,7 +277,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFennekin::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveFroakie::
 	bufferspeciesname STR_VAR_1, SPECIES_FROAKIE
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FROAKIE
-	givemon SPECIES_FROAKIE, 5
+	givemon SPECIES_FROAKIE, 5, ITEM_GRENINJITE
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendFroakieToPC
 	hidemonpic
@@ -322,7 +322,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedFroakie::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveChespin::
 	bufferspeciesname STR_VAR_1, SPECIES_CHESPIN
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHESPIN
-	givemon SPECIES_CHESPIN, 5
+	givemon SPECIES_CHESPIN, 5, ITEM_CHESNAUGHTITE
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendChespinToPC
 	hidemonpic
