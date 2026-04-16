@@ -1,5 +1,19 @@
 VerdanturfTown_House_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_House_OnTransition
 	.byte 0
+
+VerdanturfTown_House_OnTransition:
+	call VerdanturfTown_House_EventScript_ShowOrHideBodyPressMan
+	end
+
+VerdanturfTown_House_EventScript_ShowOrHideBodyPressMan::
+	goto_if_unset FLAG_BADGE05_GET, VerdanturfTown_House_EventScript_HideBodyPressMan
+	clearflag FLAG_HIDE_BODY_PRESS_MAN
+	return
+
+VerdanturfTown_House_EventScript_HideBodyPressMan::
+	setflag FLAG_HIDE_BODY_PRESS_MAN
+	return
 
 VerdanturfTown_House_EventScript_Woman1::
 	msgbox VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague, MSGBOX_NPC

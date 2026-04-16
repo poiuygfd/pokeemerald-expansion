@@ -709,7 +709,7 @@
 #define FLAG_DEFEATED_WOLFE_GLICK  0x28D // Defeated the World Champ
 #define FLAG_TRADED_WOLFE_INCINEROAR  0x28E // Completed Wolfe's Incineroar trade
 #define FLAG_TRADED_WALLACE_FEEBAS  0x28F // Completed Wallace's Feebas trade
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
+#define FLAG_HIDE_BODY_PRESS_MAN  0x290 // Body Press Giver is hidden until the player has 5 badges
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
 #define FLAG_UNUSED_0x293  0x293 // Unused Flag

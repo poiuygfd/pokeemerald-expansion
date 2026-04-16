@@ -21,6 +21,10 @@ LilycoveCity_ContestHall_EventScript_Sailor::
 	msgbox LilycoveCity_ContestHall_Text_IsntThisPlaceHumongous, MSGBOX_NPC
 	end
 
+LilycoveCity_ContestHall_EventScript_BasedMan::
+	msgbox LilycoveCity_ContestHall_Text_ILoveMen, MSGBOX_NPC
+	end
+
 LilycoveCity_ContestHall_EventScript_SmartContestMC::
 	lock
 	faceplayer
@@ -335,6 +339,9 @@ LilycoveCity_ContestHall_Text_IsntThisPlaceHumongous:
 	.string "Whoa, isn't this place humongous!\p"
 	.string "The tension in the air… It's not\n"
 	.string "like a CONTEST hall in the sticks.$"
+
+LilycoveCity_ContestHall_Text_ILoveMen:
+	.string "I love men.$"
 
 LilycoveCity_ContestHall_Text_GiveItBestSmartAppeal:
 	.string "MC: Okay, SMART POKéMON and their\n"
