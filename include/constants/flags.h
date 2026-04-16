@@ -1230,8 +1230,8 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_ITEM_ROUTE_110_MANECTITE                               0x493 // Manectric Mega Stone
-#define FLAG_ITEM_ROUTE_111_GALLADITE                               0x494 // Gallade Mega Stone
+#define FLAG_ITEM_ROUTE_110_FOCUS_BAND                              0x493 // Route 110 Focus Band
+#define FLAG_ITEM_ROUTE_111_ITEM_PP_UP                              0x494 // This is just here to replace an old Mega Stone
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
@@ -1300,17 +1300,17 @@
 #define FLAG_RECEIVED_METRONOME                                     0x4D6 // Received Metronome Gift
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SWORD                           0x4D7 // Hero's Keep Rusted Sword
 #define FLAG_HIDE_HEROS_KEEP_RUSTED_SHIELD                          0x4D8 // Hero's Keep Rusted Shield
-#define FLAG_ITEM_ROUTE_126_GARDEVOIRITE                            0x4D9 // Gardevoir Mega Stone
+#define FLAG_ITEM_ROUTE_126_SLOWBRONITE                             0x4D9 // Slowbro Mega Stone
 #define FLAG_RECEIVED_CHARIZARDITE_Z                                0x4DA // Received Charizard's Z Mega Stone
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_ABILITY_PATCH                   0x4DB // Safari Zone Ability Patch
 #define FLAG_HIDDEN_ITEM_ROUTE_117_MIRROR_HERB                      0x4DC // Hidden Mirror Herb
 #define FLAG_RECEIVED_WIDE_LENS                                     0x4DD // Received Wide Lens
 #define FLAG_RECEIVED_ZOOM_LENS                                     0x4DE // Received Zoom Lens
 #define FLAG_RECEIVED_SCOPE_LENS                                    0x4DF // Received Scope Lens
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
+#define FLAG_SPOKEN_TO_GLALIE_FAN                                   0x4E0 // Interacted with Glalie fan
+#define FLAG_SPOKEN_TO_FROSLASS_FAN                                 0x4E1 // Interacted with Froslass fan
+#define FLAG_RECEIVED_GLALITITE                                     0x4E2 // Received Glalitite from Glalie fan
+#define FLAG_RECEIVED_FROSLASSITE                                   0x4E3 // Received Froslassite from Froslass fan
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag

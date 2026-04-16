@@ -44,13 +44,13 @@ ShoalCave_LowTideEntranceRoom_Text_NoSpaceInYourBag:
 	.string "You should make room and come back\n"
 	.string "for a SHELL BELL.$"
 
-ShoalCave_Text_GlalieIsTheBest:
+ShoalCave_LowTideEntranceRoom_Text_GlalieIsTheBest:
 	.string "Here in SHOAL CAVE, you can find a\n"
 	.string "POKéMON called SNORUNT.\p"
 	.string "SNORUNT can evolve into two different\n"
 	.string "species of POKéMON.\p"
 	.string "Now, any true TRAINER worth their salt\n"
-	.string "knows that GLALIE is the best evolution.\p"
+	.string "knows GLALIE is the best evolution.\p"
 	.string "With its HIDDEN ABILITY, MOODY, it can\n"
 	.string "snowball out of control.\p"
 	.string "It even has a MEGA EVOLUTION that can\n"
@@ -60,21 +60,37 @@ ShoalCave_Text_GlalieIsTheBest:
 	.string "to insist that FROSLASS is better…\p"
 	.string "What utter ignorance, I say!\p"
 	.string "If you want to follow the correct path\n"
-	.string "for SNORUNT, then bring me 8 SHOAL SALT.\p"
+	.string "for SNORUNT, bring me 8 SHOAL SALT.\p"
 	.string "Do that, and I know I can trust you with\n"
 	.string "the power of a GLALITITE.$"
 
-ShoalCave_Text_DidYouGetShoalSalt:
+ShoalCave_LowTideEntranceRoom_Text_DidYouGetShoalSalt:
 	.string "Did you bring 8 SHOAL SALT to trade\n"
 	.string "for a GLALITITE?$"
 
-ShoalCave_Text_CanBeFoundInLowTide:
-	.string "I understand, they can be hard to gather.\n"
-	.string "You can find SHOAL SALT during low tide.\p"
+ShoalCave_LowTideEntranceRoom_Text_CanBeFoundInLowTide:
+	.string "I understand, they can be hard to find.\n"
+	.string "You can find some during low tide.\p"
 	.string "You may not find enough in a single day\n"
 	.string "though, so be sure to keep checking!$"
 
-ShoalCave_Text_FroslassIsTheBest:
+ShoalCave_LowTideEntranceRoom_Text_UseGlaliePowerWell:
+	.string "Use the power of that GLALITITE well.\n"
+	.string "And if you know what's good for you,\l"
+	.string "stay away from that bozo over there!$"
+
+ShoalCave_LowTideEntranceRoom_Text_WasntBornYesterdaySalt:
+	.string "Hey, I wasn't born yesterday, you know!\n"
+	.string "I can clearly see you don't have the\l"
+	.string "amount of SHOAL SALT I requested!\p"
+	.string "I can't just trust anyone with this\n"
+	.string "power, you know!$"
+
+ShoalCave_LowTideEntranceRoom_Text_ShowThePowerOfGlalie:
+	.string "Now!\n"
+	.string "Show the world the power of GLALIE!$"
+
+ShoalCave_LowTideEntranceRoom_Text_FroslassIsTheBest:
 	.string "Here in SHOAL CAVE, you can find a\n"
 	.string "POKéMON called SNORUNT.\p"
 	.string "SNORUNT can evolve into two different\n"
@@ -91,19 +107,41 @@ ShoalCave_Text_FroslassIsTheBest:
 	.string "believes that GLALIE is better…\p"
 	.string "What complete idiocy, I say!\p"
 	.string "If you want to follow the correct path\n"
-	.string "for SNORUNT, then bring me 8 SHOAL SHELLS.\p"
+	.string "for SNORUNT, bring me 8 SHOAL SHELLS.\p"
 	.string "Do that, and I know I can trust you with\n"
 	.string "the power of a FROSLASSITE.$"
 
-ShoalCave_Text_DidYouGetShoalShells:
+ShoalCave_LowTideEntranceRoom_Text_DidYouGetShoalShells:
 	.string "Did you bring 8 SHOAL SHELLS to trade\n"
 	.string "for a FROSLASSITE?$"
 
-ShoalCave_Text_CanBeFoundInHighTide:
-	.string "I understand, they can be hard to gather.\n"
-	.string "You can find SHOAL SHELLS during high tide.\p"
+ShoalCave_LowTideEntranceRoom_Text_CanBeFoundInHighTide:
+	.string "I understand, they can be hard to find.\n"
+	.string "You can find some during high tide.\p"
 	.string "You may not find enough in a single day\n"
 	.string "though, so be sure to keep checking!$"
+
+ShoalCave_LowTideEntranceRoom_Text_UseFroslassPowerWell:
+	.string "Use the power of that FROSLASSITE well.\n"
+	.string "And if you know what's good for you,\l"
+	.string "stay away from that doofus over there!$"
+
+ShoalCave_LowTideEntranceRoom_Text_WasntBornYesterdayShells:
+	.string "Hey, I wasn't born yesterday, you know!\n"
+	.string "I can clearly see you don't have the\l"
+	.string "amount of SHOAL SHELLS I requested!\p"
+	.string "I can't just trust anyone with this\n"
+	.string "power, you know!$"
+
+ShoalCave_LowTideEntranceRoom_Text_ShowThePowerOfFroslass:
+	.string "Now!\n"
+	.string "Show the world the power of FROSLASS!$"
+
+ShoalCave_LowTideEntranceRoom_Text_NoSpaceForMegaStone:
+	.string "You don't have the room in your BAG\n"
+	.string "for this!\p"
+	.string "Just how much stuff do you have\n"
+	.string "crammed in there?!$"
 
 ShoalCave_Text_WasShoalSaltNowNothing:
 	.string "There was some SHOAL SALT here.\n"

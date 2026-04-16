@@ -2,7 +2,7 @@
   "id": "MAP_HEROS_KEEP_EXTERIOR",
   "name": "HerosKeep_Exterior",
   "layout": "LAYOUT_HEROS_KEEP_EXTERIOR",
-  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "music": "MUS_DP_ETERNA_FOREST",
   "region_map_section": "MAPSEC_HEROS_KEEP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

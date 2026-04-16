@@ -78,6 +78,101 @@ ShoalCave_LowTideEntranceRoom_EventScript_DeclineShellBell::
 	release
 	end
 
+ShoalCave_LowTideEntranceRoom_EventScript_GlalieFan::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SPOKEN_TO_GLALIE_FAN, ShoalCave_LowTideEntranceRoom_EventScript_GlalieFanRant
+	goto_if_set FLAG_RECEIVED_GLALITITE, ShoalCave_LowTideEntranceRoom_EventScript_ReceivedGlalitite
+	msgbox ShoalCave_LowTideEntranceRoom_Text_DidYouGetShoalSalt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ShoalCave_LowTideEntranceRoom_EventScript_DeclineGlalieFan
+	checkitem ITEM_SHOAL_SALT, 8
+	goto_if_eq VAR_RESULT, FALSE, ShoalCave_LowTideEntranceRoom_EventScript_NotEnoughShoalSalt
+	checkitemspace ITEM_GLALITITE
+	call_if_eq VAR_RESULT, FALSE, ShoalCave_LowTideEntranceRoom_EventScript_CheckSpaceWillBeFreedGlalie
+	goto_if_eq VAR_RESULT, 2, ShoalCave_LowTideEntranceRoom_EventScript_NoRoomForMegaStone
+	removeitem ITEM_SHOAL_SALT, 8
+	giveitem ITEM_GLALITITE
+	setflag FLAG_RECEIVED_GLALITITE
+	msgbox ShoalCave_LowTideEntranceRoom_Text_ShowThePowerOfGlalie, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_GlalieFanRant::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_GlalieIsTheBest, MSGBOX_DEFAULT
+	setflag FLAG_SPOKEN_TO_GLALIE_FAN
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_DeclineGlalieFan::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_CanBeFoundInLowTide, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_NotEnoughShoalSalt::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_WasntBornYesterdaySalt, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_ReceivedGlalitite::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_UseGlaliePowerWell, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_CheckSpaceWillBeFreedGlalie::
+	checkitem ITEM_SHOAL_SALT, 9
+	goto_if_eq VAR_RESULT, TRUE, ShoalCave_LowTideEntranceRoom_EventScript_NoSpaceWillBeFreed
+	return
+
+ShoalCave_LowTideEntranceRoom_EventScript_NoRoomForMegaStone::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_NoSpaceForMegaStone, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_FroslassFan::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SPOKEN_TO_FROSLASS_FAN, ShoalCave_LowTideEntranceRoom_EventScript_FroslassFanRant
+	goto_if_set FLAG_RECEIVED_FROSLASSITE, ShoalCave_LowTideEntranceRoom_EventScript_ReceivedFroslassite
+	msgbox ShoalCave_LowTideEntranceRoom_Text_DidYouGetShoalShells, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ShoalCave_LowTideEntranceRoom_EventScript_DeclineFroslassFan
+	checkitem ITEM_SHOAL_SHELL, 8
+	goto_if_eq VAR_RESULT, FALSE, ShoalCave_LowTideEntranceRoom_EventScript_NotEnoughShoalShells
+	checkitemspace ITEM_FROSLASSITE
+	call_if_eq VAR_RESULT, FALSE, ShoalCave_LowTideEntranceRoom_EventScript_CheckSpaceWillBeFreedFroslass
+	goto_if_eq VAR_RESULT, 2, ShoalCave_LowTideEntranceRoom_EventScript_NoRoomForMegaStone
+	removeitem ITEM_SHOAL_SHELL, 8
+	giveitem ITEM_FROSLASSITE
+	setflag FLAG_RECEIVED_FROSLASSITE
+	msgbox ShoalCave_LowTideEntranceRoom_Text_ShowThePowerOfFroslass, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_FroslassFanRant::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_FroslassIsTheBest, MSGBOX_DEFAULT
+	setflag FLAG_SPOKEN_TO_FROSLASS_FAN
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_DeclineFroslassFan::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_CanBeFoundInHighTide, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_NotEnoughShoalShells::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_WasntBornYesterdayShells, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_ReceivedFroslassite::
+	msgbox ShoalCave_LowTideEntranceRoom_Text_UseFroslassPowerWell, MSGBOX_DEFAULT
+	release
+	end
+
+ShoalCave_LowTideEntranceRoom_EventScript_CheckSpaceWillBeFreedFroslass::
+	checkitem ITEM_SHOAL_SHELL, 9
+	goto_if_eq VAR_RESULT, TRUE, ShoalCave_LowTideEntranceRoom_EventScript_NoSpaceWillBeFreed
+	return
+
 ShoalCave_LowTideEntranceRoom_EventScript_ResetShoalItems::
 	clearflag FLAG_RECEIVED_SHOAL_SALT_1
 	clearflag FLAG_RECEIVED_SHOAL_SALT_2

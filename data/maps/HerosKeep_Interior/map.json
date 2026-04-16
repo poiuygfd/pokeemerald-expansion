@@ -2,7 +2,7 @@
   "id": "MAP_HEROS_KEEP_INTERIOR",
   "name": "HerosKeep_Interior",
   "layout": "LAYOUT_HEROS_KEEP_INTERIOR",
-  "music": "MUS_RG_POKE_MANSION",
+  "music": "MUS_DP_ETERNA_FOREST",
   "region_map_section": "MAPSEC_HEROS_KEEP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
