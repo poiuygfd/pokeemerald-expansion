@@ -1976,6 +1976,42 @@ static enum CancelerResult CancelerMultihitMoves(struct BattleContext *ctx)
     return CANCELER_RESULT_SUCCESS;
 }
 
+static enum CancelerResult CancelerWeatherman(struct BattleContext *ctx)
+{
+    enum Type moveType = GetBattleMoveType(ctx->move);
+    if (GetBattlerAbility(ctx->battlerAtk) == ABILITY_WEATHERMAN)
+    {
+        if (moveType == TYPE_FIRE && !(gBattleWeather & (B_WEATHER_SUN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_SUN, TRUE))
+            {
+                gBattlerAbility = ctx->battlerAtk;
+                BattleScriptCall(BattleScript_WeathermanActivatesSun);
+                return CANCELER_RESULT_BREAK;
+            }
+        }
+        else if (moveType == TYPE_WATER && !(gBattleWeather & (B_WEATHER_RAIN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_RAIN, TRUE))
+            {
+                gBattlerAbility = ctx->battlerAtk;
+                BattleScriptCall(BattleScript_WeathermanActivatesRain);
+                return CANCELER_RESULT_BREAK;
+            }
+        }
+        else if (moveType == TYPE_ICE && !(gBattleWeather & (B_WEATHER_SNOW | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
+        {
+            if (TryChangeBattleWeather(ctx->battlerAtk, BATTLE_WEATHER_SNOW, TRUE))
+            {
+                gBattlerAbility = ctx->battlerAtk;
+                BattleScriptCall(BattleScript_WeathermanActivatesSnow);
+                return CANCELER_RESULT_BREAK;
+            }
+        }
+    }
+    return CANCELER_RESULT_SUCCESS;
+}
+
 static enum CancelerResult (*const sMoveSuccessOrderCancelers[])(struct BattleContext *ctx) =
 {
     [CANCELER_CLEAR_FLAGS] = CancelerClearFlags,
@@ -2023,6 +2059,7 @@ static enum CancelerResult (*const sMoveSuccessOrderCancelers[])(struct BattleCo
     [CANCELER_TARGET_FAILURE] = CancelerTargetFailure,
     [CANCELER_NOT_FULLY_PROTECTED] = CancelerNotFullyProtected,
     [CANCELER_MULTIHIT_MOVES] = CancelerMultihitMoves,
+    [CANCELER_WEATHERMAN] = CancelerWeatherman,
 };
 
 enum CancelerResult DoAttackCanceler(void)
