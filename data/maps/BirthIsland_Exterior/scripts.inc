@@ -40,7 +40,7 @@ BirthIsland_Exterior_EventScript_TryRemoveDeoxys::
 	return
 
 BirthIsland_Exterior_OnLoad:
-	call_if_unset FLAG_IS_CHAMPION, BirthIsland_Exterior_RemoveStairs
+	call_if_unset FLAG_SYS_GAME_CLEAR, BirthIsland_Exterior_RemoveStairs
 	end
 
 BirthIsland_Exterior_RemoveStairs::
@@ -109,6 +109,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	seteventmon SPECIES_DEOXYS_NORMAL, 60
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
+	fadenewbgm MUS_NONE
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome

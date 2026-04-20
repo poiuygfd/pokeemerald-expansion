@@ -50,8 +50,8 @@ MtChimney_EventScript_Maxie::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_MT_CHIMNEY_MAXIE
 	removeobject LOCALID_MT_CHIMNEY_MAGMA_GRUNT_1
-	removeobject LOCALID_MT_CHIMNEY_TABITHA
 	removeobject LOCALID_MT_CHIMNEY_MAGMA_GRUNT_2
+	removeobject LOCALID_MT_CHIMNEY_MAGMA_GRUNT_3
 	setflag FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA
 	fadescreenswapbuffers FADE_FROM_BLACK
 	setobjectxyperm LOCALID_MT_CHIMNEY_ARCHIE, 10, 12
@@ -70,6 +70,7 @@ MtChimney_EventScript_Maxie::
 	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
 	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
 	clearflag FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY
+	setvar VAR_METEOR_FALLS_STATE, 2
 	releaseall
 	end
 
@@ -435,9 +436,9 @@ MtChimney_EventScript_BusyAquaGrunt3::
 	msgbox MtChimney_Text_MagmasNameSimilar, MSGBOX_SIGN
 	end
 
-MtChimney_EventScript_Tabitha::
-	trainerbattle_single TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
-	msgbox MtChimney_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
+MtChimney_EventScript_Grunt3::
+	trainerbattle_single TRAINER_GRUNT_MT_CHIMNEY_3, MtChimney_Text_Grunt3Intro, MtChimney_Text_Grunt3Defeat
+	msgbox MtChimney_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Grunt2::
@@ -625,22 +626,19 @@ MtChimney_Text_MaxieYouHaventSeenLastOfMagma:
 	.string "Even without the METEORITE, if we\n"
 	.string "obtain that ORB… Fufufu…$"
 
-MtChimney_Text_TabithaIntro:
-	.string "Hehehe!\p"
-	.string "So you've come all the way here!\p"
-	.string "But you're too late!\n"
-	.string "I've already delivered the METEORITE\l"
-	.string "from METEOR FALLS to the BOSS!$"
+MtChimney_Text_Grunt3Intro:
+	.string "TEAM MAGMA's grand plans might be\n"
+	.string "too complex for a kid like you.\p"
+	.string "I'll send you running crying back\n"
+	.string "home to your parents!$"
 
-MtChimney_Text_TabithaDefeat:
-	.string "Hehehe…\p"
-	.string "Even though I've lost, if our leader\n"
-	.string "awakens that thing…$"
+MtChimney_Text_Grunt3Defeat:
+	.string "Waaaaaahhhhh!\n"
+	.string "Mommy! Daddy! Help me!$"
 
-MtChimney_Text_TabithaPostBattle:
-	.string "BOSS, hurry!\n"
-	.string "Give it the METEORITE's energy!\p"
-	.string "Hehehe…$"
+MtChimney_Text_Grunt3PostBattle:
+	.string "Please don't tell the BOSS that\n"
+	.string "you saw me crying…$"
 
 MtChimney_Text_Grunt2Intro:
 	.string "We of TEAM MAGMA are working hard for\n"

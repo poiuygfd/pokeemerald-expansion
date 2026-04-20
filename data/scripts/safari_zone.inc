@@ -178,9 +178,9 @@ Route121_SafariZoneEntrance_Text_PCIsFull:
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 	.string "Oh!\n"
 	.string "You seem to be without a {POKEBLOCK} CASE.\p"
-	.string "I won't stop you from entering the SAFARI\n"
-	.string "ZONE, but your SAFARI Game will be much\l"
-	.string "more fruitful if you use {POKEBLOCK}S.\p"
+	.string "You can still from enter the SAFARI ZONE,\n"
+	.string "but your SAFARI Game will be much more\l"
+	.string "fruitful if you use {POKEBLOCK}S.\p"
 	.string "You may obtain a {POKEBLOCK} CASE from\n"
 	.string "the LILYCOVE CONTEST HALL.$"
 
@@ -240,8 +240,10 @@ SafariZone_South_Text_Youngster:
 
 Route121_SafariZoneEntrance_Text_TrainerTip:
 	.string "SAFARI ZONE TRAINER TIP!\p"
-	.string "Throw {POKEBLOCK}S at wild POKéMON to make\n"
-	.string "them less likely to flee.$"
+	.string "Some areas can only be accessed with\n"
+	.string "an ACRO or MACH BIKE.\p"
+	.string "We strongly recommend taking a ride\n"
+	.string "on your BIKE through the SAFARI ZONE.$"
 
 SafariZone_Southwest_Text_RestHouseSign:
 	.string "“Relieve your tired feet.”\n"

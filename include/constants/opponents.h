@@ -601,7 +601,7 @@
 #define TRAINER_PAXTON                      594
 #define TRAINER_ISABELLA                    595
 #define TRAINER_GRUNT_WEATHER_INST_5        596
-#define TRAINER_TABITHA_MT_CHIMNEY          597
+#define TRAINER_TABITHA_METEOR_FALLS        597
 #define TRAINER_JONATHAN                    598
 #define TRAINER_BRENDAN_RUSTBORO_TORCHIC    599
 #define TRAINER_MAY_RUSTBORO_MUDKIP         600
@@ -874,29 +874,30 @@
 #define TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY  867
 #define TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY  868
 #define TRAINER_SHELLY_VERDANTURF           869
-#define TRAINER_WEATHERMAN_RAIN             870
-#define TRAINER_WEATHERMAN_SUN              871
-#define TRAINER_WEATHERMAN_SNOW             872
-#define TRAINER_WEATHERMAN_FINAL            873
-#define TRAINER_ALICIA                      874
-#define TRAINER_SAMMY                       875
-#define TRAINER_SHAREN                      876
-#define TRAINER_DAVE                        877
-#define TRAINER_PADDY                       878
-#define TRAINER_KYLE                        879
-#define TRAINER_ROBBY                       880
-#define TRAINER_STEVEN_GRANITE_CAVE         881
-#define TRAINER_WOLFE                       882
-#define TRAINER_RED                         883
-#define TRAINER_LEAF                        884
-#define TRAINER_BRENDAN_PLACEHOLDER         885
-#define TRAINER_MAY_PLACEHOLDER             886
+#define TRAINER_GRUNT_MT_CHIMNEY_3          870
+#define TRAINER_WEATHERMAN_RAIN             871
+#define TRAINER_WEATHERMAN_SUN              872
+#define TRAINER_WEATHERMAN_SNOW             873
+#define TRAINER_WEATHERMAN_FINAL            874
+#define TRAINER_ALICIA                      875
+#define TRAINER_SAMMY                       876
+#define TRAINER_SHAREN                      877
+#define TRAINER_DAVE                        878
+#define TRAINER_PADDY                       879
+#define TRAINER_KYLE                        880
+#define TRAINER_ROBBY                       881
+#define TRAINER_STEVEN_GRANITE_CAVE         882
+#define TRAINER_WOLFE                       883
+#define TRAINER_RED                         884
+#define TRAINER_LEAF                        885
+#define TRAINER_BRENDAN_PLACEHOLDER         886
+#define TRAINER_MAY_PLACEHOLDER             887
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     887
+#define TRAINERS_COUNT_EMERALD     888
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

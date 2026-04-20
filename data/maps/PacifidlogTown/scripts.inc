@@ -24,7 +24,7 @@ PacifidlogTown_EventScript_Fisherman::
 	end
 
 PacifidlogTown_EventScript_Man::
-	msgbox PacifidlogTown_Text_SomethingStrange, MSGBOX_NPC
+	msgbox PacifidlogTown_Text_LoveTheWindsAndWaves, MSGBOX_NPC
 	end
 
 PacifidlogTown_EventScript_TownSign::
@@ -51,16 +51,10 @@ PacifidlogTown_Text_SkyPillarTooScary:
 	.string "Life at sea level in PACIFIDLOG,\n"
 	.string "that suits me fine.$"
 
-PacifidlogTown_Text_SomethingStrange:
-	.string "The other day, I saw something strange\n"
-	.string "floating around near the water here…\p"
-	.string "I've seen something like it once before\n"
-	.string "around the shores of CINNABAR ISLAND in\l"
-	.string "the KANTO region…\p"
-	.string "I think it's a POKéMON?\n"
-	.string "I'm honestly not too sure though,\l"
-	.string "it doesn't seem to move or behave\l"
-	.string "like any normal POKéMON…$"
+PacifidlogTown_Text_LoveTheWindsAndWaves:
+	.string "I sure do love the winds and waves.\p"
+	.string "Why are you looking at me like that?\n"
+	.string "Was it something I said?$"
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"

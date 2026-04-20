@@ -12633,7 +12633,7 @@ Golbat
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TABITHA_MT_CHIMNEY ===
+=== TRAINER_TABITHA_METEOR_FALLS ===
 Name: TABITHA
 Class: Magma Admin
 Pic: Magma Admin
@@ -20511,6 +20511,23 @@ Arrokuda
 Level: 17
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
+
+=== TRAINER_GRUNT_MT_CHIMNEY_3 ===
+Name: GRUNT
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+Double Battle: Yes
+AI: Check Bad Move
+
+Slugma
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poochyena
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WEATHERMAN_RAIN ===
 Name: WEATHERMAN

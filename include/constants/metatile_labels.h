@@ -437,14 +437,14 @@
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
 
+// gTileset_MtEmber
+#define METATILE_MtEmber_CaveEntrance  0x346
+
 // gTileset_NavelRock
 #define METATILE_NavelRock_Floor             0x211
 #define METATILE_NavelRock_Gemrock_Empty     0x38E
 #define METATILE_NavelRock_Gemrock_Ruby      0x38D
 #define METATILE_NavelRock_Gemrock_Sapphire  0x38C
-
-// gTileset_MtEmber
-#define METATILE_MtEmber_CaveEntrance  0x346
 
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
