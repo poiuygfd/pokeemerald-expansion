@@ -531,6 +531,8 @@ extern const u8 BattleScript_BeforeSnoreMessage[];
 extern const u8 BattleScript_SkyDropTargetTooHeavy[];
 extern const u8 BattleScript_SkyDropFlyingType[];
 extern const u8 BattleScript_SkyDropNoTarget[];
+extern const u8 BattleScript_TagTeamActivates[];
+extern const u8 BattleScript_EffectLeaderSwapFailed[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];
@@ -816,5 +818,6 @@ extern const u8 BattleScript_GhostBallDodge[];
 extern const u8 BattleScript_GhostGetOutGetOut[];
 extern const u8 BattleScript_TooScaredToMove[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
+extern const u8 BattleScript_EffectLeaderSwap[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

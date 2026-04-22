@@ -510,6 +510,205 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = sAvitorchFormChangeTable,
     },
 
+    [SPECIES_PARTRIO_PALADIN] =
+    { 
+        .baseHP        = 70,
+        .baseAttack    = 60,
+        .baseDefense   = 110,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 35,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_STEEL),
+        .catchRate = 45,
+        .expYield = 157,
+        .evYield_HP = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS },
+        .abilities = { ABILITY_TAG_TEAM, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Partrio"),
+        .cryId = CRY_MARIN,
+        .natDexNum = NATIONAL_DEX_PARTRIO,
+        .categoryName = _("Teamwork"),
+        .height = 4,
+        .weight = 50,
+        .description = COMPOUND_STRING(
+            "The three are weak on their own, so they\n"
+            "work together to overcome stronger threats.\n"
+            "The Paladin of Partrio focuses on defense,\n"
+            "using its sturdy body to take blows."),
+        .pokemonScale = 457,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Marin,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 11,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Marin,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 6,
+        .backAnimId = BACK_ANIM_H_SPRING,
+        .palette = gMonPalette_Marin,
+        .shinyPalette = gMonShinyPalette_Marin,
+        .iconSprite = gMonIcon_Marin,
+        .iconPalIndex = 0,
+        SHADOW(-1, 2, SHADOW_SIZE_M)
+        FOOTPRINT(Marin)
+        OVERWORLD(
+            sPicTable_Marin,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Marin,
+            gShinyOverworldPalette_Marin
+        )
+        .levelUpLearnset = sPartrioLevelUpLearnset,
+        //.teachableLearnset = sPartrioTeachableLearnset,
+        .eggMoveLearnset = sPartrioEggMoveLearnset,
+        .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
+    },
+
+    [SPECIES_PARTRIO_WARRIOR] =
+    { 
+        .baseHP        = 60,
+        .baseAttack    = 100,
+        .baseDefense   = 50,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 45,
+        .types = MON_TYPES(TYPE_FIGHTING),
+        .catchRate = 45,
+        .expYield = 157,
+        .evYield_HP = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS },
+        .abilities = { ABILITY_TAG_TEAM, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Partrio"),
+        .cryId = CRY_MARIN,
+        .natDexNum = NATIONAL_DEX_PARTRIO,
+        .categoryName = _("Teamwork"),
+        .height = 4,
+        .weight = 50,
+        .description = COMPOUND_STRING(
+            "The three are weak on their own, so they\n"
+            "work together to overcome stronger threats.\n"
+            "The Warrior of Partrio uses its sword to,\n"
+            "strike down foes with a physical onslaught."),
+        .pokemonScale = 457,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_AvitorchCalm,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 5,
+        .backPic = gMonBackPic_AvitorchCalm,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 9,
+        .backAnimId = BACK_ANIM_H_SPRING,
+        .palette = gMonPalette_AvitorchCalm,
+        .shinyPalette = gMonShinyPalette_AvitorchCalm,
+        .iconSprite = gMonIcon_AvitorchCalm,
+        .iconPalIndex = 0,
+        SHADOW(0, 12, SHADOW_SIZE_S)
+        FOOTPRINT(Avitorch)
+        OVERWORLD(
+            sPicTable_Avitorch,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            sAnimTable_Following,
+            gOverworldPalette_Avitorch,
+            gShinyOverworldPalette_Avitorch
+        )
+        .levelUpLearnset = sPartrioLevelUpLearnset,
+        //.teachableLearnset = sPartrioTeachableLearnset,
+        .eggMoveLearnset = sPartrioEggMoveLearnset,
+        .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
+    },
+
+    [SPECIES_PARTRIO_MAGE] =
+    { 
+        .baseHP        = 45,
+        .baseAttack    = 20,
+        .baseDefense   = 30,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 50,
+        .types = MON_TYPES(TYPE_PSYCHIC),
+        .catchRate = 45,
+        .expYield = 157,
+        .evYield_HP = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS },
+        .abilities = { ABILITY_TAG_TEAM, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Partrio"),
+        .cryId = CRY_MARIN,
+        .natDexNum = NATIONAL_DEX_PARTRIO,
+        .categoryName = _("Teamwork"),
+        .height = 4,
+        .weight = 50,
+        .description = COMPOUND_STRING(
+            "The three are weak on their own, so they\n"
+            "work together to overcome stronger threats.\n"
+            "The Mage of Partrio uses its powers to blast,\n"
+            "opponents with a barrage of psychic energy."),
+        .pokemonScale = 457,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Regitube,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Regitube,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Regitube,
+        .shinyPalette = gMonShinyPalette_Regitube,
+        .iconSprite = gMonIcon_Regitube,
+        .iconPalIndex = 0,
+        SHADOW(2, 7, SHADOW_SIZE_L)
+        FOOTPRINT(Regitube)
+        OVERWORLD(
+            sPicTable_Regitube,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Regitube,
+            gShinyOverworldPalette_Regitube
+        )
+        .levelUpLearnset = sPartrioLevelUpLearnset,
+        //.teachableLearnset = sPartrioTeachableLearnset,
+        .eggMoveLearnset = sPartrioEggMoveLearnset,
+        .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
+    },
+
     [SPECIES_REGITUBE] =
     { 
         .baseHP        = 80,

@@ -4980,7 +4980,33 @@ BattleScript_PunisherActivates::
 	handleformchange BS_TARGET, 0
 	playanimation BS_TARGET, B_ANIM_FORM_CHANGE
 	printstring STRINGID_PKMNISENRAGED
+	waitmessage B_WAIT_TIME_LONG
 	waitanimation
+	return
+
+BattleScript_TagTeamActivates::
+	call BattleScript_AbilityPopUp
+	handleformchange BS_TARGET, 0
+	playanimation BS_TARGET, B_ANIM_FORM_CHANGE_DISGUISE
+	waitanimation
+	handleformchange BS_TARGET, 1
+	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
+	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
+	printstring STRINGID_LEADERHASCHANGED
+	waitmessage B_WAIT_TIME_LONG
+	waitanimation
+	return
+
+BattleScript_EffectLeaderSwap::
+	attackcanceler
+	attackanimation
+	waitanimation
+	goto BattleScript_MoveEnd
+BattleScript_EffectLeaderSwapFailed::
+	pause B_WAIT_TIME_SHORT
+	setmoveresultflags MOVE_RESULT_FAILED
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_EarthEaterActivates::

@@ -1696,15 +1696,19 @@
 #define SPECIES_AVITORCH                                SPECIES_AVITORCH_CALM
 #define SPECIES_AVITORCH_CALM                           1576
 #define SPECIES_AVITORCH_ENRAGED                        1577
-#define SPECIES_REGITUBE                                1578
-#define SPECIES_SLOWBRO_MEGA_G                          1579
-#define SPECIES_CASTFORM_MEGA                           1580
-#define SPECIES_CASTFORM_MEGA_SUNNY                     1581
-#define SPECIES_CASTFORM_MEGA_RAINY                     1582
-#define SPECIES_CASTFORM_MEGA_SNOWY                     1583
-#define SPECIES_HYDREIGON_MEGA                          1584
-#define SPECIES_CHARIZARD_MEGA_Z                        1585
-#define SPECIES_CHARIZARD_OMEGA_Z                       1586
+#define SPECIES_PARTRIO                                 SPECIES_PARTRIO_PALADIN
+#define SPECIES_PARTRIO_PALADIN                         1578
+#define SPECIES_PARTRIO_WARRIOR                         1579
+#define SPECIES_PARTRIO_MAGE                            1580
+#define SPECIES_REGITUBE                                1581
+#define SPECIES_SLOWBRO_MEGA_G                          1582
+#define SPECIES_CASTFORM_MEGA                           1583
+#define SPECIES_CASTFORM_MEGA_SUNNY                     1584
+#define SPECIES_CASTFORM_MEGA_RAINY                     1585
+#define SPECIES_CASTFORM_MEGA_SNOWY                     1586
+#define SPECIES_HYDREIGON_MEGA                          1587
+#define SPECIES_CHARIZARD_MEGA_Z                        1588
+#define SPECIES_CHARIZARD_OMEGA_Z                       1589
 
 #define SPECIES_EGG                                     (SPECIES_CHARIZARD_OMEGA_Z + 1)
 

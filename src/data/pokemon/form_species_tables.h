@@ -2588,3 +2588,10 @@ static const u16 sAvitorchFormSpeciesIdTable[] = {
     SPECIES_AVITORCH_ENRAGED,
     FORM_SPECIES_END,
 };
+
+static const u16 sPartrioFormSpeciesIdTable[] = {
+    SPECIES_PARTRIO_PALADIN,
+    SPECIES_PARTRIO_WARRIOR,
+    SPECIES_PARTRIO_MAGE,
+    FORM_SPECIES_END,
+};

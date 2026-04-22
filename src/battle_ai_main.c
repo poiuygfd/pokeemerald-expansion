@@ -2081,6 +2081,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
             ADJUST_SCORE(-6);
         break;
     case EFFECT_HIT_ESCAPE:
+    case EFFECT_LEADER_SWAP:
         break;
     case EFFECT_BELLY_DRUM:
     case EFFECT_FILLET_AWAY:
@@ -4772,6 +4773,7 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
         //fallthrough
     case EFFECT_HIT_ESCAPE:
     case EFFECT_PARTING_SHOT:
+    case EFFECT_LEADER_SWAP:
     case EFFECT_WEATHER_AND_SWITCH:
         switch (ShouldPivot(battlerAtk, battlerDef, move))
         {

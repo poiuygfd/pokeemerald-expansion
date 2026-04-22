@@ -21425,6 +21425,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MagicalCheer,
     },
 
+    [MOVE_LEADER_SWAP] =
+    {
+        .name = COMPOUND_STRING("Leader Swap"),
+        .description = COMPOUND_STRING(
+            "Cycles the current leader\n"
+            "of Partrio around."),
+        .effect = EFFECT_LEADER_SWAP,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 15,
+        .target = TARGET_USER,
+        .priority = 6,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .ignoresSubstitute = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_FollowMe,
+    },
+
     [MOVE_BUBBLE_BLAST] =
     {
         .name = COMPOUND_STRING("Bubble Blast"),

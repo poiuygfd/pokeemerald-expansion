@@ -2508,6 +2508,18 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .failsOnImposter = TRUE,
     },
 
+    [ABILITY_TAG_TEAM] =
+    {
+        .name = _("Tag Team"),
+        .description = COMPOUND_STRING("Leader swaps on fainting."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
+    },
+
     [ABILITY_BUOYANT_POWER] =
     {
         .name = _("Buoyant Power"),

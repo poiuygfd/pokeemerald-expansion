@@ -6390,3 +6390,10 @@ static const u16 sAvitorchEggMoveLearnset[] = {
     MOVE_STOMPING_TANTRUM,
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sPartrioEggMoveLearnset[] = {
+    MOVE_BEAT_UP,
+    MOVE_RAPID_SPIN,
+    MOVE_ALLY_SWITCH,
+    MOVE_UNAVAILABLE,
+};

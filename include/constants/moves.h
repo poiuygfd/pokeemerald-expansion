@@ -905,7 +905,8 @@ enum __attribute__((packed)) Move
     MOVE_MALIGNANT_CHAIN = 847,
     // New Moves
     MOVE_MAGICAL_CHEER = 848,
-    MOVE_BUBBLE_BLAST = 849,
+    MOVE_LEADER_SWAP = 849,
+    MOVE_BUBBLE_BLAST = 850,
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!
