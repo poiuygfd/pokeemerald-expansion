@@ -5004,8 +5004,7 @@ BattleScript_EffectLeaderSwap::
 	goto BattleScript_MoveEnd
 BattleScript_EffectLeaderSwapFailed::
 	pause B_WAIT_TIME_SHORT
-	setmoveresultflags MOVE_RESULT_FAILED
-	resultmessage
+	printstring STRINGID_BUTITFAILED
 	waitmessage B_WAIT_TIME_LONG
 	return
 

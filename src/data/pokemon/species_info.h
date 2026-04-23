@@ -413,8 +413,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
             "It is said that those lucky enough to meet\n"
             "this Pokémon are blessed with everlasting\n"
             "bonds with their closest friends."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
+        .pokemonScale = 446,
+        .pokemonOffset = 5,
         .trainerScale = 256,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_AvitorchCalm,
@@ -540,7 +540,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             "work together to overcome stronger threats.\n"
             "The Paladin of Partrio focuses on defense,\n"
             "using its sturdy body to take blows."),
-        .pokemonScale = 457,
+        .pokemonScale = 287,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -571,7 +571,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gShinyOverworldPalette_Marin
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
-        //.teachableLearnset = sPartrioTeachableLearnset,
+        .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,
         .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
     },
@@ -606,7 +606,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             "work together to overcome stronger threats.\n"
             "The Warrior of Partrio uses its sword to,\n"
             "strike down foes with a physical onslaught."),
-        .pokemonScale = 457,
+        .pokemonScale = 287,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -638,7 +638,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gShinyOverworldPalette_Avitorch
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
-        //.teachableLearnset = sPartrioTeachableLearnset,
+        .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,
         .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
     },
@@ -673,7 +673,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             "work together to overcome stronger threats.\n"
             "The Mage of Partrio uses its powers to blast,\n"
             "opponents with a barrage of psychic energy."),
-        .pokemonScale = 457,
+        .pokemonScale = 287,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
@@ -704,7 +704,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gShinyOverworldPalette_Regitube
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
-        //.teachableLearnset = sPartrioTeachableLearnset,
+        .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,
         .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
     },
