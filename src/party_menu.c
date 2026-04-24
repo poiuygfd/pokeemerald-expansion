@@ -4070,6 +4070,9 @@ static void CursorCb_FieldMove(u8 taskId)
                 gPartyMenu.exitCallback = CB2_OpenFlyMap;
                 Task_ClosePartyMenu(taskId);
                 break;
+            case FIELD_MOVE_LEADER_SWAP:
+                TryChangeLeaderForm(taskId);
+                break;
             default:
                 gPartyMenu.exitCallback = CB2_ReturnToField;
                 Task_ClosePartyMenu(taskId);
@@ -4314,6 +4317,24 @@ bool32 SetUpFieldMove_Dive(void)
         return TRUE;
     }
     return FALSE;
+}
+
+bool32 SetUpFieldMove_LeaderSwap(void)
+{
+    u32 species;
+
+    species = GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES);
+
+    if (species == SPECIES_PARTRIO_PALADIN
+    || species == SPECIES_PARTRIO_WARRIOR
+    || species == SPECIES_PARTRIO_MAGE)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
 }
 
 static void CreatePartyMonIconSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox, u32 slot)
@@ -6684,6 +6705,68 @@ static void SpriteCB_FormChangeIconMosaic(struct Sprite *sprite)
         sprite->oam.mosaic = FALSE;
         sprite->callback = SpriteCallbackDummy;
     }
+}
+
+void Task_ChangeLeaderForm(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[GetCursorSelectionMonId()];
+    struct Sprite *icon = &gSprites[sPartyMenuBoxes[GetCursorSelectionMonId()].monSpriteId];
+
+    switch (gTasks[taskId].tState)
+    {
+    case 0:
+        PlaySE(SE_M_TELEPORT);
+        gTasks[taskId].tState++;
+        break;
+    case 1:
+        if (gTasks[taskId].tAnimWait == 0)
+        {
+            FreeAndDestroyMonIconSprite(icon);
+            CreatePartyMonIconSpriteParameterized(gTasks[taskId].tTargetSpecies, GetMonData(mon, MON_DATA_PERSONALITY), FALSE, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
+            icon->oam.mosaic = TRUE;
+            icon->data[0] = 10;
+            icon->data[1] = 1;
+            icon->data[2] = taskId;
+            icon->callback = SpriteCB_FormChangeIconMosaic;
+            SetGpuReg(REG_OFFSET_MOSAIC, (icon->data[0] << 12) | (icon->data[1] << 8));
+        }
+        if (++gTasks[taskId].tAnimWait == 60)
+            gTasks[taskId].tState++;
+        break;
+    case 2:
+        PlayCry_Normal(gTasks[taskId].tTargetSpecies, 0);
+        gTasks[taskId].tState++;
+        break;
+    case 3:
+        if (IsCryFinished())
+        {
+            GetMonNickname(mon, gStringVar1);
+            StringExpandPlaceholders(gStringVar4, gText_PkmnChangedLeader);
+            DisplayPartyMenuMessage(gStringVar4, FALSE);
+            ScheduleBgCopyTilemapToVram(2);
+            SetMonData(mon, MON_DATA_SPECIES, &gTasks[taskId].tTargetSpecies);
+            CalculateMonStats(mon);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        }
+        break;
+    }
+}
+
+void TryChangeLeaderForm (u8 taskId)
+{
+    u32 newSpecies;
+
+    if (GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_PALADIN)
+        newSpecies = SPECIES_PARTRIO_WARRIOR;
+    else if (GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_WARRIOR)
+        newSpecies = SPECIES_PARTRIO_MAGE;
+    else
+        newSpecies = SPECIES_PARTRIO_PALADIN;
+
+    gTasks[taskId].func = Task_ChangeLeaderForm;
+    gTasks[taskId].tState = 0;
+    gTasks[taskId].tTargetSpecies = newSpecies;
+    gTasks[taskId].tAnimWait = 0;
 }
 
 static void Task_TryItemUseFormChange(u8 taskId)

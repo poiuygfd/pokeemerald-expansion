@@ -55,4 +55,9 @@ bool8 FldEff_UseRockSmash(void);
 bool32 SetUpFieldMove_Defog(void);
 bool8 FldEff_Defog(void);
 
+// leader swap
+bool32 SetUpFieldMove_LeaderSwap(void);
+void Task_ChangeLeaderForm(u8 taskId);
+void TryChangeLeaderForm(u8 taskId);
+
 #endif // GUARD_FLDEFF_H
