@@ -1,16 +1,17 @@
 FallarborTown_MoveRelearnersHouse_MapScripts::
 	.byte 0
 
-FallarborTown_MoveRelearnersHouse_EventScript_AvitorchGiftGiver::
+FallarborTown_MoveRelearnersHouse_EventScript_FakemonGiftGiver::
 	lockall
 	faceplayer
-	goto_if_set FLAG_AVITORCH_CODE_USED, FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed
-	msgbox FallarborTown_MoveRelearnersHouse_Text_AvitorchGift, MSGBOX_DEFAULT
+	goto_if_set FLAG_AVITORCH_CODE_USED, FallarborTown_MoveRelearnersHouse_EventScript_CodeUsed
+	msgbox FallarborTown_MoveRelearnersHouse_Text_DoYaGotTheCode, MSGBOX_DEFAULT
 	waitmessage
 	special EnterCode
 	waitstate
 	special GetAvitorchCodeFeedback
-	goto_if_eq VAR_RESULT, 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess
+	goto_if_eq VAR_RESULT, 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessAvitorch
+	goto_if_eq VAR_RESULT, 2, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessPartrio
 	goto FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed
 	end
 
@@ -19,8 +20,8 @@ FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed::
 	releaseall
 	end
 
-FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccess::
-	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeCorrect, MSGBOX_DEFAULT
+FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessAvitorch::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeCorrectAvitorch, MSGBOX_DEFAULT
 	waitmessage
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AVITORCH
 	givemon SPECIES_AVITORCH, 20
@@ -34,9 +35,9 @@ FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchParty::
 	call FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare
 	call Common_EventScript_GetGiftMonPartySlot
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
 	call Common_EventScript_NameReceivedPartyMon
-	goto FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchPC::
@@ -49,11 +50,11 @@ FallarborTown_MoveRelearnersHouse_EventScript_SendAvitorchPC::
 
 FallarborTown_MoveRelearnersHouse_EventScript_AvitorchTransferredToPC::
 	call Common_EventScript_TransferredToPC
-	goto FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare::
-	bufferspeciesname STR_VAR_2, SPECIES_AVITORCH
+	bufferspeciesname STR_VAR_1, SPECIES_AVITORCH
 	playfanfare MUS_OBTAIN_ITEM
 	message FallarborTown_MoveRelearnersHouse_Text_ObtainedAvitorch
 	waitmessage
@@ -61,12 +62,54 @@ FallarborTown_MoveRelearnersHouse_EventScript_ReceivedAvitorchFanfare::
 	bufferspeciesname STR_VAR_1, SPECIES_AVITORCH
 	return
 
-FallarborTown_MoveRelearnersHouse_EventScript_EndAvitorchEvent::
+FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessPartrio::
+	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeCorrectPartrio, MSGBOX_DEFAULT
+	waitmessage
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PARTRIO
+	givemon SPECIES_PARTRIO, 20, move1=MOVE_LEADER_SWAP
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, FallarborTown_MoveRelearnersHouse_EventScript_SendPartrioParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, FallarborTown_MoveRelearnersHouse_EventScript_SendPartrioPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_SendPartrioParty::
+	call FallarborTown_MoveRelearnersHouse_EventScript_ReceivedPartrioFanfare
+	call Common_EventScript_GetGiftMonPartySlot
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
+	call Common_EventScript_NameReceivedPartyMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_SendPartrioPC::
+	call FallarborTown_MoveRelearnersHouse_EventScript_ReceivedPartrioFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_MoveRelearnersHouse_EventScript_PartrioTransferredToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto FallarborTown_MoveRelearnersHouse_EventScript_PartrioTransferredToPC
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_PartrioTransferredToPC::
+	call Common_EventScript_TransferredToPC
+	goto FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ReceivedPartrioFanfare::
+	bufferspeciesname STR_VAR_1, SPECIES_PARTRIO
+	playfanfare MUS_OBTAIN_ITEM
+	message FallarborTown_MoveRelearnersHouse_Text_ObtainedPartrio
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_PARTRIO
+	return
+
+FallarborTown_MoveRelearnersHouse_EventScript_EndCodeEvent::
 	setflag FLAG_AVITORCH_CODE_USED
 	releaseall
 	end
 
-FallarborTown_MoveRelearnersHouse_EventScript_AvitorchCodeUsed::
+FallarborTown_MoveRelearnersHouse_EventScript_CodeUsed::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_OnePerPerson, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -138,22 +181,29 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	releaseall
 	end
 
-FallarborTown_MoveRelearnersHouse_Text_AvitorchGift:
+FallarborTown_MoveRelearnersHouse_Text_DoYaGotTheCode:
 	.string "Oi.\p"
 	.string "Do ya got the code?$"
 
 FallarborTown_MoveRelearnersHouse_Text_CodeIncorrect:
 	.string "Dat ain't the code.$"
 
-FallarborTown_MoveRelearnersHouse_Text_CodeCorrect:
+FallarborTown_MoveRelearnersHouse_Text_CodeCorrectAvitorch:
 	.string "Dat's the code, all right.\p"
 	.string "Enjoy yer bird.$"
+
+FallarborTown_MoveRelearnersHouse_Text_CodeCorrectPartrio:
+	.string "Dat's the code, all right.\p"
+	.string "Enjoy yer guys.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ObtainedAvitorch:
 	.string "{PLAYER} received AVITORCH!$"
 
+FallarborTown_MoveRelearnersHouse_Text_ObtainedPartrio:
+	.string "{PLAYER} received PARTRIO!$"
+
 FallarborTown_MoveRelearnersHouse_Text_OnePerPerson:
-	.string "One bird per person.$"
+	.string "One code per person.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "I'm the MOVE TUTOR.\p"

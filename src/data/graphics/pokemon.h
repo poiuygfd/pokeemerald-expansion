@@ -27549,7 +27549,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Partrio[] = INCBIN_U16("graphics/pokemon/partrio/normal.gbapal");
     const u32 gMonBackPic_PartrioPaladin[] = INCBIN_U32("graphics/pokemon/partrio/back.4bpp.smol");
     const u16 gMonShinyPalette_Partrio[] = INCBIN_U16("graphics/pokemon/partrio/shiny.gbapal");
-    //const u8 gMonIcon_PartrioPaladin[] = INCBIN_U8("graphics/pokemon/partrio/icon.4bpp");
+    const u8 gMonIcon_PartrioPaladin[] = INCBIN_U8("graphics/pokemon/partrio/icon.4bpp");
     const u8 gMonFootprint_PartrioPaladin[] = INCBIN_U8("graphics/pokemon/partrio/footprint.1bpp");
     //const u32 gObjectEventPic_PartrioPaladin[] = INCBIN_COMP("graphics/pokemon/partrio/overworld.4bpp");
     //const u16 gOverworldPalette_Partrio[] = INCBIN_U16("graphics/pokemon/partrio/overworld_normal.gbapal");
@@ -27557,13 +27557,13 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 
     const u32 gMonFrontPic_PartrioWarrior[] = INCBIN_U32("graphics/pokemon/partrio/warrior/front.4bpp.smol");
     const u32 gMonBackPic_PartrioWarrior[] = INCBIN_U32("graphics/pokemon/partrio/warrior/back.4bpp.smol");
-    //const u8 gMonIcon_PartrioWarrior[] = INCBIN_U8("graphics/pokemon/partrio/warrior/icon.4bpp");
+    const u8 gMonIcon_PartrioWarrior[] = INCBIN_U8("graphics/pokemon/partrio/warrior/icon.4bpp");
     const u8 gMonFootprint_PartrioWarrior[] = INCBIN_U8("graphics/pokemon/partrio/warrior/footprint.1bpp");
     //const u32 gObjectEventPic_PartrioWarrior[] = INCBIN_COMP("graphics/pokemon/partrio/warrior/overworld.4bpp");
 
     const u32 gMonFrontPic_PartrioMage[] = INCBIN_U32("graphics/pokemon/partrio/mage/front.4bpp.smol");
     const u32 gMonBackPic_PartrioMage[] = INCBIN_U32("graphics/pokemon/partrio/mage/back.4bpp.smol");
-    //const u8 gMonIcon_PartrioMage[] = INCBIN_U8("graphics/pokemon/partrio/mage/icon.4bpp");
+    const u8 gMonIcon_PartrioMage[] = INCBIN_U8("graphics/pokemon/partrio/mage/icon.4bpp");
     const u8 gMonFootprint_PartrioMage[] = INCBIN_U8("graphics/pokemon/partrio/mage/footprint.1bpp");
     //const u32 gObjectEventPic_PartrioMage[] = INCBIN_COMP("graphics/pokemon/partrio/mage/overworld.4bpp");
 

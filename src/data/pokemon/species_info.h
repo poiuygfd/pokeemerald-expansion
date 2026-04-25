@@ -556,7 +556,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
         .palette = gMonPalette_Partrio,
         .shinyPalette = gMonShinyPalette_Partrio,
-        .iconSprite = gMonIcon_Marin,
+        .iconSprite = gMonIcon_PartrioPaladin,
         .iconPalIndex = 0,
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioPaladin)
@@ -621,7 +621,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
         .palette = gMonPalette_Partrio,
         .shinyPalette = gMonShinyPalette_Partrio,
-        .iconSprite = gMonIcon_AvitorchCalm,
+        .iconSprite = gMonIcon_PartrioWarrior,
         .iconPalIndex = 0,
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioWarrior)
@@ -686,7 +686,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
         .palette = gMonPalette_Partrio,
         .shinyPalette = gMonShinyPalette_Partrio,
-        .iconSprite = gMonIcon_Regitube,
+        .iconSprite = gMonIcon_PartrioMage,
         .iconPalIndex = 0,
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioMage)
