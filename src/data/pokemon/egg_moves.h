@@ -6392,6 +6392,7 @@ static const u16 sAvitorchEggMoveLearnset[] = {
 };
 
 static const u16 sPartrioEggMoveLearnset[] = {
+    MOVE_HEADBUTT,
     MOVE_BEAT_UP,
     MOVE_RAPID_SPIN,
     MOVE_ALLY_SWITCH,

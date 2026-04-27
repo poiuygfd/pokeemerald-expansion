@@ -561,13 +561,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioPaladin)
         OVERWORLD(
-            sPicTable_Marin,
+            sPicTable_PartrioPaladin,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Marin,
-            gShinyOverworldPalette_Marin
+            gOverworldPalette_Partrio,
+            gShinyOverworldPalette_Partrio
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,
@@ -626,13 +626,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioWarrior)
         OVERWORLD(
-            sPicTable_Avitorch,
+            sPicTable_PartrioWarrior,
             SIZE_32x32,
             SHADOW_SIZE_M,
-            TRACKS_NONE,
+            TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Avitorch,
-            gShinyOverworldPalette_Avitorch
+            gOverworldPalette_Partrio,
+            gShinyOverworldPalette_Partrio
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,
@@ -691,13 +691,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         SHADOW(-1, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(PartrioMage)
         OVERWORLD(
-            sPicTable_Regitube,
+            sPicTable_PartrioMage,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Regitube,
-            gShinyOverworldPalette_Regitube
+            gOverworldPalette_Partrio,
+            gShinyOverworldPalette_Partrio
         )
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,

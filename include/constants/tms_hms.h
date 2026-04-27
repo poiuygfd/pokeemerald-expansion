@@ -22,7 +22,7 @@
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
     F(SAFEGUARD) \
-    F(FRUSTRATION) \
+    F(FLING) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
@@ -72,10 +72,10 @@
     F(DUAL_WINGBEAT) \
     F(WORK_UP) \
     F(TERRAIN_PULSE) \
-    F(POWER_UP_PUNCH) \
+    F(VOLT_SWITCH) \
     F(CHILLING_WATER) \
     F(ACROBATICS) \
-    F(FLING) \
+    F(POWER_UP_PUNCH) \
     F(SUPERCELL_SLAM)
 
 

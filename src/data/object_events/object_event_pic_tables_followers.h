@@ -6745,6 +6745,16 @@ static const struct SpriteFrameImage sPicTable_Avitorch[] = {
     overworld_ascending_frames(gObjectEventPic_Avitorch, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_PartrioPaladin[] = {
+    overworld_ascending_frames(gObjectEventPic_PartrioPaladin, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PartrioWarrior[] = {
+    overworld_ascending_frames(gObjectEventPic_PartrioWarrior, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_PartrioMage[] = {
+    overworld_ascending_frames(gObjectEventPic_PartrioMage, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Regitube[] = {
     overworld_ascending_frames(gObjectEventPic_Regitube, 4, 4),
 };
