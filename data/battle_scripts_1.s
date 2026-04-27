@@ -943,6 +943,7 @@ BattleScript_MoveEffectCoreEnforcer::
 	trytoclearprimalweather
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
+	tryendneutralizinggas
 BattleScript_CoreEnforcerRet:
 	return
 
