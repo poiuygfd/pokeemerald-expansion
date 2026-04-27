@@ -4509,7 +4509,8 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_TAG_TEAM: // Handles the transformation on using Leader Swap
-            if (move == MOVE_LEADER_SWAP)
+            if (move == MOVE_LEADER_SWAP
+             && !gBattleStruct->unableToUseMove)
             {
                 struct Pokemon *mon = GetBattlerMon(gBattlerAttacker);
                 bool32 shouldSwap = FALSE;

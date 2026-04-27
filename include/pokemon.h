@@ -486,6 +486,7 @@ struct SpeciesInfo /*0xC4*/
     u32 cannotBeTraded:1;
     u32 perfectIVCount:3;   // This species will always generate with the specified amount of perfect IVs.
     u32 dexForceRequired:1; // This species will be taken into account for Pokédex ratings even if they have the "isMythical" flag set.
+    u32 dexNotRequired:1; // This species will not be taken into account for Pokédex ratings even if they do not have the "isMythical" flag set.
     u32 teachingType:1; // Not used in the ROM but used in compilation (check constants/teaching_types.h for explanations)
     u32 isFrontierBanned:1; // This species is not allowed to participate in Battle Frontier facilities.
     u32 isSkyBattleBanned:1;

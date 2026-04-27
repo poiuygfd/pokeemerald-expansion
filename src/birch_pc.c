@@ -56,7 +56,7 @@ const u8 *GetPokedexRatingText(u32 count)
     for (i = 0; i < REGIONAL_DEX_COUNT; i++)
     {
         j = NationalPokedexNumToSpecies(RegionalToNationalOrder(i + 1));
-        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        if ((gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) || gSpeciesInfo[j].dexNotRequired)
         {
             if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
                 count--;

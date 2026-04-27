@@ -1557,6 +1557,7 @@ static const u16 sSentretEggMoveLearnset[] = {
     MOVE_IRON_TAIL,
     MOVE_CAPTIVATE,
     MOVE_BABY_DOLL_EYES,
+    MOVE_TIDY_UP,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_SENTRET
@@ -4546,6 +4547,7 @@ static const u16 sMinccinoEggMoveLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_ENDURE,
     MOVE_FLAIL,
+    MOVE_TIDY_UP,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_MINCCINO
@@ -5378,6 +5380,7 @@ static const u16 sOricorioEggMoveLearnset[] = {
     MOVE_TAILWIND,
     MOVE_SAFEGUARD,
     MOVE_CAPTIVATE,
+    MOVE_QUIVER_DANCE,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_ORICORIO

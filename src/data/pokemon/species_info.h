@@ -444,6 +444,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Avitorch,
             gShinyOverworldPalette_Avitorch
         )
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sAvitorchLevelUpLearnset,
         .teachableLearnset = sAvitorchTeachableLearnset,
         .eggMoveLearnset = sAvitorchEggMoveLearnset,
@@ -503,6 +504,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 0,
         SHADOW(0, 12, SHADOW_SIZE_S)
         FOOTPRINT(Avitorch)
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sAvitorchLevelUpLearnset,
         .teachableLearnset = sAvitorchTeachableLearnset,
         .eggMoveLearnset = sAvitorchEggMoveLearnset,
@@ -569,6 +571,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Partrio,
             gShinyOverworldPalette_Partrio
         )
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,
@@ -634,6 +637,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Partrio,
             gShinyOverworldPalette_Partrio
         )
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,
@@ -699,6 +703,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Partrio,
             gShinyOverworldPalette_Partrio
         )
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sPartrioLevelUpLearnset,
         .teachableLearnset = sPartrioTeachableLearnset,
         .eggMoveLearnset = sPartrioEggMoveLearnset,

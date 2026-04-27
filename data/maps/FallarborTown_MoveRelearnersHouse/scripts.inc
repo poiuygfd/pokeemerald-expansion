@@ -142,15 +142,15 @@ FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove::
 	case NO, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	message FallarborTown_MoveRelearnersHouse_Text_NormalOrEggMove
 	waitmessage
-	dynmultipush MoveRelearner_Text_LevelUpMoves, 0
-	dynmultipush MoveRelearner_Text_EggMoves, 1
+	dynmultipush MoveRelearner_Text_EggMoves, 0
+	dynmultipush MoveRelearner_Text_LevelUpMoves, 1
 	call_if_set P_FLAG_TUTOR_MOVES, FallarborTown_MoveRelearnersHouse_EventScript_TutorMoves
 	dynmultipush MoveRelearner_Text_SeeYa, 3
 	dynmultistack 0, 0, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
 	switch VAR_RESULT
-	case 0, FallarborTown_MoveRelearnersHouse_EventScript_TeachLevelUpMoves
-	case 1, FallarborTown_MoveRelearnersHouse_EventScript_TeachEggMoves
+	case 0, FallarborTown_MoveRelearnersHouse_EventScript_TeachEggMoves
+	case 1, FallarborTown_MoveRelearnersHouse_EventScript_TeachLevelUpMoves
 	case 2, FallarborTown_MoveRelearnersHouse_EventScript_TeachTutorMoves
 	case 3, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	end
@@ -159,15 +159,15 @@ FallarborTown_MoveRelearnersHouse_EventScript_TutorMoves:
 	dynmultipush MoveRelearner_Text_TutormoveMoves, 2
 	return
 
-FallarborTown_MoveRelearnersHouse_EventScript_TeachLevelUpMoves:
-	setmoverelearnerstate MOVE_RELEARNER_LEVEL_UP_MOVES
-	bufferstring STR_VAR_3, MoveRelearner_Text_LevelUpMoveLWR
-	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
-	end
-
 FallarborTown_MoveRelearnersHouse_EventScript_TeachEggMoves:
 	setmoverelearnerstate MOVE_RELEARNER_EGG_MOVES
 	bufferstring STR_VAR_3, MoveRelearner_Text_EggMoveLWR
+	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_TeachLevelUpMoves:
+	setmoverelearnerstate MOVE_RELEARNER_LEVEL_UP_MOVES
+	bufferstring STR_VAR_3, MoveRelearner_Text_LevelUpMoveLWR
 	goto FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
 	end
 
