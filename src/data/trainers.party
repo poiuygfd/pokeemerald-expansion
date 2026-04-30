@@ -5254,7 +5254,7 @@ Nature: Bold
 - Will O Wisp
 - Protect
 
-Mimikyu @ Focus Sash
+Mimikyu @ Spell Tag
 Level: 50
 Ability: Disguise
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
@@ -5975,7 +5975,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 43
+Level: 45
 Ability: Unaware
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpD
@@ -5985,14 +5985,16 @@ Nature: Jolly
 - Rest
 - Sleep Talk
 
-Tatsugiri-Curly @ Life Orb
-Level: 43
+Tatsugiri-Curly @ Tatsugirinite
+Level: 45
 Ability: Commander
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
 Nature: Modest
 - Hydro Pump
+- Muddy Water
 - Dragon Pulse
+- Nasty Plot
 
 Marin @ Focus Sash
 Level: 42
@@ -6027,8 +6029,8 @@ Nature: Modest
 - Double Team
 - Rest
 
-Gyarados @ Gyaradosite
-Level: 46
+Gyarados @ Wacan Berry
+Level: 45
 Ability: Intimidate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -10780,27 +10782,17 @@ Items: Full Restore / Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Altaria
-Level: 44
-Ability: Cloud Nine
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 150 SpA / 150 Spe
-- Dragon Pulse
-- Air Slash
-- Moonblast
-- Roost
-
 Delcatty
 Level: 43
-Ability: Wonder Skin
+Ability: Normalize
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 150 HP / 150 Spe
-- Wish
+EVs: 150 Atk / 150 Spe
+- Fake Out
 - Charm
-- Attract
+- Covet
 - Last Resort
 
-Roserade
+Roserade @ Black Sludge
 Level: 44
 Ability: Natural Cure
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
@@ -10810,17 +10802,17 @@ EVs: 150 SpA / 150 Spe
 - Giga Drain
 - Toxic
 
-Magnezone
+Magnezone @ Air Balloon
 Level: 42
 Ability: Analytic
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 150 HP / 150 SpA
+EVs: 150 Def / 150 SpA
 - Flash Cannon
 - Thunderbolt
 - Tri Attack
-- Magnet Rise
+- Body Press
 
-Maushold
+Maushold @ Loaded Dice
 Level: 42
 Ability: Technician
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
@@ -10829,6 +10821,16 @@ EVs: 150 Atk / 150 Spe
 - Bite
 - Charm
 - Bullet Seed
+
+Altaria @ Life Orb
+Level: 44
+Ability: Cloud Nine
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 SpA / 150 Spe
+- Dragon Pulse
+- Air Slash
+- Moonblast
+- Roost
 
 Gallade @ Galladite
 Level: 45
@@ -12524,63 +12526,145 @@ Rabsca
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_RUSTBORO_TREECKO ===
+=== TRAINER_BRENDAN_EVER_GRANDE_TREECKO ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shroomish
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Gastrodon @ Leftovers
+Level: 43
+Ability: Storm Drain
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Ice Beam
+- Recover
 
-Shellos
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Breloom @ Loaded Dice
+Level: 43
+Ability: Technician
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Bullet Seed
+- Drain Punch
+- Mach Punch
+- Spore
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Torchic
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (M) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 SpA / 150 Spe
+- Expanding Force
+- Hyper Voice
+- Shadow Ball
+- Dazzling Gleam
 
-=== TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Blaziken @ Blazikenite
+Level: 45
+Ability: Blaze
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Flare Blitz
+- Close Combat
+- Brave Bird
+- Protect
+
+=== TRAINER_BRENDAN_EVER_GRANDE_MUDKIP ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shellos
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Centiskorch @ Shell Bell
+Level: 43
+Ability: White Smoke
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 Atk
+- Fire Lash
+- Leech Life
+- Crunch
+- Coil
 
-Sizzlipede
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Gastrodon @ Leftovers
+Level: 43
+Ability: Storm Drain
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Ice Beam
+- Recover
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Treecko
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (M) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 SpA / 150 Spe
+- Expanding Force
+- Hyper Voice
+- Shadow Ball
+- Dazzling Gleam
+
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Sceptile @ Sceptilite
+Level: 45
+Ability: Overgrow
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 SpA / 150 Spe
+- Giga Drain
+- Dragon Pulse
+- Leaf Storm
+- Leech Seed
 
 === TRAINER_PAXTON ===
 Name: PAXTON
@@ -12675,63 +12759,145 @@ Lycanroc-Midnight
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
+=== TRAINER_BRENDAN_EVER_GRANDE_TORCHIC ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Sizzlipede
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Breloom @ Loaded Dice
+Level: 43
+Ability: Technician
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Bullet Seed
+- Drain Punch
+- Mach Punch
+- Spore
 
-Shroomish
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Centiskorch @ Shell Bell
+Level: 43
+Ability: White Smoke
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 Atk
+- Fire Lash
+- Leech Life
+- Crunch
+- Coil
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Mudkip
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (M) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 SpA / 150 Spe
+- Expanding Force
+- Hyper Voice
+- Shadow Ball
+- Dazzling Gleam
 
-=== TRAINER_MAY_RUSTBORO_MUDKIP ===
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Swampert @ Swampertite
+Level: 45
+Ability: Torrent
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Waterfall
+- Earthquake
+- Rock Slide
+- Rain Dance
+
+=== TRAINER_MAY_EVER_GRANDE_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shellos
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Centiskorch @ Shell Bell
+Level: 43
+Ability: White Smoke
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 Atk
+- Fire Lash
+- Leech Life
+- Crunch
+- Coil
 
-Sizzlipede
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Gastrodon @ Leftovers
+Level: 43
+Ability: Storm Drain
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Ice Beam
+- Recover
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Treecko
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (F) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Expanding Force
+- Follow Me
+- Helping Hand
+- Charm
+
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Sceptile @ Sceptilite
+Level: 45
+Ability: Overgrow
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 SpA / 150 Spe
+- Giga Drain
+- Dragon Pulse
+- Leaf Storm
+- Leech Seed
 
 === TRAINER_MAXIE_MAGMA_HIDEOUT ===
 Name: MAXIE
@@ -16338,63 +16504,145 @@ Probopass
 Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MAY_RUSTBORO_TREECKO ===
+=== TRAINER_MAY_EVER_GRANDE_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shroomish
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Gastrodon @ Leftovers
+Level: 43
+Ability: Storm Drain
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Ice Beam
+- Recover
 
-Shellos
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Breloom @ Loaded Dice
+Level: 43
+Ability: Technician
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Bullet Seed
+- Drain Punch
+- Mach Punch
+- Spore
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Torchic
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (F) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Expanding Force
+- Follow Me
+- Helping Hand
+- Charm
 
-=== TRAINER_MAY_RUSTBORO_TORCHIC ===
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Blaziken @ Blazikenite
+Level: 45
+Ability: Blaze
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Flare Blitz
+- Close Combat
+- Brave Bird
+- Protect
+
+=== TRAINER_MAY_EVER_GRANDE_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore
 Double Battle: Yes
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Sizzlipede
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Breloom @ Loaded Dice
+Level: 43
+Ability: Technician
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Bullet Seed
+- Drain Punch
+- Mach Punch
+- Spore
 
-Shroomish
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-EVs: 50 HP
+Centiskorch @ Shell Bell
+Level: 43
+Ability: White Smoke
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 Atk
+- Fire Lash
+- Leech Life
+- Crunch
+- Coil
 
-Pikachu
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Swellow @ Flame Orb
+Level: 42
+Ability: Guts
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 Atk / 150 Spe
+- Facade
+- Brave Bird
+- Protect
+- Roost
 
-Mudkip
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
+Indeedee (F) @ Psychic Seed
+Level: 42
+Ability: Psychic Surge
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 150 HP / 150 SpA
+- Expanding Force
+- Follow Me
+- Helping Hand
+- Charm
+
+Raichu @ Focus Sash
+Level: 44
+Ability: Lightning Rod
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Nuzzle
+- Fake Out
+- Light Screen
+
+Swampert @ Swampertite
+Level: 45
+Ability: Torrent
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Waterfall
+- Earthquake
+- Rock Slide
+- Rain Dance
 
 === TRAINER_ROXANNE_2 ===
 Name: ROXANNE

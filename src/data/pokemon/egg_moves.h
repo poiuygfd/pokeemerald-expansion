@@ -1270,6 +1270,7 @@ static const u16 sElekidEggMoveLearnset[] = {
     MOVE_FEINT,
     MOVE_HAMMER_ARM,
     MOVE_FOCUS_PUNCH,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS
@@ -1292,6 +1293,7 @@ static const u16 sMagbyEggMoveLearnset[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_POWER_SWAP,
     MOVE_BELCH,
+    MOVE_FOLLOW_ME,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_2_CROSS_EVOS

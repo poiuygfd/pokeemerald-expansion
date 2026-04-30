@@ -472,7 +472,16 @@ MossdeepCity_EventScript_ReceivedGalarica::
 	end
 
 MossdeepCity_EventScript_BlackBelt::
-	msgbox MossdeepCity_Text_SootopolisNewGymLeader, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_ge VAR_SOOTOPOLIS_CITY_STATE, 6, MossdeepCity_EventScript_BlackBeltNewLeader
+	msgbox MossdeepCity_Text_SootopolisGymLeader, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_EventScript_BlackBeltNewLeader::
+	msgbox MossdeepCity_Text_SootopolisNewGymLeader, MSGBOX_DEFAULT
+	release
 	end
 
 MossdeepCity_EventScript_Scott::
@@ -725,6 +734,16 @@ MossdeepCity_Text_ScottSomethingWrongWithTown:
 	.string "letter and the SPACE CENTER…\p"
 	.string "I don't think it concerns me in any\n"
 	.string "way, though.$"
+
+MossdeepCity_Text_SootopolisGymLeader:
+	.string "Ahh… It feels great letting the waves\n"
+	.string "wash over my feet…\p"
+	.string "Speaking of the waves, you know that\n"
+	.string "island city SOOTOPOLIS?\p"
+	.string "I think the GYM LEADER there, WALLACE,\n"
+	.string "uses WATER-type POKéMON.\p"
+	.string "They say he's made a real splash in\n"
+	.string "the CONTEST scene too.$"
 
 MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "Ahh… It feels great letting the waves\n"

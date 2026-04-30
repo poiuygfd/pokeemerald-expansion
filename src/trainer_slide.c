@@ -60,6 +60,35 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        // Rivals
+        [TRAINER_BRENDAN_EVER_GRANDE_TREECKO] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, BLAZIKEN?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_EVER_GRANDE_MUDKIP] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SCEPTILE?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_EVER_GRANDE_TORCHIC] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SWAMPERT?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_EVER_GRANDE_TREECKO] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and BLAZIKEN won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_EVER_GRANDE_MUDKIP] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SCEPTILE won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_EVER_GRANDE_TORCHIC] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SWAMPERT won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_WALLY_VR_1] =
+        {
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and GALLADE believe in each other!\nWitness the strength of our bond!{PAUSE_UNTIL_PRESS}"),
+        },
         // Gym Leaders
         [TRAINER_ROXANNE_1] =
         {
@@ -99,12 +128,12 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         [TRAINER_TATE_AND_LIZA_1] =
         {
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Our combination…\nIs being beaten…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("It's up to you, SLOWBRO…\nIt's up to you, SLOWBRO…{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("It's up to you, MEOWSTIC…\nIt's up to you, MEOWSTIC…{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_JUAN_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It seems our dance is coming\nto a close.{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I won't give up yet!\nNow face our final illusion!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Alas, our dance is coming to a close.\nLet's make this a grand finale!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Thought DONDOZO was my big threat?\nThink again, my friend! Go, TATSUGIRI!{PAUSE_UNTIL_PRESS}"),
         },
         // Elite Four
         [TRAINER_SIDNEY] =

@@ -123,8 +123,8 @@ VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore:
 	.string "I bet you're surprised to see me here!\p"
 	.string "I made it all the way here, and it's\n"
 	.string "all thanks to you!\p"
-	.string "{PLAYER}, losing to you that time\n"
-	.string "made me stronger!\p"
+	.string "We've been through a lot to make it to\n"
+	.string "this point, haven't we, {PLAYER}?\p"
 	.string "But I'm not going to lose anymore!\p"
 	.string "I'm going to win! For the POKéMON who\n"
 	.string "gave me courage and strength!\p"
@@ -137,7 +137,11 @@ VictoryRoad_1F_Text_WallyEntranceDefeat:
 VictoryRoad_1F_Text_WallyPostEntranceBattle:
 	.string "WALLY: I couldn't beat you today,\n"
 	.string "{PLAYER}, but one of these days, I'll\l"
-	.string "catch up to you!$"
+	.string "catch up to you!\p"
+	.string "So you better give the LEAGUE your\n"
+	.string "absolute best!\p"
+	.string "Next time we battle, I'm sure I'll\n"
+	.string "be battling against a new CHAMPION!$"
 
 VictoryRoad_1F_Text_WallyIntro:
 	.string "WALLY: Hi! {PLAYER}!\p"
