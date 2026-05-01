@@ -4552,11 +4552,14 @@ void GetAvitorchCodeFeedback(void)
 
     static const u8 sText_AvitorchCode[] = _("TorchGang");
     static const u8 sText_PartrioCode[] = _("PerfectPets");
+    static const u8 sText_RandomCode[] = _("CoinFlip");
 
     if (!StringCompare(gStringVar2, sText_AvitorchCode))
         gSpecialVar_Result = 1;
     else if (!StringCompare(gStringVar2, sText_PartrioCode))
         gSpecialVar_Result = 2;
+    else if (!StringCompare(gStringVar2, sText_RandomCode))
+        gSpecialVar_Result = 3;
     else
         gSpecialVar_Result = 0;
 }

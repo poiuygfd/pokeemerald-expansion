@@ -12,12 +12,20 @@ FallarborTown_MoveRelearnersHouse_EventScript_FakemonGiftGiver::
 	special GetAvitorchCodeFeedback
 	goto_if_eq VAR_RESULT, 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessAvitorch
 	goto_if_eq VAR_RESULT, 2, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessPartrio
+	goto_if_eq VAR_RESULT, 3, FallarborTown_MoveRelearnersHouse_EventScript_ChooseRandomCode
 	goto FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_CodeFailed::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_CodeIncorrect, MSGBOX_DEFAULT
 	releaseall
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_ChooseRandomCode::
+	random 2
+	switch VAR_RESULT
+	case 0, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessAvitorch
+	case 1, FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessPartrio
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_CodeSuccessAvitorch::
