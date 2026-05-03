@@ -108,6 +108,10 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_BerryPainting::
 	msgbox LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBerries, MSGBOX_SIGN
 	end
 
+LilycoveCity_LilycoveMuseum_1F_EventScript_WeeptchiPainting::
+	msgbox LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfSpectre, MSGBOX_SIGN
+	end
+
 LilycoveCity_LilycoveMuseum_EventScript_BirdSculpture::
 	msgbox LilycoveCity_LilycoveMuseum_Text_BirdPokemonSculptureReplica, MSGBOX_SIGN
 	end
@@ -220,6 +224,12 @@ LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBerries:
 	.string "It's a delicious-looking painting\n"
 	.string "of BERRIES.\p"
 	.string "This painting could make you hungry!$"
+
+LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfSpectre:
+	.string "It appears to be a painting of some\n"
+	.string "sort of small spectre.\p"
+	.string "Its teary-eyed appearance makes you\n"
+	.string "want to try harder.$"
 
 LilycoveCity_LilycoveMuseum_Text_BirdPokemonSculptureReplica:
 	.string "It's a replica of a famous sculpture.\p"

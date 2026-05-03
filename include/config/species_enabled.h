@@ -444,7 +444,7 @@
 #define P_FAMILY_STUFFUL                 P_GEN_7_POKEMON
 #define P_FAMILY_BOUNSWEET               P_GEN_7_POKEMON
 #define P_FAMILY_COMFEY                  FALSE
-#define P_FAMILY_ORANGURU                FALSE
+#define P_FAMILY_ORANGURU                P_GEN_7_POKEMON
 #define P_FAMILY_PASSIMIAN               FALSE
 #define P_FAMILY_WIMPOD                  P_GEN_7_POKEMON
 #define P_FAMILY_SANDYGAST               P_GEN_7_POKEMON
@@ -520,7 +520,7 @@
 #define P_FAMILY_ZACIAN                  P_GEN_8_POKEMON
 #define P_FAMILY_ZAMAZENTA               P_GEN_8_POKEMON
 #define P_FAMILY_ETERNATUS               FALSE
-#define P_FAMILY_KUBFU                   FALSE
+#define P_FAMILY_KUBFU                   P_GEN_8_POKEMON
 #define P_FAMILY_ZARUDE                  FALSE
 #define P_FAMILY_REGIELEKI               P_GEN_8_POKEMON
 #define P_FAMILY_REGIDRAGO               P_GEN_8_POKEMON

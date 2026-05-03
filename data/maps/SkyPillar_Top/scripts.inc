@@ -46,6 +46,7 @@ SkyPillar_Top_EventScript_Rayquaza::
 	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SkyPillar_Top_EventScript_RayquazaUncatchable
 	call_if_set FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetMainGameLevel
 	call_if_unset FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetPostGameLevel
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -60,6 +61,10 @@ SkyPillar_Top_EventScript_Rayquaza::
 	releaseall
 	end
 
+SkyPillar_Top_EventScript_RayquazaUncatchable::
+	setflag FLAG_PREVENT_CATCHING
+	return
+
 SkyPillar_Top_EventScript_SetMainGameLevel::
 	setwildbattle SPECIES_RAYQUAZA, 45
 	return
@@ -69,11 +74,13 @@ SkyPillar_Top_EventScript_SetPostGameLevel::
 	return
 
 SkyPillar_Top_EventScript_DefeatedRayquaza::
+	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SkyPillar_Top_EventScript_RayquazaLeaves
 	setflag FLAG_DEFEATED_RAYQUAZA
 	goto SkyPillar_Top_EventScript_DefeatedRayquaza2
 	end
 
 SkyPillar_Top_EventScript_RanFromRayquaza::
+	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SkyPillar_Top_EventScript_RayquazaExpectant
 	setvar VAR_0x8004, SPECIES_RAYQUAZA
 	goto SkyPillar_Top_EventScript_RanFromRayquaza2
 	end
@@ -122,6 +129,32 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	special ShakeCamera
 	waitstate
 	waitmoncry
+	msgbox SkyPillar_Top_Text_RayquazaTestingYou, MSGBOX_DEFAULT
+	closemessage
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, SkyPillar_Top_Movement_CameraPanDown
+	waitmovement 0
+	special RemoveCameraObject
+	setvar VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE, 1
+	releaseall
+	end
+
+SkyPillar_Top_EventScript_RayquazaExpectant::
+	msgbox SkyPillar_Top_Text_RayquazaStaringExpectantly, MSGBOX_DEFAULT
+	clearflag FLAG_PREVENT_CATCHING
+	closemessage
+	releaseall
+	end
+
+SkyPillar_Top_EventScript_RayquazaLeaves::
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	waitmoncry
 	applymovement LOCALID_RAYQUAZA_SLEEPING, SkyPillar_Top_Movement_RayquazaFlyOff
 	waitmovement 0
 	removeobject LOCALID_RAYQUAZA_SLEEPING
@@ -129,13 +162,9 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	closemessage
 	delay 20
 	fadeinbgm 1
-	special SpawnCameraObject
-	applymovement LOCALID_CAMERA, SkyPillar_Top_Movement_CameraPanDown
-	waitmovement 0
-	special RemoveCameraObject
+	clearflag FLAG_PREVENT_CATCHING
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 5
 	setvar VAR_SKY_PILLAR_STATE, 1
-	setvar VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE, 1
 	releaseall
 	end
 
@@ -151,22 +180,23 @@ SkyPillar_Top_Movement_RayquazaStir:
 	delay_16
 	walk_in_place_left  @ Coiled, mouth open
 	delay_16
-	walk_in_place_right  @ Normal, awake
+	walk_in_place_fast_right  @ Normal, awake
 	delay_16
 	delay_16
 	delay_16
 	delay_16
 	delay_16
 	delay_16
+	walk_in_place_right  @ Coiled, mouth open
+	delay_16
+	walk_in_place_down
 	step_end
 
 SkyPillar_Top_Movement_RayquazaFlyOff:
-	delay_16
-	walk_in_place_down  @ Coiled, asleep
-	delay_8
-	walk_in_place_right  @ Normal, awake
-	delay_8
 	walk_faster_up  @ Fly up
+	delay_16
+	delay_16
+	lock_facing_direction
 	slide_up
 	slide_up
 	slide_up
@@ -187,6 +217,15 @@ SkyPillar_Top_Movement_CameraPanDown:
 	walk_slow_down
 	step_end
 
+SkyPillar_Top_Text_RayquazaTestingYou:
+	.string "RAYQUAZA appears to be inspecting you…\n"
+	.string "It is staring at you expectantly.\p"
+	.string "Is RAYQUAZA testing your resolve…?$"
+
+SkyPillar_Top_Text_RayquazaStaringExpectantly:
+	.string "RAYQUAZA is staring at you expectantly.$"
+
 SkyPillar_Top_Text_RayquazaFlewOff:
-	.string "The awakened RAYQUAZA flew off…$"
+	.string "RAYQUAZA seems content.\n"
+	.string "RAYQUAZA flew off towards SOOTOPOLIS…$"
 

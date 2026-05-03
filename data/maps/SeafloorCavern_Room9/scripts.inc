@@ -44,7 +44,7 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	playfanfare MUS_AWAKEN_LEGEND
 	playse SE_ORB
 	special DoOrbEffect
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_SEAFLOOR_CAVERN_ARCHIE, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 150
