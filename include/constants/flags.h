@@ -676,7 +676,7 @@
 #define FLAG_TUFFNOOK_NPC_TRADE_COMPLETED  0x26C // Tuffnook Munchlax Trade
 #define FLAG_MET_GAVIN  0x26D // Met Gavin from Gavin's Gems
 #define FLAG_NAVEL_ROCK_GUARDIAN_MOVED  0x26E // Guardian has moved
-#define FLAG_BIRCH_TUFFNOOK_TALKED_TO  0x26F // Tuffnook Prof. Birch event
+#define FLAG_HIDE_TUFFNOOK_PROF_BIRCH  0x26F // Tuffnook Prof. Birch event
 #define FLAG_HIDE_LILYCOVE_SCOTT  0x270 // Scott gift giver in Lilycove
 #define FLAG_HIDE_BEACH_TUBES  0x271 // Event with Regitube and Regigigas has occurred
 #define FLAG_HIDE_CUTSCENE_REGIGIGAS  0x272 // Regigigas used in Regitube event
@@ -711,8 +711,8 @@
 #define FLAG_TRADED_WALLACE_FEEBAS  0x28F // Completed Wallace's Feebas trade
 #define FLAG_HIDE_BODY_PRESS_MAN  0x290 // Body Press Giver is hidden until the player has 5 badges
 #define FLAG_HIDE_EVER_GRANDE_RIVAL  0x291 // Rival Battle in Ever Grande City
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
+#define FLAG_HIDE_TUFFNOOK_TEAM_AQUA  0x292 // Team Aqua Brigade in Tuffnook
+#define FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA  0x293 // The same Team Aqua guys but in Navel Rock
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag

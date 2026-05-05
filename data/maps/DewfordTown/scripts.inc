@@ -6,24 +6,10 @@ DewfordTown_MapScripts::
 DewfordTown_OnTransition:
 	setflag FLAG_VISITED_DEWFORD_TOWN
 	call_if_eq VAR_BOARD_BRINEY_BOAT_STATE, 1, DewfordTown_EventScript_SetBrineyPos
-	call_if_eq VAR_DEWFORD_TOWN_STATE, 0, DewfordTown_EventScript_CheckArrivalState
 	end
 
 DewfordTown_EventScript_SetBrineyPos:
 	setobjectxyperm LOCALID_DEWFORD_BRINEY, 13, 9
-	return
-
-DewfordTown_EventScript_CheckArrivalState:
-	call_if_set FLAG_HIDE_DEWFORD_TOWN_TENTACOOL, DewfordTown_EventScript_SetArrivalPostTentacool
-	call_if_unset FLAG_BRINEY_STEERING_BOAT, DewfordTown_EventScript_SetArrivalState
-	return
-
-DewfordTown_EventScript_SetArrivalState:
-	setvar VAR_DEWFORD_TOWN_STATE, 1
-	return
-
-DewfordTown_EventScript_SetArrivalPostTentacool:
-	setvar VAR_DEWFORD_TOWN_STATE, 2
 	return
 
 DewfordTown_OnFrame:
@@ -90,6 +76,7 @@ DewfordTown_EventScript_DidNotLand::
 	end
 
 DewfordTown_EventScript_GetOffBoat::
+	call_if_lt VAR_DEWFORD_TOWN_STATE, 1, DewfordTown_EventScript_SetTentacoolState
 	clearflag FLAG_BRINEY_STEERING_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
@@ -105,6 +92,10 @@ DewfordTown_EventScript_GetOffBoat::
 	waitstate
 	release
 	end
+
+DewfordTown_EventScript_SetTentacoolState::
+	setvar VAR_DEWFORD_TOWN_STATE, 1
+	return
 
 DewfordTown_EventScript_Woman::
 	msgbox DewfordTown_Text_TinyIslandCommunity, MSGBOX_NPC

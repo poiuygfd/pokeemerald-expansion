@@ -1,5 +1,211 @@
 TuffnookTownInterior_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, TuffnookTownInterior_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, TuffnookTownInterior_OnFrame
 	.byte 0
+
+TuffnookTownInterior_OnTransition:
+	call_if_eq VAR_TUFFNOOK_TOWN_STATE, 3, TuffnookTownInterior_EventScript_MoveProfToCave
+	end
+
+TuffnookTownInterior_EventScript_MoveProfToCave::
+	setobjectxyperm LOCALID_TUFFNOOK_BIRCH, 20, 4
+	setobjectmovementtype LOCALID_TUFFNOOK_BIRCH, MOVEMENT_TYPE_FACE_UP
+	return
+
+TuffnookTownInterior_OnFrame:
+	map_script_2 VAR_TUFFNOOK_TOWN_STATE, 1, TuffnookTownInterior_EventScript_BirchGiveCatchCharm
+	map_script_2 VAR_TUFFNOOK_TOWN_STATE, 3, TuffnookTownInterior_EventScript_BirchSayGoodbye
+	.2byte 0
+
+TuffnookTownInterior_EventScript_BirchGiveCatchCharm::
+	lockall
+	msgbox TuffnookTownInterior_Text_BirchOverHere, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, TuffnookTownInterior_Movement_PlayerApproachBirch
+	waitmovement 0
+	msgbox TuffnookTownInterior_Text_BirchHowHaveYouBeen, MSGBOX_DEFAULT
+	giveitem ITEM_CATCHING_CHARM
+	msgbox TuffnookTownInterior_Text_BirchCatchingCharmGift, MSGBOX_DEFAULT
+	closemessage
+	goto TuffnookTownInterior_EventScript_TeamAquaAppears
+	end
+
+TuffnookTownInterior_EventScript_TeamAquaAppears::
+	msgbox TuffnookTownInterior_Text_AlrightTeamMoveOut, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_TUFFNOOK_BIRCH, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_TUFFNOOK_BIRCH, Common_Movement_FaceDown
+	playse SE_PIN
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_AQUA, FALSE
+	addobject LOCALID_TUFFNOOK_MATT
+	addobject LOCALID_TUFFNOOK_GRUNT_1
+	addobject LOCALID_TUFFNOOK_GRUNT_2
+	addobject LOCALID_TUFFNOOK_GRUNT_3
+	addobject LOCALID_TUFFNOOK_GRUNT_4
+	applymovement LOCALID_TUFFNOOK_MATT, TuffnookTownInterior_Movement_AquaEnters1
+	applymovement LOCALID_TUFFNOOK_GRUNT_1, TuffnookTownInterior_Movement_AquaEnters2
+	applymovement LOCALID_TUFFNOOK_GRUNT_2, TuffnookTownInterior_Movement_AquaEnters3
+	applymovement LOCALID_TUFFNOOK_GRUNT_3, TuffnookTownInterior_Movement_AquaEnters4
+	applymovement LOCALID_TUFFNOOK_GRUNT_4, TuffnookTownInterior_Movement_AquaEnters5
+	waitmovement 0
+	removeobject LOCALID_TUFFNOOK_MATT
+	removeobject LOCALID_TUFFNOOK_GRUNT_1
+	removeobject LOCALID_TUFFNOOK_GRUNT_2
+	removeobject LOCALID_TUFFNOOK_GRUNT_3
+	removeobject LOCALID_TUFFNOOK_GRUNT_4
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_TUFFNOOK_BIRCH, Common_Movement_FaceUp
+	waitmovement 0
+	delay 16
+	applymovement LOCALID_TUFFNOOK_BIRCH, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox TuffnookTownInterior_Text_WhatOnEarthWasThat, MSGBOX_DEFAULT
+	closemessage
+	fadedefaultbgm
+	setvar VAR_TUFFNOOK_TOWN_STATE, 2
+	release
+	end
+
+TuffnookTownInterior_EventScript_Birch::
+	msgbox TuffnookTownInterior_Text_GoAfterThem, MSGBOX_NPC
+	end
+
+TuffnookTownInterior_Movement_PlayerApproachBirch:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+TuffnookTownInterior_Movement_AquaEnters1:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+TuffnookTownInterior_Movement_AquaEnters2:
+	delay_8
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+TuffnookTownInterior_Movement_AquaEnters3:
+	delay_8
+	delay_8
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+TuffnookTownInterior_Movement_AquaEnters4:
+	delay_8
+	delay_8
+	delay_8
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+TuffnookTownInterior_Movement_AquaEnters5:
+	delay_8
+	delay_8
+	delay_8
+	delay_8
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+TuffnookTownInterior_EventScript_BirchSayGoodbye::
+	lock
+	msgbox TuffnookTownInterior_Text_TakeCarePlayer, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TUFFNOOK_BIRCH, TuffnookTownInterior_Movement_BirchLeave
+	waitmovement 0
+	removeobject LOCALID_TUFFNOOK_BIRCH
+	setvar VAR_TUFFNOOK_TOWN_STATE, 4
+	release
+	end
+
+TuffnookTownInterior_Movement_BirchLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 TuffnookTownInterior_EventScript_Girl::
 	msgbox TuffnookTownInterior_Text_LiveInACave, MSGBOX_NPC
@@ -30,7 +236,12 @@ TuffnookTownInterior_EventScript_YoungGirl::
 	end
 
 TuffnookTownInterior_EventScript_Lass::
+	goto_if_unset FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA, TuffnookTownInterior_EventScript_WhoWasThat
 	msgbox TuffnookTownInterior_Text_ScaryCave, MSGBOX_NPC
+	end
+
+TuffnookTownInterior_EventScript_WhoWasThat::
+	msgbox TuffnookTownInterior_Text_WeirdPirates, MSGBOX_NPC
 	end
 
 TuffnookTownInterior_EventScript_OldMan::
@@ -72,67 +283,6 @@ TuffnookTownInterior_EventScript_Drilbur::
 	release
 	end
 
-MossdeepCity_EventScript_ProfBirch::
-	lock
-	faceplayer
-	msgbox TuffnookTownInterior_Text_BirchHowHaveYouBeen, MSGBOX_DEFAULT
-	giveitem ITEM_CATCHING_CHARM
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox TuffnookTownInterior_Text_BirchCatchingCharmGift, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_FACING, DIR_SOUTH, TuffnookTownInterior_EventScript_BirchLeave3
-	call_if_eq VAR_FACING, DIR_NORTH, TuffnookTownInterior_EventScript_BirchLeave2
-	call_if_eq VAR_FACING, DIR_EAST, TuffnookTownInterior_EventScript_BirchLeave
-	call_if_eq VAR_FACING, DIR_WEST, TuffnookTownInterior_EventScript_BirchLeave
-	setflag FLAG_BIRCH_TUFFNOOK_TALKED_TO
-	removeobject LOCALID_TUFFNOOK_BIRCH
-	release
-	end
-
-TuffnookTownInterior_EventScript_BirchLeave::
-	applymovement LOCALID_PLAYER, TuffnookTownInterior_Movement_PlayerWatchBirchExit
-	applymovement LOCALID_TUFFNOOK_BIRCH, TuffnookTownInterior_Movement_BirchLeave
-	waitmovement 0
-	return
-
-TuffnookTownInterior_EventScript_BirchLeave2::
-	applymovement LOCALID_PLAYER, TuffnookTownInterior_Movement_PlayerWatchBirchExit
-	applymovement LOCALID_TUFFNOOK_BIRCH, TuffnookTownInterior_Movement_BirchLeave2
-	waitmovement 0
-	return
-
-TuffnookTownInterior_EventScript_BirchLeave3::
-	applymovement LOCALID_TUFFNOOK_BIRCH, TuffnookTownInterior_Movement_BirchLeave
-	waitmovement 0
-	return
-
-TuffnookTownInterior_Movement_PlayerWatchBirchExit:
-	delay_16
-	delay_16
-	walk_in_place_faster_down
-	step_end
-
-TuffnookTownInterior_Movement_BirchLeave:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-TuffnookTownInterior_Movement_BirchLeave2:
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
 TuffnookTownInterior_EventScript_TownSign::
 	msgbox TuffnookTownInterior_Text_TownSign, MSGBOX_SIGN
 	end
@@ -172,6 +322,13 @@ TuffnookTownInterior_Text_ScaryCave:
 	.string "POKéMON of terrifying strength.\p"
 	.string "Because of that, most people have\n"
 	.string "been too scared to enter the cave…$"
+
+TuffnookTownInterior_Text_WeirdPirates:
+	.string "Who were those guys?\n"
+	.string "They were dressed like weird pirates!\p"
+	.string "Don't they know that there have been\n"
+	.string "reports of some terrifyingly dangerous\l"
+	.string "POKéMON found in that cave?$"
 
 TuffnookTownInterior_Text_LivedHereAllMyLife:
 	.string "I've lived here all me life!\p"
@@ -218,6 +375,9 @@ TuffnookTownInterior_Text_GuysIDontThinkThisGuyIsOK:
 TuffnookTownInterior_Text_Drilbur:
 	.string "DRILBUR: Dri dri!$"
 
+TuffnookTownInterior_Text_BirchOverHere:
+	.string "{PLAYER}! Over here!$"
+
 TuffnookTownInterior_Text_BirchHowHaveYouBeen:
 	.string "PROF. BIRCH: {PLAYER}{KUN}!\n"
 	.string "How have you been doing?\p"
@@ -235,9 +395,46 @@ TuffnookTownInterior_Text_BirchCatchingCharmGift:
 	.string "LAB soon.\p"
 	.string "Come stop by whenever you want to show\n"
 	.string "me how your POKéDEX is coming along!\p"
-	.string "I'm assuming you'll be heading back\n"
-	.string "to PETALBURG for your father's GYM\l"
-	.string "BAADGE soon, so I wish you good luck!$"
+	.string "I'll see you around…$"
+
+TuffnookTownInterior_Text_AlrightTeamMoveOut:
+	.string "Alright, team!\n"
+	.string "Move out!$"
+
+TuffnookTownInterior_Text_WhatOnEarthWasThat:
+	.string "PROF. BIRCH: What on earth was that?\n"
+	.string "Was that TEAM AQUA who stormed past?\p"
+	.string "I don't know what TEAM AQUA is up to\n"
+	.string "here of all places, but I have a bad\l"
+	.string "feeling about this.\p"
+	.string "Sorry to ask, {PLAYER}, but could you\n"
+	.string "go after them?\p"
+	.string "I'm not really a TRAINER, so I don't\n"
+	.string "think I could do much to stop them.\p"
+	.string "If it looks dangerous, though, then\n"
+	.string "please don't get in over your head!$"
+
+TuffnookTownInterior_Text_GoAfterThem:
+	.string "PROF. BIRCH: Could you go after\n"
+	.string "them, {PLAYER}?\p"
+	.string "I'm not really a TRAINER, so I don't\n"
+	.string "think I could do much to stop them.\p"
+	.string "If it looks dangerous, though, then\n"
+	.string "please don't get in over your head!$"
+
+TuffnookTownInterior_Text_TakeCarePlayer:
+	.string "PROF. BIRCH: I just saw TEAM AQUA\n"
+	.string "storm past, did everything go okay?\p"
+	.string "Ah, you managed to chase them off!\n"
+	.string "That's very impressive, {PLAYER}!\l"
+	.string "You're really getting strong!\p"
+	.string "With strength like that, you might\n"
+	.string "even be able to take on your DAD\l"
+	.string "back in PETALBURG!\p"
+	.string "If you decide to go for it, then I\n"
+	.string "shall wish you the best of luck!\p"
+	.string "For now though, I should be off.\n"
+	.string "Until next time!$"
 
 TuffnookTownInterior_Text_TownSign:
 	.string "TUFFNOOK TOWN\p"

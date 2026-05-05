@@ -53,6 +53,48 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TOXIC_ORB",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_NAVEL_ROCK_TOXIC_ORB"
+    },
+    {
+      "local_id": "LOCALID_NAVEL_ROCK_GRUNT_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 8,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "NavelRock_Fork_EventScript_Grunt3",
+      "flag": "FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA"
+    },
+    {
+      "local_id": "LOCALID_NAVEL_ROCK_GRUNT_F",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 18,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "NavelRock_Fork_EventScript_Grunt4",
+      "flag": "FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA"
+    },
+    {
+      "local_id": "LOCALID_NAVEL_ROCK_MATT",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA"
     }
   ],
   "warp_events": [
@@ -78,6 +120,16 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TUFFNOOK_TOWN_STATE",
+      "var_value": "2",
+      "script": "NavelRock_Fork_EventScript_MattTrigger"
+    }
+  ],
   "bg_events": []
 }

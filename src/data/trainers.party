@@ -5749,7 +5749,7 @@ EVs: 200 Def / 150 SpA
 - Body Press
 - Sunny Day
 
-Pyroar @ Sitrus Berry
+Pyroar (F) @ Sitrus Berry
 Level: 29
 Ability: Unnerve
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
@@ -17469,7 +17469,7 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Pyroar @ Pyroarite
+Pyroar (F) @ Pyroarite
 Level: 55
 Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17545,7 +17545,7 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Pyroar @ Pyroarite
+Pyroar (F) @ Pyroarite
 Level: 60
 Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17621,7 +17621,7 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Pyroar @ Pyroarite
+Pyroar (F) @ Pyroarite
 Level: 65
 Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17697,7 +17697,7 @@ Nature: Calm
 - Body Press
 - Sunny Day
 
-Pyroar @ Pyroarite
+Pyroar (F) @ Pyroarite
 Level: 70
 Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -21092,6 +21092,103 @@ Nature: Jolly
 - Protect
 - Swords Dance
 - Extreme Speed
+
+=== TRAINER_GRUNT_NAVEL_ROCK_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Zubat
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Poochyena
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Croagunk
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_3 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Poochyena
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mareanie
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_4 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Zubat
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Finneon
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MATT_NAVEL_ROCK ===
+Name: MATT
+Class: Aqua Admin
+Pic: Aqua Admin M
+Gender: Male
+Music: Aqua
+Items: Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Golbat
+Level: 29
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Sharpedo
+Level: 29
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Barbaracle
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
 
 === TRAINER_RED ===
 Name: RED
