@@ -44,8 +44,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIOS)",
-      "x": 15,
-      "y": 16,
+      "x": 10,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 1,
@@ -54,6 +54,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SouthernIsland_Exterior_EventScript_Latios",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_GRUNT_1",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 27,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SouthernIsland_Exterior_EventScript_Grunt1",
+      "flag": "FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA"
+    },
+    {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_GRUNT_2",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SouthernIsland_Exterior_EventScript_Grunt2",
+      "flag": "FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA"
     }
   ],
   "warp_events": [

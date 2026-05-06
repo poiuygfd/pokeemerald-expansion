@@ -367,6 +367,33 @@
       "var": "VAR_ROUTE118_STATE",
       "var_value": "0",
       "script": "Route118_EventScript_StevenTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE118_STATE",
+      "var_value": "1",
+      "script": "Route118_EventScript_LatiosHelpTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE118_STATE",
+      "var_value": "1",
+      "script": "Route118_EventScript_LatiosHelpTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 59,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE118_STATE",
+      "var_value": "1",
+      "script": "Route118_EventScript_LatiosHelpTrigger"
     }
   ],
   "bg_events": [

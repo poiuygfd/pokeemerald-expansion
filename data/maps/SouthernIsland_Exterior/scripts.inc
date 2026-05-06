@@ -40,7 +40,18 @@ SouthernIsland_Exterior_EventScript_Latios::
 SouthernIsland_Exterior_EventScript_FlyToRoute::
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
 	warp MAP_ROUTE118, 52, 10
+	waitstate
 	release
+	end
+
+SouthernIsland_Exterior_EventScript_Grunt1::
+	trainerbattle_single TRAINER_GRUNT_SOUTHERN_ISLAND_1, SouthernIsland_Exterior_Text_Grunt1Intro, SouthernIsland_Exterior_Text_Grunt1Defeat
+	msgbox SouthernIsland_Exterior_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SouthernIsland_Exterior_EventScript_Grunt2::
+	trainerbattle_single TRAINER_GRUNT_SOUTHERN_ISLAND_2, SouthernIsland_Exterior_Text_Grunt2Intro, SouthernIsland_Exterior_Text_Grunt2Defeat
+	msgbox SouthernIsland_Exterior_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Ferry_EventScript_DepartIslandSouth::
@@ -69,3 +80,29 @@ SouthernIsland_Exterior_EventScript_Sign::
 SouthernIsland_Exterior_Text_FlyToRoute118:
 	.string "Would you like LATIOS to fly you back\n"
 	.string "to ROUTE 118?$"
+
+SouthernIsland_Exterior_Text_Grunt1Intro:
+	.string "Yikes! Look at all that water!\n"
+	.string "This place is terrifying for TEAM MAGMA!\p"
+	.string "I hope we don't have to stick around\n"
+	.string "for too long here!$"
+
+SouthernIsland_Exterior_Text_Grunt1Defeat:
+	.string "A scary TRAINER on a scary island!$"
+
+SouthernIsland_Exterior_Text_Grunt1PostBattle:
+	.string "I hope this ends soon…\n"
+	.string "I could really go for a hike…$"
+
+SouthernIsland_Exterior_Text_Grunt2Intro:
+	.string "Gosh, COURTNEY is just so cute!\n"
+	.string "The way she speaks is so funny!\l"
+	.string "I mean in an endearing way, of course!$"
+
+SouthernIsland_Exterior_Text_Grunt2Defeat:
+	.string "I'm sorry, COURTNEY!\n"
+	.string "I've let you down…$"
+
+SouthernIsland_Exterior_Text_Grunt2PostBattle:
+	.string "I may be a weak TRAINER, but I will\n"
+	.string "always be the number one COURTNEY fan!$"

@@ -109,9 +109,10 @@ Route118_EventScript_StevenTrigger::
 	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenWatchLatios
 	waitmovement 0
 	msgbox Route118_Text_LatiosAppear, MSGBOX_DEFAULT
-	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 17, 16
 	setvar VAR_ROUTE118_STATE, 1
 	setflag FLAG_HIDE_ROUTE_118_STEVEN
+	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 11, 17
+	waitstate
 	releaseall
 	end
 
@@ -125,7 +126,8 @@ Route118_EventScript_Latios::
 
 Route118_EventScript_FlyToIsland::
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
-	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 17, 16
+	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 11, 17
+	waitstate
 	release
 	end
 
@@ -159,6 +161,19 @@ Route118_Movement_PlayerWatchLatios:
 
 Route118_Movement_StevenWatchLatios:
 	walk_in_place_faster_right
+	step_end
+
+Route118_EventScript_LatiosHelpTrigger::
+	lock
+	msgbox Route118_Text_LatiosNeedsHelp, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerStepBack
+	waitmovement 0
+	release
+	end
+
+Route118_Movement_PlayerStepBack:
+	walk_down
 	step_end
 
 Route118_EventScript_Rose::
@@ -261,6 +276,10 @@ Route118_Text_LatiosAppear:
 Route118_Text_FlyToSouthernIsland:
 	.string "Would you like LATIOS to fly you to\n"
 	.string "SOUTHERN ISLAND?$"
+
+Route118_Text_LatiosNeedsHelp:
+	.string "LATIOS needs your help!\n"
+	.string "Ignoring it would be heartless!$"
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"

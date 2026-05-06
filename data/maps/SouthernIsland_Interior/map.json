@@ -42,6 +42,7 @@
       "flag": "FLAG_HIDE_SOUTHERN_ISLAND_UNCHOSEN_EON_DUO_MON"
     },
     {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_GRUNT_3",
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 12,
       "y": 11,
@@ -52,9 +53,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA"
     },
     {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_COURTNEY",
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 14,
       "y": 11,
@@ -65,9 +67,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA"
     },
     {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_STEVEN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
       "x": 12,
       "y": 13,
@@ -81,6 +84,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_LATIAS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIAS)",
       "x": 13,
       "y": 9,

@@ -1,8 +1,3 @@
-.set LOCALID_COURTNEY, 4
-.set LOCALID_ISLAND_GRUNT, 3
-.set LOCALID_STEVEN, 5
-.set LOCALID_LATIAS, 6
-
 SouthernIsland_Interior_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SouthernIsland_Interior_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_OnTransition
@@ -26,26 +21,40 @@ SouthernIsland_Interior_OnTransition:
 
 SouthernIsland_Interior_EventScript_LatiMagmaTrigger1::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, SouthernIsland_Interior_Movement_PlayerMove1
+	applymovement LOCALID_PLAYER, SouthernIsland_Interior_Movement_PlayerMove1
 	waitmovement 0
 	goto SouthernIsland_Interior_EventScript_EncounterMagma
 	end
 
 SouthernIsland_Interior_EventScript_LatiMagmaTrigger2::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, SouthernIsland_Interior_Movement_PlayerMove2
+	applymovement LOCALID_PLAYER, SouthernIsland_Interior_Movement_PlayerMove2
 	waitmovement 0
 	goto SouthernIsland_Interior_EventScript_EncounterMagma
 	end
 
 SouthernIsland_Interior_EventScript_EncounterMagma::
 	lockall
-	msgbox SouthernIsland_Interior_Text_Steven, MSGBOX_DEFAULT
+	delay 10
+	applymovement LOCALID_SOUTHERN_ISLAND_STEVEN, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SouthernIsland_Interior_Text_Steven1, MSGBOX_DEFAULT
+	applymovement LOCALID_SOUTHERN_ISLAND_STEVEN, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox SouthernIsland_Interior_Text_Steven2, MSGBOX_DEFAULT
 	closemessage
 	delay 10
+	applymovement LOCALID_SOUTHERN_ISLAND_GRUNT_3, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_SOUTHERN_ISLAND_COURTNEY, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox SouthernIsland_Interior_Text_MagmaGrunt, MSGBOX_DEFAULT
 	closemessage
 	delay 10
+	applymovement LOCALID_SOUTHERN_ISLAND_GRUNT_3, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_SOUTHERN_ISLAND_COURTNEY, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	msgbox SouthernIsland_Interior_Text_Courtney, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, SouthernIsland_Interior_EventScript_SaidYes
 	goto_if_eq VAR_RESULT, NO, SouthernIsland_Interior_EventScript_SaidNo
@@ -58,9 +67,15 @@ SouthernIsland_Interior_EventScript_SaidYes::
 	end
 
 SouthernIsland_Interior_EventScript_SaidNo::
+	applymovement LOCALID_SOUTHERN_ISLAND_STEVEN, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox SouthernIsland_Interior_Text_StevenWellSaid, MSGBOX_DEFAULT
 	closemessage
 	delay 10
+	applymovement LOCALID_SOUTHERN_ISLAND_STEVEN, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
 	msgbox SouthernIsland_Interior_Text_CourtneyBattle, MSGBOX_DEFAULT
 	closemessage
 	goto SouthernIsland_Interior_EventScript_ChoosePartyForMultiBattle
@@ -79,7 +94,7 @@ SouthernIsland_Interior_EventScript_ChoosePartyForMultiBattle::
 	goto SouthernIsland_Interior_EventScript_SaidNo
 
 SouthernIsland_Interior_EventScript_DoStevenMultiBattle::
-	multi_2_vs_2 TRAINER_GRUNT_SOUTHERN_ISLAND, SouthernIsland_Interior_Text_GruntDefeat, TRAINER_COURTNEY_SOUTHERN_ISLAND, SouthernIsland_Interior_Text_CourtneyDefeat, PARTNER_STEVEN_SOUTHERN_ISLAND
+	multi_2_vs_2 TRAINER_GRUNT_SOUTHERN_ISLAND_3, SouthernIsland_Interior_Text_GruntDefeat, TRAINER_COURTNEY_SOUTHERN_ISLAND, SouthernIsland_Interior_Text_CourtneyDefeat, PARTNER_STEVEN_SOUTHERN_ISLAND
 	switch VAR_RESULT
 	case 1, SouthernIsland_Interior_EventScript_DefeatedCourtney
 	fadescreen FADE_TO_BLACK
@@ -90,23 +105,24 @@ SouthernIsland_Interior_EventScript_DefeatedCourtney::
 	msgbox SouthernIsland_Interior_Text_CourtneyAfterBattle, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_COURTNEY
-	removeobject LOCALID_ISLAND_GRUNT
+	removeobject LOCALID_SOUTHERN_ISLAND_COURTNEY
+	removeobject LOCALID_SOUTHERN_ISLAND_GRUNT_3
+	setflag FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA
 	fadescreen FADE_FROM_BLACK
 	delay 10
-	applymovement LOCALID_LATIAS, SouthernIsland_Interior_Movement_LatiasMove
+	applymovement LOCALID_SOUTHERN_ISLAND_LATIAS, SouthernIsland_Interior_Movement_LatiasMove
 	waitmovement 0
 	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
 	msgbox SouthernIsland_Interior_Text_LatiasCry, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	applymovement LOCALID_STEVEN, Common_Movement_FaceRight
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_SOUTHERN_ISLAND_STEVEN, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox SouthernIsland_Interior_Text_StevenLatias, MSGBOX_DEFAULT
 	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
 	msgbox SouthernIsland_Interior_Text_LatiasCry2, MSGBOX_DEFAULT
-	removeobject LOCALID_LATIAS
+	removeobject LOCALID_SOUTHERN_ISLAND_LATIAS
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LATIAS
 	givemon SPECIES_LATIAS, 25, ITEM_SOUL_DEW
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, SouthernIsland_Interior_EventScript_SendLatiasParty
@@ -148,6 +164,7 @@ SouthernIsland_Interior_EventScript_ReceivedLatiasFanfare::
 
 SouthernIsland_Interior_EventScript_StevenFarewell::
 	msgbox SouthernIsland_Interior_Text_StevenGoodbye, MSGBOX_DEFAULT
+	setvar VAR_ROUTE118_STATE, 2
 	setflag FLAG_HIDE_ROUTE_118_LATIOS
 	special InitRoamer
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
@@ -302,10 +319,12 @@ SouthernIsland_Interior_Movement_LatiApproach:
 	walk_down
 	step_end
 
-SouthernIsland_Interior_Text_Steven:
+SouthernIsland_Interior_Text_Steven1:
 	.string "STEVEN: {PLAYER}{KUN}, it appears LATIAS\n"
 	.string "is in trouble. That must be why LATIOS\l"
 	.string "brought us here.\p"
+
+SouthernIsland_Interior_Text_Steven2:
 	.string "TEAM MAGMA! What are you trying to do\n"
 	.string "to LATIAS?$"
 

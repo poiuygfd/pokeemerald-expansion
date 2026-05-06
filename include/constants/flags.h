@@ -713,7 +713,7 @@
 #define FLAG_HIDE_EVER_GRANDE_RIVAL  0x291 // Rival Battle in Ever Grande City
 #define FLAG_HIDE_TUFFNOOK_TEAM_AQUA  0x292 // Team Aqua Brigade in Tuffnook
 #define FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA  0x293 // The same Team Aqua guys but in Navel Rock
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
+#define FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA  0x294 // Team Magma on Southern Island
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag
 #define FLAG_UNUSED_0x297  0x297 // Unused Flag
