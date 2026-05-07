@@ -2555,10 +2555,14 @@ gCryTable::
 	cry Cry_Marin
 	cry Cry_MissingNo
 	cry Cry_Avitorch
+	cry Cry_Partrio_Paladin
+	cry Cry_Partrio_Mage
 	cry Cry_Regitube
+.if P_MODIFIED_MEGA_CRIES == TRUE
 	cry Cry_CastformMega
 	cry Cry_CharizardMegaZ
 	cry Cry_CharizardOmegaZ
+.endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -5118,8 +5122,12 @@ gCryTable_Reverse::
 	cry_reverse Cry_Marin
 	cry_reverse Cry_MissingNo
 	cry_reverse Cry_Avitorch
+	cry_reverse Cry_Partrio_Paladin
+	cry_reverse Cry_Partrio_Mage
 	cry_reverse Cry_Regitube
+.if P_MODIFIED_MEGA_CRIES == TRUE
 	cry_reverse Cry_CastformMega
 	cry_reverse Cry_CharizardMegaZ
 	cry_reverse Cry_CharizardOmegaZ
+.endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_CRIES_ENABLED

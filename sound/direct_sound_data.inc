@@ -8752,6 +8752,14 @@ Cry_Avitorch::
 	.incbin "sound/direct_sound_samples/cries/avitorch.bin"
 
 	.align 2
+Cry_Partrio_Paladin::
+	.incbin "sound/direct_sound_samples/cries/partrio_paladin.bin"
+
+	.align 2
+Cry_Partrio_Mage::
+	.incbin "sound/direct_sound_samples/cries/partrio_mage.bin"
+
+	.align 2
 Cry_Regitube::
 	.incbin "sound/direct_sound_samples/cries/regitube.bin"
 

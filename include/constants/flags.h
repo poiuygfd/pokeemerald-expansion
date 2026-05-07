@@ -1245,7 +1245,7 @@
 #define FLAG_ITEM_SEAFLOOR_CAVERN_TM64                              0x49F // Seafloor Cavern TM Weather Ball
 #define FLAG_ITEM_JAGGED_PASS_TM65                                  0x4A0 // Jagged Pass TM Flame Charge
 #define FLAG_ITEM_ROUTE_121_TM55                                    0x4A1 // Route 121 TM U-Turn
-#define FLAG_ITEM_ROUTE_112_TM08                                    0x4A2 // Route 112 TM Bulk Up
+#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_ITEM_GRANITE_CAVE_TM56                                 0x4A3 // Granite Cave TM Shadow Claw
 #define FLAG_ITEM_SKY_PILLAR_TM63                                   0x4A4 // Sky Pillar TM Scale Shot
 #define FLAG_ITEM_ROUTE_128_TM70                                    0x4A5 // Route 128 TM Terrain Pulse
@@ -1311,7 +1311,7 @@
 #define FLAG_SPOKEN_TO_FROSLASS_FAN                                 0x4E1 // Interacted with Froslass fan
 #define FLAG_RECEIVED_GLALITITE                                     0x4E2 // Received Glalitite from Glalie fan
 #define FLAG_RECEIVED_FROSLASSITE                                   0x4E3 // Received Froslassite from Froslass fan
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
+#define FLAG_RECEIVED_WORK_UP                                       0x4E4 // Received Work Up from Route Master 102
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
 #define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
@@ -1323,19 +1323,18 @@
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+#define FLAG_UNUSED_0x4F9                                           0x4F0 // Unused Flag
+#define FLAG_UNUSED_0x4FA                                           0x4F1 // Unused Flag
 
-#define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
-#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
-#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
-#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
-#define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
-#define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
-#define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
-#define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
-#define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
-
-#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
+#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F3
+#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F4
+#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F5
+#define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F6
+#define FLAG_DEFEATED_FORTREE_GYM                                   0x4F7
+#define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F8
+#define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F9
+#define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4FA
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC

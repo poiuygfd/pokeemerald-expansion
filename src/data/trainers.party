@@ -19957,6 +19957,177 @@ Indeedee
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_SHELLY_VERDANTURF ===
+Name: SHELLY
+Class: Aqua Admin
+Pic: Aqua Admin F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Poochyena
+Level: 15
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
+Carvanha
+Level: 15
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
+Arrokuda
+Level: 17
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk
+
+=== TRAINER_ARCHIE_MUSEUM ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Golbat
+Level: 21
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Poison Fang
+- Bite
+- Confuse Ray
+
+Carvanha
+Level: 21
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Aqua Jet
+- Ice Fang
+- Bite
+
+Wishiwashi
+Level: 23
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 HP
+- Water Gun
+- Take Down
+
+=== TRAINER_GRUNT_MT_CHIMNEY_3 ===
+Name: GRUNT
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+Double Battle: Yes
+AI: Check Bad Move
+
+Slugma
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poochyena
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Zubat
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Poochyena
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Croagunk
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_3 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Poochyena
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mareanie
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GRUNT_NAVEL_ROCK_4 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Zubat
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Finneon
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MATT_NAVEL_ROCK ===
+Name: MATT
+Class: Aqua Admin
+Pic: Aqua Admin M
+Gender: Male
+Music: Aqua
+Items: Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Golbat
+Level: 26
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Carvanha
+Level: 26
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Binacle
+Level: 28
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
 === TRAINER_GRUNT_SOUTHERN_ISLAND_1 ===
 Name: GRUNT
 Class: Team Magma
@@ -20081,192 +20252,275 @@ Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
 
-=== TRAINER_ARCHIE_MUSEUM ===
-Name: ARCHIE
-Class: Aqua Leader
-Pic: Aqua Leader Archie
-Gender: Male
-Music: Aqua
-Items: Potion
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Golbat
-Level: 21
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 HP
-- Poison Fang
-- Bite
-- Confuse Ray
-
-Carvanha
-Level: 21
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 HP
-- Aqua Jet
-- Ice Fang
-- Bite
-
-Wishiwashi
-Level: 23
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 HP
-- Water Gun
-- Take Down
-
-=== TRAINER_RED_METEOR_FALLS ===
-Name: RED
-Class: PkMn Trainer 1
-Pic: Red
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Mugshot: Blue
-
-Pikachu-Starter @ Light Ball
-Level: 82
-Ability: Lightning Rod
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Rash
-- Thunderbolt
-- Volt Tackle
-- Iron Tail
-- Zippy Zap
-
-Snorlax @ Iapapa Berry
-Level: 78
-Ability: Gluttony
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Impish
-- Body Slam
-- High Horsepower
-- Recycle
-- Belly Drum
-
-Heracross @ Flame Orb
-Level: 77
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Megahorn
-- Close Combat
-- Rock Blast
-- Protect
-
-Excadrill @ Wide Lens
-Level: 76
-Ability: Sand Rush
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Drill Run
-- Iron Head
-- Stone Edge
-- Swords Dance
-
-Tyranitar @ Weakness Policy
-Level: 79
-Ability: Sand Stream
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Adamant
-- Stone Edge
-- Crunch
-- Ice Punch
-- Dragon Dance
-
-Charizard @ Charizardite X
-Level: 80
-Ability: Blaze
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Flare Blitz
-- Dragon Claw
-- Fire Punch
-- Dragon Dance
-
-=== TRAINER_LEAF_ARTISAN_CAVE ===
-Name: LEAF
-Class: PkMn Trainer 2
-Pic: Leaf
+=== TRAINER_ALICIA ===
+Name: ALICIA
+Class: Aroma Lady
+Pic: Aroma Lady
 Gender: Female
 Music: Female
-Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move
+
+Budew
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Oddish
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_SAMMY ===
+Name: SAMMY
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move
+
+Grubbin
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Nincada
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_SHAREN ===
+Name: SHAREN
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Items: Full Restore
+Double Battle: Yes
+AI: Check Bad Move
+
+Wooloo @ Nugget
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zigzagoon @ Nugget
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DAVE ===
+Name: DAVE
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move
+
+Machop
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Crabrawler
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PADDY ===
+Name: PADDY
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: Yes
+AI: Check Bad Move
+
+Nosepass
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rockruff
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_KYLE ===
+Name: KYLE
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move
+
+Trapinch
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Aron
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROBBY ===
+Name: ROBBY
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: Yes
+AI: Check Bad Move
+
+Geodude
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rolycoly
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_STEVEN_GRANITE_CAVE ===
+Name: STEVEN
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Mugshot: Pink
 
-Eevee-Starter @ Assault Vest
-Level: 82
-Ability: Run Away
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Def
-Nature: Careful
-- Sizzly Slide
-- Sappy Seed
-- Glitzy Glow
-- Baddy Bad
+Aron
+Level: 25
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 100 HP / 50 Atk
 
-Wigglytuff @ Choice Specs
-Level: 78
-Ability: Competitive
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Bold
-- Hyper Voice
-- Moonblast
-- Flamethrower
-- Ice Beam
+Honedge
+Level: 25
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 100 HP / 50 Atk
 
-Lanturn @ Leftovers
-Level: 77
-Ability: Volt Absorb
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Bold
-- Thunderbolt
-- Scald
-- Volt Switch
-- Thunder Wave
+Skarmory
+Level: 26
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 100 HP / 50 Atk
 
-Tinkaton @ Steel Gem
-Level: 76
-Ability: Mold Breaker
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Gigaton Hammer
-- Play Rough
+Metang
+Level: 27
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 100 HP / 50 Atk
+
+=== TRAINER_ROUTE_MASTER_102 ===
+Name: ZACH
+Class: Route Master
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Pansage @ Oran Berry
+Level: 7
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 50 HP
+- Work Up
+- Vine Whip
+
+Panpour @ Oran Berry
+Level: 7
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 50 HP
+- Work Up
+- Water Gun
+
+Pansear @ Oran Berry
+Level: 7
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 HP
+- Work Up
+- Incinerate
+
+=== TRAINER_WEATHERMAN_RAIN ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Hurricane
+- Thunder
+
+Pelipper @ Damp Rock
+Level: 38
+Ability: Drizzle
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Tailwind
+- Wide Guard
+
+=== TRAINER_WEATHERMAN_SUN ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Solar Beam
+
+Torkoal @ Heat Rock
+Level: 38
+Ability: Drought
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Will-O-Wisp
+- Stealth Rock
+
+=== TRAINER_WEATHERMAN_SNOW ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint
+
+Castform @ Wise Glasses
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
+- Weather Ball
+- Blizzard
+
+Ninetales-Alola @ Icy Rock
+Level: 38
+Ability: Snow Warning
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 HP
+- Aurora Veil
 - Encore
-- Protect
 
-Goodra @ Expert Belt
-Level: 79
-Ability: Gooey
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Timid
-- Draco Meteor
+=== TRAINER_WEATHERMAN_FINAL ===
+Name: WEATHERMAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Castform @ Castformite
+Level: 45
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 150 SpA / 150 Spe
+- Weather Ball
 - Flamethrower
 - Hydro Pump
-- Sludge Bomb
-
-Venusaur @ Venusaurite
-Level: 80
-Ability: Overgrow
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Giga Drain
-- Sludge Bomb
-- Sleep Powder
-- Leaf Storm
+- Blizzard
 
 === TRAINER_SIDNEY_REMATCH ===
 Name: SIDNEY
@@ -20653,6 +20907,236 @@ Nature: Jolly
 - Hammer Arm
 - Bullet Punch
 
+=== TRAINER_RED_METEOR_FALLS ===
+Name: RED
+Class: PkMn Trainer 1
+Pic: Red
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Blue
+
+Pikachu-Starter @ Light Ball
+Level: 82
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Rash
+- Thunderbolt
+- Volt Tackle
+- Iron Tail
+- Zippy Zap
+
+Snorlax @ Iapapa Berry
+Level: 78
+Ability: Gluttony
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Impish
+- Body Slam
+- High Horsepower
+- Recycle
+- Belly Drum
+
+Heracross @ Flame Orb
+Level: 77
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Megahorn
+- Close Combat
+- Rock Blast
+- Protect
+
+Excadrill @ Wide Lens
+Level: 76
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Adamant
+- Drill Run
+- Iron Head
+- Stone Edge
+- Swords Dance
+
+Tyranitar @ Weakness Policy
+Level: 79
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Stone Edge
+- Crunch
+- Ice Punch
+- Dragon Dance
+
+Charizard @ Charizardite X
+Level: 80
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Flare Blitz
+- Dragon Claw
+- Fire Punch
+- Dragon Dance
+
+=== TRAINER_LEAF_ARTISAN_CAVE ===
+Name: LEAF
+Class: PkMn Trainer 2
+Pic: Leaf
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Pink
+
+Eevee-Starter @ Assault Vest
+Level: 82
+Ability: Run Away
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def
+Nature: Careful
+- Sizzly Slide
+- Sappy Seed
+- Glitzy Glow
+- Baddy Bad
+
+Wigglytuff @ Choice Specs
+Level: 78
+Ability: Competitive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Bold
+- Hyper Voice
+- Moonblast
+- Flamethrower
+- Ice Beam
+
+Lanturn @ Leftovers
+Level: 77
+Ability: Volt Absorb
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Bold
+- Thunderbolt
+- Scald
+- Volt Switch
+- Thunder Wave
+
+Tinkaton @ Steel Gem
+Level: 76
+Ability: Mold Breaker
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+Nature: Jolly
+- Gigaton Hammer
+- Play Rough
+- Encore
+- Protect
+
+Goodra @ Expert Belt
+Level: 79
+Ability: Gooey
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Timid
+- Draco Meteor
+- Flamethrower
+- Hydro Pump
+- Sludge Bomb
+
+Venusaur @ Venusaurite
+Level: 80
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Leaf Storm
+
+=== TRAINER_WOLFE ===
+Name: WOLFE
+Class: World Champ
+Pic: Champion Wolfe
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Mugshot: Yellow
+
+Hitmontop @ Eject Button
+Level: 80
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 132 Atk / 76 Def / 44 SpD / 4 Spe
+Nature: Adamant
+- Wide Guard
+- Fake Out
+- Close Combat
+- Feint
+
+Kyogre @ Blue Orb
+Level: 80
+Ability: Drizzle
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 204 HP / 204 Def / 44 SpA / 4 SpD / 52 Spe
+Nature: Modest
+- Origin Pulse
+- Ice Beam
+- Water Spout
+- Protect
+
+Gengar-Mega @ Gengarite
+Level: 80
+Ability: Shadow Tag
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 92 HP / 20 Def / 172 SpA / 4 SpD / 220 Spe
+Nature: Timid
+- Protect
+- Taunt
+- Sludge Bomb
+- Will-O-Wisp
+
+Raichu @ Assault Vest
+Level: 80
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 36 HP / 204 Def / 20 SpA / 68 SpD / 180 Spe
+Nature: Timid
+- Fake Out
+- Volt Switch
+- Endeavor
+- Nuzzle
+
+Bronzong @ Lum Berry
+Level: 80
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 68 Def / 188 SpD
+Nature: Sassy
+- Safeguard
+- Gyro Ball
+- Skill Swap
+- Trick Room
+
+Rayquaza @ Focus Sash
+Level: 80
+Ability: Air Lock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Dragon Ascent
+- Protect
+- Swords Dance
+- Extreme Speed
+
 === TRAINER_CHARIZARD_FAN_X_MEGA ===
 Name: ZARD FAN
 Class: Pokemaniac
@@ -20769,460 +21253,6 @@ Nature: Adamant
 - Earthquake
 - Rock Slide
 - Dragon Dance
-
-=== TRAINER_SHELLY_VERDANTURF ===
-Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
-Gender: Female
-Music: Aqua
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Poochyena
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk
-
-Carvanha
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk
-
-Arrokuda
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk
-
-=== TRAINER_GRUNT_MT_CHIMNEY_3 ===
-Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
-Gender: Male
-Music: Magma
-Double Battle: Yes
-AI: Check Bad Move
-
-Slugma
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Poochyena
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_WEATHERMAN_RAIN ===
-Name: WEATHERMAN
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint
-
-Castform @ Wise Glasses
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 SpA / 50 Spe
-- Weather Ball
-- Hurricane
-- Thunder
-
-Pelipper @ Damp Rock
-Level: 38
-Ability: Drizzle
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
-- Tailwind
-- Wide Guard
-
-=== TRAINER_WEATHERMAN_SUN ===
-Name: WEATHERMAN
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint
-
-Castform @ Wise Glasses
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 SpA / 50 Spe
-- Weather Ball
-- Solar Beam
-
-Torkoal @ Heat Rock
-Level: 38
-Ability: Drought
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
-- Will-O-Wisp
-- Stealth Rock
-
-=== TRAINER_WEATHERMAN_SNOW ===
-Name: WEATHERMAN
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint
-
-Castform @ Wise Glasses
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 SpA / 50 Spe
-- Weather Ball
-- Blizzard
-
-Ninetales-Alola @ Icy Rock
-Level: 38
-Ability: Snow Warning
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 HP
-- Aurora Veil
-- Encore
-
-=== TRAINER_WEATHERMAN_FINAL ===
-Name: WEATHERMAN
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Castform @ Castformite
-Level: 45
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 150 SpA / 150 Spe
-- Weather Ball
-- Flamethrower
-- Hydro Pump
-- Blizzard
-
-=== TRAINER_ALICIA ===
-Name: ALICIA
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: Yes
-AI: Check Bad Move
-
-Budew
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Oddish
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_SAMMY ===
-Name: SAMMY
-Class: Bug Catcher
-Pic: Bug Catcher
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move
-
-Grubbin
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Nincada
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_SHAREN ===
-Name: SHAREN
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
-Double Battle: Yes
-AI: Check Bad Move
-
-Wooloo @ Nugget
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zigzagoon @ Nugget
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_DAVE ===
-Name: DAVE
-Class: Sailor
-Pic: Sailor
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move
-
-Machop
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Crabrawler
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PADDY ===
-Name: PADDY
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: Yes
-AI: Check Bad Move
-
-Nosepass
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Rockruff
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_KYLE ===
-Name: KYLE
-Class: Camper
-Pic: Camper
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move
-
-Trapinch
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Aron
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROBBY ===
-Name: ROBBY
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: Yes
-AI: Check Bad Move
-
-Geodude
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Rolycoly
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_STEVEN_GRANITE_CAVE ===
-Name: STEVEN
-Class: Rival
-Pic: Steven
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Aron
-Level: 25
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 100 HP / 50 Atk
-
-Honedge
-Level: 25
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 100 HP / 50 Atk
-
-Skarmory
-Level: 26
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 100 HP / 50 Atk
-
-Metang
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 100 HP / 50 Atk
-
-=== TRAINER_WOLFE ===
-Name: WOLFE
-Class: World Champ
-Pic: Champion Wolfe
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Mugshot: Yellow
-
-Hitmontop @ Eject Button
-Level: 80
-Ability: Intimidate
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 132 Atk / 76 Def / 44 SpD / 4 Spe
-Nature: Adamant
-- Wide Guard
-- Fake Out
-- Close Combat
-- Feint
-
-Kyogre @ Blue Orb
-Level: 80
-Ability: Drizzle
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 204 HP / 204 Def / 44 SpA / 4 SpD / 52 Spe
-Nature: Modest
-- Origin Pulse
-- Ice Beam
-- Water Spout
-- Protect
-
-Gengar-Mega @ Gengarite
-Level: 80
-Ability: Shadow Tag
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 92 HP / 20 Def / 172 SpA / 4 SpD / 220 Spe
-Nature: Timid
-- Protect
-- Taunt
-- Sludge Bomb
-- Will-O-Wisp
-
-Raichu @ Assault Vest
-Level: 80
-Ability: Lightning Rod
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 36 HP / 204 Def / 20 SpA / 68 SpD / 180 Spe
-Nature: Timid
-- Fake Out
-- Volt Switch
-- Endeavor
-- Nuzzle
-
-Bronzong @ Lum Berry
-Level: 80
-Ability: Levitate
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 68 Def / 188 SpD
-Nature: Sassy
-- Safeguard
-- Gyro Ball
-- Skill Swap
-- Trick Room
-
-Rayquaza @ Focus Sash
-Level: 80
-Ability: Air Lock
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-Nature: Jolly
-- Dragon Ascent
-- Protect
-- Swords Dance
-- Extreme Speed
-
-=== TRAINER_GRUNT_NAVEL_ROCK_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: Yes
-AI: Check Bad Move
-
-Zubat
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_NAVEL_ROCK_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: Yes
-AI: Check Bad Move
-
-Poochyena
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Croagunk
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_NAVEL_ROCK_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: Yes
-AI: Check Bad Move
-
-Poochyena
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Mareanie
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_NAVEL_ROCK_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: Yes
-AI: Check Bad Move
-
-Zubat
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Finneon
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MATT_NAVEL_ROCK ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
-Gender: Male
-Music: Aqua
-Items: Super Potion
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Golbat
-Level: 26
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk / 50 Spe
-
-Carvanha
-Level: 26
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk / 50 Spe
-
-Binacle
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-EVs: 50 Atk / 50 Spe
 
 === TRAINER_RED ===
 Name: RED

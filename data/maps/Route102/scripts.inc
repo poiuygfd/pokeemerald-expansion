@@ -73,6 +73,39 @@ Route102_EventScript_Allen::
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route102_EventScript_RouteMaster::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_WORK_UP, Route102_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_CALVIN_1, Route102_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_RICK, Route102_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_TIANA, Route102_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_ALLEN, Route102_EventScript_RouteMasterNotReady
+	msgbox Route102_Text_LetsHaveABattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route102_EventScript_RouteMasterWillWait
+	trainerbattle_no_intro TRAINER_ROUTE_MASTER_102, Route102_Text_RouteMasterDefeat
+	msgbox Route102_Text_HeresAReward, MSGBOX_DEFAULT
+	giveitem ITEM_TM_WORK_UP
+	msgbox Route102_Text_OthersLikeMe, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_WORK_UP
+	release
+	end
+
+Route102_EventScript_RouteMasterNotReady::
+	msgbox Route102_Text_ProveYourStrength, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_RouteMasterWillWait::
+	msgbox Route102_Text_ComeBackWhenReady, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_RouteMasterDefeated::
+	msgbox Route102_Text_OthersLikeMe, MSGBOX_DEFAULT
+	release
+	end
+
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"
@@ -99,6 +132,50 @@ Route102_Text_ImNotVeryTall:
 Route102_Text_CatchWholeBunchOfPokemon:
 	.string "I'm going to catch a whole bunch of\n"
 	.string "POKéMON!$"
+
+Route102_Text_ProveYourStrength:
+	.string "Hey there!\n"
+	.string "You seem like a new TRAINER.\p"
+	.string "Think you've got what it takes to\n"
+	.string "make it big time?\p"
+	.string "If so, then prove your strength\n"
+	.string "to me!\p"
+	.string "Start by battling every single\n"
+	.string "TRAINER on this ROUTE!\p"
+	.string "Do that, and I'll have a battle with\n"
+	.string "you myself, with a reward if you win!$"
+
+Route102_Text_LetsHaveABattle:
+	.string "If I'm not mistaken, you've battled\n"
+	.string "and won against every TRAINER on\l"
+	.string "this ROUTE, haven't you?\p"
+	.string "Maybe you've got what it takes!\p"
+	.string "Let's have a battle!\n"
+	.string "If you win, I'll give you a reward!$"
+
+Route102_Text_ComeBackWhenReady:
+	.string "Need some time to prepare first?\p"
+	.string "Good idea! Knowing when you're not\n"
+	.string "ready is the sign of a good TRAINER!\p"
+	.string "I'll be waiting here, so come back\n"
+	.string "when you think you're ready!$"
+
+Route102_Text_RouteMasterDefeat:
+	.string "A job well done!\n"
+	.string "You definitely have what it takes!$"
+
+Route102_Text_HeresAReward:
+	.string "As promised, here's a reward!\n"
+	.string "It's a TM for the move I was using!$"
+
+Route102_Text_OthersLikeMe:
+	.string "WORK UP will increase both your\n"
+	.string "ATTACK and SPECIAL ATTACK stats!\p"
+	.string "Keep an eye out while you're on your\n"
+	.string "journey out there!\p"
+	.string "There are other TRAINERS like me who\n"
+	.string "will give you rewards if you can\l"
+	.string "defeat every TRAINER on a ROUTE!$"
 
 Route102_Text_RouteSignOldale:
 	.string "ROUTE 102\n"
