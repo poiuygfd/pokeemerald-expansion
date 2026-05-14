@@ -851,6 +851,7 @@ extern const u8 gBattleAnimMove_PsychicNoise[];
 extern const u8 gBattleAnimMove_UpperHand[];
 extern const u8 gBattleAnimMove_MalignantChain[];
 extern const u8 gBattleAnimMove_MagicalCheer[];
+extern const u8 gBattleAnimMove_BeanBeam[];
 extern const u8 gBattleAnimMove_BubbleBlast[];
 extern const u8 gBattleAnimMove_BreakneckBlitz[];
 extern const u8 gBattleAnimMove_AllOutPummeling[];

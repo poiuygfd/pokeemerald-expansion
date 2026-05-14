@@ -396,6 +396,14 @@ const struct SpriteTemplate gBulletSeedSpriteTemplate =
     .callback = AnimBulletSeed,
 };
 
+const struct SpriteTemplate gBeanSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BEAN,
+    .paletteTag = ANIM_TAG_BEAN,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .callback = AnimBulletSeed,
+};
+
 const union AffineAnimCmd gRazorWindTornadoAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x100, 0, 0),

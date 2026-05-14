@@ -465,6 +465,9 @@ const u16 gBattleAnimSpritePal_StealthRock[] = INCGFX_U16("graphics/battle_anims
 const u32 gBattleAnimSpriteGfx_PoisonJab[] = INCGFX_U32("graphics/battle_anims/sprites/poison_jab.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_PoisonJab[] = INCGFX_U16("graphics/battle_anims/sprites/poison_jab.png", ".gbapal");
 
+const u32 gBattleAnimSpriteGfx_Bean[] = INCGFX_U32("graphics/battle_anims/sprites/bean.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_Bean[] = INCGFX_U16("graphics/battle_anims/sprites/bean.png", ".gbapal");
+
 const u32 gBattleAnimSpriteGfx_SpinningBall[] = INCGFX_U32("graphics/battle_anims/unused/spinning_ball.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_SpinningBall[] = INCGFX_U16("graphics/battle_anims/unused/spinning_ball.png", ".gbapal");
 const u16 gBattleAnimSpritePal_SpinningBall2[] = INCGFX_U16("graphics/battle_anims/unused/spinning_ball_2.pal", ".gbapal");
@@ -1525,6 +1528,10 @@ const u32 gBattleAnimBgTilemap_MaxLightning[] = INCBIN_U32("graphics/battle_anim
 const u32 gBattleAnimBgImage_NeverendingNightmare[] = INCGFX_U32("graphics/battle_anims/backgrounds/neverending_nightmare.png", ".4bpp.smol");
 const u16 gBattleAnimBgPalette_NeverendingNightmare[] = INCGFX_U16("graphics/battle_anims/backgrounds/neverending_nightmare.pal", ".gbapal");
 const u32 gBattleAnimBgTilemap_NeverendingNightmare[] = INCBIN_U32("graphics/battle_anims/backgrounds/neverending_nightmare.bin.smolTM");
+
+const u32 gBattleAnimBgImage_BeanBeam[] = INCGFX_U32("graphics/battle_anims/backgrounds/bean_beam.png", ".4bpp.smol");
+const u16 gBattleAnimBgPalette_BeanBeam[] = INCGFX_U16("graphics/battle_anims/backgrounds/bean_beam.pal", ".gbapal");
+const u32 gBattleAnimBgTilemap_BeanBeam[] = INCBIN_U32("graphics/battle_anims/backgrounds/bean_beam.bin.smolTM");
 
 #if B_NEW_TERRAIN_BACKGROUNDS
 const u32 gBattleAnimBgImage_ElectricTerrain[] = INCGFX_U32("graphics/battle_anims/backgrounds/new_electric_terrain.png", ".4bpp.smol");

@@ -2438,6 +2438,7 @@ extern const u32 gBattleAnimSpriteGfx_PowerGem[];
 extern const u32 gBattleAnimSpriteGfx_StoneEdge[];
 extern const u32 gBattleAnimSpriteGfx_StealthRock[];
 extern const u32 gBattleAnimSpriteGfx_PoisonJab[];
+extern const u32 gBattleAnimSpriteGfx_Bean[];
 
 extern const u16 gBattleAnimSpritePal_Bone[];
 extern const u16 gBattleAnimSpritePal_Spark[];
@@ -2740,6 +2741,7 @@ extern const u16 gBattleAnimSpritePal_PowerGem[];
 extern const u16 gBattleAnimSpritePal_StoneEdge[];
 extern const u16 gBattleAnimSpritePal_StealthRock[];
 extern const u16 gBattleAnimSpritePal_PoisonJab[];
+extern const u16 gBattleAnimSpritePal_Bean[];
 // New Battle Anim Particles
 extern const u32 gBattleAnimSpriteGfx_WhiteStreak[];
 extern const u16 gBattleAnimSpritePal_WhiteStreak[];
@@ -3090,6 +3092,9 @@ extern const u32 gBattleAnimBgTilemap_MistyTerrain[];
 extern const u32 gBattleAnimBgImage_NeverendingNightmare[];
 extern const u16 gBattleAnimBgPalette_NeverendingNightmare[];
 extern const u32 gBattleAnimBgTilemap_NeverendingNightmare[];
+extern const u32 gBattleAnimBgImage_BeanBeam[];
+extern const u16 gBattleAnimBgPalette_BeanBeam[];
+extern const u32 gBattleAnimBgTilemap_BeanBeam[];
 extern const u32 gBattleAnimBgImage_Nightmare[];
 extern const u16 gBattleAnimBgPalette_Nightmare[];
 extern const u32 gBattleAnimBgTilemap_Nightmare[];

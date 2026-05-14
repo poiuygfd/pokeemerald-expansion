@@ -21181,6 +21181,39 @@ gBattleAnimMove_MagicalCheer::
 	waitforvisualfinish
 	end
 
+gBattleAnimMove_BeanBeam::
+	loadspritegfx ANIM_TAG_BEAN
+	call SetBeanBeamBG
+	waitforvisualfinish
+	delay 10
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 30, 1
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	delay 5
+	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	waitforvisualfinish
+	call UnsetHighSpeedBg
+	delay 1
+	end
+SetBeanBeamBG:
+	fadetobg BG_BEAN_BEAM
+	goto SetHighSpeedBgFade
+
 gBattleAnimMove_BubbleBlast::
 	loadspritegfx ANIM_TAG_BUBBLE
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES

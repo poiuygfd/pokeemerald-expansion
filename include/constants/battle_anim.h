@@ -423,7 +423,8 @@
 #define ANIM_TAG_TATSUGIRI_CURLY            (ANIM_SPRITES_START + 409)
 #define ANIM_TAG_TATSUGIRI_DROOPY           (ANIM_SPRITES_START + 410)
 #define ANIM_TAG_TATSUGIRI_STRETCHY         (ANIM_SPRITES_START + 411)
-#define ANIM_TAG_SAFARI_BAIT                (ANIM_SPRITES_START + 412)
+#define ANIM_TAG_BEAN                       (ANIM_SPRITES_START + 412)
+#define ANIM_TAG_SAFARI_BAIT                (ANIM_SPRITES_START + 413)
 #define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_SAFARI_BAIT + 1)
 
 // battlers
@@ -539,7 +540,8 @@ enum AnimBattler
 #define BG_RAINBOW_PLAYER 81
 #define BG_RAINBOW_OPPONENT 82
 #define BG_SWAMP 83
-#define BG_COUNT 84
+#define BG_BEAN_BEAM 84
+#define BG_COUNT 85
 
 // table ids for general animations (sBattleAnims_General)
 #define B_ANIM_STATS_CHANGE             0

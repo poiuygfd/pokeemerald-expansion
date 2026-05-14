@@ -1432,6 +1432,7 @@ const struct BattleAnimation gBattleAnimTable[ANIM_TAG_COUNT] =
     BATTLE_ANIMATION(ANIM_TAG_TATSUGIRI_CURLY, gBattleAnimSpriteGfx_TatsugiriCurly, 0x200, gBattleAnimSpritePal_TatsugiriCurly),
     BATTLE_ANIMATION(ANIM_TAG_TATSUGIRI_DROOPY, gBattleAnimSpriteGfx_TatsugiriDroopy, 0x200, gBattleAnimSpritePal_TatsugiriDroopy),
     BATTLE_ANIMATION(ANIM_TAG_TATSUGIRI_STRETCHY, gBattleAnimSpriteGfx_TatsugiriStretchy, 0x200, gBattleAnimSpritePal_TatsugiriStretchy),
+    BATTLE_ANIMATION(ANIM_TAG_BEAN, gBattleAnimSpriteGfx_Bean, 0x0080, gBattleAnimSpritePal_Bean),
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -1521,4 +1522,5 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_RAINBOW_PLAYER]            = {gBattleAnimBgImage_RainbowPlayer,           gBattleAnimBGPalette_Rainbow,                 gBattleAnimBgTilemap_RainbowPlayer},
     [BG_RAINBOW_OPPONENT]          = {gBattleAnimBgImage_RainbowOpponent,         gBattleAnimBGPalette_Rainbow,                 gBattleAnimBgTilemap_RainbowOpponent},
     [BG_SWAMP]                     = {gBattleAnimBgImage_Swamp,                   gBattleAnimBGPalette_Swamp,                   gBattleAnimBgTilemap_Swamp},
+    [BG_BEAN_BEAM]                 = {gBattleAnimBgImage_BeanBeam,                gBattleAnimBgPalette_BeanBeam,                gBattleAnimBgTilemap_BeanBeam},
 };
