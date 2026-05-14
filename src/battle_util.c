@@ -6255,6 +6255,23 @@ bool32 IsBattlerGrounded(enum BattlerId battler, enum Ability ability, enum Hold
     return IsBattlerGroundedInverseCheck(battler, ability, holdEffect, NOT_INVERSE_BATTLE, FALSE);
 }
 
+static bool32 IsFromGalar(enum BattlerId battler)
+{
+    if (gBattleMons[battler].species >= SPECIES_GROOKEY && gBattleMons[battler].species <= SPECIES_CALYREX)
+        return TRUE;
+    if (gBattleMons[battler].species >= SPECIES_MEOWTH_GALAR && gBattleMons[battler].species <= SPECIES_STUNFISK_GALAR)
+        return TRUE;
+    if (gBattleMons[battler].species >= SPECIES_CRAMORANT_GULPING && gBattleMons[battler].species <= SPECIES_CALYREX_SHADOW)
+        return TRUE;
+    if (gBattleMons[battler].species >= SPECIES_ALCREMIE_BERRY_VANILLA_CREAM && gBattleMons[battler].species <= SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL)
+        return TRUE;
+    if (gBattleMons[battler].species >= SPECIES_VENUSAUR_GMAX && gBattleMons[battler].species <= SPECIES_URSHIFU_RAPID_STRIKE_GMAX)
+        return TRUE;
+    if (gBattleMons[battler].species == SPECIES_DARMANITAN_GALAR_ZEN)
+        return TRUE;
+    return FALSE;
+}
+
 u32 GetMoveSlot(u16 *moves, enum Move move)
 {
     u32 i;
@@ -8533,6 +8550,8 @@ static inline void MulByTypeEffectiveness(struct BattleContext *ctx, uq4_12_t *m
         mod = UQ_4_12(1.0);
     if (ctx->moveType == TYPE_STELLAR && GetActiveGimmick(ctx->battlerDef) == GIMMICK_TERA)
         mod = UQ_4_12(2.0);
+    if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && !ctx->isAnticipation)
+        mod = UQ_4_12(1.0);
 
     // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokémon
     if (ctx->weather & B_WEATHER_STRONG_WINDS && !ctx->isAnticipation)
@@ -8702,6 +8721,10 @@ uq4_12_t CalcTypeEffectivenessMultiplier(struct BattleContext *ctx)
             ctx->moveType = GetMoveArgType(ctx->move);
             modifier = CalcTypeEffectivenessMultiplierInternal(ctx, modifier);
         }
+        if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && !(IsFromGalar(ctx->battlerDef)) && !ctx->isAnticipation)
+            modifier = UQ_4_12(2.0);
+        if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && IsFromGalar(ctx->battlerDef) && !ctx->isAnticipation)
+            modifier = UQ_4_12(0.5);
     }
 
     if (ctx->updateFlags)

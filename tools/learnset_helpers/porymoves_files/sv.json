@@ -89809,31 +89809,31 @@
       },
       {
         "Level": 20,
-        "Move": "MOVE_WHIRLWIND"
+        "Move": "MOVE_BEAN_BEAM"
       },
       {
         "Level": 23,
-        "Move": "MOVE_FLAME_BURST"
+        "Move": "MOVE_WHIRLWIND"
       },
       {
         "Level": 26,
-        "Move": "MOVE_AIR_CUTTER"
+        "Move": "MOVE_FLAME_BURST"
       },
       {
         "Level": 29,
-        "Move": "MOVE_SCREECH"
+        "Move": "MOVE_AIR_CUTTER"
       },
       {
         "Level": 33,
-        "Move": "MOVE_TEMPER_FLARE"
+        "Move": "MOVE_SCREECH"
       },
       {
         "Level": 37,
-        "Move": "MOVE_FEATHER_DANCE"
+        "Move": "MOVE_TEMPER_FLARE"
       },
       {
         "Level": 40,
-        "Move": "MOVE_BURNING_JEALOUSY"
+        "Move": "MOVE_FEATHER_DANCE"
       },
       {
         "Level": 44,

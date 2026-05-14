@@ -2243,7 +2243,7 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
-    [EFFECT_SPECIES_POWER_OVERRIDE] =
+    [EFFECT_BEAN_BEAM] =
     {
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
@@ -2254,5 +2254,11 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectLeaderSwap,
         .battleTvScore = 0, // TODO: Assign points
         .encourageEncore = TRUE,
+    },
+
+    [EFFECT_SPECIES_POWER_OVERRIDE] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 0, // TODO: Assign points
     },
 };

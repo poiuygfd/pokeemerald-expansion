@@ -15176,31 +15176,6 @@ gBattleAnimMove_Coaching::
 	waitforvisualfinish
 	end
 
-gBattleAnimMove_MagicalCheer::
-	loadspritegfx ANIM_TAG_SPARKLE_2
-	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_COSMIC_POWER, 0
-	playsewithpan SE_M_COSMIC_POWER, 0
-	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 0, 15, RGB_BLACK
-	waitforvisualfinish
-	fadetobg BG_COSMIC
-	waitbgfadeout
-	createvisualtask AnimTask_StartSlidingBg, 2, 0, 128, 0, -1
-	waitbgfadein
-	delay 70
-	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_M_MORNING_SUN, SOUND_PAN_ATTACKER
-	createsprite gGrantingStarsSpriteTemplate, ANIM_ATTACKER, 2, -15, 0, 0, 0, 32, 60
-	delay 8
-	createsprite gGrantingStarsSpriteTemplate, ANIM_ATTACKER, 2, 12, -5, 0, 0, 32, 60
-	delay 40
-	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 15, 0, RGB_BLACK
-	waitforvisualfinish
-	restorebg
-	waitbgfadeout
-	setarg 7, 0xFFFF
-	waitbgfadein
-	waitforvisualfinish
-	end
-
 gBattleAnimMove_FlipTurn::
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS @;Bubbles
 	loadspritegfx ANIM_TAG_HYDRO_PUMP
@@ -21178,6 +21153,74 @@ MatchaGotchaProjectile:
 MatchaGotchaDoubleProjectile:
 	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 60, 0, 0
 	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 60, 0, TRUE
+	delay 3
+	return
+
+gBattleAnimMove_MagicalCheer::
+	loadspritegfx ANIM_TAG_SPARKLE_2
+	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_COSMIC_POWER, 0
+	playsewithpan SE_M_COSMIC_POWER, 0
+	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 0, 15, RGB_BLACK
+	waitforvisualfinish
+	fadetobg BG_COSMIC
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 2, 0, 128, 0, -1
+	waitbgfadein
+	delay 70
+	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_M_MORNING_SUN, SOUND_PAN_ATTACKER
+	createsprite gGrantingStarsSpriteTemplate, ANIM_ATTACKER, 2, -15, 0, 0, 0, 32, 60
+	delay 8
+	createsprite gGrantingStarsSpriteTemplate, ANIM_ATTACKER, 2, 12, -5, 0, 0, 32, 60
+	delay 40
+	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 15, 0, RGB_BLACK
+	waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
+	waitforvisualfinish
+	end
+
+gBattleAnimMove_BubbleBlast::
+	loadspritegfx ANIM_TAG_BUBBLE
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	monbg ANIM_TARGET
+	splitbgprio ANIM_TARGET
+	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
+	simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=0, target_blend_y=7, color=RGB(0, 25, 28)
+	delay 10
+	setalpha 12, 8
+	delay 1
+	call BubbleBlastCreateBubbles
+	createvisualtask AnimTask_SwayMon, 5, 0, 3, 3072, 8, ANIM_TARGET
+	call BubbleBlastCreateBubbles
+	call BubbleBlastCreateBubbles
+	waitforvisualfinish
+	call WaterBubblesEffectShort
+	waitforvisualfinish
+	simple_palette_blend selector=F_PAL_BG, delay=1, initial_blend_y=7, target_blend_y=0, color=RGB(0, 25, 28)
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+BubbleBlastCreateBubbles:
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 35, 70, 0, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 20, 40, -10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 10, -60, 0, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 15, -15, 10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 30, 10, -10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 25, -30, 10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
 	delay 3
 	return
 

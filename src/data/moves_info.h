@@ -21425,6 +21425,28 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MagicalCheer,
     },
 
+    [MOVE_BEAN_BEAM] =
+    {
+        .name = COMPOUND_STRING("Bean Beam"),
+        .description = COMPOUND_STRING(
+            "Super effective on every\n"
+            "Pokémon not from Galar."),
+        .effect = EFFECT_BEAN_BEAM,
+        .power = 60,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_WATER },
+        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HyperBeam,
+    },
+
     [MOVE_LEADER_SWAP] =
     {
         .name = COMPOUND_STRING("Leader Swap"),
@@ -21470,7 +21492,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_BubbleBeam,
+        .battleAnimScript = gBattleAnimMove_BubbleBlast,
     },
 
     // Z-Moves
