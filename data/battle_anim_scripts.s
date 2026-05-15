@@ -21181,6 +21181,63 @@ gBattleAnimMove_MagicalCheer::
 	waitforvisualfinish
 	end
 
+gBattleAnimMove_BubbleBlast::
+	loadspritegfx ANIM_TAG_BUBBLE
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	monbg ANIM_TARGET
+	splitbgprio ANIM_TARGET
+	simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=0, target_blend_y=7, color=RGB(0, 25, 28)
+	delay 10
+	setalpha 12, 8
+	delay 1
+	jumpifdoublebattle BubbleBlastDouble
+	goto BubbleBlastSingle
+BubbleBlastEnd::
+	call WaterBubblesEffectLong
+	waitforvisualfinish
+	simple_palette_blend selector=F_PAL_BG, delay=1, initial_blend_y=7, target_blend_y=0, color=RGB(0, 25, 28)
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+BubbleBlastSingle::
+	call BubbleBlastCreateBubbles
+	createvisualtask AnimTask_SwayMon, 5, 0, 3, 3072, 8, ANIM_TARGET
+	call BubbleBlastCreateBubbles
+	call BubbleBlastCreateBubbles
+	waitforvisualfinish
+	goto BubbleBlastEnd
+BubbleBlastDouble::
+	call BubbleBlastCreateBubbles
+	createvisualtask AnimTask_SwayMon, 5, 0, 3, 3072, 8, ANIM_TARGET
+	createvisualtask AnimTask_SwayMon, 5, 0, 3, 3072, 8, ANIM_DEF_PARTNER
+	call BubbleBlastCreateBubbles
+	call BubbleBlastCreateBubbles
+	waitforvisualfinish
+	goto BubbleBlastEnd
+
+BubbleBlastCreateBubbles:
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 35, 70, 0, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 20, 40, -10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 10, -60, 0, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 15, -15, 10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 30, 10, -10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 25, -30, 10, 256, 50
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	delay 3
+	return
+
 gBattleAnimMove_BeanBeam::
 	loadspritegfx ANIM_TAG_BEAN
 	call SetBeanBeamBG
@@ -21214,48 +21271,15 @@ SetBeanBeamBG:
 	fadetobg BG_BEAN_BEAM
 	goto SetHighSpeedBgFade
 
-gBattleAnimMove_BubbleBlast::
-	loadspritegfx ANIM_TAG_BUBBLE
-	loadspritegfx ANIM_TAG_SMALL_BUBBLES
-	monbg ANIM_TARGET
-	splitbgprio ANIM_TARGET
-	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
-	simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=0, target_blend_y=7, color=RGB(0, 25, 28)
-	delay 10
-	setalpha 12, 8
-	delay 1
-	call BubbleBlastCreateBubbles
-	createvisualtask AnimTask_SwayMon, 5, 0, 3, 3072, 8, ANIM_TARGET
-	call BubbleBlastCreateBubbles
-	call BubbleBlastCreateBubbles
+gBattleAnimMove_LeaderSwap::
+	loadspritegfx ANIM_TAG_FINGER
+	createsprite gMetronomeFingerSpriteTemplate, ANIM_ATTACKER, 12, 0
+	delay 24
+	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER, 22, 3
 	waitforvisualfinish
-	call WaterBubblesEffectShort
-	waitforvisualfinish
-	simple_palette_blend selector=F_PAL_BG, delay=1, initial_blend_y=7, target_blend_y=0, color=RGB(0, 25, 28)
-	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
+	createvisualtask AnimTask_DoubleTeam, 2
+	call DoubleTeamAnimRet
 	end
-BubbleBlastCreateBubbles:
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 35, 70, 0, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 20, 40, -10, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 10, -60, 0, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 15, -15, 10, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 30, 10, -10, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 25, -30, 10, 256, 50
-	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
-	delay 3
-	return
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_None::
