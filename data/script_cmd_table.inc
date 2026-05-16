@@ -258,6 +258,7 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_POKEMARTOUTFIT                ScrCmd_pokemartoutfit               requests_effects=1  @ 0xe9
 	script_cmd_table_entry SCR_OP_HIDEFOLLOWER                  ScrCmd_hidefollower,                requests_effects=1  @ 0xea
     script_cmd_table_entry SCR_OP_GETBRAILLESTRINGWIDTH         ScrCmd_getbraillestringwidth,       requests_effects=1  @ 0xeb
+	script_cmd_table_entry SCR_OP_POKEVIAL                      ScrCmd_pokevial                     requests_effects=1  @ 0xec
 
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::

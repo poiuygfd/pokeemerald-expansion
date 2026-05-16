@@ -16081,6 +16081,22 @@ const struct ItemInfo gItemsInfo[] =
 	    .iconPalette = gItemIconPalette_OutfitBox,
     },
 
+    [ITEM_POKEVIAL] =
+    {
+        .name = ITEM_NAME("Pokévial"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Restores all\n"
+            "Pokémon to full\n"
+            "health."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Pokevial,
+        .iconPic = gItemIcon_Pokevial,
+	    .iconPalette = gItemIconPalette_Pokevial,
+    },
+
 // HM Replacements
 
     [ITEM_HATCHET] =

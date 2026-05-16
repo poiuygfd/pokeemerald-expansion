@@ -109,6 +109,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+void ItemUseCB_UsePokevial(u8 taskId, TaskFunc task); //Pokevial Branch
+void InitPartyMenuForPokevialFromField(u8 taskId); //Pokevial Branch
 
 bool32 SetUpFieldMove_Surf(void);
 bool32 SetUpFieldMove_Fly(void);

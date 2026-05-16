@@ -1093,6 +1093,13 @@ struct Bag
     struct ItemSlot berries[BAG_BERRIES_COUNT];
 };
 
+//Pokevial Branch
+struct Pokevial
+{
+    u8 size:4;
+    u8 dose:4;
+};
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1201,6 +1208,7 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+    /*0x3???*/ struct Pokevial pokevial;
 #if FREE_TRAINER_TOWER == FALSE && IS_FRLG
     u32 towerChallengeId;
     struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];

@@ -73,6 +73,7 @@
 #include "constants/weather.h"
 #include "constants/outfits.h"
 #include "constants/speaker_names.h"
+#include "constants/pokevial.h"
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"

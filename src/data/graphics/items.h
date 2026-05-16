@@ -2120,6 +2120,19 @@ const u16 gItemIconPalette_HiTechEarbuds[] = INCGFX_U16("graphics/items/icon_pal
 const u32 gItemIcon_OutfitBox[] = INCGFX_U32("graphics/items/icons/outfit_box.png", ".4bpp.smol");
 const u16 gItemIconPalette_OutfitBox[] = INCGFX_U16("graphics/items/icon_palettes/outfit_box.pal", ".gbapal");
 
+const u32 gItemIcon_Pokevial0[] = INCGFX_U32("graphics/items/icons/pokevial0.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial1[] = INCGFX_U32("graphics/items/icons/pokevial1.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial2[] = INCGFX_U32("graphics/items/icons/pokevial2.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial3[] = INCGFX_U32("graphics/items/icons/pokevial3.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial4[] = INCGFX_U32("graphics/items/icons/pokevial4.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial5[] = INCGFX_U32("graphics/items/icons/pokevial5.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial6[] = INCGFX_U32("graphics/items/icons/pokevial6.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial7[] = INCGFX_U32("graphics/items/icons/pokevial7.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial8[] = INCGFX_U32("graphics/items/icons/pokevial8.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial9[] = INCGFX_U32("graphics/items/icons/pokevial9.png", ".4bpp.smol");
+const u32 gItemIcon_Pokevial[] = INCGFX_U32("graphics/items/icons/pokevial.png", ".4bpp.smol");
+const u16 gItemIconPalette_Pokevial[] = INCGFX_U16("graphics/items/icon_palettes/pokevial.pal", ".gbapal");
+
 const u32 gItemIcon_Hatchet[] = INCGFX_U32("graphics/items/icons/hatchet.png", ".4bpp.smol");
 const u16 gItemIconPalette_Hatchet[] = INCGFX_U16("graphics/items/icon_palettes/hatchet.pal", ".gbapal");
 

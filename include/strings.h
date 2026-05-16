@@ -2260,4 +2260,10 @@ extern const u8 gText_Boy[];
 extern const u8 gText_Girl[];
 
 
+//Start Pokevial Branch
+extern const u8 gText_PokevialHasDoses[];
+extern const u8 gText_PokevialIsEmpty[];
+extern const u8 gText_YourPkmnWereRestored[];
+//End Pokevial Branch
+
 #endif // GUARD_STRINGS_H
