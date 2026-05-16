@@ -183,6 +183,7 @@ Route110_EventScript_ChallengeGuy::
 	faceplayer
 	specialvar VAR_RESULT, GetPlayerAvatarBike
 	goto_if_eq VAR_RESULT, 1, Route110_EventScript_PlayerRidingAcroBike
+	goto_if_eq VAR_RESULT, 3, Route110_EventScript_PlayerRidingStandardBike
 	goto_if_eq VAR_CYCLING_CHALLENGE_STATE, 0, Route110_EventScript_PlayerNotRidingBike
 	msgbox Route110_Text_AlwaysAimHigher, MSGBOX_DEFAULT
 	release
@@ -195,6 +196,11 @@ Route110_EventScript_PlayerNotRidingBike::
 
 Route110_EventScript_PlayerRidingAcroBike::
 	msgbox Route110_Text_AcroBikesDoNotQualify, MSGBOX_DEFAULT
+	release
+	end
+
+Route110_EventScript_PlayerRidingStandardBike::
+	msgbox Route110_Text_StandardBikesDoNotQualify, MSGBOX_DEFAULT
 	release
 	end
 
@@ -939,6 +945,13 @@ Route110_Text_AcroBikesDoNotQualify:
 	.string "of collisions and their total times.\p"
 	.string "ACRO BIKES do not qualify for rating.\n"
 	.string "They are easy to turn, so it's not fair.$"
+
+Route110_Text_StandardBikesDoNotQualify:
+	.string "On this CYCLING ROAD, those riding\n"
+	.string "MACH BIKES are rated for their number\l"
+	.string "of collisions and their total times.\p"
+	.string "Regular BIKES do not qualify for rating.\n"
+	.string "We just think they're kind of boring.$"
 
 Route110_Text_BoyWasLookingForYou:
 	.string "Those clothes…\n"

@@ -1,3 +1,5 @@
+.equ VIAL_UPGRADE_PRICE, 30000
+
 SlateportCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SlateportCity_OnFrame
@@ -165,6 +167,56 @@ SlateportCity_EventScript_MonEVsNotMaxed::
 
 SlateportCity_EventScript_MonHasEffortRibbon::
 	msgbox SlateportCity_Text_EffortRibbonLooksGoodOnIt, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_PokevialLady::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_POKEVIAL, SlateportCity_EventScript_PurchaseVialUpgrade
+	msgbox SlateportCity_Text_GivePokevial, MSGBOX_DEFAULT
+	giveitem ITEM_POKEVIAL
+	setflag FLAG_RECEIVED_POKEVIAL
+	msgbox SlateportCity_Text_ExplainPokevial, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_PurchaseVialUpgrade::
+	showmoneybox 0, 0
+	msgbox SlateportCity_Text_PokevialUpgrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_EventScript_DeclineVialUpgrade
+	pokevialgetdose
+	goto_if_eq VAR_0x8006, 10, SlateportCity_EventScript_VialMaxCapacity
+	checkmoney VIAL_UPGRADE_PRICE
+	goto_if_eq VAR_RESULT, FALSE, SlateportCity_EventScript_NotEnoughMoney
+	removemoney VIAL_UPGRADE_PRICE
+	updatemoneybox
+	playse SE_SHOP
+	msgbox SlateportCity_Text_VialUpgradeYes, MSGBOX_DEFAULT
+	hidemoneybox
+	pokevialincreasesize
+	pokevialadddose
+	pokevialgetdose
+	buffernumberstring STR_VAR_2, VAR_0x8006
+	msgbox SlateportCity_Text_VialUpgradeComplete, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_DeclineVialUpgrade::
+	hidemoneybox
+	msgbox SlateportCity_Text_VialUpgradeNo, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_NotEnoughMoney::
+	msgbox SlateportCity_Text_VialUpgradeCantAfford, MSGBOX_DEFAULT
+	hidemoneybox
+	release
+	end
+
+SlateportCity_EventScript_VialMaxCapacity::
+	hidemoneybox
+	msgbox SlateportCity_Text_VialUpgradeMax, MSGBOX_DEFAULT
 	release
 	end
 
@@ -995,6 +1047,65 @@ SlateportCity_Text_GoForItLittleHarder:
 SlateportCity_Text_EffortRibbonLooksGoodOnIt:
 	.string "Oh! Your {STR_VAR_1}, that EFFORT\n"
 	.string "RIBBON looks good on it!$"
+
+SlateportCity_Text_GivePokevial:
+	.string "My eyes never decieve me.\n"
+	.string "I can tell you are a novice TRAINER.\p"
+	.string "After all, you don't even have a\n"
+	.string "POKéVIAL yet!\p"
+	.string "Such a tragic fate cannot be overlooked!\n"
+	.string "You must take this immediately!$"
+
+SlateportCity_Text_ExplainPokevial:
+	.string "The POKéVIAL is a fantastic tool for\n"
+	.string "any and all TRAINERS, you can take\l"
+	.string "my word for it!\p"
+	.string "One dose of this, and your entire team\n"
+	.string "will be feeling fully refreshed!\p"
+	.string "It's like a POKéMON CENTER in your\n"
+	.string "own BAG!\p"
+	.string "It only comes with one dose to start.\n"
+	.string "It is refilled at a POKéMON CENTER.\p"
+	.string "If you want, though, I can upgrade it\n"
+	.string "to carry more doses, for a price.\p"
+	.string "Just a mere ¥30000 and I'll increase\n"
+	.string "its capacity for you!\p"
+	.string "What?\n"
+	.string "Don't look at me like that!\p"
+	.string "We've all got to make a living somehow!\p"
+	.string "If you want to upgrade your capacity\n"
+	.string "then you know where to find me!$"
+
+SlateportCity_Text_PokevialUpgrade:
+	.string "Just ¥30000 and I will upgrade the\n"
+	.string "capacity of your POKéVIAL!\p"
+	.string "What do you say?$"
+
+SlateportCity_Text_VialUpgradeYes:
+	.string "A wise desicion!\n"
+	.string "Here we go then!\p"
+	.string "Hyaaaaaaahhh!$"
+
+SlateportCity_Text_VialUpgradeComplete:
+	.string "It is done!\n"
+	.string "Your POKéVIAL can now hold {STR_VAR_2} doses!$"
+
+SlateportCity_Text_VialUpgradeNo:
+	.string "No?\p"
+	.string "Well, I am sure you will come to your\n"
+	.string "senses eventually.\p"
+	.string "I'll be waiting!$"
+
+SlateportCity_Text_VialUpgradeCantAfford:
+	.string "You don't seem to have enough money\n"
+	.string "I'm afraid.\p"
+	.string "Come back when you're a little, mmmmm,\n"
+	.string "richer!$"
+
+SlateportCity_Text_VialUpgradeMax:
+	.string "What's this?\n"
+	.string "Your POKéVIAL is at max capacity!\p"
+	.string "I can't upgrade it any further!$"
 
 SlateportCity_Text_WonderIfLighthouseStartlesPokemon:
 	.string "The light of the lighthouse reaches\n"

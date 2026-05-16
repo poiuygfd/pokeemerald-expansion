@@ -519,6 +519,7 @@ const u8 gText_Blank[] = _("");
 const u8 gText_MenuOptionSave[] = _("SAVE");
 const u8 gText_MenuOptionOption[] = _("OPTION");
 const u8 gText_MenuOptionExit[] = _("EXIT");
+const u8 gText_MenuOptionDexnav[] = _("DEXNAV");
 const u8 gText_SouthernIsland[] = _("SOUTHERN ISLAND");
 const u8 gText_BirthIsland[] = _("BIRTH ISLAND");
 const u8 gText_FarawayIsland[] = _("FARAWAY ISLAND");

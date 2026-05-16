@@ -222,6 +222,8 @@ u16 GetPlayerAvatarBike(void)
     {
         if (gSaveBlock2Ptr->playerBike == ACRO_BIKE)
             return 1;
+        if (gSaveBlock2Ptr->playerBike == STANDARD_BIKE)
+            return 3;
         else
             return 2;
     }
