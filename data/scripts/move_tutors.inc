@@ -305,7 +305,6 @@ MoveTutor_EventScript_UltimateMoveTaught::
 
 MoveTutor_EventScript_OpenPartyMenu::
 	special ChooseMonForMoveTutor
-	waitstate
 	lock
 	faceplayer
 	return

@@ -329,7 +329,6 @@ ContestHall_EventScript_TryWaitForLink::
 
 ContestHall_EventScript_WaitForLink::
 	special LinkContestWaitForConnection
-	waitstate
 	return
 
 ContestHall_EventScript_ContestantWalkToCenter::
