@@ -12,6 +12,7 @@ Route114_OnTransition:
 
 Route114_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route114_CloseRegiEntrance
+	call_if_set FLAG_OPENED_COUNCIL_CHAMBERS, Route114_OpenCouncilChambers
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_114_NORTH, AbnormalWeather_EventScript_PlaceTilesRoute114North
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_114_SOUTH, AbnormalWeather_EventScript_PlaceTilesRoute114South
 	end
@@ -19,6 +20,11 @@ Route114_OnLoad:
 Route114_CloseRegiEntrance::
 	setmetatile 26, 44, METATILE_Fallarbor_BrownRockWall, TRUE
 	setmetatile 26, 45, METATILE_Fallarbor_WhiteRockWall_GrassBase, TRUE
+	return
+
+Route114_OpenCouncilChambers::
+	setmetatile 19, 8, METATILE_Fallarbor_RedCaveEntrance_Top, TRUE
+	setmetatile 19, 9, METATILE_Fallarbor_RedCaveEntrance_Bottom, FALSE
 	return
 
 Route114_OnFrame:
@@ -70,6 +76,23 @@ Route114_EventScript_Poochyena::
 	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
 	msgbox Route114_Text_Poochyena, MSGBOX_DEFAULT
 	waitmoncry
+	release
+	end
+
+Route114_EventScript_FragileWall::
+	lock
+	msgbox Route114_Text_WallFeelsFragile, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route114_EventScript_BreakWall
+	release
+	end
+
+Route114_EventScript_BreakWall::
+	msgbox Route114_Text_WallShatteredApart, MSGBOX_DEFAULT
+	setflag FLAG_OPENED_COUNCIL_CHAMBERS
+	call Route114_OpenCouncilChambers
+	special DrawWholeMapView
+	playse SE_BANG
+	removeobject LOCALID_FRAGILE_WALL
 	release
 	end
 
@@ -198,6 +221,16 @@ Route114_Text_ExplainRoar:
 
 Route114_Text_Poochyena:
 	.string "Bow! Bowwow!$"
+
+Route114_Text_WallFeelsFragile:
+	.string "This wall feels fragile, as if\n"
+	.string "it would cave in with a push.\p"
+	.string "Would you like to give the wall\n"
+	.string "a good thunk?$"
+
+Route114_Text_WallShatteredApart:
+	.string "The impact caused the wall to\n"
+	.string "shatter apart!$"
 
 Route114_Text_MeteorFallsSign:
 	.string "METEOR FALLS\n"

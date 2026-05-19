@@ -642,7 +642,10 @@
     "TheDepths_B6F",
     "TheDepths_B7F",
     "TheDepths_B8F",
-    "SafariZone_UrsalunaCave"
+    "SafariZone_UrsalunaCave",
+    "CouncilChambers",
+    "CouncilChambers_Garden",
+    "CouncilChambers_DevRoom"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

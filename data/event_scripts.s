@@ -1787,3 +1787,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/maps/EverGrandeCity_WolfeCave/scripts.inc"
+	.include "data/maps/CouncilChambers_Garden/scripts.inc"
+	.include "data/maps/CouncilChambers_DevRoom/scripts.inc"
+	.include "data/maps/CouncilChambers/scripts.inc"

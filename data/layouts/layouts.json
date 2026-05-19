@@ -9609,6 +9609,36 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_COUNCIL_CHAMBERS_GARDEN",
+      "name": "CouncilChambers_Garden_Layout",
+      "width": 11,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CouncilChambers_Garden/border.bin",
+      "blockdata_filepath": "data/layouts/CouncilChambers_Garden/map.bin"
+    },
+    {
+      "id": "LAYOUT_COUNCIL_CHAMBERS_DEV_ROOM",
+      "name": "CouncilChambers_DevRoom_Layout",
+      "width": 17,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CouncilChambers_DevRoom/border.bin",
+      "blockdata_filepath": "data/layouts/CouncilChambers_DevRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_COUNCIL_CHAMBERS",
+      "name": "CouncilChambers_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CouncilChambers/border.bin",
+      "blockdata_filepath": "data/layouts/CouncilChambers/map.bin"
     }
   ]
 }

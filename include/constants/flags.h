@@ -468,9 +468,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
-
+#define FLAG_EGG_MOVE_TUTORING               0x1AA
+#define FLAG_COUNCIL_CHAMBER_WALL            0x1AB
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
 #define FLAG_SHOWN_EON_TICKET                0x1AE
@@ -712,7 +711,7 @@
 #define FLAG_HIDE_TUFFNOOK_TEAM_AQUA  0x292 // Team Aqua Brigade in Tuffnook
 #define FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA  0x293 // The same Team Aqua guys but in Navel Rock
 #define FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA  0x294 // Team Magma on Southern Island
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
+#define FLAG_OPENED_COUNCIL_CHAMBERS  0x295 // Broken the wall to the Council Chambers
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag
 #define FLAG_UNUSED_0x297  0x297 // Unused Flag
 #define FLAG_UNUSED_0x298  0x298 // Unused Flag

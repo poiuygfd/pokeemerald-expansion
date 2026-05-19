@@ -4328,20 +4328,21 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_TOXIC_DEBRIS:
-        {
-            enum BattlerId toxicSpikesTarget = BATTLE_OPPOSITE(gBattlerTarget);
-            if (!gBattleStruct->isSkyBattle
-             && !gBattleStruct->unableToUseMove
-             && IsBattleMovePhysical(gCurrentMove)
-             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
-             && (gSideTimers[GetBattlerSide(toxicSpikesTarget)].toxicSpikesAmount != 2))
             {
-                SaveBattlerTarget(gBattlerTarget);
-                SaveBattlerAttacker(gBattlerAttacker);
-                gBattlerAttacker = gBattlerTarget;
-                gBattlerTarget = BATTLE_OPPOSITE(gBattlerAttacker);
-                BattleScriptCall(BattleScript_ToxicDebrisActivates);
-                effect++;
+                enum BattlerId toxicSpikesTarget = BATTLE_OPPOSITE(gBattlerTarget);
+                if (!gBattleStruct->isSkyBattle
+                && !gBattleStruct->unableToUseMove
+                && IsBattleMovePhysical(gCurrentMove)
+                && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
+                && (gSideTimers[GetBattlerSide(toxicSpikesTarget)].toxicSpikesAmount != 2))
+                {
+                    SaveBattlerTarget(gBattlerTarget);
+                    SaveBattlerAttacker(gBattlerAttacker);
+                    gBattlerAttacker = gBattlerTarget;
+                    gBattlerTarget = BATTLE_OPPOSITE(gBattlerAttacker);
+                    BattleScriptCall(BattleScript_ToxicDebrisActivates);
+                    effect++;
+                }
             }
             break;
         case ABILITY_SPICY_SPRAY:
@@ -4369,88 +4370,90 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_TAG_TEAM: //Handles the transformation on "fainting" (being brought to 1 HP)
-            if (gBattleMons[battler].hp == 1
-            && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES))
             {
                 struct Pokemon *mon = GetBattlerMon(battler);
                 bool32 shouldSwap = FALSE;
                 u32 targetSpecies;
                 s32 health;
 
-                switch (gBattleMons[gBattlerTarget].species)
+                if (gBattleMons[battler].hp == 1
+                && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES))
                 {
-                case SPECIES_PARTRIO_PALADIN:
-                    if (GetBattlerPartyState(battler)->warriorFainted == FALSE)
+                    switch (gBattleMons[gBattlerTarget].species)
                     {
-                        targetSpecies = SPECIES_PARTRIO_WARRIOR;
-                        health = GetBattlerPartyState(battler)->warriorHP;
-                        GetBattlerPartyState(battler)->paladinFainted = TRUE;
-                        shouldSwap = TRUE;
+                    case SPECIES_PARTRIO_PALADIN:
+                        if (GetBattlerPartyState(battler)->warriorFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_WARRIOR;
+                            health = GetBattlerPartyState(battler)->warriorHP;
+                            GetBattlerPartyState(battler)->paladinFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(battler)->mageFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_MAGE;
+                            health = GetBattlerPartyState(battler)->mageHP;
+                            GetBattlerPartyState(battler)->paladinFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    case SPECIES_PARTRIO_WARRIOR:
+                        if (GetBattlerPartyState(battler)->mageFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_MAGE;
+                            health = GetBattlerPartyState(battler)->mageHP;
+                            GetBattlerPartyState(battler)->warriorFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(battler)->paladinFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_PALADIN;
+                            health = GetBattlerPartyState(battler)->paladinHP;
+                            GetBattlerPartyState(battler)->warriorFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    case SPECIES_PARTRIO_MAGE:
+                        if (GetBattlerPartyState(battler)->paladinFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_PALADIN;
+                            health = GetBattlerPartyState(battler)->paladinHP;
+                            GetBattlerPartyState(battler)->mageFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(battler)->warriorFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_WARRIOR;
+                            health = GetBattlerPartyState(battler)->warriorHP;
+                            GetBattlerPartyState(battler)->mageFainted = TRUE;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    default:
+                        break;
                     }
-                    else if (GetBattlerPartyState(battler)->mageFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_MAGE;
-                        health = GetBattlerPartyState(battler)->mageHP;
-                        GetBattlerPartyState(battler)->paladinFainted = TRUE;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                case SPECIES_PARTRIO_WARRIOR:
-                    if (GetBattlerPartyState(battler)->mageFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_MAGE;
-                        health = GetBattlerPartyState(battler)->mageHP;
-                        GetBattlerPartyState(battler)->warriorFainted = TRUE;
-                        shouldSwap = TRUE;
-                    }
-                    else if (GetBattlerPartyState(battler)->paladinFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_PALADIN;
-                        health = GetBattlerPartyState(battler)->paladinHP;
-                        GetBattlerPartyState(battler)->warriorFainted = TRUE;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                case SPECIES_PARTRIO_MAGE:
-                    if (GetBattlerPartyState(battler)->paladinFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_PALADIN;
-                        health = GetBattlerPartyState(battler)->paladinHP;
-                        GetBattlerPartyState(battler)->mageFainted = TRUE;
-                        shouldSwap = TRUE;
-                    }
-                    else if (GetBattlerPartyState(battler)->warriorFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_WARRIOR;
-                        health = GetBattlerPartyState(battler)->warriorHP;
-                        GetBattlerPartyState(battler)->mageFainted = TRUE;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                default:
-                    break;
-                }
 
-                if (shouldSwap == TRUE)
-                {
-                    GetBattlerPartyState(battler)->changedSpecies = gBattleMons[battler].species;
-                    SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
-                    gBattleMons[battler].species = targetSpecies;
-                    RecalcBattlerStats(battler, mon, FALSE);
-                    if (health == 0)
-                        SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget));
-                    else if (health > gBattleMons[gBattlerTarget].hp)
+                    if (shouldSwap == TRUE)
                     {
-                        s32 healthDifference = health - gBattleMons[gBattlerTarget].hp;
-                        SetHealAmount(gBattlerTarget, healthDifference);
+                        GetBattlerPartyState(battler)->changedSpecies = gBattleMons[battler].species;
+                        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+                        gBattleMons[battler].species = targetSpecies;
+                        RecalcBattlerStats(battler, mon, FALSE);
+                        if (health == 0)
+                            SetHealAmount(gBattlerTarget, GetNonDynamaxMaxHP(gBattlerTarget));
+                        else if (health > gBattleMons[gBattlerTarget].hp)
+                        {
+                            s32 healthDifference = health - gBattleMons[gBattlerTarget].hp;
+                            SetHealAmount(gBattlerTarget, healthDifference);
+                        }
+                        else if (health < gBattleMons[gBattlerTarget].hp)
+                        {
+                            s32 healthDifference = gBattleMons[gBattlerTarget].hp - health;
+                            SetPassiveDamageAmount(gBattlerTarget, healthDifference);
+                        }
+                        BattleScriptCall(BattleScript_TagTeamActivates);
+                        effect++;
                     }
-                    else if (health < gBattleMons[gBattlerTarget].hp)
-                    {
-                        s32 healthDifference = gBattleMons[gBattlerTarget].hp - health;
-                        SetPassiveDamageAmount(gBattlerTarget, healthDifference);
-                    }
-                    BattleScriptCall(BattleScript_TagTeamActivates);
-                    effect++;
                 }
             }
             break;
