@@ -83,7 +83,6 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
 	removeobject LOCALID_OCEANIC_MUSEUM_2F_CAPT_STERN
-	call_if_eq VAR_REGISTER_BIRCH_STATE, 0, SlateportCity_OceanicMuseum_2F_EventScript_ReadyRegisterBirch
 	call_if_set FLAG_BADGE02_GET, SlateportCity_OceanicMuseum_2F_EventScript_ForceMauvilleRoute
 	call_if_set FLAG_BADGE03_GET, SlateportCity_OceanicMuseum_2F_EventScript_ForceDewfordRoute
 	setflag FLAG_DELIVERED_DEVON_GOODS
@@ -118,10 +117,6 @@ SlateportCity_OceanicMuseum_2F_EventScript_ForceMauvilleRoute::
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	return
-
-SlateportCity_OceanicMuseum_2F_EventScript_ReadyRegisterBirch::
-	setvar VAR_REGISTER_BIRCH_STATE, 1
 	return
 
 SlateportCity_OceanicMuseum_2F_EventScript_PlayerFaceGrunts::

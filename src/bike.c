@@ -1342,15 +1342,9 @@ enum PlayerSpeed GetPlayerSpeed(void)
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_BIKE)
     {
         if (gSaveBlock2Ptr->playerBike == MACH_BIKE)
-        {
-            s16 machSpeeds[3];
-            memcpy(machSpeeds, sMachBikeSpeeds, sizeof(machSpeeds));
             return machSpeeds[gPlayerAvatar.bikeFrameCounter];
-        }
         else
-        {
             return PLAYER_SPEED_FASTER;
-        }
     }
     else if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_DASH))
         return PLAYER_SPEED_FAST;

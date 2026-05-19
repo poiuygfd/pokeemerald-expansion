@@ -641,6 +641,105 @@ SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_WAVE_INCENSE
 	pokemartlistend
 
+SlateportCity_EventScript_BirchScene1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto SlateportCity_EventScript_BirchScene
+
+SlateportCity_EventScript_BirchScene2::
+	lockall
+	setvar VAR_0x8008, 2
+	goto SlateportCity_EventScript_BirchScene
+
+SlateportCity_EventScript_BirchScene::
+	addobject LOCALID_SLATEPORT_BIRCH
+	applymovement LOCALID_SLATEPORT_BIRCH, SlateportCity_Movement_BirchEntrance
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_SLATEPORT_BIRCH, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_SLATEPORT_BIRCH, Common_Movement_Delay48
+	waitmovement 0
+	call_if_eq VAR_0x8008, 1, SlateportCity_EventScript_BirchApproachPlayer1
+	call_if_eq VAR_0x8008, 2, SlateportCity_EventScript_BirchApproachPlayer2
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SlateportCity_Text_ImagineSeeingYouHere, MSGBOX_DEFAULT
+	closemessage
+	delay 20
+	applymovement LOCALID_SLATEPORT_BIRCH, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_SLATEPORT_BIRCH, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_SLATEPORT_BIRCH, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	delay 30
+	msgbox SlateportCity_Text_HeardYouInstallMatchCall, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox SlateportCity_Text_RegisteredBirchInPokenav, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_PROF_BIRCH_MATCH_CALL
+	msgbox SlateportCity_Text_KeepAnEyeOutForRival, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SLATEPORT_BIRCH, SlateportCity_Movement_BirchExit
+	waitmovement 0
+	removeobject LOCALID_SLATEPORT_BIRCH
+	setvar VAR_REGISTER_BIRCH_STATE, 2
+	releaseall
+	end
+
+SlateportCity_EventScript_BirchApproachPlayer1::
+	applymovement LOCALID_SLATEPORT_BIRCH, SlateportCity_Movement_BirchApproachPlayer1
+	waitmovement 0
+	return
+
+SlateportCity_EventScript_BirchApproachPlayer2::
+	applymovement LOCALID_SLATEPORT_BIRCH, SlateportCity_Movement_BirchApproachPlayer2
+	waitmovement 0
+	return
+
+SlateportCity_Movement_BirchEntrance:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+SlateportCity_Movement_BirchApproachPlayer1:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_right
+	walk_right
+	step_end
+
+SlateportCity_Movement_BirchApproachPlayer2:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+SlateportCity_Movement_BirchExit:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
 SlateportCity_EventScript_CaptStern::
 	lockall
@@ -1307,6 +1406,34 @@ SlateportCity_Text_BattleTentBuiltRecently:
 	.string "awesome in its own way.\p"
 	.string "You should go find tough POKéMON\n"
 	.string "for the BATTLE TENT!$"
+
+SlateportCity_Text_ImagineSeeingYouHere:
+	.string "PROF. BIRCH: Oh, {PLAYER}{KUN}!\n"
+	.string "Imagine seeing you here!\p"
+	.string "And where might my {RIVAL} be?$"
+
+SlateportCity_Text_HeardYouInstallMatchCall:
+	.string "Oh, I see!\n"
+	.string "You two are running separately.\l"
+	.string "Well, that's fine.\p"
+	.string "Oh, yes, I heard that your POKéNAV\n"
+	.string "had the MATCH CALL system installed.\p"
+	.string "Well, then, I should register you in\n"
+	.string "my POKéNAV as well.\p"
+	.string "That way, even when we're apart,\n"
+	.string "I can rate your POKéDEX anytime.\p"
+	.string "… … … … … …$"
+
+SlateportCity_Text_RegisteredBirchInPokenav:
+	.string "Registered PROF. BIRCH\n"
+	.string "in the POKéNAV.$"
+
+SlateportCity_Text_KeepAnEyeOutForRival:
+	.string "PROF. BIRCH: {PLAYER}{KUN}…\p"
+	.string "Please keep an eye out for my {RIVAL}.\n"
+	.string "… … … … … …\p"
+	.string "Well, I had better get going.\n"
+	.string "See you again, {PLAYER}{KUN}!$"
 
 SlateportCity_Text_CaptSternBeingInterviewed:
 	.string "I was hoping that it was a famous star\n"

@@ -637,6 +637,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SlateportCity_EventScript_PokevialLady",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SLATEPORT_BIRCH",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 12,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_SLATEPORT_CITY_BIRCH"
     }
   ],
   "warp_events": [
@@ -727,6 +741,24 @@
       "var": "VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE",
       "var_value": "2",
       "script": "SlateportCity_EventScript_ScottBattleTentScene"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_REGISTER_BIRCH_STATE",
+      "var_value": "1",
+      "script": "SlateportCity_EventScript_BirchScene2"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_REGISTER_BIRCH_STATE",
+      "var_value": "1",
+      "script": "SlateportCity_EventScript_BirchScene1"
     }
   ],
   "bg_events": [

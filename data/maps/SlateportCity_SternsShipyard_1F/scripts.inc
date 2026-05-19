@@ -14,6 +14,7 @@ SlateportCity_SternsShipyard_1F_EventScript_Dock::
 	closemessage
 	applymovement LOCALID_DOCK, Common_Movement_FaceOriginalDirection
 	waitmovement 0
+	call_if_eq VAR_REGISTER_BIRCH_STATE, 0, SlateportCity_SternsShipyard_1F_EventScript_ReadyRegisterBirch
 	setflag FLAG_DOCK_REJECTED_DEVON_GOODS
 	setflag FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA
 	releaseall
@@ -49,6 +50,10 @@ SlateportCity_SternsShipyard_1F_EventScript_NeedVeteran::
 	msgbox SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran, MSGBOX_DEFAULT
 	releaseall
 	end
+
+SlateportCity_SternsShipyard_1F_EventScript_ReadyRegisterBirch::
+	setvar VAR_REGISTER_BIRCH_STATE, 1
+	return
 
 SlateportCity_SternsShipyard_1F_EventScript_Scientist1::
 	msgbox SlateportCity_SternsShipyard_1F_Text_SeaIsLikeLivingThing, MSGBOX_NPC
