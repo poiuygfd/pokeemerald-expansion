@@ -231,6 +231,53 @@ Route117_EventScript_Aisha::
 	msgbox Route117_Text_AishaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route117_EventScript_RouteMaster::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_EVIOLITE, Route117_EventScript_RouteMasterGivenItem
+	goto_if_defeated TRAINER_ROUTE_MASTER_117, Route117_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_ISAAC_1, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_LYDIA_1, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_DYLAN_1, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_MARIA_1, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_DEREK, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_ANNA_AND_MEG_1, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_MELINA, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_BRANDI, Route117_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_AISHA, Route117_EventScript_RouteMasterNotReady
+	msgbox Route117_Text_RuggedManWithRuggedMons, MSGBOX_DEFAULT
+	msgbox Route117_Text_IllTakeYouOn, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route117_EventScript_RouteMasterWillWait
+	msgbox Route117_Text_ReadyToRumble, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ROUTE_MASTER_117, Route117_Text_RouteMasterDefeat
+	goto Route117_EventScript_RouteMasterDefeated
+	end
+
+Route117_EventScript_RouteMasterDefeated::
+	msgbox Route117_Text_YouDidWellKid, MSGBOX_DEFAULT
+	giveitem ITEM_EVIOLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox Route117_Text_ThatsAnEviolite, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_EVIOLITE
+	release
+	end
+
+Route117_EventScript_RouteMasterNotReady::
+	msgbox Route117_Text_RuggedManWithRuggedMons, MSGBOX_DEFAULT
+	msgbox Route117_Text_WantToTryBeatTrainers, MSGBOX_DEFAULT
+	release
+	end
+
+Route117_EventScript_RouteMasterWillWait::
+	msgbox Route117_Text_OnlyStrongestWillBreakUs, MSGBOX_DEFAULT
+	release
+	end
+
+Route117_EventScript_RouteMasterGivenItem::
+	msgbox Route117_Text_ThatsAnEviolite, MSGBOX_DEFAULT
+	release
+	end
+
 Route117_Text_DadPokenavCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
@@ -264,6 +311,53 @@ Route117_Text_ArentTheseFlowersPretty:
 
 Route117_Text_AirIsTastyHere:
 	.string "The air is tasty here!$"
+
+Route117_Text_RuggedManWithRuggedMons:
+	.string "I'm a rugged man with rugged MONs.\n"
+	.string "We take pride in our DEFENSE!\p"
+	.string "After all, the longer you sit on the\n"
+	.string "field, the more things you can do!$"
+
+Route117_Text_WantToTryBeatTrainers:
+	.string "If you want to try breaking past\n"
+	.string "our defenses, then you'll need to\l"
+	.string "beat every TRAINER on this ROUTE.\p"
+	.string "Come find me after you've done that!$"
+
+Route117_Text_IllTakeYouOn:
+	.string "Since you've beaten every TRAINER\n"
+	.string "on this ROUTE, I'll take you on!$"
+
+Route117_Text_OnlyStrongestWillBreakUs:
+	.string "You need some time to prepare?\n"
+	.string "That's fine by me!\p"
+	.string "You'll need your strongest if you\n"
+	.string "want to break through us!$"
+
+Route117_Text_ReadyToRumble:
+	.string "Alright!\n"
+	.string "Let's get ready to rumble!$"
+
+Route117_Text_RouteMasterDefeat:
+	.string "Unbelievable!\n"
+	.string "You blew right past our defenses!$"
+
+Route117_Text_YouDidWellKid:
+	.string "Hahahaha!\n"
+	.string "You sure showed me!\l"
+	.string "You did well, kid!\p"
+	.string "Still, you have to admit there is\n"
+	.string "some merit to my strategy, right?\p"
+	.string "If you wanna give it a go yourself\n"
+	.string "then you might wanna take this!$"
+
+Route117_Text_ThatsAnEviolite:
+	.string "That's an EVIOLITE right there.\p"
+	.string "It boosts both your DEFENSE and your\n"
+	.string "SPECIAL DEFENSE by quite a lot!\p"
+	.string "The only catch is, it can only be used\n"
+	.string "by POKéMON that can still evolve!\p"
+	.string "Be sure to use it wisely!$"
 
 Route117_Text_RouteSignVerdanturf:
 	.string "ROUTE 117\n"

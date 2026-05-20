@@ -1309,10 +1309,10 @@
 #define FLAG_RECEIVED_GLALITITE                                     0x4E2 // Received Glalitite from Glalie fan
 #define FLAG_RECEIVED_FROSLASSITE                                   0x4E3 // Received Froslassite from Froslass fan
 #define FLAG_RECEIVED_WORK_UP                                       0x4E4 // Received Work Up from Route Master 102
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
+#define FLAG_RECEIVED_EXPERT_BELT                                   0x4E5 // Received Expert Belt from Route Master 104
+#define FLAG_RECEIVED_EVIOLITE                                      0x4E6 // Received Eviolite from Route Master 117
+#define FLAG_RECEIVED_BULK_UP                                       0x4E7 // Received Bulk Up from Route Master 113
+#define FLAG_RECEIVED_ABSOLITES                                     0x4E8 // Received Absolite and Absolite Z from Route Masters 120
 #define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag

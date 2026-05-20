@@ -322,6 +322,56 @@ Route104_EventScript_Darian::
 	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route104_EventScript_RouteMaster::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_EXPERT_BELT, Route104_EventScript_RouteMasterGivenItem
+	goto_if_defeated TRAINER_ROUTE_MASTER_104, Route104_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_IVAN, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_BILLY, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_HALEY_1, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_WINSTON_1, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_CINDY_1, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_GINA_AND_MIA_1, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_DARIAN, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_LYLE, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_ALICIA, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_SAMMY, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_SHAREN, Route104_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_JAMES_1, Route104_EventScript_RouteMasterNotReady
+	msgbox Route104_Text_SuperEffectiveMovesAreScary, MSGBOX_DEFAULT
+	msgbox Route104_Text_YouBeatEveryTrainer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route104_EventScript_RouteMasterWillWait
+	msgbox Route104_Text_InThatCaseLetsBegin, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ROUTE_MASTER_104, Route104_Text_RouteMasterDefeat
+	goto Route104_EventScript_RouteMasterDefeated
+	end
+
+Route104_EventScript_RouteMasterDefeated::
+	msgbox Route104_Text_WantYouToHaveThis, MSGBOX_DEFAULT
+	giveitem ITEM_EXPERT_BELT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox Route104_Text_PowerOfTheExpertBelt, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_EXPERT_BELT
+	release
+	end
+
+Route104_EventScript_RouteMasterNotReady::
+	msgbox Route104_Text_SuperEffectiveMovesAreScary, MSGBOX_DEFAULT
+	msgbox Route104_Text_BeatEveryTrainer, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_EventScript_RouteMasterWillWait::
+	msgbox Route104_Text_TakeYourTime, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_EventScript_RouteMasterGivenItem::
+	msgbox Route104_Text_PowerOfTheExpertBelt, MSGBOX_DEFAULT
+	release
+	end
+
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"
 	.string "MR. BRINEY lives.\p"
@@ -399,6 +449,54 @@ Route104_Text_FlowerShopSellingSaplings:
 	.string "saplings recently.\p"
 	.string "It made me so happy, I went overboard\n"
 	.string "shopping. Where should I put them?$"
+
+Route104_Text_SuperEffectiveMovesAreScary:
+	.string "Super-effective moves sure are scary,\n"
+	.string "aren't they?\p"
+	.string "Having to take the full force of a\n"
+	.string "double damage attack…\p"
+	.string "My team focuses on capitalising on\n"
+	.string "this terror to the extreme!$"
+
+Route104_Text_BeatEveryTrainer:
+	.string "If you can battle and beat every\n"
+	.string "TRAINER here on ROUTE 104, including\l"
+	.string "PETALBURG WOODS, then I will show you\l"
+	.string "this power firsthand!$"
+
+Route104_Text_YouBeatEveryTrainer:
+	.string "Looks like you beat every TRAINER to\n"
+	.string "be found in ROUTE 104 and PETALBURG\l"
+	.string "WOODS.\p"
+	.string "Very well!\n"
+	.string "Let us have a battle then!\p"
+	.string "If you need to prepare yourself first\n"
+	.string "though then please, go ahead.$"
+
+Route104_Text_TakeYourTime:
+	.string "But of course.\n"
+	.string "Take your time, you want to be fully\l"
+	.string "prepared to take on my team!$"
+
+Route104_Text_InThatCaseLetsBegin:
+	.string "I see.\n"
+	.string "In that case, let's begin!$"
+
+Route104_Text_RouteMasterDefeat:
+	.string "I'm impressed your team was able to\n"
+	.string "withstand our onslaught!$"
+
+Route104_Text_WantYouToHaveThis:
+	.string "It seems that you understand the true\n"
+	.string "importance of super-effective moves.\p"
+	.string "Here, I want you to have this.$"
+
+Route104_Text_PowerOfTheExpertBelt:
+	.string "The EXPERT BELT increases the damage\n"
+	.string "dealt by super-effective moves.\p"
+	.string "Compounding the damage dealt by an\n"
+	.string "already devastating strike…\p"
+	.string "It is a truly devious item.$"
 
 Route104_Text_MrBrineysCottage:
 	.string "MR. BRINEY'S COTTAGE$"

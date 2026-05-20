@@ -20411,25 +20411,158 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Pansage @ Oran Berry
-Level: 7
+Level: 10
 IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 EVs: 50 HP
 - Work Up
 - Vine Whip
 
 Panpour @ Oran Berry
-Level: 7
+Level: 10
 IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 EVs: 50 HP
 - Work Up
 - Water Gun
 
 Pansear @ Oran Berry
-Level: 7
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Level: 10
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
 EVs: 50 HP
 - Work Up
 - Incinerate
+
+=== TRAINER_ROUTE_MASTER_104 ===
+Name: SHIRLA
+Class: Route Master
+Pic: Lady
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Rockruff @ Expert Belt
+Level: 18
+Ability: Vital Spirit
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 Atk / 50 SpA / 50 Spe
+- Rock Throw
+- Fire Fang
+- Ice Fang
+- Thunder Fang
+
+Lotad @ Expert Belt
+Level: 18
+Ability: Rain Dish
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 Atk / 50 SpA / 50 Spe
+- Bubble Beam
+- Mega Drain
+- Icy Wind
+- Thief
+
+Buneary @ Expert Belt
+Level: 18
+Ability: Limber
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 Atk / 50 SpA / 50 Spe
+- Double Kick
+- Shadow Ball
+- Fire Punch
+- Thunder Punch
+
+=== TRAINER_ROUTE_MASTER_117 ===
+Name: CHUGGUS
+Class: Route Master
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Marill @ Eviolite
+Level: 18
+Ability: Huge Power
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+- Aqua Jet
+- Alluring Voice
+- Rollout
+- Rock Smash
+
+Stufful @ Eviolite
+Level: 18
+Ability: Fluffy
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+- Take Down
+- Force Palm
+- Brutal Swing
+- Rock Tomb
+
+Geodude @ Eviolite
+Level: 18
+Ability: Sturdy
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+- Bulldoze
+- Rock Blast
+- Flamethrower
+- Gyro Ball
+
+=== TRAINER_ROUTE_MASTER_113 ===
+Name: ZACH
+Class: Route Master
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Marill @ Eviolite
+Level: 18
+Ability: Huge Power
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+- Aqua Jet
+- Alluring Voice
+- Rollout
+- Rock Smash
+
+=== TRAINER_ROUTE_MASTER_120_A ===
+Name: ANGELA
+Class: Route Master
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Absol @ Absolite
+Level: 35
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Night Slash
+- Sucker Punch
+- Slash
+- Swords Dance
+
+=== TRAINER_ROUTE_MASTER_120_Z ===
+Name: DEVIN
+Class: Route Master
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Absol @ Absolite Z
+Level: 35
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Night Slash
+- Shadow Claw
+- Slash
+- Swords Dance
 
 === TRAINER_WEATHERMAN_RAIN ===
 Name: WEATHERMAN

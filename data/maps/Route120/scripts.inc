@@ -428,6 +428,114 @@ Route120_EventScript_Callie::
 	msgbox Route120_Text_CalliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route120_EventScript_RouteMasterA::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ABSOLITES, Route120_EventScript_RouteMasterAGivenItem
+	goto_if_defeated TRAINER_ROUTE_MASTER_120_A, Route120_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_COLIN, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_ROBERT_1, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_LORENZO, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_JENNA, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_JEFFREY_1, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_JENNIFER, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_CHIP, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_CLARISSA, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_ANGELICA, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_KEIGO, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_RILEY, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_LEONEL, Route120_EventScript_RouteMasterNotReadyA
+	goto_if_not_defeated TRAINER_CALLIE, Route120_EventScript_RouteMasterNotReadyA
+	msgbox Route120_Text_WeUseAbsolA, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route120_EventScript_RouteMasterBattle
+	msgbox Route120_Text_ComeBackWhenReady, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_RouteMasterZ::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_ABSOLITES, Route120_EventScript_RouteMasterZGivenItem
+	goto_if_defeated TRAINER_ROUTE_MASTER_120_Z, Route120_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_COLIN, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_ROBERT_1, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_LORENZO, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_JENNA, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_JEFFREY_1, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_JENNIFER, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_CHIP, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_CLARISSA, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_ANGELICA, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_KEIGO, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_RILEY, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_LEONEL, Route120_EventScript_RouteMasterNotReadyZ
+	goto_if_not_defeated TRAINER_CALLIE, Route120_EventScript_RouteMasterNotReadyZ
+	msgbox Route120_Text_WeUseAbsolZ, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route120_EventScript_RouteMasterBattle
+	msgbox Route120_Text_ComeBackWhenPrepared, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_RouteMasterBattle::
+	msgbox Route120_Text_FeelTruePowerOfAbsol, MSGBOX_DEFAULT
+	trainerbattle_two_trainers TRAINER_ROUTE_MASTER_120_A, Route120_Text_RouteMasterDefeatA, TRAINER_ROUTE_MASTER_120_Z, Route120_Text_RouteMasterDefeatZ
+	goto Route120_EventScript_RouteMasterDefeated
+	end
+
+Route120_EventScript_RouteMasterDefeated::
+	msgbox Route120_Text_ProvenYourWorth, MSGBOX_DEFAULT
+	checkitemspace ITEM_ABSOLITE
+	call_if_eq VAR_RESULT, FALSE, Route120_EventScript_NoRoomAbsolite
+	additem ITEM_ABSOLITE
+	checkitemspace ITEM_ABSOLITE_Z
+	call_if_eq VAR_RESULT, FALSE, Route120_EventScript_NoRoomAbsoliteZ
+	additem ITEM_ABSOLITE_Z
+	bufferitemname STR_VAR_2, ITEM_ABSOLITE
+	playfanfare MUS_LEVEL_UP
+	message gText_ObtainedTheItem
+	waitmessage
+	waitfanfare
+	bufferitemname STR_VAR_2, ITEM_ABSOLITE_Z
+	playfanfare MUS_LEVEL_UP
+	message gText_ObtainedTheItem
+	waitmessage
+	waitfanfare
+	msgbox Route120_Text_YouCanMegaEvolveAbsol, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_ABSOLITES
+	release
+	end
+
+Route120_EventScript_RouteMasterNotReadyA::
+	msgbox Route120_Text_YouAreNotReady, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_RouteMasterNotReadyZ::
+	msgbox Route120_Text_ProveYourselfFirst, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_RouteMasterAGivenItem::
+	msgbox Route120_Text_RecievedStonesA, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_RouteMasterZGivenItem::
+	msgbox Route120_Text_RecievedStonesZ, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_NoRoomAbsolite::
+	msgbox Route120_Text_DontHaveRoomForThese, MSGBOX_DEFAULT
+	release
+	end
+
+Route120_EventScript_NoRoomAbsoliteZ::
+	removeitem ITEM_ABSOLITE
+	msgbox Route120_Text_DontHaveRoomForThese, MSGBOX_DEFAULT
+	release
+	end
+
 Route120_Text_StevenGreeting:
 	.string "STEVEN: Hm? {PLAYER}{KUN}, hi.\n"
 	.string "It's been a while.\p"
@@ -491,6 +599,92 @@ Kecleon_Text_UseDevonScopeMonAttacked:
 
 Route120_Text_OgerponDroppedSomething:
 	.string "OGERPON dropped something…$"
+
+Route120_Text_YouAreNotReady:
+	.string "ANGELA: You do seem strong.\n"
+	.string "But I do not believe you are ready.\p"
+	.string "Come back after you have defeated\n"
+	.string "every trainer on this ROUTE.$"
+
+Route120_Text_ProveYourselfFirst:
+	.string "DEVIN: I can tell you are strong.\n"
+	.string "But I still need to see more from you.\p"
+	.string "Prove yourself first by beating every\n"
+	.string "TRAINER on this ROUTE, then come back.$"
+
+Route120_Text_WeUseAbsolA:
+	.string "ANGELA: It appears you have defeated\n"
+	.string "every TRAINER on this ROUTE.\p"
+	.string "Very well then.\p"
+	.string "We are TRAINERS who use the DISASTER\n"
+	.string "POKéMON, ABSOL.\p"
+	.string "ABSOL is a criminally understood POKéMON\n"
+	.string "with a kind and caring soul.\p"
+	.string "It is also capable of MEGA EVOLUTION.\n"
+	.string "In fact, it possesses two of them.\p"
+	.string "If you can beat both of our MEGA ABSOL\n"
+	.string "then we will reward you accordingly.\p"
+	.string "Well then, shall we begin?$"
+
+Route120_Text_WeUseAbsolZ:
+	.string "DEVIN: So, you've beaten each and every\n"
+	.string "TRAINER on this ROUTE.\p"
+	.string "Alright then.\p"
+	.string "We are TRAINERS specialising in the\n"
+	.string "DISASTER POKéMON, ABSOL.\p"
+	.string "ABSOL is a highly misunderstood POKéMON\n"
+	.string "that also possesses some great power.\p"
+	.string "It can even use MEGA EVOLUTION.\n"
+	.string "Not only that, it has two MEGA forms.\p"
+	.string "If you can defeat both our MEGA ABSOL\n"
+	.string "then we'll reward you for it.\p"
+	.string "With that being said, ready to begin?$"
+
+Route120_Text_ComeBackWhenReady:
+	.string "ANGELA: We can wait.\n"
+	.string "Come back when you are ready.$"
+
+Route120_Text_ComeBackWhenPrepared:
+	.string "DEVIN: We can wait.\n"
+	.string "Come back when you have prepared.$"
+
+Route120_Text_FeelTruePowerOfAbsol:
+	.string "ANGELA: Prepare to feel the true power\n"
+	.string "of my ABSOL in all its beauty!\p"
+	.string "DEVIN: Feel the wrath of the true power\n"
+	.string "of my ABSOL in all its coolness!$"
+
+Route120_Text_RouteMasterDefeatA:
+	.string "ANGELA: A fine battle, indeed!$"
+
+Route120_Text_RouteMasterDefeatZ:
+	.string "DEVIN: That was a great showing!$"
+
+Route120_Text_ProvenYourWorth:
+	.string "ANGELA: You've proven your worth.\p"
+	.string "DEVIN: You've earned these MEGA STONES.$"
+
+Route120_Text_YouCanMegaEvolveAbsol:
+	.string "ANGELA: With that, you have the power\n"
+	.string "to MEGA EVOLVE ABSOL into either form.\p"
+	.string "DEVIN: What you do with this power\n"
+	.string "is now up to you.\p"
+	.string "ANGELA: I'm sure you can use this\n"
+	.string "power well.$"
+
+Route120_Text_RecievedStonesA:
+	.string "ANGELA: I'm sure you can use this\n"
+	.string "power well.$"
+
+Route120_Text_RecievedStonesZ:
+	.string "DEVIN: What you do with this power\n"
+	.string "is now up to you.$"
+
+Route120_Text_DontHaveRoomForThese:
+	.string "ANGELA: Hm?\n"
+	.string "It would seem your BAG has no room.\p"
+	.string "DEVIN: We will hold onto these, so\n"
+	.string "come back after you've made room.$"
 
 Route120_Text_RouteSignFortree:
 	.string "ROUTE 120\n"
