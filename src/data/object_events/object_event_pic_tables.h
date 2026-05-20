@@ -1445,6 +1445,102 @@ static const struct SpriteFrameImage sPicTable_EmeraldMaySurfing[] = {
     overworld_frame(gObjectEventPic_EmeraldMaySurfing, 4, 4, 5),
 };
 
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireBrendanFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMayFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireMayFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldBrendanFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMayFieldMove[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldMayFieldMove, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireBrendanFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMayFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_RubySapphireMayFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldBrendanFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMayFishing[] = {
+    overworld_ascending_frames(gObjectEventPic_EmeraldMayFishing, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanWatering[] = {
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_RubySapphireBrendanWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMayWatering[] = {
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_RubySapphireMayWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanWatering[] = {
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_EmeraldBrendanWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMayWatering[] = {
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 5),
+    overworld_frame(gObjectEventPic_EmeraldMayWatering, 4, 4, 5),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireBrendanDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_RubySapphireBrendanDecorating),
+};
+
+static const struct SpriteFrameImage sPicTable_RubySapphireMayDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_RubySapphireMayDecorating),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldBrendanDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_EmeraldBrendanDecorating),
+};
+
+static const struct SpriteFrameImage sPicTable_EmeraldMayDecorating[] = {
+    obj_frame_tiles(gObjectEventPic_EmeraldMayDecorating),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {

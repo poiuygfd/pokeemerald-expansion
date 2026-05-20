@@ -1589,47 +1589,39 @@ u8 GetLinkPlayerAvatarGraphicsIdByStateIdLinkIdAndGender(u8 state, u8 linkId, u8
     return gOutfits[gLinkPlayers[linkId].currOutfitId].avatarGfxIds[gender][state];
 }
 
-/*enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
+enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
         // MMJ Outfit
         case OBJ_EVENT_GFX_MAY_NORMAL:
-        case OBJ_EVENT_GFX_MAY_BIKE:
+        case OBJ_EVENT_GFX_MAY_ACRO_BIKE:
         case OBJ_EVENT_GFX_MAY_SURFING:
         case OBJ_EVENT_GFX_MAY_FIELD_MOVE:
         case OBJ_EVENT_GFX_MAY_UNDERWATER:
         case OBJ_EVENT_GFX_MAY_FISHING:
         case OBJ_EVENT_GFX_MAY_WATERING:
         // RS Outfit
-        //case OBJ_EVENT_GFX_RS_MAY_NORMAL:
-        //case OBJ_EVENT_GFX_RS_MAY_BIKE:
-        //case OBJ_EVENT_GFX_RS_MAY_SURFING:
-        //case OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE:
-        //case OBJ_EVENT_GFX_RS_MAY_UNDERWATER:
-        //case OBJ_EVENT_GFX_RS_MAY_FISHING:
-        //case OBJ_EVENT_GFX_RS_MAY_WATERING:
+        case OBJ_EVENT_GFX_LINK_RS_MAY:
+        case OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE:
+        case OBJ_EVENT_GFX_RS_MAY_SURFING:
+        case OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE:
+        case OBJ_EVENT_GFX_RS_MAY_UNDERWATER:
+        case OBJ_EVENT_GFX_RS_MAY_FISHING:
+        case OBJ_EVENT_GFX_RS_MAY_WATERING:
         // E Outfit
-        //case OBJ_EVENT_GFX_E_MAY_NORMAL:
-        //case OBJ_EVENT_GFX_E_MAY_BIKE:
-        //case OBJ_EVENT_GFX_E_MAY_SURFING:
-        //case OBJ_EVENT_GFX_E_MAY_FIELD_MOVE:
-        //case OBJ_EVENT_GFX_E_MAY_UNDERWATER:
-        //case OBJ_EVENT_GFX_E_MAY_FISHING:
-        //case OBJ_EVENT_GFX_E_MAY_WATERING:
-        // Leaf
-        case OBJ_EVENT_GFX_GREEN_NORMAL:
-        case OBJ_EVENT_GFX_GREEN_BIKE:
-        case OBJ_EVENT_GFX_GREEN_SURF:
-        case OBJ_EVENT_GFX_GREEN_FIELD_MOVE:
-        case OBJ_EVENT_GFX_GREEN_FISH:
-        case OBJ_EVENT_GFX_GREEN_VS_SEEKER:
-        case OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE:
+        case OBJ_EVENT_GFX_LINK_E_MAY:
+        case OBJ_EVENT_GFX_E_MAY_ACRO_BIKE:
+        case OBJ_EVENT_GFX_E_MAY_SURFING:
+        case OBJ_EVENT_GFX_E_MAY_FIELD_MOVE:
+        case OBJ_EVENT_GFX_E_MAY_UNDERWATER:
+        case OBJ_EVENT_GFX_E_MAY_FISHING:
+        case OBJ_EVENT_GFX_E_MAY_WATERING:
             return FEMALE;
         default:
             return MALE;
     }
-}*/
+}
 
 bool8 PartyHasMonWithSurf(void)
 {

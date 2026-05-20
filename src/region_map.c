@@ -1768,11 +1768,6 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
         sheet.data = sRegionMapPlayerIcon_LeafGfx;
         palette.data = sRegionMapPlayerIcon_LeafPal;
     }
-    else if (gSaveBlock2Ptr->playerGender == FEMALE)
-    {
-        sheet.data = sRegionMapPlayerIcon_MayGfx;
-        palette.data = sRegionMapPlayerIcon_MayPal;
-    }
     else if (IS_FRLG)
     {
         sheet.data = sRegionMapPlayerIcon_RedGfx;

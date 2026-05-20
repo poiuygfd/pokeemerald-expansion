@@ -482,14 +482,30 @@ const u16 gFieldEffectObjectPalette_CaveDust[] = INCGFX_U16("graphics/field_effe
 
 const u32 gObjectEventPic_ApricornTree[] = INCGFX_U32("graphics/object_events/pics/misc/apricorn_tree.png", ".4bpp", "-mwidth 2 -mheight 2");
 
-const u32 gObjectEventPic_RubySapphireBrendanBike[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/acro_bike.4bpp");
-const u32 gObjectEventPic_RubySapphireMayBike[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/acro_bike.4bpp");
-const u32 gObjectEventPic_EmeraldBrendanBike[] = INCBIN_U32("graphics/object_events/pics/people/emerald_brendan/acro_bike.4bpp");
-const u32 gObjectEventPic_EmeraldMayBike[] = INCBIN_U32("graphics/object_events/pics/people/emerald_may/acro_bike.4bpp");
-const u32 gObjectEventPic_RubySapphireBrendanSurfing[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/surfing.4bpp");
-const u32 gObjectEventPic_RubySapphireMaySurfing[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/surfing.4bpp");
-const u32 gObjectEventPic_EmeraldBrendanSurfing[] = INCBIN_U32("graphics/object_events/pics/people/emerald_brendan/surfing.4bpp");
-const u32 gObjectEventPic_EmeraldMaySurfing[] = INCBIN_U32("graphics/object_events/pics/people/emerald_may/surfing.4bpp");
+const u32 gObjectEventPic_RubySapphireBrendanBike[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireMayBike[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldBrendanBike[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldMayBike[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireBrendanSurfing[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireMaySurfing[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldBrendanSurfing[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldMaySurfing[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireBrendanFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireMayFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldBrendanFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldMayFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireBrendanFishing[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireMayFishing[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldBrendanFishing[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldMayFishing[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireBrendanWatering[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireMayWatering[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldBrendanWatering[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_EmeraldMayWatering[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_RubySapphireBrendanDecorating[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/decorating.png", ".4bpp");
+const u32 gObjectEventPic_RubySapphireMayDecorating[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/decorating.png", ".4bpp");
+const u32 gObjectEventPic_EmeraldBrendanDecorating[] = INCGFX_U32("graphics/object_events/pics/people/emerald_brendan/decorating.png", ".4bpp");
+const u32 gObjectEventPic_EmeraldMayDecorating[] = INCGFX_U32("graphics/object_events/pics/people/emerald_may/decorating.png", ".4bpp");
 
 #if IS_FRLG
 

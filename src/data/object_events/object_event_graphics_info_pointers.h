@@ -416,6 +416,26 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMaySurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMaySurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMayDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendanDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMayDecorating;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -671,6 +691,26 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_RS_MAY_SURFING] =           &gObjectEventGraphicsInfo_RubySapphireMaySurfing,
     [OBJ_EVENT_GFX_E_BRENDAN_SURFING] =        &gObjectEventGraphicsInfo_EmeraldBrendanSurfing,
     [OBJ_EVENT_GFX_E_MAY_SURFING] =            &gObjectEventGraphicsInfo_EmeraldMaySurfing,
+    [OBJ_EVENT_GFX_RS_BRENDAN_FIELD_MOVE] =    &gObjectEventGraphicsInfo_RubySapphireBrendanFieldMove,
+    [OBJ_EVENT_GFX_RS_MAY_FIELD_MOVE] =        &gObjectEventGraphicsInfo_RubySapphireMayFieldMove,
+    [OBJ_EVENT_GFX_E_BRENDAN_FIELD_MOVE] =     &gObjectEventGraphicsInfo_EmeraldBrendanFieldMove,
+    [OBJ_EVENT_GFX_E_MAY_FIELD_MOVE] =         &gObjectEventGraphicsInfo_EmeraldMayFieldMove,
+    [OBJ_EVENT_GFX_RS_BRENDAN_UNDERWATER] =    &gObjectEventGraphicsInfo_RubySapphireBrendanUnderwater,
+    [OBJ_EVENT_GFX_RS_MAY_UNDERWATER] =        &gObjectEventGraphicsInfo_RubySapphireMayUnderwater,
+    [OBJ_EVENT_GFX_E_BRENDAN_UNDERWATER] =     &gObjectEventGraphicsInfo_EmeraldBrendanUnderwater,
+    [OBJ_EVENT_GFX_E_MAY_UNDERWATER] =         &gObjectEventGraphicsInfo_EmeraldMayUnderwater,
+    [OBJ_EVENT_GFX_RS_BRENDAN_FISHING] =       &gObjectEventGraphicsInfo_RubySapphireBrendanFishing,
+    [OBJ_EVENT_GFX_RS_MAY_FISHING] =           &gObjectEventGraphicsInfo_RubySapphireMayFishing,
+    [OBJ_EVENT_GFX_E_BRENDAN_FISHING] =        &gObjectEventGraphicsInfo_EmeraldBrendanFishing,
+    [OBJ_EVENT_GFX_E_MAY_FISHING] =            &gObjectEventGraphicsInfo_EmeraldMayFishing,
+    [OBJ_EVENT_GFX_RS_BRENDAN_WATERING] =      &gObjectEventGraphicsInfo_RubySapphireBrendanWatering,
+    [OBJ_EVENT_GFX_RS_MAY_WATERING] =          &gObjectEventGraphicsInfo_RubySapphireMayWatering,
+    [OBJ_EVENT_GFX_E_BRENDAN_WATERING] =       &gObjectEventGraphicsInfo_EmeraldBrendanWatering,
+    [OBJ_EVENT_GFX_E_MAY_WATERING] =           &gObjectEventGraphicsInfo_EmeraldMayWatering,
+    [OBJ_EVENT_GFX_RS_BRENDAN_DECORATING] =    &gObjectEventGraphicsInfo_RubySapphireBrendanDecorating,
+    [OBJ_EVENT_GFX_RS_MAY_DECORATING] =        &gObjectEventGraphicsInfo_RubySapphireMayDecorating,
+    [OBJ_EVENT_GFX_E_BRENDAN_DECORATING] =     &gObjectEventGraphicsInfo_EmeraldBrendanDecorating,
+    [OBJ_EVENT_GFX_E_MAY_DECORATING] =         &gObjectEventGraphicsInfo_EmeraldMayDecorating,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
