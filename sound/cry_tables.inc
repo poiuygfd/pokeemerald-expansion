@@ -2556,6 +2556,7 @@ gCryTable::
 	cry Cry_MissingNo
 	cry Cry_Avitorch
 	cry Cry_Partrio_Paladin
+	cry Cry_Partrio_Warrior
 	cry Cry_Partrio_Mage
 	cry Cry_Regitube
 .if P_MODIFIED_MEGA_CRIES == TRUE
@@ -5123,6 +5124,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_MissingNo
 	cry_reverse Cry_Avitorch
 	cry_reverse Cry_Partrio_Paladin
+	cry_reverse Cry_Partrio_Warrior
 	cry_reverse Cry_Partrio_Mage
 	cry_reverse Cry_Regitube
 .if P_MODIFIED_MEGA_CRIES == TRUE

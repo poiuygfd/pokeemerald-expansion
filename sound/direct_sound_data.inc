@@ -8756,6 +8756,10 @@ Cry_Partrio_Paladin::
 	.incbin "sound/direct_sound_samples/cries/partrio_paladin.bin"
 
 	.align 2
+Cry_Partrio_Warrior::
+	.incbin "sound/direct_sound_samples/cries/partrio_warrior.bin"
+
+	.align 2
 Cry_Partrio_Mage::
 	.incbin "sound/direct_sound_samples/cries/partrio_mage.bin"
 

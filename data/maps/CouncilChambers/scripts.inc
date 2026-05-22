@@ -15,6 +15,7 @@ CouncilChambers_OpenDeeperChambers::
 	setmetatile 5, 1, METATILE_Cave_CouncilChambers_EntranceBottom, FALSE
 	setobjectxyperm LOCALID_CODE_GIVER, 4, 2
 	setobjectxyperm LOCALID_COUNCIL_DUNSPARCE, 6, 2
+	setflag FLAG_TEMP_1
 	return
 
 CouncilChambers_EventScript_FakemonGiftGiver::
@@ -134,7 +135,7 @@ CouncilChambers_EventScript_EndCodeEvent::
 	end
 
 CouncilChambers_EventScript_CodeUsed::
-	goto_if_set FLAG_SYS_GAME_CLEAR, CouncilChambers_EventScript_DoorOpened
+	goto_if_set FLAG_TEMP_1, CouncilChambers_EventScript_DoorOpened
 	msgbox CouncilChambers_Text_OnePerPerson, MSGBOX_DEFAULT
 	releaseall
 	end

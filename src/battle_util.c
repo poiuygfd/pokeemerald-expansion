@@ -4435,7 +4435,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
 
                     if (shouldSwap == TRUE)
                     {
-                        GetBattlerPartyState(battler)->changedSpecies = gBattleMons[battler].species;
                         SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
                         gBattleMons[battler].species = targetSpecies;
                         RecalcBattlerStats(battler, mon, FALSE);
@@ -4520,91 +4519,92 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_TAG_TEAM: // Handles the transformation on using Leader Swap
-            if (move == MOVE_LEADER_SWAP
-             && !gBattleStruct->unableToUseMove)
             {
                 struct Pokemon *mon = GetBattlerMon(gBattlerAttacker);
                 bool32 shouldSwap = FALSE;
                 u32 targetSpecies;
                 s32 health;
 
-                switch (gBattleMons[gBattlerAttacker].species)
+                if (move == MOVE_LEADER_SWAP
+                && !gBattleStruct->unableToUseMove)
                 {
-                case SPECIES_PARTRIO_PALADIN:
-                    if (GetBattlerPartyState(gBattlerAttacker)->warriorFainted == FALSE)
+                    switch (gBattleMons[gBattlerAttacker].species)
                     {
-                        targetSpecies = SPECIES_PARTRIO_WARRIOR;
-                        health = GetBattlerPartyState(gBattlerAttacker)->warriorHP;
-                        GetBattlerPartyState(gBattlerAttacker)->paladinHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
+                    case SPECIES_PARTRIO_PALADIN:
+                        if (GetBattlerPartyState(gBattlerAttacker)->warriorFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_WARRIOR;
+                            health = GetBattlerPartyState(gBattlerAttacker)->warriorHP;
+                            GetBattlerPartyState(gBattlerAttacker)->paladinHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(gBattlerAttacker)->mageFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_MAGE;
+                            health = GetBattlerPartyState(gBattlerAttacker)->mageHP;
+                            GetBattlerPartyState(gBattlerAttacker)->paladinHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    case SPECIES_PARTRIO_WARRIOR:
+                        if (GetBattlerPartyState(gBattlerAttacker)->mageFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_MAGE;
+                            health = GetBattlerPartyState(gBattlerAttacker)->mageHP;
+                            GetBattlerPartyState(gBattlerAttacker)->warriorHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(gBattlerAttacker)->paladinFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_PALADIN;
+                            health = GetBattlerPartyState(gBattlerAttacker)->paladinHP;
+                            GetBattlerPartyState(gBattlerAttacker)->warriorHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    case SPECIES_PARTRIO_MAGE:
+                        if (GetBattlerPartyState(gBattlerAttacker)->paladinFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_PALADIN;
+                            health = GetBattlerPartyState(gBattlerAttacker)->paladinHP;
+                            GetBattlerPartyState(gBattlerAttacker)->mageHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        else if (GetBattlerPartyState(gBattlerAttacker)->warriorFainted == FALSE)
+                        {
+                            targetSpecies = SPECIES_PARTRIO_WARRIOR;
+                            health = GetBattlerPartyState(gBattlerAttacker)->warriorHP;
+                            GetBattlerPartyState(gBattlerAttacker)->mageHP = gBattleMons[gBattlerAttacker].hp;
+                            shouldSwap = TRUE;
+                        }
+                        break;
+                    default:
+                        break;
                     }
-                    else if (GetBattlerPartyState(gBattlerAttacker)->mageFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_MAGE;
-                        health = GetBattlerPartyState(gBattlerAttacker)->mageHP;
-                        GetBattlerPartyState(gBattlerAttacker)->paladinHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                case SPECIES_PARTRIO_WARRIOR:
-                    if (GetBattlerPartyState(gBattlerAttacker)->mageFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_MAGE;
-                        health = GetBattlerPartyState(gBattlerAttacker)->mageHP;
-                        GetBattlerPartyState(gBattlerAttacker)->warriorHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
-                    }
-                    else if (GetBattlerPartyState(gBattlerAttacker)->paladinFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_PALADIN;
-                        health = GetBattlerPartyState(gBattlerAttacker)->paladinHP;
-                        GetBattlerPartyState(gBattlerAttacker)->warriorHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                case SPECIES_PARTRIO_MAGE:
-                    if (GetBattlerPartyState(gBattlerAttacker)->paladinFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_PALADIN;
-                        health = GetBattlerPartyState(gBattlerAttacker)->paladinHP;
-                        GetBattlerPartyState(gBattlerAttacker)->mageHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
-                    }
-                    else if (GetBattlerPartyState(gBattlerAttacker)->warriorFainted == FALSE)
-                    {
-                        targetSpecies = SPECIES_PARTRIO_WARRIOR;
-                        health = GetBattlerPartyState(gBattlerAttacker)->warriorHP;
-                        GetBattlerPartyState(gBattlerAttacker)->mageHP = gBattleMons[gBattlerAttacker].hp;
-                        shouldSwap = TRUE;
-                    }
-                    break;
-                default:
-                    break;
-                }
 
-                if (shouldSwap == TRUE)
-                {
-                    GetBattlerPartyState(gBattlerAttacker)->changedSpecies = gBattleMons[gBattlerAttacker].species;
-                    SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
-                    gBattleMons[gBattlerAttacker].species = targetSpecies;
-                    RecalcBattlerStats(gBattlerAttacker, mon, FALSE);
-                    if (health == 0)
-                        SetHealAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker));
-                    else if (health > gBattleMons[gBattlerAttacker].hp)
+                    if (shouldSwap == TRUE)
                     {
-                        s32 healthDifference = health - gBattleMons[gBattlerAttacker].hp;
-                        SetHealAmount(gBattlerAttacker, healthDifference);
+                        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+                        gBattleMons[gBattlerAttacker].species = targetSpecies;
+                        RecalcBattlerStats(gBattlerAttacker, mon, FALSE);
+                        if (health == 0)
+                            SetHealAmount(gBattlerAttacker, GetNonDynamaxMaxHP(gBattlerAttacker));
+                        else if (health > gBattleMons[gBattlerAttacker].hp)
+                        {
+                            s32 healthDifference = health - gBattleMons[gBattlerAttacker].hp;
+                            SetHealAmount(gBattlerAttacker, healthDifference);
+                        }
+                        else if (health < gBattleMons[gBattlerAttacker].hp)
+                        {
+                            s32 healthDifference = gBattleMons[gBattlerAttacker].hp - health;
+                            SetPassiveDamageAmount(gBattlerAttacker, healthDifference);
+                        }
+                        BattleScriptCall(BattleScript_TagTeamActivates);
+                        effect++;
                     }
-                    else if (health < gBattleMons[gBattlerAttacker].hp)
-                    {
-                        s32 healthDifference = gBattleMons[gBattlerAttacker].hp - health;
-                        SetPassiveDamageAmount(gBattlerAttacker, healthDifference);
-                    }
-                    BattleScriptCall(BattleScript_TagTeamActivates);
-                    effect++;
+                    else
+                    { BattleScriptCall(BattleScript_EffectLeaderSwapFailed); }
                 }
-                else
-                { BattleScriptCall(BattleScript_EffectLeaderSwapFailed); }
             }
             break;
         default:

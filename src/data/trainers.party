@@ -20510,23 +20510,53 @@ EVs: 50 HP / 50 Atk / 50 SpA
 - Gyro Ball
 
 === TRAINER_ROUTE_MASTER_113 ===
-Name: ZACH
+Name: BRUCE
 Class: Route Master
-Pic: Rich Boy
+Pic: Black Belt
 Gender: Male
-Music: Rich
+Music: Intense
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Marill @ Eviolite
-Level: 18
-Ability: Huge Power
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 50 HP / 50 Atk / 50 SpA
-- Aqua Jet
-- Alluring Voice
-- Rollout
-- Rock Smash
+Makuhita @ Flame Orb
+Level: 23
+Ability: Guts
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 100 HP / 50 Atk
+- Bulk Up
+- Force Palm
+- Knock Off
+- Bullet Punch
+
+Crabrawler @ Punching Glove
+Level: 23
+Ability: Iron Fist
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 100 HP / 50 Atk
+- Bulk Up
+- Drain Punch
+- Thunder Punch
+- Ice Punch
+
+Falinks @ Leftovers
+Level: 24
+Ability: Battle Armor
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 100 HP / 50 Atk
+- Bulk Up
+- Brick Break
+- Rock Tomb
+- Protect
+
+Breloom @ Loaded Dice
+Level: 24
+Ability: Technician
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 100 HP / 50 Atk
+- Bulk Up
+- Bullet Seed
+- Mach Punch
+- Aerial Ace
 
 === TRAINER_ROUTE_MASTER_120_A ===
 Name: ANGELA
@@ -20540,7 +20570,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Absol @ Absolite
 Level: 35
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-EVs: 150 Atk / 150 Spe
+EVs: 150 Atk / 100 Spe
 - Night Slash
 - Sucker Punch
 - Slash
@@ -20558,11 +20588,60 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Absol @ Absolite Z
 Level: 35
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-EVs: 150 Atk / 150 Spe
+EVs: 150 Atk / 100 Spe
 - Night Slash
 - Shadow Claw
 - Slash
 - Swords Dance
+
+=== TRAINER_ROUTE_MASTER_123 ===
+Name: MIRANDA
+Class: Route Master
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Alakazam @ Focus Sash
+Level: 34
+Ability: Magic Guard
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 SpA / 100 Spe
+- Psychic
+- Thunderbolt
+- Focus Blast
+- Calm Mind
+
+Tsareena @ Focus Sash
+Level: 34
+Ability: Queenly Majesty
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 100 Spe
+- Trop Kick
+- Acrobatics
+- Flail
+- Trailblaze
+
+Scovillain @ Focus Sash
+Level: 36
+Ability: Moody
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 SpA / 100 Spe
+- Flamethrower
+- Energy Ball
+- Crunch
+- Protect
+
+Sandslash-Alola @ Focus Sash
+Level: 36
+Ability: Slush Rush
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 100 Spe
+- Ice Spinner
+- Iron Head
+- Metal Burst
+- Snowscape
 
 === TRAINER_WEATHERMAN_RAIN ===
 Name: WEATHERMAN
