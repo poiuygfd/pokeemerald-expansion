@@ -970,6 +970,8 @@ static enum CancelerResult CancelerPPDeduction(struct BattleContext *ctx)
         gBattleMons[ctx->battlerAtk].pp[movePosition] -= ppToDeduct;
     else
         gBattleMons[ctx->battlerAtk].pp[movePosition] = 0;
+        
+    gLastMoves[ctx->battlerAtk] = gChosenMove;
 
     if (MOVE_IS_PERMANENT(ctx->battlerAtk, movePosition))
     {
@@ -1933,7 +1935,9 @@ static enum CancelerResult CancelerMultihitMoves(struct BattleContext *ctx)
     }
     else if (GetMoveStrikeCount(ctx->move) > 1)
     {
-        if (GetMoveEffect(ctx->move) == EFFECT_POPULATION_BOMB && GetBattlerHoldEffect(ctx->battlerAtk) == HOLD_EFFECT_LOADED_DICE)
+        if (GetMoveEffect(ctx->move) == EFFECT_POPULATION_BOMB
+         && ctx->holdEffectAtk == HOLD_EFFECT_LOADED_DICE
+         && ctx->abilityAtk != ABILITY_SKILL_LINK)
         {
             gMultiHitCounter = RandomUniform(RNG_LOADED_DICE, 4, 10);
         }
@@ -2243,7 +2247,7 @@ static enum MoveEndResult MoveEndAbsorb(void)
     switch (moveEffect)
     {
     case EFFECT_STRENGTH_SAP:
-        if (gBattleStruct->passiveHpUpdate[gBattlerAttacker] > 0)
+        if (gBattleStruct->passiveHpUpdate[gBattlerAttacker] > 0 && !IsBattlerUnaffectedByMove(gBattlerTarget))
         {
             s32 healAmount = gBattleStruct->passiveHpUpdate[gBattlerAttacker];
             SetHealScript(healAmount);
