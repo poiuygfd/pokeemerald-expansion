@@ -133,6 +133,51 @@ Route113_EventScript_Wyatt::
 	msgbox Route113_Text_WyattPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route113_EventScript_RouteMaster::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BULK_UP, Route113_EventScript_RouteMasterGivenItem
+	goto_if_defeated TRAINER_ROUTE_MASTER_113, Route113_EventScript_RouteMasterDefeated
+	goto_if_not_defeated TRAINER_JAYLEN, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_DILLON, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_MADELINE_1, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_LAO_1, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_LUNG, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_TORI_AND_TIA, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_SOPHIE, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_COBY, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_LAWRENCE, Route113_EventScript_RouteMasterNotReady
+	goto_if_not_defeated TRAINER_WYATT, Route113_EventScript_RouteMasterNotReady
+	msgbox Route113_Text_YourBulkIsImpressive, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_EventScript_RouteMasterWillWait
+	msgbox Route113_Text_LetOurWorkoutBegin, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ROUTE_MASTER_113, Route113_Text_RouteMasterDefeat
+	goto Route113_EventScript_RouteMasterDefeated
+	end
+
+Route113_EventScript_RouteMasterDefeated::
+	msgbox Route113_Text_AlwaysRoomForImprovement, MSGBOX_DEFAULT
+	giveitem ITEM_TM_BULK_UP
+	msgbox Route113_Text_BulkUpWithBulkUp, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BULK_UP
+	release
+	end
+
+Route113_EventScript_RouteMasterNotReady::
+	msgbox Route113_Text_NeedToBeBeefier, MSGBOX_DEFAULT
+	release
+	end
+
+Route113_EventScript_RouteMasterWillWait::
+	msgbox Route113_Text_ScaredOfALittleMuscle, MSGBOX_DEFAULT
+	release
+	end
+
+Route113_EventScript_RouteMasterGivenItem::
+	msgbox Route113_Text_BulkUpWithBulkUp, MSGBOX_DEFAULT
+	release
+	end
+
 Route113_Text_AshCanBeFashionedIntoGlass:
 	.string "Wahahaha! Today's technology is a\n"
 	.string "wondrous thing!\p"
@@ -144,6 +189,50 @@ Route113_Text_FunWalkingThroughAsh:
 	.string "ashes on the ground and grass.\p"
 	.string "You can see where you walked--it's\n"
 	.string "really neat!$"
+
+Route113_Text_NeedToBeBeefier:
+	.string "Hm…\n"
+	.string "Your POKéMON…\p"
+	.string "I can tell their muscles are strong.\n"
+	.string "But they could be even beefier!\p"
+	.string "How's this for a training regime?\n"
+	.string "Go battle every TRAINER on this ROUTE.\p"
+	.string "Come back to me once you've done that.$"
+
+Route113_Text_YourBulkIsImpressive:
+	.string "Ho!\n"
+	.string "Your POKéMON…\p"
+	.string "Yes, I can tell they've trained well!\n"
+	.string "You beat every TRAINER on this ROUTE!\p"
+	.string "But, your bulk still pales compared\n"
+	.string "to our own!\p"
+	.string "How about I show you how me and my\n"
+	.string "POKéMON like to BULK UP?$"
+
+Route113_Text_ScaredOfALittleMuscle:
+	.string "Scared of a little muscle, are we?\n"
+	.string "Come back with your resolve steeled!$"
+
+Route113_Text_LetOurWorkoutBegin:
+	.string "A good answer!\n"
+	.string "Very well, let our workout begin!$"
+
+Route113_Text_RouteMasterDefeat:
+	.string "Haaaah…\n"
+	.string "We underestimated your muscles…$"
+
+Route113_Text_AlwaysRoomForImprovement:
+	.string "Your POKéMON have truly impressive\n"
+	.string "muscles, that much is for sure!\p"
+	.string "However!\n"
+	.string "There is always room for improvement!\p"
+	.string "You are worthy of this!$"
+
+Route113_Text_BulkUpWithBulkUp:
+	.string "That TM contains BULK UP!\p"
+	.string "A quick workout with that will see an\n"
+	.string "increase in ATTACK and DEFENSE!\p"
+	.string "Be sure to use it wisely!$"
 
 Route113_Text_RouteSign111:
 	.string "ROUTE 113\n"

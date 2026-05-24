@@ -23,8 +23,29 @@ PacifidlogTown_EventScript_Fisherman::
 	msgbox PacifidlogTown_Text_SkyPillarTooScary, MSGBOX_NPC
 	end
 
-PacifidlogTown_EventScript_Man::
-	msgbox PacifidlogTown_Text_LoveTheWindsAndWaves, MSGBOX_NPC
+PacifidlogTown_EventScript_SlowbroGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_SLOWBRONITE_G, Route113_EventScript_ReceivedSlowbroniteG
+	goto_if_defeated TRAINER_SLOWBRO_GUY, Route113_EventScript_GiftedSlowbroniteG
+	msgbox PacifidlogTown_Text_DidYouKnowAboutSlowbro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SLOWBRO_GUY, PacifidlogTown_Text_SlowbroGuyDefeat
+	goto Route113_EventScript_GiftedSlowbroniteG
+	release
+	end
+
+Route113_EventScript_GiftedSlowbroniteG:
+	msgbox PacifidlogTown_Text_UseThisPowerForYourself, MSGBOX_DEFAULT
+	giveitem ITEM_SLOWBRONITE_G
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox Route117_Text_ShowThemAll, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_SLOWBRONITE_G
+	release
+	end
+
+Route113_EventScript_ReceivedSlowbroniteG:
+	msgbox Route117_Text_ShowThemAll, MSGBOX_DEFAULT
+	release
 	end
 
 PacifidlogTown_EventScript_TownSign::
@@ -51,10 +72,30 @@ PacifidlogTown_Text_SkyPillarTooScary:
 	.string "Life at sea level in PACIFIDLOG,\n"
 	.string "that suits me fine.$"
 
-PacifidlogTown_Text_LoveTheWindsAndWaves:
-	.string "I sure do love the winds and waves.\p"
-	.string "Why are you looking at me like that?\n"
-	.string "Was it something I said?$"
+PacifidlogTown_Text_DidYouKnowAboutSlowbro:
+	.string "That MEGA RING on your wrist tells\n"
+	.string "me that you know about MEGA EVOLUTION.\p"
+	.string "I'm sure you are aware of the fact that\n"
+	.string "SLOWBRO is capable of MEGA EVOLUTION.\p"
+	.string "Well, to be specific, KANTONIAN SLOWBRO\n"
+	.string "can MEGA EVOLVE.\p"
+	.string "There also exists GALARIAN SLOWBRO, but\n"
+	.string "no records of that form MEGA EVOLVING\l"
+	.string "seem to exist…\p"
+	.string "Until now.$"
+
+PacifidlogTown_Text_SlowbroGuyDefeat:
+	.string "Did I getcha?$"
+
+PacifidlogTown_Text_UseThisPowerForYourself:
+	.string "Haha, sorry, I shouldn't have jumped\n"
+	.string "you like that.\p"
+	.string "Here, take this as an apology.\n"
+	.string "Use this power for yourself!$"
+
+Route117_Text_ShowThemAll:
+	.string "Get out there and show the world that\n"
+	.string "both SLOWBRO forms mean business!$"
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"

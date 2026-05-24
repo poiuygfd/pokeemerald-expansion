@@ -1229,8 +1229,8 @@
 
 #define FLAG_ITEM_ROUTE_110_FOCUS_BAND                              0x493 // Route 110 Focus Band
 #define FLAG_ITEM_ROUTE_111_ITEM_PP_UP                              0x494 // This is just here to replace an old Mega Stone
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_ITEM_SKY_PILLAR_DRAMPANITE                             0x495 // Drampa Mega Stone
+#define FLAG_RECEIVED_SLOWBRONITE_G                                 0x496 // Galarian Slowbro Mega Stone
 #define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
 #define FLAG_ITEM_METEOR_FALLS_ALTARIANITE                          0x498 // Altaria Mega Stone
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
@@ -1313,7 +1313,7 @@
 #define FLAG_RECEIVED_EVIOLITE                                      0x4E6 // Received Eviolite from Route Master 117
 #define FLAG_RECEIVED_BULK_UP                                       0x4E7 // Received Bulk Up from Route Master 113
 #define FLAG_RECEIVED_ABSOLITES                                     0x4E8 // Received Absolite and Absolite Z from Route Masters 120
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
+#define FLAG_RECEIVED_FOCUS_SASH                                    0x4E9 // Received Focus Sash from Route Master 123
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag

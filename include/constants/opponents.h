@@ -890,30 +890,31 @@
 #define TRAINER_WEATHERMAN_SUN              883
 #define TRAINER_WEATHERMAN_SNOW             884
 #define TRAINER_WEATHERMAN_FINAL            885
-#define TRAINER_SIDNEY_REMATCH              886
-#define TRAINER_PHOEBE_REMATCH              887
-#define TRAINER_GLACIA_REMATCH              888
-#define TRAINER_DRAKE_REMATCH               889
-#define TRAINER_STEVEN_REMATCH              890
-#define TRAINER_RED_METEOR_FALLS            891
-#define TRAINER_LEAF_ARTISAN_CAVE           892
-#define TRAINER_WOLFE                       893
-#define TRAINER_CHARIZARD_FAN_X_MEGA        894
-#define TRAINER_CHARIZARD_FAN_Y_MEGA        895
-#define TRAINER_CHARIZARD_FAN_Z_MEGA        896
-#define TRAINER_CHARIZARD_FAN_X_MEGA_EARLY  897
-#define TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY  898
-#define TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY  899
-#define TRAINER_RED                         900
-#define TRAINER_LEAF                        901
-#define TRAINER_BRENDAN_PLACEHOLDER         902
-#define TRAINER_MAY_PLACEHOLDER             903
+#define TRAINER_SLOWBRO_GUY                 886
+#define TRAINER_SIDNEY_REMATCH              887
+#define TRAINER_PHOEBE_REMATCH              888
+#define TRAINER_GLACIA_REMATCH              889
+#define TRAINER_DRAKE_REMATCH               890
+#define TRAINER_STEVEN_REMATCH              891
+#define TRAINER_RED_METEOR_FALLS            892
+#define TRAINER_LEAF_ARTISAN_CAVE           893
+#define TRAINER_WOLFE                       894
+#define TRAINER_CHARIZARD_FAN_X_MEGA        895
+#define TRAINER_CHARIZARD_FAN_Y_MEGA        896
+#define TRAINER_CHARIZARD_FAN_Z_MEGA        897
+#define TRAINER_CHARIZARD_FAN_X_MEGA_EARLY  898
+#define TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY  899
+#define TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY  900
+#define TRAINER_RED                         901
+#define TRAINER_LEAF                        902
+#define TRAINER_BRENDAN_PLACEHOLDER         903
+#define TRAINER_MAY_PLACEHOLDER             904
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     904
+#define TRAINERS_COUNT_EMERALD     905
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
