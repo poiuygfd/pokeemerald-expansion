@@ -1007,12 +1007,12 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u8 gMonIcon_PikachuLibre[] = INCGFX_U8("graphics/pokemon/pikachu/libre/icon.png", ".4bpp");
 
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_PikachuCosplay[] = INCGFX_COMP("graphics/pokemon/pikachu/cosplay/overworld.png", ".4bpp");
-    // const u32 gObjectEventPic_PikachuRockStar[] = INCGFX_COMP("graphics/pokemon/pikachu/rock_star/overworld.png", ".4bpp");
-    // const u32 gObjectEventPic_PikachuBelle[] = INCGFX_COMP("graphics/pokemon/pikachu/belle/overworld.png", ".4bpp");
-    // const u32 gObjectEventPic_PikachuPopStar[] = INCGFX_COMP("graphics/pokemon/pikachu/pop_star/overworld.png", ".4bpp");
-    // const u32 gObjectEventPic_PikachuPhD[] = INCGFX_COMP("graphics/pokemon/pikachu/phd/overworld.png", ".4bpp");
-    // const u32 gObjectEventPic_PikachuLibre[] = INCGFX_COMP("graphics/pokemon/pikachu/libre/overworld.png", ".4bpp");
+    const u32 gObjectEventPic_PikachuCosplay[] = INCGFX_COMP("graphics/pokemon/pikachu/cosplay/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    // const u32 gObjectEventPic_PikachuRockStar[] = INCGFX_COMP("graphics/pokemon/pikachu/rock_star/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    // const u32 gObjectEventPic_PikachuBelle[] = INCGFX_COMP("graphics/pokemon/pikachu/belle/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    // const u32 gObjectEventPic_PikachuPopStar[] = INCGFX_COMP("graphics/pokemon/pikachu/pop_star/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    // const u32 gObjectEventPic_PikachuPhD[] = INCGFX_COMP("graphics/pokemon/pikachu/phd/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    // const u32 gObjectEventPic_PikachuLibre[] = INCGFX_COMP("graphics/pokemon/pikachu/libre/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_COSPLAY_PIKACHU_FORMS
 

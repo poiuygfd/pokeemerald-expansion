@@ -20643,6 +20643,122 @@ EVs: 150 Atk / 100 Spe
 - Metal Burst
 - Snowscape
 
+=== TRAINER_ROUTE_MASTER_124 ===
+Name: RONNIE
+Class: Route Master
+Pic: Gentleman
+Gender: Male
+Music: Rich
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Rotom-Fan @ Choice Scarf
+Level: 38
+Ability: Levitate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 SpA / 150 Spe
+- Volt Switch
+- Air Slash
+- Thunderbolt
+- Trick
+
+Porygon2 @ Eviolite
+Level: 38
+Ability: Download
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 HP / 150 SpA
+- Volt Switch
+- Tri Attack
+- Ice Beam
+- Recover
+
+Lanturn @ Sitrus Berry
+Level: 39
+Ability: Volt Absorb
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 HP / 150 Def
+- Volt Switch
+- Muddy Water
+- Confuse Ray
+- Thunder Wave
+
+Klinklang @ Magnet
+Level: 40
+Ability: Clear Body
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 Atk / 150 Spe
+- Volt Switch
+- Gear Grind
+- Facade
+- Shift Gear
+
+Vikavolt @ Zoom Lens
+Level: 40
+Ability: Levitate
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 HP / 150 SpA
+- Volt Switch
+- Bug Buzz
+- Zap Cannon
+- Iron Defense
+
+=== TRAINER_ROUTE_MASTER_133 ===
+Name: AERUS
+Class: Route Master
+Pic: Expert M
+Gender: Male
+Music: Intense
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Vileplume @ Life Orb
+Level: 42
+Ability: Chlorophyll
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 50 HP / 150 SpA / 150 Spe
+- Solar Beam
+- Sludge Bomb
+- Weather Ball
+- Strength Sap
+
+Torkoal @ Life Orb
+Level: 42
+Ability: Drought
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 150 HP / 50 Def / 150 SpA
+- Heat Wave
+- Overheat
+- Solar Beam
+- Body Press
+
+Glimmora @ Life Orb
+Level: 43
+Ability: Toxic Debris
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 50 HP / 150 SpA / 150 Spe
+- Sludge Wave
+- Power Gem
+- Dazzling Gleam
+- Spiky Shield
+
+Yanmega @ Life Orb
+Level: 44
+Ability: Tinted Lens
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 50 HP / 150 SpA / 150 Spe
+- Bug Buzz
+- Air Slash
+- U-Turn
+- Tailwind
+
+Kangaskhan @ Life Orb
+Level: 44
+Ability: Scrappy
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 50 HP / 150 Atk / 150 Spe
+- Fake Out
+- Last Resort
+
 === TRAINER_WEATHERMAN_RAIN ===
 Name: WEATHERMAN
 Class: Collector

@@ -884,8 +884,8 @@
 #define TRAINER_ROUTE_MASTER_120_A          877
 #define TRAINER_ROUTE_MASTER_120_Z          878
 #define TRAINER_ROUTE_MASTER_123            879
-#define TRAINER_ROUTE_MASTER_XX1            880
-#define TRAINER_ROUTE_MASTER_XX2            881
+#define TRAINER_ROUTE_MASTER_124            880
+#define TRAINER_ROUTE_MASTER_133            881
 #define TRAINER_WEATHERMAN_RAIN             882
 #define TRAINER_WEATHERMAN_SUN              883
 #define TRAINER_WEATHERMAN_SNOW             884

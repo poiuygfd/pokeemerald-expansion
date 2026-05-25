@@ -712,7 +712,7 @@
 #define FLAG_HIDE_NAVEL_ROCK_TEAM_AQUA  0x293 // The same Team Aqua guys but in Navel Rock
 #define FLAG_HIDE_SOUTHERN_ISLAND_TEAM_MAGMA  0x294 // Team Magma on Southern Island
 #define FLAG_OPENED_COUNCIL_CHAMBERS  0x295 // Broken the wall to the Council Chambers
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
+#define FLAG_SPOKEN_TO_133_ROUTE_MASTER  0x296 // Seens the 133 Route Master's wall of text
 #define FLAG_UNUSED_0x297  0x297 // Unused Flag
 #define FLAG_UNUSED_0x298  0x298 // Unused Flag
 #define FLAG_UNUSED_0x299  0x299 // Unused Flag
@@ -1314,8 +1314,8 @@
 #define FLAG_RECEIVED_BULK_UP                                       0x4E7 // Received Bulk Up from Route Master 113
 #define FLAG_RECEIVED_ABSOLITES                                     0x4E8 // Received Absolite and Absolite Z from Route Masters 120
 #define FLAG_RECEIVED_FOCUS_SASH                                    0x4E9 // Received Focus Sash from Route Master 123
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
+#define FLAG_RECEIVED_VOLT_SWITCH                                   0x4EA // Received Volt Switch from Route Master 124
+#define FLAG_RECEIVED_LIFE_ORB                                      0x4EB // Received Life Orb from Route Master 133
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
