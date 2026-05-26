@@ -380,6 +380,216 @@ Route111_Movement_WaitForNextWinstrate:
 	delay_16
 	step_end
 
+Route111_EventScript_WallyTrigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	addobject LOCALID_ROUTE111_WALLY
+	msgbox Route118_Text_HeyPlayer, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyApproachLedge0
+	waitmovement 0
+	goto Route111_EventScript_WallyTrigger
+	end
+
+Route111_EventScript_WallyTrigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	addobject LOCALID_ROUTE111_WALLY
+	msgbox Route118_Text_HeyPlayer, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyApproachLedge1
+	waitmovement 0
+	goto Route111_EventScript_WallyTrigger
+	end
+
+Route111_EventScript_WallyTrigger::
+	playse SE_LEDGE
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyJumpLedge
+	waitmovement 0
+	playse SE_LEDGE
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyJumpLedge
+	waitmovement 0
+	delay 30
+	msgbox Route118_Text_IGotAhead, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLY_ROUTE_111, Route118_Text_WallyDefeated
+	msgbox Route118_Text_GuessYouHaventBeenSlacking, MSGBOX_DEFAULT
+	closemessage
+	call_if_eq VAR_0x8008, 0, Route111_EventScript_WallyLeave0
+	call_if_eq VAR_0x8008, 1, Route111_EventScript_WallyLeave1
+	delay 60
+	call_if_eq VAR_0x8008, 0, Route111_EventScript_ScottAppear0
+	call_if_eq VAR_0x8008, 1, Route111_EventScript_ScottAppear1
+	msgbox Route118_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
+	closemessage
+	addvar VAR_SCOTT_STATE, 1
+	call_if_eq VAR_0x8008, 0, Route111_EventScript_ScottLeave0
+	call_if_eq VAR_0x8008, 1, Route111_EventScript_ScottLeave1
+	setvar VAR_ROUTE111_STATE, 2
+	releaseall
+	end
+
+Route111_EventScript_WallyLeave0::
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyExit0
+	waitmovement 0
+	removeobject LOCALID_ROUTE111_WALLY
+	return
+
+Route111_EventScript_WallyLeave1::
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchWallyExit
+	applymovement LOCALID_ROUTE111_WALLY, Route118_Movement_WallyExit1
+	waitmovement 0
+	removeobject LOCALID_ROUTE111_WALLY
+	return
+
+Route111_EventScript_ScottAppear0::
+	addobject LOCALID_ROUTE111_SCOTT
+	applymovement LOCALID_ROUTE111_SCOTT, Route118_Movement_ScottEnter0
+	waitmovement 0
+	return
+
+Route111_EventScript_ScottAppear1::
+	addobject LOCALID_ROUTE111_SCOTT
+	applymovement LOCALID_ROUTE111_SCOTT, Route118_Movement_ScottEnter1
+	waitmovement 0
+	return
+
+Route111_EventScript_ScottLeave0::
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchScottExit
+	applymovement LOCALID_ROUTE111_SCOTT, Route118_Movement_ScottExit0
+	waitmovement 0
+	removeobject LOCALID_ROUTE111_SCOTT
+	return
+
+Route111_EventScript_ScottLeave1::
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchScottExit
+	applymovement LOCALID_ROUTE111_SCOTT, Route118_Movement_ScottExit1
+	waitmovement 0
+	removeobject LOCALID_ROUTE111_SCOTT
+	return
+
+Route118_Movement_WallyApproachLedge0:
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_WallyApproachLedge1:
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_WallyJumpLedge:
+	jump_2_down
+	delay_16
+	walk_down
+	step_end
+
+Route118_Movement_PlayerWatchWallyExit:
+	delay_16
+	walk_in_place_faster_down
+	step_end
+
+Route118_Movement_WallyExit0:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_WallyExit1:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_ScottEnter0:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+Route118_Movement_ScottEnter1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+Route118_Movement_PlayerWatchScottExit:
+	delay_16
+	walk_in_place_faster_up
+	step_end
+
+Route118_Movement_PlayerMoveScottExit:
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+Route118_Movement_ScottExit0:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route118_Movement_ScottExit1:
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 Route111_EventScript_RouteSignMauville::
 	msgbox Route111_Text_RouteSignMauville, MSGBOX_SIGN
 	end
@@ -708,6 +918,46 @@ Route111_Text_WinstrateFamilyDestroyedMe:
 	.string "I challenged the WINSTRATE family,\n"
 	.string "but four matches in a row is tough\l"
 	.string "going… They destroyed me.$"
+
+Route118_Text_HeyPlayer:
+	.string "WALLY: Hey! {PLAYER}!\n"
+	.string "Is that you?$"
+
+Route118_Text_IGotAhead:
+	.string "WALLY: Hehe!\n"
+	.string "Looks like I must have gotten ahead\l"
+	.string "of you at some point!\p"
+	.string "I've been training super hard since\n"
+	.string "we last met.\p"
+	.string "Let's have a battle!\n"
+	.string "Get ready for the new and improved me!$"
+
+Route118_Text_WallyDefeated:
+	.string "Darn…\n"
+	.string "I thought I might win this time…$"
+
+Route118_Text_GuessYouHaventBeenSlacking:
+	.string "WALLY: I guess you haven't been\n"
+	.string "slacking off either, {PLAYER}.\p"
+	.string "This isn't enough to discourage me\n"
+	.string "anymore though!\p"
+	.string "I know for sure I am still improving!\n"
+	.string "One of these days, I'll surpass you!\p"
+	.string "So you better keep training hard\n"
+	.string "too, {PLAYER}!$"
+
+Route118_Text_ScottYouDidntHoldBack:
+	.string "SCOTT: Hehe…\n"
+	.string "I was watching that match!\p"
+	.string "You're friends with that boy WALLY,\n"
+	.string "aren't you?\p"
+	.string "But you didn't hold anything back\n"
+	.string "and beat him impressively.\p"
+	.string "Yeah! That's what a real POKéMON\n"
+	.string "battle is all about!\p"
+	.string "I idolize TRAINERS like that!\p"
+	.string "… … … … … …\n"
+	.string "I'll be cheering for you!$"
 
 Route111_Text_Masquerain:
 	.string "MASQUERAIN: Bzzzt! Bzzzzzt!$"

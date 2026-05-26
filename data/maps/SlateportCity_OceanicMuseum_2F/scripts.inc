@@ -407,6 +407,8 @@ SlateportCity_OceanicMuseum_2F_Text_DidntOrderThese:
 	.string "a call and ask him about these?$"
 
 SlateportCity_OceanicMuseum_2F_Text_ThatsWhereTheyAre:
+	.string "… … … … … …\n"
+	.string "… … … … … Beep!\p"
 	.string "MR. STONE: Hm?\n"
 	.string "Well, if it isn't {PLAYER}{KUN}!\p"
 	.string "Did you deliver those DEVON PARTS?\p"
@@ -430,7 +432,9 @@ SlateportCity_OceanicMuseum_2F_Text_ThatsWhereTheyAre:
 	.string "I'll have a reward ready for you\n"
 	.string "when you've delivered those, don't\l"
 	.string "you worry!\p"
-	.string "Thank you again, {PLAYER}{KUN}!$"
+	.string "Thank you again, {PLAYER}{KUN}!\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 	.string "CAPT. STERN: Whoops!\n"

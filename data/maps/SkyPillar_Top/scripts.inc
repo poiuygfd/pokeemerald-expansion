@@ -47,8 +47,8 @@ SkyPillar_Top_EventScript_Rayquaza::
 	delay 40
 	waitmoncry
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SkyPillar_Top_EventScript_RayquazaUncatchable
-	call_if_set FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetMainGameLevel
-	call_if_unset FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetPostGameLevel
+	call_if_unset FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetMainGameLevel
+	call_if_set FLAG_SYS_GAME_CLEAR, SkyPillar_Top_EventScript_SetPostGameLevel
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

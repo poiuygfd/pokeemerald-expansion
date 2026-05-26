@@ -1,6 +1,7 @@
 FortreeCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FortreeCity_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, FortreeCity_OnResume
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FortreeCity_OnFrame
 	.byte 0
 
 FortreeCity_OnTransition:
@@ -9,6 +10,19 @@ FortreeCity_OnTransition:
 
 FortreeCity_OnResume:
 	setstepcallback STEP_CB_FORTREE_BRIDGE
+	end
+
+FortreeCity_OnFrame:
+	map_script_2 VAR_FORTREE_CITY_STATE, 1, FortreeCity_EventScript_ScottWonAtFortreeGymCall
+	.2byte 0
+
+FortreeCity_EventScript_ScottWonAtFortreeGymCall::
+	lockall
+	pokenavcall FortreeCity_Text_ScottYouWonAtFortreeGym
+	waitmessage
+	setvar VAR_FORTREE_CITY_STATE, 2
+	clearflag FLAG_SCOTT_CALL_FORTREE_GYM
+	releaseall
 	end
 
 FortreeCity_EventScript_Man::
@@ -86,6 +100,22 @@ FortreeCity_EventScript_UseDevonScope::
 FortreeCity_Movement_KecleonFlee:
 	walk_right
 	step_end
+
+FortreeCity_Text_ScottYouWonAtFortreeGym:
+	.string "… … … … … …\n"
+	.string "… … … … … Beep!\p"
+	.string "SCOTT: Hiya, {PLAYER}{KUN}, it's me!\p"
+	.string "Just as I thought, you won at\n"
+	.string "the FORTREE GYM.\p"
+	.string "Your strength…\n"
+	.string "Perhaps you really are the TRAINER\l"
+	.string "that I've been searching for.\p"
+	.string "I have a gift for you that should\n"
+	.string "help you out as a TRAINER.\p"
+	.string "Come find me in LILYCOVE CITY, okay?\n"
+	.string "Keep up the great work!\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"
 
 FortreeCity_Text_SawGiganticPokemonInSky:
 	.string "No one believes me, but I saw this\n"

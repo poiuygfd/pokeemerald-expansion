@@ -342,10 +342,7 @@ LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles:
 	.string "battles and tough TRAINERS.\p"
 	.string "But that's just me.\p"
 	.string "{PLAYER}{KUN}, I hope you'll enjoy everything\n"
-	.string "like the GYMS, CONTESTS, BATTLE TENTS,\l"
-	.string "and so on, the whole works!\p"
-	.string "And be sure to check out THE DEPTHS and\n"
-	.string "the TRAINER HILL with that BATTLE PASS!$"
+	.string "that being a TRAINER has to offer!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy:
 	.string "SCOTT: I think it does take strategy\n"

@@ -1079,6 +1079,7 @@ SlateportCity_EventScript_ScottBattleTentScene::
 	waitmovement 0
 	removeobject LOCALID_SLATEPORT_SCOTT
 	addvar VAR_SCOTT_STATE, 1
+	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	releaseall
 	end

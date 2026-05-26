@@ -1300,6 +1300,42 @@ SootopolisCity_EventScript_ManiacRayquaza::
 	releaseall
 	end
 
+SootopolisCity_EventScript_Scott::
+	lockall
+	applymovement LOCALID_SOOTOPOLIS_SCOTT, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_ScottRayquaza
+	goto_if_set FLAG_MET_SCOTT_IN_SOOTOPOLIS, SootopolisCity_EventScript_MetScott
+	msgbox SootopolisCity_Text_RareToSeeBattleThisIntense, MSGBOX_DEFAULT
+	closemessage
+	addvar VAR_SCOTT_STATE, 1
+	applymovement LOCALID_SOOTOPOLIS_SCOTT, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	setflag FLAG_MET_SCOTT_IN_SOOTOPOLIS
+	releaseall
+	end
+
+SootopolisCity_EventScript_MetScott::
+	msgbox SootopolisCity_Text_WorriedAboutTheWeather, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SOOTOPOLIS_SCOTT, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	releaseall
+	end
+
+SootopolisCity_EventScript_ScottRayquaza::
+	goto_if_set FLAG_MET_SCOTT_IN_SOOTOPOLIS, SootopolisCity_EventScript_MetScottRayquaza
+	msgbox SootopolisCity_Text_RareToSeeBattleThatIntense, MSGBOX_DEFAULT
+	addvar VAR_SCOTT_STATE, 1
+	setflag FLAG_MET_SCOTT_IN_SOOTOPOLIS
+	releaseall
+	end
+
+SootopolisCity_EventScript_MetScottRayquaza::
+	msgbox SootopolisCity_Text_ThatThirdPokemonWasAmazing, MSGBOX_DEFAULT
+	releaseall
+	end
+
 SootopolisCity_EventScript_Wallace::
 	lock
 	faceplayer
@@ -1548,6 +1584,42 @@ SootopolisCity_Text_SootopolisWillBeWrecked:
 SootopolisCity_Text_SootopolisDidntGetWrecked:
 	.string "SOOTOPOLIS CITY didn't get wrecked!$"
 
+SootopolisCity_Text_RareToSeeBattleThisIntense:
+	.string "SCOTT: Woah! Hey, {PLAYER}{KUN}!\n"
+	.string "It's rare to see a battle this intense!\p"
+	.string "Even so…\n"
+	.string "All they are really doing is ramming\l"
+	.string "into each other repeatedly…\p"
+	.string "I suppose a battle between two wild\n"
+	.string "POKéMON will never compare to the\l"
+	.string "battle of wits between TRAINERS.$"
+
+SootopolisCity_Text_WorriedAboutTheWeather:
+	.string "SCOTT: I can't help but worry about\n"
+	.string "the state of the weather, too.\p"
+	.string "If this keeps up, things could go\n"
+	.string "very south, very fast…$"
+
+SootopolisCity_Text_RareToSeeBattleThatIntense:
+	.string "SCOTT: Woah! Hey, {PLAYER}{KUN}!\n"
+	.string "It's rare to see a battle that intense!\p"
+	.string "Even so…\n"
+	.string "All they were really doing was ramming\l"
+	.string "into each other repeatedly…\p"
+	.string "I suppose a battle between two wild\n"
+	.string "POKéMON will never compare to the\l"
+	.string "battle of wits between TRAINERS.$"
+
+SootopolisCity_Text_ThatThirdPokemonWasAmazing:
+	.string "SCOTT: That third POKéMON, the green\n"
+	.string "one, sure was amazing!\p"
+	.string "I would hate to think about what might\n"
+	.string "have happened if it didn't show up…\p"
+	.string "Wait, really?\n"
+	.string "You're the one who brought it here?\p"
+	.string "Wow!\n"
+	.string "You never cease to amaze me, {PLAYER}{KUN}!$"
+
 SootopolisCity_Text_NoOrdinaryTourist:
 	.string "Hm!\n"
 	.string "You've come all the way to SOOTOPOLIS?\l"
@@ -1757,8 +1829,8 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "That's right! You have to beat\n"
 	.string "the SOOTOPOLIS GYM LEADER.\p"
 	.string "While the GYM LEADER of SOOTOPOLIS\n"
-	.string "should none other than myself,\l"
-	.string "Considering the events of today, I've\l"
+	.string "should be none other than myself,\l"
+	.string "considering the events of today, I've\l"
 	.string "decided to retrain myself from scratch.\p"
 	.string "Next time SOOTOPOLIS is in danger, I'll\n"
 	.string "make sure I'm strong enough to save it!\p"

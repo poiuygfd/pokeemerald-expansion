@@ -20401,6 +20401,51 @@ Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 100 HP / 50 Atk
 
+=== TRAINER_WALLY_ROUTE_111 ===
+Name: WALLY
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Swablu
+Level: 21
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 100 HP / 50 Atk / 50 SpA
+- Round
+- Aerial Ace
+- Feather Dance
+- Roost
+
+Tandemaus
+Level: 21
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 100 HP / 50 Atk / 50 SpA
+- Echoed Voice
+- Bite
+- Helping Hand
+- Tickle
+
+Roselia
+Level: 23
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 100 HP / 50 Atk / 50 SpA
+- Magical Leaf
+- Leech Seed
+- Toxic Spikes
+- Sleep Powder
+
+Kirlia
+Level: 23
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 100 HP / 50 Atk / 50 SpA
+- Psychic
+- Draining Kiss
+- Mystical Fire
+- Hypnosis
+
 === TRAINER_ROUTE_MASTER_102 ===
 Name: ZACH
 Class: Route Master

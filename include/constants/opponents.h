@@ -877,44 +877,45 @@
 #define TRAINER_KYLE                        870
 #define TRAINER_ROBBY                       871
 #define TRAINER_STEVEN_GRANITE_CAVE         872
-#define TRAINER_ROUTE_MASTER_102            873
-#define TRAINER_ROUTE_MASTER_104            874
-#define TRAINER_ROUTE_MASTER_117            875
-#define TRAINER_ROUTE_MASTER_113            876
-#define TRAINER_ROUTE_MASTER_120_A          877
-#define TRAINER_ROUTE_MASTER_120_Z          878
-#define TRAINER_ROUTE_MASTER_123            879
-#define TRAINER_ROUTE_MASTER_124            880
-#define TRAINER_ROUTE_MASTER_133            881
-#define TRAINER_WEATHERMAN_RAIN             882
-#define TRAINER_WEATHERMAN_SUN              883
-#define TRAINER_WEATHERMAN_SNOW             884
-#define TRAINER_WEATHERMAN_FINAL            885
-#define TRAINER_SLOWBRO_GUY                 886
-#define TRAINER_SIDNEY_REMATCH              887
-#define TRAINER_PHOEBE_REMATCH              888
-#define TRAINER_GLACIA_REMATCH              889
-#define TRAINER_DRAKE_REMATCH               890
-#define TRAINER_STEVEN_REMATCH              891
-#define TRAINER_RED_METEOR_FALLS            892
-#define TRAINER_LEAF_ARTISAN_CAVE           893
-#define TRAINER_WOLFE                       894
-#define TRAINER_CHARIZARD_FAN_X_MEGA        895
-#define TRAINER_CHARIZARD_FAN_Y_MEGA        896
-#define TRAINER_CHARIZARD_FAN_Z_MEGA        897
-#define TRAINER_CHARIZARD_FAN_X_MEGA_EARLY  898
-#define TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY  899
-#define TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY  900
-#define TRAINER_RED                         901
-#define TRAINER_LEAF                        902
-#define TRAINER_BRENDAN_PLACEHOLDER         903
-#define TRAINER_MAY_PLACEHOLDER             904
+#define TRAINER_WALLY_ROUTE_111             873
+#define TRAINER_ROUTE_MASTER_102            874
+#define TRAINER_ROUTE_MASTER_104            875
+#define TRAINER_ROUTE_MASTER_117            876
+#define TRAINER_ROUTE_MASTER_113            877
+#define TRAINER_ROUTE_MASTER_120_A          878
+#define TRAINER_ROUTE_MASTER_120_Z          879
+#define TRAINER_ROUTE_MASTER_123            880
+#define TRAINER_ROUTE_MASTER_124            881
+#define TRAINER_ROUTE_MASTER_133            882
+#define TRAINER_WEATHERMAN_RAIN             883
+#define TRAINER_WEATHERMAN_SUN              884
+#define TRAINER_WEATHERMAN_SNOW             885
+#define TRAINER_WEATHERMAN_FINAL            886
+#define TRAINER_SLOWBRO_GUY                 887
+#define TRAINER_SIDNEY_REMATCH              888
+#define TRAINER_PHOEBE_REMATCH              889
+#define TRAINER_GLACIA_REMATCH              890
+#define TRAINER_DRAKE_REMATCH               891
+#define TRAINER_STEVEN_REMATCH              892
+#define TRAINER_RED_METEOR_FALLS            893
+#define TRAINER_LEAF_ARTISAN_CAVE           894
+#define TRAINER_WOLFE                       895
+#define TRAINER_CHARIZARD_FAN_X_MEGA        896
+#define TRAINER_CHARIZARD_FAN_Y_MEGA        897
+#define TRAINER_CHARIZARD_FAN_Z_MEGA        898
+#define TRAINER_CHARIZARD_FAN_X_MEGA_EARLY  899
+#define TRAINER_CHARIZARD_FAN_Y_MEGA_EARLY  900
+#define TRAINER_CHARIZARD_FAN_Z_MEGA_EARLY  901
+#define TRAINER_RED                         902
+#define TRAINER_LEAF                        903
+#define TRAINER_BRENDAN_PLACEHOLDER         904
+#define TRAINER_MAY_PLACEHOLDER             905
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     905
+#define TRAINERS_COUNT_EMERALD     906
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
