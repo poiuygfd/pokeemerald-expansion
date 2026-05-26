@@ -390,7 +390,6 @@ BattleFrontier_Lounge7_EventScript_ChoosePartnerTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
 	setvar VAR_0x8006, 0
 	special ShowScrollableMultichoice
-	waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_SplishySplash
@@ -418,7 +417,6 @@ BattleFrontier_Lounge7_EventScript_ChooseNewPartnerTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
 	setvar VAR_0x8006, 1
 	special ShowScrollableMultichoice
-	waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_SplishySplash
@@ -583,7 +581,7 @@ BattleFrontier_Lounge7_EventScript_PartnerTeachTutorMove::
 	fadescreen FADE_TO_BLACK
 	special CloseBattlePointsWindow
 	special CloseBattleFrontierTutorWindow
-	special ChooseMonForMoveTutor
+	chooseboxmon SELECT_PC_MON_MOVE_TUTOR
 	waitstate
 	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_Lounge7_EventScript_CancelChooseMon
 	msgbox BattleFrontier_Lounge7_Text_TakeCareOfYourPartner, MSGBOX_DEFAULT

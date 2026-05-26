@@ -61,11 +61,9 @@ SealedChamber_InnerRoom_EventScript_BrailleBackWall::
 	playse SE_DOOR
 	delay 40
 	special DoSealedChamberShakingEffect_Short
-	waitstate
 	playse SE_DOOR
 	delay 40
 	special DoSealedChamberShakingEffect_Short
-	waitstate
 	playse SE_DOOR
 	delay 40
 	msgbox gText_DoorOpenedFarAway, MSGBOX_DEFAULT
@@ -232,7 +230,6 @@ SealedChamber_InnerRoom_EventScript_Regigigas::
 	setwildbattle SPECIES_REGIGIGAS, 60
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SealedChamber_InnerRoom_EventScript_DefeatedRegigigas

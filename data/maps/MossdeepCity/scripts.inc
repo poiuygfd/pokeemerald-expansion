@@ -173,7 +173,6 @@ MossdeepCity_EventScript_WhiteRock14::
 	setwildbattle SPECIES_JIRACHI, 30
 	setvar VAR_WHITE_ROCK_COUNT, 14
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_EventScript_DefeatedJirachi
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MossdeepCity_EventScript_RanFromJirachi
@@ -192,7 +191,6 @@ MossdeepCity_EventScript_Jirachi::
 	setwildbattle SPECIES_JIRACHI, 30
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_EventScript_DefeatedJirachiStatic

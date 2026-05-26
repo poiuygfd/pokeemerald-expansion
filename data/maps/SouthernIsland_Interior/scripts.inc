@@ -88,7 +88,6 @@ SouthernIsland_Interior_EventScript_ChoosePartyForMultiBattle::
 	special SavePlayerParty
 	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
-	waitstate
 	goto_if_ne VAR_RESULT, 0, SouthernIsland_Interior_EventScript_DoStevenMultiBattle
 	special LoadPlayerParty
 	goto SouthernIsland_Interior_EventScript_SaidNo
@@ -99,7 +98,6 @@ SouthernIsland_Interior_EventScript_DoStevenMultiBattle::
 	case 1, SouthernIsland_Interior_EventScript_DefeatedCourtney
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
-	waitstate
 
 SouthernIsland_Interior_EventScript_DefeatedCourtney::
 	msgbox SouthernIsland_Interior_Text_CourtneyAfterBattle, MSGBOX_DEFAULT

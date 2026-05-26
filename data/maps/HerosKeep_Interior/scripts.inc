@@ -73,7 +73,6 @@ HerosKeep_Interior_EventScript_Zacian::
 	setwildbattle SPECIES_ZACIAN, 70, ITEM_RUSTED_SWORD
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HerosKeep_Interior_EventScript_DefeatedZacian
@@ -104,7 +103,6 @@ HerosKeep_Interior_EventScript_Zamazenta::
 	setwildbattle SPECIES_ZAMAZENTA, 70, ITEM_RUSTED_SHIELD
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HerosKeep_Interior_EventScript_DefeatedZamazenta

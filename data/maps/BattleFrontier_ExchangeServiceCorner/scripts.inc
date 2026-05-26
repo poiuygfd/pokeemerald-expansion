@@ -237,7 +237,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_KissPoster
@@ -363,7 +362,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvolutionItem::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_EVOLUTION_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_Everstone
@@ -499,7 +497,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMegaStone::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_MEGA_STONE_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_Venusaurite

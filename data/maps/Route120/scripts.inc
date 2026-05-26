@@ -298,7 +298,6 @@ Route120_EventScript_Ogerpon::
 	setvar VAR_0x8009, 6
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route120_EventScript_DefeatedOgerpon

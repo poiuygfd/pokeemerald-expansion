@@ -73,24 +73,16 @@ CaveOfOrigin_B1F_EventScript_WallaceSuperboss::
 
 CaveOfOrigin_B1F_EventScript_WallaceOfferTrade::
 	goto_if_set FLAG_TRADED_WALLACE_FEEBAS, CaveOfOrigin_B1F_EventScript_Defeated
-	setvar VAR_0x8008, INGAME_TRADE_FEEBAS
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
+	setvar VAR_0x8005, INGAME_TRADE_FEEBAS
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox CaveOfOrigin_B1F_Text_WallaceOfferTrade, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CaveOfOrigin_B1F_EventScript_DeclineTradeWallace
-	special ChoosePartyMon
+	chooseboxmon SELECT_PC_MON_NORMAL
 	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, CaveOfOrigin_B1F_EventScript_DeclineTradeWallace
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_0x800B, GetTradeSpecies
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	msgbox CaveOfOrigin_B1F_Text_WallaceAfterTrade, MSGBOX_DEFAULT
 	setflag FLAG_TRADED_WALLACE_FEEBAS
 	release

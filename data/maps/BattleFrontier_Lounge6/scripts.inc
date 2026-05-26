@@ -5,24 +5,16 @@ BattleFrontier_Lounge6_EventScript_TraderLeaf::
 	lock
 	faceplayer
 	goto_if_set FLAG_BATTLE_FRONTIER_TRADE_DONE, BattleFrontier_Lounge6_EventScript_TradeCompletedLeaf
-	setvar VAR_0x8008, INGAME_TRADE_EEVEE
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
+	setvar VAR_0x8005, INGAME_TRADE_EEVEE
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox BattleFrontier_Lounge6_Text_NiceToSeeYou, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_Lounge6_EventScript_DeclineTradeLeaf
-	special ChoosePartyMon
+	chooseboxmon SELECT_PC_MON_NORMAL
 	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BattleFrontier_Lounge6_EventScript_DeclineTradeLeaf
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_0x800B, GetTradeSpecies
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	msgbox BattleFrontier_Lounge6_Text_TakeCareOfEevee, MSGBOX_DEFAULT
 	setflag FLAG_BATTLE_FRONTIER_TRADE_DONE
 	release
@@ -32,24 +24,16 @@ BattleFrontier_Lounge6_EventScript_TraderRed::
 	lock
 	faceplayer
 	goto_if_set FLAG_BATTLE_FRONTIER_TRADE2_DONE, BattleFrontier_Lounge6_EventScript_TradeCompletedRed
-	setvar VAR_0x8008, INGAME_TRADE_PIKACHU
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
+	setvar VAR_0x8005, INGAME_TRADE_PIKACHU
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox BattleFrontier_Lounge6_Text_RedGreeting, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_Lounge6_EventScript_DeclineTradeRed
-	special ChoosePartyMon
+	chooseboxmon SELECT_PC_MON_NORMAL
 	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BattleFrontier_Lounge6_EventScript_DeclineTradeRed
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_0x800B, GetTradeSpecies
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	msgbox BattleFrontier_Lounge6_Text_RedAfterTrade, MSGBOX_DEFAULT
 	setflag FLAG_BATTLE_FRONTIER_TRADE2_DONE
 	release

@@ -14,24 +14,16 @@ EverGrandeCity_WolfeCave_EventScript_WolfeGlick::
 
 EverGrandeCity_WolfeCave_EventScript_WolfeOfferTrade::
 	goto_if_set FLAG_TRADED_WOLFE_INCINEROAR, EverGrandeCity_WolfeCave_EventScript_DefeatedWolfe
-	setvar VAR_0x8008, INGAME_TRADE_INCINEROAR
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
+	setvar VAR_0x8005, INGAME_TRADE_INCINEROAR
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox EverGrandeCity_WolfeCave_Text_WolfeOfferTrade, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EverGrandeCity_WolfeCave_EventScript_DeclineTradeWolfe
-	special ChoosePartyMon
+	chooseboxmon SELECT_PC_MON_NORMAL
 	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, EverGrandeCity_WolfeCave_EventScript_DeclineTradeWolfe
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_0x800B, GetTradeSpecies
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
-	waitstate
 	msgbox EverGrandeCity_WolfeCave_Text_WolfeAfterTrade, MSGBOX_DEFAULT
 	setflag FLAG_TRADED_WOLFE_INCINEROAR
 	release
