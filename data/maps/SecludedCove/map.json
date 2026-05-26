@@ -3,6 +3,7 @@
   "name": "SecludedCove",
   "layout": "LAYOUT_SECLUDED_COVE",
   "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SECLUDED_COVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

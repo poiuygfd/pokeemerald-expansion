@@ -3,6 +3,7 @@
   "name": "HerosKeep_Exterior",
   "layout": "LAYOUT_HEROS_KEEP_EXTERIOR",
   "music": "MUS_DP_ETERNA_FOREST",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_HEROS_KEEP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

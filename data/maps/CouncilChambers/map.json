@@ -3,6 +3,7 @@
   "name": "CouncilChambers",
   "layout": "LAYOUT_COUNCIL_CHAMBERS",
   "music": "MUS_HG_ICE_PATH",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_COUNCIL_CHAMBERS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -3,6 +3,7 @@
   "name": "Route119_MrMegasStones",
   "layout": "LAYOUT_ROUTE119_MR_MEGAS_STONES",
   "music": "MUS_RUSTBORO",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_119",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

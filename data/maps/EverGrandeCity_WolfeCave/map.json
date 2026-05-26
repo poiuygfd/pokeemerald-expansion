@@ -3,6 +3,7 @@
   "name": "EverGrandeCity_WolfeCave",
   "layout": "LAYOUT_EVER_GRANDE_CITY_WOLFE_CAVE",
   "music": "MUS_DP_ENCOUNTER_CHAMPION",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

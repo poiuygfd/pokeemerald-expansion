@@ -3,6 +3,7 @@
   "name": "TheDepths_B8F",
   "layout": "LAYOUT_THE_DEPTHS_B8F",
   "music": "MUS_B_PIKE",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_THE_DEPTHS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

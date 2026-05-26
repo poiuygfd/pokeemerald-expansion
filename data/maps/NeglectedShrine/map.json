@@ -3,6 +3,7 @@
   "name": "NeglectedShrine",
   "layout": "LAYOUT_NEGLECTED_SHRINE",
   "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_NEGLECTED_SHRINE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
