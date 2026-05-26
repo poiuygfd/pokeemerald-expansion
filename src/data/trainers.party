@@ -489,10 +489,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Magma
+Pic: Magma Grunt M
 Gender: Male
-Music: Aqua
+Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
@@ -506,10 +506,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Magma
+Pic: Magma Grunt M
 Gender: Male
-Music: Aqua
+Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
@@ -517,16 +517,16 @@ Golbat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Numel
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_3 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Magma
+Pic: Magma Grunt M
 Gender: Male
-Music: Aqua
+Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
@@ -534,7 +534,7 @@ Scraggy
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Salandit
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12140,18 +12140,18 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Magma
+Pic: Magma Grunt F
 Gender: Female
-Music: Aqua
+Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
-Wailmer
+Capsakid
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
+Baltoy
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -20203,27 +20203,27 @@ Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
 
-=== TRAINER_MATT_MT_PYRE ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
+=== TRAINER_TABITHA_MT_PYRE ===
+Name: TABITHA
+Class: Magma Admin
+Pic: Magma Admin
 Gender: Male
-Music: Aqua
+Music: Magma
 Items: Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Golbat
+Mightyena
 Level: 32
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
-Sharpedo
+Camerupt
 Level: 32
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
-Barbaracle
+Ceruledge
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe

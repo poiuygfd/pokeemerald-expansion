@@ -1,5 +1,3 @@
-.set LOCALID_MATT, 10
-
 MtPyre_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtPyre_Summit_OnTransition
 	.byte 0
@@ -13,57 +11,57 @@ MtPyre_Summit_EventScript_SetArchieMaxiePositions::
 	setobjectxyperm LOCALID_MT_PYRE_SUMMIT_ARCHIE, 22, 6
 	end
 
-MtPyre_Summit_EventScript_TeamAquaTrigger0::
+MtPyre_Summit_EventScript_TeamMagmaTrigger0::
 	lockall
 	setvar VAR_0x8008, 0
-	goto MtPyre_Summit_EventScript_TeamAquaExits
+	goto MtPyre_Summit_EventScript_TeamMagmaExits
 	end
 
-MtPyre_Summit_EventScript_TeamAquaTrigger1::
+MtPyre_Summit_EventScript_TeamMagmaTrigger1::
 	lockall
 	setvar VAR_0x8008, 1
-	goto MtPyre_Summit_EventScript_TeamAquaExits
+	goto MtPyre_Summit_EventScript_TeamMagmaExits
 	end
 
-MtPyre_Summit_EventScript_TeamAquaTrigger2::
+MtPyre_Summit_EventScript_TeamMagmaTrigger2::
 	lockall
 	setvar VAR_0x8008, 2
-	goto MtPyre_Summit_EventScript_TeamAquaExits
+	goto MtPyre_Summit_EventScript_TeamMagmaExits
 	end
 
-MtPyre_Summit_EventScript_TeamAquaExits::
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
+MtPyre_Summit_EventScript_TeamMagmaExits::
+	playbgm MUS_ENCOUNTER_MAGMA, FALSE
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_MT_PYRE_SUMMIT_ARCHIE, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_MT_PYRE_SUMMIT_MAXIE, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 50
-	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_ArchieFacePlayer0
-	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_ArchieFacePlayer1
-	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_ArchieFacePlayer2
-	msgbox MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
+	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_MaxieFacePlayer0
+	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_MaxieFacePlayer1
+	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_MaxieFacePlayer2
+	msgbox MtPyre_Summit_Text_MaxieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_MT_PYRE_SUMMIT_ARCHIE
+	removeobject LOCALID_MT_PYRE_SUMMIT_MAXIE
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_1
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_2
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_3
 	removeobject LOCALID_MT_PYRE_SUMMIT_GRUNT_4
-	setflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
-	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA
 	fadedefaultbgm
 	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 20
-	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_MattWalkPlayer0
-	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_MattWalkPlayer1
-	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_MattWalkPlayer2
-	msgbox MtPyre_Summit_Text_MattLetsFight, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_MATT_MT_PYRE, MtPyre_Summit_Text_MattDefeat
-	msgbox MtPyre_Summit_Text_MattGoodbye, MSGBOX_DEFAULT
+	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_TabithaWalkPlayer0
+	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_TabithaWalkPlayer1
+	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_TabithaWalkPlayer2
+	msgbox MtPyre_Summit_Text_TabithaLetsFight, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_TABITHA_MT_PYRE, MtPyre_Summit_Text_TabithaDefeat
+	msgbox MtPyre_Summit_Text_TabithaGoodbye, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_MATT
-	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT
+	removeobject LOCALID_MT_PYRE_TABITHA
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TABITHA
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	delay 20
@@ -79,36 +77,36 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	releaseall
 	end
 
-MtPyre_Summit_EventScript_ArchieFacePlayer0::
-	applymovement LOCALID_MT_PYRE_SUMMIT_ARCHIE, MtPyre_Summit_Movement_ArchieFacePlayer0
+MtPyre_Summit_EventScript_MaxieFacePlayer0::
+	applymovement LOCALID_MT_PYRE_SUMMIT_MAXIE, MtPyre_Summit_Movement_MaxieFacePlayer0
 	waitmovement 0
 	return
 
-@ Archie is already facing player
-MtPyre_Summit_EventScript_ArchieFacePlayer1::
+@ Maxie is already facing player
+MtPyre_Summit_EventScript_MaxieFacePlayer1::
 	return
 
-MtPyre_Summit_EventScript_ArchieFacePlayer2::
-	applymovement LOCALID_MT_PYRE_SUMMIT_ARCHIE, MtPyre_Summit_Movement_ArchieFacePlayer2
+MtPyre_Summit_EventScript_MaxieFacePlayer2::
+	applymovement LOCALID_MT_PYRE_SUMMIT_MAXIE, MtPyre_Summit_Movement_MaxieFacePlayer2
 	waitmovement 0
 	return
 
-MtPyre_Summit_EventScript_MattWalkPlayer0::
-	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalkPlayer0
+MtPyre_Summit_EventScript_TabithaWalkPlayer0::
+	applymovement LOCALID_MT_PYRE_TABITHA, MtPyre_Summit_Movement_TabithaWalkPlayer0
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	return
 
-MtPyre_Summit_EventScript_MattWalkPlayer1::
-	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalkPlayer1
+MtPyre_Summit_EventScript_TabithaWalkPlayer1::
+	applymovement LOCALID_MT_PYRE_TABITHA, MtPyre_Summit_Movement_TabithaWalkPlayer1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	return
 
-@ Matt is already next to player
-MtPyre_Summit_EventScript_MattWalkPlayer2::
+@ Tabitha is already next to player
+MtPyre_Summit_EventScript_TabithaWalkPlayer2::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	return
@@ -148,22 +146,22 @@ MtPyre_Summit_Movement_OldLadyApproachPlayer2:
 	walk_in_place_faster_right
 	step_end
 
-MtPyre_Summit_Movement_ArchieFacePlayer0:
+MtPyre_Summit_Movement_MaxieFacePlayer0:
 	walk_left
 	walk_in_place_faster_down
 	step_end
 
-MtPyre_Summit_Movement_ArchieFacePlayer2:
+MtPyre_Summit_Movement_MaxieFacePlayer2:
 	walk_right
 	walk_in_place_faster_down
 	step_end
 
-MtPyre_Summit_Movement_MattWalkPlayer0::
+MtPyre_Summit_Movement_TabithaWalkPlayer0::
 	walk_left
 	walk_left
 	step_end
 
-MtPyre_Summit_Movement_MattWalkPlayer1::
+MtPyre_Summit_Movement_TabithaWalkPlayer1::
 	walk_left
 	step_end
 
@@ -478,12 +476,12 @@ MtPyre_Summit_EventScript_Grunt4::
 	end
 
 MtPyre_Summit_Text_Grunt1Intro:
-	.string "No! Those TEAM MAGMA goons got\n"
+	.string "No! Those TEAM AQUA goons got\n"
 	.string "here ahead of us!\p"
 	.string "We can't fall behind!$"
 
 MtPyre_Summit_Text_Grunt1Defeat:
-	.string "I thought you were one of the MAGMAS\n"
+	.string "I thought you were one of the AQUAS\n"
 	.string "who happened to come back…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
@@ -494,13 +492,13 @@ MtPyre_Summit_Text_Grunt2Intro:
 	.string "Hah!\n"
 	.string "Too bad for you!\p"
 	.string "If you came earlier, you only would've\n"
-	.string "had to battle the wimpy TEAM MAGMA.\p"
+	.string "had to battle the wimpy TEAM AQUA.\p"
 	.string "But since you arrived now, you have\n"
 	.string "to take on us toughies!$"
 
 MtPyre_Summit_Text_Grunt2Defeat:
 	.string "Urgh… I should've let you take on\n"
-	.string "TEAM MAGMA first…$"
+	.string "TEAM AQUA first…$"
 
 MtPyre_Summit_Text_Grunt2PostBattle:
 	.string "You don't know anything!\n"
@@ -514,7 +512,7 @@ MtPyre_Summit_Text_Grunt3Intro:
 
 MtPyre_Summit_Text_Grunt3Defeat:
 	.string "If you're going to mess with anyone,\n"
-	.string "let it be TEAM MAGMA…$"
+	.string "let it be TEAM AQUA…$"
 
 MtPyre_Summit_Text_Grunt3PostBattle:
 	.string "Heh, it doesn't matter!\n"
@@ -524,49 +522,54 @@ MtPyre_Summit_Text_Grunt3PostBattle:
 
 MtPyre_Summit_Text_Grunt4Intro:
 	.string "Oh, I know!\n"
-	.string "You tried to join TEAM MAGMA,\l"
+	.string "You tried to join TEAM AQUA,\l"
 	.string "but they wouldn't have you!\p"
 	.string "Well, don't think that we'll let you\n"
-	.string "join our TEAM AQUA!$"
+	.string "join our TEAM MAGMA!$"
 
 MtPyre_Summit_Text_Grunt4Defeat:
-	.string "If you want to join TEAM AQUA that\n"
+	.string "If you want to join TEAM MAGMA that\n"
 	.string "badly, we can consider it…$"
 
 MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "We have a great combination going\n"
 	.string "with us members and our leader.$"
 
-MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
-	.string "ARCHIE: TEAM MAGMA's MAXIE got ahead\n"
+MtPyre_Summit_Text_MaxieWeGotTheOrbLetsGo:
+	.string "MAXIE: TEAM AQUA's ARCHIE got ahead\n"
 	.string "of us, but we also got what we wanted.\p"
-	.string "The RED ORB preserved at MT. PYRE…\n"
-	.string "I, ARCHIE, now have it in my possession!\p"
-	.string "Fufufu… Now we can bring our ultimate\n"
+	.string "The BLUE ORB preserved at MT. PYRE…\n"
+	.string "I, MAXIE, now have it in my possession!\p"
+	.string "With that, we can now bring our ultimate\n"
 	.string "objective to fruition!\p"
-	.string "MATT! Why don't you show our guest here\n"
-	.string "some hospitality? Fufufu…\p"
-	.string "Okay, TEAM!\n"
-	.string "We're pulling out!$"
+	.string "TABITHA! Why don't you show our guest\n"
+	.string "here some hospitality?\p"
+	.string "Move out, TEAM!\n"
+	.string "Our goal is within our reach!$"
 
-MtPyre_Summit_Text_MattLetsFight:
-	.string "MATT: Sorry, brozo, but you've crossed\n"
-	.string "TEAM AQUA one too many times now!\p"
-	.string "I heard you gave SHELLY a thrashing at\n"
-	.string "the WEATHER INSTITUTE!\p"
+MtPyre_Summit_Text_TabithaLetsFight:
+	.string "TABITHA: Hehehehe!\n"
+	.string "So, we meet again!\p"
+	.string "I heard you gave COURTNEY a thrashing\n"
+	.string "over on SOUTHERN ISLAND!\p"
 	.string "I think it's about due time that you be\n"
-	.string "the one on the recieving end!$"
+	.string "the one on the recieving end!\p"
+	.string "If you think this will go the same way\n"
+	.string "as METEOR FALLS, you're in for a shock!$"
 
-MtPyre_Summit_Text_MattDefeat:
-	.string "Looks like I'm the one who got thrashed…\n"
-	.string "Gnarly… … …$"
+MtPyre_Summit_Text_TabithaDefeat:
+	.string "Heh… Heheh…\n"
+	.string "I was the one in for a shock…$"
 
-MtPyre_Summit_Text_MattGoodbye:
-	.string "Oh ho! You aren't half bad!\n"
-	.string "That battle was fun, even if I lost!\p"
-	.string "Well, it's been fun playing with you, but\n"
-	.string "I think it's about time I took my leave.\p"
-	.string "Later, brozo!$"
+MtPyre_Summit_Text_TabithaGoodbye:
+	.string "TABITHA: I can't believe how strong you\n"
+	.string "are for just being some kid…\p"
+	.string "Well, not that it matters really.\n"
+	.string "My job was just to stall for time.\p"
+	.string "And with that job complete, I shall be\n"
+	.string "taking my leave!\p"
+	.string "Good luck finding us now!\n"
+	.string "Hehehehe!$"
 
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Oh, no…\n"
@@ -579,10 +582,8 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "the two ORBS?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "Oh, yes. Was it TEAM MAGMA who came\n"
-	.string "and took the BLUE ORB first?\p"
-	.string "Well, in their haste, they left this\n"
-	.string "behind.\p"
+	.string "Oh, yes. TEAM MAGMA, in their haste\n"
+	.string "to leave, left this behind.\p"
 	.string "I couldn't imagine what exactly it\n"
 	.string "could be.\p"
 	.string "I would like you to have it.\n"

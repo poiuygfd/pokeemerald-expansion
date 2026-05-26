@@ -57,7 +57,7 @@
     },
     {
       "local_id": "LOCALID_MT_PYRE_SUMMIT_GRUNT_1",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 21,
       "y": 15,
       "elevation": 3,
@@ -67,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "MtPyre_Summit_EventScript_Grunt1",
-      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
       "local_id": "LOCALID_MT_PYRE_SUMMIT_GRUNT_2",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 25,
       "y": 18,
       "elevation": 3,
@@ -81,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "MtPyre_Summit_EventScript_Grunt2",
-      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
       "local_id": "LOCALID_MT_PYRE_SUMMIT_GRUNT_3",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 21,
       "y": 11,
       "elevation": 3,
@@ -95,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "MtPyre_Summit_EventScript_Grunt3",
-      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
       "local_id": "LOCALID_MT_PYRE_SUMMIT_GRUNT_4",
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
       "x": 25,
       "y": 11,
       "elevation": 3,
@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "MtPyre_Summit_EventScript_Grunt4",
-      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
       "local_id": "LOCALID_MT_PYRE_SUMMIT_MAXIE",
@@ -139,7 +139,8 @@
       "flag": "FLAG_ITEM_MT_PYRE_MEDICHAMITE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "local_id": "LOCALID_MT_PYRE_TABITHA",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 25,
       "y": 7,
       "elevation": 0,
@@ -149,7 +150,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_MATT"
+      "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TABITHA"
     }
   ],
   "warp_events": [
@@ -183,7 +184,7 @@
       "elevation": 3,
       "var": "VAR_MT_PYRE_STATE",
       "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_TeamAquaTrigger0"
+      "script": "MtPyre_Summit_EventScript_TeamMagmaTrigger0"
     },
     {
       "type": "trigger",
@@ -192,7 +193,7 @@
       "elevation": 3,
       "var": "VAR_MT_PYRE_STATE",
       "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_TeamAquaTrigger1"
+      "script": "MtPyre_Summit_EventScript_TeamMagmaTrigger1"
     },
     {
       "type": "trigger",
@@ -201,7 +202,7 @@
       "elevation": 3,
       "var": "VAR_MT_PYRE_STATE",
       "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_TeamAquaTrigger2"
+      "script": "MtPyre_Summit_EventScript_TeamMagmaTrigger2"
     },
     {
       "type": "trigger",

@@ -757,7 +757,7 @@
 #define FLAG_HIDE_DEPTHS_SAPPHIRE                                   0x2B8
 
 #define FLAG_HIDE_DESTINY_KNOT_LADY                                 0x2B9 // Destiny Knot Lady
-#define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x2BA // Mt. Pyre Matt Flag
+#define FLAG_HIDE_MT_PYRE_SUMMIT_TABITHA                            0x2BA // Mt. Pyre Matt Flag
 #define FLAG_HIDE_ROUTE_118_LATIOS                                  0x2BB // Latios Event Flag
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
@@ -965,10 +965,10 @@
 #define FLAG_HIDE_SOUTHERN_ISLAND_UNCHOSEN_EON_DUO_MON              0x38F
 #define FLAG_HIDE_MAUVILLE_CITY_WATTSON                             0x390
 #define FLAG_HIDE_MAUVILLE_GYM_WATTSON                              0x391
-#define FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS                        0x392
+#define FLAG_HIDE_ROUTE_121_TEAM_MAGMA_GRUNTS                       0x392
 #define FLAG_UNKNOWN_0x393                                          0x393 // Set, however has no purpose.
 #define FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE                             0x394
-#define FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA                          0x395
+#define FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA                         0x395
 #define FLAG_HIDE_BATTLE_TOWER_REPORTER                             0x396
 #define FLAG_HIDE_ROUTE_109_RIVAL                                   0x397
 #define FLAG_HIDE_CHAMPIONS_ROOM_RIVAL                              0x398

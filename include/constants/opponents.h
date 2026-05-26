@@ -867,7 +867,7 @@
 #define TRAINER_GRUNT_SOUTHERN_ISLAND_2     860
 #define TRAINER_GRUNT_SOUTHERN_ISLAND_3     861
 #define TRAINER_COURTNEY_SOUTHERN_ISLAND    862
-#define TRAINER_MATT_MT_PYRE                863
+#define TRAINER_TABITHA_MT_PYRE             863
 #define TRAINER_COURTNEY_HIDEOUT            864
 #define TRAINER_ALICIA                      865
 #define TRAINER_SAMMY                       866

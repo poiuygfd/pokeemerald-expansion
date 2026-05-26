@@ -319,7 +319,7 @@ SouthernIsland_Interior_Movement_LatiApproach:
 SouthernIsland_Interior_Text_Steven1:
 	.string "STEVEN: {PLAYER}{KUN}, it appears LATIAS\n"
 	.string "is in trouble. That must be why LATIOS\l"
-	.string "brought us here.\p"
+	.string "brought us here.$"
 
 SouthernIsland_Interior_Text_Steven2:
 	.string "TEAM MAGMA! What are you trying to do\n"
