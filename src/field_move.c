@@ -63,12 +63,10 @@ static bool32 IsFieldMoveUnlocked_Waterfall(void)
     return FlagGet(FLAG_BADGE08_GET);
 }
 
-#if OW_ROCK_CLIMB_FIELD_MOVE == TRUE
 static bool32 IsFieldMoveUnlocked_RockClimb(void)
 {
-    return TRUE;
+    return OW_ROCK_CLIMB_FIELD_MOVE;
 }
-#endif
 
 static bool32 IsFieldMoveUnlocked_Teleport(void)
 {
@@ -100,12 +98,10 @@ static bool32 IsFieldMoveUnlocked_SweetScent(void)
     return TRUE;
 }
 
-#if OW_DEFOG_FIELD_MOVE == TRUE
 static bool32 IsFieldMoveUnlocked_Defog(void)
 {
-    return TRUE;
+    return OW_DEFOG_FIELD_MOVE;
 }
-#endif
 
 static bool32 IsFieldMoveUnlocked_LeaderSwap(void)
 {
@@ -225,7 +221,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_SWEET_SCENT,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
-#if OW_ROCK_CLIMB_FIELD_MOVE == TRUE
+
     [FIELD_MOVE_ROCK_CLIMB] =
     {
         .fieldMoveFunc = SetUpFieldMove_RockClimb,
@@ -233,8 +229,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_ROCK_CLIMB,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
-#endif
-#if OW_DEFOG_FIELD_MOVE == TRUE
+
     [FIELD_MOVE_DEFOG] =
     {
         .fieldMoveFunc = SetUpFieldMove_Defog,
@@ -242,7 +237,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_DEFOG,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
-#endif
+    
     [FIELD_MOVE_LEADER_SWAP] =
     {
         .fieldMoveFunc = SetUpFieldMove_LeaderSwap,

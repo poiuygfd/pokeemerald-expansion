@@ -60,4 +60,7 @@ bool32 SetUpFieldMove_LeaderSwap(void);
 void Task_ChangeLeaderForm(u8 taskId);
 void TryChangeLeaderForm(u8 taskId);
 
+// cave transition idk
+void Task_EnterCaveTransition2(u8 taskId);
+
 #endif // GUARD_FLDEFF_H
