@@ -6848,7 +6848,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         {
             modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
             if (ctx->updateFlags)
-                RecordAbilityBattle(battlerDef, ctx->abilityDef);
+                RecordAbilityBattle(battlerDef, ctx->abilities[ctx->battlerDef]);
         }
         break;
     default:
@@ -8264,7 +8264,7 @@ s32 GetAdjustedDamage(struct DamageContext *ctx, s32 damage)
         gProtectStructs[ctx->battlerDef].assuranceDoubled = TRUE;
     }
 
-    if (ctx->abilityDef == ABILITY_TAG_TEAM) // Prevents Partrio from truly being KOed until all three forms have been knocked out
+    if (ctx->abilities[ctx->battlerDef] == ABILITY_TAG_TEAM) // Prevents Partrio from truly being KOed until all three forms have been knocked out
     {
         switch (gBattleMons[ctx->battlerDef].species)
         {
@@ -8332,12 +8332,12 @@ static inline void MulByTypeEffectiveness(struct DamageContext *ctx, uq4_12_t *m
             RecordAbilityBattle(ctx->battlerAtk, ctx->abilities[ctx->battlerAtk]);
     }
     else if (ctx->moveType == TYPE_DRAGON && defType == TYPE_FAIRY
-        && ctx->abilityAtk == ABILITY_FAE_HUNTER
+        && ctx->abilities[ctx->battlerAtk] == ABILITY_FAE_HUNTER
         && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(2.0);
         if (ctx->updateFlags)
-            RecordAbilityBattle(ctx->battlerAtk, ctx->abilityAtk);
+            RecordAbilityBattle(ctx->battlerAtk, ctx->abilities[ctx->battlerAtk]);
     }
 
     if (ctx->moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gBattleMons[ctx->battlerDef].volatiles.miracleEye && mod == UQ_4_12(0.0))

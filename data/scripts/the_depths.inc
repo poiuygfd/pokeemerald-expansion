@@ -77,6 +77,7 @@ TheDepths_EventScript_StrongPresence::
 	setvar VAR_LEVEL_CAP, 1
 	setvar VAR_PREVENT_BAG_USE, 2
 	setflag FLAG_PREVENT_CATCHING
+    setflag FLAG_PREVENT_RUNNING
 	msgbox TheDepths_Text_StrongPresence
 	closemessage
     return
@@ -86,6 +87,7 @@ TheDepths_EventScript_BattleAftermath::
 	setvar VAR_TEMP_LEVEL_CAP, 0
 	setvar VAR_PREVENT_BAG_USE, 0
 	clearflag FLAG_PREVENT_CATCHING
+    clearflag FLAG_PREVENT_RUNNING
 	msgbox TheDepths_Text_StrongPresenceLeaves
 	closemessage
     end

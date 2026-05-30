@@ -21986,7 +21986,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "A magic infused cheer that\n"
             "ups ally Sp. Att and Sp. Def."),
-        .effect = EFFECT_MAGICAL_CHEER,
+        .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_FAIRY,
         .accuracy = 0,
@@ -21997,6 +21997,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .ignoresProtect = TRUE,
         .ignoresSubstitute = TRUE,
         .mirrorMoveBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_PLUS,
+            .spAtk = 1,
+            .spDef = 1,
+        }),
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
@@ -22019,7 +22024,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .speed = 1,
             .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,

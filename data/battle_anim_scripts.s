@@ -19518,7 +19518,6 @@ MatchaGotchaDoubleProjectile:
 	return
 
 gBattleAnimMove_MagicalCheer::
-	loadspritegfx ANIM_TAG_SPARKLE_2
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_COSMIC_POWER, 0
 	playsewithpan SE_M_COSMIC_POWER, 0
 	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 0, 15, RGB_BLACK
@@ -19543,8 +19542,6 @@ gBattleAnimMove_MagicalCheer::
 	end
 
 gBattleAnimMove_BubbleBlast::
-	loadspritegfx ANIM_TAG_BUBBLE
-	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	monbg ANIM_TARGET
 	splitbgprio ANIM_TARGET
 	simple_palette_blend selector=F_PAL_BG, delay=0, initial_blend_y=0, target_blend_y=7, color=RGB(0, 25, 28)
@@ -19600,7 +19597,6 @@ BubbleBlastCreateBubbles:
 	return
 
 gBattleAnimMove_BeanBeam::
-	loadspritegfx ANIM_TAG_BEAN
 	call SetBeanBeamBG
 	waitforvisualfinish
 	delay 10
@@ -19633,7 +19629,6 @@ SetBeanBeamBG:
 	goto SetHighSpeedBgFade
 
 gBattleAnimMove_LeaderSwap::
-	loadspritegfx ANIM_TAG_FINGER
 	createsprite gMetronomeFingerSpriteTemplate, ANIM_ATTACKER, 12, 0
 	delay 24
 	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER, 22, 3

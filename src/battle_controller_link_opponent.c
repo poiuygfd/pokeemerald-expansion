@@ -322,7 +322,7 @@ static void LinkOpponentHandleDrawTrainerPic(enum BattlerId battler)
                 u8 gender = gLinkPlayers[GetBattlerMultiplayerId(battler)].gender;
 
                 if (outfit < OUTFIT_COUNT)
-                    trainerPicId = GetPlayerTrainerPicIdByOutfitGenderType(outfit, gender, 0);
+                    trainerPicId = GetPlayerTrainerPicIdByOutfitGenderType(outfit, gender);
                 else
                     trainerPicId = PlayerGenderToFrontTrainerPicId(gLinkPlayers[GetBattlerMultiplayerId(battler)].gender);
             }
@@ -361,7 +361,7 @@ static void LinkOpponentHandleDrawTrainerPic(enum BattlerId battler)
             u8 gender = gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].gender;
 
             if (outfit < OUTFIT_COUNT)
-                trainerPicId = GetPlayerTrainerPicIdByOutfitGenderType(outfit, gender, 0);
+                trainerPicId = GetPlayerTrainerPicIdByOutfitGenderType(outfit, gender);
             else
                 trainerPicId = PlayerGenderToFrontTrainerPicId(gender);
         }

@@ -1268,6 +1268,8 @@ static u8 Debug_CheckToggleFlags(u8 id)
         break;
     case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_BAG_USE:
         result = VarGet(B_VAR_NO_BAG_USE);
+        if (result >= NO_BAG_INVALID_VALUE)
+            result = NO_BAG_INVALID_VALUE;
         break;
     default:
         result = DEBUG_OPTION_CANT_BE_TOGGLED;

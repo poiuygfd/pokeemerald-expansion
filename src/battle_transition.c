@@ -2586,7 +2586,7 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
 
     enum TrainerPicID trainerAPicId = GetTrainerPicFromId(TRAINER_BATTLE_PARAM.opponentA);
     enum TrainerPicID trainerBPicId = GetTrainerPicFromId(TRAINER_BATTLE_PARAM.opponentB);
-    //u32 playerPicId = GetPlayerTrainerPicIdByOutfitGenderType(gSaveBlock2Ptr->currOutfitId, gSaveBlock2Ptr->playerGender, 0);
+    enum TrainerPicID playerPicId = GetPlayerTrainerPicIdByOutfitGenderType(gSaveBlock2Ptr->currOutfitId, gSaveBlock2Ptr->playerGender);
     enum TrainerPicID partnerPicId = GetTrainerPicFromId(gPartnerTrainerId);
     struct Coords16 mugshotCoordsA = GetTrainerFrontPicMugshotCoords(trainerAPicId);
     s16 opponentARotationScales = 0;
