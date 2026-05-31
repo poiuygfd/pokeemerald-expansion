@@ -11680,6 +11680,14 @@ bool8 MovementAction_WalkSlowStairsRight_Step1(struct ObjectEvent *objectEvent, 
     return FALSE;
 }
 
+const struct SpritePalette *GetObjectEventPaletteFromTag(u16 paletteTag)
+{
+    u32 i = FindObjectEventPaletteIndexByTag(paletteTag);
+    if (i == 0xFF)
+        i = 0;
+    return &sObjectEventSpritePalettes[i];
+}
+
 u16 GetGraphicsIdForMon(enum Species species, bool32 shiny, bool32 female)
 {
     u16 graphicsId = species + OBJ_EVENT_MON;

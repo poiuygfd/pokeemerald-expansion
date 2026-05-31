@@ -930,9 +930,17 @@ void BufferOutfitStrings(u8 *dest, u8 outfitId, u8 dataType)
 enum TrainerPicID GetPlayerTrainerPicIdByOutfitGenderType(u32 outfitId, enum Gender gender)
 {
     if (outfitId > OUTFIT_NONE && outfitId < OUTFIT_COUNT)
-        return gOutfits[outfitId].trainerPics[gender];
+        //return gOutfits[outfitId].trainerPics[gender];
+        if (gender == FEMALE)
+            return gOutfits[outfitId].trainerPicFemale;
+        else
+            return gOutfits[outfitId].trainerPicMale;
     else
-        return gOutfits[0].trainerPics[gender];
+        //return gOutfits[0].trainerPics[gender];
+        if (gender == FEMALE)
+            return gOutfits[0].trainerPicFemale;
+        else
+            return gOutfits[0].trainerPicMale;
 }
 
 const void *GetPlayerHeadGfxOrPal(u8 which, bool32 isFP)

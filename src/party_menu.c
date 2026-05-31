@@ -498,7 +498,6 @@ static void CursorCb_CostumePop(u8);
 static void CursorCb_CostumeBelle(u8);
 static void CursorCb_CostumePhd(u8);
 static void CursorCb_CostumeLibre(u8);
-void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer trainer);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
