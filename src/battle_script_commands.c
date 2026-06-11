@@ -1895,30 +1895,9 @@ static void Cmd_resultmessage(void)
         case MOVE_RESULT_FAILED:
             stringId = STRINGID_BUTITFAILED;
             break;
-        case MOVE_RESULT_DOESNT_AFFECT_FOE:
-            if (IsDoubleSpreadMove())
-            {
-                if (ShouldPrintTwoFoesMessage(MOVE_RESULT_DOESNT_AFFECT_FOE))
-                {
-                    TryInitializeTrainerSlideEnemyMonUnaffected(gBattlerTarget);
-                    TryInitializeTrainerSlideEnemyMonUnaffected(BATTLE_PARTNER(gBattlerTarget));
-                    stringId = STRINGID_ITDOESNTAFFECTTWOFOES;
-                }
-                else if (ShouldRelyOnTwoFoesMessage(MOVE_RESULT_DOESNT_AFFECT_FOE))
-                {
-                    stringId = 0; // Was handled or will be handled as a double string
-                }
-                else
-                {
-                    TryInitializeTrainerSlideEnemyMonUnaffected(gBattlerTarget);
-                    stringId = STRINGID_ITDOESNTAFFECT;
-                }
-            }
-            else
-            {
-                TryInitializeTrainerSlideEnemyMonUnaffected(gBattlerTarget);
-                stringId = STRINGID_ITDOESNTAFFECT;
-            }
+        case MOVE_RESULT_DOESNT_AFFECT_FOE: // Might still be used by non damage moves so kept in
+            TryInitializeTrainerSlideEnemyMonUnaffected(gBattlerTarget);
+            stringId = STRINGID_ITDOESNTAFFECT;
             break;
         case MOVE_RESULT_FOE_HUNG_ON:
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
@@ -3644,28 +3623,9 @@ static void Cmd_tryfaintmon(void)
                 }
             }
 
-            gHitMarker |= HITMARKER_FAINTED(battler);
-            gBattleStruct->eventState.faintedAction = 0;
-            gBattlerFainted = battler;
+            SetValuesOnFaint(battler);
             BattleScriptPush(cmd->nextInstr);
             gBattlescriptCurrInstr = BattleScript_FaintBattler;
-            if (IsOnPlayerSide(battler))
-            {
-                gHitMarker |= HITMARKER_PLAYER_FAINTED;
-                if (gBattleResults.playerFaintCounter < 255)
-                    gBattleResults.playerFaintCounter++;
-                AdjustFriendshipOnBattleFaint(battler);
-                gSideTimers[B_SIDE_PLAYER].retaliateTimer = 2;
-            }
-            else
-            {
-                if (gBattleResults.opponentFaintCounter < 255)
-                    gBattleResults.opponentFaintCounter++;
-                gBattleResults.lastOpponentSpecies = GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES);
-                gSideTimers[B_SIDE_OPPONENT].retaliateTimer = 2;
-            }
-
-            TryDeactivateSleepClause(GetBattlerSide(battler), gBattlerPartyIndexes[battler]);
         }
         else
         {
@@ -8667,6 +8627,7 @@ static void Cmd_recoverbasedonsunlight(void)
         s32 recoverAmount = 0;
         u32 weather = GetWeather();
         u32 attackerWeather = GetAttackerWeather(GetBattlerHoldEffect(gBattlerAttacker), GetBattlerAbility(gBattlerAttacker), weather);
+        u32 healingWeather = attackerWeather & ~B_WEATHER_STRONG_WINDS;
         if (GetMoveEffect(gCurrentMove) == EFFECT_SHORE_UP)
         {
             if (attackerWeather & B_WEATHER_SANDSTORM)
@@ -8678,7 +8639,7 @@ static void Cmd_recoverbasedonsunlight(void)
         {
             if (attackerWeather & B_WEATHER_SUN)
                 recoverAmount = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30;
-            else if (!(GetWeather() & B_WEATHER_ANY) || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
+            else if (!(healingWeather & B_WEATHER_ANY) || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
                 recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
             else // not sunny weather
                 recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
@@ -8709,7 +8670,7 @@ static void Cmd_recoverbasedonsunlight(void)
             }
             if (attackerWeather & B_WEATHER_SUN)
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
-            else if (!(attackerWeather & B_WEATHER_ANY) || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
+            else if (!(healingWeather & B_WEATHER_ANY) || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
             else // not sunny weather
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 8;
@@ -9699,7 +9660,7 @@ u8 GetCatchingBattler(void)
 
 static void FinalizeCapture(void)
 {
-    u32 ballId = ItemIdToBallId(gLastThrownBall);
+    enum PokeBall ballId = ItemIdToBallId(gLastThrownBall);
     enum NationalDexOrder natDexNo = SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species);
     if ((GetConfig(B_CRITICAL_CAPTURE_IF_OWNED) >= GEN_9 && GetSetPokedexFlag(natDexNo, FLAG_GET_CAUGHT))
         || IsCriticalCapture())
@@ -9746,7 +9707,7 @@ struct BallData
 static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallData *ball)
 {
     u32 i;
-    u32 ballId = ItemIdToBallId(gLastUsedItem);
+    enum PokeBall ballId = ItemIdToBallId(gLastUsedItem);
     struct BattlePokemon *battleMon = &gBattleMons[wildMonBattler];
 
     ball->multiplier = 100;
@@ -9928,6 +9889,8 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         ball->multiplier = 410;
         ball->divider = 4096;
         break;
+    default:
+        break;
     }
 
 }
@@ -10081,7 +10044,7 @@ static void Cmd_handleballthrow(void)
         if (gTestRunnerEnabled)
             TestRunner_Battle_RecordCatchChance(odds);
 
-        u32 ballId = ItemIdToBallId(gLastUsedItem);
+        enum PokeBall ballId = ItemIdToBallId(gLastUsedItem);
         if (gBattleResults.catchAttempts[ballId] < 255)
             gBattleResults.catchAttempts[ballId]++;
 

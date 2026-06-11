@@ -502,7 +502,7 @@ MtChimney_EventScript_MachineOff::
 	end
 
 MtChimney_EventScript_MachineOn::
-	msgbox MtChimney_Text_MetoriteFittedOnMachine, MSGBOX_DEFAULT
+	msgbox MtChimney_Text_MeteoriteFittedOnMachine, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -798,7 +798,7 @@ MtChimney_Text_ToTheCold:
 	.string "of ICE, and so I can cool down a bit.\p"
 	.string "Hopefully I will see you there!$"
 
-MtChimney_Text_MetoriteFittedOnMachine:
+MtChimney_Text_MeteoriteFittedOnMachine:
 	.string "A METEORITE is fitted on a mysterious\n"
 	.string "machine…\p"
 	.string "The machine seems to be storing\n"
