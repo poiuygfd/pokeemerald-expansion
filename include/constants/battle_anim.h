@@ -426,7 +426,9 @@
 #define ANIM_TAG_TATSUGIRI_STRETCHY         (ANIM_SPRITES_START + 411)
 #define ANIM_TAG_BEAN                       (ANIM_SPRITES_START + 412)
 #define ANIM_TAG_SAFARI_BAIT                (ANIM_SPRITES_START + 413)
-#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_SAFARI_BAIT + 1)
+#define ANIM_TAG_BRIM_STONE                 (ANIM_SPRITES_START + 414)
+#define ANIM_TAG_BRIM_SYMBOL                (ANIM_SPRITES_START + 415)
+#define ANIM_TAG_COUNT                      GET_TRUE_SPRITE_INDEX(ANIM_TAG_BRIM_SYMBOL + 1)
 
 // battlers
 enum AnimBattler
@@ -543,7 +545,8 @@ enum AnimBattler
 #define BG_RAINBOW_OPPONENT 82
 #define BG_SWAMP 83
 #define BG_BEAN_BEAM 84
-#define BG_COUNT 85
+#define BG_THE_VOID 85
+#define BG_COUNT 86
 
 // table ids for general animations (sBattleAnims_General)
 #define B_ANIM_STATS_CHANGE             0
@@ -610,7 +613,8 @@ enum AnimBattler
 #define B_ANIM_FORM_CHANGE_INSTANT      61
 #define B_ANIM_FORM_CHANGE_DISGUISE     62
 #define B_ANIM_HELD_ITEM_BERRY          63
-#define NUM_B_ANIMS_GENERAL             64
+#define B_ANIM_CONSUMED_BY_DARKNESS     64
+#define NUM_B_ANIMS_GENERAL             65
 
 // special animations table (sBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

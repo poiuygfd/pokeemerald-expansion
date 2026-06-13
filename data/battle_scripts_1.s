@@ -345,6 +345,7 @@ BattleScript_MoveSwitchOpenPartyScreenReturnWithNoAnim:
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
 	printstring STRINGID_SWITCHINMON
@@ -802,6 +803,7 @@ BattleScript_MoveEffectCoreEnforcer::
 	printstring STRINGID_PKMNSABILITYSUPPRESSED
 	waitmessage B_WAIT_TIME_LONG
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -913,6 +915,21 @@ BattleScript_EffectPsychoShiftCanWork:
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	goto BattleScript_MoveEnd
+
+BattleScript_MoveEffectSufferStrike::
+	jumpifstatus BS_ATTACKER, STATUS1_NONE, BattleScript_SufferStrikeNoStatus
+	trypsychoshift BattleScript_SufferStrikeNoStatus, BattleScript_SufferStrikeNoStatus
+	copybyte gEffectBattler, gBattlerTarget
+	printfromtable gStatusConditionsStringIds
+	waitmessage B_WAIT_TIME_LONG
+	statusanimation BS_TARGET
+	updatestatusicon BS_TARGET
+	curestatus BS_ATTACKER
+	printfromtable gCureStatusStringIds
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_ATTACKER
+BattleScript_SufferStrikeNoStatus::
+	return
 
 BattleScript_ItDoesntAffectScrTarget::
 	printstring STRINGID_ITDOESNTAFFECTSCR
@@ -1077,6 +1094,7 @@ BattleScript_EffectEntrainment::
 	printstring STRINGID_PKMNACQUIREDABILITY
 	waitmessage B_WAIT_TIME_LONG
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -1112,6 +1130,7 @@ BattleScript_EffectHealingWishGen4:
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -1156,6 +1175,7 @@ BattleScript_EffectOverwriteAbility::
 	printstring STRINGID_PKMNACQUIREDABILITY
 	waitmessage B_WAIT_TIME_LONG
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -1262,6 +1282,7 @@ BattleScript_EffectGastroAcid::
 	printstring STRINGID_PKMNSABILITYSUPPRESSED
 	waitmessage B_WAIT_TIME_LONG
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -1808,6 +1829,7 @@ BattleScript_AlreadyConfused::
 BattleScript_EffectTransform::
 	attackcanceler
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas
@@ -2138,6 +2160,16 @@ BattleScript_CurseStatChange:
 	trymovestatchanges
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectVengeance::
+	attackcanceler
+	vengeancetarget BattleScript_ButItFailed
+	setbyte sB_ANIM_TURN, 0
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNLAIDCURSE2
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectProtect::
 BattleScript_EffectEndure::
 	attackcanceler
@@ -2250,6 +2282,7 @@ BattleScript_EffectBatonPass::
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	printstring STRINGID_SWITCHINMON
 	switchinanim BS_ATTACKER, FALSE, TRUE
@@ -2727,6 +2760,7 @@ BattleScript_FaintBattler::
 	tryconfusionafterskydrop BS_FAINTED
 	cleareffectsonfaint BS_FAINTED
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	waitanimation
@@ -2790,6 +2824,7 @@ BattleScript_FaintedMonTryChoose:
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	printstring STRINGID_SWITCHINMON
 	hidepartystatussummary BS_ATTACKER
@@ -2802,6 +2837,7 @@ BattleScript_FaintedMonSendOutNew:
 	switchindataupdate BS_FAINTED
 	hpthresholds BS_FAINTED
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	printstring STRINGID_SWITCHINMON
 	hidepartystatussummary BS_FAINTED
@@ -2838,6 +2874,7 @@ BattleScript_HandleFaintedMonLoop::
 	switchindataupdate BS_FAINTED
 	hpthresholds BS_FAINTED
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	printstring STRINGID_SWITCHINMON
 	hidepartystatussummary BS_FAINTED
@@ -3078,6 +3115,7 @@ BattleScript_DoSwitchOut::
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	printstring STRINGID_SWITCHINMON
 	hidepartystatussummary BS_ATTACKER
@@ -3342,6 +3380,7 @@ BattleScript_RoarSuccessSwitch::
 	getswitchedmondata BS_TARGET
 	switchindataupdate BS_TARGET
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	flushtextbox
 	switchinanim BS_TARGET, FALSE, FALSE
 	waitstate
@@ -3982,6 +4021,17 @@ BattleScript_PrimalReversion::
 	waitanimation
 	handleformchange BS_SCRIPTING, 1
 	printstring STRINGID_PKMNREVERTEDTOPRIMAL
+	waitmessage B_WAIT_TIME_LONG
+	switchinabilities BS_SCRIPTING
+	return
+
+BattleScript_ConsumedByDarkness::
+	flushtextbox
+	handleformchange BS_SCRIPTING, 0
+	playanimation BS_SCRIPTING, B_ANIM_CONSUMED_BY_DARKNESS
+	waitanimation
+	handleformchange BS_SCRIPTING, 1
+	printstring STRINGID_PKMNCONSUMEDBYDARKNESS
 	waitmessage B_WAIT_TIME_LONG
 	switchinabilities BS_SCRIPTING
 	return
@@ -4858,6 +4908,15 @@ BattleScript_PsychicSurgeActivates::
 	call BattleScript_ActivateTerrainEffects
 	return
 
+BattleScript_TheVoidActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_THEVOIDCREEPSIN
+	waitmessage B_WAIT_TIME_LONG
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
+	call BattleScript_ActivateTerrainEffects
+	return
+
 BattleScript_WeathermanActivatesSun::
 	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
@@ -5079,6 +5138,7 @@ BattleScript_MummyActivates::
 	printstring STRINGID_ATTACKERACQUIREDABILITY
 	waitmessage B_WAIT_TIME_LONG
 	trytoclearprimalweather
+	trytoclearvoidterrain
 	call BattleScript_TryRevertWeatherform
 	flushtextbox
 	tryendneutralizinggas

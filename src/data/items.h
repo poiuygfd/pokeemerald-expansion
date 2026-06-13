@@ -16260,6 +16260,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeRadar,
         .iconPalette = gItemIconPalette_PokeRadar,
     },
+
+    [ITEM_ABYSS_STONE] =
+    {
+        .name = ITEM_NAME("Abyss Stone"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
+        .description = COMPOUND_STRING(
+            "A dark stone of\n"
+            "unknown origin.\n"
+            "You feel uneasy…"),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_DuskStone,
+        .iconPalette = gItemIconPalette_DuskStone,
+    },
 };
 
 #undef ITEM_NAME

@@ -290,6 +290,14 @@ static const struct FormChange sPinsirFormChangeTable[] =
 #endif //P_FAMILY_PINSIR
 
 #if P_FAMILY_MAGIKARP
+static const struct FormChange sMagikarpFormChangeTable[] =
+{
+    {FORM_CHANGE_BATTLE_PRIMAL_REVERSION,       SPECIES_MAGIKARP_DARK, ITEM_ABYSS_STONE},
+    {FORM_CHANGE_FAINT,                         SPECIES_MAGIKARP},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_MAGIKARP},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 static const struct FormChange sGyaradosFormChangeTable[] =
 {
 #if P_MEGA_EVOLUTIONS

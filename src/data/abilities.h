@@ -2561,5 +2561,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
+    },
+
+    [ABILITY_ABYSSAL_FLOOD] =
+    {
+        .name = _("Abyssal Flood"),
+        .description = COMPOUND_STRING("The void comes for us all."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
     }
 };

@@ -1935,6 +1935,8 @@ u32 AI_GetSwitchinFieldStatus(enum BattlerId battler)
         return SwitchinChangeBattleTerrain(STATUS_FIELD_MISTY_TERRAIN, startingFieldStatus);
     case ABILITY_PSYCHIC_SURGE:
         return SwitchinChangeBattleTerrain(STATUS_FIELD_PSYCHIC_TERRAIN, startingFieldStatus);
+    case ABILITY_ABYSSAL_FLOOD:
+        return SwitchinChangeBattleTerrain(STATUS_FIELD_THE_VOID, startingFieldStatus);
     default:
         return startingFieldStatus;
     }

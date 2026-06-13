@@ -527,6 +527,12 @@ static const u16 sTaurosFormSpeciesIdTable[] = {
 #endif //P_FAMILY_TAUROS
 
 #if P_FAMILY_MAGIKARP
+static const u16 sMagikarpFormSpeciesIdTable[] = {
+    SPECIES_MAGIKARP,
+    SPECIES_MAGIKARP_DARK,
+    FORM_SPECIES_END,
+};
+
 static const u16 sGyaradosFormSpeciesIdTable[] = {
     SPECIES_GYARADOS,
 #if P_MEGA_EVOLUTIONS

@@ -380,6 +380,7 @@ extern const u8 BattleScript_MysteriousAirCurrentBlowsOn[];
 extern const u8 BattleScript_AttackWeakenedByStrongWinds[];
 extern const u8 BattleScript_BlockedByPrimalWeather[];
 extern const u8 BattleScript_PrimalReversion[];
+extern const u8 BattleScript_ConsumedByDarkness[];
 extern const u8 BattleScript_SelectingNotAllowedMoveGorillaTactics[];
 extern const u8 BattleScript_SelectingNotAllowedMoveGorillaTacticsInPalace[];
 extern const u8 BattleScript_WanderingSpiritActivates[];
@@ -514,6 +515,7 @@ extern const u8 BattleScript_IncreaseStatChangeMessage[];
 extern const u8 BattleScript_DecreaseStatChangeMessage[];
 extern const u8 BattleScript_DecreaseStatChangeMessageMinStat[];
 extern const u8 BattleScript_StatDidntChangeMessagePause[];
+extern const u8 BattleScript_TheVoidActivates[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];
@@ -596,6 +598,7 @@ extern const u8 BattleScript_MoveEffectAromatherapy[];
 extern const u8 BattleScript_EffectMeanLook[];
 extern const u8 BattleScript_EffectNightmare[];
 extern const u8 BattleScript_EffectCurse[];
+extern const u8 BattleScript_EffectVengeance[];
 extern const u8 BattleScript_EffectHealingWish[];
 extern const u8 BattleScript_EffectProtect[];
 extern const u8 BattleScript_EffectSpikes[];
@@ -685,6 +688,7 @@ extern const u8 BattleScript_EffectMemento[];
 
 extern const u8 BattleScript_EffectHitEnemyHealAlly[];
 extern const u8 BattleScript_EffectPsychoShift[];
+extern const u8 BattleScript_MoveEffectSufferStrike[];
 extern const u8 BattleScript_EffectPowerTrick[];
 extern const u8 BattleScript_EffectAfterYou[];
 extern const u8 BattleScript_EffectBestow[];

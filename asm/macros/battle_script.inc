@@ -859,6 +859,11 @@
 	.4byte \failInstr
 	.endm
 
+	.macro vengeancetarget failInstr:req
+	.byte B_SCR_OP_VENGEANCETARGET
+	.4byte \failInstr
+	.endm
+
 	.macro trysetspikes failInstr:req
 	.byte B_SCR_OP_TRYSETSPIKES
 	.4byte \failInstr
@@ -1997,6 +2002,10 @@
 
 	.macro trytoclearprimalweather
 	callnative BS_TryToClearPrimalWeather
+	.endm
+
+	.macro trytoclearvoidterrain
+	callnative BS_TryToClearVoidTerrain
 	.endm
 
 	.macro tryendneutralizinggas

@@ -1242,6 +1242,75 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = sCharizardFormChangeTable,
     },
 
+    [SPECIES_MAGIKARP_DARK] =
+    {
+        .baseHP        = 111,
+        .baseAttack    = 111,
+        .baseDefense   = 111,
+        .baseSpeed     = 111,
+        .baseSpAttack  = 111,
+        .baseSpDefense = 111,
+        .types = MON_TYPES(TYPE_DARK, TYPE_WATER),
+        .catchRate = 255,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 40 : 20,
+        .evYield_Speed = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 5,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2, EGG_GROUP_DRAGON),
+        .abilities = { ABILITY_ABYSSAL_FLOOD, ABILITY_NONE, ABILITY_ABYSSAL_FLOOD },
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Magikarp"),
+        .cryId = CRY_MAGIKARP,
+        .natDexNum = NATIONAL_DEX_MAGIKARP,
+        .categoryName = _("Abyss"),
+        .height = 12,
+        .weight = 220,
+        .description = COMPOUND_STRING(
+            "Dark, abyssal energies from a stone of\n"
+            "unknown origins caused a stark change\n"
+            "in Magikarp's genetic makeup, granting\n"
+            "immense power and thirst for annihilation."),
+        .pokemonScale = 264,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_MagikarpDark,
+        .frontPicSize = MON_COORDS_SIZE(48, 56),
+        .frontPicYOffset = 3,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 8),
+            ANIMCMD_FRAME(1, 8),
+            ANIMCMD_FRAME(0, 8),
+            ANIMCMD_FRAME(1, 8),
+            ANIMCMD_FRAME(0, 8),
+            ANIMCMD_FRAME(1, 8),
+            ANIMCMD_FRAME(0, 8),
+            ANIMCMD_FRAME(1, 8),
+            ANIMCMD_FRAME(0, 8),
+        ),
+        .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES,
+        .backPic = gMonBackPic_MagikarpDark,
+        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = 6,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_MagikarpDark,
+        .shinyPalette = gMonShinyPalette_MagikarpDark,
+        .iconSprite = gMonIcon_MagikarpDark,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(1, 10, SHADOW_SIZE_L)
+        FOOTPRINT(Magikarp)
+        .teachingType = TM_ILLITERATE,
+        .levelUpLearnset = sMagikarpLevelUpLearnset,
+        .teachableLearnset = sMagikarpTeachableLearnset,
+        .eggMoveLearnset = sMagikarpEggMoveLearnset,
+        .formSpeciesIdTable = sMagikarpFormSpeciesIdTable,
+        .formChangeTable = sMagikarpFormChangeTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_GYARADOS}),
+    },
+
     /*
     [SPECIES_NONE] =
     {

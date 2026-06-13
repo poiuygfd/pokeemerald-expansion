@@ -90,7 +90,7 @@ struct ProtectStruct
     u16 helpingHand:3;
     u16 reactiveFire:1;
     u16 revengeDoubled:4;
-    u16 padding:8;
+    u16 padding2:8;
     // End of 16-bit bitfield
     u16 physicalDmg;
     u16 specialDmg;
@@ -124,7 +124,8 @@ struct SpecialStatus
     u8 damagedByAttack:1;
     u8 dancerUsedMove:1;
     u8 criticalHit:1;
-    u8 padding:3;
+    u8 antivirusBlocked:1;
+    u8 padding:2;
     // End of byte
     u8 gemParam:7;
     u8 gemBoost:1;
@@ -134,9 +135,6 @@ struct SpecialStatus
     u8 distortedTypeMatchups:1;
     u8 teraShellAbilityDone:1;
     u8 backUpTarget:3;
-    // End of byte
-    u8 antivirusBlocked:1;
-    u8 padding:7;
     // End of byte
     enum QueuedSwitch queuedSwitch;
     struct StatStages statStageQueue[NUM_BATTLE_STATS];

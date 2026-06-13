@@ -268,6 +268,7 @@ static const u8* const sBattleAnims_General[NUM_B_ANIMS_GENERAL] =
     [B_ANIM_ROCK_THROW]             = gBattleAnimGeneral_SafariRockThrow,
     [B_ANIM_SAFARI_REACTION]        = gBattleAnimGeneral_SafariReaction,
     [B_ANIM_HELD_ITEM_BERRY]        = gBattleAnimGeneral_HeldItemBerry,
+    [B_ANIM_CONSUMED_BY_DARKNESS]   = gBattleAnimGeneral_ConsumedByDarkness,
 };
 
 static const u8* const sBattleAnims_Special[NUM_B_ANIMS_SPECIAL] =
@@ -396,6 +397,7 @@ void LaunchBattleAnimation(u32 animType, u32 animId)
         case B_ANIM_SEA_OF_FIRE:
         case B_ANIM_SWAMP:
         case B_ANIM_TERA_CHARGE:
+        case B_ANIM_CONSUMED_BY_DARKNESS:
             sAnimHideHpBoxes = TRUE;
             break;
         default:
@@ -454,6 +456,9 @@ void LaunchBattleAnimation(u32 animType, u32 animId)
                     break;
                 case STATUS_FIELD_PSYCHIC_TERRAIN:
                     sBattleAnimScriptPtr = gBattleAnimMove_Confusion;
+                    break;
+                case STATUS_FIELD_THE_VOID:
+                    sBattleAnimScriptPtr = gBattleAnimMove_FeintAttack;
                     break;
                 }
             }

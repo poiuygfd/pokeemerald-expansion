@@ -501,6 +501,7 @@ static void Cmd_settailwind(void);
 static void Cmd_tryspiteppreduce(void);
 static void Cmd_healpartystatus(void);
 static void Cmd_cursetarget(void);
+static void Cmd_vengeancetarget(void);
 static void Cmd_trysetspikes(void);
 static void Cmd_setvolatile(void);
 static void Cmd_trysetperishsong(void);
@@ -721,6 +722,7 @@ void (*const gBattleScriptingCommandsTable[])(void) =
     [B_SCR_OP_TRYSPITEPPREDUCE]                      = Cmd_tryspiteppreduce,
     [B_SCR_OP_HEALPARTYSTATUS]                       = Cmd_healpartystatus,
     [B_SCR_OP_CURSETARGET]                           = Cmd_cursetarget,
+    [B_SCR_OP_VENGEANCETARGET]                       = Cmd_vengeancetarget,
     [B_SCR_OP_TRYSETSPIKES]                          = Cmd_trysetspikes,
     [B_SCR_OP_SETVOLATILE]                           = Cmd_setvolatile,
     [B_SCR_OP_TRYSETPERISHSONG]                      = Cmd_trysetperishsong,
@@ -2666,6 +2668,17 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = BattleScript_MoveEffectBugBite;
         }
         break;
+    case MOVE_EFFECT_SUFFER_STRIKE:
+        if (IsSafeguardProtected(battlerAtk, effectBattler, abilities[battlerAtk]) && !primary)
+        {
+            gBattlescriptCurrInstr = battleScript;
+        }
+        else
+        {
+            BattleScriptPush(battleScript);
+            gBattlescriptCurrInstr = BattleScript_MoveEffectSufferStrike;
+        }
+        break;
     case MOVE_EFFECT_TRAP_BOTH:
         if (!(gBattleMons[effectBattler].volatiles.escapePrevention || gBattleMons[battlerAtk].volatiles.escapePrevention))
         {
@@ -2782,6 +2795,10 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
                     break;
                 case STATUS_FIELD_PSYCHIC_TERRAIN:
                     SetStatChange(effectBattler, STAT_SPEED, -1);
+                    statDown = TRUE;
+                    break;
+                case STATUS_FIELD_THE_VOID:
+                    SetStatChange(effectBattler, STAT_DEF, -1);
                     statDown = TRUE;
                     break;
                 default:
@@ -4846,7 +4863,8 @@ static void PlayAnimation(enum BattlerId battler, u8 animId, const u16 *argPtr, 
      || animId == B_ANIM_ULTRA_BURST
      || animId == B_ANIM_TERA_CHARGE
      || animId == B_ANIM_TERA_ACTIVATE
-     || animId == B_ANIM_FORM_CHANGE_INSTANT)
+     || animId == B_ANIM_FORM_CHANGE_INSTANT
+     || animId == B_ANIM_CONSUMED_BY_DARKNESS)
     {
         BtlController_EmitBattleAnimation(battler, B_COMM_TO_CONTROLLER, animId, *argPtr);
         MarkBattlerForControllerExec(battler);
@@ -6706,6 +6724,9 @@ static void RemoveAllTerrains(void)
     case STATUS_FIELD_PSYCHIC_TERRAIN:
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_PSYCHIC;
         break;
+    case STATUS_FIELD_THE_VOID:
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_VOID;
+        break;
     default:
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_COUNT;  // failsafe
         break;
@@ -8373,6 +8394,21 @@ static void Cmd_cursetarget(void)
     }
 }
 
+static void Cmd_vengeancetarget(void)
+{
+    CMD_ARGS(const u8 *failInstr);
+
+    if (gBattleMons[gBattlerTarget].volatiles.cursed)
+    {
+        gBattlescriptCurrInstr = cmd->failInstr;
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].volatiles.cursed = TRUE;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+}
+
 static void Cmd_trysetspikes(void)
 {
     CMD_ARGS(const u8 *failInstr);
@@ -9625,6 +9661,9 @@ static void Cmd_settypetoenvironment(void)
         break;
     case STATUS_FIELD_PSYCHIC_TERRAIN:
         environmentType = TYPE_PSYCHIC;
+        break;
+    case STATUS_FIELD_THE_VOID:
+        environmentType = TYPE_DARK;
         break;
     default:
         environmentType = gBattleEnvironmentInfo[gBattleEnvironment].camouflageType;
@@ -13581,6 +13620,30 @@ void BS_TryToClearPrimalWeather(void)
     {
         gBattleWeather &= ~B_WEATHER_STRONG_WINDS;
         PrepareStringBattle(STRINGID_STRONGWINDSDISSIPATED, gBattlerAttacker);
+        gBattleCommunication[MSG_DISPLAY] = 1;
+    }
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_TryToClearVoidTerrain(void)
+{
+    NATIVE_ARGS();
+    bool32 shouldNotClear = FALSE;
+
+    for (enum BattlerId i = 0; i < gBattlersCount; i++)
+    {
+        enum Ability ability = GetBattlerAbility(i);
+        if ((ability == ABILITY_ABYSSAL_FLOOD && gFieldStatuses & STATUS_FIELD_THE_VOID)
+            && IsBattlerAlive(i))
+            shouldNotClear = TRUE;
+    }
+    if (gFieldStatuses & STATUS_FIELD_THE_VOID && !shouldNotClear)
+    {
+        gFieldStatuses &= ~STATUS_FIELD_THE_VOID;
+        TryToRevertMimicryAndFlags();
+        //BattleScriptPush(cmd->nextInstr);
+        //gBattlescriptCurrInstr = BattleScript_TerrainEnds;
+        PrepareStringBattle(STRINGID_THEVOIDENDS, gBattlerAttacker);
         gBattleCommunication[MSG_DISPLAY] = 1;
     }
     gBattlescriptCurrInstr = cmd->nextInstr;

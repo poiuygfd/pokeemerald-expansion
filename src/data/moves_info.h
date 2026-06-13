@@ -22080,6 +22080,159 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_LeaderSwap,
     },
 
+    [MOVE_VENGEANCE] =
+    {
+        .name = COMPOUND_STRING("Vengeance"),
+        .description = COMPOUND_STRING(
+            "Curses target through the\n"
+            "rage of failed splashing."),
+        .effect = EFFECT_VENGEANCE,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 90,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .metronomeBanned = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_LAST,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Grudge,
+    },
+
+    [MOVE_ABYSSAL_RUSH] =
+    {
+        .name = COMPOUND_STRING("Abyssal Rush"),
+        .description = COMPOUND_STRING(
+            "A void imbued tackle that\n"
+            "uses highest attacking stat."),
+        .effect = EFFECT_PHOTON_GEYSER,
+        .power = 95,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_FeintAttack,
+    },
+
+    [MOVE_DEPTH_CRUSHER] =
+    {
+        .name = COMPOUND_STRING("Depth Crusher"),
+        .description = COMPOUND_STRING(
+            "Inflicts more damage when\n"
+            "the user's HP is below half."),
+        .effect = EFFECT_DEPTH_CRUSHER,
+        .power = 70,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_LATER,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Waterfall,
+    },
+
+    [MOVE_DARKNESS_DIVE] =
+    {
+        .name = COMPOUND_STRING("Darkness Dive"),
+        .description = COMPOUND_STRING(
+            "Dives up then down, deals\n"
+            "more damage on switched foes."),
+        .effect = EFFECT_SEMI_INVULNERABLE,
+        .power = 120,
+        .type = TYPE_DARK,
+        .accuracy = 90,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .gravityBanned = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .assistBanned = B_UPDATED_MOVE_FLAGS >= GEN_6,
+        .argument.twoTurnAttack = { .stringId = STRINGID_PKMNSPRANGUP, .status = STATE_ON_AIR },
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Bounce,
+    },
+
+    [MOVE_MARINA_VORTEX] =
+    {
+        .name = COMPOUND_STRING("Marina Vortex"),
+        .description = COMPOUND_STRING(
+            "A vicious vortex that also\n"
+            "prevents switching out."),
+        .effect = EFFECT_HIT,
+        .power = 130,
+        .type = TYPE_WATER,
+        .accuracy = 90,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .metronomeBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PREVENT_ESCAPE,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Whirlpool,
+    },
+
+    [MOVE_SUFFER_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Suffer Strike"),
+        .description = COMPOUND_STRING(
+            "Boosts power when statused\n"
+            "then passes status to foe."),
+        .effect = EFFECT_FACADE,
+        .power = 80,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .metronomeBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SUFFER_STRIKE,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_LAST,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Facade,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

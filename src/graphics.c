@@ -43,6 +43,9 @@ const u16 gBattleAnimSpritePal_AlphaSymbol[] = INCGFX_U16("graphics/battle_anims
 const u32 gBattleAnimSpriteGfx_OmegaSymbol[] = INCGFX_U32("graphics/battle_anims/sprites/omega_symbol.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_OmegaSymbol[] = INCGFX_U16("graphics/battle_anims/sprites/omega_symbol.png", ".gbapal");
 
+const u32 gBattleAnimSpriteGfx_BrimSymbol[] = INCGFX_U32("graphics/battle_anims/sprites/brim_symbol.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_BrimSymbol[] = INCGFX_U16("graphics/battle_anims/sprites/brim_symbol.png", ".gbapal");
+
 const u32 gBattleAnimSpriteGfx_TeraSymbol[] = INCGFX_U32("graphics/battle_anims/sprites/tera_symbol.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_TeraSymbol[] = INCGFX_U16("graphics/battle_anims/sprites/tera_symbol.png", ".gbapal");
 
@@ -107,6 +110,9 @@ const u16 gBattleAnimSpritePal_BlueFlare[] = INCGFX_U16("graphics/battle_anims/s
 
 const u32 gBattleAnimSpriteGfx_Branch[] = INCGFX_U32("graphics/battle_anims/sprites/branch.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_Branch[] = INCGFX_U16("graphics/battle_anims/sprites/branch.png", ".gbapal");
+
+const u32 gBattleAnimSpriteGfx_BrimStone[] = INCGFX_U32("graphics/battle_anims/sprites/brim_stone.png", ".4bpp.smol");
+const u16 gBattleAnimSpritePal_BrimStone[] = INCGFX_U16("graphics/battle_anims/sprites/brim_stone.png", ".gbapal");
 
 const u32 gBattleAnimSpriteGfx_Brine[] = INCGFX_U32("graphics/battle_anims/sprites/brine.png", ".4bpp.smol");
 const u16 gBattleAnimSpritePal_Brine[] = INCGFX_U16("graphics/battle_anims/sprites/brine.png", ".gbapal");
@@ -1566,6 +1572,10 @@ const u32 gBattleAnimBgImage_MistyTerrain[] = INCGFX_U32("graphics/battle_anims/
 const u16 gBattleAnimBgPalette_MistyTerrain[] = INCGFX_U16("graphics/battle_anims/backgrounds/misty_terrain.pal", ".gbapal");
 const u32 gBattleAnimBgTilemap_MistyTerrain[] = INCGFX_U32("graphics/battle_anims/backgrounds/misty_terrain.bin", ".smolTM");
 #endif
+
+const u32 gBattleAnimBgImage_TheVoid[] = INCGFX_U32("graphics/battle_anims/backgrounds/the_void.png", ".4bpp.smol");
+const u16 gBattleAnimBgPalette_TheVoid[] = INCGFX_U16("graphics/battle_anims/backgrounds/the_void.pal", ".gbapal");
+const u32 gBattleAnimBgTilemap_TheVoid[] = INCGFX_U32("graphics/battle_anims/backgrounds/the_void.bin", ".smolTM");
 
 const u32 gBattleAnimBgImage_Nightmare[] = INCGFX_U32("graphics/battle_anims/backgrounds/nightmare.png", ".4bpp.smol");
 const u16 gBattleAnimBgPalette_Nightmare[] = INCGFX_U16("graphics/battle_anims/backgrounds/nightmare.pal", ".gbapal");

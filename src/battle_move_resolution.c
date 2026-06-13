@@ -5100,6 +5100,8 @@ enum Move GetNaturePowerMove(void)
         move = MOVE_ENERGY_BALL;
     else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
         move = MOVE_PSYCHIC;
+    else if (gFieldStatuses & STATUS_FIELD_THE_VOID)
+        move = MOVE_DARK_PULSE;
     else if (gBattleEnvironmentInfo[gBattleEnvironment].naturePower == MOVE_NONE)
         move = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT;
 

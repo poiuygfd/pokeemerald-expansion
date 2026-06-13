@@ -1079,6 +1079,9 @@ enum __attribute__((packed)) Item
     ITEM_HYDREIGONITE = 894,
     ITEM_CHARIZARDITE_Z = 895,
 
+    //it comes for uys all
+    ITEM_ABYSS_STONE = 896,
+
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

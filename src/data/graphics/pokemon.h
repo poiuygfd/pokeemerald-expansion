@@ -27619,6 +27619,12 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_CharizardOmegaZ[] = INCGFX_U16("graphics/pokemon/charizard/omega_z/shiny.pal", ".gbapal");
     const u8 gMonIcon_CharizardOmegaZ[] = INCGFX_U8("graphics/pokemon/charizard/omega_z/icon.png", ".4bpp");
 
+    const u32 gMonFrontPic_MagikarpDark[] = INCGFX_U32("graphics/pokemon/magikarp/dark/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_MagikarpDark[] = INCGFX_U16("graphics/pokemon/magikarp/dark/normal.pal", ".gbapal");
+    const u32 gMonBackPic_MagikarpDark[] = INCGFX_U32("graphics/pokemon/magikarp/dark/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_MagikarpDark[] = INCGFX_U16("graphics/pokemon/magikarp/dark/shiny.pal", ".gbapal");
+    const u8 gMonIcon_MagikarpDark[] = INCGFX_U8("graphics/pokemon/magikarp/dark/icon.png", ".4bpp");
+
     const u32 gMonFrontPic_Egg[] = INCGFX_U32("graphics/pokemon/egg/anim_front.png", ".4bpp.smol");
     const u16 gMonPalette_Egg[] = INCGFX_U16("graphics/pokemon/egg/normal.pal", ".gbapal");
     const u8 gMonIcon_Egg[] = INCGFX_U8("graphics/pokemon/egg/icon.png", ".4bpp");

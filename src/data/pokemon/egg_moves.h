@@ -1336,6 +1336,14 @@ static const u16 sTaurosPaldeaAquaEggMoveLearnset[] = {
 #endif //P_PALDEAN_FORMS
 #endif //P_FAMILY_TAUROS
 
+#if P_FAMILY_MAGIKARP
+static const u16 sMagikarpEggMoveLearnset[] = {
+    MOVE_BOUNCE,
+    MOVE_HYDRO_PUMP,
+    MOVE_UNAVAILABLE,
+};
+#endif //P_FAMILY_MAGIKARP
+
 #if P_FAMILY_LAPRAS
 static const u16 sLaprasEggMoveLearnset[] = {
     MOVE_FORESIGHT,

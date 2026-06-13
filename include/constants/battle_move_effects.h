@@ -289,6 +289,8 @@ enum  BattleMoveEffects
     EFFECT_LEADER_SWAP,
     EFFECT_SPECIES_POWER_OVERRIDE, // Uses argument field to for the species, power and (number of hits, used only for multi hit moves)
     EFFECT_SCALE_SHOT,
+    EFFECT_VENGEANCE,
+    EFFECT_DEPTH_CRUSHER,
     NUM_BATTLE_MOVE_EFFECTS,
 };
 

@@ -1122,6 +1122,16 @@ const struct SpriteTemplate gOmegaStoneSpriteTemplate =
     .callback = AnimSpriteOnMonPos,
 };
 
+
+const struct SpriteTemplate gBrimStoneSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BRIM_STONE,
+    .paletteTag = ANIM_TAG_BRIM_STONE,
+    .oam = &gOamData_AffineDouble_ObjBlend_64x64,
+    .affineAnims = gAffineAnims_LusterPurgeCircle,
+    .callback = AnimSpriteOnMonPos,
+};
+
 const struct SpriteTemplate gAlphaSymbolSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ALPHA_SYMBOL,
@@ -1135,6 +1145,15 @@ const struct SpriteTemplate gOmegaSymbolSpriteTemplate =
 {
     .tileTag = ANIM_TAG_OMEGA_SYMBOL,
     .paletteTag = ANIM_TAG_OMEGA_SYMBOL,
+    .oam = &gOamData_AffineDouble_ObjBlend_32x32,
+    .affineAnims = gSpriteAffineAnimTable_PrimalSymbol,
+    .callback = AnimSpriteOnMonPos,
+};
+
+const struct SpriteTemplate gBrimSymbolSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BRIM_SYMBOL,
+    .paletteTag = ANIM_TAG_BRIM_SYMBOL,
     .oam = &gOamData_AffineDouble_ObjBlend_32x32,
     .affineAnims = gSpriteAffineAnimTable_PrimalSymbol,
     .callback = AnimSpriteOnMonPos,

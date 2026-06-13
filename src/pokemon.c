@@ -6543,6 +6543,7 @@ bool32 TryFormChange(struct Pokemon *mon, enum FormChanges method, enum BattleTr
         SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
         TrySetDayLimitToFormChange(mon);
         CalculateMonStats(mon);
+        TryRevertMagikarpMoves(mon, method);
         return TRUE;
     }
 
@@ -6621,6 +6622,101 @@ void TryToSetBattleFormChangeMoves(struct Pokemon *mon, enum FormChanges method)
             break;
         }
     }
+}
+
+void TrySetDarkMagikarpMoves(struct Pokemon *mon, struct BattlePokemon *monBattle, enum FormChanges method)
+{
+    int i;
+    enum Species species = GetMonData(mon, MON_DATA_SPECIES);
+
+    if (species != SPECIES_MAGIKARP_DARK
+        || (method == FORM_CHANGE_FAINT && method == FORM_CHANGE_END_BATTLE))
+        return;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        u16 currMove = GetMonData(mon, MON_DATA_MOVE1 + i);
+        u16 newMove = MOVE_NONE;
+        
+        if (species == SPECIES_MAGIKARP_DARK)
+        {
+            switch (currMove)
+            {
+                case MOVE_SPLASH:
+                    newMove = MOVE_VENGEANCE;
+                    break;
+                case MOVE_TACKLE:
+                    newMove = MOVE_ABYSSAL_RUSH;
+                    break;
+                case MOVE_FLAIL:
+                    newMove = MOVE_DEPTH_CRUSHER;
+                    break;
+                case MOVE_BOUNCE:
+                    newMove = MOVE_DARKNESS_DIVE;
+                    break;
+                case MOVE_HYDRO_PUMP:
+                    newMove = MOVE_MARINA_VORTEX;
+                    break;
+                case MOVE_FACADE:
+                    newMove = MOVE_SUFFER_STRIKE;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (newMove != MOVE_NONE)
+        {
+            SetMonMoveSlot_KeepPP(mon, newMove, i);
+            SetBattleMonMoveSlot(monBattle, newMove, i);
+        }
+    }
+}
+
+void TryRevertMagikarpMoves(struct Pokemon *mon, enum FormChanges method)
+{
+    int i;
+    enum Species species = GetMonData(mon, MON_DATA_SPECIES);
+
+    if (species != SPECIES_MAGIKARP
+        || (method != FORM_CHANGE_FAINT && method != FORM_CHANGE_END_BATTLE))
+        return;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        u16 currMove = GetMonData(mon, MON_DATA_MOVE1 + i);
+        u16 newMove = MOVE_NONE;
+
+        if (species == SPECIES_MAGIKARP)
+        {
+            switch (currMove)
+            {
+                case MOVE_VENGEANCE:
+                    newMove = MOVE_SPLASH;
+                    break;
+                case MOVE_ABYSSAL_RUSH:
+                    newMove = MOVE_TACKLE;
+                    break;
+                case MOVE_DEPTH_CRUSHER:
+                    newMove = MOVE_FLAIL;
+                    break;
+                case MOVE_DARKNESS_DIVE:
+                    newMove = MOVE_BOUNCE;
+                    break;
+                case MOVE_MARINA_VORTEX:
+                    newMove = MOVE_HYDRO_PUMP;
+                    break;
+                case MOVE_SUFFER_STRIKE:
+                    newMove = MOVE_FACADE;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (newMove != MOVE_NONE)
+            SetMonMoveSlot_KeepPP(mon, newMove, i);
+    }   
 }
 
 u32 GetMonFriendshipScore(struct Pokemon *pokemon)

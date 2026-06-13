@@ -903,16 +903,21 @@ enum __attribute__((packed)) Move
     MOVE_PSYCHIC_NOISE = 845,
     MOVE_UPPER_HAND = 846,
     MOVE_MALIGNANT_CHAIN = 847,
-    // New Moves
-    MOVE_MAGICAL_CHEER = 848,
-    MOVE_BUBBLE_BLAST = 849,
-    MOVE_BEAN_BEAM = 850,
-    MOVE_LEADER_SWAP = 851,
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!
-
-    MOVES_COUNT = MOVES_COUNT_GEN9,
+    MOVE_MAGICAL_CHEER = MOVES_COUNT_GEN9,
+    MOVE_BUBBLE_BLAST = 849,
+    MOVE_BEAN_BEAM = 850,
+    MOVE_LEADER_SWAP = 851,
+    // Dark Magikarp Moves
+    MOVE_VENGEANCE = 852,
+    MOVE_ABYSSAL_RUSH = 853,
+    MOVE_DEPTH_CRUSHER = 854,
+    MOVE_DARKNESS_DIVE = 855,
+    MOVE_MARINA_VORTEX = 856,
+    MOVE_SUFFER_STRIKE = 857,
+    MOVES_COUNT,
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

@@ -930,6 +930,8 @@ bool32 SpeciesHasGenderDifferences(enum Species species);
 bool32 TryFormChange(struct Pokemon *mon, enum FormChanges method, enum BattleTrainer trainer);
 bool32 TryBoxMonFormChange(struct BoxPokemon *boxMon, enum FormChanges method);
 void TryToSetBattleFormChangeMoves(struct Pokemon *mon, enum FormChanges method);
+void TrySetDarkMagikarpMoves(struct Pokemon *mon, struct BattlePokemon *monBattle, enum FormChanges method);
+void TryRevertMagikarpMoves(struct Pokemon *mon, enum FormChanges method);
 u32 GetMonFriendshipScore(struct Pokemon *pokemon);
 u32 GetMonAffectionHearts(struct Pokemon *pokemon);
 void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality);

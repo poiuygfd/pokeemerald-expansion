@@ -2020,6 +2020,9 @@ bool32 TryChangeBattleTerrain(enum BattlerId battler, u32 statusFlag)
     if (gBattleStruct->isSkyBattle)
         return FALSE;
 
+    else if (gFieldStatuses & STATUS_FIELD_THE_VOID)
+        return FALSE;
+    
     if (!(gFieldStatuses & statusFlag))
     {
         gFieldStatuses &= ~STATUS_FIELD_TERRAIN_ANY;
@@ -2029,7 +2032,9 @@ bool32 TryChangeBattleTerrain(enum BattlerId battler, u32 statusFlag)
             gBattleMons[i].volatiles.terrainAbilityDone = FALSE;
             ResetParadoxTerrainStat(i);
         }
-        if (GetBattlerHoldEffect(battler) == HOLD_EFFECT_TERRAIN_EXTENDER)
+        if (gFieldStatuses & STATUS_FIELD_THE_VOID)
+            gFieldTimers.terrainTimer = 0;
+        else if (GetBattlerHoldEffect(battler) == HOLD_EFFECT_TERRAIN_EXTENDER)
             gFieldTimers.terrainTimer = 8;
         else
             gFieldTimers.terrainTimer = 5;
@@ -2142,6 +2147,8 @@ bool32 ChangeTypeBasedOnTerrain(enum BattlerId battler)
         battlerType = TYPE_FAIRY;
     else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
         battlerType = TYPE_PSYCHIC;
+    else if (gFieldStatuses & STATUS_FIELD_THE_VOID)
+        battlerType = TYPE_DARK;
     else // failsafe
         return FALSE;
 
@@ -3304,6 +3311,15 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_PSYCHIC_TERRAIN))
             {
                 BattleScriptCall(BattleScript_PsychicSurgeActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_ABYSSAL_FLOOD:
+            if (!shouldAbilityTrigger)
+                break;
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_THE_VOID))
+            {
+                BattleScriptCall(BattleScript_TheVoidActivates);
                 effect++;
             }
             break;
@@ -4992,9 +5008,18 @@ bool32 TryPrimalReversion(enum BattlerId battler)
 {
     if (TryBattleFormChange(battler, FORM_CHANGE_BATTLE_PRIMAL_REVERSION, GetBattlerAbility(battler)))
     {
-        gBattleScripting.battler = battler;
-        BattleScriptCall(BattleScript_PrimalReversion);
-        return TRUE;
+        if (gBattleMons[battler].item == ITEM_ABYSS_STONE)
+        {
+            gBattleScripting.battler = battler;
+            BattleScriptCall(BattleScript_ConsumedByDarkness);
+            return TRUE;
+        }
+        else
+        {
+            gBattleScripting.battler = battler;
+            BattleScriptCall(BattleScript_PrimalReversion);
+            return TRUE;
+        }
     }
     return FALSE;
 }
@@ -5186,6 +5211,11 @@ bool32 IsGrassyTerrainAffected(enum BattlerId battler, enum Ability ability, enu
 bool32 IsElectricTerrainAffected(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect, u32 fieldStatuses)
 {
     return IsBattlerTerrainAffected(battler, ability, holdEffect, fieldStatuses, STATUS_FIELD_ELECTRIC_TERRAIN);
+}
+
+bool32 IsTheVoidAffected(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect, u32 fieldStatuses)
+{
+    return IsBattlerTerrainAffected(battler, ability, holdEffect, fieldStatuses, STATUS_FIELD_THE_VOID);
 }
 
 bool32 IsAnyTerrainAffected(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect, u32 fieldStatuses)
@@ -6622,6 +6652,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         if (gBattleMons[battlerDef].hp <= (gBattleMons[battlerDef].maxHP / 2))
             modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
         break;
+    case EFFECT_DEPTH_CRUSHER:
+        if (gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
+        break;
     case EFFECT_RETALIATE:
     {
         u32 retaliateTimer = gSideTimers[atkSide].retaliateTimer;
@@ -6673,6 +6707,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
     if (IsElectricTerrainAffected(battlerAtk, ctx->abilities[battlerAtk], ctx->holdEffects[battlerAtk], ctx->fieldStatuses) && moveType == TYPE_ELECTRIC)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
     if (IsPsychicTerrainAffected(battlerAtk, ctx->abilities[battlerAtk], ctx->holdEffects[battlerAtk], ctx->fieldStatuses) && moveType == TYPE_PSYCHIC)
+        modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
+    if (IsTheVoidAffected(battlerAtk, ctx->abilities[battlerAtk], ctx->holdEffects[battlerAtk], ctx->fieldStatuses) && moveType == TYPE_DARK)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
     if (IsFieldMudSportAffected(ctx->moveType))
         modifier = uq4_12_multiply(modifier, UQ_4_12(GetConfig(B_SPORT_DMG_REDUCTION) >= GEN_5 ? 0.33 : 0.5));
@@ -8924,6 +8960,8 @@ bool32 TryBattleFormChange(enum BattlerId battler, enum FormChanges method, enum
         SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
         gBattleMons[battler].species = targetSpecies;
         RecalcBattlerStats(battler, mon, method == FORM_CHANGE_BATTLE_GIGANTAMAX);
+        TrySetDarkMagikarpMoves(mon, &gBattleMons[battler], method);
+        TryRevertMagikarpMoves(mon, method);
         return TRUE;
     }
 
