@@ -1809,6 +1809,9 @@ extern const u16 gItemIconPalette_Hydreigonite[];
 extern const u32 gItemIcon_CharizarditeZ[];
 extern const u16 gItemIconPalette_CharizarditeZ[];
 
+extern const u32 gItemIcon_AbyssStone[];
+extern const u16 gItemIconPalette_AbyssStone[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 

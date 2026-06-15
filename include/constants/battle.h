@@ -566,6 +566,7 @@ enum __attribute__((packed)) MoveEffect
     MOVE_EFFECT_SEA_OF_FIRE,
     MOVE_EFFECT_SWAMP,
     MOVE_EFFECT_SUFFER_STRIKE,
+    MOVE_EFFECT_DARKNESS_DIVE,
 
     // Max move effects happen earlier in the execution chain.
     // For example stealth rock from G-Max Stonesurge is set up before abilities but from Stone Axe after.

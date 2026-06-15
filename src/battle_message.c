@@ -897,7 +897,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_STICKYWEBDISAPPEAREDFROMYOU]          = COMPOUND_STRING("The sticky web has disappeared from the ground around you!"),
     [STRINGID_THEVOIDCREEPSIN]                      = COMPOUND_STRING("Darkness creeps onto the field from every corner…"),
     [STRINGID_THEVOIDENDS]                          = COMPOUND_STRING("The darkness melts away for now…"),
-    [STRINGID_PKMNCONSUMEDBYDARKNESS]               = COMPOUND_STRING("The abyss consumes {B_SCR_NAME_WITH_PREFIX}! It has become Dark Magikarp!"),
+    [STRINGID_PKMNCONSUMEDBYDARKNESS]               = COMPOUND_STRING("The abyss has consumed {B_SCR_NAME_WITH_PREFIX}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

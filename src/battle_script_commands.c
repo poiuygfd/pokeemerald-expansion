@@ -2679,6 +2679,12 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = BattleScript_MoveEffectSufferStrike;
         }
         break;
+    case MOVE_EFFECT_DARKNESS_DIVE:
+        if (BattlerJustSwitchedIn(effectBattler))
+        {
+            SetMoveEffect(battlerAtk, effectBattler, MOVE_EFFECT_PARALYSIS, battleScript, effectFlags);
+        }
+        break;
     case MOVE_EFFECT_TRAP_BOTH:
         if (!(gBattleMons[effectBattler].volatiles.escapePrevention || gBattleMons[battlerAtk].volatiles.escapePrevention))
         {
@@ -13641,10 +13647,10 @@ void BS_TryToClearVoidTerrain(void)
     {
         gFieldStatuses &= ~STATUS_FIELD_THE_VOID;
         TryToRevertMimicryAndFlags();
-        //BattleScriptPush(cmd->nextInstr);
-        //gBattlescriptCurrInstr = BattleScript_TerrainEnds;
-        PrepareStringBattle(STRINGID_THEVOIDENDS, gBattlerAttacker);
-        gBattleCommunication[MSG_DISPLAY] = 1;
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_VOID;
+        BattleScriptPush(cmd->nextInstr);
+        gBattlescriptCurrInstr = BattleScript_TerrainEnds;
+        return;
     }
     gBattlescriptCurrInstr = cmd->nextInstr;
 }

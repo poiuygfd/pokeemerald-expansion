@@ -16274,8 +16274,8 @@ const struct ItemInfo gItemsInfo[] =
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_DuskStone,
-        .iconPalette = gItemIconPalette_DuskStone,
+        .iconPic = gItemIcon_AbyssStone,
+        .iconPalette = gItemIconPalette_AbyssStone,
     },
 };
 

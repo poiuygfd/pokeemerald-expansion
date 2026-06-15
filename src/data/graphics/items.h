@@ -2155,3 +2155,6 @@ const u16 gItemIconPalette_Hydreigonite[] = INCGFX_U16("graphics/items/icon_pale
 
 const u32 gItemIcon_CharizarditeZ[] = INCGFX_U32("graphics/items/icons/charizardite_z.png", ".4bpp.smol");
 const u16 gItemIconPalette_CharizarditeZ[] = INCGFX_U16("graphics/items/icon_palettes/charizardite_z.pal", ".gbapal");
+
+const u32 gItemIcon_AbyssStone[] = INCGFX_U32("graphics/items/icons/abyss_stone.png", ".4bpp.smol");
+const u16 gItemIconPalette_AbyssStone[] = INCGFX_U16("graphics/items/icon_palettes/abyss_stone.pal", ".gbapal");

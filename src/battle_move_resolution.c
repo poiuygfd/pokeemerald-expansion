@@ -2401,7 +2401,7 @@ static enum CancelerResult CancelerWeatherman(struct BattleCalcValues *cv)
             {
                 gBattlerAbility = cv->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesSun);
-                return CANCELER_RESULT_SUCCESS;
+                return CANCELER_RESULT_RUN_SCRIPT;
             }
         }
         else if (moveType == TYPE_WATER && !(gBattleWeather & (B_WEATHER_RAIN | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
@@ -2410,7 +2410,7 @@ static enum CancelerResult CancelerWeatherman(struct BattleCalcValues *cv)
             {
                 gBattlerAbility = cv->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesRain);
-                return CANCELER_RESULT_SUCCESS;
+                return CANCELER_RESULT_RUN_SCRIPT;
             }
         }
         else if (moveType == TYPE_ICE && !(gBattleWeather & (B_WEATHER_SNOW | B_WEATHER_PRIMAL_ANY) && HasWeatherEffect()))
@@ -2419,7 +2419,7 @@ static enum CancelerResult CancelerWeatherman(struct BattleCalcValues *cv)
             {
                 gBattlerAbility = cv->battlerAtk;
                 BattleScriptCall(BattleScript_WeathermanActivatesSnow);
-                return CANCELER_RESULT_SUCCESS;
+                return CANCELER_RESULT_RUN_SCRIPT;
             }
         }
     }
