@@ -580,6 +580,9 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_ZAMAZENTA:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_BW_VS_RESHIRAM_ZEKROM);
         break;
+    case SPECIES_MAGIKARP_DARK:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_PL_VS_GIRATINA);
+        break;
     case SPECIES_HEATRAN:
     case SPECIES_JIRACHI:
     case SPECIES_DIANCIE:

@@ -1213,6 +1213,10 @@ static const struct SpriteFrameImage sPicTable_Ball_STRANGE[] = {
 #endif //ITEM_STRANGE_BALL
 #endif //OW_FOLLOWERS_POKEBALLS
 
+static const struct SpriteFrameImage sPicTable_VoidAltar[] = {
+    overworld_ascending_frames(gObjectEventPic_VoidAltar, 2, 2),
+};
+
 static const struct SpriteFrameImage sPicTable_DeoxysOld[] = {
     overworld_frame(gObjectEventPic_DeoxysOld, 4, 4, 0),
     overworld_frame(gObjectEventPic_DeoxysOld, 4, 4, 0),

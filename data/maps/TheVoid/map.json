@@ -1,0 +1,154 @@
+{
+  "id": "MAP_THE_VOID",
+  "name": "TheVoid",
+  "layout": "LAYOUT_THE_VOID",
+  "music": "MUS_PL_DISTORTION_WORLD",
+  "region_map_section": "MAPSEC_THE_VOID",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_INDOOR_1",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_MAGIKARP_CUTSCENE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAGIKARP)",
+      "x": 1,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MAGIKARP_CUTSCENE"
+    },
+    {
+      "local_id": "LOCALID_MAGIKARP_BATTLE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAGIKARP)",
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TheVoid_EventScript_Magikarp",
+      "flag": "FLAG_DEFEATED_DARK_MAGIKARP"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_THE_VOID",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "TheVoid_EventScript_MagikarpCry"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "TheVoid_EventScript_MagikarpCry"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "TheVoid_EventScript_MagikarpCry"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "TheVoid_EventScript_MagikarpFlee"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "TheVoid_EventScript_MagikarpFlee"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "TheVoid_EventScript_MagikarpFlee"
+    },
+    {
+      "type": "weather",
+      "x": 0,
+      "y": 10,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_RAIN"
+    },
+    {
+      "type": "weather",
+      "x": 1,
+      "y": 10,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_RAIN"
+    },
+    {
+      "type": "weather",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_RAIN"
+    },
+    {
+      "type": "weather",
+      "x": 0,
+      "y": 11,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SUNNY_CLOUDS"
+    },
+    {
+      "type": "weather",
+      "x": 1,
+      "y": 11,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SUNNY_CLOUDS"
+    },
+    {
+      "type": "weather",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SUNNY_CLOUDS"
+    }
+  ],
+  "bg_events": []
+}

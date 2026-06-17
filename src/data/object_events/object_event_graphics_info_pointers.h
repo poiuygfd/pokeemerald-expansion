@@ -238,6 +238,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMay;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VoidAltar;
 
 // FRLG Object Events
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal;
@@ -682,6 +683,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
+    [OBJ_EVENT_GFX_VOID_ALTAR] =               &gObjectEventGraphicsInfo_VoidAltar,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
     [OBJ_EVENT_GFX_RS_BRENDAN_ACRO_BIKE] =     &gObjectEventGraphicsInfo_RubySapphireBrendanBike,
     [OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE] =         &gObjectEventGraphicsInfo_RubySapphireMayBike,

@@ -5283,6 +5283,8 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIDRAGO:
         case SPECIES_REGITUBE:
             return MUS_VS_REGI;
+        case SPECIES_MAGIKARP_DARK:
+            return MUS_PL_VS_GIRATINA;
         default:
             return MUS_DP_VS_LEGEND;
         }
