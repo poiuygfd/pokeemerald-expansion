@@ -22104,7 +22104,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Grudge,
+        .battleAnimScript = gBattleAnimMove_Vengeance,
     },
 
     [MOVE_ABYSSAL_RUSH] =
@@ -22129,7 +22129,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_FeintAttack,
+        .battleAnimScript = gBattleAnimMove_AbyssalRush,
     },
 
     [MOVE_DEPTH_CRUSHER] =
@@ -22154,7 +22154,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Waterfall,
+        .battleAnimScript = gBattleAnimMove_DepthCrusher,
     },
 
     [MOVE_DARKNESS_DIVE] =
@@ -22166,7 +22166,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_SEMI_INVULNERABLE,
         .power = 120,
         .type = TYPE_DARK,
-        .accuracy = 90,
+        .accuracy = 95,
         .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -22178,7 +22178,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .instructBanned = TRUE,
         .assistBanned = TRUE,
         .sketchBanned = TRUE,
-        .argument.twoTurnAttack = { .stringId = STRINGID_PKMNSPRANGUP, .status = STATE_ON_AIR },
+        .argument.twoTurnAttack = { .stringId = STRINGID_VANISHEDINSTANTLY, .status = STATE_PHANTOM_FORCE },
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DARKNESS_DIVE,
         }),
@@ -22186,7 +22186,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Bounce,
+        .battleAnimScript = gBattleAnimMove_DarknessDive,
     },
 
     [MOVE_MARINA_VORTEX] =
@@ -22213,7 +22213,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Whirlpool,
+        .battleAnimScript = gBattleAnimMove_MarinaVortex,
     },
 
     [MOVE_SUFFER_STRIKE] =
@@ -22241,7 +22241,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Facade,
+        .battleAnimScript = gBattleAnimMove_SufferStrike,
     },
 
     // Z-Moves
