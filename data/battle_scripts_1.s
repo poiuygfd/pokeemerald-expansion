@@ -900,6 +900,7 @@ BattleScript_EffectPsychoShift::
 	jumpifstatus BS_ATTACKER, STATUS1_ANY, BattleScript_EffectPsychoShiftCanWork
 	goto BattleScript_ButItFailed
 BattleScript_EffectPsychoShiftCanWork:
+	jumpifsubstituteblocks BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
 	jumpifsafeguard BattleScript_SafeguardProtected
 	trypsychoshift BattleScript_ButItFailed, BattleScript_SleepClauseBlocked
@@ -910,6 +911,8 @@ BattleScript_EffectPsychoShiftCanWork:
 	waitmessage B_WAIT_TIME_LONG
 	statusanimation BS_TARGET
 	updatestatusicon BS_TARGET
+	waitstate
+	trysynchronize
 	curestatus BS_ATTACKER
 	printfromtable gCureStatusStringIds
 	waitmessage B_WAIT_TIME_LONG
@@ -2146,7 +2149,6 @@ BattleScript_NightmareWorked::
 BattleScript_EffectCurse::
 	attackcanceler
 	cursetarget BattleScript_CurseStatChange
-	setbyte sB_ANIM_TURN, 0
 	attackanimation
 	waitanimation
 	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
@@ -4969,6 +4971,7 @@ BattleScript_BadDreamsIncrement:
 	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_BadDreamsLoop
 	jumpifbyteequal sFIXED_ABILITY_POPUP, sZero, BattleScript_BadDreamsEnd
 	destroyabilitypopup
+	setbyte sFIXED_ABILITY_POPUP, FALSE
 	pause 15
 BattleScript_BadDreamsEnd:
 	return
