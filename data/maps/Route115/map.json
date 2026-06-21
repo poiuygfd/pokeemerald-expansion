@@ -3,7 +3,6 @@
   "name": "Route115",
   "layout": "LAYOUT_ROUTE115",
   "music": "MUS_ROUTE104",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_115",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -23,6 +22,11 @@
       "map": "MAP_ROUTE114",
       "offset": -40,
       "direction": "right"
+    },
+    {
+      "map": "MAP_VOID_ALTAR_ROUTE115",
+      "offset": 63,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -505,5 +509,6 @@
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_115_HEART_SCALE"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

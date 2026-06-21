@@ -715,12 +715,12 @@
 #define FLAG_SPOKEN_TO_133_ROUTE_MASTER  0x296 // Seens the 133 Route Master's wall of text
 #define FLAG_HIDE_ROUTE_111_WALLY  0x297 // Hide Wally Rival Battle on Route 111
 #define FLAG_MET_SCOTT_IN_SOOTOPOLIS  0x298 // Talked to Scott during Sootopolis Crisis
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
+#define FLAG_USED_VOID_ALTAR_102  0x299 // Interacted with Void Altar 1
+#define FLAG_USED_VOID_ALTAR_111  0x29A // Interacted with Void Altar 2
+#define FLAG_USED_VOID_ALTAR_115  0x29B // Interacted with Void Altar 3
+#define FLAG_USED_VOID_ALTAR_122  0x29C // Interacted with Void Altar 4
+#define FLAG_USED_VOID_ALTAR_133  0x29D // Interacted with Void Altar 5
+#define FLAG_HIDE_MAUVILLE_VOID_RIFT  0x29E // Hide rift in Mauville
 #define FLAG_UNUSED_0x29F  0x29F // Unused Flag
 #define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
 #define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
@@ -1314,7 +1314,7 @@
 #define FLAG_RECEIVED_FOCUS_SASH                                    0x4E9 // Received Focus Sash from Route Master 123
 #define FLAG_RECEIVED_VOLT_SWITCH                                   0x4EA // Received Volt Switch from Route Master 124
 #define FLAG_RECEIVED_LIFE_ORB                                      0x4EB // Received Life Orb from Route Master 133
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
+#define FLAG_ITEM_MAUVILLE_ABYSS_STONE                              0x4EC // Mauville City Abyss Stone
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag

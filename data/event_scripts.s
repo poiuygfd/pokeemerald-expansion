@@ -1793,3 +1793,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CouncilChambers/scripts.inc"
 	.include "data/scripts/wild_encounter.inc"
 	.include "data/maps/TheVoid/scripts.inc"
+	.include "data/maps/VoidAltar_Route115/scripts.inc"
+	.include "data/maps/VoidAltar_Route102/scripts.inc"
+	.include "data/maps/VoidAltar_Route111/scripts.inc"
+	.include "data/maps/VoidAltar_Route122/scripts.inc"
+	.include "data/maps/VoidAltar_Route133/scripts.inc"

@@ -478,7 +478,12 @@
     "SecludedCove",
     "NeglectedShrine",
     "HerosKeep_Exterior",
-    "HerosKeep_Interior"
+    "HerosKeep_Interior",
+    "VoidAltar_Route102",
+    "VoidAltar_Route111",
+    "VoidAltar_Route115",
+    "VoidAltar_Route122",
+    "VoidAltar_Route133"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -1,0 +1,50 @@
+{
+  "id": "MAP_VOID_ALTAR_ROUTE111",
+  "name": "VoidAltar_Route111",
+  "layout": "LAYOUT_VOID_ALTAR_ROUTE111",
+  "music": "MUS_DP_OLD_CHATEAU",
+  "region_map_section": "MAPSEC_ROUTE_111",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE111",
+      "offset": -24,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ALTAR_111",
+      "graphics_id": "OBJ_EVENT_GFX_VOID_ALTAR",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VoidAltar_Route111_EventScript_Altar",
+      "flag": "FLAG_USED_VOID_ALTAR_111"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VoidAltar_EventScript_Sign"
+    }
+  ]
+}

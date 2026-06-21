@@ -3,7 +3,6 @@
   "name": "Route111",
   "layout": "LAYOUT_ROUTE111",
   "music": "MUS_ROUTE110",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_111",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -33,6 +32,11 @@
       "map": "MAP_TUFFNOOK_TOWN_EXTERIOR",
       "offset": 56,
       "direction": "right"
+    },
+    {
+      "map": "MAP_VOID_ALTAR_ROUTE111",
+      "offset": 24,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -1445,5 +1449,6 @@
       "item": "ITEM_SMOOTH_ROCK",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_SMOOTH_ROCK"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

@@ -9,12 +9,17 @@ MauvilleCity_OnTransition:
 	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
 	setvar VAR_MAUVILLE_GYM_STATE, 0
 	call_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym
+	call_if_eq VAR_VOID_ALTAR_STATE, 5, MauvilleCity_EventScript_VoidRiftAppears
 	end
 
 MauvilleCity_EventScript_MoveWattsonBackToGym::
 	clearflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
 	setflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
+	return
+
+MauvilleCity_EventScript_VoidRiftAppears::
+	clearflag FLAG_HIDE_MAUVILLE_VOID_RIFT
 	return
 
 MauvilleCity_EventScript_Boy::
@@ -119,6 +124,13 @@ MauvilleCity_EventScript_CompletedNewMauville::
 
 MauvilleCity_EventScript_ReceivedThunderbolt::
 	msgbox MauvilleCity_Text_WattsonYoungTakeCharge, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_EventScript_VoidWarpTrigger::
+	lock
+	warp MAP_THE_VOID, 1, 53
+	waitstate
 	release
 	end
 
