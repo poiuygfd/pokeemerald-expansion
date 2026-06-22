@@ -1798,3 +1798,4 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VoidAltar_Route111/scripts.inc"
 	.include "data/maps/VoidAltar_Route122/scripts.inc"
 	.include "data/maps/VoidAltar_Route133/scripts.inc"
+	.include "data/maps/PetalburgWoods_Grotto/scripts.inc"

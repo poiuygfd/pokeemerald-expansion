@@ -16,7 +16,6 @@ Route120_EventScript_RemoveKecleonObject::
 	call_if_eq VAR_0x8009, 3, Route120_EventScript_RemoveKecleon
 	call_if_eq VAR_0x8009, 4, Route120_EventScript_RemoveKecleon
 	call_if_eq VAR_0x8009, 5, Route120_EventScript_RemoveKecleon
-	call_if_eq VAR_0x8009, 6, Route120_EventScript_TryRemoveOgerpon
 	return
 
 Route120_EventScript_RemoveBridgeKecleon::
@@ -30,16 +29,6 @@ Route120_EventScript_RemoveKecleon::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
-	return
-
-Route120_EventScript_TryRemoveOgerpon::
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-	removeobject LOCALID_ROUTE_120_OGERPON
-	clearflag FLAG_HIDE_OGERPON_MASKS
-	clearflag FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK
-	clearflag FLAG_ITEM_ROUTE_120_WELLSPRING_MASK
-	clearflag FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK
 	return
 
 Route120_OnLoad:
@@ -67,8 +56,6 @@ Route120_EventScript_SetBridgeKecleonMovement::
 Route120_OnTransition:
 	call GabbyAndTy_EventScript_UpdateLocation
 	call Route120_EventScript_SetWeather
-	call_if_set FLAG_IS_CHAMPION, Route120_EventScript_TryShowOgerpon
-	call_if_set FLAG_HIDE_OGERPON_MASKS, Route120_EventScript_HideOgerponMasks
 	end
 
 Route120_EventScript_SetWeather::
@@ -94,26 +81,6 @@ Route120_EventScript_TrySetRainyWeather::
 
 Route120_EventScript_SetRainyWeather::
 	setweather WEATHER_RAIN
-	return
-
-Route120_EventScript_TryShowOgerpon::
-	call_if_set FLAG_CAUGHT_OGERPON, Route120_EventScript_HideOgerpon
-	call_if_unset FLAG_CAUGHT_OGERPON, Route120_EventScript_ShowOgerpon
-	return
-
-Route120_EventScript_ShowOgerpon::
-	goto_if_set FLAG_DEFEATED_OGERPON, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_OGERPON
-	return
-
-Route120_EventScript_HideOgerpon::
-	setflag FLAG_HIDE_OGERPON
-	return
-
-Route120_EventScript_HideOgerponMasks::
-	setflag FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK
-	setflag FLAG_ITEM_ROUTE_120_WELLSPRING_MASK
-	setflag FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK
 	return
 
 Route120_EventScript_BerryBeauty::
@@ -285,41 +252,6 @@ Route120_Movement_ApproachKecleonWest:
 
 Route120_EventScript_BridgeKecleon::
 	msgbox Kecleon_Text_SomethingUnseeable, MSGBOX_NPC
-	end
-
-Route120_EventScript_Ogerpon::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_OGERPON, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setwildbattle SPECIES_OGERPON, 50
-	setvar VAR_0x8009, 6
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route120_EventScript_DefeatedOgerpon
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route120_EventScript_RanFromOgerpon
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route120_EventScript_RanFromOgerpon
-	setflag FLAG_CAUGHT_OGERPON
-	addobject LOCALID_HEARTHFLAME_MASK
-	addobject LOCALID_WELLSPRING_MASK
-	addobject LOCALID_CORNERSTONE_MASK
-	msgbox Route120_Text_OgerponDroppedSomething, MSGBOX_DEFAULT
-	release
-	end
-
-Route120_EventScript_DefeatedOgerpon::
-	setflag FLAG_DEFEATED_OGERPON
-	setvar VAR_0x8004, SPECIES_OGERPON
-	goto Common_EventScript_LegendaryFlewAway
-	end
-
-Route120_EventScript_RanFromOgerpon::
-	setvar VAR_0x8004, SPECIES_OGERPON
-	goto Common_EventScript_LegendaryFlewAway
 	end
 
 Route120_EventScript_RouteSignFortree::
@@ -595,9 +527,6 @@ Kecleon_Text_UseDevonScopeMonAttacked:
 	.string "An invisible POKéMON became completely\n"
 	.string "visible!\p"
 	.string "The startled POKéMON attacked!$"
-
-Route120_Text_OgerponDroppedSomething:
-	.string "OGERPON dropped something…$"
 
 Route120_Text_YouAreNotReady:
 	.string "ANGELA: You do seem strong.\n"

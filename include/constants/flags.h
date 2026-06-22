@@ -1266,9 +1266,9 @@
 #define FLAG_HIDE_FLOAT_STONE_MAN_1                                 0x4B9
 #define FLAG_HIDE_FLOAT_STONE_MAN_2                                 0x4BA
 #define FLAG_RETURNED_FIRST_ORB                                     0x4BB // Flag for Orb Mt. Pyre Event
-#define FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK                        0x4BC // Route 120 Hearthflame Mask
-#define FLAG_ITEM_ROUTE_120_WELLSPRING_MASK                         0x4BD // Route 120 Wellspring Mask
-#define FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK                        0x4BE // Route 120 Cornerstone Mask
+#define FLAG_ITEM_HEARTHFLAME_MASK                                  0x4BC // Petalburg Woods Grotto Hearthflame Mask
+#define FLAG_ITEM_WELLSPRING_MASK                                   0x4BD // Petalburg Woods Grotto Wellspring Mask
+#define FLAG_ITEM_CORNERSTONE_MASK                                  0x4BE // Petalburg Woods Grotto Cornerstone Mask
 #define FLAG_HIDDEN_ITEM_TUFFNOOK_ROCKY_HELMET                      0x4BF // Hidden Rocky Helmet
 #define FLAG_ITEM_NAVEL_ROCK_FLAME_ORB                              0x4C0 // Navel Rock Flame Orb
 #define FLAG_ITEM_NAVEL_ROCK_TOXIC_ORB                              0x4C1 // Navel Rock Toxic Orb
@@ -1314,7 +1314,7 @@
 #define FLAG_RECEIVED_FOCUS_SASH                                    0x4E9 // Received Focus Sash from Route Master 123
 #define FLAG_RECEIVED_VOLT_SWITCH                                   0x4EA // Received Volt Switch from Route Master 124
 #define FLAG_RECEIVED_LIFE_ORB                                      0x4EB // Received Life Orb from Route Master 133
-#define FLAG_ITEM_MAUVILLE_ABYSS_STONE                              0x4EC // Mauville City Abyss Stone
+#define FLAG_ITEM_ABYSS_STONE                                       0x4EC // Mauville City Abyss Stone
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag

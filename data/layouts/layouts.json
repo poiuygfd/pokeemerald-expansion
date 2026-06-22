@@ -9699,6 +9699,16 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/VoidAltar_Route133/border.bin",
       "blockdata_filepath": "data/layouts/VoidAltar_Route133/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_WOODS_GROTTO",
+      "name": "PetalburgWoods_Grotto_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/PetalburgWoods_Grotto/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgWoods_Grotto/map.bin"
     }
   ]
 }

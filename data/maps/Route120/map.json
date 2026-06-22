@@ -3,7 +3,6 @@
   "name": "Route120",
   "layout": "LAYOUT_ROUTE120",
   "music": "MUS_ROUTE120",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_120",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -81,7 +80,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 34,
-      "y": 22,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -94,7 +93,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 35,
-      "y": 22,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -107,7 +106,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 36,
-      "y": 22,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -477,7 +476,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
       "x": 19,
-      "y": 29,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
       "movement_range_x": 1,
@@ -526,19 +525,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon2",
       "flag": "FLAG_HIDE_ROUTE_120_KECLEON_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
-      "x": 4,
-      "y": 77,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route120_EventScript_Kecleon3",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_3"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
@@ -594,7 +580,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 24,
+      "x": 23,
       "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -604,62 +590,6 @@
       "trainer_sight_or_berry_tree_id": "ITEM_REVIVE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_120_REVIVE"
-    },
-    {
-      "local_id": "LOCALID_ROUTE_120_OGERPON",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(OGERPON)",
-      "x": 35,
-      "y": 25,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route120_EventScript_Ogerpon",
-      "flag": "FLAG_HIDE_OGERPON"
-    },
-    {
-      "local_id": "LOCALID_CORNERSTONE_MASK",
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 36,
-      "y": 24,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_CORNERSTONE_MASK",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_CORNERSTONE_MASK"
-    },
-    {
-      "local_id": "LOCALID_WELLSPRING_MASK",
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 35,
-      "y": 24,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_WELLSPRING_MASK",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_WELLSPRING_MASK"
-    },
-    {
-      "local_id": "LOCALID_HEARTHFLAME_MASK",
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 34,
-      "y": 24,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_HEARTHFLAME_MASK",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_HEARTHFLAME_MASK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
@@ -686,6 +616,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_RouteMasterA",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
+      "x": 4,
+      "y": 77,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route120_EventScript_Kecleon3",
+      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_3"
     }
   ],
   "warp_events": [
@@ -900,8 +843,8 @@
     },
     {
       "type": "secret_base",
-      "x": 15,
-      "y": 28,
+      "x": 31,
+      "y": 23,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_SHRUB2_3"
     },
@@ -944,5 +887,6 @@
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_SHRUB1_4"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

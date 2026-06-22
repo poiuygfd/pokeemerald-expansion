@@ -3,7 +3,6 @@
   "name": "PetalburgWoods",
   "layout": "LAYOUT_PETALBURG_WOODS",
   "music": "MUS_PETALBURG_WOODS",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_PETALBURG_WOODS",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
@@ -275,6 +274,20 @@
       "elevation": 0,
       "dest_map": "MAP_SOMEWHERE_ELSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS_GROTTO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_WOODS_GROTTO",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -346,5 +359,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PetalburgWoods_EventScript_Sign2"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

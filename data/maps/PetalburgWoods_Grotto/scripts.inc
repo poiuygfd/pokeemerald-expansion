@@ -1,0 +1,81 @@
+PetalburgWoods_Grotto_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgWoods_Grotto_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, PetalburgWoods_Grotto_OnResume
+	.byte 0
+
+PetalburgWoods_Grotto_OnTransition::
+	call_if_set FLAG_IS_CHAMPION, PetalburgWoods_Grotto_EventScript_TryShowOgerpon
+	call_if_set FLAG_HIDE_OGERPON_MASKS, PetalburgWoods_Grotto_EventScript_HideOgerponMasks
+	end
+
+PetalburgWoods_Grotto_EventScript_TryShowOgerpon::
+	call_if_set FLAG_CAUGHT_OGERPON, PetalburgWoods_Grotto_EventScript_HideOgerpon
+	call_if_unset FLAG_CAUGHT_OGERPON, PetalburgWoods_Grotto_EventScript_ShowOgerpon
+	return
+
+PetalburgWoods_Grotto_EventScript_ShowOgerpon::
+	goto_if_set FLAG_DEFEATED_OGERPON, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_OGERPON
+	return
+
+PetalburgWoods_Grotto_EventScript_HideOgerpon::
+	setflag FLAG_HIDE_OGERPON
+	return
+
+PetalburgWoods_Grotto_EventScript_HideOgerponMasks::
+	setflag FLAG_ITEM_HEARTHFLAME_MASK
+	setflag FLAG_ITEM_WELLSPRING_MASK
+	setflag FLAG_ITEM_CORNERSTONE_MASK
+	return
+
+PetalburgWoods_Grotto_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, PetalburgWoods_Grotto_EventScript_TryRemoveOgerpon
+	end
+
+PetalburgWoods_Grotto_EventScript_TryRemoveOgerpon::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_PETALBURG_GROTTO_OGERPON
+	clearflag FLAG_HIDE_OGERPON_MASKS
+	clearflag FLAG_ITEM_HEARTHFLAME_MASK
+	clearflag FLAG_ITEM_WELLSPRING_MASK
+	clearflag FLAG_ITEM_CORNERSTONE_MASK
+	return
+
+PetalburgWoods_Grotto_EventScript_Ogerpon::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_OGERPON, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_OGERPON, 50
+	setvar VAR_0x8009, 6
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PetalburgWoods_Grotto_EventScript_DefeatedOgerpon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PetalburgWoods_Grotto_EventScript_RanFromOgerpon
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PetalburgWoods_Grotto_EventScript_RanFromOgerpon
+	setflag FLAG_CAUGHT_OGERPON
+	addobject LOCALID_HEARTHFLAME_MASK
+	addobject LOCALID_WELLSPRING_MASK
+	addobject LOCALID_CORNERSTONE_MASK
+	msgbox PetalburgWoods_Grotto_Text_OgerponDroppedSomething, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Grotto_EventScript_DefeatedOgerpon::
+	setflag FLAG_DEFEATED_OGERPON
+	setvar VAR_0x8004, SPECIES_OGERPON
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+PetalburgWoods_Grotto_EventScript_RanFromOgerpon::
+	setvar VAR_0x8004, SPECIES_OGERPON
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+PetalburgWoods_Grotto_Text_OgerponDroppedSomething:
+	.string "OGERPON dropped something…$"

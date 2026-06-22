@@ -56,7 +56,7 @@ TheVoid_EventScript_Magikarp::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	clearflag FLAG_PREVENT_CATCHING
     clearflag FLAG_PREVENT_RUNNING
-	clearflag FLAG_ITEM_MAUVILLE_ABYSS_STONE
+	clearflag FLAG_ITEM_ABYSS_STONE
 	setflag FLAG_HIDE_MAUVILLE_VOID_RIFT
 	setvar VAR_VOID_ALTAR_STATE, 6
 	releaseall
