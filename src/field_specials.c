@@ -4549,9 +4549,6 @@ void PreparePartyForSkyBattle(void)
 
 void GetAvitorchCodeFeedback(void)
 {
-    //struct Pokemon *party = gPlayerParty;
-    //u32 i;
-
     static const u8 sText_AvitorchCode[] = _("TorchGang");
     static const u8 sText_PartrioCode[] = _("PerfectPets");
     static const u8 sText_RandomCode[] = _("CoinFlip");

@@ -4414,7 +4414,7 @@ bool32 SetUpFieldMove_LeaderSwap(void)
 {
     u32 species;
 
-    species = GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES);
+    species = GetMonData(&gParties[B_TRAINER_PLAYER][GetCursorSelectionMonId()], MON_DATA_SPECIES);
 
     if (species == SPECIES_PARTRIO_PALADIN
     || species == SPECIES_PARTRIO_WARRIOR
@@ -6820,7 +6820,7 @@ static void SpriteCB_FormChangeIconMosaic(struct Sprite *sprite)
 
 void Task_ChangeLeaderForm(u8 taskId)
 {
-    struct Pokemon *mon = &gPlayerParty[GetCursorSelectionMonId()];
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][GetCursorSelectionMonId()];
     struct Sprite *icon = &gSprites[sPartyMenuBoxes[GetCursorSelectionMonId()].monSpriteId];
 
     switch (gTasks[taskId].tState)
@@ -6867,9 +6867,9 @@ void TryChangeLeaderForm (u8 taskId)
 {
     u32 newSpecies;
 
-    if (GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_PALADIN)
+    if (GetMonData(&gParties[B_TRAINER_PLAYER][GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_PALADIN)
         newSpecies = SPECIES_PARTRIO_WARRIOR;
-    else if (GetMonData(&gPlayerParty[GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_WARRIOR)
+    else if (GetMonData(&gParties[B_TRAINER_PLAYER][GetCursorSelectionMonId()], MON_DATA_SPECIES) == SPECIES_PARTRIO_WARRIOR)
         newSpecies = SPECIES_PARTRIO_MAGE;
     else
         newSpecies = SPECIES_PARTRIO_PALADIN;
@@ -7082,7 +7082,7 @@ void ItemUseCB_CostumeCase(u8 taskId, TaskFunc task)
 {
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
-    SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_COSTUME_CASE);
+    SetPartyMonSelectionActions(gParties[B_TRAINER_PLAYER], gPartyMenu.slotId, ACTIONS_COSTUME_CASE);
     DisplaySelectionWindow(SELECTWINDOW_COSTUMECASE);
     DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_COSTUME);
     gTasks[taskId].data[0] = 0xFF;
@@ -8788,7 +8788,7 @@ static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId)
 //Start Pokevial Branch
 static bool8 IsMonNotFullyHealed(void)
 {
-    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gPartyMenu.slotId];
     u16 currentHP = GetMonData(mon,MON_DATA_HP);
     u16 maxHP = GetMonData(mon,MON_DATA_MAX_HP);
     u32 status = GetMonData(mon,MON_DATA_STATUS);
@@ -8820,7 +8820,7 @@ static bool8 IsMonNotFullyHealed(void)
 
 void HealMonFromSlotId(void)
 {
-    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gPartyMenu.slotId];
     u32 i = 0, j = 0, ppBonuses = 0;
     u8 arg[4] = {0,0,0,0};
 
@@ -8879,7 +8879,7 @@ void InitPartyMenuForPokevialFromField(u8 taskId)
 
 void UsePokevial(u8 taskId)
 {
-    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gPartyMenu.slotId];
     u16 hp = 0, maxHP = 0;
 
     if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)

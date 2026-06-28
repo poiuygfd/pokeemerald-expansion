@@ -176,10 +176,10 @@ void CreateBossMon(u16 species, enum Move move1, enum Move move2, enum Move move
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL)
-            && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_EGG)
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES, NULL)
+            && GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_EGG)
         {
-            u8 monLevel = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL, NULL);
+            u8 monLevel = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_LEVEL, NULL);
             if (monLevel > setLevel)
                 setLevel = monLevel;
         }
@@ -190,22 +190,22 @@ void CreateBossMon(u16 species, enum Move move1, enum Move move2, enum Move move
         GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species),
         GetSynchronizedNature(STATIC_WILDMON_ORIGIN, species),
         RANDOM_UNOWN_LETTER);
-    CreateMonWithIVs(&gEnemyParty[0], species, setLevel, personality, OTID_STRUCT_PLAYER_ID, MAX_PER_STAT_IVS);
+    CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, setLevel, personality, OTID_STRUCT_PLAYER_ID, MAX_PER_STAT_IVS);
 
-    SetMonMoveSlot(&gEnemyParty[0], move1, 0);
-    SetMonMoveSlot(&gEnemyParty[0], move2, 1);
-    SetMonMoveSlot(&gEnemyParty[0], move3, 2);
-    SetMonMoveSlot(&gEnemyParty[0], move4, 3);
+    SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], move1, 0);
+    SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], move2, 1);
+    SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], move3, 2);
+    SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], move4, 3);
 
     if (ability)
     {
-        SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &ability);
+        SetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_ABILITY_NUM, &ability);
     }
     if (item)
     {
         heldItem[0] = item;
         heldItem[1] = item >> 8;
-        SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
+        SetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_HELD_ITEM, heldItem);
     }
 }
 
