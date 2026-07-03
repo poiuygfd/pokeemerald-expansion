@@ -3882,7 +3882,7 @@ BattleScript_PrintMonIsRootedRet::
 	return
 
 BattleScript_KnockedOff::
-	playanimation BS_TARGET, B_ANIM_ITEM_KNOCKOFF
+	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_KNOCKOFF
 	printstring STRINGID_PKMNKNOCKEDOFF
 	waitmessage B_WAIT_TIME_LONG
 	return
@@ -5035,7 +5035,7 @@ BattleScript_AbilityPreventsPhasingOut::
 
 BattleScript_AbilityPreventsPhasingOutRet::
 	pause B_WAIT_TIME_SHORT
-	call BattleScript_AbilityPopUpTarget
+	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNANCHORSITSELFWITH
 	waitmessage B_WAIT_TIME_LONG
 	return
