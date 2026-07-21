@@ -2543,6 +2543,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
+    [ABILITY_IRON_THIGHS] =
+    {
+        .name = _("Iron Thighs"),
+        .description = COMPOUND_STRING("Boosts kicking moves."),
+        .aiRating = 7,
+    },
+
     [ABILITY_NEPOTISM] =
     {
         .name = _("Nepotism"),

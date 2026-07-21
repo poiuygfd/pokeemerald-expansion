@@ -1976,6 +1976,12 @@ static const u16 sSalazzleFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_FOMANTIS
 
+static const u16 sTsareenaFormSpeciesIdTable[] = {
+    SPECIES_TSAREENA,
+    SPECIES_TSAREENA_MEGA,
+    FORM_SPECIES_END,
+};
+
 #if P_FAMILY_WIMPOD
 static const u16 sGolisopodFormSpeciesIdTable[] = {
     SPECIES_GOLISOPOD,

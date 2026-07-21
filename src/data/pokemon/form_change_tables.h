@@ -1535,6 +1535,13 @@ static const struct FormChange sWishiwashiFormChangeTable[] =
 };
 #endif //P_FAMILY_WISHIWASHI
 
+static const struct FormChange sTsareenaFormChangeTable[] =
+{
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TSAREENA_MEGA, ITEM_TSAREENITE},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_TSAREENA},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #if P_FAMILY_WIMPOD
 static const struct FormChange sGolisopodFormChangeTable[] = {
 #if P_GEN_9_MEGA_EVOLUTIONS

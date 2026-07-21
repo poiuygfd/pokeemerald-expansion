@@ -1130,6 +1130,63 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = sHydreigonFormChangeTable,
     },
 
+    [SPECIES_TSAREENA_MEGA] =
+    {
+        .baseHP        = 72,
+        .baseAttack    = 140,
+        .baseDefense   = 113,
+        .baseSpeed     = 102,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 113,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 255 : 230,
+        .evYield_Attack = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
+        .abilities = { ABILITY_IRON_THIGHS, ABILITY_IRON_THIGHS, ABILITY_IRON_THIGHS },
+        .bodyColor = BODY_COLOR_PURPLE,
+        .noFlip = TRUE,
+        .speciesName = _("Tsareena"),
+        .cryId = CRY_TSAREENA,
+        .natDexNum = NATIONAL_DEX_TSAREENA,
+        .categoryName = _("Fruit"),
+        .height = 12,
+        .weight = 214,
+        .description = COMPOUND_STRING(
+            "Mega Evolution has only further enhanced\n"
+            "the muscles in Tsareena's legs. The kicks\n"
+            "it delivers can punch through most things\n"
+            "with very little effort."),
+        .pokemonScale = 282,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Tsareena,
+        .frontPicSize = MON_COORDS_SIZE(56, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Tsareena,
+        .backPicSize = MON_COORDS_SIZE(56, 56),
+        .backPicYOffset = 6,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Tsareena,
+        .shinyPalette = gMonShinyPalette_Tsareena,
+        .iconSprite = gMonIcon_Tsareena,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(1, 13, SHADOW_SIZE_M)
+        FOOTPRINT(Tsareena)
+        .levelUpLearnset = sTsareenaLevelUpLearnset,
+        .teachableLearnset = sTsareenaTeachableLearnset,
+        .formSpeciesIdTable = sTsareenaFormSpeciesIdTable,
+        .formChangeTable = sTsareenaFormChangeTable,
+    },
+
     [SPECIES_CHARIZARD_MEGA_Z] =
     {
         .baseHP        = 78,
