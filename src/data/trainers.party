@@ -710,28 +710,50 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Crobat
 Level: 40
+Ability: Inner Focus
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
+- Cross Poison
+- Air Slash
+- Tailwind
 
 Wishiwashi
 Level: 41
+Ability: Schooling
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
+- Aqua Tail
+- Earthquake
+- Beat Up
 
 Toxicroak
 Level: 41
+Ability: Dry Skin
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
+- Poison Jab
+- Brick Break
+- Sucker Punch
+- Fake Out
 
 Gyarados
 Level: 40
+Ability: Intimidate
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
+- Aqua Tail
+- Crunch
+- Dragon Dance
 
 Toxapex
 Level: 42
+Ability: Merciless
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
+- Liquidation
+- Poison Jab
+- Toxic
+- Baneful Bunker
 
 Sharpedo @ Sharpedonite
 Level: 43
@@ -739,6 +761,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 - Liquidation
 - Crunch
+- Aqua Jet
 
 === TRAINER_LEAH ===
 Name: LEAH

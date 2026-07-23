@@ -514,11 +514,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_PARTRIO_PALADIN] =
     { 
-        .baseHP        = 70,
+        .baseHP        = 65,
         .baseAttack    = 60,
-        .baseDefense   = 110,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 35,
+        .baseDefense   = 100,
+        .baseSpeed     = 25,
+        .baseSpAttack  = 30,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 45,
@@ -581,11 +581,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_PARTRIO_WARRIOR] =
     { 
         .baseHP        = 60,
-        .baseAttack    = 100,
+        .baseAttack    = 90,
         .baseDefense   = 50,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 45,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 25,
+        .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 157,
@@ -646,11 +646,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_PARTRIO_MAGE] =
     { 
-        .baseHP        = 45,
+        .baseHP        = 50,
         .baseAttack    = 20,
-        .baseDefense   = 30,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 120,
+        .baseDefense   = 25,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 110,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 45,
