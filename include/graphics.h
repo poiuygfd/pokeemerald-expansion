@@ -1772,6 +1772,9 @@ extern const u16 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
+extern const u32 gItemIcon_ToughBucket[];
+extern const u16 gItemIconPalette_ToughBucket[];
+
 extern const u32 gItemIcon_CandyBag[];
 extern const u16 gItemIconPalette_CandyBag[];
 extern const u32 gItemIcon_HiTechEarbuds[];

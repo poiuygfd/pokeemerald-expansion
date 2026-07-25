@@ -16020,6 +16020,26 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
 
+// New held items
+
+    [ITEM_TOUGH_BUCKET] =
+    {
+        .name = ITEM_NAME("Tough Bucket"),
+        .price = 30000,
+        .holdEffect = HOLD_EFFECT_TOUGH_BUCKET,
+        .description = COMPOUND_STRING(
+            "A bucket that\n"
+            "protects the holder\n"
+            "from critical hits."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_ToughBucket,
+        .iconPalette = gItemIconPalette_ToughBucket,
+    },
+
 // New key items
 
     [ITEM_CANDY_BAG] =

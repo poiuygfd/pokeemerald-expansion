@@ -2385,7 +2385,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 27;
+        task->tNumItems = 28;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2564,6 +2564,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("EVIOLITE{CLEAR_TO 94}24BP"),
         COMPOUND_STRING("HEAVY DUTY BOOTS{CLEAR_TO 94}24BP"),
         COMPOUND_STRING("LOADED DICE{CLEAR_TO 94}24BP"),
+        COMPOUND_STRING("TOUGH BUCKET{CLEAR_TO 94}24BP"),
         COMPOUND_STRING("CHOICE BAND{CLEAR_TO 94}32BP"),
         COMPOUND_STRING("CHOICE SPECS{CLEAR_TO 94}32BP"),
         COMPOUND_STRING("CHOICE SCARF{CLEAR_TO 94}32BP"),

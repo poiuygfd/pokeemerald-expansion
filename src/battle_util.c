@@ -8145,6 +8145,19 @@ s32 CalcCritChanceStage(struct DamageContext *ctx)
         critChance = CRITICAL_HIT_BLOCKED;
     }
 
+    if (critChance != CRITICAL_HIT_BLOCKED && ctx->holdEffects[ctx->battlerDef] == HOLD_EFFECT_TOUGH_BUCKET)
+    {
+        // Record item only if move had 100% chance to get a crit
+        if (ctx->updateFlags)
+        {
+            if (critChance == CRITICAL_HIT_ALWAYS)
+                RecordItemEffectBattle(ctx->battlerDef, ctx->holdEffects[ctx->battlerDef]);
+            else if (GetCriticalHitOdds(critChance) == 1)
+                RecordItemEffectBattle(ctx->battlerDef, ctx->holdEffects[ctx->battlerDef]);
+        }
+        critChance = CRITICAL_HIT_BLOCKED;
+    }
+
     return critChance;
 }
 
@@ -8188,6 +8201,12 @@ s32 CalcCritChanceStageGen1(struct DamageContext *ctx)
     {
         if (ctx->updateFlags)
             RecordAbilityBattle(ctx->battlerDef, ctx->abilities[ctx->battlerDef]);
+        critChance = CRITICAL_HIT_BLOCKED;
+    }
+    else if (ctx->holdEffects[ctx->battlerDef] == HOLD_EFFECT_TOUGH_BUCKET)
+    {
+        if (ctx->updateFlags)
+            RecordItemEffectBattle(ctx->battlerDef, ctx->holdEffects[ctx->battlerDef]);
         critChance = CRITICAL_HIT_BLOCKED;
     }
     else if (gBattleMons[ctx->battlerAtk].volatiles.laserFocus

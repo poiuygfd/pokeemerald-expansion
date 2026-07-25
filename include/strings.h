@@ -528,6 +528,7 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TerrainExtenderDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_EvioliteDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HeavyDutyBootsDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LoadedDiceDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ToughBucketDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarfDesc[];

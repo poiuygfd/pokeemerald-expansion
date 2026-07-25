@@ -4560,6 +4560,11 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
         && mode != EVO_MODE_ITEM_CHECK
         && (P_KADABRA_EVERSTONE < GEN_4 || species != SPECIES_KADABRA))
         return SPECIES_NONE;
+    // Magikarp holding the Abyss Stone should have their evolution prevented as well
+    else if (heldItem == ITEM_ABYSS_STONE
+        && species == SPECIES_MAGIKARP
+        && mode != EVO_MODE_ITEM_CHECK)
+        return SPECIES_NONE;
 
     switch (mode)
     {

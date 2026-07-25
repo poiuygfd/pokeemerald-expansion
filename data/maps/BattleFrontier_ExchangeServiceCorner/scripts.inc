@@ -101,16 +101,17 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_Eviolite
 	case 15, BattleFrontier_ExchangeServiceCorner_EventScript_HeavyDutyBoots
 	case 16, BattleFrontier_ExchangeServiceCorner_EventScript_LoadedDice
-	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceBand
-	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs
-	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceScarf
-	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_Leftovers
-	case 21, BattleFrontier_ExchangeServiceCorner_EventScript_LifeOrb
-	case 22, BattleFrontier_ExchangeServiceCorner_EventScript_ClearAmulet
-	case 23, BattleFrontier_ExchangeServiceCorner_EventScript_CovertCloak
-	case 24, BattleFrontier_ExchangeServiceCorner_EventScript_RockyHelmet
-	case 25, BattleFrontier_ExchangeServiceCorner_EventScript_AssaultVest
-	case 26, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_ToughBucket
+	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceBand
+	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs
+	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceScarf
+	case 21, BattleFrontier_ExchangeServiceCorner_EventScript_Leftovers
+	case 22, BattleFrontier_ExchangeServiceCorner_EventScript_LifeOrb
+	case 23, BattleFrontier_ExchangeServiceCorner_EventScript_ClearAmulet
+	case 24, BattleFrontier_ExchangeServiceCorner_EventScript_CovertCloak
+	case 25, BattleFrontier_ExchangeServiceCorner_EventScript_RockyHelmet
+	case 26, BattleFrontier_ExchangeServiceCorner_EventScript_AssaultVest
+	case 27, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -187,6 +188,10 @@ BattleFrontier_ExchangeServiceCorner_EventScript_HeavyDutyBoots::
 
 BattleFrontier_ExchangeServiceCorner_EventScript_LoadedDice::
 	setitemandprice ITEM_LOADED_DICE, 24
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseHoldItem
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ToughBucket::
+	setitemandprice ITEM_TOUGH_BUCKET, 24
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseHoldItem
 
 BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceBand::
@@ -784,6 +789,10 @@ BattleFrontier_ExchangeServiceCorner_Text_HeavyDutyBootsDesc::
 BattleFrontier_ExchangeServiceCorner_Text_LoadedDiceDesc::
 	.string "A hold item that causes multihit\n"
 	.string "attacks to hit 4 or 5 times.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ToughBucketDesc::
+	.string "A hold item that protects the holder\n"
+	.string "from critical hits.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc::
 	.string "Raises ATTACK, but permits the use\n"
