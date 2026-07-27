@@ -537,17 +537,19 @@ struct PartyState
     u32 battleBondBoost:1;
     u32 transformZeroToHero:1;
     u32 supersweetSyrup:1;
-    u32 timesGotHit:5;
+    u32 timesGotHit:8;
     u32 changedSpecies:11; // For forms when multiple mons can change into the same Pokémon.
     u32 sentOut:1;
     u32 isKnockedOff:1;
-    u32 paladinHP:10;
     u32 paladinFainted:1;
-    u32 warriorHP:10;
     u32 warriorFainted:1;
-    u32 mageHP:10;
     u32 mageFainted:1;
-    u32 padding:8;
+    u32 padding:2;
+    // End of Word
+    u32 paladinHP:10;
+    u32 warriorHP:10;
+    u32 mageHP:10;
+    u32 padding:2;
     u16 usedHeldItem;
 };
 
