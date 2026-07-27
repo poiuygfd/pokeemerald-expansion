@@ -625,6 +625,7 @@ Route111_EventScript_Man2::
 Route111_EventScript_DeliverLetterTrigger::
 	lock
 	msgbox Route111_Text_YouShouldDeliverLetter, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Route111_Movement_PushPlayerBack
 	waitmovement 0
 	release

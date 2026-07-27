@@ -264,18 +264,23 @@ Route119_WeatherInstitute_2F_Text_ShellyPostBattle:
 	.string "in our business, anyway?$"
 
 Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy:
-	.string "We have a situation here!\p"
-	.string "A TEAM MAGMA mob just passed\n"
-	.string "the WEATHER INSTITUTE.\p"
-	.string "They appear to be headed for\n"
-	.string "MT. PYRE!$"
+	.string "We got new orders from the BOSS!\n"
+	.string "We are to head to MT. PYRE now!\p"
+	.string "The BOSS has found something far more\n"
+	.string "important than the POKéMON here!\p"
+	.string "We need to act fast, before TEAM MAGMA\n"
+	.string "catches onto us!$"
 
 Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre:
-	.string "What?!\p"
+	.string "Ahahahaha!\p"
 	.string "We can't waste any more time here!\n"
-	.string "We have to hurry to MT. PYRE, too!\p"
-	.string "Ahahahaha!\n"
-	.string "TEAM MAGMA, just you wait!$"
+	.string "We have to hurry to MT. PYRE!\p"
+	.string "You can keep your weather POKéMON to\n"
+	.string "yourselves after all!\p"
+	.string "If this is what I think it is, then\n"
+	.string "we will soon have a POKéMON with much\l"
+	.string "greater control of the weather!\p"
+	.string "Later, brat!$"
 
 Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon:
 	.string "Thanks!\n"
