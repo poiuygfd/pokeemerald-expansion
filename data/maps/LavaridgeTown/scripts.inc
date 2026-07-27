@@ -1,7 +1,16 @@
 LavaridgeTown_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, LavaridgeTown_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavaridgeTown_OnFrame
 	.byte 0
+
+LavaridgeTown_OnLoad:
+	call_if_unset FLAG_LAVARIDGE_STOLEN_BUCKET, LavaridgeTown_ShowBucket
+	end
+
+LavaridgeTown_ShowBucket::
+	setmetatile 2, 9, METATILE_Lavaridge_Bucket, TRUE
+	return
 
 LavaridgeTown_OnTransition:
 	setflag FLAG_VISITED_LAVARIDGE_TOWN
@@ -263,6 +272,58 @@ LavaridgeTown_EventScript_DeclineEgg::
 	release
 	end
 
+LavaridgeTown_EventScript_Bucket::
+	lock
+	message LavaridgeTown_Text_ItsABucket
+	waitmessage
+	multichoice 19, 8, MULTI_STEAL_BUCKET, FALSE
+	switch VAR_RESULT
+	case 0, LavaridgeTown_EventScript_AreYouSure
+	case 1, LavaridgeTown_EventScript_DontStealBucket
+	case MULTI_B_PRESSED, LavaridgeTown_EventScript_DontStealBucket
+	end
+
+LavaridgeTown_EventScript_AreYouSure::
+	message LavaridgeTown_Text_WillYouReally
+	waitmessage
+	multichoice 19, 8, MULTI_STEAL_BUCKET, FALSE
+	switch VAR_RESULT
+	case 0, LavaridgeTown_EventScript_AreYouReallySure
+	case 1, LavaridgeTown_EventScript_DontStealBucket
+	case MULTI_B_PRESSED, LavaridgeTown_EventScript_DontStealBucket
+	end
+
+LavaridgeTown_EventScript_AreYouReallySure::
+	message LavaridgeTown_Text_WhatUseDoesItHave
+	waitmessage
+	multichoice 19, 8, MULTI_STEAL_BUCKET, FALSE
+	switch VAR_RESULT
+	case 0, LavaridgeTown_EventScript_StealBucket
+	case 1, LavaridgeTown_EventScript_DontStealBucket
+	case MULTI_B_PRESSED, LavaridgeTown_EventScript_DontStealBucket
+	end
+
+LavaridgeTown_EventScript_StealBucket::
+	checkitemspace ITEM_TOUGH_BUCKET
+	goto_if_eq VAR_RESULT, FALSE, LavaridgeTown_EventScript_CantStealBucket
+	additem ITEM_TOUGH_BUCKET
+	msgbox LavaridgeTown_Text_YouRottenThief, MSGBOX_DEFAULT
+	removeobject LOCALID_LAVARIDGE_BUCKET
+	setmetatile 2, 9, METATILE_Lavaridge_SpringSand, FALSE
+	special DrawWholeMapView
+	release
+	end
+
+LavaridgeTown_EventScript_DontStealBucket::
+	msgbox LavaridgeTown_Text_LeaveTheBucket, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_EventScript_CantStealBucket::
+	msgbox LavaridgeTown_Text_FailedStealing, MSGBOX_DEFAULT
+	release
+	end
+
 LavaridgeTown_EventScript_TownSign::
 	msgbox LavaridgeTown_Text_TownSign, MSGBOX_SIGN
 	end
@@ -402,6 +463,49 @@ LavaridgeTown_Text_HotSpringsClaims:
 	.string "relieving aching muscles, solving\l"
 	.string "romantic problems, and attracting\l"
 	.string "money…$"
+
+LavaridgeTown_Text_ItsABucket:
+	.string "A lone bucket sits on the sand.\p"
+	.string "Perhaps it is used for scooping sand?\n"
+	.string "Perhaps it is used to transport water?\p"
+	.string "Whatever purpose it serves, it seems\n"
+	.string "to have found a home for itself here.$"
+
+LavaridgeTown_Text_WillYouReally:
+	.string "This bucket is probably here for\n"
+	.string "a reason.\p"
+	.string "It could be quite important, for all\n"
+	.string "you know.\p"
+	.string "It isn't even your property.\n"
+	.string "Are you really going to take it?$"
+
+LavaridgeTown_Text_WhatUseDoesItHave:
+	.string "What use does it even have for a\n"
+	.string "POKéMON TRAINER such as yourself?\l"
+	.string "It is just a bucket.\p"
+	.string "Do you really need this?\n"
+	.string "More than the person who it actually\l"
+	.string "belongs to?$"
+
+LavaridgeTown_Text_YouRottenThief:
+	.string "When you are sure nobody else is\n"
+	.string "looking, you hastily cram the bucket\l"
+	.string "deep into your BAG.\p"
+	.string "Why you have done this, you still\n"
+	.string "aren't entirely sure.\p"
+	.string "But it is yours now.$"
+
+LavaridgeTown_Text_LeaveTheBucket:
+	.string "You leave the bucket in its rightful\n"
+	.string "place atop the sand.$"
+
+LavaridgeTown_Text_FailedStealing:
+	.string "When you are sure nobody else is\n"
+	.string "looking, you attempt to cram the\l"
+	.string "bucket deep into your BAG.\p"
+	.string "Unfortunately, your BAG is full, so\n"
+	.string "you are forced to leave the bucket\l"
+	.string "right where you found it.$"
 
 LavaridgeTown_Text_TownSign:
 	.string "LAVARIDGE TOWN\p"

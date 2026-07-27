@@ -328,11 +328,13 @@
 
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
+#define METATILE_Lavaridge_Bucket               0x354
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
 #define METATILE_Lavaridge_CaveEntrance_Top     0x256
 #define METATILE_Lavaridge_LavaField            0x271
 #define METATILE_Lavaridge_NormalGrass          0x206
 #define METATILE_Lavaridge_RockWall             0x274
+#define METATILE_Lavaridge_SpringSand           0x2A8
 
 // gTileset_LavenderTown
 #define METATILE_LavenderTown_Door  0x2A2

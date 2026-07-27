@@ -721,8 +721,8 @@
 #define FLAG_USED_VOID_ALTAR_122  0x29C // Interacted with Void Altar 4
 #define FLAG_USED_VOID_ALTAR_133  0x29D // Interacted with Void Altar 5
 #define FLAG_HIDE_MAUVILLE_VOID_RIFT  0x29E // Hide rift in Mauville
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
+#define FLAG_LAVARIDGE_STOLEN_BUCKET  0x29F // Stolen the bucket in Lavaridge
+#define FLAG_HIDE_OLDALE_TOWN_PC_BLOCKER 0x2A0 // Blocks PC in Oldale before Rival fight
 #define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
 #define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
 #define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag

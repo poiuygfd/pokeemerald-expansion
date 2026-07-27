@@ -3,7 +3,6 @@
   "name": "LavaridgeTown",
   "layout": "LAYOUT_LAVARIDGE_TOWN",
   "music": "MUS_OLDALE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -139,6 +138,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LavaridgeTown_EventScript_EggWoman",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_LAVARIDGE_BUCKET",
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 2,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LavaridgeTown_EventScript_Bucket",
+      "flag": "FLAG_LAVARIDGE_STOLEN_BUCKET"
     }
   ],
   "warp_events": [
@@ -261,5 +274,6 @@
       "item": "ITEM_ICE_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

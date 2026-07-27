@@ -873,6 +873,12 @@ static const struct MenuAction MultichoiceList_PassChoice[] =
     {COMPOUND_STRING("CONTEST PASS")},
 };
 
+static const struct MenuAction MultichoiceList_StealBucket[] =
+{
+    {COMPOUND_STRING("TAKE IT")},
+    {COMPOUND_STRING("LEAVE IT")},
+};
+
 static const struct MenuAction MultichoiceList_NotebookPages[] =
 {
     {COMPOUND_STRING("Entry 1")},
@@ -1334,6 +1340,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_DEPTHS_CHOOSE_MODE]         = MULTICHOICE(MultichoiceList_DepthsChooseMode),
     [MULTI_DEPTHS_EXPLAIN_MODE]        = MULTICHOICE(MultichoiceList_DepthsExplainMode),
     [MULTI_PASS_CHOICE]                = MULTICHOICE(MultichoiceList_PassChoice),
+    [MULTI_STEAL_BUCKET]               = MULTICHOICE(MultichoiceList_StealBucket),
     [MULTI_NOTEBOOK_PAGES]             = MULTICHOICE(MultichoiceList_NotebookPages),
     [MULTI_MUSIC_SELECTION]            = MULTICHOICE(MultichoiceList_MusicSelection),
     [MULTI_BIKE_SHOP]                  = MULTICHOICE(sMultichoiceList_BikeShop),
