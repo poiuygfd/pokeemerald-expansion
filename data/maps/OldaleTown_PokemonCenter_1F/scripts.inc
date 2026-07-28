@@ -45,6 +45,7 @@ OldaleTown_PokemonCenter_1F_EventScript_PCBlocker::
 	waitmovement 0
 	faceplayer
 	msgbox OldaleTown_PokemonCenter_1F_Text_WaitYourTurn, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_OLDALE_PC_BLOCKER, Common_Movement_FaceUp
 	waitmovement 0
 	release

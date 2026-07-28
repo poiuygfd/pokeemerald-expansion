@@ -541,10 +541,10 @@ struct PartyState
     u32 changedSpecies:11; // For forms when multiple mons can change into the same Pokémon.
     u32 sentOut:1;
     u32 isKnockedOff:1;
+    u32 mysteryFunTime:2;
     u32 paladinFainted:1;
     u32 warriorFainted:1;
     u32 mageFainted:1;
-    u32 padding:2;
     // End of Word
     u32 paladinHP:10;
     u32 warriorHP:10;
