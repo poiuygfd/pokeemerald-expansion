@@ -18,11 +18,13 @@ EventScript_ObtainItemMessage::
 
 EventScript_BufferPocketNameAndTryFanfare::
 	switch VAR_RESULT
-	case POCKET_ITEMS,      EventScript_BufferItemsPocket
-	case POCKET_KEY_ITEMS,  EventScript_BufferKeyItemsPocket
-	case POCKET_POKE_BALLS, EventScript_BufferPokeballsPocket
-	case POCKET_TM_HM,      EventScript_BufferTMHMsPocket
-	case POCKET_BERRIES,    EventScript_BufferBerriesPocket
+	case POCKET_ITEMS,       EventScript_BufferItemsPocket
+	case POCKET_KEY_ITEMS,   EventScript_BufferKeyItemsPocket
+	case POCKET_POKE_BALLS,  EventScript_BufferPokeballsPocket
+	case POCKET_TM_HM,       EventScript_BufferTMHMsPocket
+	case POCKET_BERRIES,     EventScript_BufferBerriesPocket
+	case POCKET_MEDICINE, 	 EventScript_BufferMedicinePocket
+	case POCKET_MEGA_STONES, EventScript_BufferMegaStonesPocket
 	end
 
 EventScript_BufferItemsPocket::
@@ -47,6 +49,16 @@ EventScript_BufferTMHMsPocket::
 
 EventScript_BufferBerriesPocket::
 	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
+	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
+	return
+
+EventScript_BufferMedicinePocket::
+	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
+	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
+	return
+
+EventScript_BufferMegaStonesPocket::
+	bufferstdstring STR_VAR_3, STDSTRING_MEGASTONES
 	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
 	return
 
@@ -254,8 +266,10 @@ EventScript_BufferPutAwayPocketName::
 	case POCKET_ITEMS,       EventScript_BufferPutAwayPocketItems
 	case POCKET_KEY_ITEMS,   EventScript_BufferPutAwayPocketKeyItems
 	case POCKET_POKE_BALLS,  EventScript_BufferPutAwayPocketPokeBalls
-	case POCKET_TM_HM,     EventScript_BufferPutAwayPocketTMCase
-	case POCKET_BERRIES, EventScript_BufferPutAwayPocketBerryPouch
+	case POCKET_TM_HM,       EventScript_BufferPutAwayPocketTMCase
+	case POCKET_BERRIES,     EventScript_BufferPutAwayPocketBerryPouch
+	case POCKET_MEDICINE,    EventScript_BufferPutAwayPocketMedicine
+	case POCKET_MEGA_STONES, EventScript_BufferPutAwayPocketMegaStones
 	end
 
 EventScript_BufferPutAwayPocketItems::
@@ -276,6 +290,14 @@ EventScript_BufferPutAwayPocketTMCase::
 
 EventScript_BufferPutAwayPocketBerryPouch::
 	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
+	return
+
+EventScript_BufferPutAwayPocketMedicine::
+	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
+	return
+
+EventScript_BufferPutAwayPocketMegaStones::
+	bufferstdstring STR_VAR_3, STDSTRING_MEGASTONES
 	return
 
 EventScript_TryPickUpHiddenCoins::
