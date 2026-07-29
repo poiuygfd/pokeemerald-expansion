@@ -292,7 +292,7 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "are an excellent POKéMON TRAINER.\p"
 	.string "And thank you…\p"
 	.string "I had wanted to learn what kind of\n"
-	.string "ideals you have developed alongside.\l"
+	.string "ideals you have developed alongside\l"
 	.string "your POKéMON.\p"
 	.string "I feel I was able to find that answer\n"
 	.string "during our battle.\p"

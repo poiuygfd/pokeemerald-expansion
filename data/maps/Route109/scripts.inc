@@ -89,7 +89,7 @@ Route109_EventScript_SettingSail::
 	end
 
 Route109_EventScript_Sailing::
-	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
 	setflag FLAG_IS_PLAYER_BOATING
 	setflag FLAG_BRINEY_STEERING_BOAT
 	dofieldeffect FLDEFF_USE_SURF

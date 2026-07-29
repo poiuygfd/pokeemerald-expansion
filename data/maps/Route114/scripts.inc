@@ -217,7 +217,7 @@ Route114_Text_ExplainRoar:
 	.string "A ROAR sends POKéMON scurrying.$"
 
 Route114_Text_Poochyena:
-	.string "Bow! Bowwow!$"
+	.string "POOCHYENA: Bow! Bowwow!$"
 
 Route114_Text_WallFeelsFragile:
 	.string "This wall feels fragile, as if\n"

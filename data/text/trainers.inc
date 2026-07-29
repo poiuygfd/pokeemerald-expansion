@@ -446,12 +446,22 @@ Route105_Text_LuisIntro:
 	.string "You seem to be okay, so what do you\n"
 	.string "say to a battle?$"
 
+Route105_Text_LuisIntroAlt:
+	.string "Whew! That's a nice boat you've\n"
+	.string "got there!\p"
+	.string "Since you've already stopped, what do\n"
+	.string "you say to a battle?$"
+
 Route105_Text_LuisDefeated:
 	.string "Glub… Glub…$"
 
 Route105_Text_LuisPostBattle:
 	.string "If you are drowning, the signal is to\n"
 	.string "wave one arm toward the beach.$"
+
+Route105_Text_LuisPostBattleAlt:
+	.string "Make sure you wear appropriate safety\n"
+	.string "equipment in case you fall off.$"
 
 Route105_Text_DominikIntro:
 	.string "Swimming the deep blue sea…\n"

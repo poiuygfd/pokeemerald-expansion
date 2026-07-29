@@ -5553,7 +5553,7 @@ Nature: Adamant
 - Fling
 - Coaching
 
-Makuhita @ Sitrus Berry
+Makuhita 
 Level: 18
 Ability: Guts
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
@@ -5564,15 +5564,15 @@ Nature: Careful
 - Fake Out
 - Coaching
 
-Riolu
+Crabrawler @ Sitrus Berry
 Level: 20
-Ability: Prankster
+Ability: Hyper Cutter
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
 Nature: Jolly
-- Force Palm
-- Metal Claw
-- Feint
+- Brick Break
+- Thief
+- Protect
 
 === TRAINER_BRAWLY_2 ===
 Name: BRAWLY
@@ -5616,15 +5616,15 @@ Nature: Careful
 - Fake Out
 - Coaching
 
-Lucario @ Sitrus Berry
+Crabominable @ Sitrus Berry
 Level: 24
-Ability: Prankster
+Ability: Hyper Cutter
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
 Nature: Jolly
-- Force Palm
-- Metal Claw
-- Feint
+- Brick Break
+- Thief
+- Protect
 
 === TRAINER_WATTSON_1 ===
 Name: WATTSON
@@ -5641,8 +5641,8 @@ Level: 16
 Ability: Plus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
-Nature: Bold
-- Discharge
+Nature: Impish
+- Shock Wave
 - Swift
 
 Minun
@@ -5650,8 +5650,8 @@ Level: 16
 Ability: Minus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
-Nature: Bold
-- Discharge
+Nature: Impish
+- Shock Wave
 - Swift
 
 Magnemite
@@ -17007,15 +17007,15 @@ Nature: Careful
 - Bulk Up
 - Coaching
 
-Gallade @ Sitrus Berry
+Lucario @ Focus Sash
 Level: 56
-Ability: Sharpness
+Ability: Inner Focus
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Sacred Sword
-- Psycho Cut
-- Night Slash
+Nature: Jolly
+- Close Combat
+- Meteor Mash
+- Extreme Speed
 - Swords Dance
 
 Falinks @ Leftovers
@@ -17040,16 +17040,16 @@ Nature: Adamant
 - Facade
 - Protect
 
-Lucario @ Lucarionite
+Crabominable @ Crabominite
 Level: 60
-Ability: Justified
+Ability: Hyper Cutter
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Close Combat
-- Meteor Mash
-- Extreme Speed
-- Swords Dance
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Ice Hammer
+- Drain Punch
+- Knock Off
+- Crabhammer
 
 === TRAINER_BRAWLY_4 ===
 Name: BRAWLY
@@ -17083,15 +17083,15 @@ Nature: Careful
 - Bulk Up
 - Coaching
 
-Gallade @ Sitrus Berry
+Lucario @ Focus Sash
 Level: 61
-Ability: Sharpness
+Ability: Inner Focus
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Sacred Sword
-- Psycho Cut
-- Night Slash
+Nature: Jolly
+- Close Combat
+- Meteor Mash
+- Extreme Speed
 - Swords Dance
 
 Falinks @ Leftovers
@@ -17116,16 +17116,16 @@ Nature: Adamant
 - Facade
 - Protect
 
-Lucario @ Lucarionite
+Crabominable @ Crabominite
 Level: 65
-Ability: Justified
+Ability: Hyper Cutter
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Close Combat
-- Meteor Mash
-- Extreme Speed
-- Swords Dance
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Ice Hammer
+- Drain Punch
+- Knock Off
+- Crabhammer
 
 === TRAINER_BRAWLY_5 ===
 Name: BRAWLY
@@ -17159,15 +17159,15 @@ Nature: Careful
 - Bulk Up
 - Coaching
 
-Gallade @ Sitrus Berry
+Lucario @ Focus Sash
 Level: 66
-Ability: Sharpness
+Ability: Inner Focus
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
-Nature: Adamant
-- Sacred Sword
-- Psycho Cut
-- Night Slash
+Nature: Jolly
+- Close Combat
+- Meteor Mash
+- Extreme Speed
 - Swords Dance
 
 Falinks @ Leftovers
@@ -17192,16 +17192,16 @@ Nature: Adamant
 - Facade
 - Protect
 
-Lucario @ Lucarionite
+Crabominable @ Crabominite
 Level: 70
-Ability: Justified
+Ability: Hyper Cutter
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Close Combat
-- Meteor Mash
-- Extreme Speed
-- Swords Dance
+EVs: 252 HP / 252 Atk
+Nature: Adamant
+- Ice Hammer
+- Drain Punch
+- Knock Off
+- Crabhammer
 
 === TRAINER_WATTSON_3 ===
 Name: WATTSON

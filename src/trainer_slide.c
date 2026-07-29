@@ -119,7 +119,7 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         [TRAINER_NORMAN_1] =
         {
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("To think my own child has\npushed me this far…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Watch and learn, {PLAYER}!\nFeel the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Watch and learn firsthand!\nFeel the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WINONA_1] =
         {
@@ -139,8 +139,8 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         // Elite Four
         [TRAINER_SIDNEY] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can tell that you\nare the real deal!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("This is the last trick\nI've got up my sleeve!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can tell that you're the real\ndeal, kid! This is exhilarating!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I've got one last trick up my sleeve!\nYou know what to do, ABSOL!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_PHOEBE] =
         {
@@ -150,7 +150,7 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         [TRAINER_GLACIA] =
         {
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("The burning fire inside you\nis almost overwhelming…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Time to freeze you solid!\nIt's time, GLALIE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Time to freeze you solid!\nGive us your coldest, GLALIE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_DRAKE] =
         {

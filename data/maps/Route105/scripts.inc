@@ -47,8 +47,14 @@ Route105_EventScript_Foster::
 	end
 
 Route105_EventScript_Luis::
+	goto_if_set FLAG_IS_PLAYER_BOATING, Route105_EventScript_LuisAlt
 	trainerbattle_single TRAINER_LUIS, Route105_Text_LuisIntro, Route105_Text_LuisDefeated
 	msgbox Route105_Text_LuisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route105_EventScript_LuisAlt::
+	trainerbattle_single TRAINER_LUIS, Route105_Text_LuisIntroAlt, Route105_Text_LuisDefeated
+	msgbox Route105_Text_LuisPostBattleAlt, MSGBOX_AUTOCLOSE
 	end
 
 Route105_EventScript_Dominik::

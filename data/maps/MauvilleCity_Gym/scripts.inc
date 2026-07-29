@@ -75,6 +75,7 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 
 MauvilleCity_Gym_EventScript_Wattson::
 	lock
+	faceplayer
 	goto_if_unset FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_WattsonSecondGym
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
@@ -103,6 +104,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
+	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	call MauvilleCity_Gym_EventScript_SetLevelCap
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
@@ -122,7 +124,6 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
 	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
-	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	release
 	end
 

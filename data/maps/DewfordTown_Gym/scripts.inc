@@ -134,6 +134,7 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 
 DewfordTown_Gym_EventScript_Brawly::
 	lock
+	faceplayer
 	goto_if_unset FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_BrawlySecondGym
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
@@ -161,6 +162,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM
 	setflag FLAG_BADGE02_GET
+	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	call DewfordTown_Gym_EventScript_SetLevelCap
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setflag FLAG_HIDE_DEWFORD_TOWN_TENTACOOL
@@ -177,7 +179,6 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	delay 30
 	setflag FLAG_ENABLE_BRAWLY_MATCH_CALL
 	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
-	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	release
 	end
 

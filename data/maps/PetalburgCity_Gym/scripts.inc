@@ -373,6 +373,7 @@ PetalburgCity_Gym_EventScript_NormanMegaRing::
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
 	giveitem ITEM_MEGA_RING
 	msgbox PetalburgCity_Gym_Text_ExplainMegaRing, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	end
 
@@ -1270,26 +1271,22 @@ PetalburgCity_Gym_Text_NormanIntro:
 	.string "So, you did get four GYM BADGES.\p"
 	.string "Fine, as I promised, we will have\n"
 	.string "a POKéMON battle.\p"
-	.string "There is still one more thing that\n"
-	.string "I feel you should have though if we\l"
-	.string "are to battle on an even field.\p"
-	.string "{PLAYER}, you should take this.$"
+	.string "If we are to battle, though, I want\n"
+	.string "us both to go all-out at full power.\p"
+	.string "To that end, I have a gift for you.\n"
+	.string "This is for you, {PLAYER}.$"
 
 PetalburgCity_Gym_Text_ExplainMegaRing:
-	.string "This is a MEGA RING.\n"
-	.string "It's a very rare item first found\l"
-	.string "in a place called the KALOS REGION.\p"
-	.string "With that MEGA RING, a MEGA STONE\n"
-	.string "on one of your POKéMON, and a\l"
-	.string "strong bond, you and your POKéMON\l"
-	.string "can achieve MEGA EVOLUTION.\p"
+	.string "That right there is a MEGA RING.\n"
+	.string "With that MEGA RING, an appropriate\n"
+	.string "MEGA STONE, and a strong bond, you can\l"
+	.string "harness the power of MEGA EVOLUTION.\p"
 	.string "Only certain POKéMON are capable\n"
 	.string "of MEGA EVOLUTION, but the final\l"
-	.string "evolution of the POKéMON that PROF.\l"
-	.string "BIRCH gave you should be able to.\p"
-	.string "I will be using MEGA EVOLUTION\n"
-	.string "myself, so I would recommend giving\l"
-	.string "a MEGA STONE to one of your POKéMON.$"
+	.string "evolution of the POKéMON you got\l"
+	.string "from PROf. BIRCH is one of them.\p"
+	.string "I would recommend giving a MEGA\n"
+	.string "STONE to one of your POKéMON now.$"
 
 PetalburgCity_Gym_Text_NormanIntro2:
 	.string "I'm so happy that I can have\n"
