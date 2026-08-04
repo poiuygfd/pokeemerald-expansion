@@ -1907,5 +1907,85 @@ const struct Decoration gDecorations[] =
             "or a desk."),
         .tiles = DecorGfx_REGISTEEL_DOLL,
         .icon = {gDecorIcon_RegisteelDoll, gDecorIconPalette_RegisteelDoll},
+    },
+
+    [DECOR_NATU_DOLL] =
+    {
+        .id = DECOR_NATU_DOLL,
+        .name = _("NATU DOLL"),
+        .permission = DECORPERM_SPRITE,
+        .shape = DECORSHAPE_1x1,
+        .category = DECORCAT_DOLL,
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "A NATU doll.\n"
+            "Place it on a mat\n"
+            "or a desk."),
+        .tiles = DecorGfx_NATU_DOLL,
+        .icon = {NULL, NULL},
+    },
+
+    [DECOR_MAGNEMITE_DOLL] =
+    {
+        .id = DECOR_MAGNEMITE_DOLL,
+        .name = _("MAGNEMITE DOLL"),
+        .permission = DECORPERM_SPRITE,
+        .shape = DECORSHAPE_1x1,
+        .category = DECORCAT_DOLL,
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "A MAGNEMITE doll.\n"
+            "Place it on a mat\n"
+            "or a desk."),
+        .tiles = DecorGfx_MAGNEMITE_DOLL,
+        .icon = {NULL, NULL},
+    },
+
+    [DECOR_WOOPER_DOLL] =
+    {
+        .id = DECOR_WOOPER_DOLL,
+        .name = _("WOOPER DOLL"),
+        .permission = DECORPERM_SPRITE,
+        .shape = DECORSHAPE_1x1,
+        .category = DECORCAT_DOLL,
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "A WOOPER doll.\n"
+            "Place it on a mat\n"
+            "or a desk."),
+        .tiles = DecorGfx_WOOPER_DOLL,
+        .icon = {NULL, NULL},
+    },
+
+    [DECOR_PORYGON2_DOLL] =
+    {
+        .id = DECOR_PORYGON2_DOLL,
+        .name = _("PORYGON2 DOLL"),
+        .permission = DECORPERM_SPRITE,
+        .shape = DECORSHAPE_1x1,
+        .category = DECORCAT_DOLL,
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "A PORYGON2 doll.\n"
+            "Place it on a mat\n"
+            "or a desk."),
+        .tiles = DecorGfx_PORYGON2_DOLL,
+        .icon = {NULL, NULL},
+    },
+
+    [DECOR_MARIN_DOLL] =
+    {
+        .id = DECOR_MARIN_DOLL,
+        .name = _("MARIN DOLL"),
+        .permission = DECORPERM_SPRITE,
+        .shape = DECORSHAPE_1x1,
+        .category = DECORCAT_DOLL,
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "A MARIN doll.\n"
+            "Place it on a mat\n"
+            "or a desk."),
+        .tiles = DecorGfx_MARIN_DOLL,
+        .icon = {NULL, NULL},
     }
 };

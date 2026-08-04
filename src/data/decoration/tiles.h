@@ -641,3 +641,23 @@ const u16 DecorGfx_REGICE_DOLL[] = {
 const u16 DecorGfx_REGISTEEL_DOLL[] = {
     OBJ_EVENT_GFX_BIG_REGISTEEL_DOLL
 };
+
+const u16 DecorGfx_NATU_DOLL[] = {
+    OBJ_EVENT_GFX_NATU_DOLL
+};
+
+const u16 DecorGfx_MAGNEMITE_DOLL[] = {
+    OBJ_EVENT_GFX_MAGNEMITE_DOLL
+};
+
+const u16 DecorGfx_WOOPER_DOLL[] = {
+    OBJ_EVENT_GFX_WOOPER_DOLL
+};
+
+const u16 DecorGfx_PORYGON2_DOLL[] = {
+    OBJ_EVENT_GFX_PORYGON2_DOLL
+};
+
+const u16 DecorGfx_MARIN_DOLL[] = {
+    OBJ_EVENT_GFX_MARIN_DOLL
+};

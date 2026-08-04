@@ -248,23 +248,25 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor::
 	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_KissCushion
 	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_SmoochumDoll
 	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_TogepiDoll
-	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_MeowthDoll
-	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_ClefairyDoll
-	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_DittoDoll
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_WooperDoll
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_MeowthDoll
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_ClefairyDoll
 	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_LotadDoll
 	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_SeedotDoll
-	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_CyndaquilDoll
-	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_ChikoritaDoll
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_ChikoritaDoll
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_CyndaquilDoll
 	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_TotodileDoll
-	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_LaprasDoll
-	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_SnorlaxDoll
-	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_VenusaurDoll
-	case 15, BattleFrontier_ExchangeServiceCorner_EventScript_CharizardDoll
-	case 16, BattleFrontier_ExchangeServiceCorner_EventScript_BlastoiseDoll
-	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_RegirockDoll
-	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_RegiceDoll
-	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_RegisteelDoll
-	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_DittoDoll
+	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_Porygon2Doll
+	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_LaprasDoll
+	case 15, BattleFrontier_ExchangeServiceCorner_EventScript_SnorlaxDoll
+	case 16, BattleFrontier_ExchangeServiceCorner_EventScript_VenusaurDoll
+	case 17, BattleFrontier_ExchangeServiceCorner_EventScript_CharizardDoll
+	case 18, BattleFrontier_ExchangeServiceCorner_EventScript_BlastoiseDoll
+	case 19, BattleFrontier_ExchangeServiceCorner_EventScript_RegirockDoll
+	case 20, BattleFrontier_ExchangeServiceCorner_EventScript_RegiceDoll
+	case 21, BattleFrontier_ExchangeServiceCorner_EventScript_RegisteelDoll
+	case 22, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -291,16 +293,16 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TogepiDoll::
 	setitemandprice DECOR_TOGEPI_DOLL, 24
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
+BattleFrontier_ExchangeServiceCorner_EventScript_WooperDoll::
+	setitemandprice DECOR_WOOPER_DOLL, 24
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
+
 BattleFrontier_ExchangeServiceCorner_EventScript_MeowthDoll::
 	setitemandprice DECOR_MEOWTH_DOLL, 24
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
 BattleFrontier_ExchangeServiceCorner_EventScript_ClefairyDoll::
 	setitemandprice DECOR_CLEFAIRY_DOLL, 24
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
-
-BattleFrontier_ExchangeServiceCorner_EventScript_DittoDoll::
-	setitemandprice DECOR_DITTO_DOLL, 24
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
 BattleFrontier_ExchangeServiceCorner_EventScript_LotadDoll::
@@ -311,16 +313,24 @@ BattleFrontier_ExchangeServiceCorner_EventScript_SeedotDoll::
 	setitemandprice DECOR_SEEDOT_DOLL, 24
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
-BattleFrontier_ExchangeServiceCorner_EventScript_CyndaquilDoll::
-	setitemandprice DECOR_CYNDAQUIL_DOLL, 32
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
-
 BattleFrontier_ExchangeServiceCorner_EventScript_ChikoritaDoll::
 	setitemandprice DECOR_CHIKORITA_DOLL, 32
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
+BattleFrontier_ExchangeServiceCorner_EventScript_CyndaquilDoll::
+	setitemandprice DECOR_CYNDAQUIL_DOLL, 32
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
+
 BattleFrontier_ExchangeServiceCorner_EventScript_TotodileDoll::
 	setitemandprice DECOR_TOTODILE_DOLL, 32
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
+
+BattleFrontier_ExchangeServiceCorner_EventScript_DittoDoll::
+	setitemandprice DECOR_DITTO_DOLL, 32
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Porygon2Doll::
+	setitemandprice DECOR_PORYGON2_DOLL, 32
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_PurchaseDecor
 
 BattleFrontier_ExchangeServiceCorner_EventScript_LaprasDoll::
@@ -845,16 +855,16 @@ BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc::
 	.string "A TOGEPI DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
+BattleFrontier_ExchangeServiceCorner_Text_WooperDollDesc::
+	.string "A WOOPER DOLL.\n"
+	.string "Place it on a mat or a desk.$"
+
 BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc::
 	.string "A MEOWTH DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc::
 	.string "A CLEFAIRY DOLL.\n"
-	.string "Place it on a mat or a desk.$"
-
-BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc::
-	.string "A DITTO DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_LotadDollDesc::
@@ -865,16 +875,24 @@ BattleFrontier_ExchangeServiceCorner_Text_SeedotDollDesc::
 	.string "A SEEDOT DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
-BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc::
-	.string "A CYNDAQUIL DOLL.\n"
-	.string "Place it on a mat or a desk.$"
-
 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc::
 	.string "A CHIKORITA DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
+BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc::
+	.string "A CYNDAQUIL DOLL.\n"
+	.string "Place it on a mat or a desk.$"
+
 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc::
 	.string "A TOTODILE DOLL.\n"
+	.string "Place it on a mat or a desk.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc::
+	.string "A DITTO DOLL.\n"
+	.string "Place it on a mat or a desk.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_Porygon2DollDesc::
+	.string "A PORYGON2 DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_LaprasDollDesc::

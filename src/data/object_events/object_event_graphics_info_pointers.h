@@ -73,12 +73,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Greta;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spenser;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Noland;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lucy;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDoll;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NatuDoll;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagnemiteDoll;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WooperDoll;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Porygon2Doll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedSquirtleDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedWooperDoll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPikachuDoll;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPorygon2Doll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTree;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MartEmployee;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RooftopSaleWoman;
@@ -239,6 +239,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldBrendan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmeraldMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VoidAltar;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarinDoll;
 
 // FRLG Object Events
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal;
@@ -515,12 +516,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SPENSER] =                  &gObjectEventGraphicsInfo_Spenser,
     [OBJ_EVENT_GFX_NOLAND] =                   &gObjectEventGraphicsInfo_Noland,
     [OBJ_EVENT_GFX_LUCY] =                     &gObjectEventGraphicsInfo_Lucy,
-    [OBJ_EVENT_GFX_UNUSED_NATU_DOLL] =         &gObjectEventGraphicsInfo_UnusedNatuDoll,
-    [OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL] =    &gObjectEventGraphicsInfo_UnusedMagnemiteDoll,
+    [OBJ_EVENT_GFX_NATU_DOLL] =                &gObjectEventGraphicsInfo_NatuDoll,
+    [OBJ_EVENT_GFX_MAGNEMITE_DOLL] =           &gObjectEventGraphicsInfo_MagnemiteDoll,
+    [OBJ_EVENT_GFX_WOOPER_DOLL] =              &gObjectEventGraphicsInfo_WooperDoll,
+    [OBJ_EVENT_GFX_PORYGON2_DOLL] =            &gObjectEventGraphicsInfo_Porygon2Doll,
     [OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL] =     &gObjectEventGraphicsInfo_UnusedSquirtleDoll,
-    [OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL] =       &gObjectEventGraphicsInfo_UnusedWooperDoll,
     [OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL] =      &gObjectEventGraphicsInfo_UnusedPikachuDoll,
-    [OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL] =     &gObjectEventGraphicsInfo_UnusedPorygon2Doll,
     [OBJ_EVENT_GFX_CUTTABLE_TREE] =            &gObjectEventGraphicsInfo_CuttableTree,
     [OBJ_EVENT_GFX_MART_EMPLOYEE] =            &gObjectEventGraphicsInfo_MartEmployee,
     [OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN] =       &gObjectEventGraphicsInfo_RooftopSaleWoman,
@@ -685,6 +686,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_VOID_ALTAR] =               &gObjectEventGraphicsInfo_VoidAltar,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
+    [OBJ_EVENT_GFX_MARIN_DOLL] =               &gObjectEventGraphicsInfo_MarinDoll,
     [OBJ_EVENT_GFX_RS_BRENDAN_ACRO_BIKE] =     &gObjectEventGraphicsInfo_RubySapphireBrendanBike,
     [OBJ_EVENT_GFX_RS_MAY_ACRO_BIKE] =         &gObjectEventGraphicsInfo_RubySapphireMayBike,
     [OBJ_EVENT_GFX_E_BRENDAN_ACRO_BIKE] =      &gObjectEventGraphicsInfo_EmeraldBrendanBike,

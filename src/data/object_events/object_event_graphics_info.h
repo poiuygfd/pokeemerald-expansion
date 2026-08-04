@@ -1348,7 +1348,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldM
     .images = sPicTable_MauvilleOldMan2,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NatuDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1363,10 +1363,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedNatuDoll = {
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_UnusedNatuDoll,
+    .images = sPicTable_NatuDoll,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDoll = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagnemiteDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
@@ -1381,7 +1381,43 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMagnemiteDol
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
-    .images = sPicTable_UnusedMagnemiteDoll,
+    .images = sPicTable_MagnemiteDoll,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WooperDoll = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 128,
+    .width = 16,
+    .height = 16,
+    .paletteSlot = PALSLOT_NPC_3,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x16,
+    .subspriteTables = sOamTables_16x16,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_WooperDoll,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Porygon2Doll = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 128,
+    .width = 16,
+    .height = 16,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x16,
+    .subspriteTables = sOamTables_16x16,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_Porygon2Doll,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedSquirtleDoll = {
@@ -1402,24 +1438,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedSquirtleDoll
     .images = sPicTable_UnusedSquirtleDoll,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedWooperDoll = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 128,
-    .width = 16,
-    .height = 16,
-    .paletteSlot = PALSLOT_NPC_3,
-    .shadowSize = SHADOW_SIZE_S,
-    .inanimate = TRUE,
-    .compressed = FALSE,
-    .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = sOamTables_16x16,
-    .anims = sAnimTable_Inanimate,
-    .images = sPicTable_UnusedWooperDoll,
-};
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPikachuDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
@@ -1436,24 +1454,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPikachuDoll 
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
     .images = sPicTable_UnusedPikachuDoll,
-};
-
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedPorygon2Doll = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 128,
-    .width = 16,
-    .height = 16,
-    .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = SHADOW_SIZE_S,
-    .inanimate = TRUE,
-    .compressed = FALSE,
-    .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = sOamTables_16x16,
-    .anims = sAnimTable_Inanimate,
-    .images = sPicTable_UnusedPorygon2Doll,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableTree = {
@@ -4521,6 +4521,24 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree = {
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
     .images = sPicTable_ApricornTree,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarinDoll = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 128,
+    .width = 16,
+    .height = 16,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x16,
+    .subspriteTables = sOamTables_16x16,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_MarinDoll,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrendanBike = {
