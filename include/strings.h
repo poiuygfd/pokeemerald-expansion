@@ -582,7 +582,7 @@ extern const u8 BattleFrontier_Lounge7_Text_IcyWindDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_RoostDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_PollenPuffDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_NastyPlotDesc[];
-extern const u8 BattleFrontier_Lounge7_Text_WillOWispDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_KnockOffDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_SnoreDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_MudSlapDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_EndureDesc[];

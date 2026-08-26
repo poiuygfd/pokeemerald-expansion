@@ -76,8 +76,12 @@
     F(CHILLING_WATER) \
     F(ACROBATICS) \
     F(POWER_UP_PUNCH) \
-    F(SUPERCELL_SLAM)
-
+    F(SUPERCELL_SLAM) \
+    F(WILL_O_WISP) \
+    F(FALSE_SWIPE) \
+    F(LUNGE) \
+    F(FLASH_FREEZE) \
+    F(MUDDY_WATER)
 
 #define FOREACH_HM(F) \
     F(CUT) \

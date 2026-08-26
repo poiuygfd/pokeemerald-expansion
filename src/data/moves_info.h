@@ -22055,6 +22055,30 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_BubbleBlast,
     },
 
+    [MOVE_FLASH_FREEZE] =
+    {
+        .name = COMPOUND_STRING("Flash Freeze"),
+        .description = COMPOUND_STRING(
+            "Rapidly chills the air\n"
+            "to inflict frostbite."),
+        .effect = EFFECT_NON_VOLATILE_STATUS,
+        .power = 0,
+        .type = TYPE_ICE,
+        .accuracy = 85,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .nonVolatileStatus = MOVE_EFFECT_FREEZE_OR_FROSTBITE },
+        .zMove = { .effect = Z_EFFECT_SPATK_UP_1 },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_IcyWind,
+    },
+
     [MOVE_BEAN_BEAM] =
     {
         .name = COMPOUND_STRING("Bean Beam"),

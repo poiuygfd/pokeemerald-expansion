@@ -7023,7 +7023,8 @@
       "MOVE_WHIRLPOOL",
       "MOVE_MUDDY_WATER",
       "MOVE_TRIPLE_AXEL",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_HORN_DRILL",
@@ -7156,7 +7157,8 @@
       "MOVE_MUDDY_WATER",
       "MOVE_TRIPLE_AXEL",
       "MOVE_CURSE",
-      "MOVE_ALLURING_VOICE"
+      "MOVE_ALLURING_VOICE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BELCH",
@@ -7659,7 +7661,8 @@
       "MOVE_TERA_BLAST",
       "MOVE_ICICLE_SPEAR",
       "MOVE_WEATHER_BALL",
-      "MOVE_WHIRLPOOL"
+      "MOVE_WHIRLPOOL",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_AQUA_RING",
@@ -7777,7 +7780,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_SLUDGE_WAVE",
       "MOVE_SKITTER_SMACK",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ASTONISH",
@@ -7910,7 +7914,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_SLUDGE_WAVE",
       "MOVE_SKITTER_SMACK",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ASTONISH",
@@ -8060,7 +8065,8 @@
       "MOVE_SLUDGE_WAVE",
       "MOVE_SKITTER_SMACK",
       "MOVE_CURSE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ASTONISH",
@@ -10814,7 +10820,8 @@
       "MOVE_CURSE",
       "MOVE_DRAGON_CHEER",
       "MOVE_ALLURING_VOICE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_HORN_DRILL",
@@ -11851,7 +11858,8 @@
       "MOVE_DUAL_WINGBEAT",
       "MOVE_DOUBLE_EDGE",
       "MOVE_TRIPLE_AXEL",
-      "MOVE_FEATHER_DANCE"
+      "MOVE_FEATHER_DANCE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [],
     "TutorMoves": []
@@ -12923,7 +12931,8 @@
       "MOVE_DRAGON_CHEER",
       "MOVE_ALLURING_VOICE",
       "MOVE_PSYCHIC_NOISE",
-      "MOVE_UPPER_HAND"
+      "MOVE_UPPER_HAND",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [],
     "TutorMoves": []
@@ -20336,7 +20345,8 @@
       "MOVE_ICICLE_SPEAR",
       "MOVE_DOUBLE_EDGE",
       "MOVE_ENDEAVOR",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ANCIENT_POWER",
@@ -20458,7 +20468,8 @@
       "MOVE_DOUBLE_EDGE",
       "MOVE_ENDEAVOR",
       "MOVE_THROAT_CHOP",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ANCIENT_POWER",
@@ -20554,7 +20565,8 @@
       "MOVE_DUAL_WINGBEAT",
       "MOVE_ENDEAVOR",
       "MOVE_TRIPLE_AXEL",
-      "MOVE_FEATHER_DANCE"
+      "MOVE_FEATHER_DANCE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_AURORA_BEAM",
@@ -22541,7 +22553,8 @@
       "MOVE_SCALD",
       "MOVE_WEATHER_BALL",
       "MOVE_DOUBLE_EDGE",
-      "MOVE_WHIRLPOOL"
+      "MOVE_WHIRLPOOL",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [],
     "TutorMoves": []
@@ -31793,7 +31806,8 @@
       "MOVE_PAIN_SPLIT",
       "MOVE_PSYCH_UP",
       "MOVE_SKITTER_SMACK",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_CONFUSE_RAY",
@@ -31915,7 +31929,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_SKITTER_SMACK",
       "MOVE_THROAT_CHOP",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_CONFUSE_RAY",
@@ -32022,7 +32037,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_FUTURE_SIGHT",
       "MOVE_SKITTER_SMACK",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_HAZE",
@@ -32160,7 +32176,8 @@
       "MOVE_PSYCH_UP",
       "MOVE_FUTURE_SIGHT",
       "MOVE_SKITTER_SMACK",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_HAZE",
@@ -32525,7 +32542,8 @@
       "MOVE_TERA_BLAST",
       "MOVE_SPITE",
       "MOVE_ICICLE_SPEAR",
-      "MOVE_WEATHER_BALL"
+      "MOVE_WEATHER_BALL",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BLOCK",
@@ -32648,7 +32666,8 @@
       "MOVE_SPITE",
       "MOVE_GYRO_BALL",
       "MOVE_ICICLE_SPEAR",
-      "MOVE_WEATHER_BALL"
+      "MOVE_WEATHER_BALL",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BLOCK",
@@ -33660,7 +33679,8 @@
       "MOVE_GRAVITY",
       "MOVE_ICICLE_SPEAR",
       "MOVE_FOCUS_PUNCH",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [],
     "TutorMoves": []
@@ -42603,7 +42623,8 @@
       "MOVE_ENDEAVOR",
       "MOVE_THROAT_CHOP",
       "MOVE_CURSE",
-      "MOVE_HARD_PRESS"
+      "MOVE_HARD_PRESS",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_ANCIENT_POWER",
@@ -43258,7 +43279,8 @@
       "MOVE_FUTURE_SIGHT",
       "MOVE_SKITTER_SMACK",
       "MOVE_CURSE",
-      "MOVE_HARD_PRESS"
+      "MOVE_HARD_PRESS",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_HAZE",
@@ -43409,7 +43431,8 @@
       "MOVE_PAIN_SPLIT",
       "MOVE_PSYCH_UP",
       "MOVE_TRIPLE_AXEL",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BLOCK",
@@ -90476,7 +90499,8 @@
       "MOVE_ENDEAVOR",
       "MOVE_TRIPLE_AXEL",
       "MOVE_THROAT_CHOP",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_COUNTER",
@@ -90646,7 +90670,8 @@
       "MOVE_ENDEAVOR",
       "MOVE_TRIPLE_AXEL",
       "MOVE_THROAT_CHOP",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_COUNTER",
@@ -90767,7 +90792,8 @@
       "MOVE_WEATHER_BALL",
       "MOVE_PAIN_SPLIT",
       "MOVE_PSYCH_UP",
-      "MOVE_DOUBLE_EDGE"
+      "MOVE_DOUBLE_EDGE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BABY_DOLL_EYES",
@@ -90913,7 +90939,8 @@
       "MOVE_PAIN_SPLIT",
       "MOVE_PSYCH_UP",
       "MOVE_DOUBLE_EDGE",
-      "MOVE_TRIPLE_AXEL"
+      "MOVE_TRIPLE_AXEL",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [
       "MOVE_BABY_DOLL_EYES",
@@ -92947,7 +92974,8 @@
       "MOVE_DUAL_WINGBEAT",
       "MOVE_FUTURE_SIGHT",
       "MOVE_EXPANDING_FORCE",
-      "MOVE_PSYCHIC_NOISE"
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_FLASH_FREEZE"
     ],
     "EggMoves": [],
     "TutorMoves": []

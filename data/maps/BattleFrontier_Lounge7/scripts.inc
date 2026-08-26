@@ -44,7 +44,7 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove::
 	case 14, BattleFrontier_Lounge7_EventScript_Roost
 	case 15, BattleFrontier_Lounge7_EventScript_PollenPuff
 	case 16, BattleFrontier_Lounge7_EventScript_NastyPlot
-	case 17, BattleFrontier_Lounge7_EventScript_WillOWisp
+	case 17, BattleFrontier_Lounge7_EventScript_KnockOff
 	case 18, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
 	end
@@ -75,7 +75,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove::
 	case 14, BattleFrontier_Lounge7_EventScript_Roost
 	case 15, BattleFrontier_Lounge7_EventScript_PollenPuff
 	case 16, BattleFrontier_Lounge7_EventScript_NastyPlot
-	case 17, BattleFrontier_Lounge7_EventScript_WillOWisp
+	case 17, BattleFrontier_Lounge7_EventScript_KnockOff
 	case 18, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect
 	end
@@ -182,9 +182,9 @@ BattleFrontier_Lounge7_EventScript_NastyPlot::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_WillOWisp::
+BattleFrontier_Lounge7_EventScript_KnockOff::
 	setvar VAR_0x8008, 32
-	setvar VAR_0x8005, MOVE_WILL_O_WISP
+	setvar VAR_0x8005, MOVE_KNOCK_OFF
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
@@ -811,10 +811,10 @@ BattleFrontier_Lounge7_Text_NastyPlotDesc::
 	.string "raise the user's\n"
 	.string "SPECIAL ATTACK.$"
 
-BattleFrontier_Lounge7_Text_WillOWispDesc::
-	.string "Ghostly flames\n"
-	.string "that inflict a\n"
-	.string "burn on the foe.$"
+BattleFrontier_Lounge7_Text_KnockOffDesc::
+	.string "Slaps down the\n"
+	.string "target's held\n"
+	.string "item.$"
 
 BattleFrontier_Lounge7_Text_SnoreDesc::
 	.string "A loud attack\n"

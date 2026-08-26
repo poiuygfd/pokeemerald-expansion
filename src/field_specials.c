@@ -2702,7 +2702,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("ROOST{CLEAR_TO 78}32BP"),
         COMPOUND_STRING("POLLEN PUFF{CLEAR_TO 78}32BP"),
         COMPOUND_STRING("NASTY PLOT{CLEAR_TO 78}32BP"),
-        COMPOUND_STRING("WILL-O-WISP{CLEAR_TO 78}32BP"),
+        COMPOUND_STRING("KNOCK OFF{CLEAR_TO 78}32BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_2] =
@@ -3328,7 +3328,7 @@ static void ShowBattleFrontierTutorMoveDescription(enum ScrollMulti menu, u16 se
         BattleFrontier_Lounge7_Text_RoostDesc,
         BattleFrontier_Lounge7_Text_PollenPuffDesc,
         BattleFrontier_Lounge7_Text_NastyPlotDesc,
-        BattleFrontier_Lounge7_Text_WillOWispDesc,
+        BattleFrontier_Lounge7_Text_KnockOffDesc,
         gText_Exit,
     };
 

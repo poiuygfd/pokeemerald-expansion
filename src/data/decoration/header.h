@@ -1260,7 +1260,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A CYNDAQUIL doll.\n"
             "Place it on a mat\n"
@@ -1276,7 +1276,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A CHIKORITA doll.\n"
             "Place it on a mat\n"
@@ -1292,7 +1292,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A TOTODILE doll.\n"
             "Place it on a mat\n"
@@ -1356,7 +1356,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A DITTO doll.\n"
             "Place it on a mat\n"
@@ -1388,7 +1388,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A TREECKO doll.\n"
             "Place it on a mat\n"
@@ -1404,7 +1404,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A TORCHIC doll.\n"
             "Place it on a mat\n"
@@ -1420,7 +1420,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A MUDKIP doll.\n"
             "Place it on a mat\n"
@@ -1436,7 +1436,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A DUSKULL doll.\n"
             "Place it on a mat\n"
@@ -1468,7 +1468,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A BALTOY doll.\n"
             "Place it on a mat\n"
@@ -1484,7 +1484,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A KECLEON doll.\n"
             "Place it on a mat\n"
@@ -1516,7 +1516,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A SKITTY doll.\n"
             "Place it on a mat\n"
@@ -1532,7 +1532,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A SWABLU doll.\n"
             "Place it on a mat\n"
@@ -1548,7 +1548,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A GULPIN doll.\n"
             "Place it on a mat\n"
@@ -1916,7 +1916,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A NATU doll.\n"
             "Place it on a mat\n"
@@ -1932,7 +1932,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A MAGNEMITE doll.\n"
             "Place it on a mat\n"
@@ -1964,7 +1964,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A PORYGON2 doll.\n"
             "Place it on a mat\n"
@@ -1980,7 +1980,7 @@ const struct Decoration gDecorations[] =
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
-        .price = 3000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A MARIN doll.\n"
             "Place it on a mat\n"
