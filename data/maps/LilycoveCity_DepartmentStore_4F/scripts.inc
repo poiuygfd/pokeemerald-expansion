@@ -25,11 +25,6 @@ LilycoveCity_DepartmentStore_4F_EventScript_ClerkLeft::
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
-	.2byte ITEM_TM_PROTECT
-	.2byte ITEM_TM_SUBSTITUTE
-	.2byte ITEM_TM_REFLECT
-	.2byte ITEM_TM_LIGHT_SCREEN
-	.2byte ITEM_TM_SAFEGUARD
 	.2byte ITEM_TM_FIRE_BLAST
 	.2byte ITEM_TM_THUNDER
 	.2byte ITEM_TM_BLIZZARD
@@ -51,16 +46,13 @@ LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
-	.2byte ITEM_FIRE_STONE
-	.2byte ITEM_WATER_STONE
-	.2byte ITEM_LEAF_STONE
-	.2byte ITEM_THUNDER_STONE
-	.2byte ITEM_ICE_STONE
-	.2byte ITEM_SHINY_STONE
-	.2byte ITEM_SUN_STONE
-	.2byte ITEM_MOON_STONE
-	.2byte ITEM_DAWN_STONE
-	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_SUBSTITUTE
+	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_WILL_O_WISP
+	.2byte ITEM_TM_FLASH_FREEZE
+	.2byte ITEM_TM_SAFEGUARD
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
@@ -77,7 +69,6 @@ LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
 	.string "different kinds.$"
 
 LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:
-	.string "The stones sold here are pretty…\n"
-	.string "I've heard they cause an effect on\l"
-	.string "certain species of POKéMON.$"
+	.string "I'd like to get all the different TMs,\n"
+	.string "but a POKéMON learns only four moves.$"
 

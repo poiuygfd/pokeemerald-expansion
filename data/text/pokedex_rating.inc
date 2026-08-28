@@ -58,7 +58,7 @@ gBirchDexRatingText_LessThan100::
 
 gBirchDexRatingText_LessThan110::
 	.string "You've finally reached\n"
-	.string "the 100-kind mark.\p"
+	.string "the 250-kind mark.\p"
 	.string "This is an impressive POKéDEX!$"
 
 gBirchDexRatingText_LessThan120::

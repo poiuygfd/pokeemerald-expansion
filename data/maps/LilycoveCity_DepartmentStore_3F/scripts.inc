@@ -6,6 +6,30 @@ LilycoveCity_DepartmentStore_3F_EventScript_ClerkLeft::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
+	pokemart LilycoveCity_DepartmentStore_3F_Pokemart_EvoStones
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStore_3F_Pokemart_EvoStones:
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_DUSK_STONE
+	pokemartlistend
+
+LilycoveCity_DepartmentStore_3F_EventScript_ClerkCenter::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
 	pokemart LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -72,6 +96,7 @@ LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance:
 	.string "DEFENSE with IRON, or SP. DEF with ZINC.$"
 
 LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon:
-	.string "I gave a CARBOS to my POKéMON,\n"
-	.string "and its SPEED went up.$"
+	.string "The stones sold here are pretty…\n"
+	.string "I've heard they have an effect on\l"
+	.string "certain species of POKéMON.$"
 

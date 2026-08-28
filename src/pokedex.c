@@ -4619,6 +4619,21 @@ bool16 HasAllRegionalMons(void)
     return HasAllHoennMons();
 }
 
+bool16 Has100HoennMons(void)
+{
+    u16 count = 0;
+    u16 i;
+
+    for (i = 0; i < HOENN_DEX_COUNT - 1; i++)
+    {
+        if (GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+            count++;
+        if (count == 100)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 bool16 HasAllHoennMons(void)
 {
     u32 i, j;

@@ -13326,7 +13326,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TM_WILL_O_WISP] =
     {
         .name = ITEM_NAME("TM76"),
-        .price = 3000,
+        .price = 40000,
         .description = COMPOUND_STRING(
             "Ghostly wisps are\n"
             "sent at the foe to\n"
@@ -13368,7 +13368,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TM_FLASH_FREEZE] =
     {
         .name = ITEM_NAME("TM79"),
-        .price = 3000,
+        .price = 40000,
         .description = COMPOUND_STRING(
             "Rapidly chills air\n"
             "to cause frostbite\n"

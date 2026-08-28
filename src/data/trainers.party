@@ -6038,24 +6038,13 @@ Ability: Marvel Scale
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpD
 Nature: Modest
-- Water Pulse
+- Muddy Water
 - Ice Beam
 - Recover
 - Rain Dance
 
-Kingdra @ Chesto Berry
-Level: 44
-Ability: Swift Swim
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 250 HP / 250 SpA
-Nature: Modest
-- Water Pulse
-- Dragon Pulse
-- Double Team
-- Rest
-
 Gyarados @ Wacan Berry
-Level: 45
+Level: 43
 Ability: Intimidate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -6064,6 +6053,17 @@ Nature: Adamant
 - Crunch
 - Earthquake
 - Dragon Dance
+
+Kingdra @ Chesto Berry
+Level: 44
+Ability: Swift Swim
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
@@ -18658,7 +18658,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 52
+Level: 55
 Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
@@ -18668,14 +18668,16 @@ Nature: Jolly
 - Rest
 - Sleep Talk
 
-Tatsugiri-Curly @ Life Orb
-Level: 52
+Tatsugiri-Curly @ Tatsugirinite
+Level: 55
 Ability: Commander
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Modest
-- Hydro Pump
+- Muddy Water
+- Ice Beam
 - Dragon Pulse
+- Nasty Plot
 
 Marin @ Focus Sash
 Level: 51
@@ -18694,24 +18696,13 @@ Ability: Marvel Scale
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
 Nature: Modest
-- Water Pulse
+- Muddy Water
 - Ice Beam
 - Recover
 - Rain Dance
 
-Kingdra @ Chesto Berry
-Level: 54
-Ability: Swift Swim
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Water Pulse
-- Dragon Pulse
-- Double Team
-- Rest
-
-Gyarados @ Gyaradosite
-Level: 55
+Gyarados @ Wacan Berry
+Level: 52
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
@@ -18720,6 +18711,17 @@ Nature: Adamant
 - Crunch
 - Earthquake
 - Dragon Dance
+
+Kingdra @ Chesto Berry
+Level: 54
+Ability: Swift Swim
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
 
 === TRAINER_JUAN_3 ===
 Name: JUAN
@@ -18732,7 +18734,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 57
+Level: 60
 Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
@@ -18742,14 +18744,16 @@ Nature: Jolly
 - Rest
 - Sleep Talk
 
-Tatsugiri-Curly @ Life Orb
-Level: 57
+Tatsugiri-Curly @ Tatsugirinite
+Level: 60
 Ability: Commander
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Modest
-- Hydro Pump
+- Muddy Water
+- Ice Beam
 - Dragon Pulse
+- Nasty Plot
 
 Marin @ Focus Sash
 Level: 56
@@ -18768,24 +18772,13 @@ Ability: Marvel Scale
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
 Nature: Modest
-- Water Pulse
+- Muddy Water
 - Ice Beam
 - Recover
 - Rain Dance
 
-Kingdra @ Chesto Berry
-Level: 59
-Ability: Swift Swim
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Water Pulse
-- Dragon Pulse
-- Double Team
-- Rest
-
-Gyarados @ Gyaradosite
-Level: 60
+Gyarados @ Wacan Berry
+Level: 57
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
@@ -18794,6 +18787,17 @@ Nature: Adamant
 - Crunch
 - Earthquake
 - Dragon Dance
+
+Kingdra @ Chesto Berry
+Level: 59
+Ability: Swift Swim
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
 
 === TRAINER_JUAN_4 ===
 Name: JUAN
@@ -18806,7 +18810,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 62
+Level: 65
 Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
@@ -18816,14 +18820,16 @@ Nature: Jolly
 - Rest
 - Sleep Talk
 
-Tatsugiri-Curly @ Life Orb
-Level: 62
+Tatsugiri-Curly @ Tatsugirinite
+Level: 65
 Ability: Commander
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Modest
-- Hydro Pump
+- Muddy Water
+- Ice Beam
 - Dragon Pulse
+- Nasty Plot
 
 Marin @ Focus Sash
 Level: 61
@@ -18842,24 +18848,13 @@ Ability: Marvel Scale
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
 Nature: Modest
-- Water Pulse
+- Muddy Water
 - Ice Beam
 - Recover
 - Rain Dance
 
-Kingdra @ Chesto Berry
-Level: 64
-Ability: Swift Swim
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Water Pulse
-- Dragon Pulse
-- Double Team
-- Rest
-
-Gyarados @ Gyaradosite
-Level: 65
+Gyarados @ Wacan Berry
+Level: 62
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
@@ -18868,6 +18863,17 @@ Nature: Adamant
 - Crunch
 - Earthquake
 - Dragon Dance
+
+Kingdra @ Chesto Berry
+Level: 64
+Ability: Swift Swim
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
 
 === TRAINER_JUAN_5 ===
 Name: JUAN
@@ -18880,7 +18886,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 67
+Level: 70
 Ability: Unaware
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
@@ -18890,14 +18896,16 @@ Nature: Jolly
 - Rest
 - Sleep Talk
 
-Tatsugiri-Curly @ Life Orb
-Level: 67
+Tatsugiri-Curly @ Tatsugirinite
+Level: 70
 Ability: Commander
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Modest
-- Hydro Pump
+- Muddy Water
+- Ice Beam
 - Dragon Pulse
+- Nasty Plot
 
 Marin @ Focus Sash
 Level: 66
@@ -18916,24 +18924,13 @@ Ability: Marvel Scale
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD
 Nature: Modest
-- Water Pulse
+- Muddy Water
 - Ice Beam
 - Recover
 - Rain Dance
 
-Kingdra @ Chesto Berry
-Level: 69
-Ability: Swift Swim
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Water Pulse
-- Dragon Pulse
-- Double Team
-- Rest
-
-Gyarados @ Gyaradosite
-Level: 70
+Gyarados @ Wacan Berry
+Level: 67
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
@@ -18942,6 +18939,17 @@ Nature: Adamant
 - Crunch
 - Earthquake
 - Dragon Dance
+
+Kingdra @ Chesto Berry
+Level: 69
+Ability: Swift Swim
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
 
 === TRAINER_ANGELO ===
 Name: ANGELO

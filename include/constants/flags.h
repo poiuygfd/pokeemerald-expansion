@@ -1231,7 +1231,7 @@
 #define FLAG_RECEIVED_SLOWBRONITE_G                                 0x496 // Galarian Slowbro Mega Stone
 #define FLAG_ITEM_MT_PYRE_MEDICHAMITE                               0x497 // Medicham Mega Stone
 #define FLAG_ITEM_METEOR_FALLS_ALTARIANITE                          0x498 // Altaria Mega Stone
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
+#define FLAG_ITEM_ROUTE_107_TM03                                    0x499 // Route 107 TM Water Pulse
 #define FLAG_ITEM_SAFARI_ZONE_STARAPTITE                            0x49A // Staraptor Mega Stone
 #define FLAG_ITEM_MIRAGE_TOWER_AUSPICIOUS_ARMOR                     0x49B // Armarouge Evo Item
 #define FLAG_ITEM_MIRAGE_TOWER_MALICIOUS_ARMOR                      0x49C // Ceruledge Evo Item

@@ -33,10 +33,13 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 	@ 3: Received starter in lab
 	@ 4: Defeated rival on Route 103
 	@ 5: Received pokedex
+	@ 6: Entered lab after catching 100 Hoenn mons
+	@ 7: Recieved False Swipe from Birch
 
 LittlerootTown_ProfessorBirchsLab_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call ProfBirch_EventScript_UpdateLocation
+	goto_if_eq VAR_BIRCH_LAB_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForFalseSwipe
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForShinyCharm
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetKalosStarterLayout
@@ -44,6 +47,16 @@ LittlerootTown_ProfessorBirchsLab_OnTransition:
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetKalosStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForFalseSwipe::
+	specialvar VAR_RESULT, Has100HoennMons
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_ReadyForFalseSwipe
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterKalosStarterLayout
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReadyForFalseSwipe::
+	setvar VAR_BIRCH_LAB_STATE, 6
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForShinyCharm::
@@ -371,6 +384,16 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedKalosStarter::
 	waitfanfare
 	return
 
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveFalseSwipe::
+	lockall
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_100PokemonAsPromised, MSGBOX_DEFAULT
+	giveitem ITEM_TM_FALSE_SWIPE
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_FalseSwipe, MSGBOX_DEFAULT
+	waitmessage
+	setvar VAR_BIRCH_LAB_STATE, 7
+	releaseall
+	end
+
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveShinyCharm::
 	lockall
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SoYouveFinallyDoneIt, MSGBOX_DEFAULT
@@ -392,6 +415,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveShinyCharm::
 LittlerootTown_ProfessorBirchsLab_EventScript_Birch::
 	lock
 	faceplayer
+	goto_if_eq VAR_BIRCH_LAB_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_GiveFalseSwipe
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GiveShinyCharm
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_GrassyPatchWaiting
@@ -414,7 +438,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister::
 	goto_if_unset FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_UNKNOWN_0x380, ProfBirch_EventScript_RatePokedexOrRegister
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, ProfBirch_EventScript_RatePokedexOrRegister
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, ProfBirch_EventScript_RatePokedexOrRegister
-	goto_if_eq VAR_BIRCH_LAB_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait
+	goto_if_ge VAR_BIRCH_LAB_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome, MSGBOX_DEFAULT
 	release
 	end
@@ -445,6 +469,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_TryCollecting100, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_BIRCH_LAB_STATE, 5
 	setflag FLAG_ADVENTURE_STARTED
 	setflag FLAG_HIDE_OLDALE_TOWN_PC_BLOCKER
@@ -458,6 +486,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	giveitem ITEM_POKE_BALL, 5
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_RESULT, 0
 	return
 
@@ -466,6 +495,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	giveitem ITEM_POKE_BALL, 5
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_RESULT, 1
 	return
 
@@ -695,6 +725,15 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "Maybe you can glean some information on\n"
 	.string "your mystery POKéMON with a POKéDEX too.$"
 
+LittlerootTown_ProfessorBirchsLab_Text_TryCollecting100:
+	.string "PROF. BIRCH: Now, get out there and\n"
+	.string "enjoy your adventure!\p"
+	.string "Fill that POKéDEX up a whole bunch\n"
+	.string "then come back and show me.\p"
+	.string "If you can catch, let's say, 100\n"
+	.string "species of POKéMON, I'll give you\l"
+	.string "a special reward!$"
+
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"
 	.string "await you!\p"
@@ -829,6 +868,27 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanHaveYouGoneToBattleFrontier:
 	.string "BRENDAN: Hey, {PLAYER}!\n"
 	.string "Have you gone out to that place,\l"
 	.string "the BATTLE FRONTIER?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_100PokemonAsPromised:
+	.string "PROF. BIRCH: Ah, {PLAYER}{KUN}!\p"
+	.string "Are you curious about how your\n"
+	.string "POKéDEX is coming along?\p"
+	.string "Let's see here…\p"
+	.string "Oho, so you've managed to find 100\n"
+	.string "species of POKéMON, have you?\p"
+	.string "In that case, as promised, here is a\n"
+	.string "reward for your hard work!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_FalseSwipe:
+	.string "That there is a TM for the move\n"
+	.string "FALSE SWIPE.\p"
+	.string "It is a rather unique move that always\n"
+	.string "leaves your target at 1 HP if your\l"
+	.string "attack would have knocked them out.\p"
+	.string "It is an exceptionally useful tool for\n"
+	.string "capturing POKéMON.\p"
+	.string "I hope you will use it to help fill out\n"
+	.string "your POKéDEX even further!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SoYouveFinallyDoneIt:
 	.string "PROF. BIRCH: Ah, {PLAYER}{KUN}!\p"
