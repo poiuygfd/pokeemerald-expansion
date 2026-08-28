@@ -141,6 +141,16 @@ const struct SpritePalette gBagPaletteTable =
     gBagPalette, TAG_BAG_GFX
 };
 
+const struct SpritePalette gBagRubySapphirePaletteTable =
+{
+    gBagRubySapphirePalette, TAG_BAG_GFX
+};
+
+const struct SpritePalette gBagEmeraldPaletteTable =
+{
+    gBagEmeraldPalette, TAG_BAG_GFX
+};
+
 static const struct SpriteTemplate sBagSpriteTemplate =
 {
     .tileTag = TAG_BAG_GFX,

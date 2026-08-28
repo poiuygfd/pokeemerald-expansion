@@ -880,7 +880,12 @@ static bool8 LoadBagMenu_Graphics(void)
         gBagMenu->graphicsLoadState++;
         break;
     case 4:
-        LoadSpritePalette(&gBagPaletteTable);
+        if (gSaveBlock2Ptr->currOutfitId == OUTFIT_RUBY_RED)
+            LoadSpritePalette(&gBagRubySapphirePaletteTable);
+        else if (gSaveBlock2Ptr->currOutfitId == OUTFIT_EMERALD_GREEN)
+            LoadSpritePalette(&gBagEmeraldPaletteTable);
+        else
+            LoadSpritePalette(&gBagPaletteTable);
         gBagMenu->graphicsLoadState++;
         break;
     default:
