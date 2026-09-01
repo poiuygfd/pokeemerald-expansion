@@ -347,6 +347,18 @@ const struct TerrainInfo gBattleTerrainInfo[B_TERRAIN_COUNT] = {
         .startMessage = B_MSG_TERRAIN_SET_PSYCHIC,
         .endMessage = B_MSG_TERRAIN_END_PSYCHIC,
     },
+
+    [B_TERRAIN_VOID] = {
+        .type = TYPE_DARK,
+        .secretPowerAnimation = gBattleAnimMove_FeintAttack,
+        .secretPowerEffect = MOVE_EFFECT_FLINCH,
+        .naturePowerMove = MOVE_DARK_PULSE,
+        .battleBackground = BG_THE_VOID,
+        .seedStat = STAT_EVASION,
+        .seedHoldEffect = HOLD_EFFECT_PARAM_THE_VOID,
+        .startMessage = B_MSG_TERRAIN_SET_VOID,
+        .endMessage = B_MSG_TERRAIN_END_VOID,
+    },
 };
 
 bool32 EndOrContinueWeather(void)
@@ -3417,7 +3429,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         case ABILITY_ABYSSAL_FLOOD:
             if (!shouldAbilityTrigger)
                 break;
-            if (TryChangeBattleTerrain(battler, STATUS_FIELD_THE_VOID))
+            if (TryChangeBattleTerrain(battler, B_TERRAIN_VOID))
             {
                 BattleScriptCall(BattleScript_TheVoidActivates);
                 effect++;

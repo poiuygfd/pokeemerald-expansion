@@ -907,6 +907,23 @@ static void HandleSetEffectSwamp(struct BattleCalcValues *cv, struct SetEffect *
     gBattlescriptCurrInstr = BattleScript_TheSwampActivates;
 }
 
+static void HandleSetEffectSufferStrike(struct BattleCalcValues *cv, struct SetEffect *se)
+{
+    if (!(IsSafeguardProtected(cv->battlerAtk, se->effectBattler, cv->abilities[cv->battlerAtk]) && !se->primary))
+    {
+        BattleScriptPush(se->script);
+        gBattlescriptCurrInstr = BattleScript_MoveEffectSufferStrike;
+    }
+}
+
+static void HandleSetEffectDarknessDive(struct BattleCalcValues *cv, struct SetEffect *se)
+{
+    if (BattlerJustSwitchedIn(se->effectBattler))
+    {
+        SetMoveEffect(cv, MOVE_EFFECT_PARALYSIS);
+    }
+}
+
 static void HandleSetEffectWeather(struct BattleCalcValues *cv, struct SetEffect *se)
 {
     u32 weather = 0, msg = 0;
@@ -1360,6 +1377,8 @@ static void (*const sSetEffectHandlers[])(struct BattleCalcValues *cv, struct Se
     [MOVE_EFFECT_RAINBOW] = HandleSetEffectRainbow,
     [MOVE_EFFECT_SEA_OF_FIRE] = HandleSetEffectSeaOfFire,
     [MOVE_EFFECT_SWAMP] = HandleSetEffectSwamp,
+    [MOVE_EFFECT_SUFFER_STRIKE] = HandleSetEffectSufferStrike,
+    [MOVE_EFFECT_DARKNESS_DIVE] = HandleSetEffectDarknessDive,
     [MOVE_EFFECT_SUN] = HandleSetEffectWeather,
     [MOVE_EFFECT_RAIN] = HandleSetEffectWeather,
     [MOVE_EFFECT_SANDSTORM] = HandleSetEffectWeather,

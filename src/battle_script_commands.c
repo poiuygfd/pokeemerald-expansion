@@ -11846,13 +11846,13 @@ void BS_TryToClearVoidTerrain(void)
     for (enum BattlerId i = 0; i < gBattlersCount; i++)
     {
         enum Ability ability = GetBattlerAbility(i);
-        if ((ability == ABILITY_ABYSSAL_FLOOD && gFieldStatuses & STATUS_FIELD_THE_VOID)
+        if ((ability == ABILITY_ABYSSAL_FLOOD && gFieldTimers.terrain == B_TERRAIN_VOID)
             && IsBattlerAlive(i))
             shouldNotClear = TRUE;
     }
-    if (gFieldStatuses & STATUS_FIELD_THE_VOID && !shouldNotClear)
+    if (gFieldTimers.terrain == B_TERRAIN_VOID && !shouldNotClear)
     {
-        gFieldStatuses &= ~STATUS_FIELD_THE_VOID;
+        gFieldTimers.terrain = B_TERRAIN_NONE;
         TryToRevertMimicryAndFlags();
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_VOID;
         BattleScriptPush(cmd->nextInstr);

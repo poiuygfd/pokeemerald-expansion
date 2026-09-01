@@ -491,8 +491,6 @@
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
 
-#define END_MUS                     558
-
 // These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO, and the name of each triplet incorporates the English phonetic sound it represents.
 #define PH_TRAP_BLEND               559
@@ -548,42 +546,42 @@
 #define PH_NURSE_SOLO               609
 
 // DP
-#define MUS_DP_TWINLEAF_DAY 610
-#define MUS_DP_SANDGEM_DAY 611
-#define MUS_DP_FLOAROMA_DAY 612
-#define MUS_DP_SOLACEON_DAY 613
-#define MUS_DP_ROUTE225_DAY 614
-#define MUS_DP_VALOR_LAKEFRONT_DAY 615
-#define MUS_DP_JUBILIFE_DAY 616
-#define MUS_DP_CANALAVE_DAY 617
-#define MUS_DP_OREBURGH_DAY 618
-#define MUS_DP_ETERNA_DAY 619
-#define MUS_DP_HEARTHOME_DAY 620
-#define MUS_DP_VEILSTONE_DAY 621
-#define MUS_DP_SUNYSHORE_DAY 622
-#define MUS_DP_SNOWPOINT_DAY 623
-#define MUS_DP_POKEMON_LEAGUE_DAY 624
-#define MUS_DP_FIGHT_AREA_DAY 625
-#define MUS_DP_ROUTE201_DAY 626
-#define MUS_DP_ROAD_B_D 627
-#define MUS_DP_ROUTE205_DAY 628
-#define MUS_DP_ROUTE206_DAY 629
-#define MUS_DP_ROUTE209_DAY 630
-#define MUS_DP_ROUTE210_DAY 631
-#define MUS_DP_ROUTE216_DAY 632
-#define MUS_DP_ROUTE228_DAY 633
-#define MUS_DP_ROWAN 634
-#define MUS_DP_TV_BROADCAST 635
-#define MUS_DP_TWINLEAF_NIGHT 636
-#define MUS_DP_SANDGEM_NIGHT 637
-#define MUS_DP_FLOAROMA_NIGHT 638
-#define MUS_DP_SOLACEON_NIGHT 639
-#define MUS_DP_ROUTE225_NIGHT 640
+#define MUS_DP_TWINLEAF_DAY         610
+#define MUS_DP_SANDGEM_DAY          611
+#define MUS_DP_FLOAROMA_DAY         612
+#define MUS_DP_SOLACEON_DAY         613
+#define MUS_DP_ROUTE225_DAY         614
+#define MUS_DP_VALOR_LAKEFRONT_DAY  615
+#define MUS_DP_JUBILIFE_DAY         616
+#define MUS_DP_CANALAVE_DAY         617
+#define MUS_DP_OREBURGH_DAY         618
+#define MUS_DP_ETERNA_DAY           619
+#define MUS_DP_HEARTHOME_DAY        620
+#define MUS_DP_VEILSTONE_DAY        621
+#define MUS_DP_SUNYSHORE_DAY        622
+#define MUS_DP_SNOWPOINT_DAY        623
+#define MUS_DP_POKEMON_LEAGUE_DAY   624
+#define MUS_DP_FIGHT_AREA_DAY       625
+#define MUS_DP_ROUTE201_DAY         626
+#define MUS_DP_ROAD_B_D             627
+#define MUS_DP_ROUTE205_DAY         628
+#define MUS_DP_ROUTE206_DAY         629
+#define MUS_DP_ROUTE209_DAY         630
+#define MUS_DP_ROUTE210_DAY         631
+#define MUS_DP_ROUTE216_DAY         632
+#define MUS_DP_ROUTE228_DAY         633
+#define MUS_DP_ROWAN                634
+#define MUS_DP_TV_BROADCAST         635
+#define MUS_DP_TWINLEAF_NIGHT       636
+#define MUS_DP_SANDGEM_NIGHT        637
+#define MUS_DP_FLOAROMA_NIGHT       638
+#define MUS_DP_SOLACEON_NIGHT       639
+#define MUS_DP_ROUTE225_NIGHT       640
 #define MUS_DP_VALOR_LAKEFRONT_NIGHT 641
-#define MUS_DP_JUBILIFE_NIGHT 642
-#define MUS_DP_CANALAVE_NIGHT 643
-#define MUS_DP_OREBURGH_NIGHT 644
-#define MUS_DP_ETERNA_NIGHT 645
+#define MUS_DP_JUBILIFE_NIGHT       642
+#define MUS_DP_CANALAVE_NIGHT       643
+#define MUS_DP_OREBURGH_NIGHT       644
+#define MUS_DP_ETERNA_NIGHT         645
 #define MUS_DP_HEARTHOME_NIGHT 646
 #define MUS_DP_VEILSTONE_NIGHT 647
 #define MUS_DP_SUNYSHORE_NIGHT 648
@@ -1098,18 +1096,18 @@
 #define MUS_BW_LACUNOSA 1154
 #define MUS_BW_VILLAGE_BRIDGE 1155
 #define MUS_BW_MYSTERY_GIFT 1156
-#define MUS_BW_BATTLE_COMPETITION 1157
-#define MUS_BW_ROCKET 1158
-#define MUS_BW_VS_KYUREM 1159
-#define MUS_BW_DEX_RATING_6 1160
-#define MUS_BW_VS_CHAMPION 1161
-#define MUS_BW_VICTORY_CHAMPION 1162
-#define MUS_BW_HALL_OF_FAME 1163
-#define MUS_BW_RELIC_SONG 1164
-#define MUS_BW_VS_WCS_CHAMPION 1165
-#define MUS_BW_OBTAIN_BERRY 1166
+#define MUS_BW_BATTLE_COMPETITION   1157
+#define MUS_BW_ROCKET               1158
+#define MUS_BW_VS_KYUREM            1159
+#define MUS_BW_DEX_RATING_6         1160
+#define MUS_BW_VS_CHAMPION          1161
+#define MUS_BW_VICTORY_CHAMPION     1162
+#define MUS_BW_HALL_OF_FAME         1163
+#define MUS_BW_RELIC_SONG           1164
+#define MUS_BW_VS_WCS_CHAMPION      1165
+#define MUS_BW_OBTAIN_BERRY         1166
 
-#define END_MUS                     MUS_BW_OBTAIN_BERRY
+#define END_MUS                     1166
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
