@@ -1,4 +1,4 @@
-static const u16 sFrontierExchangeCorner_HoldItems[] =
+static const enum Item sFrontierExchangeCorner_HoldItems[] =
 {
     ITEM_AIR_BALLOON,
     ITEM_SHELL_BELL,
@@ -57,7 +57,7 @@ static const u16 sFrontierExchangeCorner_Decors[] =
     ITEM_LIST_END
 };
 
-static const u16 sFrontierExchangeCorner_EvolutionItems[] =
+static const enum Item sFrontierExchangeCorner_EvolutionItems[] =
 {
     ITEM_EVERSTONE,
     ITEM_LINKING_CORD,
@@ -84,7 +84,7 @@ static const u16 sFrontierExchangeCorner_EvolutionItems[] =
     ITEM_LIST_END
 };
 
-static const u16 sFrontierExchangeCorner_MegaStones[] =
+static const enum Item sFrontierExchangeCorner_MegaStones[] =
 {
     ITEM_VENUSAURITE,
     ITEM_CHARIZARDITE_X,
