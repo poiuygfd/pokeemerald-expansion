@@ -223,6 +223,10 @@ Route123_EventScript_RouteMasterGivenItem::
 	release
 	end
 
+Route123_EventScript_Wally::
+	msgbox Route123_Text_WallyGotThis, MSGBOX_NPC
+	end
+
 Route123_Text_LoveGrassMonsHaveAny:
 	.string "I love GRASS-type POKéMON!\p"
 	.string "Do you have any GRASS-type POKéMON?$"
@@ -288,6 +292,14 @@ Route123_Text_HangOnByAThread:
 	.string "It is truly an item that can swing\n"
 	.string "the tide of battle!\p"
 	.string "That's what I call a dramatic finish!$"
+
+Route123_Text_WallyGotThis:
+	.string "WALLY: {PLAYER}?\n"
+	.string "What are you doing here?\p"
+	.string "Aren't you looking for TEAM MAGMA?\n"
+	.string "You can leave TEAM AQUA to me.\p"
+	.string "I'm a lot stronger now.\n"
+	.string "I can handle this much by myself!$"
 
 Route123_Text_RouteSign:
 	.string "{RIGHT_ARROW} ROUTE 123\n"

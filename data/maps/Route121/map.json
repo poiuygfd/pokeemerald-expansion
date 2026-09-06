@@ -3,7 +3,6 @@
   "name": "Route121",
   "layout": "LAYOUT_ROUTE121",
   "music": "MUS_ROUTE120",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_121",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -423,6 +422,20 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM_U_TURN",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_121_TM55"
+    },
+    {
+      "local_id": "LOCALID_ROUTE121_RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_ROUTE_121_RIVAL"
     }
   ],
   "warp_events": [
@@ -442,7 +455,7 @@
       "elevation": 3,
       "var": "VAR_ROUTE121_STATE",
       "var_value": "0",
-      "script": "Route121_EventScript_MagmaGruntsMoveOut"
+      "script": "Route121_EventScript_MagmaTrigger0"
     },
     {
       "type": "trigger",
@@ -451,7 +464,7 @@
       "elevation": 3,
       "var": "VAR_ROUTE121_STATE",
       "var_value": "0",
-      "script": "Route121_EventScript_MagmaGruntsMoveOut"
+      "script": "Route121_EventScript_MagmaTrigger1"
     },
     {
       "type": "trigger",
@@ -460,7 +473,7 @@
       "elevation": 3,
       "var": "VAR_ROUTE121_STATE",
       "var_value": "0",
-      "script": "Route121_EventScript_MagmaGruntsMoveOut"
+      "script": "Route121_EventScript_MagmaTrigger2"
     },
     {
       "type": "trigger",
@@ -469,7 +482,7 @@
       "elevation": 3,
       "var": "VAR_ROUTE121_STATE",
       "var_value": "0",
-      "script": "Route121_EventScript_MagmaGruntsMoveOut"
+      "script": "Route121_EventScript_MagmaTrigger3"
     }
   ],
   "bg_events": [
@@ -549,5 +562,6 @@
       "item": "ITEM_MAX_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_121_MAX_REVIVE"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
