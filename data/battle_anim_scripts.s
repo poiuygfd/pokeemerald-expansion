@@ -19243,7 +19243,7 @@ gBattleAnimMove_BeanBeam::
 	delay 5
 	createsprite gBeanSpriteTemplate, ANIM_TARGET, 2, 20, 0
 	waitforvisualfinish
-	call UnsetHighSpeedBg
+	call UnsetBackground
 	delay 1
 	end
 SetBeanBeamBG:

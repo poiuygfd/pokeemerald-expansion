@@ -3619,8 +3619,8 @@ BattleScript_TagTeamActivates::
 	playanimation BS_TARGET, B_ANIM_FORM_CHANGE_DISGUISE
 	waitanimation
 	handleformchange BS_TARGET, 1
-	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
-	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET, ASSURANCE_DOUBLE
 	printstring STRINGID_LEADERHASCHANGED
 	waitmessage B_WAIT_TIME_LONG
 	waitanimation
@@ -5902,7 +5902,7 @@ BattleScript_ReactiveFireActivation::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_REACTEDTOSUPEREFFECTIVE
 	waitmessage B_WAIT_TIME_LONG
-	end2
+	end
 
 BattleScript_CustapBerryActivation::
 	flushtextbox

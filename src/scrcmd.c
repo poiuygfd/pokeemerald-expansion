@@ -3115,7 +3115,7 @@ bool8 ScrCmd_bufferoutfitstr(struct ScriptContext *ctx)
     u16 outfit = VarGet(ScriptReadHalfword(ctx));
     u8 type = ScriptReadByte(ctx);
 
-    BufferOutfitStrings(sScriptStringVars[strVarIdx], outfit, type);
+    BufferOutfitStrings(GetStringVar(strVarIdx), outfit, type);
     return TRUE;
 }
 

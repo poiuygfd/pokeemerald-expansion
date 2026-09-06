@@ -920,7 +920,11 @@ static void HandleSetEffectDarknessDive(struct BattleCalcValues *cv, struct SetE
 {
     if (BattlerJustSwitchedIn(se->effectBattler))
     {
-        SetMoveEffect(cv, MOVE_EFFECT_PARALYSIS);
+        struct SetEffect darknessDiveEffect = {0};
+        darknessDiveEffect.script = gBattlescriptCurrInstr;
+        darknessDiveEffect.effectBattler = se->effectBattler;
+        darknessDiveEffect.moveEffect = MOVE_EFFECT_PARALYSIS;
+        SetMoveEffect(cv, &darknessDiveEffect);
     }
 }
 

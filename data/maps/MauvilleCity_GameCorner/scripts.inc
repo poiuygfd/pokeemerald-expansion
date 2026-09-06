@@ -494,11 +494,11 @@ MauvilleCity_GameCorner_EventScript_1GimmighoulCoin::
 	waitmessage
 	removecoins GIMMIGHOUL_COIN_1
 	additem ITEM_GIMMIGHOUL_COIN
-	updatecoinsbox 1, 1
+	updatecoinsbox
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
 	waitmessage
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 
@@ -511,11 +511,11 @@ MauvilleCity_GameCorner_EventScript_9GimmighoulCoins::
 	waitmessage
 	removecoins GIMMIGHOUL_COIN_9
 	additem ITEM_GIMMIGHOUL_COIN, 9
-	updatecoinsbox 1, 1
+	updatecoinsbox
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
 	waitmessage
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 
@@ -528,29 +528,29 @@ MauvilleCity_GameCorner_EventScript_99GimmighoulCoins::
 	waitmessage
 	removecoins GIMMIGHOUL_COIN_99
 	additem ITEM_GIMMIGHOUL_COIN, 99
-	updatecoinsbox 1, 1
+	updatecoinsbox
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_LetsTradeAgainSometime, MSGBOX_DEFAULT
 	waitmessage
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 
 MauvilleCity_GameCorner_EventScript_AintEnoughCoins::
 	msgbox MauvilleCity_GameCorner_Text_AintEnoughCoins, MSGBOX_DEFAULT
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 
 MauvilleCity_GameCorner_EventScript_CancelCoinSelect::
 	msgbox MauvilleCity_GameCorner_Text_TheseAreRareCoins, MSGBOX_DEFAULT
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 
 MauvilleCity_GameCorner_EventScript_GotNoRoom::
 	msgbox MauvilleCity_GameCorner_Text_AintEnoughRoom, MSGBOX_DEFAULT
-	hidecoinsbox 0, 0
+	hidecoinsbox
 	release
 	end
 

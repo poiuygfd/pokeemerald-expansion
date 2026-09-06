@@ -64,125 +64,125 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         // Rivals
         [TRAINER_BRENDAN_EVER_GRANDE_TREECKO] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, BLAZIKEN?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, BLAZIKEN?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_BRENDAN_EVER_GRANDE_MUDKIP] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SCEPTILE?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SCEPTILE?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_BRENDAN_EVER_GRANDE_TORCHIC] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SWAMPERT?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("We're not done yet, right, SWAMPERT?\nLend me your strength, and MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_MAY_EVER_GRANDE_TREECKO] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and BLAZIKEN won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Me and BLAZIKEN won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_MAY_EVER_GRANDE_MUDKIP] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SCEPTILE won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SCEPTILE won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_MAY_EVER_GRANDE_TORCHIC] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SWAMPERT won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Me and SWAMPERT won't give up yet!\nWe're going all out! Let's MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WALLY_VR_1] =
         {
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Me and GALLADE believe in each other!\nWitness the strength of our bond!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Me and GALLADE believe in each other!\nWitness the strength of our bond!{PAUSE_UNTIL_PRESS}"),
         },
         // Gym Leaders
         [TRAINER_ROXANNE_1] =
         {
-            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Right in our weak spot!\nYou clearly know your type matchups!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("You've got me on the ropes!\nYou must have studied well!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_ATTACKER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Right in our weak spot!\nYou clearly know your type matchups!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("You've got me on the ropes!\nYou must have studied well!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_BRAWLY_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I'm down to my last POKéMON?\nThat's gnarly!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("I'm down to my last POKéMON?\nThat's gnarly!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_BRAWLY_2] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I'm down to my last POKéMON?\nThat's gnarly!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("I'm down to my last POKéMON?\nThat's gnarly!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WATTSON_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Wahahahah!\nYou really are amusing!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Wahahahah!\nYou really are amusing!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WATTSON_2] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Wahahahah!\nYou really are amusing!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Wahahahah!\nYou really are amusing!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_FLANNERY_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Uh oh…\nThis is looking bad!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Uh oh…\nThis is looking bad!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_NORMAN_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("To think my own child has\npushed me this far…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Watch and learn firsthand!\nFeel the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("To think my own child has\npushed me this far…{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Watch and learn firsthand!\nFeel the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WINONA_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Our winds are faltering…\nBut I feel our second wind!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Come, SKARMORY!\nThe winds blow our way!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Our winds are faltering…\nBut I feel our second wind!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Come, SKARMORY!\nThe winds blow our way!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_TATE_AND_LIZA_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Our combination…\nIs being beaten…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("It's up to you, MEOWSTIC…\nIt's up to you, MEOWSTIC…{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Our combination…\nIs being beaten…{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("It's up to you, MEOWSTIC…\nIt's up to you, MEOWSTIC…{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_JUAN_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Alas, our dance is coming to a close.\nLet's make this a grand finale!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Thought DONDOZO was my big threat?\nThink again, my friend! Go, TATSUGIRI!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Alas, our dance is coming to a close.\nLet's make this a grand finale!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Thought DONDOZO was my big threat?\nThink again, my friend! Go, TATSUGIRI!{PAUSE_UNTIL_PRESS}"),
         },
         // Elite Four
         [TRAINER_SIDNEY] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can tell that you're the real\ndeal, kid! This is exhilarating!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I've got one last trick up my sleeve!\nYou know what to do, ABSOL!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("I can tell that you're the real\ndeal, kid! This is exhilarating!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("I've got one last trick up my sleeve!\nYou know what to do, ABSOL!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_PHOEBE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can feel the power of\nthe bonds you've cultivated.{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Feel our bonds take form!\nSABLEYE, time to MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("I can feel the power of\nthe bonds you've cultivated.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Feel our bonds take form!\nSABLEYE, time to MEGA EVOLVE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_GLACIA] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("The burning fire inside you\nis almost overwhelming…{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Time to freeze you solid!\nGive us your coldest, GLALIE!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("The burning fire inside you\nis almost overwhelming…{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Time to freeze you solid!\nGive us your coldest, GLALIE!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_DRAKE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Even with my many years of\nexperience, you push through.{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Our true power lies yet untouched!\nHave a taste of it now!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Even with my many years of\nexperience, you push through.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Our true power lies yet untouched!\nHave a taste of it now!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_STEVEN] =
         {
-            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("That's the way!\nHit me with everything you have!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I can't remember the last time\nsomeone had me on the ropes!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("METAGROSS! MEGA EVOLVE!\nLet's show why we're the CHAMPION!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_ATTACKER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("That's the way!\nHit me with everything you have!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("I can't remember the last time\nsomeone had me on the ropes!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("METAGROSS! MEGA EVOLVE!\nLet's show why we're the CHAMPION!{PAUSE_UNTIL_PRESS}"),
         },
         // Bonus Trainers
         [TRAINER_WALLACE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("The strength of the HOENN region's\nsaviour is truly something impressive!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I'll show you a truly elegant finale!\nWitness the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("The strength of the HOENN region's\nsaviour is truly something impressive!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("I'll show you a truly elegant finale!\nWitness the power of MEGA EVOLUTION!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_RED_METEOR_FALLS] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("… … …{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("… … …!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("… … …{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("… … …!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_LEAF_ARTISAN_CAVE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Wowie, you sure are strong!\nI'm down to my last POKéMON!{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("We're not quite out of this yet!\nVENUSAUR! Lets show off our true power!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Wowie, you sure are strong!\nI'm down to my last POKéMON!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("We're not quite out of this yet!\nVENUSAUR! Lets show off our true power!{PAUSE_UNTIL_PRESS}"),
         },
         [TRAINER_WOLFE] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Oof, this is looking bad.\nI don't think we win these, chat.{PAUSE_UNTIL_PRESS}"),
-            [TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("Alright RAYQUAZA, I need you to lock in!\nWe're not throwing in the towel yet!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("Oof, this is looking bad.\nI don't think we win these, chat.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_OPPONENT_MEGA_EVOLUTION] = COMPOUND_STRING("Alright RAYQUAZA, I need you to lock in!\nWe're not throwing in the towel yet!{PAUSE_UNTIL_PRESS}"),
         }
     },
 };

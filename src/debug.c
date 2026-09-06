@@ -325,8 +325,8 @@ static void DebugAction_Trainers_RechargeVsSeeker(u8 taskId);
 
 static void DebugAction_Outbreak_ClearActive(u8 taskId);
 
-static void DebugAction_FlagsVars_Outfits(u8 taskId);
-static void DebugAction_FlagsVars_OutfitsSelect(u8 taskId);
+//static void DebugAction_FlagsVars_Outfits(u8 taskId);
+//static void DebugAction_FlagsVars_OutfitsSelect(u8 taskId);
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId);
 static void DebugAction_FlagsVars_PokedexFlags_Reset(u8 taskId);
 static void DebugAction_FlagsVars_SwitchDex(u8 taskId);
@@ -744,7 +744,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Flags[] =
 {
     [DEBUG_FLAGVAR_MENU_ITEM_FLAGS]                = { COMPOUND_STRING("Set Flag XYZ…"),                     DebugAction_Selection_Init, &sToggleFlagSelection },
     [DEBUG_FLAGVAR_MENU_ITEM_VARS]                 = { COMPOUND_STRING("Set Var XYZ…"),                      DebugAction_Selection_Init, &sSetVarSelection},
-    [DEBUG_FLAGVAR_MENU_ITEM_OUTFITS]              = { COMPOUND_STRING("Set Outfit XYZ…"),                   DebugAction_FlagsVars_Outfits },
+    //[DEBUG_FLAGVAR_MENU_ITEM_OUTFITS]              = { COMPOUND_STRING("Set Outfit XYZ…"),                   DebugAction_FlagsVars_Outfits },
     [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_ALL]         = { COMPOUND_STRING("Pokédex Flags All"),                 DebugAction_FlagsVars_PokedexFlags_All },
     [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_RESET]       = { COMPOUND_STRING("Pokédex Flags Reset"),               DebugAction_FlagsVars_PokedexFlags_Reset },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX]       = { COMPOUND_STRING("Toggle {STR_VAR_1}Pokédex"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchDex },
@@ -2906,7 +2906,7 @@ static const struct DebugSelection sSetVarSelection = {
     .maxSteps = 2,
 };
 
-static void Debug_Display_OutfitInfo(u32 outfit, u32 digit, u8 windowId)
+/*static void Debug_Display_OutfitInfo(u32 outfit, u32 digit, u8 windowId)
 {
     ConvertIntToDecimalStringN(gStringVar1, outfit, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_FLAGS);
     ConvertIntToHexStringN(gStringVar2, outfit, STR_CONV_MODE_LEFT_ALIGN, 3);
@@ -2959,7 +2959,7 @@ static void DebugAction_FlagsVars_OutfitsSelect(u8 taskId)
     {
         Debug_Display_OutfitInfo(gTasks[taskId].tInput, gTasks[taskId].tDigit, gTasks[taskId].tSubWindowId);
     }
-}
+}*/
 
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId)
 {
