@@ -1173,6 +1173,7 @@ gSongTable::
 	song mus_bw_relic_song, MUSIC_PLAYER_BGM, 0
 	song mus_bw_vs_wcs_champion, MUSIC_PLAYER_BGM, 0
 	song mus_bw_obtain_berry, MUSIC_PLAYER_SE2, 2
+	song mus_vs_route_master, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:
