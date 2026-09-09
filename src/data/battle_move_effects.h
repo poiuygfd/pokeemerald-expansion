@@ -1901,4 +1901,10 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectVengeance,
         .battleTvScore = 0, // TODO: Assign points
     },
+    
+    [EFFECT_SECRET_POWER] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 1,
+    },
 };
