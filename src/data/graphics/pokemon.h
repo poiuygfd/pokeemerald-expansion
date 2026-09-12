@@ -27532,8 +27532,8 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
 
     const u32 gMonFrontPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/anim_front.png", ".4bpp.smol");
     const u16 gMonPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/normal.pal", ".gbapal");
-    //const u32 gMonBackPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/back.png", ".4bpp.smol");
-    //const u16 gMonShinyPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/shiny.pal", ".gbapal");
+    const u32 gMonBackPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/shiny.pal", ".gbapal");
     //const u8 gMonIcon_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/icon.png", ".4bpp");
     const u8 gMonFootprint_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/footprint.png", ".1bpp");
     //const u32 gObjectEventPic_Boximp[] = INCGFX_COMP("graphics/pokemon/boximp/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");

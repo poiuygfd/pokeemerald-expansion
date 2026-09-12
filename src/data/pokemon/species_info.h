@@ -382,7 +382,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 80,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_GHOST),
         .catchRate = 3,
         .expYield = 270,
         .evYield_HP = 3,
@@ -396,7 +396,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("Boximp"),
         .cryId = CRY_REGITUBE,
         .natDexNum = NATIONAL_DEX_BOXIMP,
-        .categoryName = _("Box Nest"),
+        .categoryName = _("Box Haunt"),
         .height = 4,
         .weight = 48,
         .description = COMPOUND_STRING(
@@ -410,7 +410,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Boximp,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 12,
+        .frontPicYOffset = 13,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(0, 15),
             ANIMCMD_FRAME(1, 15),
@@ -419,15 +419,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
             ANIMCMD_FRAME(0, 15),
         ),
         .frontAnimId = ANIM_TWIST,
-        .backPic = gMonBackPic_Regitube,
+        .backPic = gMonBackPic_Boximp,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 11,
-        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .backPicYOffset = 14,
+        .backAnimId = BACK_ANIM_SHRINK_GROW,
         .palette = gMonPalette_Boximp,
-        .shinyPalette = gMonShinyPalette_Regitube,
+        .shinyPalette = gMonShinyPalette_Boximp,
         .iconSprite = gMonIcon_Regitube,
         .iconPalIndex = 0,
-        SHADOW(0, -2, SHADOW_SIZE_L)
+        SHADOW(0, -3, SHADOW_SIZE_L)
         FOOTPRINT(Boximp)
         OVERWORLD(
             sPicTable_Regitube,

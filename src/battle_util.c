@@ -8721,6 +8721,24 @@ uq4_12_t CalcTypeEffectivenessMultiplier(struct DamageContext *ctx)
             modifier = CalcTypeEffectivenessMultiplierInternal(ctx, modifier);
             ctx->moveType = primaryType;
         }
+        if (GetMoveEffect(ctx->move) == EFFECT_TYPE_SWAP_MOVE && !ctx->isAnticipation)
+        {
+            uq4_12_t primaryModifier = modifier;
+            uq4_12_t secondaryModifier = UQ_4_12(1.0);
+            enum Type primaryType = ctx->moveType;
+            enum Type secondaryType = GetMoveArgType(ctx->move);
+
+            ctx->moveType = secondaryType;
+            secondaryModifier = CalcTypeEffectivenessMultiplierInternal(ctx, secondaryModifier);
+
+            if (primaryModifier >= secondaryModifier)
+            {
+                ctx->moveType = primaryType;
+                modifier = primaryModifier;
+            }
+            else
+                modifier = secondaryModifier;
+        }
         if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && !(IsFromGalar(ctx->battlerDef)) && !ctx->isAnticipation)
             modifier = UQ_4_12(2.0);
         if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && IsFromGalar(ctx->battlerDef) && !ctx->isAnticipation)

@@ -22178,21 +22178,222 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Special Delivery"),
         .description = COMPOUND_STRING(
-            "Changes user to Normal-type.\n"
-            "A deadly gift for the foe."),
+            "Does Normal or Ghost-type\n"
+            "damage based on matchup."),
         .power = 120,
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_GHOST },
         .metronomeBanned = TRUE,
         .assistBanned = TRUE,
         .sketchBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_FLORAL_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Floral Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Grass or Fairy-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_FAIRY },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_INFERNAL_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Infernal Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Fire or Dragon-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_DRAGON },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_AQUATIC_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Aquatic Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Water or Ice-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_ICE },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_DIGITAL_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Digital Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Electric or Steel-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_STEEL },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_VENOMOUS_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Venomous Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Bug or Poison-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_POISON },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_FALCON_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Falcon Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Flying or Fighting-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_FIGHTING },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_MINDFUL_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Mindful Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Psychic or Dark-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_DARK },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
+    },
+
+    [MOVE_EARTHEN_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Earthen Delivery"),
+        .description = COMPOUND_STRING(
+            "Does Rock or Ground-type\n"
+            "damage based on matchup."),
+        .power = 120,
+        .effect = EFFECT_TYPE_SWAP_MOVE,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = { .type = TYPE_GROUND },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_Present,
