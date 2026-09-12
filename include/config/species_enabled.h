@@ -421,7 +421,7 @@
 #define P_FAMILY_YVELTAL                 P_GEN_6_POKEMON
 #define P_FAMILY_ZYGARDE                 P_GEN_6_POKEMON
 #define P_FAMILY_DIANCIE                 P_GEN_6_POKEMON
-#define P_FAMILY_HOOPA                   P_GEN_6_POKEMON
+#define P_FAMILY_HOOPA                   FALSE
 #define P_FAMILY_VOLCANION               FALSE
 
 #define P_FAMILY_ROWLET                  P_GEN_7_POKEMON

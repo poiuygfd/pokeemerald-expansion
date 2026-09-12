@@ -27520,14 +27520,25 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u16 gOverworldPalette_MissingNo[] = INCGFX_U16("graphics/pokemon/missingno/overworld_normal.pal", ".gbapal");
     const u16 gShinyOverworldPalette_MissingNo[] = INCGFX_U16("graphics/pokemon/missingno/overworld_shiny.pal", ".gbapal");
 
-    const u32 gMonFrontPic_RotomStereo[] = INCGFX_U32("graphics/pokemon/rotom/stereo/anim_front.png", ".4bpp.smol");
-    const u16 gMonPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/normal.pal", ".gbapal");
-    const u32 gMonBackPic_RotomStereo[] = INCGFX_U32("graphics/pokemon/rotom/stereo/back.png", ".4bpp.smol");
-    const u16 gMonShinyPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/shiny.pal", ".gbapal");
-    const u8 gMonIcon_RotomStereo[] = INCGFX_U8("graphics/pokemon/rotom/stereo/icon.png", ".4bpp");
-    const u32 gObjectEventPic_RotomStereo[] = INCGFX_COMP("graphics/pokemon/rotom/stereo/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
-    const u16 gOverworldPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/overworld_normal.pal", ".gbapal");
-    const u16 gShinyOverworldPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/overworld_shiny.pal", ".gbapal");
+    const u32 gMonFrontPic_Regitube[] = INCGFX_U32("graphics/pokemon/regitube/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Regitube[] = INCGFX_U32("graphics/pokemon/regitube/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/shiny.pal", ".gbapal");
+    const u8 gMonIcon_Regitube[] = INCGFX_U8("graphics/pokemon/regitube/icon.png", ".4bpp");
+    const u8 gMonFootprint_Regitube[] = INCGFX_U8("graphics/pokemon/regitube/footprint.png", ".1bpp");
+    const u32 gObjectEventPic_Regitube[] = INCGFX_COMP("graphics/pokemon/regitube/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    const u16 gOverworldPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/overworld_shiny.pal", ".gbapal");
+
+    const u32 gMonFrontPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/normal.pal", ".gbapal");
+    //const u32 gMonBackPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/back.png", ".4bpp.smol");
+    //const u16 gMonShinyPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/shiny.pal", ".gbapal");
+    //const u8 gMonIcon_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/icon.png", ".4bpp");
+    const u8 gMonFootprint_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/footprint.png", ".1bpp");
+    //const u32 gObjectEventPic_Boximp[] = INCGFX_COMP("graphics/pokemon/boximp/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    //const u16 gOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_normal.pal", ".gbapal");
+    //const u16 gShinyOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_shiny.pal", ".gbapal");
 
     const u32 gMonFrontPic_AvitorchCalm[] = INCGFX_U32("graphics/pokemon/avitorch/anim_front.png", ".4bpp.smol");
     const u16 gMonPalette_AvitorchCalm[] = INCGFX_U16("graphics/pokemon/avitorch/normal.pal", ".gbapal");
@@ -27567,15 +27578,14 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u8 gMonFootprint_PartrioMage[] = INCGFX_U8("graphics/pokemon/partrio/mage/footprint.png", ".1bpp");
     const u32 gObjectEventPic_PartrioMage[] = INCGFX_COMP("graphics/pokemon/partrio/mage/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
 
-    const u32 gMonFrontPic_Regitube[] = INCGFX_U32("graphics/pokemon/regitube/anim_front.png", ".4bpp.smol");
-    const u16 gMonPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/normal.pal", ".gbapal");
-    const u32 gMonBackPic_Regitube[] = INCGFX_U32("graphics/pokemon/regitube/back.png", ".4bpp.smol");
-    const u16 gMonShinyPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/shiny.pal", ".gbapal");
-    const u8 gMonIcon_Regitube[] = INCGFX_U8("graphics/pokemon/regitube/icon.png", ".4bpp");
-    const u8 gMonFootprint_Regitube[] = INCGFX_U8("graphics/pokemon/regitube/footprint.png", ".1bpp");
-    const u32 gObjectEventPic_Regitube[] = INCGFX_COMP("graphics/pokemon/regitube/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
-    const u16 gOverworldPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/overworld_normal.pal", ".gbapal");
-    const u16 gShinyOverworldPalette_Regitube[] = INCGFX_U16("graphics/pokemon/regitube/overworld_shiny.pal", ".gbapal");
+    const u32 gMonFrontPic_RotomStereo[] = INCGFX_U32("graphics/pokemon/rotom/stereo/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/normal.pal", ".gbapal");
+    const u32 gMonBackPic_RotomStereo[] = INCGFX_U32("graphics/pokemon/rotom/stereo/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/shiny.pal", ".gbapal");
+    const u8 gMonIcon_RotomStereo[] = INCGFX_U8("graphics/pokemon/rotom/stereo/icon.png", ".4bpp");
+    const u32 gObjectEventPic_RotomStereo[] = INCGFX_COMP("graphics/pokemon/rotom/stereo/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    const u16 gOverworldPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_RotomStereo[] = INCGFX_U16("graphics/pokemon/rotom/stereo/overworld_shiny.pal", ".gbapal");
 
     const u32 gMonFrontPic_SlowbroMegaG[] = INCGFX_U32("graphics/pokemon/slowbro/mega_g/front.png", ".4bpp.smol");
     const u16 gMonPalette_SlowbroMegaG[] = INCGFX_U16("graphics/pokemon/slowbro/mega_g/normal.pal", ".gbapal");

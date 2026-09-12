@@ -175,9 +175,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     /* You may add any custom species below this point based on the following structure: */
+    // New Pokemon Species
 
     [SPECIES_MARIN] =
-    { 
+    {
         .baseHP        = 70,
         .baseAttack    = 60,
         .baseDefense   = 55,
@@ -243,7 +244,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     [SPECIES_MISSINGNO] =
-    { 
+    {
         .baseHP        = 33,
         .baseAttack    = 136,
         .baseDefense   = 0,
@@ -306,48 +307,110 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggMoveLearnset = sMissingNoEggMoveLearnset,
     },
 
-    [SPECIES_ROTOM_STEREO] =
+    [SPECIES_REGITUBE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 65,
-        .baseDefense   = 107,
-        .baseSpeed     = 86,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 107,
-    #if P_UPDATED_TYPES >= GEN_5
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_NORMAL),
-    #else
-        .types = ROTOM_FAMILY_TYPES,
-    #endif
-        .catchRate = 45,
-        .expYield = ROTOM_APPLIANCE_EXP_YIELD,
-        .evYield_Speed = 1,
-        .evYield_SpAttack = 1,
+        .baseHP        = 80,
+        .baseAttack    = 75,
+        .baseDefense   = 75,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 150,
+        .baseSpDefense = 150,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 3,
+        .expYield = 290,
+        .evYield_SpAttack  = 2,
+        .evYield_SpDefense = 1,
         .genderRatio = MON_GENDERLESS,
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
-        .cryId = CRY_ROTOM,
-        .natDexNum = NATIONAL_DEX_ROTOM,
-        .categoryName = _("Plasma"),
-        .height = 3,
-        .weight = 3,
+        .eggCycles = 120,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_BUOYANT_POWER, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Regitube"),
+        .cryId = CRY_REGITUBE,
+        .natDexNum = NATIONAL_DEX_REGITUBE,
+        .categoryName = _("Inner Tube"),
+        .height = 20,
+        .weight = 25,
         .description = COMPOUND_STRING(
-            "When Rotom enters a mini stereo system\n"
-            "it gains a cheery, upbeat personality.\n"
-            "It may play pranks on people, blasting\n"
-            "music at high volumes to make them jump."),
-        .pokemonScale = 530,
-        .pokemonOffset = 13,
+            "Not a single scientist can figure out why\n"
+            "Regigigas decided to create its newest\n"
+            "titan of terrifying aquatic power out of\n"
+            "a pile of average beach inflatable tubes."),
+        .pokemonScale = 256,
+        .pokemonOffset = 2,
+        .trainerScale = 493,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Regitube,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Regitube,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Regitube,
+        .shinyPalette = gMonShinyPalette_Regitube,
+        .iconSprite = gMonIcon_Regitube,
+        .iconPalIndex = 0,
+        SHADOW(2, 7, SHADOW_SIZE_L)
+        FOOTPRINT(Regitube)
+        OVERWORLD(
+            sPicTable_Regitube,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Regitube,
+            gShinyOverworldPalette_Regitube
+        )
+        .isSubLegendary = TRUE,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
+        .levelUpLearnset = sRegitubeLevelUpLearnset,
+        .teachableLearnset = sRegitubeTeachableLearnset,
+    },
+
+    [SPECIES_BOXIMP] =
+    {
+        .baseHP        = 100,
+        .baseAttack    = 80,
+        .baseDefense   = 120,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 120,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 3,
+        .expYield = 270,
+        .evYield_HP = 3,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 120,
+        .friendship = 0,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_CARDBOARD_SHIELD, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Boximp"),
+        .cryId = CRY_REGITUBE,
+        .natDexNum = NATIONAL_DEX_BOXIMP,
+        .categoryName = _("Box Nest"),
+        .height = 4,
+        .weight = 48,
+        .description = COMPOUND_STRING(
+            "A Pokémon that enjoys nesting inside\n"
+            "of cardboard boxes. It travels the region\n"
+            "by mailing itself. It can change its type\n"
+            "at will, but nobody has ever seen how."),
+        .pokemonScale = 457,
+        .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_RotomStereo,
-        .frontPicSize = MON_COORDS_SIZE(56, 48),
-        .frontPicYOffset = 10,
+        .frontPic = gMonFrontPic_Boximp,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(0, 15),
             ANIMCMD_FRAME(1, 15),
@@ -355,32 +418,31 @@ const struct SpeciesInfo gSpeciesInfo[] =
             ANIMCMD_FRAME(1, 15),
             ANIMCMD_FRAME(0, 15),
         ),
-        .frontAnimId = ANIM_ZIGZAG_FAST,
-        .enemyMonElevation = 10,
-        .backPic = gMonBackPic_RotomStereo,
-        .backPicSize = MON_COORDS_SIZE(64, 40),
-        .backPicYOffset = 5,
-        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
-        .palette = gMonPalette_RotomStereo,
-        .shinyPalette = gMonShinyPalette_RotomStereo,
-        .iconSprite = gMonIcon_RotomStereo,
-        .iconPalIndex = 5,
-        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(-1, 11, SHADOW_SIZE_M)
-        FOOTPRINT(Rotom)
+        .frontAnimId = ANIM_TWIST,
+        .backPic = gMonBackPic_Regitube,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Boximp,
+        .shinyPalette = gMonShinyPalette_Regitube,
+        .iconSprite = gMonIcon_Regitube,
+        .iconPalIndex = 0,
+        SHADOW(0, -2, SHADOW_SIZE_L)
+        FOOTPRINT(Boximp)
         OVERWORLD(
-            sPicTable_RotomStereo,
+            sPicTable_Regitube,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_RotomStereo,
-            gShinyOverworldPalette_RotomStereo
+            gOverworldPalette_Regitube,
+            gShinyOverworldPalette_Regitube
         )
-        .levelUpLearnset = sRotomLevelUpLearnset,
-        .teachableLearnset = sRotomTeachableLearnset,
-        .formSpeciesIdTable = sRotomFormSpeciesIdTable,
-        .formChangeTable = sRotomFormChangeTable,
+        .isMythical = TRUE,
+        .teachingType = TM_ILLITERATE,
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
+        .levelUpLearnset = sBoximpLevelUpLearnset,
+        .teachableLearnset = sBoximpTeachableLearnset,
     },
 
     [SPECIES_AVITORCH_CALM] =
@@ -513,7 +575,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     [SPECIES_PARTRIO_PALADIN] =
-    { 
+    {
         .baseHP        = 65,
         .baseAttack    = 60,
         .baseDefense   = 100,
@@ -579,7 +641,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     [SPECIES_PARTRIO_WARRIOR] =
-    { 
+    {
         .baseHP        = 60,
         .baseAttack    = 90,
         .baseDefense   = 50,
@@ -645,7 +707,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     [SPECIES_PARTRIO_MAGE] =
-    { 
+    {
         .baseHP        = 50,
         .baseAttack    = 20,
         .baseDefense   = 25,
@@ -709,72 +771,84 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggMoveLearnset = sPartrioEggMoveLearnset,
         .formSpeciesIdTable = sPartrioFormSpeciesIdTable,
     },
+    
+    // New forms for existing species
 
-    [SPECIES_REGITUBE] =
-    { 
-        .baseHP        = 80,
-        .baseAttack    = 75,
-        .baseDefense   = 75,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 150,
-        .baseSpDefense = 150,
-        .types = MON_TYPES(TYPE_WATER),
-        .catchRate = 3,
-        .expYield = 290,
-        .evYield_SpAttack  = 2,
-        .evYield_SpDefense = 1,
+    [SPECIES_ROTOM_STEREO] =
+    {
+        .baseHP        = 50,
+        .baseAttack    = 65,
+        .baseDefense   = 107,
+        .baseSpeed     = 86,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 107,
+    #if P_UPDATED_TYPES >= GEN_5
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_NORMAL),
+    #else
+        .types = ROTOM_FAMILY_TYPES,
+    #endif
+        .catchRate = 45,
+        .expYield = ROTOM_APPLIANCE_EXP_YIELD,
+        .evYield_Speed = 1,
+        .evYield_SpAttack = 1,
         .genderRatio = MON_GENDERLESS,
-        .eggCycles = 120,
-        .friendship = 35,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_BUOYANT_POWER, ABILITY_NONE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Regitube"),
-        .cryId = CRY_REGITUBE,
-        .natDexNum = NATIONAL_DEX_REGITUBE,
-        .categoryName = _("Inner Tube"),
-        .height = 20,
-        .weight = 25,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
+        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Rotom"),
+        .cryId = CRY_ROTOM,
+        .natDexNum = NATIONAL_DEX_ROTOM,
+        .categoryName = _("Plasma"),
+        .height = 3,
+        .weight = 3,
         .description = COMPOUND_STRING(
-            "Not a single scientist can figure out why\n"
-            "Regigigas decided to create its newest\n"
-            "titan of terrifying aquatic power out of\n"
-            "a pile of average beach inflatable tubes."),
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 493,
+            "When Rotom enters a mini stereo system\n"
+            "it gains a cheery, upbeat personality.\n"
+            "It may play pranks on people, blasting\n"
+            "music at high volumes to make them jump."),
+        .pokemonScale = 530,
+        .pokemonOffset = 13,
+        .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Regitube,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 6,
+        .frontPic = gMonFrontPic_RotomStereo,
+        .frontPicSize = MON_COORDS_SIZE(56, 48),
+        .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
         ),
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Regitube,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 11,
-        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
-        .palette = gMonPalette_Regitube,
-        .shinyPalette = gMonShinyPalette_Regitube,
-        .iconSprite = gMonIcon_Regitube,
-        .iconPalIndex = 0,
-        SHADOW(2, 7, SHADOW_SIZE_L)
-        FOOTPRINT(Regitube)
+        .frontAnimId = ANIM_ZIGZAG_FAST,
+        .enemyMonElevation = 10,
+        .backPic = gMonBackPic_RotomStereo,
+        .backPicSize = MON_COORDS_SIZE(64, 40),
+        .backPicYOffset = 5,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_RotomStereo,
+        .shinyPalette = gMonShinyPalette_RotomStereo,
+        .iconSprite = gMonIcon_RotomStereo,
+        .iconPalIndex = 5,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-1, 11, SHADOW_SIZE_L)
+        FOOTPRINT(Rotom)
         OVERWORLD(
-            sPicTable_Regitube,
+            sPicTable_RotomStereo,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Regitube,
-            gShinyOverworldPalette_Regitube
+            gOverworldPalette_RotomStereo,
+            gShinyOverworldPalette_RotomStereo
         )
-        .isSubLegendary = TRUE,
-        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
-        .levelUpLearnset = sRegitubeLevelUpLearnset,
-        .teachableLearnset = sRegitubeTeachableLearnset,
+        .levelUpLearnset = sRotomLevelUpLearnset,
+        .teachableLearnset = sRotomTeachableLearnset,
+        .formSpeciesIdTable = sRotomFormSpeciesIdTable,
+        .formChangeTable = sRotomFormChangeTable,
     },
 
     [SPECIES_SLOWBRO_MEGA_G] =

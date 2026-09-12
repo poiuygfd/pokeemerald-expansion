@@ -90206,6 +90206,28 @@
     "EggMoves": [],
     "TutorMoves": []
   },
+  "BOXIMP": {
+    "LevelMoves": [
+      {
+        "Level": 1,
+        "Move": "MOVE_SPECIAL_DELIVERY"
+      }
+    ],
+    "PreEvoMoves": [],
+    "TMMoves": [
+      "MOVE_LIGHT_SCREEN",
+      "MOVE_PROTECT",
+      "MOVE_SAFEGUARD",
+      "MOVE_REFLECT",
+      "MOVE_REST",
+      "MOVE_CONFIDE",
+      "MOVE_SUBSTITUTE",
+      "MOVE_SLEEP_TALK",
+      "MOVE_DEFENSE_CURL"
+    ],
+    "EggMoves": [],
+    "TutorMoves": []
+  },
   "RATTATA_ALOLAN": {
     "LevelMoves": [],
     "PreEvoMoves": [],

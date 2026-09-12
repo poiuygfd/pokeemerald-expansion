@@ -4119,6 +4119,10 @@ bool8 MovementType_LookAround_Step3(struct ObjectEvent *objectEvent, struct Spri
         sprite->sTypeFuncId = 4;
         return TRUE;
     }
+    else if (OW_MON_WANDER_WALK == TRUE && IS_OW_MON_OBJ(objectEvent))
+    {
+        UpdateMonMoveInPlace(objectEvent, sprite);
+    }
     return FALSE;
 }
 

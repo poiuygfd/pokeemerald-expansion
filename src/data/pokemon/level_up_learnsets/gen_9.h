@@ -22390,6 +22390,11 @@ static const struct LevelUpMove sRegitubeLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const struct LevelUpMove sBoximpLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SPECIAL_DELIVERY),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sPartrioLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LEADER_SWAP),
     LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL),

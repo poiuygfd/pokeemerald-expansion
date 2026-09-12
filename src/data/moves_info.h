@@ -22160,6 +22160,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_STAT_MINUS,
             .speed = 1,
@@ -22170,6 +22172,30 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_BubbleBlast,
+    },
+
+    [MOVE_SPECIAL_DELIVERY] =
+    {
+        .name = COMPOUND_STRING("Special Delivery"),
+        .description = COMPOUND_STRING(
+            "Changes user to Normal-type.\n"
+            "A deadly gift for the foe."),
+        .power = 120,
+        .effect = EFFECT_HIT,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Present,
     },
 
     [MOVE_FLASH_FREEZE] =
@@ -22210,7 +22236,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .argument = { .type = TYPE_WATER },
+        .metronomeBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -22233,7 +22261,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 6,
         .category = DAMAGE_CATEGORY_STATUS,
         .ignoresSubstitute = TRUE,
+        .mimicBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
         .mirrorMoveBanned = TRUE,
+        .assistBanned = TRUE,
+        .sketchBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,

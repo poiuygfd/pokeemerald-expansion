@@ -2566,6 +2566,20 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .breakable = TRUE,
     },
 
+    [ABILITY_BUOYANT_POWER] =
+    {
+        .name = _("Buoyant Power"),
+        .description = COMPOUND_STRING("Ups Water-type moves."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_CARDBOARD_SHIELD] =
+    {
+        .name = _("Cardboard Shield"),
+        .description = COMPOUND_STRING("Ups Water-type moves."),
+        .aiRating = 6,
+    },
+
     [ABILITY_PUNISHER] =
     {
         .name = _("Punisher"),
@@ -2589,13 +2603,6 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
-    },
-
-    [ABILITY_BUOYANT_POWER] =
-    {
-        .name = _("Buoyant Power"),
-        .description = COMPOUND_STRING("Ups Water-type moves."),
-        .aiRating = 6,
     },
 
     [ABILITY_REACTIVE_FIRE] =
