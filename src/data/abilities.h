@@ -2573,11 +2573,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 6,
     },
 
-    [ABILITY_CARDBOARD_SHIELD] =
+    [ABILITY_DELIVER] =
     {
-        .name = _("Cardboard Shield"),
-        .description = COMPOUND_STRING("Ups Water-type moves."),
-        .aiRating = 6,
+        .name = _("Deliver"),
+        .description = COMPOUND_STRING("Passes held item to ally."),
+        .aiRating = 0,
     },
 
     [ABILITY_PUNISHER] =

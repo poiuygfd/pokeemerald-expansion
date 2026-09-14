@@ -391,19 +391,19 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_CARDBOARD_SHIELD, ABILITY_NONE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilities = { ABILITY_DELIVER, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Boximp"),
-        .cryId = CRY_REGITUBE,
+        .cryId = CRY_BOXIMP,
         .natDexNum = NATIONAL_DEX_BOXIMP,
         .categoryName = _("Box Haunt"),
         .height = 4,
         .weight = 48,
         .description = COMPOUND_STRING(
-            "A Pokémon that enjoys nesting inside\n"
+            "A rare Pokémon that enjoys nesting inside\n"
             "of cardboard boxes. It travels the region\n"
-            "by mailing itself. It can change its type\n"
-            "at will, but nobody has ever seen how."),
+            "by mailing itself. If a Boximp leaves you\n"
+            "a surprise gift, opening it is ill advised."),
         .pokemonScale = 457,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -425,18 +425,18 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW,
         .palette = gMonPalette_Boximp,
         .shinyPalette = gMonShinyPalette_Boximp,
-        .iconSprite = gMonIcon_Regitube,
-        .iconPalIndex = 0,
+        .iconSprite = gMonIcon_Boximp,
+        .iconPalIndex = 5,
         SHADOW(0, -3, SHADOW_SIZE_L)
         FOOTPRINT(Boximp)
         OVERWORLD(
-            sPicTable_Regitube,
+            sPicTable_Boximp,
             SIZE_32x32,
-            SHADOW_SIZE_M,
+            SHADOW_SIZE_S,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Regitube,
-            gShinyOverworldPalette_Regitube
+            gOverworldPalette_Boximp,
+            gShinyOverworldPalette_Boximp
         )
         .isMythical = TRUE,
         .teachingType = TM_ILLITERATE,

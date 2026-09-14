@@ -22180,7 +22180,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Normal or Ghost-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_NORMAL,
         .accuracy = 100,
@@ -22205,7 +22205,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Grass or Fairy-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_GRASS,
         .accuracy = 100,
@@ -22230,7 +22230,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Fire or Dragon-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -22255,7 +22255,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Water or Ice-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_WATER,
         .accuracy = 100,
@@ -22280,7 +22280,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Electric or Steel-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
@@ -22305,7 +22305,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Bug or Poison-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_BUG,
         .accuracy = 100,
@@ -22330,7 +22330,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Flying or Fighting-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_FLYING,
         .accuracy = 100,
@@ -22355,7 +22355,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Psychic or Dark-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
@@ -22380,7 +22380,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Does Rock or Ground-type\n"
             "damage based on matchup."),
-        .power = 120,
+        .power = 80,
         .effect = EFFECT_TYPE_SWAP_MOVE,
         .type = TYPE_ROCK,
         .accuracy = 100,

@@ -27534,11 +27534,11 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/normal.pal", ".gbapal");
     const u32 gMonBackPic_Boximp[] = INCGFX_U32("graphics/pokemon/boximp/back.png", ".4bpp.smol");
     const u16 gMonShinyPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/shiny.pal", ".gbapal");
-    //const u8 gMonIcon_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/icon.png", ".4bpp");
+    const u8 gMonIcon_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/icon.png", ".4bpp");
     const u8 gMonFootprint_Boximp[] = INCGFX_U8("graphics/pokemon/boximp/footprint.png", ".1bpp");
-    //const u32 gObjectEventPic_Boximp[] = INCGFX_COMP("graphics/pokemon/boximp/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
-    //const u16 gOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_normal.pal", ".gbapal");
-    //const u16 gShinyOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_shiny.pal", ".gbapal");
+    const u32 gObjectEventPic_Boximp[] = INCGFX_COMP("graphics/pokemon/boximp/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    const u16 gOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Boximp[] = INCGFX_U16("graphics/pokemon/boximp/overworld_shiny.pal", ".gbapal");
 
     const u32 gMonFrontPic_AvitorchCalm[] = INCGFX_U32("graphics/pokemon/avitorch/anim_front.png", ".4bpp.smol");
     const u16 gMonPalette_AvitorchCalm[] = INCGFX_U16("graphics/pokemon/avitorch/normal.pal", ".gbapal");

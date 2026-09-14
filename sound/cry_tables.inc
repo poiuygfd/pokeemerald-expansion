@@ -2554,11 +2554,12 @@ gCryTable::
 .endif @ P_FAMILY_PECHARUNT
 	cry Cry_Marin
 	cry Cry_MissingNo
+	cry Cry_Regitube
+	cry Cry_Boximp
 	cry Cry_Avitorch
 	cry Cry_Partrio_Paladin
 	cry Cry_Partrio_Warrior
 	cry Cry_Partrio_Mage
-	cry Cry_Regitube
 .if P_MODIFIED_MEGA_CRIES == TRUE
 	cry Cry_CastformMega
 	cry Cry_CharizardMegaZ
@@ -5122,11 +5123,12 @@ gCryTable_Reverse::
 .endif @ P_FAMILY_PECHARUNT
 	cry_reverse Cry_Marin
 	cry_reverse Cry_MissingNo
+	cry_reverse Cry_Regitube
+	cry_reverse Cry_Boximp
 	cry_reverse Cry_Avitorch
 	cry_reverse Cry_Partrio_Paladin
 	cry_reverse Cry_Partrio_Warrior
 	cry_reverse Cry_Partrio_Mage
-	cry_reverse Cry_Regitube
 .if P_MODIFIED_MEGA_CRIES == TRUE
 	cry_reverse Cry_CastformMega
 	cry_reverse Cry_CharizardMegaZ

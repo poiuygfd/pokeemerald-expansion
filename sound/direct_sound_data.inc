@@ -8741,43 +8741,71 @@ Cry_Pecharunt::
 
 	.align 2
 Cry_Marin::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/marin.bin"
+.endif
 
 	.align 2
 Cry_MissingNo::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/missingno.bin"
-
-	.align 2
-Cry_Avitorch::
-	.incbin "sound/direct_sound_samples/cries/avitorch.bin"
-
-	.align 2
-Cry_Partrio_Paladin::
-	.incbin "sound/direct_sound_samples/cries/partrio_paladin.bin"
-
-	.align 2
-Cry_Partrio_Warrior::
-	.incbin "sound/direct_sound_samples/cries/partrio_warrior.bin"
-
-	.align 2
-Cry_Partrio_Mage::
-	.incbin "sound/direct_sound_samples/cries/partrio_mage.bin"
+.endif
 
 	.align 2
 Cry_Regitube::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/regitube.bin"
+.endif
 
 	.align 2
+Cry_Boximp::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/boximp.bin"
+.endif
+
+	.align 2
+Cry_Avitorch::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/avitorch.bin"
+.endif
+
+	.align 2
+Cry_Partrio_Paladin::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/partrio_paladin.bin"
+.endif
+
+	.align 2
+Cry_Partrio_Warrior::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/partrio_warrior.bin"
+.endif
+
+	.align 2
+Cry_Partrio_Mage::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/partrio_mage.bin"
+.endif
+
+.if P_MODIFIED_MEGA_CRIES == TRUE
+	.align 2
 Cry_CastformMega::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/castform_mega.bin"
+.endif
 
 	.align 2
 Cry_CharizardMegaZ::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/charizard_mega_z.bin"
+.endif
 
 	.align 2
 Cry_CharizardOmegaZ::
+.if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/charizard_omega_z.bin"
+.endif
+.endif @ P_MODIFIED_MEGA_CRIES
 
 .endif @ P_CRIES_ENABLED
 
