@@ -9,7 +9,7 @@ static EWRAM_DATA const u16 *sDynamicShopItemListRef = NULL;
 
 // Remove the UNUSED if you'll use the functions!
 static UNUSED bool32 ShopCriteriaByBadgeCount(u32 count);
-static UNUSED bool32 ShopCriteriaByFlag(u32 flagId);
+static bool32 ShopCriteriaByFlag(u32 flagId);
 static UNUSED bool32 ShopCriteriaByVar(u32 varId, u32 varValue);
 
 void TryBuildDynamicShopItemList(const u16 **ogItemList, u16 *resultingTotal)
@@ -46,6 +46,31 @@ void TryFreeDynamicShopItemList(const u16 **ogItemList)
 
 // Add new Criterias below!
 
+bool32 ShopCriteriaBadge5(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_BADGE05_GET);
+}
+
+bool32 ShopCriteriaBadge6(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_BADGE06_GET);
+}
+
+bool32 ShopCriteriaBadge7(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_BADGE07_GET);
+}
+
+bool32 ShopCriteriaBadge8(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_BADGE08_GET);
+}
+
+bool32 ShopCriteriaIsChampion(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_SYS_GAME_CLEAR);
+}
+
 static UNUSED bool32 ShopCriteriaByBadgeCount(u32 count)
 {
     u32 badgeCount = 0;
@@ -66,7 +91,7 @@ static UNUSED bool32 ShopCriteriaByBadgeCount(u32 count)
 // but uses only one specific event var/flag check. Useful if you need
 // a specific badge flag instead of just the badge total.
 
-static UNUSED bool32 ShopCriteriaByFlag(u32 flagId)
+static bool32 ShopCriteriaByFlag(u32 flagId)
 {
     if (FlagGet(flagId))
         return TRUE;
