@@ -2562,6 +2562,7 @@ gCryTable::
 	cry Cry_Partrio_Mage
 .if P_MODIFIED_MEGA_CRIES == TRUE
 	cry Cry_CastformMega
+	cry Cry_LumineonMega
 	cry Cry_CharizardMegaZ
 	cry Cry_CharizardOmegaZ
 .endif @ P_MODIFIED_MEGA_CRIES
@@ -5131,6 +5132,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Partrio_Mage
 .if P_MODIFIED_MEGA_CRIES == TRUE
 	cry_reverse Cry_CastformMega
+	cry_reverse Cry_LumineonMega
 	cry_reverse Cry_CharizardMegaZ
 	cry_reverse Cry_CharizardOmegaZ
 .endif @ P_MODIFIED_MEGA_CRIES

@@ -8795,6 +8795,12 @@ Cry_CastformMega::
 .endif
 
 	.align 2
+Cry_LumineonMega::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/lumineon_mega.bin"
+.endif
+
+	.align 2
 Cry_CharizardMegaZ::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/charizard_mega_z.bin"

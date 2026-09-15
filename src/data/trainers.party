@@ -7324,16 +7324,16 @@ Nature: Bold
 - Recover
 - Rain Dance
 
-Blastoise @ Blastoisinite
+Lumineon @ Lumineonite
 Level: 78
-Ability: Rain Dish
+Ability: Storm Drain
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 252 HP / 252 SpA
 Nature: Modest
-- Water Pulse
-- Aura Sphere
-- Ice Beam
-- Shell Smash
+- Hydro Pump
+- Dazzling Gleam
+- Encore
+- Charm
 
 === TRAINER_ANDREW ===
 Name: ANDREW
