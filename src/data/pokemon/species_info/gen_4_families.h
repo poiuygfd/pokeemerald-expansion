@@ -5597,6 +5597,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )
         .levelUpLearnset = sLumineonLevelUpLearnset,
         .teachableLearnset = sLumineonTeachableLearnset,
+        .formSpeciesIdTable = sLumineonFormSpeciesIdTable,
+        .formChangeTable = sLumineonFormChangeTable,
     },
 #endif //P_FAMILY_FINNEON
 

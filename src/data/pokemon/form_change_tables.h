@@ -31,6 +31,7 @@ static const struct FormChange sCharizardFormChangeTable[] =
 
 static const struct FormChange sCharizardMegaZFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_HP_PERCENT_TURN_END,    SPECIES_CHARIZARD_OMEGA_Z, ABILITY_NEPOTISM, HP_LOWER_EQ_THAN, 50},
+    {FORM_CHANGE_FAINT,                         SPECIES_CHARIZARD},
     {FORM_CHANGE_END_BATTLE,                    SPECIES_CHARIZARD},
     {FORM_CHANGE_TERMINATOR},
 };
@@ -193,6 +194,7 @@ static const struct FormChange sSlowbroFormChangeTable[] =
 
 static const struct FormChange sSlowbroGalarFormChangeTable[] = {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SLOWBRO_MEGA_G, ITEM_SLOWBRONITE_G},
+    {FORM_CHANGE_FAINT,                         SPECIES_SLOWBRO_GALAR},
     {FORM_CHANGE_END_BATTLE,                    SPECIES_SLOWBRO_GALAR},
     {FORM_CHANGE_TERMINATOR},
 };
@@ -932,6 +934,14 @@ static const struct FormChange sLucarioFormChangeTable[] =
 };
 #endif //P_FAMILY_RIOLU
 
+static const struct FormChange sLumineonFormChangeTable[] =
+{
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_LUMINEON_MEGA, ITEM_LUMINEONITE},
+    {FORM_CHANGE_FAINT,                         SPECIES_LUMINEON},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_LUMINEON},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #if P_FAMILY_SNOVER
 static const struct FormChange sAbomasnowFormChangeTable[] =
 {
@@ -1539,6 +1549,7 @@ static const struct FormChange sWishiwashiFormChangeTable[] =
 static const struct FormChange sTsareenaFormChangeTable[] =
 {
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TSAREENA_MEGA, ITEM_TSAREENITE},
+    {FORM_CHANGE_FAINT,                         SPECIES_TSAREENA},
     {FORM_CHANGE_END_BATTLE,                    SPECIES_TSAREENA},
     {FORM_CHANGE_TERMINATOR},
 };

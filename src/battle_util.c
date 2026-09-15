@@ -3619,6 +3619,12 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
+        case ABILITY_OCEAN_BREEZE:
+            if (shouldAbilityTrigger)
+            {
+                BattleScriptCall(BattleScript_OceanBreezeActivates);
+                effect++;
+            }
         default:
             break;
         }

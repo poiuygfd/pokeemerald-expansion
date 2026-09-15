@@ -538,6 +538,7 @@ extern const u8 BattleScript_TheVoidActivates[];
 extern const u8 BattleScript_WildBattleVictory[];
 extern const u8 BattleScript_BelchFails[];
 extern const u8 BattleScript_MegaSolActivatesTwoTurnMove[];
+extern const u8 BattleScript_OceanBreezeActivates[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];

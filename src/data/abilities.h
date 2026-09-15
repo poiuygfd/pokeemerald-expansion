@@ -2635,6 +2635,13 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
     },
 
+    [ABILITY_OCEAN_BREEZE] =
+    {
+        .name = _("Ocean Breeze"),
+        .description = COMPOUND_STRING("Summons a tailwind."),
+        .aiRating = 8,
+    },
+
     [ABILITY_NEPOTISM] =
     {
         .name = _("Nepotism"),

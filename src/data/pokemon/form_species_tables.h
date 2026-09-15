@@ -1188,6 +1188,12 @@ static const u16 sLucarioFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_RIOLU
 
+static const u16 sLumineonFormSpeciesIdTable[] = {
+    SPECIES_LUMINEON,
+    SPECIES_LUMINEON_MEGA,
+    FORM_SPECIES_END,
+};
+
 #if P_FAMILY_SNOVER
 static const u16 sAbomasnowFormSpeciesIdTable[] = {
     SPECIES_ABOMASNOW,
