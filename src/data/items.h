@@ -7445,8 +7445,8 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
-        .iconPic = gItemIcon_Glimmoranite,
-        .iconPalette = gItemIconPalette_Glimmoranite,
+        .iconPic = gItemIcon_Lumineonite,
+        .iconPalette = gItemIconPalette_Lumineonite,
         .shopCriteriaFunc = ShopCriteriaBadge8,
     },
 

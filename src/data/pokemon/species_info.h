@@ -1338,17 +1338,17 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_LUMINEON_MEGA,
         .natDexNum = NATIONAL_DEX_LUMINEON,
         .categoryName = _("Neon"),
-        .height = 12,
-        .weight = 240,
+        .height = 18,
+        .weight = 265,
         .description = COMPOUND_STRING(
             "The sight of Mega Lumineon glowing from\n"
             "the depths of the ocean is said to be\n"
             "once of the most beautiful sights in the\n"
             "world, making it the goal of many to see."),
-        .pokemonScale = 282,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+        .pokemonScale = 256,
+        .pokemonOffset = 1,
+        .trainerScale = 282,
+        .trainerOffset = 2,
         .frontPic = gMonFrontPic_LumineonMega,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 4,

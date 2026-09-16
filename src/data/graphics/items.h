@@ -2156,6 +2156,9 @@ const u16 gItemIconPalette_Castformite[] = INCGFX_U16("graphics/items/icon_palet
 const u32 gItemIcon_Hydreigonite[] = INCGFX_U32("graphics/items/icons/hydreigonite.png", ".4bpp.smol");
 const u16 gItemIconPalette_Hydreigonite[] = INCGFX_U16("graphics/items/icon_palettes/hydreigonite.pal", ".gbapal");
 
+const u32 gItemIcon_Lumineonite[] = INCGFX_U32("graphics/items/icons/lumineonite.png", ".4bpp.smol");
+const u16 gItemIconPalette_Lumineonite[] = INCGFX_U16("graphics/items/icon_palettes/lumineonite.pal", ".gbapal");
+
 const u32 gItemIcon_CharizarditeZ[] = INCGFX_U32("graphics/items/icons/charizardite_z.png", ".4bpp.smol");
 const u16 gItemIconPalette_CharizarditeZ[] = INCGFX_U16("graphics/items/icon_palettes/charizardite_z.pal", ".gbapal");
 
