@@ -1351,7 +1351,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_LumineonMega,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
-        .frontPicYOffset = 2,
+        .frontPicYOffset = 4,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 8,
@@ -1364,7 +1364,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_LumineonMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(-1, 16, SHADOW_SIZE_L)
+        SHADOW(-1, 14, SHADOW_SIZE_L)
         FOOTPRINT(Lumineon)
         .levelUpLearnset = sLumineonLevelUpLearnset,
         .teachableLearnset = sLumineonTeachableLearnset,

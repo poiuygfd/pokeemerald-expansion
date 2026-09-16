@@ -667,8 +667,8 @@
 #define FLAG_BATTLE_FRONTIER_TRADE2_DONE  0x266 // Red Pikachu Trade
 #define FLAG_HIDE_LEAF  0x267 // Hide Leaf in Lounge until defeated
 #define FLAG_HIDE_RED  0x268 // Hide Red in Lounge until defeated
-#define FLAG_HIDE_WALLACE_SUPERBOSS  0x269 // Hide Wallace Boss in Cave of Origin until post-game
-#define FLAG_DEFEATED_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS  0x26A // Wallace Battle
+#define FLAG_UNUSED_0x269  0x269
+#define FLAG_UNUSED_0x26A  0x26A
 #define FLAG_DEWFORD_NPC_TRADE_COMPLETED  0x26B // Dewford Fletchling Trade
 #define FLAG_TUFFNOOK_NPC_TRADE_COMPLETED  0x26C // Tuffnook Munchlax Trade
 #define FLAG_MET_GAVIN  0x26D // Met Gavin from Gavin's Gems

@@ -472,13 +472,7 @@ MossdeepCity_EventScript_ReceivedGalarica::
 MossdeepCity_EventScript_BlackBelt::
 	lock
 	faceplayer
-	goto_if_ge VAR_SOOTOPOLIS_CITY_STATE, 6, MossdeepCity_EventScript_BlackBeltNewLeader
 	msgbox MossdeepCity_Text_SootopolisGymLeader, MSGBOX_DEFAULT
-	release
-	end
-
-MossdeepCity_EventScript_BlackBeltNewLeader::
-	msgbox MossdeepCity_Text_SootopolisNewGymLeader, MSGBOX_DEFAULT
 	release
 	end
 
@@ -742,14 +736,4 @@ MossdeepCity_Text_SootopolisGymLeader:
 	.string "uses WATER-type POKéMON.\p"
 	.string "They say he's made a real splash in\n"
 	.string "the CONTEST scene too.$"
-
-MossdeepCity_Text_SootopolisNewGymLeader:
-	.string "Ahh… It feels great letting the waves\n"
-	.string "wash over my feet…\p"
-	.string "Speaking of the waves, you know that\n"
-	.string "island city SOOTOPOLIS?\p"
-	.string "I think the GYM there had a new\n"
-	.string "LEADER come in.\p"
-	.string "People tell me the new LEADER once\n"
-	.string "mentored WALLACE.$"
 

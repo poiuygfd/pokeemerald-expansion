@@ -631,6 +631,7 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_ZERAORA:
     case SPECIES_OGERPON:
     case SPECIES_MELOETTA:
+    case SPECIES_BOXIMP:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_DP_VS_LEGEND);
         break;
     }

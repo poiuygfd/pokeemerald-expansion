@@ -45,7 +45,6 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
 	setflag FLAG_HIDE_LEAF
 	setflag FLAG_HIDE_RED
-	clearflag FLAG_HIDE_WALLACE_SUPERBOSS
 	setvar VAR_LEVEL_CAP, 100
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale

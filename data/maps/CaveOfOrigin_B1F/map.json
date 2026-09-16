@@ -3,7 +3,6 @@
   "name": "CaveOfOrigin_B1F",
   "layout": "LAYOUT_CAVE_OF_ORIGIN_B1F",
   "music": "MUS_NONE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_CAVE_OF_ORIGIN",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
@@ -28,20 +27,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CaveOfOrigin_B1F_EventScript_Wallace",
       "flag": "FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE"
-    },
-    {
-      "local_id": "LOCALID_CAVE_OF_ORIGIN_WALLACE_SUPERBOSS",
-      "graphics_id": "OBJ_EVENT_GFX_WALLACE",
-      "x": 9,
-      "y": 13,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "CaveOfOrigin_B1F_EventScript_WallaceSuperboss",
-      "flag": "FLAG_HIDE_WALLACE_SUPERBOSS"
     }
   ],
   "warp_events": [
@@ -54,5 +39,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

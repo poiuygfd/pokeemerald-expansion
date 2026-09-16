@@ -48,8 +48,7 @@ SootopolisCity_OnTransition:
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_SetOutsideGymObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetOutsideGymObjPos2
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_SetOutsideGymObjPos3
-	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 8, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
-	call_if_set FLAG_IS_CHAMPION, SootopolisCity_EventScript_SetExpertUnblockCaveEntrance
+	call_if_ge VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
 	end
 
 SootopolisCity_EventScript_HideMapNamePopup::
@@ -156,10 +155,6 @@ SootopolisCity_EventScript_SetWallaceLeft::
 
 SootopolisCity_EventScript_SetExpertBlockCaveEntrance::
 	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 31, 18
-	return
-
-SootopolisCity_EventScript_SetExpertUnblockCaveEntrance::
-	setobjectxyperm LOCALID_SOOTOPOLIS_EXPERT, 30, 18
 	return
 
 SootopolisCity_OnWarp:
@@ -1825,20 +1820,17 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
 	.string "the SOOTOPOLIS GYM LEADER.\p"
-	.string "While the GYM LEADER of SOOTOPOLIS\n"
-	.string "should be none other than myself,\l"
-	.string "considering the events of today, I've\l"
-	.string "decided to retrain myself from scratch.\p"
-	.string "Next time SOOTOPOLIS is in danger, I'll\n"
-	.string "make sure I'm strong enough to save it!\p"
-	.string "In my stead, I have had my mentor, JUAN,\n"
-	.string "take over my duties as GYM LEADER.\p"
+	.string "And wouldn't you know it, the LEADER\n"
+	.string "of SOOTOPOLIS is standing before you!\p"
+	.string "That's right, I run the SOOTOPOLIS GYM\n"
+	.string "alongside my mentor, JUAN.\p"
 	.string "When you're all set to go, step through\n"
 	.string "that door.\p"
-	.string "Next time we meet, however…\n"
-	.string "I would like to battle with you myself!$"
+	.string "I cannot wait to see the power you\n"
+	.string "have cultivated firsthand.$"
 
 SootopolisCity_Text_DazzledByMentor:
 	.string "WALLACE: I'm sure that you will be\n"
 	.string "dazzled by my mentor's breathtakingly\l"
 	.string "elegant battle style.$"
+

@@ -5923,29 +5923,29 @@ Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Lunatone @ Power Herb
+Lunatone @ Terrain Extender
 Level: 41
 Ability: Levitate
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpA
 Nature: Quiet
 - Psychic
 - Meteor Beam
 - Hypnosis
-- Trick Room
+- Psychic Terrain
 
-Solrock @ Sitrus Berry
+Solrock @ Light Clay
 Level: 41
 Ability: Levitate
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
 Nature: Brave
 - Rock Slide
 - Zen Headbutt
-- Flare Blitz
-- Sunny Day
+- Reflect
+- Light Screen
 
-Bronzong @ Light Clay
+Bronzong @ Sitrus Berry
 Level: 40
 Ability: Levitate
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
@@ -5953,8 +5953,8 @@ EVs: 250 HP / 250 SpD
 Nature: Brave
 - Gyro Ball
 - Body Press
-- Reflect
-- Light Screen
+- Iron Defense
+- Hypnosis
 
 Claydol @ Wise Glasses
 Level: 39
@@ -5963,9 +5963,9 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
 EVs: 250 HP / 250 Def
 Nature: Quiet
 - Earth Power
-- Psychic
+- Expanding Force
 - Calm Mind
-- Trick Room
+- Power Split
 
 Rabsca @ Focus Sash
 Level: 40
@@ -5974,19 +5974,19 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
 EVs: 250 HP / 250 SpA
 Nature: Relaxed
 - Bug Buzz
-- Extrasensory
+- Expanding Force
 - Revival Blessing
-- Trick Room
+- Psychic Terrain
 
-Slowbro @ Slowbronite
+Meowstic @ Meowsticite
 Level: 42
-Ability: Own Tempo
+Ability: Keen Eye
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
-EVs: 250 HP / 250 SpA
-Nature: Sassy
-- Psychic
-- Scald
-- Slack Off
+EVs: 250 SpA / 250 Spe
+Nature: Timid
+- Expanding Force
+- Alluring Voice
+- Thunderbolt
 - Calm Mind
 
 === TRAINER_JUAN_1 ===
@@ -6021,8 +6021,51 @@ Nature: Modest
 - Dragon Pulse
 - Nasty Plot
 
+Crawdaunt @ Mystic Water
+Level: 43
+Ability: Adaptability
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 Atk
+Nature: Adamant
+- Crabhammer
+- Aqua Jet
+- Sucker Punch
+- Swords Dance
+
+Kingdra @ Chesto Berry
+Level: 44
+Ability: Swift Swim
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 250 HP / 250 SpA
+Nature: Modest
+- Muddy Water
+- Dragon Pulse
+- Double Team
+- Rest
+
+=== TRAINER_WALLACE ===
+Name: WALLACE
+Class: Leader
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Items: Hyper Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Jellicent (M) @ Leftovers
+Level: 44
+Ability: Cursed Body
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+EVs: 250 HP / 250 SpA
+Nature: Adamant
+- Water Spout
+- Shadow Ball
+- Acid Armor
+- Strength Sap
+
 Marin @ Focus Sash
-Level: 42
+Level: 43
 Ability: Friend Guard
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 Spe
@@ -6033,7 +6076,7 @@ Nature: Timid
 - Follow Me
 
 Milotic @ Flame Orb
-Level: 42
+Level: 45
 Ability: Marvel Scale
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpD
@@ -6043,27 +6086,16 @@ Nature: Modest
 - Recover
 - Rain Dance
 
-Gyarados @ Wacan Berry
-Level: 43
-Ability: Intimidate
+Lumineon @ Lumineonite
+Level: 46
+Ability: Storm Drain
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-EVs: 250 Atk / 250 Spe
-Nature: Adamant
-- Waterfall
-- Crunch
-- Earthquake
-- Dragon Dance
-
-Kingdra @ Chesto Berry
-Level: 44
-Ability: Swift Swim
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-EVs: 250 HP / 250 SpA
+EVs: 252 HP / 252 SpA
 Nature: Modest
-- Muddy Water
-- Dragon Pulse
-- Double Team
-- Rest
+- Hydro Pump
+- Dazzling Gleam
+- Encore
+- Charm
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
@@ -7257,83 +7289,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Mareep
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_WALLACE ===
-Name: WALLACE
-Class: Champion
-Pic: Champion Wallace
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Mugshot: Yellow
-
-Wailord @ Damp Rock
-Level: 75
-Ability: Pressure
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Bold
-- Rain Dance
-- Water Spout
-- Surf
-- Blizzard
-
-Palafin @ Muscle Band
-Level: 75
-Ability: Zero to Hero
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Adamant
-- Wave Crash
-- Close Combat
-- Jet Punch
-- Flip Turn
-
-Starmie @ Life Orb
-Level: 76
-Ability: Natural Cure
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
-Nature: Timid
-- Hydro Pump
-- Psychic
-- Thunderbolt
-- Ice Beam
-
-Whiscash @ Rocky Helmet
-Level: 76
-Ability: Oblivious
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Earthquake
-- Liquidation
-- Rock Slide
-- Dragon Dance
-
-Milotic @ Lum Berry
-Level: 76
-Ability: Competitive
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Bold
-- Scald
-- Ice Beam
-- Recover
-- Rain Dance
-
-Lumineon @ Lumineonite
-Level: 78
-Ability: Storm Drain
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
-Nature: Modest
-- Hydro Pump
-- Dazzling Gleam
-- Encore
-- Charm
 
 === TRAINER_ANDREW ===
 Name: ANDREW
