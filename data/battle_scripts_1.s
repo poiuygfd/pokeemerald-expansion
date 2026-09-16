@@ -1851,10 +1851,6 @@ BattleScript_TwoTurnMoveCharging::
 	setadditionaleffects @ only onChargeTurnOnly effects will work here
 	return
 
-BattleScript_SkyDropCharging::
-	call BattleScript_TwoTurnMoveCharging
-	goto BattleScript_MoveEnd
-
 BattleScript_TwoTurnMovesSecondTurnRet:
 	setbyte sB_ANIM_TURN, 1
 	setbyte sB_ANIM_TARGETS_HIT, 0
@@ -2872,6 +2868,7 @@ BattleScript_HandleFaintedMonLoop::
 	trytrainerslidemsglaston BS_FAINTED
 	switchineffects BS_FAINTED_MULTIPLE_1
 	jumpifbytenotequal gBattlerFainted, gBattlersCount, BattleScript_HandleFaintedMonLoop
+	setbyte gBattlerFainted, 0
 BattleScript_HandleFaintedMonMultipleEnd::
 	switchinevents
 	trytrainerslidemsglaston BS_FAINTED_MULTIPLE_2
@@ -6539,6 +6536,7 @@ BattleScript_ForfeitBattleGaveMoney::
 
 BattleScript_Attackstring::
 	printattackstring
+	waitmessage B_WAIT_TIME_SHORT
 	return
 
 BattleScript_SubmoveAttackstring::

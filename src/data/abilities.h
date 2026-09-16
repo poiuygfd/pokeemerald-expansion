@@ -2555,6 +2555,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 8,
     },
 
+    [ABILITY_AURA_GUARD] =
+    {
+        .name = _("Aura Guard"),
+        .description = COMPOUND_STRING("Unimplemented."),
+    },
+
     [ABILITY_ANTIVIRUS] =
     {
         .name = _("Antivirus"),
@@ -2664,5 +2670,5 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
         .cantBeSuppressed = TRUE,
         .cantBeOverwritten = TRUE,
-    }
+    },
 };
