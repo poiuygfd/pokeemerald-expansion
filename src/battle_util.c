@@ -8736,6 +8736,37 @@ uq4_12_t CalcTypeEffectivenessMultiplier(struct DamageContext *ctx)
             else
                 modifier = secondaryModifier;
         }
+        if (GetMoveEffect(ctx->move) == EFFECT_LA_HIDDEN_POWER && !ctx->isAnticipation)
+        {
+            uq4_12_t currModifier = modifier;
+            enum Type currType = ctx->moveType;
+            uq4_12_t newModifier;
+
+            // Loops through every type to see which has highest type effectiveness
+            for (enum Type i = TYPE_NORMAL; i <= TYPE_FAIRY; i++)
+            {
+                ctx->moveType = i;
+                newModifier = CalcTypeEffectivenessMultiplierInternal(ctx, UQ_4_12(1.0));
+
+                if (newModifier > currModifier)
+                {
+                    currModifier = newModifier;
+                    currType = i;
+                }
+            }
+
+            // Tries to prioritise Psychic type for the STAB bonus on Unown
+            ctx->moveType = TYPE_PSYCHIC;
+            newModifier = CalcTypeEffectivenessMultiplierInternal(ctx, UQ_4_12(1.0));
+            if (newModifier >= currModifier)
+            {
+                currModifier = newModifier;
+                currType = TYPE_PSYCHIC;
+            }
+
+            modifier = currModifier;
+            ctx->moveType = currType;
+        }
         if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && !(IsFromGalar(ctx->battlerDef)) && !ctx->isAnticipation)
             modifier = UQ_4_12(2.0);
         if (GetMoveEffect(ctx->move) == EFFECT_BEAN_BEAM && IsFromGalar(ctx->battlerDef) && !ctx->isAnticipation)

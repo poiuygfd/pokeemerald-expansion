@@ -6501,6 +6501,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .metronomeBanned = TRUE,
         .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -22422,6 +22423,28 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_IcyWind,
+    },
+
+    [MOVE_LA_HIDDEN_POWER] =
+    {
+        .name = COMPOUND_STRING("Hidden Power"),
+        .description = COMPOUND_STRING(
+            "Always deals supereffective\n"
+            "damage to the target."),
+        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
+        .effect = EFFECT_LA_HIDDEN_POWER,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HiddenPower,
+        .validApprenticeMove = TRUE,
     },
 
     [MOVE_BEAN_BEAM] =
