@@ -6409,5 +6409,7 @@ static const u16 sPartrioEggMoveLearnset[] = {
     MOVE_BEAT_UP,
     MOVE_RAPID_SPIN,
     MOVE_ALLY_SWITCH,
+    MOVE_NIGHT_SLASH,
+    MOVE_PSYCHO_CUT,
     MOVE_UNAVAILABLE,
 };
