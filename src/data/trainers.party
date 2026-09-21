@@ -2472,12 +2472,12 @@ AI: Check Bad Move
 Marill @ Nugget
 Level: 7
 Ability: Huge Power
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 Wooloo @ Nugget
 Level: 7
 Ability: Fluffy
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 === TRAINER_DAPHNE ===
 Name: DAPHNE
@@ -2865,14 +2865,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Rockruff @ Nugget
-Level: 7
+Level: 9
 Ability: Vital Spirit
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 Rockruff @ Nugget
-Level: 7
+Level: 9
 Ability: Vital Spirit
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 === TRAINER_MOLLIE ===
 Name: MOLLIE
@@ -5181,7 +5181,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Purple
 
 Scrafty @ Leftovers
-Level: 47
+Level: 57
 Ability: Intimidate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5192,7 +5192,7 @@ Nature: Careful
 - Bulk Up
 
 Shiftry @ Normal Gem
-Level: 47
+Level: 57
 Ability: Wind Rider
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5203,7 +5203,7 @@ Nature: Adamant
 - Tailwind
 
 Drapion @ Scope Lens
-Level: 48
+Level: 58
 Ability: Sniper
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5214,7 +5214,7 @@ Nature: Jolly
 - Swords Dance
 
 Krookodile @ Focus Sash
-Level: 48
+Level: 58
 Ability: Intimidate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5225,7 +5225,7 @@ Nature: Jolly
 - Swagger
 
 Obstagoon @ Flame Orb
-Level: 48
+Level: 58
 Ability: Guts
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5236,7 +5236,7 @@ Nature: Adamant
 - Obstruct
 
 Absol @ Absolite Z
-Level: 49
+Level: 59
 Ability: Pressure
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 Atk / 250 Spe
@@ -5258,7 +5258,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Green
 
 Zoroark-Hisui @ Life Orb
-Level: 49
+Level: 58
 Ability: Illusion
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -5269,7 +5269,7 @@ Nature: Modest
 - Nasty Plot
 
 Cofagrigus @ Leftovers
-Level: 49
+Level: 58
 Ability: Mummy
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpD
@@ -5280,7 +5280,7 @@ Nature: Bold
 - Protect
 
 Mimikyu @ Spell Tag
-Level: 50
+Level: 59
 Ability: Disguise
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5291,7 +5291,7 @@ Nature: Jolly
 - Swords Dance
 
 Houndstone @ Chesto Berry
-Level: 50
+Level: 59
 Ability: Fluffy
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5302,7 +5302,7 @@ Nature: Adamant
 - Rest
 
 Dusknoir @ Assault Vest
-Level: 50
+Level: 59
 Ability: Pressure
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5313,7 +5313,7 @@ Nature: Impish
 - Shadow Sneak
 
 Sableye @ Sablenite
-Level: 51
+Level: 60
 Ability: Prankster
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 HP / 250 Atk
@@ -5335,7 +5335,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Pink
 
 Ninetales-Alola @ Light Clay
-Level: 51
+Level: 59
 Ability: Snow Warning
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -5346,7 +5346,7 @@ Nature: Timid
 - Aurora Veil
 
 Avalugg @ Assault Vest
-Level: 51
+Level: 59
 Ability: Ice Body
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Def
@@ -5357,7 +5357,7 @@ Nature: Careful
 - Stone Edge
 
 Delibird @ Choice Band
-Level: 52
+Level: 60
 Ability: Hustle
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5368,7 +5368,7 @@ Nature: Jolly
 - Ice Shard
 
 Mamoswine @ Rocky Helmet
-Level: 52
+Level: 60
 Ability: Thick Fat
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5379,7 +5379,7 @@ Nature: Adamant
 - Ice Shard
 
 Walrein @ Leftovers
-Level: 52
+Level: 60
 Ability: Ice Body
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 SpA
@@ -5390,7 +5390,7 @@ Nature: Modest
 - Snowscape
 
 Glalie @ Glalitite
-Level: 53
+Level: 61
 Ability: Moody
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 Atk / 250 Spe
@@ -5412,7 +5412,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Blue
 
 Cyclizar @ Sitrus Berry
-Level: 53
+Level: 60
 Ability: Regenerator
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5423,7 +5423,7 @@ Nature: Jolly
 - Shed Tail
 
 Flygon @ Choice Specs
-Level: 53
+Level: 60
 Ability: Levitate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -5434,7 +5434,7 @@ Nature: Modest
 - Fire Blast
 
 Haxorus @ Life Orb
-Level: 54
+Level: 61
 Ability: Mold Breaker
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 Atk / 250 Spe
@@ -5445,7 +5445,7 @@ Nature: Adamant
 - Dragon Dance
 
 Kingdra @ Scope Lens
-Level: 54
+Level: 61
 Ability: Sniper
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -5456,7 +5456,7 @@ Nature: Timid
 - Hydro Pump
 
 Hydrapple @ Wise Glasses
-Level: 54
+Level: 61
 Ability: Supersweet Syrup
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpA
@@ -5467,7 +5467,7 @@ Nature: Calm
 - Recover
 
 Salamence @ Salamencite
-Level: 55
+Level: 62
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 Atk / 250 Spe
@@ -5487,7 +5487,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Lileep
-Level: 12
+Level: 14
 Ability: Suction Cups
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP
@@ -5497,7 +5497,7 @@ EVs: 150 HP
 - Stealth Rock
 
 Anorith
-Level: 12
+Level: 14
 Ability: Battle Armor
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP
@@ -5505,7 +5505,7 @@ EVs: 150 HP
 - Fury Cutter
 
 Carbink
-Level: 14
+Level: 15
 Ability: Clear Body
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP
@@ -5514,7 +5514,7 @@ EVs: 150 HP
 - Flail
 
 Nosepass @ Oran Berry
-Level: 15
+Level: 16
 Ability: Sturdy
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP
@@ -5533,7 +5533,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Stufful
-Level: 16
+Level: 18
 Ability: Fluffy
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5544,7 +5544,7 @@ Nature: Careful
 - Baby-Doll Eyes
 
 Machop @ Big Nugget
-Level: 16
+Level: 18
 Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5554,7 +5554,7 @@ Nature: Adamant
 - Coaching
 
 Makuhita 
-Level: 18
+Level: 19
 Ability: Guts
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Atk
@@ -5585,7 +5585,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Bewear
-Level: 21
+Level: 24
 Ability: Fluffy
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5596,7 +5596,7 @@ Nature: Careful
 - Baby-Doll Eyes
 
 Machoke @ Big Nugget
-Level: 21
+Level: 24
 Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5606,7 +5606,7 @@ Nature: Adamant
 - Coaching
 
 Hariyama
-Level: 22
+Level: 25
 Ability: Guts
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Atk
@@ -5617,7 +5617,7 @@ Nature: Careful
 - Coaching
 
 Crabominable @ Sitrus Berry
-Level: 24
+Level: 26
 Ability: Hyper Cutter
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 150 HP / 100 Atk
@@ -5637,7 +5637,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle
-Level: 16
+Level: 18
 Ability: Plus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5646,7 +5646,7 @@ Nature: Impish
 - Swift
 
 Minun
-Level: 16
+Level: 18
 Ability: Minus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5655,7 +5655,7 @@ Nature: Impish
 - Swift
 
 Magnemite
-Level: 18
+Level: 19
 Ability: Sturdy
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 EVs: 150 HP / 100 Atk
@@ -5685,7 +5685,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle
-Level: 21
+Level: 24
 Ability: Plus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5694,7 +5694,7 @@ Nature: Bold
 - Swift
 
 Minun
-Level: 21
+Level: 24
 Ability: Minus
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 150 HP / 100 Spe
@@ -5703,7 +5703,7 @@ Nature: Bold
 - Swift
 
 Magneton
-Level: 22
+Level: 25
 Ability: Sturdy
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 EVs: 150 HP / 100 Atk
@@ -5713,7 +5713,7 @@ Nature: Hardy
 - Thunder Wave
 
 Manectric @ Sitrus Berry
-Level: 24
+Level: 26
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 150 HP / 100 Atk
 Nature: Jolly
@@ -5733,7 +5733,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Vulpix @ Heat Rock
-Level: 25
+Level: 30
 Ability: Drought
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Spe
@@ -5744,7 +5744,7 @@ Nature: Timid
 - Sunny Day
 
 Camerupt
-Level: 25
+Level: 30
 Ability: Solid Rock
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Atk
@@ -5755,7 +5755,7 @@ Nature: Serious
 - Sunny Day
 
 Armarouge
-Level: 27
+Level: 31
 Ability: Weak Armor
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 HP / 150 SpA
@@ -5765,7 +5765,7 @@ EVs: 200 HP / 150 SpA
 - Ally Switch
 
 Torkoal @ White Herb
-Level: 28
+Level: 32
 Ability: Drought
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 Def / 150 SpA
@@ -5775,7 +5775,7 @@ EVs: 200 Def / 150 SpA
 - Sunny Day
 
 Pyroar (F) @ Sitrus Berry
-Level: 29
+Level: 33
 Ability: Unnerve
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 HP / 150 Spe
@@ -5860,7 +5860,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Risky / Ace Pokemon
 
 Pelipper @ Damp Rock
-Level: 29
+Level: 41
 Ability: Drizzle
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 EVs: 250 HP / 200 SpA
@@ -5871,7 +5871,7 @@ Nature: Timid
 - Ice Beam
 
 Kilowattrel
-Level: 29
+Level: 41
 Ability: Wind Power
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 EVs: 200 SpA / 250 Spe
@@ -5881,7 +5881,7 @@ Nature: Timid
 - Weather Ball
 
 Altaria
-Level: 30
+Level: 40
 Ability: Natural Cure
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 EVs: 250 HP / 200 Atk
@@ -5892,7 +5892,7 @@ Nature: Adamant
 - Aerial Ace
 
 Tropius @ Sitrus Berry
-Level: 31
+Level: 40
 Ability: Harvest
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 EVs: 250 HP / 200 SpD
@@ -5903,7 +5903,7 @@ Nature: Bold
 - Air Slash
 
 Skarmory @ Skarmorite
-Level: 33
+Level: 42
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 200 Atk / 250 Spe
@@ -5924,7 +5924,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Lunatone @ Terrain Extender
-Level: 41
+Level: 49
 Ability: Levitate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpA
@@ -5935,7 +5935,7 @@ Nature: Quiet
 - Psychic Terrain
 
 Solrock @ Light Clay
-Level: 41
+Level: 49
 Ability: Levitate
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 Atk
@@ -5946,7 +5946,7 @@ Nature: Brave
 - Light Screen
 
 Bronzong @ Sitrus Berry
-Level: 40
+Level: 48
 Ability: Levitate
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
 EVs: 250 HP / 250 SpD
@@ -5957,7 +5957,7 @@ Nature: Brave
 - Hypnosis
 
 Claydol @ Wise Glasses
-Level: 39
+Level: 47
 Ability: Levitate
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
 EVs: 250 HP / 250 Def
@@ -5968,7 +5968,7 @@ Nature: Quiet
 - Power Split
 
 Rabsca @ Focus Sash
-Level: 40
+Level: 48
 Ability: Synchronize
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 0 Spe
 EVs: 250 HP / 250 SpA
@@ -5979,7 +5979,7 @@ Nature: Relaxed
 - Psychic Terrain
 
 Meowstic @ Meowsticite
-Level: 42
+Level: 50
 Ability: Keen Eye
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 0 Spe
 EVs: 250 SpA / 250 Spe
@@ -6000,7 +6000,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 45
+Level: 54
 Ability: Unaware
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpD
@@ -6011,7 +6011,7 @@ Nature: Jolly
 - Sleep Talk
 
 Tatsugiri-Curly @ Tatsugirinite
-Level: 45
+Level: 54
 Ability: Commander
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -6022,7 +6022,7 @@ Nature: Modest
 - Nasty Plot
 
 Crawdaunt @ Mystic Water
-Level: 43
+Level: 52
 Ability: Adaptability
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 Atk
@@ -6033,7 +6033,7 @@ Nature: Adamant
 - Swords Dance
 
 Kingdra @ Chesto Berry
-Level: 44
+Level: 53
 Ability: Swift Swim
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpA
@@ -6054,7 +6054,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Jellicent (M) @ Leftovers
-Level: 44
+Level: 53
 Ability: Cursed Body
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpA
@@ -6065,7 +6065,7 @@ Nature: Adamant
 - Strength Sap
 
 Marin @ Focus Sash
-Level: 43
+Level: 53
 Ability: Friend Guard
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 Spe
@@ -6076,7 +6076,7 @@ Nature: Timid
 - Follow Me
 
 Milotic @ Flame Orb
-Level: 45
+Level: 52
 Ability: Marvel Scale
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpD
@@ -6087,7 +6087,7 @@ Nature: Modest
 - Rain Dance
 
 Lumineon @ Lumineonite
-Level: 46
+Level: 54
 Ability: Storm Drain
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 252 HP / 252 SpA
@@ -7002,11 +7002,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wingull
-Level: 6
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wattrel
-Level: 6
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH ===
@@ -7266,11 +7266,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Pidgey
-Level: 4
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Taillow
-Level: 3
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
@@ -7321,15 +7321,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magikarp
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magikarp
 Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Magikarp
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLAUDE ===
@@ -10064,11 +10064,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Seedot
-Level: 6
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lotad
-Level: 6
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIU_AND_YUKI ===
@@ -12975,11 +12975,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wooloo
-Level: 4
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Shroomish
-Level: 4
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_1 ===
@@ -12992,11 +12992,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Shroomish
-Level: 6
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bounsweet
 Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pansage
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JANICE ===
@@ -13047,10 +13051,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Shroomish
-Level: 25
+Level: 26
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Steenee
+Level: 26
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Pansage
 Level: 27
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -13064,10 +13072,14 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Breloom
-Level: 28
+Level: 29
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Tsareena
+Level: 29
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Simisage
 Level: 30
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -13081,14 +13093,18 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Breloom
-Level: 31
+Level: 32
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 Appletun
-Level: 30
+Level: 32
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 Tsareena
+Level: 33
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Simisage
 Level: 33
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
@@ -13106,10 +13122,14 @@ Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Appletun
-Level: 33
+Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Tsareena
+Level: 36
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Simisage
 Level: 36
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -13202,6 +13222,10 @@ Wurmple
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Wurmple
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_LYLE ===
 Name: LYLE
 Class: Bug Catcher
@@ -13212,27 +13236,27 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSE ===
@@ -13313,11 +13337,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Wurmple
-Level: 6
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Nincada
-Level: 6
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JAMES_2 ===
@@ -18955,7 +18979,7 @@ AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Mugshot: Yellow
 
 Skarmory @ Leftovers
-Level: 56
+Level: 62
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 HP / 250 Def
@@ -18966,7 +18990,7 @@ Nature: Impish
 - Roost
 
 Aegislash @ Muscle Band
-Level: 56
+Level: 62
 Ability: Stance Change
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 HP / 250 Atk
@@ -18977,7 +19001,7 @@ Nature: Adamant
 - Kings Shield
 
 Aggron @ Assault Vest
-Level: 58
+Level: 63
 Ability: Rock Head
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 HP / 250 Atk
@@ -18988,7 +19012,7 @@ Nature: Adamant
 - Thunder Punch
 
 Gholdengo @ Air Balloon
-Level: 58
+Level: 63
 Ability: Good as Gold
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 SpA / 250 Spe
@@ -18999,7 +19023,7 @@ Nature: Timid
 - Nasty Plot
 
 Kingambit @ Black Glasses
-Level: 59
+Level: 64
 Ability: Supreme Overlord
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 HP / 250 Atk
@@ -19010,7 +19034,7 @@ Nature: Adamant
 - Swords Dance
 
 Metagross @ Metagrossite
-Level: 60
+Level: 65
 Ability: Clear Body
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 250 Atk / 250 Spe

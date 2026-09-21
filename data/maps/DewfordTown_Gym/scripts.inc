@@ -183,13 +183,13 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	end
 
 DewfordTown_Gym_EventScript_SetLevelCap::
-	setvar VAR_LEVEL_CAP, 24
+	setvar VAR_LEVEL_CAP, 26
 	clearflag FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE
 	goto_if_set FLAG_BADGE03_GET, DewfordTown_Gym_EventScript_SetHigherCap
 	return
 
 DewfordTown_Gym_EventScript_SetHigherCap::
-	setvar VAR_LEVEL_CAP, 29
+	setvar VAR_LEVEL_CAP, 33
 	clearflag FLAG_HIDE_ABRA_TELEPORT_MAN
 	setflag FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE
 	setflag FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE
