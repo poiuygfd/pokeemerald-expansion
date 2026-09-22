@@ -11626,6 +11626,8 @@ void BS_TryTrainerSlideMsgLastOn(void)
     case B_BATTLER_1:
         if ((ShouldDoTrainerSlide(B_BATTLER_1, TRAINER_SLIDE_SELF_LAST_SWITCHIN)))
         {
+            if (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA) == TRAINER_CLASS_LEADER)
+                PlayBGM(MUS_BW_VS_WINNING);
             gBattleScripting.battler = battler;
             BattleScriptPush(cmd->nextInstr);
             gBattlescriptCurrInstr = BattleScript_TrainerASlideMsgRet;
