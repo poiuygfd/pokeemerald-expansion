@@ -94,11 +94,11 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Geodude
-Level: 21
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
-Level: 21
+Drilbur
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
@@ -1102,11 +1102,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Magnemite
-Level: 17
+Level: 23
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Whismur
-Level: 17
+Level: 23
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_GABBY_AND_TY_2 ===
@@ -1655,15 +1655,15 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Mareep
-Level: 17
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Wailmer
-Level: 17
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Makuhita
-Level: 17
+Level: 25
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_EDGAR ===
@@ -2058,15 +2058,15 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Swablu
-Level: 17
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Tinkatink
-Level: 17
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Roselia
-Level: 17
+Level: 25
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JENNIFER ===
@@ -2671,8 +2671,12 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Marill
-Level: 21
+Numel
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Salandit (F)
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHEILA ===
@@ -2684,8 +2688,12 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
+Bounsweet
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 Shroomish
-Level: 21
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHIRLEY ===
@@ -2697,8 +2705,12 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move
 
-Numel
-Level: 21
+Marill
+Level: 29
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Frillish (F)
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JESSICA_1 ===
@@ -3008,12 +3020,12 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Mawile
-Level: 19
+Level: 28
 Ability: Intimidate
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Klefki
-Level: 19
+Level: 28
 Ability: Prankster
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3061,11 +3073,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Salandit
-Level: 20
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_STEVE_2 ===
@@ -3720,11 +3732,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Machop
-Level: 19
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Pancham
-Level: 19
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_NOB_2 ===
@@ -3834,19 +3846,19 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Machop
-Level: 19
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Pancham
-Level: 19
+Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Hawlucha
-Level: 19
+Level: 26
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Lucario
-Level: 19
+Level: 26
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ATSUSHI ===
@@ -4069,11 +4081,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Salandit
-Level: 23
+Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JEFF ===
@@ -4086,11 +4098,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Slugma
-Level: 22
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Sizzlipede
-Level: 22
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_AXLE ===
@@ -4103,11 +4115,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Sizzlipede
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Litleo
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JACE ===
@@ -4120,11 +4132,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Pansear
-Level: 23
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Charcadet
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KEEGAN ===
@@ -4137,11 +4149,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Slugma
-Level: 23
+Level: 29
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Carkol
-Level: 23
+Level: 30
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 === TRAINER_BERNIE_1 ===
@@ -4154,11 +4166,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Slugma
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Wingull
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BERNIE_2 ===
@@ -4277,11 +4289,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Nuzleaf
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Steenee
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHANE ===
@@ -4294,11 +4306,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zangoose
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Seviper
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUSTIN ===
@@ -4328,11 +4340,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Dunsparce
-Level: 20
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Gligar
-Level: 20
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AUTUMN ===
@@ -4345,11 +4357,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Shroomish
-Level: 21
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Budew
-Level: 21
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRAVIS ===
@@ -4362,11 +4374,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Sandshrew
-Level: 18
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Silicobra
-Level: 18
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETHAN_2 ===
@@ -5734,7 +5746,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Vulpix @ Heat Rock
-Level: 30
+Level: 31
 Ability: Drought
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Spe
@@ -5745,7 +5757,7 @@ Nature: Timid
 - Sunny Day
 
 Camerupt
-Level: 30
+Level: 31
 Ability: Solid Rock
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 200 HP / 150 Atk
@@ -5756,7 +5768,7 @@ Nature: Serious
 - Sunny Day
 
 Armarouge
-Level: 31
+Level: 32
 Ability: Weak Armor
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 HP / 150 SpA
@@ -5766,7 +5778,7 @@ EVs: 200 HP / 150 SpA
 - Ally Switch
 
 Torkoal @ White Herb
-Level: 32
+Level: 33
 Ability: Drought
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 Def / 150 SpA
@@ -5776,7 +5788,7 @@ EVs: 200 Def / 150 SpA
 - Sunny Day
 
 Pyroar (F) @ Sitrus Berry
-Level: 33
+Level: 34
 Ability: Unnerve
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 200 HP / 150 Spe
@@ -6901,11 +6913,11 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Meditite
-Level: 21
+Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Makuhita
-Level: 21
+Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SHELBY_2 ===
@@ -7128,11 +7140,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Trapinch
-Level: 19
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Gligar
-Level: 19
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DILLON ===
@@ -7145,11 +7157,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Aron
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Dunsparce
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CALVIN_2 ===
@@ -7343,15 +7355,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Magikarp
-Level: 16
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wishiwashi
-Level: 17
+Finneon
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Barboach
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLIOT_1 ===
@@ -7429,11 +7441,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Barboach
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Shellos
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BARNY ===
@@ -8851,15 +8863,15 @@ Music: Suspicious
 Double Battle: Yes
 
 Zorua
-Level: 17
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Salandit
-Level: 17
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Koffing
-Level: 17
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
@@ -8875,15 +8887,15 @@ Music: Suspicious
 Double Battle: Yes
 
 Zorua
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Koffing
-Level: 18
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Ninjask
-Level: 18
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAO_2 ===
@@ -9045,11 +9057,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Meditite
-Level: 18
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Riolu
-Level: 18
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_CORA ===
@@ -9164,7 +9176,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Ember
 - Tackle
@@ -9172,8 +9184,11 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Sunny Day
 
 Charcadet
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fire Spin
+- Clear Smog
+- Sunny Day
 
 === TRAINER_CLARISSA ===
 Name: CLARISSA
@@ -9837,11 +9852,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Gloom
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lombre
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NANCY ===
@@ -9854,11 +9869,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Gloom
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lombre
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARTHA ===
@@ -9888,15 +9903,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Bounsweet
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Oddish
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Swablu
-Level: 19
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CEDRIC ===
@@ -9930,11 +9945,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Buneary
-Level: 17
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Marill
-Level: 17
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_2 ===
@@ -10419,11 +10434,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 23
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Fletchinder
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ANNIKA ===
@@ -10642,11 +10657,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zangoose
-Level: 18
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Seviper
-Level: 18
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MOSSDEEP ===
@@ -12071,11 +12086,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Magnemite
-Level: 21
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Klink
-Level: 21
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
@@ -12147,11 +12162,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 22
+Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Salandit
-Level: 22
+Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
@@ -12301,11 +12316,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 20
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sizzlipede
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLARENCE ===
@@ -12709,17 +12724,17 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Poochyena
-Level: 20
+Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 25 Atk / 25 Spe
 
 Numel
-Level: 20
+Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 25 HP / 25 Atk / 25 SpA
 
 Charcadet
-Level: 22
+Level: 30
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 25 Atk / 25 SpA / 25 Spe
 
@@ -12938,7 +12953,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Mightyena
-Level: 24
+Level: 30
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
 - Bite
@@ -12947,22 +12962,22 @@ EVs: 100 HP / 50 Atk
 - Leer
 
 Fletchinder
-Level: 24
+Level: 30
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
 
 Koffing
-Level: 24
+Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
 
 Centiskorch
-Level: 25
+Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk
 
 Camerupt
-Level: 25
+Level: 32
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 HP / 50 Atk / 50 SpA
 
@@ -13439,11 +13454,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Machop
-Level: 17
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_1 ===
@@ -13456,15 +13471,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 16
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Aron
-Level: 17
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Rockruff
-Level: 16
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LENNY ===
@@ -13494,11 +13509,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
-Level: 18
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALAN ===
@@ -13549,11 +13564,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Geodude
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Baltoy
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LUCAS_2 ===
@@ -13860,11 +13875,11 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Oricorio-Baile
-Level: 23
+Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Kecleon
-Level: 23
+Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Flamethrower
 - Fury Swipes
@@ -13906,7 +13921,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Meditite
-Level: 23
+Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bide
 - Detect
@@ -13914,7 +13929,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Fire Punch
 
 Riolu
-Level: 23
+Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Growl
 - Detect
@@ -14823,11 +14838,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Spinda
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Spinda
-Level: 19
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIM_AND_IRIS ===
@@ -14865,7 +14880,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Roselia
-Level: 18
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Growth
 - Stun Spore
@@ -14873,7 +14888,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leech Seed
 
 Graveler
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Defense Curl
 - Rollout
@@ -15423,11 +15438,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Marill
-Level: 17
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lombre
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COBY ===
@@ -15440,11 +15455,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Skarmory
-Level: 17
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Swellow
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAWRENCE ===
@@ -15457,15 +15472,15 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Sandile
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sandshrew
-Level: 18
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Silicobra
-Level: 18
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WYATT ===
@@ -15478,19 +15493,19 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Aron
-Level: 18
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Tinkatink
-Level: 18
+Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Skarmory
-Level: 18
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Orthworm
-Level: 18
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANGELINA ===
@@ -15503,11 +15518,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Lombre
-Level: 18
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Marill
-Level: 18
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAI ===
@@ -15520,11 +15535,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Shellos
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Barboach
-Level: 19
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHARLOTTE ===
@@ -15537,11 +15552,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Steenee
-Level: 19
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Nuzleaf
-Level: 19
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DEANDRE ===
@@ -16112,11 +16127,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Salandit
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Slugma
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHAYLA ===
@@ -16129,11 +16144,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Shroomish
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Roselia
-Level: 18
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KYRA ===
@@ -16214,11 +16229,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Espurr
-Level: 18
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Spoink
-Level: 18
+Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DEVAN ===
@@ -20039,11 +20054,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Slugma
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Poochyena
-Level: 20
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_NAVEL_ROCK_1 ===
@@ -20428,7 +20443,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Swablu
-Level: 21
+Level: 26
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 100 HP / 50 Atk / 50 SpA
 - Round
@@ -20437,7 +20452,7 @@ EVs: 100 HP / 50 Atk / 50 SpA
 - Roost
 
 Tandemaus
-Level: 21
+Level: 26
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 100 HP / 50 Atk / 50 SpA
 - Echoed Voice
@@ -20446,7 +20461,7 @@ EVs: 100 HP / 50 Atk / 50 SpA
 - Tickle
 
 Roselia
-Level: 23
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 100 HP / 50 Atk / 50 SpA
 - Magical Leaf
@@ -20455,7 +20470,7 @@ EVs: 100 HP / 50 Atk / 50 SpA
 - Sleep Powder
 
 Kirlia
-Level: 23
+Level: 28
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 100 HP / 50 Atk / 50 SpA
 - Psychic
@@ -20581,7 +20596,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Makuhita @ Flame Orb
-Level: 23
+Level: 28
 Ability: Guts
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 100 HP / 50 Atk
@@ -20591,7 +20606,7 @@ EVs: 100 HP / 50 Atk
 - Bullet Punch
 
 Crabrawler @ Punching Glove
-Level: 23
+Level: 28
 Ability: Iron Fist
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 100 HP / 50 Atk
@@ -20601,7 +20616,7 @@ EVs: 100 HP / 50 Atk
 - Ice Punch
 
 Falinks @ Leftovers
-Level: 24
+Level: 30
 Ability: Battle Armor
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 100 HP / 50 Atk
@@ -20611,7 +20626,7 @@ EVs: 100 HP / 50 Atk
 - Protect
 
 Breloom @ Loaded Dice
-Level: 24
+Level: 30
 Ability: Technician
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 100 HP / 50 Atk

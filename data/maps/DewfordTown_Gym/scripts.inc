@@ -189,7 +189,7 @@ DewfordTown_Gym_EventScript_SetLevelCap::
 	return
 
 DewfordTown_Gym_EventScript_SetHigherCap::
-	setvar VAR_LEVEL_CAP, 33
+	setvar VAR_LEVEL_CAP, 34
 	clearflag FLAG_HIDE_ABRA_TELEPORT_MAN
 	setflag FLAG_HIDE_WOOLOO_DEWFORD_BLOCKADE
 	setflag FLAG_HIDE_WOOLOO_MAUVILLE_BLOCKADE
