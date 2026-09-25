@@ -374,6 +374,8 @@ PetalburgCity_Gym_EventScript_NormanMegaRing::
 	giveitem ITEM_MEGA_RING
 	msgbox PetalburgCity_Gym_Text_ExplainMegaRing, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	end
 
@@ -1277,14 +1279,14 @@ PetalburgCity_Gym_Text_NormanIntro:
 	.string "This is for you, {PLAYER}.$"
 
 PetalburgCity_Gym_Text_ExplainMegaRing:
-	.string "That right there is a MEGA RING.\n"
+	.string "That right there is a MEGA RING.\p"
 	.string "With that MEGA RING, an appropriate\n"
 	.string "MEGA STONE, and a strong bond, you can\l"
 	.string "harness the power of MEGA EVOLUTION.\p"
 	.string "Only certain POKéMON are capable\n"
 	.string "of MEGA EVOLUTION, but the final\l"
 	.string "evolution of the POKéMON you got\l"
-	.string "from PROf. BIRCH is one of them.\p"
+	.string "from PROF. BIRCH is one of them.\p"
 	.string "I would recommend giving a MEGA\n"
 	.string "STONE to one of your POKéMON now.$"
 

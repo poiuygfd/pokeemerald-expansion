@@ -127,8 +127,8 @@ NavelRock_Fork_Text_WhereIsLugia:
 	.string "through, no matter what?\l"
 	.string "For my own safety, even?\p"
 	.string "Bahahaha! That all but comfirms the\n"
-	.string "rumour claiming LUGIA has been found\l"
-	.string "down there was right on the money!\p"
+	.string "rumour claiming LUGIA was spotted\l"
+	.string "here is was right on the money!\p"
 	.string "Sorry, old man, but you're gonna need to\n"
 	.string "get out the way, and I'm not asking!$"
 
@@ -156,19 +156,19 @@ NavelRock_Fork_Text_LeaveForNow:
 	.string "TEAM, we're retreating for now!$"
 
 NavelRock_Fork_Text_ThankYouForChasingOff:
-	.string "Thank you for chasing those ruffians\n"
-	.string "off there, young one.\p"
+	.string "Thank you for chasing off those TEAM\n"
+	.string "AQUA ruffians, young one.\p"
 	.string "I don't know where he heard that rumour\n"
-	.string "from, but if he had forced his way in\l"
-	.string "there, it could have ended badly.\p"
+	.string "from, but had he forced his way further\l"
+	.string "in, it could have ended badly.\p"
 	.string "Take this as a token of my gratitude.$"
 
 NavelRock_Fork_Text_MaybeOneDay:
-	.string "For a TRAINER like you, maybe one day\n"
-	.string "I could let you pass on further.\p"
+	.string "A TRAINER as noble as yourself may one\n"
+	.string "day earn the right to venture deeper.\p"
 	.string "I think you will need to get a little\n"
-	.string "stronger than you are now, though.\p"
-	.string "But should you, say, ever become strong\n"
+	.string "stronger first, however.\p"
+	.string "Should you, say, ever become strong\n"
 	.string "enough to become a CHAMPION, I might\l"
 	.string "feel safe in letting you through.$"
 
