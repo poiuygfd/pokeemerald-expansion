@@ -129,6 +129,7 @@ Route121_EventScript_RivalEnter3::
 	waitmovement 0
 	removeobject LOCALID_ROUTE121_RIVAL
 	setvar VAR_ROUTE121_STATE, 1
+	clearflag FLAG_HIDE_MT_PYRE_RIVALS
 	releaseall
 	end
 

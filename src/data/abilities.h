@@ -2558,7 +2558,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_AURA_GUARD] =
     {
         .name = _("Aura Guard"),
-        .description = COMPOUND_STRING("Unimplemented."),
+        .description = COMPOUND_STRING("Halves damage from contact."),
     },
 
     [ABILITY_ANTIVIRUS] =
