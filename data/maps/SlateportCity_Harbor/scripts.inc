@@ -1,5 +1,6 @@
 SlateportCity_Harbor_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_Harbor_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SlateportCity_Harbor_OnFrame
 	.byte 0
 
 SlateportCity_Harbor_OnTransition:
@@ -20,37 +21,18 @@ SlateportCity_Harbor_EventScript_ReadyAquaEscapeScene::
 	setflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS
 	return
 
-SlateportCity_Harbor_EventScript_AquaEscapeTrigger0::
-	lockall
-	setvar VAR_0x8008, 0
-	goto SlateportCity_Harbor_EventScript_AquaEscapeScene
-	end
-
-SlateportCity_Harbor_EventScript_AquaEscapeTrigger1::
-	lockall
-	setvar VAR_0x8008, 1
-	goto SlateportCity_Harbor_EventScript_AquaEscapeScene
-	end
-
-SlateportCity_Harbor_EventScript_AquaEscapeTrigger2::
-	lockall
-	setvar VAR_0x8008, 2
-	goto SlateportCity_Harbor_EventScript_AquaEscapeScene
-	end
-
-SlateportCity_Harbor_EventScript_AquaEscapeTrigger3::
-	lockall
-	setvar VAR_0x8008, 3
-	applymovement LOCALID_PLAYER, SlateportCity_Harbor_Movement_PlayerWalkUp
-	waitmovement 0
-	goto SlateportCity_Harbor_EventScript_AquaEscapeScene
-	end
+SlateportCity_Harbor_OnFrame:
+	map_script_2 VAR_SLATEPORT_HARBOR_STATE, 1, SlateportCity_Harbor_EventScript_AquaEscapeScene
+	.2byte 0
 
 SlateportCity_Harbor_EventScript_AquaEscapeScene::
-	applymovement LOCALID_SLATEPORT_HARBOR_ARCHIE, Common_Movement_WalkInPlaceFasterDown
+	lockall
+	applymovement LOCALID_PLAYER, SlateportCity_Harbor_Movement_PlayerApproachArchie
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachArchie
+	applymovement LOCALID_SLATEPORT_HARBOR_WALLY, SlateportCity_Harbor_Movement_WallyApproachArchie
 	waitmovement 0
+	applymovement LOCALID_SLATEPORT_HARBOR_ARCHIE, Common_Movement_WalkInPlaceFasterDown
 	applymovement LOCALID_SLATEPORT_HARBOR_GRUNT, Common_Movement_WalkInPlaceFasterDown
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove, MSGBOX_DEFAULT
 	closemessage
@@ -64,49 +46,61 @@ SlateportCity_Harbor_EventScript_AquaEscapeScene::
 	setvar VAR_SLATEPORT_HARBOR_STATE, 2
 	setflag FLAG_MET_TEAM_AQUA_HARBOR
 	setflag FLAG_HIDE_LILYCOVE_MOTEL_SCOTT
-	call_if_eq VAR_0x8008, 0, SlateportCity_Harbor_EventScript_SternApproachPlayer0
-	call_if_eq VAR_0x8008, 1, SlateportCity_Harbor_EventScript_SternApproachPlayer1
-	call_if_eq VAR_0x8008, 2, SlateportCity_Harbor_EventScript_SternApproachPlayer
-	call_if_eq VAR_0x8008, 3, SlateportCity_Harbor_EventScript_SternApproachPlayer
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_SLATEPORT_HARBOR_WALLY, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	msgbox SlateportCity_Harbor_Text_WallyGivingUsARealRunaround, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SLATEPORT_HARBOR_WALLY, SlateportCity_Harbor_Movement_WallyLeave
+	waitmovement 0
+	removeobject LOCALID_SLATEPORT_HARBOR_WALLY
+	playse SE_EXIT
+	waitse
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SlateportCity_Harbor_Text_SternYourFriendIsEager, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_1_BLOCKING_ENTRANCE
 	setflag FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_2_BLOCKING_ENTRANCE
 	copyobjectxytoperm LOCALID_SLATEPORT_HARBOR_CAPT_STERN
 	setobjectmovementtype LOCALID_SLATEPORT_HARBOR_CAPT_STERN, MOVEMENT_TYPE_FACE_RIGHT
+	setflag FLAG_HIDE_SLATEPORT_CITY_WALLY
 	releaseall
 	end
 
-SlateportCity_Harbor_EventScript_SternApproachPlayer0::
-	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer0
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	return
-
-SlateportCity_Harbor_EventScript_SternApproachPlayer1::
-	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer1
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	return
-
-SlateportCity_Harbor_EventScript_SternApproachPlayer::
-	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	return
-
-SlateportCity_Harbor_Movement_AquaBoardSub:
-	delay_16
-	delay_16
-	jump_up
-	set_invisible
+SlateportCity_Harbor_Movement_PlayerApproachArchie:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
 	step_end
 
-@ Unused, Archie instead shares above identical movement script with Grunt
-SlateportCity_Harbor_Movement_ArchieBoardSub:
+SlateportCity_Harbor_Movement_SternApproachArchie:
+	delay_16
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	step_end
+
+SlateportCity_Harbor_Movement_WallyApproachArchie:
+	delay_16
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	step_end
+
+SlateportCity_Harbor_Movement_AquaBoardSub:
 	delay_16
 	delay_16
 	jump_up
@@ -129,25 +123,11 @@ SlateportCity_Harbor_Movement_SubmarineExit:
 	walk_fast_right
 	step_end
 
-SlateportCity_Harbor_Movement_SternApproachPlayer0:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	step_end
-
-SlateportCity_Harbor_Movement_SternApproachPlayer1:
-	walk_left
-	walk_left
-	walk_up
-	walk_left
-	step_end
-
-SlateportCity_Harbor_Movement_SternApproachPlayer:
-	walk_left
-	walk_left
-	walk_left
+SlateportCity_Harbor_Movement_WallyLeave:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
 	step_end
 
 SlateportCity_Harbor_Movement_PlayerWalkUp:
@@ -297,7 +277,7 @@ SlateportCity_Harbor_EventScript_CaptStern::
 	end
 
 SlateportCity_Harbor_EventScript_WhyStealSubmarine::
-	msgbox SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_SternYourFriendIsEager, MSGBOX_DEFAULT
 	release
 	end
 
@@ -464,6 +444,23 @@ SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine:
 	.string "POKéMON at the bottom of the sea…\p"
 	.string "But even if I were to chase them,\n"
 	.string "I don't stand a chance against them…$"
+
+SlateportCity_Harbor_Text_WallyGivingUsARealRunaround:
+	.string "WALLY: We'll get your SUBMARINE back\n"
+	.string "CAPTAIN, right, {PLAYER}?\p"
+	.string "I must say, TEAM AQUA are giving us\n"
+	.string "a real runaround…\p"
+	.string "Let's head to LILYCOVE CITY then.\n"
+	.string "I'll meet you over there, {PLAYER}.\p"
+	.string "We will get this SUBMARINE back!$"
+
+SlateportCity_Harbor_Text_SternYourFriendIsEager:
+	.string "CAPT. STERN: Your friend seems\n"
+	.string "real eager to help out.\p"
+	.string "I can't say the help isn't appreciated\n"
+	.string "though.\p"
+	.string "Please, {PLAYER}.\n"
+	.string "Get my SUBMARINE back!$"
 
 SlateportCity_Harbor_Text_TeamAquaLeftNeedDive:
 	.string "CAPT. STERN: Oh, {PLAYER}{KUN}…\p"

@@ -14352,7 +14352,7 @@ EVs: 150 Atk / 150 Spe
 - Aqua Cutter
 - Leaf Blade
 
-=== TRAINER_BRENDAN_LILYCOVE_MUDKIP ===
+=== TRAINER_BRENDAN_POST_GAME_MUDKIP ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -14401,7 +14401,7 @@ EVs: 100 SpA / 100 Spe
 - Dragon Pulse
 - Leaf Storm
 
-=== TRAINER_BRENDAN_LILYCOVE_TREECKO ===
+=== TRAINER_BRENDAN_POST_GAME_TREECKO ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -14450,7 +14450,7 @@ EVs: 100 Atk / 100 Spe
 - Close Combat
 - Brave Bird
 
-=== TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
+=== TRAINER_BRENDAN_POST_GAME_TORCHIC ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -14499,7 +14499,7 @@ EVs: 100 HP / 100 Atk
 - Dig
 - Rock Slide
 
-=== TRAINER_MAY_LILYCOVE_MUDKIP ===
+=== TRAINER_MAY_POST_GAME_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -14548,7 +14548,7 @@ EVs: 100 SpA / 100 Spe
 - Dragon Pulse
 - Leaf Storm
 
-=== TRAINER_MAY_LILYCOVE_TREECKO ===
+=== TRAINER_MAY_POST_GAME_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -14597,7 +14597,7 @@ EVs: 100 Atk / 100 Spe
 - Close Combat
 - Brave Bird
 
-=== TRAINER_MAY_LILYCOVE_TORCHIC ===
+=== TRAINER_MAY_POST_GAME_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May

@@ -742,6 +742,15 @@ SlateportCity_Movement_BirchExit:
 	walk_up
 	step_end
 
+SlateportCity_EventScript_Wally::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_WallyTeamAquaPullStunt, MSGBOX_DEFAULT
+	applymovement LOCALID_SLATEPORT_WALLY, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
 SlateportCity_EventScript_CaptStern::
 	lockall
@@ -772,6 +781,7 @@ SlateportCity_EventScript_CaptStern::
 	applymovement LOCALID_SLATEPORT_OLD_WOMAN, SlateportCity_Movement_OldWomanConcern
 	applymovement LOCALID_SLATEPORT_RICH_BOY, Common_Movement_QuestionMark
 	applymovement LOCALID_SLATEPORT_MAN_1, SlateportCity_Movement_ManConcern
+	applymovement LOCALID_SLATEPORT_WALLY, SlateportCity_Movement_WallyConcern
 	waitmovement 0
 	applymovement LOCALID_SLATEPORT_CAPT_STERN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -785,15 +795,23 @@ SlateportCity_EventScript_CaptStern::
 	waitmovement 0
 	msgbox SlateportCity_Text_FromHarborTryingToTakeSub, MSGBOX_DEFAULT
 	msgbox SlateportCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
+	applymovement LOCALID_SLATEPORT_CAPT_STERN, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_SLATEPORT_WALLY, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SlateportCity_Text_WallyComingToo, MSGBOX_DEFAULT
 	closemessage
+	applymovement OBJ_EVENT_ID_FOLLOWER, SlateportCity_Movement_ReturnFollower
 	applymovement LOCALID_SLATEPORT_CAPT_STERN, SlateportCity_Movement_SternEnterHarbor
 	applymovement LOCALID_PLAYER, SlateportCity_Movement_PlayerEnterHarbor
+	applymovement LOCALID_SLATEPORT_WALLY, SlateportCity_Movement_WallyEnterHarbor
 	waitmovement 0
 	removeobject LOCALID_SLATEPORT_CAPT_STERN
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_CAPTAIN_STERN
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_ARCHIE
+	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_WALLY
 	setvar VAR_SLATEPORT_CITY_STATE, 2
 	warp MAP_SLATEPORT_CITY_HARBOR, 11, 14
 	waitstate
@@ -815,6 +833,14 @@ SlateportCity_Movement_ManConcern:
 	walk_in_place_faster_up
 	delay_16
 	walk_in_place_faster_down
+	delay_16
+	delay_16
+	walk_in_place_faster_left
+	step_end
+
+SlateportCity_Movement_WallyConcern:
+	emote_question_mark
+	walk_in_place_faster_right
 	delay_16
 	delay_16
 	walk_in_place_faster_left
@@ -851,11 +877,6 @@ SlateportCity_Movement_TyExit:
 	walk_left
 	step_end
 
-SlateportCity_Movement_Unused:
-	walk_down
-	walk_in_place_faster_up
-	step_end
-
 SlateportCity_Movement_SternEnterHarbor:
 	walk_right
 	walk_up
@@ -890,6 +911,18 @@ SlateportCity_Movement_PlayerFaceStern:
 	delay_16
 	delay_16
 	walk_in_place_faster_down
+	step_end
+
+SlateportCity_Movement_WallyEnterHarbor:
+	delay_16
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+SlateportCity_Movement_ReturnFollower:
+	enter_pokeball
 	step_end
 
 SlateportCity_EventScript_Ty::
@@ -1469,6 +1502,14 @@ SlateportCity_Text_CaptainsACelebrity:
 	.string "A TV interview! Here!\n"
 	.string "The CAPTAIN's a celebrity!$"
 
+SlateportCity_Text_WallyTeamAquaPullStunt:
+	.string "WALLY: Oh, hey, {PLAYER}.\n"
+	.string "I'm not sure what is going on here\l"
+	.string "but it seems like it's important.\p"
+	.string "I'm worried that TEAM AQUA is going\n"
+	.string "to pull some kind of stunt, so I'm\l"
+	.string "just keeping an eye on this place.$"
+
 SlateportCity_Text_BigSmileForCamera:
 	.string "TY: Okay, CAPT. STERN, a big smile\n"
 	.string "for the camera!$"
@@ -1528,6 +1569,11 @@ SlateportCity_Text_FromHarborTryingToTakeSub:
 SlateportCity_Text_PleaseComeWithMe:
 	.string "{PLAYER}{KUN}!\n"
 	.string "Please, come with me!$"
+
+SlateportCity_Text_WallyComingToo:
+	.string "WALLY: Hold on!\n"
+	.string "I'm coming too!\p"
+	.string "We can't let TEAM AQUA escape again!$"
 
 SlateportCity_Text_BattleTentSign:
 	.string "BATTLE TENT SLATEPORT SITE\n"

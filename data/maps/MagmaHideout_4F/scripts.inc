@@ -56,11 +56,7 @@ MagmaHideout_4F_EventScript_Maxie::
 	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
-	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
-	setvar VAR_SLATEPORT_CITY_STATE, 1
 	setflag FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT
-	setvar VAR_SLATEPORT_HARBOR_STATE, 1
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_MAXIE
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_GRUNT_1
@@ -68,8 +64,15 @@ MagmaHideout_4F_EventScript_Maxie::
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_GRUNT_3
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_TABITHA
 	setflag FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS
+	goto_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, MagmaHideout_4F_EventScript_HideWailmerGrunt
 	fadescreen FADE_FROM_BLACK
 	releaseall
+	end
+
+MagmaHideout_4F_EventScript_HideWailmerGrunt::
+	setflag FLAG_HIDE_LILYCOVE_WAILMER_GRUNT
+	fadescreen FADE_FROM_BLACK
+	release
 	end
 
 MagmaHideout_4F_Movement_GroudonApproach:

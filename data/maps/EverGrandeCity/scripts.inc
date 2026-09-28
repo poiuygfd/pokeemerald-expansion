@@ -95,6 +95,8 @@ EverGrandeCity_EventScript_AfterMayBattle::
 	closemessage
 	applymovement LOCALID_EVER_GRANDE_RIVAL, EverGrandeCity_Movement_RivalLeaves
 	waitmovement 0
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL
 	goto EverGrandeCity_EventScript_RivalLeave
 	end
 
@@ -103,11 +105,14 @@ EverGrandeCity_EventScript_AfterBrendanBattle::
 	closemessage
 	applymovement LOCALID_EVER_GRANDE_RIVAL, EverGrandeCity_Movement_RivalLeaves
 	waitmovement 0
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 	goto EverGrandeCity_EventScript_RivalLeave
 	end
 
 EverGrandeCity_EventScript_RivalLeave::
 	removeobject LOCALID_EVER_GRANDE_RIVAL
+	setflag FLAG_MET_RIVAL_LILYCOVE
 	setvar VAR_EVER_GRANDE_CITY_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm

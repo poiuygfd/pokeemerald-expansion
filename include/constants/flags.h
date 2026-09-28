@@ -262,9 +262,7 @@
 #define FLAG_RECEIVED_TM_SLUDGE_BOMB         0xE6
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
-
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
-
+#define FLAG_HIDE_LILYCOVE_WAILMER_GRUNT     0xE9
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
 #define FLAG_RECEIVED_GLASS_ORNAMENT         0xEC
@@ -315,9 +313,9 @@
 #define FLAG_ENABLE_PROF_BIRCH_MATCH_CALL    0x119
 #define FLAG_RECEIVED_CLEANSE_TAG            0x11A
 #define FLAG_RECEIVED_FOCUS_BAND             0x11B
-#define FLAG_DECLINED_WALLY_BATTLE_MAUVILLE  0x11C // Currently unused
+#define FLAG_HIDE_SLATEPORT_CITY_WALLY       0x11C
 #define FLAG_RECEIVED_DEVON_SCOPE            0x11D
-#define FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE  0x11E
+#define FLAG_HIDE_JAGGED_PASS_RIVAL          0x11E
 #define FLAG_MET_DEVON_EMPLOYEE              0x11F
 #define FLAG_MET_RIVAL_RUSTBORO              0x120
 #define FLAG_RECEIVED_SILK_SCARF             0x121
@@ -1022,7 +1020,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL       0x3C8
 #define FLAG_HIDE_FORTREE_CITY_KECLEON                              0x3C9
 #define FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE                          0x3CA
-#define FLAG_HIDE_LILYCOVE_CITY_RIVAL                               0x3CB
+#define FLAG_HIDE_SLATEPORT_CITY_HARBOR_WALLY                       0x3CB
 #define FLAG_HIDE_ROUTE_120_STEVEN                                  0x3CC
 #define FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN                            0x3CD
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1                            0x3CE

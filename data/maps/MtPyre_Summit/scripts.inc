@@ -96,6 +96,10 @@ MtPyre_Summit_EventScript_May::
 	msgbox MtPyre_Summit_Text_MagmaLeftThis, MSGBOX_DEFAULT
 	giveitem ITEM_MAGMA_EMBLEM
 	msgbox MtPyre_Summit_Text_MayThankYou, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_MT_PYRE_SUMMIT_RIVAL, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_MT_PYRE_SUMMIT_WALLY, Common_Movement_WalkInPlaceFasterLeft
+	msgbox MtPyre_Summit_Text_MaySearch, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_MT_PYRE_SUMMIT_RIVAL, MtPyre_Summit_Movement_RivalsLeave
 	waitmovement 0
@@ -112,6 +116,10 @@ MtPyre_Summit_EventScript_Brendan::
 	msgbox MtPyre_Summit_Text_MagmaLeftThis, MSGBOX_DEFAULT
 	giveitem ITEM_MAGMA_EMBLEM
 	msgbox MtPyre_Summit_Text_BrendanThankYou, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_MT_PYRE_SUMMIT_RIVAL, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_MT_PYRE_SUMMIT_WALLY, Common_Movement_WalkInPlaceFasterLeft
+	msgbox MtPyre_Summit_Text_BrendanSearch, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_MT_PYRE_SUMMIT_RIVAL, MtPyre_Summit_Movement_RivalsLeave
 	waitmovement 0
@@ -130,11 +138,20 @@ MtPyre_Summit_EventScript_Wally::
 	msgbox MtPyre_Summit_Text_TheyWentToSlateport, MSGBOX_DEFAULT
 	closemessage
 	msgbox MtPyre_Summit_Text_WallyThankYou, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_MT_PYRE_SUMMIT_WALLY, Common_Movement_WalkInPlaceFasterLeft
+	msgbox MtPyre_Summit_Text_WallySearch, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_MT_PYRE_SUMMIT_WALLY, MtPyre_Summit_Movement_RivalsLeave
 	waitmovement 0
 	setflag FLAG_RECEIVED_RED_OR_BLUE_ORB
 	setflag FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD
+	clearflag FLAG_HIDE_JAGGED_PASS_RIVAL
+	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
+	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
+	clearflag FLAG_HIDE_SLATEPORT_CITY_WALLY
+	setvar VAR_SLATEPORT_CITY_STATE, 1
+	setvar VAR_SLATEPORT_HARBOR_STATE, 1
 	removeobject LOCALID_MT_PYRE_SUMMIT_RIVAL
 	removeobject LOCALID_MT_PYRE_SUMMIT_WALLY
 	releaseall
@@ -634,7 +651,9 @@ MtPyre_Summit_Text_BrendanThankYou:
 	.string "just need to stop them first!\p"
 	.string "The question now becomes, where did\n"
 	.string "TEAM MAGMA run off to?\p"
-	.string "Hm…\p"
+	.string "Hm…$"
+
+MtPyre_Summit_Text_BrendanSearch:
 	.string "I think I'll start searching near\n"
 	.string "MT. CHIMNEY.\p"
 	.string "I remember running into a suspicious\n"
@@ -648,7 +667,9 @@ MtPyre_Summit_Text_MayThankYou:
 	.string "MAGMA before they do anything!\p"
 	.string "Now, where did TEAM MAGMA go?\n"
 	.string "They have to be hiding somewhere…\p"
-	.string "Hm…\p"
+	.string "Hm…$"
+
+MtPyre_Summit_Text_MaySearch:
 	.string "I think I'll start searching near\n"
 	.string "MT. CHIMNEY.\p"
 	.string "I remember running into a suspicious\n"
@@ -675,13 +696,14 @@ MtPyre_Summit_Text_TheyWentToSlateport:
 
 MtPyre_Summit_Text_WallyThankYou:
 	.string "WALLY: Thank you.\n"
-	.string "Seems like our goal is clear.\p"
-	.string "I'm heading over to SLATEPORT now\n"
-	.string "then, {PLAYER}.\p"
-	.string "I'll meet you there, then.\p"
+	.string "Seems like our goal is clear.$"
+
+MtPyre_Summit_Text_WallySearch:
+	.string "I'm off to SLATEPORT CITY then.\n"
+	.string "I'll meet you there, {PLAYER}.\p"
 	.string "Oh, but if you want to go after TEAM\n"
 	.string "MAGMA first, then that is fine too.\p"
-	.string "Anyway, I'm off!$"
+	.string "Either way, I'll see you later.$"
 
 MtPyre_Summit_Text_OrbsHaveBeenTaken:
 	.string "The BLUE ORB and RED ORB taken by\n"

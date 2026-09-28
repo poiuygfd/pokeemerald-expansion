@@ -19,8 +19,14 @@ JaggedPass_EventScript_SetReadyToOpenHideout::
 	return
 
 JaggedPass_OnTransition:
+	call_if_eq VAR_JAGGED_PASS_STATE, 2, JaggedPass_EventScript_SetRivalAtDoor
 	call_if_eq VAR_JAGGED_PASS_ASH_WEATHER, 1, JaggedPass_EventScript_SetWeatherAsh
 	end
+
+JaggedPass_EventScript_SetRivalAtDoor::
+	setobjectxyperm LOCALID_JAGGED_PASS_RIVAL, 16, 19
+	setobjectmovementtype LOCALID_JAGGED_PASS_RIVAL, MOVEMENT_TYPE_FACE_UP
+	return
 
 JaggedPass_EventScript_SetWeatherAsh::
 	setweather WEATHER_VOLCANIC_ASH
@@ -59,8 +65,65 @@ JaggedPass_EventScript_OpenMagmaHideout::
 	delay 30
 	setvar VAR_JAGGED_PASS_STATE, 2
 	waitse
+	playse SE_PIN
+	applymovement LOCALID_JAGGED_PASS_RIVAL, JaggedPass_Movement_RivalShock
+	waitmovement 0
+	waitse
+	applymovement LOCALID_JAGGED_PASS_RIVAL, JaggedPass_Movement_RivalCheckDoor
+	waitmovement 0
+	copyobjectxytoperm LOCALID_JAGGED_PASS_RIVAL
+	setobjectmovementtype LOCALID_JAGGED_PASS_RIVAL, MOVEMENT_TYPE_FACE_UP
 	releaseall
 	end
+
+JaggedPass_Movement_RivalShock:
+	emote_exclamation_mark
+	walk_in_place_faster_up
+	step_end
+
+JaggedPass_Movement_RivalCheckDoor:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+JaggedPass_EventScript_Rival::
+	lock
+	faceplayer
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, JaggedPass_EventScript_May
+	goto_if_eq VAR_RESULT, FEMALE, JaggedPass_EventScript_Brendan
+	end
+
+JaggedPass_EventScript_May::
+	msgbox JaggedPass_Text_MayMustBeMagmaHideout, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_JAGGED_PASS_RIVAL, JaggedPass_Movement_RivalEnterDoor
+	waitmovement 0
+	removeobject LOCALID_JAGGED_PASS_RIVAL
+	setvar VAR_JAGGED_PASS_STATE, 3
+	playse SE_EXIT
+	waitse
+	release
+	end
+
+JaggedPass_EventScript_Brendan::
+	msgbox JaggedPass_Text_BrendanMustBeMagmaHideout, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_JAGGED_PASS_RIVAL, JaggedPass_Movement_RivalEnterDoor
+	waitmovement 0
+	removeobject LOCALID_JAGGED_PASS_RIVAL
+	setvar VAR_JAGGED_PASS_STATE, 3
+	playse SE_EXIT
+	waitse
+	release
+	end
+
+JaggedPass_Movement_RivalEnterDoor:
+	walk_in_place_faster_up
+	walk_up
+	step_end
 
 JaggedPass_EventScript_MagmaHideoutGuard::
 	lockall
@@ -240,6 +303,24 @@ JaggedPass_Text_GoWhereverYouWant:
 JaggedPass_Text_BoulderShakingInResponseToEmblem:
 	.string "Oh! This boulder is shaking in response\n"
 	.string "to the MAGMA EMBLEM!$"
+
+JaggedPass_Text_BrendanMustBeMagmaHideout:
+	.string "BRENDAN: What happened?\n"
+	.string "A door just appeared out of nowhere!\p"
+	.string "Huh? It reacted to the MAGMA EMBLEM?\n"
+	.string "That must mean this is where TEAM\l"
+	.string "MAGMA is hiding!\p"
+	.string "Alright! I'm heading in.\n"
+	.string "I'll see you in there, {PLAYER}.$"
+
+JaggedPass_Text_MayMustBeMagmaHideout:
+	.string "MAY: What happened?\n"
+	.string "A door just appeared out of nowhere!\p"
+	.string "What? It reacted to your MAGMA EMBLEM?\n"
+	.string "Do you think that means this is where\l"
+	.string "TEAM MAGMA has been hiding?\p"
+	.string "We better take a look then.\n"
+	.string "I'll see you in there, {PLAYER}{KUN}.$"
 
 JaggedPass_Text_JulioIntro:
 	.string "Aiyeeh! It's awfully scary to shoot\n"

@@ -48,6 +48,12 @@ AquaHideout_B2F_EventScript_SubmarineEscape::
 	msgbox AquaHideout_B2F_Text_MattPostBattle, MSGBOX_DEFAULT
 	setflag FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE
 	setflag FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS
+	goto_if_set FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, AquaHideout_B2F_EventScript_HideWailmerGrunt
+	release
+	end
+
+AquaHideout_B2F_EventScript_HideWailmerGrunt::
+	setflag FLAG_HIDE_LILYCOVE_WAILMER_GRUNT
 	release
 	end
 
