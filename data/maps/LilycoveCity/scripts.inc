@@ -12,7 +12,6 @@ LilycoveCity_OnTransition:
 	call_if_eq VAR_SCOTT_LILYCOVE_STATE, 1, LilycoveCity_EventScript_ShowScott
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 	call_if_set FLAG_MELOETTA_MASTER_WON, LilycoveCity_EventScript_TryShowMeloetta
-	call Common_EventScript_SetupRivalGfxId
 	end
 
 LilycoveCity_EventScript_TryShowMeloetta::
@@ -104,7 +103,7 @@ LilycoveCity_EventScript_RichBoy::
 LilycoveCity_EventScript_Sailor2::
 	lock
 	faceplayer
-	goto_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_Sailor2AquaGone
+	goto_if_set FLAG_HIDE_LILYCOVE_WAILMER_GRUNT, LilycoveCity_EventScript_Sailor2AquaGone
 	msgbox LilycoveCity_Text_TeamAquaBeenTrainingWailmer, MSGBOX_DEFAULT
 	release
 	end

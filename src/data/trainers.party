@@ -10674,7 +10674,6 @@ Gender: Male
 Music: Magma
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Multi Party: Half
 
 Mightyena
 Level: 38
@@ -12904,9 +12903,9 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
-Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Multi Party: Half
 
 Talonflame
 Level: 44
@@ -15843,6 +15842,7 @@ Gender: Male
 Music: Magma
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Multi Party: Half
 
 Mightyena
 Level: 43
@@ -15883,9 +15883,9 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
+Items: Super Potion / Super Potion
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-Multi Party: Half
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
 Mightyena
 Level: 50
@@ -20314,6 +20314,7 @@ Gender: Female
 Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Multi Party: Half
 
 Mightyena
 Level: 43
@@ -20336,9 +20337,9 @@ Class: Aqua Leader
 Pic: Aqua Leader Archie
 Gender: Male
 Music: Aqua
-Items: Super Potion / Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+Multi Party: Half
 
 Wishiwashi
 Level: 44

@@ -26,6 +26,7 @@ AquaHideout_B2F_EventScript_ArchieTrigger1::
 	end
 
 AquaHideout_B2F_EventScript_WallyMultiBattle::
+	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	applymovement LOCALID_AQUA_HIDEOUT_ARCHIE, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox AquaHideout_B2F_Text_ArchieSoYouChasedUsEvenHere, MSGBOX_DEFAULT
@@ -37,6 +38,7 @@ AquaHideout_B2F_EventScript_WallyMultiBattle::
 	msgbox AquaHideout_B2F_Text_WallyImNotTheSamePerson, MSGBOX_DEFAULT
 	closemessage
 	goto AquaHideout_B2F_EventScript_ChoosePartyForMultiBattle
+	releaseall
 	end
 
 AquaHideout_B2F_EventScript_YouCantEscapeThisBattle::
@@ -45,6 +47,7 @@ AquaHideout_B2F_EventScript_YouCantEscapeThisBattle::
 	msgbox AquaHideout_B2F_Text_WallyLoop, MSGBOX_DEFAULT
 	closemessage
 	goto AquaHideout_B2F_EventScript_ChoosePartyForMultiBattle
+	releaseall
 	end
 
 AquaHideout_B2F_EventScript_ChoosePartyForMultiBattle::

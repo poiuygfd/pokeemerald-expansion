@@ -21,6 +21,7 @@ JaggedPass_EventScript_SetReadyToOpenHideout::
 JaggedPass_OnTransition:
 	call_if_eq VAR_JAGGED_PASS_STATE, 2, JaggedPass_EventScript_SetRivalAtDoor
 	call_if_eq VAR_JAGGED_PASS_ASH_WEATHER, 1, JaggedPass_EventScript_SetWeatherAsh
+	call Common_EventScript_SetupRivalGfxId
 	end
 
 JaggedPass_EventScript_SetRivalAtDoor::

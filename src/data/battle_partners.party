@@ -56,18 +56,30 @@ Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 Atk / 150 Spe
+- Hyper Voice
+- Play Rough
+- Bullet Seed
+- Charm
 
 Roserade
 Modest Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Giga Drain
+- Poison Jab
+- Stun Spore
+- Toxic Spikes
 
 Gallade
 Adamant Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Psycho Cut
+- Sacred Sword
+- Night Slash
+- Swords Dance
 
 === PARTNER_BRENDAN_MAGMA_HIDEOUT_TREECKO ===
 Name: BRENDAN
@@ -82,18 +94,30 @@ Modest Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Body Slam
+- Acid Armor
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Blaziken
 Jolly Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 Atk / 150 Spe
+- Blaze Kick
+- Double Kick
+- Acrobatics
+- Feather Dance
 
 === PARTNER_BRENDAN_MAGMA_HIDEOUT_TORCHIC ===
 Name: BRENDAN
@@ -108,18 +132,30 @@ Adamant Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Seed Bomb
+- Brick Break
+- Mach Punch
+- Spore
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Swampert
 Adamant Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Muddy Water
+- Bulldoze
+- Rock Slide
+- Amnesia
 
 === PARTNER_BRENDAN_MAGMA_HIDEOUT_MUDKIP ===
 Name: BRENDAN
@@ -134,18 +170,30 @@ Adamant Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Flame Wheel
+- Lunge
+- Crunch
+- Coil
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Sceptile
 Modest Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Leaf Blade
+- Focus Blast
+- Giga Drain
+- Double Team
 
 === PARTNER_MAY_MAGMA_HIDEOUT_TREECKO ===
 Name: MAY
@@ -160,18 +208,30 @@ Modest Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 SpA
+- Muddy Water
+- Earth Power
+- Body Slam
+- Acid Armor
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Blaziken
 Jolly Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 Atk / 150 Spe
+- Blaze Kick
+- Double Kick
+- Acrobatics
+- Feather Dance
 
 === PARTNER_MAY_MAGMA_HIDEOUT_TORCHIC ===
 Name: MAY
@@ -186,18 +246,30 @@ Adamant Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Seed Bomb
+- Brick Break
+- Mach Punch
+- Spore
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Swampert
 Adamant Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Muddy Water
+- Bulldoze
+- Rock Slide
+- Amnesia
 
 === PARTNER_MAY_MAGMA_HIDEOUT_MUDKIP ===
 Name: MAY
@@ -212,18 +284,30 @@ Adamant Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 HP / 150 Atk
+- Flame Wheel
+- Lunge
+- Crunch
+- Coil
 
 Raichu
 Timid Nature
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Thunderbolt
+- Iron Tail
+- Nuzzle
+- Light Screen
 
 Sceptile
 Modest Nature
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 150 SpA / 150 Spe
+- Leaf Blade
+- Focus Blast
+- Giga Drain
+- Double Team
 
 === PARTNER_STEVEN ===
 Name: STEVEN

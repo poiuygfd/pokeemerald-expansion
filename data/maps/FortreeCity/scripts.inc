@@ -21,7 +21,6 @@ FortreeCity_EventScript_ScottWonAtFortreeGymCall::
 	pokenavcall FortreeCity_Text_ScottYouWonAtFortreeGym
 	waitmessage
 	setvar VAR_FORTREE_CITY_STATE, 2
-	clearflag FLAG_SCOTT_CALL_FORTREE_GYM
 	releaseall
 	end
 
