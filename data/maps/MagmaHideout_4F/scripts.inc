@@ -128,7 +128,7 @@ MagmaHideout_4F_EventScript_Tabitha::
 	end
 
 MagmaHideout_4F_EventScript_Courtney::
-	trainerbattle_single TRAINER_COURTNEY_HIDEOUT, MagmaHideout_4F_Text_CourtneyIntro, MagmaHideout_4F_Text_CourtneyDefeat
+	trainerbattle_single TRAINER_COURTNEY_MAGMA_HIDEOUT, MagmaHideout_4F_Text_CourtneyIntro, MagmaHideout_4F_Text_CourtneyDefeat
 	msgbox MagmaHideout_4F_Text_CourtheyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

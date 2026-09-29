@@ -111,11 +111,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Croagunk
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
@@ -128,11 +128,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 31
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
-Level: 31
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
@@ -145,11 +145,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 32
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Panpour
-Level: 32
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
@@ -162,11 +162,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Scraggy
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
@@ -567,11 +567,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Carvanha
-Level: 32
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Dewpider
-Level: 32
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_6 ===
@@ -584,11 +584,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Corphish
-Level: 32
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FREDRICK ===
@@ -708,17 +708,8 @@ Items: Super Potion / Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Crobat
-Level: 40
-Ability: Inner Focus
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 Atk / 200 Spe
-- Cross Poison
-- Air Slash
-- Tailwind
-
 Wishiwashi
-Level: 41
+Level: 52
 Ability: Schooling
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
@@ -726,8 +717,17 @@ EVs: 200 HP / 100 Atk
 - Earthquake
 - Beat Up
 
+Crobat
+Level: 52
+Ability: Inner Focus
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 Atk / 200 Spe
+- Cross Poison
+- Air Slash
+- Tailwind
+
 Toxicroak
-Level: 41
+Level: 51
 Ability: Dry Skin
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
@@ -737,7 +737,7 @@ EVs: 200 HP / 100 Atk
 - Fake Out
 
 Gyarados
-Level: 40
+Level: 53
 Ability: Intimidate
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
@@ -746,7 +746,7 @@ EVs: 200 HP / 100 Atk
 - Dragon Dance
 
 Toxapex
-Level: 42
+Level: 53
 Ability: Merciless
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
@@ -756,7 +756,7 @@ EVs: 200 HP / 100 Atk
 - Baneful Bunker
 
 Sharpedo @ Sharpedonite
-Level: 43
+Level: 54
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 - Liquidation
@@ -3914,11 +3914,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 31
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Zubat
-Level: 31
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_8 ===
@@ -3931,11 +3931,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Carvanha
-Level: 32
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Croagunk
-Level: 32
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHAWN ===
@@ -6015,7 +6015,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Dondozo @ Lum Berry
-Level: 54
+Level: 56
 Ability: Unaware
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpD
@@ -6026,7 +6026,7 @@ Nature: Jolly
 - Sleep Talk
 
 Tatsugiri-Curly @ Tatsugirinite
-Level: 54
+Level: 56
 Ability: Commander
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 SpA / 250 Spe
@@ -6037,7 +6037,7 @@ Nature: Modest
 - Nasty Plot
 
 Crawdaunt @ Mystic Water
-Level: 52
+Level: 54
 Ability: Adaptability
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 Atk
@@ -6048,7 +6048,7 @@ Nature: Adamant
 - Swords Dance
 
 Kingdra @ Chesto Berry
-Level: 53
+Level: 55
 Ability: Swift Swim
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 250 HP / 250 SpA
@@ -6069,7 +6069,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Jellicent (M) @ Leftovers
-Level: 53
+Level: 55
 Ability: Cursed Body
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpA
@@ -6080,7 +6080,7 @@ Nature: Adamant
 - Strength Sap
 
 Marin @ Focus Sash
-Level: 53
+Level: 55
 Ability: Friend Guard
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 Spe
@@ -6091,7 +6091,7 @@ Nature: Timid
 - Follow Me
 
 Milotic @ Flame Orb
-Level: 52
+Level: 54
 Ability: Marvel Scale
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 EVs: 250 HP / 250 SpD
@@ -6102,7 +6102,7 @@ Nature: Modest
 - Rain Dance
 
 Lumineon @ Lumineonite
-Level: 54
+Level: 56
 Ability: Storm Drain
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 EVs: 252 HP / 252 SpA
@@ -11136,12 +11136,12 @@ Music: Female
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shellos
+Sizzlipede
 Level: 20
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 HP / 50 Atk / 50 SpA
 
-Sizzlipede
+Shellos
 Level: 20
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 HP / 50 Atk / 50 SpA
@@ -12908,37 +12908,18 @@ Items: Super Potion / Super Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Force Setup First Turn
 
-Mightyena
-Level: 36
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 100 Atk / 200 Spe
-- Crunch
-- Snarl
-- Howl
-- Leer
-
 Talonflame
-Level: 37
+Level: 44
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 
 Weezing
-Level: 38
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 200 HP / 100 Atk
-
-Scovillain
-Level: 36
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 200 HP / 100 SpA
-
-Centiskorch
-Level: 38
+Level: 44
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 Atk
 
 Camerupt @ Cameruptite
-Level: 39
+Level: 46
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 SpA
 - Flamethrower
@@ -15592,11 +15573,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 29
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Slugma
-Level: 29
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_2 ===
@@ -15609,11 +15590,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_3 ===
@@ -15626,11 +15607,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Koffing
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_4 ===
@@ -15643,11 +15624,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Baltoy
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Scraggy
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_5 ===
@@ -15660,11 +15641,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Baltoy
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Salandit
-Level: 28
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_6 ===
@@ -15677,11 +15658,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Mightyena
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Numel
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_7 ===
@@ -15694,11 +15675,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Zubat
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Scrafty
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_8 ===
@@ -15711,11 +15692,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Poochyena
-Level: 29
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Slugma
-Level: 29
+Level: 39
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_9 ===
@@ -15727,12 +15708,12 @@ Music: Magma
 Double Battle: Yes
 AI: Check Bad Move
 
-Zubat
-Level: 29
+Golbat
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pansear
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_10 ===
@@ -15745,11 +15726,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Koffing
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Mightyena
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_11 ===
@@ -15762,11 +15743,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Baltoy
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pansear
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_12 ===
@@ -15779,11 +15760,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Koffing
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_13 ===
@@ -15796,11 +15777,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Koffing
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pyroar
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_14 ===
@@ -15813,11 +15794,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Mightyena
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Baltoy
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_15 ===
@@ -15830,11 +15811,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Numel
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Drilbur
-Level: 29
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_16 ===
@@ -15847,11 +15828,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Baltoy
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Capsakid
-Level: 29
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
@@ -15864,17 +15845,17 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Mightyena
-Level: 31
+Level: 43
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 EVs: 50 Atk / 50 Spe
 
 Camerupt
-Level: 31
+Level: 43
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 EVs: 50 HP / 50 Atk / 50 SpA
 
 Ceruledge
-Level: 33
+Level: 45
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 EVs: 50 Atk / 50 Spe
 
@@ -15906,22 +15887,61 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 Multi Party: Half
 
-Talonflame
-Level: 42
+Mightyena
+Level: 50
+Ability: Intimidate
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
+- Crunch
+- Snarl
+- Howl
+- Leer
 
-Weezing
-Level: 43
+Talonflame
+Level: 50
+Ability: Flame Body
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-EVs: 200 HP / 100 Atk
+EVs: 100 Atk / 200 Spe
+- Flare Blitz
+- Brave Bird
+- Tailwind
+- Roost
 
-Camerupt @ Cameruptite
-Level: 44
+Scovillain
+Level: 49
+Ability: Insomnia
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 200 HP / 100 SpA
+- Giga Drain
 - Flamethrower
+- Leech Seed
+- Rage Powder
+
+Weezing
+Level: 51
+Ability: Neutralizing Gas
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 200 HP / 100 SpA
+- Sludge Bomb
+- Flamethrower
+- Clear Smog
+
+Centiskorch
+Level: 51
+Ability: Flash Fire
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 200 HP / 100 Atk
+- Fire Lash
+- Leech Life
+- Coil
+
+Camerupt @ Cameruptite
+Level: 52
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 200 HP / 100 SpA
+- Heat Wave
 - Earth Power
+- Ancient Power
 
 === TRAINER_PETE ===
 Name: PETE
@@ -20262,7 +20282,7 @@ Level: 43
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
-=== TRAINER_COURTNEY_HIDEOUT ===
+=== TRAINER_COURTNEY_MAGMA_HIDEOUT ===
 Name: COURTNEY
 Class: Magma Admin
 Pic: Magma Grunt F
@@ -20272,19 +20292,70 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Camerupt
-Level: 31
+Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 HP / 50 Atk / 50 SpA
 
 Golbat
-Level: 31
+Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
 Ninetales
-Level: 33
+Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 SpA / 50 Spe
+
+=== TRAINER_SHELLY_AQUA_HIDEOUT ===
+Name: SHELLY
+Class: Aqua Admin
+Pic: Aqua Admin F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Mightyena
+Level: 43
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Sharpedo
+Level: 43
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+Barraskewda
+Level: 45
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+EVs: 50 Atk / 50 Spe
+
+=== TRAINER_ARCHIE_AQUA_HIDEOUT ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Super Potion / Super Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Wishiwashi
+Level: 44
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 200 HP / 100 Atk
+
+Crobat
+Level: 44
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 Atk / 200 Spe
+
+Sharpedo @ Sharpedonite
+Level: 46
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+EVs: 100 Atk / 200 Spe
+- Liquidation
+- Crunch
 
 === TRAINER_ALICIA ===
 Name: ALICIA

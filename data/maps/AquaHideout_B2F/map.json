@@ -3,7 +3,6 @@
   "name": "AquaHideout_B2F",
   "layout": "LAYOUT_AQUA_HIDEOUT_B2F",
   "music": "MUS_AQUA_MAGMA_HIDEOUT",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_AQUA_HIDEOUT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,7 +12,7 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_AQUA",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_AQUA_HIDEOUT_MATT",
@@ -21,13 +20,13 @@
       "x": 23,
       "y": 19,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "AquaHideout_B2F_EventScript_Matt",
-      "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
+      "script": "0x0",
+      "flag": "FLAG_HIDE_AQUA_HIDEOUT_ARCHIE_MATT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -94,6 +93,48 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "AquaHideout_B2F_EventScript_Grunt8",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
+    },
+    {
+      "local_id": "LOCALID_AQUA_HIDEOUT_SHELLY",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 25,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AquaHideout_B2F_EventScript_Shelly",
+      "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
+    },
+    {
+      "local_id": "LOCALID_AQUA_HIDEOUT_ARCHIE",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_AQUA_HIDEOUT_ARCHIE_MATT"
+    },
+    {
+      "local_id": "LOCALID_AQUA_HIDEOUT_WALLY",
+      "graphics_id": "OBJ_EVENT_GFX_WALLY",
+      "x": 27,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_AQUA_HIDEOUT_WALLY"
     }
   ],
   "warp_events": [
@@ -176,7 +217,7 @@
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "AquaHideout_B2F_EventScript_MattNoticePlayer"
+      "script": "AquaHideout_B2F_EventScript_ArchieTrigger1"
     },
     {
       "type": "trigger",
@@ -185,10 +226,9 @@
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "AquaHideout_B2F_EventScript_MattNoticePlayer"
+      "script": "AquaHideout_B2F_EventScript_ArchieTrigger0"
     }
   ],
-  "bg_events": [
-
-  ]
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }
