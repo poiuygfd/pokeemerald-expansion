@@ -301,7 +301,7 @@ RusturfTunnel_EventScript_Grunt::
 	faceplayer
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
+	trainerbattle_no_intro TRAINER_GRUNT_CARL_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
 	msgbox RusturfTunnel_Text_AGruntsDetermination, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntCharge

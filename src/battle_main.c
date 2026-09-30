@@ -364,6 +364,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PYRAMID_KING] =         { _("PYRAMID KING") },
     [TRAINER_CLASS_RS_PROTAG] =            { _("{PKMN} TRAINER") },
     [TRAINER_CLASS_E_PROTAG] =             { _("{PKMN} TRAINER") },
+    [TRAINER_CLASS_AQUA_GRUNT] =           { _("AQUA GRUNT") },
     [TRAINER_CLASS_ROUTE_MASTER] =         { _("ROUTE MASTER"), 25, BALL_GREAT },
     [TRAINER_CLASS_WORLD_CHAMP] =          { _("WORLD CHAMP"), 50, BALL_MASTER },
     [TRAINER_CLASS_YOUNGSTER_FRLG] =       { _("YOUNGSTER"), 4 },

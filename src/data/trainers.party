@@ -253,9 +253,9 @@ Eevee
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
-Class: Team Aqua
+=== TRAINER_GRUNT_CARL_PETALBURG_WOODS ===
+Name: CARL
+Class: Aqua Grunt
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -265,12 +265,22 @@ AI: Check Bad Move
 Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 50 Spe
 - Howl
 - Tackle
 
 Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 50 Spe
+- Howl
+- Tackle
+
+Poochyena
+Shiny: Yes
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 50 Spe
 - Howl
 - Tackle
 
@@ -360,9 +370,9 @@ Staryu
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
-Class: Team Aqua
+=== TRAINER_GRUNT_CARL_RUSTURF_TUNNEL ===
+Name: CARL
+Class: Aqua Grunt
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -372,14 +382,22 @@ AI: Check Bad Move
 Poochyena
 Level: 15
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-EVs: 50 Spe
+EVs: 50 Atk / 50 Spe
 - Howl
 - Bite
 
 Poochyena
 Level: 15
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-EVs: 50 Spe
+EVs: 50 Atk / 50 Spe
+- Howl
+- Bite
+
+Poochyena
+Shiny: Yes
+Level: 15
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+EVs: 50 Atk / 50 Spe
 - Howl
 - Bite
 
@@ -608,7 +626,7 @@ Hawlucha
 Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MATT ===
+=== TRAINER_MATT_SEAFLOOR_CAVERN ===
 Name: MATT
 Class: Aqua Admin
 Pic: Aqua Admin M
@@ -619,17 +637,17 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Golbat
-Level: 33
+Level: 50
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
 Sharpedo
-Level: 33
+Level: 50
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
 Barbaracle
-Level: 35
+Level: 52
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
 
@@ -698,7 +716,7 @@ Level: 38
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 EVs: 50 Atk / 50 Spe
 
-=== TRAINER_ARCHIE ===
+=== TRAINER_ARCHIE_SEAFLOOR_CAVERN ===
 Name: ARCHIE
 Class: Aqua Leader
 Pic: Aqua Leader Archie
@@ -10669,7 +10687,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TABITHA_MOSSDEEP ===
 Name: TABITHA
 Class: Magma Admin
-Pic: Magma Admin
+Pic: Magma Admin M
 Gender: Male
 Music: Magma
 Double Battle: Yes
@@ -12094,9 +12112,9 @@ Klink
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
-Name: GRUNT
-Class: Team Aqua
+=== TRAINER_GRUNT_CARL_SEAFLOOR_CAVERN ===
+Name: CARL
+Class: Aqua Grunt
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -12104,18 +12122,51 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Mightyena
-Level: 36
+Level: 50
 Ability: Intimidate
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 Atk / 100 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
 - Howl
 - Crunch
 
 Mightyena
-Level: 36
+Level: 50
 Ability: Intimidate
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 Atk / 100 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Howl
+- Crunch
+
+Mightyena
+Level: 50
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Howl
+- Crunch
+
+Mightyena
+Level: 50
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Howl
+- Crunch
+
+Mightyena
+Level: 50
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Howl
+- Crunch
+
+Mightyena
+Shiny: Yes
+Level: 50
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
 - Howl
 - Crunch
 
@@ -12718,7 +12769,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TABITHA_METEOR_FALLS ===
 Name: TABITHA
 Class: Magma Admin
-Pic: Magma Admin
+Pic: Magma Admin M
 Gender: Male
 Music: Magma
 Double Battle: Yes
@@ -15837,7 +15888,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
 Name: TABITHA
 Class: Magma Admin
-Pic: Magma Admin
+Pic: Magma Admin M
 Gender: Male
 Music: Magma
 Double Battle: Yes
@@ -20033,7 +20084,7 @@ Level: 17
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk
 
-=== TRAINER_ARCHIE_MUSEUM ===
+=== TRAINER_ARCHIE_OCEANIC_MUSEUM ===
 Name: ARCHIE
 Class: Aqua Leader
 Pic: Aqua Leader Archie
@@ -20235,7 +20286,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_COURTNEY_SOUTHERN_ISLAND ===
 Name: COURTNEY
 Class: Magma Admin
-Pic: Magma Grunt F
+Pic: Magma Admin F
 Gender: Female
 Music: Magma
 Double Battle: Yes
@@ -20260,7 +20311,7 @@ EVs: 50 SpA / 50 Spe
 === TRAINER_TABITHA_MT_PYRE ===
 Name: TABITHA
 Class: Magma Admin
-Pic: Magma Admin
+Pic: Magma Admin M
 Gender: Male
 Music: Magma
 Items: Super Potion
@@ -20281,30 +20332,6 @@ Ceruledge
 Level: 43
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 EVs: 50 Atk / 50 Spe
-
-=== TRAINER_COURTNEY_MAGMA_HIDEOUT ===
-Name: COURTNEY
-Class: Magma Admin
-Pic: Magma Grunt F
-Gender: Female
-Music: Magma
-Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
-
-Camerupt
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 HP / 50 Atk / 50 SpA
-
-Golbat
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 Atk / 50 Spe
-
-Ninetales
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-EVs: 50 SpA / 50 Spe
 
 === TRAINER_SHELLY_AQUA_HIDEOUT ===
 Name: SHELLY
@@ -20357,6 +20384,30 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 EVs: 100 Atk / 200 Spe
 - Liquidation
 - Crunch
+
+=== TRAINER_COURTNEY_SPACE_CENTER ===
+Name: COURTNEY
+Class: Magma Admin
+Pic: Magma Admin F
+Gender: Female
+Music: Magma
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
+
+Camerupt
+Level: 49
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 HP / 50 Atk / 50 SpA
+
+Golbat
+Level: 49
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 Atk / 50 Spe
+
+Ninetales
+Level: 51
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+EVs: 50 SpA / 50 Spe
 
 === TRAINER_ALICIA ===
 Name: ALICIA

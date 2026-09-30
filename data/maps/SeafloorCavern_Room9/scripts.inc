@@ -26,7 +26,7 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	applymovement VAR_0x8004, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SeafloorCavern_Room9_Text_ArchieYouMustDisappear, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat
+	trainerbattle_no_intro TRAINER_ARCHIE_SEAFLOOR_CAVERN, SeafloorCavern_Room9_Text_ArchieDefeat
 	msgbox SeafloorCavern_Room9_Text_ArchieWithThisRedOrb, MSGBOX_DEFAULT
 	setweather WEATHER_NONE
 	doweather
@@ -128,7 +128,7 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	setflag FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN
 	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
 	setvar VAR_STEVENS_HOUSE_STATE, 2
-	setvar VAR_SEAFLOOR_CAVERN_STATE, 1
+	setvar VAR_SEAFLOOR_CAVERN_STATE, 3
 	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE
 	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE
 	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS

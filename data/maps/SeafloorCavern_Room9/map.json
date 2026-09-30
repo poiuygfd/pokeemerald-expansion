@@ -3,7 +3,6 @@
   "name": "SeafloorCavern_Room9",
   "layout": "LAYOUT_SEAFLOOR_CAVERN_ROOM9",
   "music": "MUS_MT_CHIMNEY",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SEAFLOOR_CAVERN",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
@@ -13,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_SEAFLOOR_CAVERN_KYOGRE",
@@ -129,11 +128,10 @@
       "y": 42,
       "elevation": 3,
       "var": "VAR_SEAFLOOR_CAVERN_STATE",
-      "var_value": "0",
+      "var_value": "2",
       "script": "SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre"
     }
   ],
-  "bg_events": [
-
-  ]
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }
