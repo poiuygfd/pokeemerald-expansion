@@ -1696,6 +1696,7 @@ void InitPlayerAvatar(s16 x, s16 y, enum Direction direction)
     u8 objectEventId;
     struct ObjectEvent *objectEvent;
 
+    playerObjEventTemplate.kind = OBJ_KIND_NORMAL;
     playerObjEventTemplate.localId = LOCALID_PLAYER;
     playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_NORMAL);
     playerObjEventTemplate.x = x - MAP_OFFSET;
