@@ -269,6 +269,10 @@ RusturfTunnel_EventScript_TunnelBlockagePos3::
 RusturfTunnel_EventScript_AquaGruntBackUp::
 	lockall
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	playse SE_PIN
+	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, Common_Movement_ExclamationMark
+	waitmovement 0
+	waitse
 	msgbox RusturfTunnel_Text_ComeAndGetSome, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntAndPeekoBackUp
@@ -400,7 +404,10 @@ RusturfTunnel_EventScript_Mike::
 	end
 
 RusturfTunnel_Text_ComeAndGetSome:
-	.string "What, are you coming?\n"
+	.string "Oh, not YOU again!\n"
+	.string "Couldn't you have stayed in the WOODS?\p"
+	.string "If it's a round two you want, then\n"
+	.string "It's a round two you're gonna get!\p"
 	.string "Come and get some, then!$"
 
 RusturfTunnel_Text_Peeko:
@@ -409,11 +416,12 @@ RusturfTunnel_Text_Peeko:
 RusturfTunnel_Text_GruntIntro:
 	.string "Grah, keelhaul it all!\p"
 	.string "That hostage POKéMON turned out to\n"
-	.string "be worthless!\p"
+	.string "be WORTHLESS!\p"
 	.string "And to think I made a getaway…\n"
-	.string "In this tunnel to nowhere!\p"
-	.string "Hey! You!\n"
-	.string "So you want to battle me?$"
+	.string "In this tunnel to NOWHERE!\p"
+	.string "Alright then!\n"
+	.string "This won't end the same way that\l"
+	.string "it ended in PETALBURG WOODS!$"
 
 RusturfTunnel_Text_GruntDefeat:
 	.string "Urrrggh! My career in crime comes to\n"

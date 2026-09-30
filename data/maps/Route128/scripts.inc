@@ -73,6 +73,20 @@ Route128_EventScript_KyogreAwakenedScene::
 	delay 15
 	removeobject LOCALID_ROUTE128_STEVEN
 	waitfieldeffect FLDEFF_NPCFLY_OUT
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route128_EventScript_MayCall
+	goto_if_eq VAR_RESULT, FEMALE, Route128_EventScript_BrendanCall
+	end
+	
+Route128_EventScript_MayCall::
+	pokenavcall Route128_Text_MayFoundGroudon
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_ROUTE128_STATE, 2
+	releaseall
+	end
+
+Route128_EventScript_BrendanCall::
+	pokenavcall Route128_Text_BrendanFoundGroudon
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_ROUTE128_STATE, 2
 	releaseall
@@ -299,4 +313,36 @@ Route128_Text_StevenImGoingToSootopolis:
 	.string "but don't do anything reckless.\p"
 	.string "Okay.\n"
 	.string "I'm going to SOOTOPOLIS.$"
+
+Route128_Text_BrendanFoundGroudon:
+	.string "BRENDAN: {PLAYER}!\n"
+	.string "Can you hear me?\p"
+	.string "So, I've found GROUDON…\n"
+	.string "Well, it might be more accurate to\l"
+	.string "say that GROUDON found me.\p"
+	.string "I was just in SOOTOPOLIS when it\n"
+	.string "decided to show up here!\p"
+	.string "As if that's not bad enough\n"
+	.string "KYOGRE has just shown up too!\p"
+	.string "At this rate, things aren't gonna end\n"
+	.string "well for SOOTOPOLIS…\l"
+	.string "No, for all of HOENN!\p"
+	.string "I've called WALLY as well, so get\n"
+	.string "over here as soon as you can!$"
+
+Route128_Text_MayFoundGroudon:
+	.string "MAY: {PLAYER}{KUN}!\n"
+	.string "Can you hear me?\p"
+	.string "I've managed to locate GROUDON.\n"
+	.string "Well, it would be more accurate to\l"
+	.string "say that GROUDON found me…\p"
+	.string "I was just asking around in SOOTOPOLIS\n"
+	.string "when it showed up here!\p"
+	.string "Even worse, though, is that KYOGRE has\n"
+	.string "just shown up too!\p"
+	.string "If this keeps up, it could end really\n"
+	.string "badly for SOOTOPOLIS…\l"
+	.string "No, for all of HOENN!\p"
+	.string "WALLY is already on his way, so\n"
+	.string "please join us here soon!$"
 

@@ -6,6 +6,7 @@ MossdeepCity_SpaceCenter_2F_MapScripts::
 MossdeepCity_SpaceCenter_2F_OnTransition:
 	call_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_MoveCivilians
 	call_if_eq VAR_MOSSDEEP_SPACE_CENTER_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_MoveDefeatedGrunts
+	call_if_set FLAG_DEFEATED_COURTNEY_SPACE_CENTER, MossdeepCity_SpaceCenter_2F_EventScript_DisableTrigger
 	end
 
 MossdeepCity_SpaceCenter_2F_EventScript_MoveCivilians::
@@ -22,6 +23,10 @@ MossdeepCity_SpaceCenter_2F_EventScript_MoveDefeatedGrunts::
 	setobjectxyperm LOCALID_SPACE_CENTER_GRUNT_6, 11, 2
 	setobjectxyperm LOCALID_SPACE_CENTER_GRUNT_7, 15, 2
 	setobjectxyperm LOCALID_SPACE_CENTER_GRUNT_5, 13, 4
+	return
+
+MossdeepCity_SpaceCenter_2F_EventScript_DisableTrigger::
+	setvar VAR_TEMP_1, 1
 	return
 
 MossdeepCity_SpaceCenter_2F_OnFrame:
@@ -161,6 +166,62 @@ MossdeepCity_SpaceCenter_2F_EventScript_Grunt5::
 	msgbox MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle, MSGBOX_NPC
 	end
 
+MossdeepCity_SpaceCenter_2F_EventScript_CourtneyTrigger0::
+	lockall
+	applymovement LOCALID_SPACE_CENTER_COURTNEY, MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer0
+	waitmovement 0
+	goto MossdeepCity_SpaceCenter_2F_EventScript_CourtneyBattle
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_CourtneyTrigger1::
+	lockall
+	applymovement LOCALID_SPACE_CENTER_COURTNEY, MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer1
+	waitmovement 0
+	goto MossdeepCity_SpaceCenter_2F_EventScript_CourtneyBattle
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_CourtneyTrigger2::
+	lockall
+	applymovement LOCALID_SPACE_CENTER_COURTNEY, MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer2
+	waitmovement 0
+	goto MossdeepCity_SpaceCenter_2F_EventScript_CourtneyBattle
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_CourtneyBattle::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_CourtneyKnewYouWouldCome, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_COURTNEY_SPACE_CENTER, MossdeepCity_SpaceCenter_2F_Text_CourtneyDefeat
+	delay 10
+	applymovement LOCALID_SPACE_CENTER_COURTNEY, MossdeepCity_SpaceCenter_2F_Movement_Grunt5Defeated
+	waitmovement 0
+	delay 20
+	msgbox MossdeepCity_SpaceCenter_2F_Text_CourtneyWhyMustYou, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_COURTNEY_SPACE_CENTER
+	setvar VAR_TEMP_1, 1
+	releaseall
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_Courtney::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_CourtneyNoMatter, MSGBOX_NPC
+	end
+
+MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer0:
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
+MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer1:
+	walk_up
+	walk_up
+	step_end
+
+MossdeepCity_SpaceCenter_2F_Movement_CourtneyApproachPlayer2:
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
 MossdeepCity_SpaceCenter_2F_EventScript_Tabitha::
 	lock
 	faceplayer
@@ -170,15 +231,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_Tabitha::
 	release
 	end
 
-MossdeepCity_SpaceCenter_2F_EventScript_Maxie::
-	lockall
-	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere, MSGBOX_DEFAULT
-	releaseall
-	end
-
 MossdeepCity_SpaceCenter_2F_EventScript_Steven::
 	lockall
-	goto_if_set FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER, MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt
+	goto_if_set FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER, MossdeepCity_SpaceCenter_2F_EventScript_StevenShock
 	setflag FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER
 	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel, MSGBOX_DEFAULT
 	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano, MSGBOX_DEFAULT
@@ -189,6 +244,11 @@ MossdeepCity_SpaceCenter_2F_EventScript_Steven::
 	case DIR_SOUTH, MossdeepCity_SpaceCenter_2F_EventScript_StevenFightMovementSouth
 	applymovement LOCALID_SPACE_CENTER_2F_STEVEN, MossdeepCity_SpaceCenter_2F_Movement_StevenFight
 	waitmovement 0
+	releaseall
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_StevenShock::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenHaveYouGoneInsane, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -222,45 +282,47 @@ MossdeepCity_SpaceCenter_2F_Movement_StevenFightSouth:
 	face_down
 	step_end
 
-MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt::
-	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayer::
+	switch VAR_FACING
+	case DIR_SOUTH, MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerSouth
+	case DIR_WEST, MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerWest
+	return
+
+MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerSouth::
+	turnobject LOCALID_SPACE_CENTER_2F_STEVEN, DIR_NORTH
+	return
+
+MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerWest::
+	turnobject LOCALID_SPACE_CENTER_2F_STEVEN, DIR_EAST
+	return
+
+MossdeepCity_SpaceCenter_2F_EventScript_Maxie::
+	lockall
+	faceplayer
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere, MSGBOX_DEFAULT
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
-	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly, MSGBOX_DEFAULT
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieKeepGuestOccupied, MSGBOX_DEFAULT
+	msgbox MossdeepCity_SpaceCenter_2F_Text_TabithaMyPleasure, MSGBOX_DEFAULT
 	closemessage
-	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_SPACE_CENTER_TABITHA, MossdeepCity_SpaceCenter_2F_Movement_PushSteven
+	applymovement LOCALID_SPACE_CENTER_2F_STEVEN, MossdeepCity_SpaceCenter_2F_Movement_BeingPushed
 	waitmovement 0
-	releaseall
-	end
-
-MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle::
-	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	msgbox MossdeepCity_SpaceCenter_2F_Text_TabithaYourOpponentIsMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	goto_if_ne VAR_RESULT, 0, MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle
-	special LoadPlayerParty
-	goto MossdeepCity_SpaceCenter_2F_EventScript_ReadyForBattlePrompt
-
-MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle::
-	multi_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_TABITHA_MOSSDEEP, MossdeepCity_SpaceCenter_Text_TabithaDefeat, PARTNER_STEVEN
-	switch VAR_RESULT
-	case 1, MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha
-	fadescreen FADE_TO_BLACK
-	special SetCB2WhiteOut
-
-MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieFinally, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand
 	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_SPACE_CENTER_TABITHA, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 60
-	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterUp
-	applymovement LOCALID_SPACE_CENTER_TABITHA, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_SPACE_CENTER_MAXIE, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_SPACE_CENTER_TABITHA, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	delay 20
 	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp, MSGBOX_DEFAULT
@@ -285,6 +347,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
 	turnobject LOCALID_SPACE_CENTER_2F_RICH_BOY, DIR_NORTH
 	call MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayer
 	fadescreen FADE_FROM_BLACK
+	delay 10
+	applymovement LOCALID_SPACE_CENTER_2F_STEVEN, MossdeepCity_SpaceCenter_2F_Movement_StevenApproachPlayer
+	waitmovement 0
 	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -300,24 +365,62 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
 	setobjectmovementtype LOCALID_SPACE_CENTER_2F_SCIENTIST, MOVEMENT_TYPE_WANDER_AROUND
 	addobject LOCALID_SPACE_CENTER_2F_SCIENTIST
 	fadescreen FADE_FROM_BLACK
-#ifdef BUGFIX
 	releaseall
-#endif
 	end
 
-MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayer::
-	switch VAR_FACING
-	case DIR_SOUTH, MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerSouth
-	case DIR_WEST, MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerWest
-	return
+MossdeepCity_SpaceCenter_2F_Movement_PushSteven:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
 
-MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerSouth::
-	turnobject LOCALID_SPACE_CENTER_2F_STEVEN, DIR_NORTH
-	return
+MossdeepCity_SpaceCenter_2F_Movement_BeingPushed:
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	face_right
+	lock_facing_direction
+	jump_left
+	step_end
 
-MossdeepCity_SpaceCenter_2F_EventScript_StevenFacePlayerWest::
-	turnobject LOCALID_SPACE_CENTER_2F_STEVEN, DIR_EAST
-	return
+MossdeepCity_SpaceCenter_2F_Movement_StevenApproachPlayer:
+	walk_down
+	walk_right
+	step_end
+
+@Unused multi battle but debug freaks out if I delete this
+MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle::
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto_if_ne VAR_RESULT, 0, MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle
+	special LoadPlayerParty
+	goto MossdeepCity_SpaceCenter_2F_EventScript_Maxie
+
+MossdeepCity_SpaceCenter_2F_EventScript_DoStevenMultiBattle::
+	multi_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_TABITHA_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, PARTNER_STEVEN
+	switch VAR_RESULT
+	case 1, MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+
+MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
+	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
 
 MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall::
 	lockall
@@ -414,16 +517,34 @@ MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle:
 	.string "Are we being useful to our leader\n"
 	.string "at all?$"
 
+MossdeepCity_SpaceCenter_2F_Text_CourtneyKnewYouWouldCome:
+	.string "COURTNEY: … … …I knew you would come.\n"
+	.string "LEADER MAXIE… Still has work to do…\p"
+	.string "…I must… stop you…\n"
+	.string "…No, more than that…\p"
+	.string "I want… to analyse you…\n"
+	.string "…To engage… …you…\p"
+	.string "Battle… Commence…\n"
+	.string "Ahahaha…$"
+
+MossdeepCity_SpaceCenter_2F_Text_CourtneyDefeat:
+	.string "Hah hah… Unh… hah hah…$"
+
+MossdeepCity_SpaceCenter_2F_Text_CourtneyWhyMustYou:
+	.string "Why? Why must… you always…\n"
+	.string "Always, always, always, always…\l"
+	.string "Get in our way!\p"
+MossdeepCity_SpaceCenter_2F_Text_CourtneyNoMatter:
+	.string "No… matter…\p"
+	.string "LEADER MAXIE… will finish…\n"
+	.string "…what I couldn't…$"
+
 MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou:
-	.string "Hehehe!\p"
+	.string "TABITHA: Hehehe!\p"
 	.string "We come all the way here to get some\n"
 	.string "fuel, and we're interfered with again!\p"
 	.string "If you're going to mess with us too,\n"
-	.string "we'll take care of you at the same time!$"
-
-MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere:
-	.string "MAXIE: Clear out of the way!\n"
-	.string "Don't you dare interfere!$"
+	.string "our boss will take care of you!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel:
 	.string "STEVEN: TEAM MAGMA…\p"
@@ -441,22 +562,44 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano:
 	.string "the volcano erupt!\p"
 	.string "It will be savage!$"
 
-MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle:
-	.string "STEVEN: {PLAYER}{KUN}!\n"
-	.string "You're going to help me?\p"
-	.string "Let's go into battle together!\n"
-	.string "Are you ready?$"
+MossdeepCity_SpaceCenter_2F_Text_StevenHaveYouGoneInsane:
+	.string "STEVEN: Have you gone insane?!\n"
+	.string "Surely even you must see how terrible\l"
+	.string "of an idea this is!$"
 
-MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly:
-	.string "STEVEN: Then, hurry!\n"
-	.string "Get ready quickly!$"
+MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere:
+	.string "MAXIE: You, you infernal child…\n"
+	.string "You dare to show your face even here?\p"
+	.string "I have had it up to here with you!\n"
+	.string "Every. Single. Time! You show up to\l"
+	.string "meddle with our affairs!\p"
+	.string "That's it!\n"
+	.string "I'm putting an end to this here and now!\p"
+	.string "No more outside interference!\n"
+	.string "No more relying on others!$"
+
+MossdeepCity_SpaceCenter_2F_Text_MaxieKeepGuestOccupied:
+	.string "TABITHA, keep our other guest occupied!\n"
+	.string "I won't be satisfied until I crush\l"
+	.string "our interloper with my own two hands!$"
+
+MossdeepCity_SpaceCenter_2F_Text_TabithaMyPleasure:
+	.string "TABITHA: My pleasure, BOSS!\n"
+	.string "Give the kid a thorough beating for me!$"
+
+MossdeepCity_SpaceCenter_2F_Text_TabithaYourOpponentIsMe:
+	.string "Sorry, pretty boy, but your opponent\n"
+	.string "will be me!$"
+
+MossdeepCity_SpaceCenter_2F_Text_MaxieFinally:
+	.string "MAXIE: Finally…\p"
+	.string "Now, let's have a battle with everything\n"
+	.string "on the line!\p"
+	.string "Prepare yourself!$"
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand:
 	.string "All I want…\n"
 	.string "I just want to expand the land mass…$"
-
-MossdeepCity_SpaceCenter_Text_TabithaDefeat:
-	.string "I'm with our leader…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "MAXIE: We failed to make the volcano\n"
