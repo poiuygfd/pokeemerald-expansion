@@ -5365,6 +5365,49 @@ enum Stat GetHighestStatId(enum BattlerId battler)
     return highestId;
 }
 
+enum Stat GetLowestStatId(enum BattlerId battler)
+{
+    enum Stat lowestId = STAT_ATK;
+    bool32 wonderRoom = (gFieldStatuses & STATUS_FIELD_WONDER_ROOM) != 0;
+    u32 lowestStat = gBattleMons[battler].attack;
+
+    for (enum Stat stat = STAT_DEF; stat < NUM_STATS; stat++)
+    {
+        if (stat == STAT_SPEED)
+            continue;
+
+        u32 statVal;
+        switch (stat)
+        {
+        case STAT_ATK:
+            statVal = gBattleMons[battler].attack;
+            break;
+        case STAT_DEF:
+            statVal = wonderRoom ? gBattleMons[battler].spDefense : gBattleMons[battler].defense;
+            break;
+        case STAT_SPATK:
+            statVal = gBattleMons[battler].spAttack;
+            break;
+        case STAT_SPDEF:
+            statVal = wonderRoom ? gBattleMons[battler].defense : gBattleMons[battler].spDefense;
+            break;
+        default:
+            continue;
+        }
+
+        if (statVal < lowestStat)
+        {
+            lowestStat = statVal;
+            lowestId = stat;
+        }
+    }
+
+    if (gBattleMons[battler].speed < lowestStat)
+        lowestId = STAT_SPEED;
+
+    return lowestId;
+}
+
 static u32 GetStatValueWithStages(enum BattlerId battler, enum Stat stat)
 {
     u32 statValue;
@@ -7393,6 +7436,12 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
         if (IsBattleMoveSpecial(move) && GetActiveGimmick(battlerAtk) != GIMMICK_DYNAMAX)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    case HOLD_EFFECT_MYSTERY_GIFT:
+        if (atkBaseSpeciesId == SPECIES_DELIBIRD && IsBattleMovePhysical(move) && (GetHighestStatId(battlerAtk) == STAT_ATK || GetLowestStatId(battlerAtk) == STAT_ATK))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        else if (atkBaseSpeciesId == SPECIES_DELIBIRD && IsBattleMoveSpecial(move) && (GetHighestStatId(battlerAtk) == STAT_SPATK || GetLowestStatId(battlerAtk) == STAT_SPATK))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
     default:
         break;
     }
@@ -7576,6 +7625,11 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
          && !usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    case HOLD_EFFECT_MYSTERY_GIFT:
+        if (gBattleMons[battlerDef].species == SPECIES_DELIBIRD && usesDefStat && (GetHighestStatId(battlerDef) == STAT_DEF || GetLowestStatId(battlerDef) == STAT_DEF))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        else if (gBattleMons[battlerDef].species == SPECIES_DELIBIRD && !usesDefStat && (GetHighestStatId(battlerDef) == STAT_SPDEF || GetLowestStatId(battlerDef) == STAT_SPDEF))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
     default:
         break;
     }

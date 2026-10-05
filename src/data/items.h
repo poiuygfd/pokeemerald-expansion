@@ -16414,6 +16414,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_ToughBucket,
     },
 
+    [ITEM_MYSTERY_GIFT] =
+    {
+        .name = ITEM_NAME("Mystery Gift"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_MYSTERY_GIFT,
+        .description = COMPOUND_STRING(
+            "A held item that\n"
+            "boosts Delibird's\n"
+            "best/worst stats."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_LightBall,
+        .iconPalette = gItemIconPalette_LightBall,
+    },
+
 // New key items
 
     [ITEM_CANDY_BAG] =
@@ -16688,6 +16706,7 @@ const struct ItemInfo gItemsInfo[] =
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 150,
         .iconPic = gItemIcon_AbyssStone,
         .iconPalette = gItemIconPalette_AbyssStone,
     },

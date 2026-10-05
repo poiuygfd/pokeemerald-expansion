@@ -864,6 +864,10 @@ static void HandleSetEffectFling(struct BattleCalcValues *cv, struct SetEffect *
                 SetMoveEffect(cv, &flingEffect);
             }
             break;
+        case HOLD_EFFECT_MYSTERY_GIFT:
+            flingEffect.moveEffect = MOVE_EFFECT_CONFUSION;
+            SetMoveEffect(cv, &flingEffect);
+            break;
         case HOLD_EFFECT_FLINCH:
             flingEffect.moveEffect = MOVE_EFFECT_FLINCH;
             SetMoveEffect(cv, &flingEffect);

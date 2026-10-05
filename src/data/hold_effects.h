@@ -585,4 +585,12 @@ const struct HoldEffectInfo gHoldEffectsInfo[HOLD_EFFECT_COUNT] =
     {
         .onSwitchIn = TRUE,
     },
+
+    [HOLD_EFFECT_TOUGH_BUCKET] =
+    {
+    },
+
+    [HOLD_EFFECT_MYSTERY_GIFT] =
+    {
+    },
 };

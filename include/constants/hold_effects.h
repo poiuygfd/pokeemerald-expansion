@@ -138,6 +138,7 @@ enum HoldEffect
     HOLD_EFFECT_BERSERK_GENE,
     // New hold effects
     HOLD_EFFECT_TOUGH_BUCKET,
+    HOLD_EFFECT_MYSTERY_GIFT,
     HOLD_EFFECT_COUNT
 };
 
