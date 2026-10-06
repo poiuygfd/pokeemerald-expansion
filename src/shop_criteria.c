@@ -66,10 +66,32 @@ bool32 ShopCriteriaBadge8(enum Item item)
     return ShopCriteriaByFlag(FLAG_BADGE08_GET);
 }
 
+bool32 ShopCriteriaBadge1Rematch(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_DEFEATED_ROXANNE_MEGA_REMATCH);
+}
+
+bool32 ShopCriteriaBadge2Rematch(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_DEFEATED_BRAWLY_MEGA_REMATCH);
+}
+
+bool32 ShopCriteriaBadge3Rematch(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_DEFEATED_WATTSON_MEGA_REMATCH);
+}
+
+bool32 ShopCriteriaBadge4Rematch(enum Item item)
+{
+    return ShopCriteriaByFlag(FLAG_DEFEATED_FLANNERY_MEGA_REMATCH);
+}
+
 bool32 ShopCriteriaIsChampion(enum Item item)
 {
     return ShopCriteriaByFlag(FLAG_SYS_GAME_CLEAR);
 }
+
+// Baseline checks
 
 static UNUSED bool32 ShopCriteriaByBadgeCount(u32 count)
 {

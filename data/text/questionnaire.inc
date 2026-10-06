@@ -41,3 +41,34 @@ MysteryGift_Text_TryUsingItAtLilycovePort::
 	.string "the LILYCOVE CITY port.\p"
 	.string "Why not give it a try and see what\n"
 	.string "it is about?$"
+
+MysteryGift_Text_TheresAPokemonForYou::
+	.string "Thank you for using the MYSTERY\n"
+	.string "EVENT System.\p"
+	.string "You must be {PLAYER}.\n"
+	.string "There is a POKéMON here for you.$"
+
+MysteryGift_Text_TakeCareOfThatPokemon::
+	.string "That POKéMON belonged to someone\n"
+	.string "very special.\p"
+	.string "Please take good care of it.$"
+
+MysteryGift_Text_GiftWithYourNameOnIt:
+	.string "Hello, TRAINER.\p"
+	.string "Looks like I've got a MYSTERY GIFT\n"
+	.string "here with your name on it.\p"
+	.string "Here you go!$"
+
+MysteryGift_Text_WhatDidYouExpect:
+	.string "What? Why are you looking at me\n"
+	.string "like that?\p"
+	.string "What else did you expect?$"
+
+MysteryGift_Text_YouDontWorkHere:
+	.string "TEALA: Hey, wait a minute.\n"
+	.string "You don't work here!\p"
+
+MysteryGift_Text_OhDratIveBeenFound:
+	.string "Oh, drat!\n"
+	.string "I've been found out!\p"
+	.string "Gotta jet!$"

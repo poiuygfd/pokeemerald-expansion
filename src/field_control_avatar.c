@@ -803,6 +803,26 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext_SetupScript(EventScript_VsSeekerChargingDone);
             return TRUE;
         }
+        if (ShouldDoRoxanneMegaRematchCall() == TRUE)
+        {
+            ScriptContext_SetupScript(RustboroCity_Gym_EventScript_RoxanneMegaRematch);
+            return TRUE;
+        }
+        if (ShouldDoBrawlyMegaRematchCall() == TRUE)
+        {
+            ScriptContext_SetupScript(DewfordTown_Gym_EventScript_BrawlyMegaRematch);
+            return TRUE;
+        }
+        if (ShouldDoWattsonMegaRematchCall() == TRUE)
+        {
+            ScriptContext_SetupScript(MauvilleCity_Gym_EventScript_WattsonMegaRematch);
+            return TRUE;
+        }
+        if (ShouldDoFlanneryMegaRematchCall() == TRUE)
+        {
+            ScriptContext_SetupScript(LavaridgeTown_Gym_1F_EventScript_FlanneryMegaRematch);
+            return TRUE;
+        }
     }
 
     if (SafariZoneTakeStep() == TRUE)

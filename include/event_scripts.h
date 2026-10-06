@@ -613,6 +613,10 @@ extern const u8 FortreeCity_EventScript_ScottWonAtFortreeGymCall[];
 extern const u8 LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall[];
 extern const u8 RustboroCity_Gym_EventScript_RegisterRoxanne[];
 extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall[];
+extern const u8 RustboroCity_Gym_EventScript_RoxanneMegaRematch[];
+extern const u8 DewfordTown_Gym_EventScript_BrawlyMegaRematch[];
+extern const u8 MauvilleCity_Gym_EventScript_WattsonMegaRematch[];
+extern const u8 LavaridgeTown_Gym_1F_EventScript_FlanneryMegaRematch[];
 extern const u8 SSTidalCorridor_EventScript_ReachedStepCount[];
 extern const u8 EventScript_FallDownHoleMtPyre[];
 

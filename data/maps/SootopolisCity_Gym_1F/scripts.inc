@@ -144,6 +144,7 @@ SootopolisCity_Gym_1F_EventScript_BothDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	setflag FLAG_ENABLE_WALLACE_MATCH_CALL
 	release
 	end
 

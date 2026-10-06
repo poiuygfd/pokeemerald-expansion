@@ -3,11 +3,18 @@ RustboroCity_Gym_MapScripts::
 
 RustboroCity_Gym_EventScript_Roxanne::
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	goto_if_set FLAG_BADGE05_GET, RustboroCity_Gym_EventScript_RoxanneCheckMegaRematch
+RustboroCity_Gym_EventScript_RoxanneLoop::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
 	release
+	end
+
+RustboroCity_Gym_EventScript_RoxanneCheckMegaRematch::
+	goto_if_unset FLAG_DEFEATED_ROXANNE_MEGA_REMATCH, RustboroCity_Gym_EventScript_RoxanneMega
+	goto RustboroCity_Gym_EventScript_RoxanneLoop
 	end
 
 RustboroCity_Gym_EventScript_RoxanneDefeated::
@@ -31,6 +38,17 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
 	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
+	release
+	end
+
+RustboroCity_Gym_EventScript_RoxanneMega::
+	trainerbattle_single TRAINER_ROXANNE_2, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_EventScript_RoxanneMegaDefeated, NO_MUSIC
+	end
+
+RustboroCity_Gym_EventScript_RoxanneMegaDefeated::
+	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_ROXANNE_MEGA_REMATCH
+	clearflag FLAG_ENABLE_ROXANNE_MEGA_REMATCH_CALL
 	release
 	end
 
@@ -101,6 +119,15 @@ RustboroCity_Gym_EventScript_RegisterRoxanne::
 	delay 30
 	setflag FLAG_ENABLE_ROXANNE_MATCH_CALL
 	clearflag FLAG_ENABLE_ROXANNE_FIRST_CALL
+	releaseall
+	end
+
+RustboroCity_Gym_EventScript_RoxanneMegaRematch::
+	lockall
+	pokenavcall MatchCall_Text_RoxanneMegaRematchCall
+	closemessage
+	delay 30
+	clearflag FLAG_ENABLE_ROXANNE_MEGA_REMATCH_CALL
 	releaseall
 	end
 

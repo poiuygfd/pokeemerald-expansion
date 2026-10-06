@@ -45,11 +45,18 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::
 	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	goto_if_set FLAG_BADGE07_GET, LavaridgeTown_Gym_1F_EventScript_FlanneryCheckMegaRematch
+LavaridgeTown_Gym_1F_EventScript_FlanneryLoop::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
 	goto_if_unset FLAG_RECEIVED_TM_OVERHEAT, LavaridgeTown_Gym_1F_EventScript_GiveOverheat2
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostBattle, MSGBOX_DEFAULT
 	release
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryCheckMegaRematch::
+	goto_if_unset FLAG_DEFEATED_FLANNERY_MEGA_REMATCH, LavaridgeTown_Gym_1F_EventScript_FlanneryMega
+	goto LavaridgeTown_Gym_1F_EventScript_FlanneryLoop
 	end
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
@@ -93,6 +100,17 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_OVERHEAT
 	return
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryMega::
+	trainerbattle_single TRAINER_FLANNERY_2, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryMegaDefeated, NO_MUSIC
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryMegaDefeated::
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_FLANNERY_MEGA_REMATCH
+	clearflag FLAG_ENABLE_FLANNERY_MEGA_REMATCH_CALL
+	release
+	end
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
@@ -178,6 +196,15 @@ LavaridgeTown_Gym_1F_EventScript_GymStatueCertified::
 
 LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	msgbox LavaridgeTown_Gym_1F_Text_GymStatue, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryMegaRematch::
+	lockall
+	pokenavcall MatchCall_Text_FlanneryMegaRematchCall
+	closemessage
+	delay 30
+	clearflag FLAG_ENABLE_FLANNERY_MEGA_REMATCH_CALL
 	releaseall
 	end
 

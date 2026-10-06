@@ -514,7 +514,7 @@
 #define FLAG_ENABLE_WINONA_MATCH_CALL        0x1D7
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
-#define FLAG_IS_PLAYER_BOATING               0x1DA // Whether the player is surfing or sailing
+#define FLAG_ENABLE_WALLACE_MATCH_CALL       0x1DA
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -523,9 +523,8 @@
 #define FLAG_DEFEATED_REGIDRAGO              0x1DF
 #define FLAG_HIDE_MAGIKARP_CUTSCENE          0x1E0
 #define FLAG_DEFEATED_DARK_MAGIKARP          0x1E1
-
 #define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_IS_PLAYER_BOATING               0x1E3 // Whether the player is surfing or sailing
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -723,10 +722,10 @@
 #define FLAG_HIDE_OLDALE_TOWN_PC_BLOCKER 0x2A0 // Blocks PC in Oldale before Rival fight
 #define FLAG_HIDE_ROUTE_121_RIVAL  0x2A1 // Brendan/May for cutscene on Route 121
 #define FLAG_HIDE_MT_PYRE_RIVALS  0x2A2 // Brendan/May and Wally in Mt. Pyre
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
+#define FLAG_ENABLE_ROXANNE_MEGA_REMATCH_CALL  0x2A3 // Defeated Roxanne's Mega Rematch
+#define FLAG_ENABLE_BRAWLY_MEGA_REMATCH_CALL  0x2A4 // Defeated Brawly's Mega Rematch
+#define FLAG_ENABLE_WATTSON_MEGA_REMATCH_CALL  0x2A5 // Defeated Wattson's Mega Rematch
+#define FLAG_ENABLE_FLANNERY_MEGA_REMATCH_CALL  0x2A6 // Defeated Flannery's Mega Rematch
 
 // Special Starter Codes
 #define FLAG_KANTO_STARTERS                                         0x2A7 // Replace Hoenn Starters with Kanto Starters
@@ -1314,10 +1313,11 @@
 #define FLAG_RECEIVED_LIFE_ORB                                      0x4EB // Received Life Orb from Route Master 133
 #define FLAG_ITEM_ABYSS_STONE                                       0x4EC // Mauville City Abyss Stone
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
-#define FLAG_UNUSED_0x4F9                                           0x4F0 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4F1 // Unused Flag
+
+#define FLAG_DEFEATED_ROXANNE_MEGA_REMATCH                          0x4EE
+#define FLAG_DEFEATED_BRAWLY_MEGA_REMATCH                           0x4EF
+#define FLAG_DEFEATED_WATTSON_MEGA_REMATCH                          0x4F0
+#define FLAG_DEFEATED_FLANNERY_MEGA_REMATCH                         0x4F1
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F3

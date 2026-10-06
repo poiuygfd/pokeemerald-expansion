@@ -6193,6 +6193,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_Manectite,
         .iconPalette = gItemIconPalette_Manectite,
+        .shopCriteriaFunc = ShopCriteriaBadge3Rematch,
     },
 
     [ITEM_SHARPEDONITE] =
@@ -6830,6 +6831,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_Pyroarite,
         .iconPalette = gItemIconPalette_Pyroarite,
+        .shopCriteriaFunc = ShopCriteriaBadge4Rematch,
     },
 
     [ITEM_FLOETTITE] =
@@ -6884,6 +6886,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_Barbaracite,
         .iconPalette = gItemIconPalette_Barbaracite,
+        .shopCriteriaFunc = ShopCriteriaBadge1Rematch,
     },
 
     [ITEM_DRAGALGITE] =
@@ -7211,6 +7214,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_Crabominite,
         .iconPalette = gItemIconPalette_Crabominite,
+        .shopCriteriaFunc = ShopCriteriaBadge2Rematch,
     },
 
     [ITEM_GOLISOPITE] =

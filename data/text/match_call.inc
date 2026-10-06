@@ -2039,6 +2039,16 @@ MatchCall_Text_Mom3::
 	.string "clothes every now and again with\l"
 	.string "that OUTFIT BOX!$"
 
+MatchCall_Text_RoxanneMegaRematchCall:
+	.string "ROXANNE: Hello, {PLAYER}.\p"
+	.string "So, I heard from NORMAN that you\n"
+	.string "now have a MEGA RING.\p"
+	.string "This is more of an informal match\n"
+	.string "than anything, but could you stop\l"
+	.string "by the RUSTBORO GYM when you can?\p"
+	.string "I want to have a battle now that\n"
+	.string "we both can use MEGA EVOLUTION.$"
+
 MatchCall_Text_Roxanne_Preparing::
 	.string "ROXANNE: Oh, hello, {PLAYER}!\p"
 	.string "I've been hard at work retraining\n"
@@ -2067,6 +2077,16 @@ MatchCall_Text_Roxanne_PostRematch::
 	.string "ROXANNE: At the RUSTBORO GYM,\n"
 	.string "the fact that we battled, {PLAYER},\l"
 	.string "is a matter of pride.$"
+
+MatchCall_Text_BrawlyMegaRematchCall:
+	.string "BRAWLY: Hey, {PLAYER}{KUN}!\n"
+	.string "Is it true you have a MEGA RING?\p"
+	.string "Gnarly! Why don't you come by my\n"
+	.string "GYM in DEWFORD and show me?\p"
+	.string "Technically, my GYM hasn't reopened\n"
+	.string "yet, but I want to have a battle\l"
+	.string "with you, MEGA on MEGA style.\p"
+	.string "Swing by when you're ready!$"
 
 MatchCall_Text_Brawly_Preparing::
 	.string "BRAWLY: Hey, there, {PLAYER}{KUN}!\p"
@@ -2101,6 +2121,17 @@ MatchCall_Text_Brawly_PostRematch::
 	.string "BRAWLY: {PLAYER}{KUN}, I don't think\n"
 	.string "I'll ever get bored of battling you!$"
 
+MatchCall_Text_WattsonMegaRematchCall:
+	.string "WATTSON: Am I speaking to {PLAYER}{KUN}?\n"
+	.string "Wahahaha! Excellent!\p"
+	.string "It's been making the rounds among\n"
+	.string "us GYM LEADERS that you have a\l"
+	.string "MEGA RING now, correct?\p"
+	.string "You're not the only one who can use\n"
+	.string "MEGA EVOLUTION, you know!\p"
+	.string "Come by my GYM if you want to have\n"
+	.string "A MEGA EVOLUTION showdown!$"
+
 MatchCall_Text_Wattson_Preparing::
 	.string "WATTSON: Oh, it's you!\p"
 	.string "After you left, I've been redoing\n"
@@ -2131,6 +2162,20 @@ MatchCall_Text_Wattson_PostRematch::
 	.string "WATTSON: Wahahaha!\p"
 	.string "A battle with you is always charged\n"
 	.string "with shocking power!$"
+
+MatchCall_Text_FlanneryMegaRematchCall:
+	.string "FLANNERY: Is this {PLAYER}?\p"
+	.string "I've heard you've been maturing at\n"
+	.string "an impressive speed, and that you\l"
+	.string "can even use MEGA EVOLUTION.\p"
+	.string "I've still got a long way to go, but\n"
+	.string "I'd like to have a battle, so I can\l"
+	.string "compare how much I've grown to you.\p"
+	.string "It'll still be a while before my GYM\n"
+	.string "is ready to reopen, this is just a\l"
+	.string "battle for the sake of myself.\p"
+	.string "Just know that you won't be the only\n"
+	.string "one using MEGA EVOLUTION!$"
 
 MatchCall_Text_Flannery_Preparing::
 	.string "FLANNERY: {PLAYER}…\p"
@@ -2257,6 +2302,39 @@ MatchCall_Text_Juan_PostRematch::
 	.string "When I close my eyes, I see visions\n"
 	.string "of you soaring with the melody…$"
 
+MatchCall_Text_Wallace_Preparing::
+	.string "WALLACE: Hello, {PLAYER}{KUN}.\p"
+	.string "I am currently training away with\n"
+	.string "my mentor, JUAN.\p"
+	.string "I would love to reopen the GYM to\n"
+	.string "you once our training is complete.\p"
+	.string "This time, I will be going all out\n"
+	.string "with my full team.\p"
+	.string "I hope you look forward to it.$"
+
+MatchCall_Text_Wallace_PreparingPostGame::
+	.string "WALLACE: Oh, {PLAYER}{KUN}!\n"
+	.string "So you've really become CHAMPION.\p"
+	.string "To be honest, I'm not the slightest\n"
+	.string "bit surprised.\p"
+	.string "After all, you are the one who earned\n"
+	.string "the approval of the mighty RAYQUAZA.\p"
+	.string "We are nearly ready to reopen our GYM.\n"
+	.string "I look forward to our rematch soon.$"
+
+MatchCall_Text_Wallace_RematchReady::
+	.string "WALLACE: {PLAYER}{KUN}…\p"
+	.string "We are finally ready.\n"
+	.string "Our SOOTOPOLIS GYM has reopened.\p"
+	.string "Whenever you can make time, please do\n"
+	.string "come pay us a visit.$"
+
+MatchCall_Text_Wallace_PostRematch::
+	.string "WALLACE: They way you battle is\n"
+	.string "filled with such elegance.\p"
+	.string "I truly believe you are the best\l"
+	.string "that HOENN has to offer.$"
+
 MatchCall_Text_Sidney::
 	.string "SIDNEY: Yo, {PLAYER}!\p"
 	.string "If you want to battle with me\n"
@@ -2292,20 +2370,6 @@ MatchCall_Text_Drake::
 	.string "battles, there is no substitute for\l"
 	.string "the POKéMON LEAGUE!\p"
 	.string "Don't you agree, {PLAYER}?$"
-
-MatchCall_Text_Wallace::
-	.string "WALLACE: Hello, {PLAYER}{KUN}.\n"
-	.string "Have you met STEVEN?\p"
-	.string "He is…\n"
-	.string "Actually incredibly skilled.\p"
-	.string "However, he's an odd soul who\n"
-	.string "rarely battles.\p"
-	.string "Instead, he would rather look for\n"
-	.string "rare stones.\p"
-	.string "I'm sure he's digging in a cave or\n"
-	.string "a craggy mountain somewhere.\p"
-	.string "But what is a rare stone exactly?\n"
-	.string "All I can think of is a METEORITE…$"
 
 MatchCall_Text_MayRayquazaCall:
 	.string "… … … … … …\n"

@@ -136,6 +136,8 @@ DewfordTown_Gym_EventScript_Brawly::
 	lock
 	faceplayer
 	goto_if_unset FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_BrawlySecondGym
+	goto_if_set FLAG_BADGE06_GET, DewfordTown_Gym_EventScript_BrawlyCheckMegaRematch
+DewfordTown_Gym_EventScript_BrawlyLoop::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
@@ -152,6 +154,11 @@ DewfordTown_Gym_EventScript_BrawlySecondGym::
 DewfordTown_Gym_EventScript_BrawlyThirdGym::
 	trainerbattle_single TRAINER_BRAWLY_2, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	release
+	end
+
+DewfordTown_Gym_EventScript_BrawlyCheckMegaRematch::
+	goto_if_unset FLAG_DEFEATED_BRAWLY_MEGA_REMATCH, DewfordTown_Gym_EventScript_BrawlyMega
+	goto DewfordTown_Gym_EventScript_BrawlyLoop
 	end
 
 DewfordTown_Gym_EventScript_BrawlyDefeated::
@@ -210,6 +217,17 @@ DewfordTown_Gym_EventScript_GiveBulkUp2:
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_BULK_UP
+	release
+	end
+
+DewfordTown_Gym_EventScript_BrawlyMega::
+	trainerbattle_single TRAINER_BRAWLY_3, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_EventScript_BrawlyMegaDefeated, NO_MUSIC
+	end
+
+DewfordTown_Gym_EventScript_BrawlyMegaDefeated::
+	msgbox DewfordTown_Gym_Text_BrawlyPostRematch, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_BRAWLY_MEGA_REMATCH
+	clearflag FLAG_ENABLE_BRAWLY_MEGA_REMATCH_CALL
 	release
 	end
 
@@ -310,6 +328,15 @@ DewfordTown_Gym_EventScript_GymStatueCertified::
 
 DewfordTown_Gym_EventScript_GymStatue::
 	msgbox DewfordTown_Gym_Text_GymStatue, MSGBOX_DEFAULT
+	releaseall
+	end
+
+DewfordTown_Gym_EventScript_BrawlyMegaRematch::
+	lockall
+	pokenavcall MatchCall_Text_BrawlyMegaRematchCall
+	closemessage
+	delay 30
+	clearflag FLAG_ENABLE_BRAWLY_MEGA_REMATCH_CALL
 	releaseall
 	end
 

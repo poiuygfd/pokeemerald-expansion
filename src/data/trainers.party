@@ -16745,59 +16745,48 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
-Items: Full Restore / Full Restore / Full Restore
+Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Cradily @ Leftovers
-Level: 52
+Cradily
+Level: 36
 Ability: Storm Drain
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpD
+EVs: 200 HP / 200 SpD
 Nature: Bold
 - Giga Drain
 - Confuse Ray
 - Ingrain
 - Stealth Rock
 
-Armaldo @ Weakness Policy
-Level: 52
+Armaldo
+Level: 36
 Ability: Battle Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
+EVs: 200 Atk / 200 Spe
 Nature: Adamant
 - Swords Dance
 - X-Scissor
-- Stone Edge
+- Rock Tomb
 - Night Slash
 
 Carbink @ Light Clay
-Level: 51
+Level: 35
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Def / 252 SpD
+EVs: 200 Def / 200 SpD
 Nature: Calm
-- Moonblast
+- Dazzling Gleam
 - Power Gem
 - Reflect
 - Light Screen
 
-Lycanroc-Dusk @ Focus Sash
-Level: 50
-Ability: Tough Claws
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Rock Slide
-- Drill Run
-- Psychic Fangs
-- Accelerock
-
 Probopass @ Normal Gem
-Level: 54
+Level: 37
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 Atk
+EVs: 200 HP / 200 Atk
 Nature: Brave
 - Gyro Ball
 - Explosion
@@ -16805,10 +16794,10 @@ Nature: Brave
 - Thunder Wave
 
 Barbaracle @ Barbaracite
-Level: 55
+Level: 38
 Ability: Tough Claws
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
+EVs: 200 Atk / 200 Spe
 Nature: Jolly
 - Rock Slide
 - Razor Shell
@@ -17049,59 +17038,48 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore
+Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Bewear @ Shell Bell
-Level: 57
+Bewear
+Level: 42
 Ability: Fluffy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
+EVs: 250 HP / 200 Atk
 Nature: Careful
-- Close Combat
-- Double-Edge
+- Hammer Arm
+- Thrash
 - Brutal Swing
 - Bulk Up
 
-Machamp @ Custap Berry
-Level: 57
+Machamp @ Big Nugget
+Level: 42
 Ability: Guts
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
+EVs: 250 HP / 200 Atk
 Nature: Careful
 - Cross Chop
-- Stone Edge
+- Fling
 - Bulk Up
 - Coaching
 
-Lucario @ Focus Sash
-Level: 56
-Ability: Inner Focus
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Spe
-Nature: Jolly
-- Close Combat
-- Meteor Mash
-- Extreme Speed
-- Swords Dance
-
 Falinks @ Leftovers
-Level: 55
+Level: 41
 Ability: Battle Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Def
+EVs: 250 HP / 200 Atk
 Nature: Impish
-- Body Press
+- Brick Break
 - Knock Off
-- Iron Defense
+- First Impression
 - No Retreat
 
 Hariyama @ Flame Orb
-Level: 59
+Level: 43
 Ability: Guts
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
+EVs: 250 HP / 200 Atk
 Nature: Adamant
 - Close Combat
 - Headlong Rush
@@ -17109,10 +17087,10 @@ Nature: Adamant
 - Protect
 
 Crabominable @ Crabominite
-Level: 60
+Level: 44
 Ability: Hyper Cutter
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
+EVs: 250 HP / 200 Atk
 Nature: Adamant
 - Ice Hammer
 - Drain Punch
@@ -17277,15 +17255,15 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore
+Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Plusle @ Wise Glasses
-Level: 57
+Level: 42
 Ability: Plus
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 200 SpA / 250 Spe
 Nature: Timid
 - Discharge
 - Thunderbolt
@@ -17293,54 +17271,43 @@ Nature: Timid
 - Nasty Plot
 
 Minun @ Sitrus Berry
-Level: 57
+Level: 42
 Ability: Minus
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Spe
+EVs: 200 HP / 250 Spe
 Nature: Timid
 - Discharge
 - Charm
-- Encore
+- Electric Terrain
 - Helping Hand
 
-Bellibolt @ Leftovers
-Level: 56
+Bellibolt
+Level: 41
 Ability: Electromorphosis
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
+EVs: 250 HP / 200 SpA
 Nature: Modest
 - Discharge
 - Muddy Water
 - Zap Cannon
 - Slack Off
 
-Pincurchin @ Terrain Extender
-Level: 55
-Ability: Electric Surge
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk
-Nature: Careful
-- Zing Zap
-- Liquidation
-- Volt Switch
-- Recover
-
-Magnezone @ Life Orb
-Level: 59
+Magnezone
+Level: 43
 Ability: Analytic
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 SpA
+EVs: 250 HP / 200 SpA
 Nature: Modest
 - Flash Cannon
-- Discharge
-- Thunder
-- Rain Dance
+- Thunderbolt
+- Tri Attack
+- Magnet Rise
 
 Manectric @ Manectite
-Level: 60
+Level: 44
 Ability: Lightning Rod
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 200 SpA / 250 Spe
 Nature: Modest
 - Thunderbolt
 - Volt Switch
@@ -17505,48 +17472,48 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
-Items: Full Restore / Full Restore / Full Restore
+Items: Hyper Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Ninetales @ Heat Rock
-Level: 52
+Level: 50
 Ability: Drought
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Spe
+EVs: 250 HP / 250 Spe
 Nature: Modest
 - Fire Blast
 - Hypnosis
 - Encore
 - Will-O-Wisp
 
-Camerupt @ Fire Gem
-Level: 52
+Camerupt
+Level: 50
 Ability: Solid Rock
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 SpA
+EVs: 250 HP / 250 SpA
 Nature: Modest
 - Flamethrower
 - Earth Power
 - Slack Off
 - Eruption
 
-Armarouge @ Focus Sash
-Level: 51
+Armarouge
+Level: 49
 Ability: Weak Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 250 SpA / 250 Spe
 Nature: Timid
 - Armor Cannon
 - Psychic
 - Light Screen
 - Sunny Day
 
-Scovillain @ Focus Sash
-Level: 50
+Scovillain
+Level: 48
 Ability: Chlorophyll
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 250 SpA / 250 Spe
 Nature: Modest
 - Flamethrower
 - Solar Beam
@@ -17554,10 +17521,10 @@ Nature: Modest
 - Sunny Day
 
 Torkoal @ White Herb
-Level: 54
+Level: 51
 Ability: Drought
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Def / 252 SpA
+EVs: 250 Def / 250 SpA
 Nature: Calm
 - Overheat
 - Solar Beam
@@ -17565,10 +17532,10 @@ Nature: Calm
 - Sunny Day
 
 Pyroar (F) @ Pyroarite
-Level: 55
+Level: 52
 Ability: Unnerve
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 SpA / 252 Spe
+EVs: 250 SpA / 250 Spe
 Nature: Timid
 - Hyper Voice
 - Fire Blast
@@ -17647,7 +17614,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Timid
 - Hyper Voice
-- Fire Blast
+- Heat Wave
 - Earth Power
 - Work Up
 
@@ -17723,7 +17690,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Timid
 - Hyper Voice
-- Fire Blast
+- Heat Wave
 - Earth Power
 - Work Up
 
@@ -17799,7 +17766,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe
 Nature: Timid
 - Hyper Voice
-- Fire Blast
+- Heat Wave
 - Earth Power
 - Work Up
 

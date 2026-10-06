@@ -1697,11 +1697,14 @@ extern const u8 MatchCall_Text_Juan_Preparing[];
 extern const u8 MatchCall_Text_Juan_PreparingPostGame[];
 extern const u8 MatchCall_Text_Juan_RematchReady[];
 extern const u8 MatchCall_Text_Juan_PostRematch[];
+extern const u8 MatchCall_Text_Wallace_Preparing[];
+extern const u8 MatchCall_Text_Wallace_PreparingPostGame[];
+extern const u8 MatchCall_Text_Wallace_RematchReady[];
+extern const u8 MatchCall_Text_Wallace_PostRematch[];
 extern const u8 MatchCall_Text_Sidney[];
 extern const u8 MatchCall_Text_Phoebe[];
 extern const u8 MatchCall_Text_Glacia[];
 extern const u8 MatchCall_Text_Drake[];
-extern const u8 MatchCall_Text_Wallace[];
 
 // Contest Link
 extern const u8 gText_ColorDarkGray[];

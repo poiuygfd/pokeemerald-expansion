@@ -77,6 +77,8 @@ MauvilleCity_Gym_EventScript_Wattson::
 	lock
 	faceplayer
 	goto_if_unset FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_WattsonSecondGym
+	goto_if_set FLAG_BADGE06_GET, MauvilleCity_Gym_EventScript_WattsonCheckMegaRematch
+MauvilleCity_Gym_EventScript_WattsonLoop::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
@@ -94,6 +96,11 @@ MauvilleCity_Gym_EventScript_WattsonSecondGym::
 MauvilleCity_Gym_EventScript_WattsonThirdGym::
 	trainerbattle_single TRAINER_WATTSON_2, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	release
+	end
+
+MauvilleCity_Gym_EventScript_WattsonCheckMegaRematch::
+	goto_if_unset FLAG_DEFEATED_WATTSON_MEGA_REMATCH, MauvilleCity_Gym_EventScript_WattsonMega
+	goto MauvilleCity_Gym_EventScript_WattsonLoop
 	end
 
 MauvilleCity_Gym_EventScript_WattsonDefeated::
@@ -158,6 +165,17 @@ MauvilleCity_Gym_EventScript_GiveShockWave::
 
 MauvilleCity_Gym_EventScript_CompletedNewMauville::
 	msgbox MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_Gym_EventScript_WattsonMega::
+	trainerbattle_single TRAINER_WATTSON_3, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_EventScript_WattsonMegaDefeated, NO_MUSIC
+	end
+
+MauvilleCity_Gym_EventScript_WattsonMegaDefeated::
+	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_WATTSON_MEGA_REMATCH
+	clearflag FLAG_ENABLE_WATTSON_MEGA_REMATCH_CALL
 	release
 	end
 
@@ -283,6 +301,15 @@ MauvilleCity_Gym_EventScript_GymStatueCertified::
 
 MauvilleCity_Gym_EventScript_GymStatue::
 	msgbox MauvilleCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
+	releaseall
+	end
+
+MauvilleCity_Gym_EventScript_WattsonMegaRematch::
+	lockall
+	pokenavcall MatchCall_Text_WattsonMegaRematchCall
+	closemessage
+	delay 30
+	clearflag FLAG_ENABLE_WATTSON_MEGA_REMATCH_CALL
 	releaseall
 	end
 
